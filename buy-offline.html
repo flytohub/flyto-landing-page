@@ -74,9 +74,30 @@
 			50% { transform: translate(20px, -30px) scale(1.2); opacity: 1; }
 		}
 
+		/* Hero badge */
+		.hero-badge {
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+			background: rgba(167, 139, 250, 0.2);
+			border: 1px solid rgba(167, 139, 250, 0.4);
+			color: #c4b5fd;
+			padding: 10px 20px;
+			border-radius: 50px;
+			font-size: 14px;
+			font-weight: 600;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			animation: badge-glow 2s ease-in-out infinite;
+		}
+		@keyframes badge-glow {
+			0%, 100% { box-shadow: 0 0 20px rgba(167, 139, 250, 0.3); }
+			50% { box-shadow: 0 0 40px rgba(167, 139, 250, 0.5); }
+		}
+
 		/* Hero title shine */
 		.hero-title {
-			font-size: 52px;
+			font-size: 56px;
 			font-weight: 800;
 			margin-bottom: 20px;
 			background: linear-gradient(90deg, #fff 0%, #c4b5fd 25%, #a78bfa 50%, #c4b5fd 75%, #fff 100%);
@@ -85,10 +106,129 @@
 			-webkit-text-fill-color: transparent;
 			background-clip: text;
 			animation: shine 4s linear infinite;
+			line-height: 1.1;
 		}
 		@keyframes shine {
 			0% { background-position: 0% center; }
 			100% { background-position: 300% center; }
+		}
+
+		/* Hero feature pills */
+		.hero-features {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 12px;
+			margin-top: 10px;
+		}
+		.hero-feature-pill {
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+			background: rgba(255, 255, 255, 0.1);
+			backdrop-filter: blur(10px);
+			border: 1px solid rgba(255, 255, 255, 0.2);
+			color: #fff;
+			padding: 12px 20px;
+			border-radius: 50px;
+			font-size: 14px;
+			font-weight: 500;
+			transition: all 0.3s;
+		}
+		.hero-feature-pill:hover {
+			background: rgba(255, 255, 255, 0.2);
+			transform: translateY(-3px);
+		}
+		.hero-feature-pill i {
+			color: #a78bfa;
+		}
+
+		/* Floating 3D Card */
+		.floating-card-wrapper {
+			perspective: 1000px;
+			display: flex;
+			justify-content: center;
+		}
+		.floating-card {
+			position: relative;
+			width: 320px;
+			padding: 40px;
+			background: linear-gradient(145deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%);
+			backdrop-filter: blur(20px);
+			border-radius: 30px;
+			border: 1px solid rgba(255, 255, 255, 0.2);
+			animation: float-card 4s ease-in-out infinite;
+			transform-style: preserve-3d;
+		}
+		@keyframes float-card {
+			0%, 100% { transform: translateY(0) rotateX(5deg) rotateY(-5deg); }
+			50% { transform: translateY(-20px) rotateX(-5deg) rotateY(5deg); }
+		}
+		.card-glow {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 200%;
+			height: 200%;
+			transform: translate(-50%, -50%);
+			background: radial-gradient(circle, rgba(124, 58, 237, 0.3) 0%, transparent 60%);
+			pointer-events: none;
+			animation: glow-pulse 3s ease-in-out infinite;
+		}
+		@keyframes glow-pulse {
+			0%, 100% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
+			50% { opacity: 0.8; transform: translate(-50%, -50%) scale(1.1); }
+		}
+		.card-content {
+			position: relative;
+			z-index: 1;
+			text-align: center;
+		}
+		.card-icon {
+			width: 80px;
+			height: 80px;
+			background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+			border-radius: 24px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 auto 25px;
+			box-shadow: 0 20px 40px rgba(124, 58, 237, 0.4);
+		}
+		.card-icon i {
+			font-size: 40px;
+			color: #fff;
+		}
+		.card-price {
+			font-size: 56px;
+			font-weight: 800;
+			color: #fff;
+			line-height: 1;
+			margin-bottom: 5px;
+			text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+		}
+		.card-period {
+			color: #c4b5fd;
+			font-size: 14px;
+			margin-bottom: 25px;
+		}
+		.card-features {
+			text-align: left;
+		}
+		.card-features div {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			color: rgba(255,255,255,0.9);
+			padding: 10px 0;
+			font-size: 15px;
+			border-bottom: 1px solid rgba(255,255,255,0.1);
+		}
+		.card-features div:last-child {
+			border-bottom: none;
+		}
+		.card-features i {
+			color: #4ade80;
+			font-size: 16px;
 		}
 
 		/* Wave divider */
@@ -537,9 +677,29 @@
 		}
 
 		/* Mobile responsive */
+		@media (max-width: 991px) {
+			.hero-title {
+				text-align: center !important;
+			}
+			.hero-features {
+				justify-content: center;
+			}
+		}
 		@media (max-width: 768px) {
+			.purchase-hero {
+				padding: 120px 0 80px;
+			}
 			.hero-title {
 				font-size: 36px;
+				text-align: center !important;
+			}
+			.hero-badge {
+				font-size: 12px;
+				padding: 8px 16px;
+			}
+			.hero-feature-pill {
+				padding: 10px 16px;
+				font-size: 13px;
 			}
 			.purchase-card {
 				padding: 30px 20px;
@@ -609,10 +769,48 @@
 		<div class="particle particle-3"></div>
 		<div class="particle particle-4"></div>
 		<div class="container" style="position: relative; z-index: 2;">
-			<div class="row">
-				<div class="col-lg-8 offset-lg-2 text-center">
-					<h1 class="hero-title wow fadeInUp">Pro Offline License</h1>
-					<p class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 22px; color: #e9d5ff; font-weight: 500; text-shadow: 0 2px 10px rgba(0,0,0,0.3);">Work without internet. Your data stays on your machine.</p>
+			<div class="row align-items-center">
+				<div class="col-lg-6 text-center text-lg-start">
+					<!-- Badge -->
+					<div class="wow fadeInUp" style="margin-bottom: 20px;">
+						<span class="hero-badge">
+							<i class="bi bi-shield-lock-fill"></i> Lifetime License
+						</span>
+					</div>
+					<h1 class="hero-title wow fadeInUp" style="text-align: left;">Pro Offline License</h1>
+					<p class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 20px; color: #c4b5fd; font-weight: 500; margin-bottom: 30px;">Work without internet. Your data stays 100% on your machine.</p>
+					<!-- Feature pills -->
+					<div class="hero-features wow fadeInUp" data-wow-delay="0.2s">
+						<div class="hero-feature-pill">
+							<i class="bi bi-wifi-off"></i> No Internet Required
+						</div>
+						<div class="hero-feature-pill">
+							<i class="bi bi-lock-fill"></i> Privacy First
+						</div>
+						<div class="hero-feature-pill">
+							<i class="bi bi-arrow-repeat"></i> 1 Year Updates
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 d-none d-lg-block">
+					<!-- Floating 3D Card -->
+					<div class="floating-card-wrapper wow fadeInRight" data-wow-delay="0.3s">
+						<div class="floating-card">
+							<div class="card-glow"></div>
+							<div class="card-content">
+								<div class="card-icon">
+									<i class="bi bi-shield-check"></i>
+								</div>
+								<div class="card-price">$199</div>
+								<div class="card-period">per year / per machine</div>
+								<div class="card-features">
+									<div><i class="bi bi-check-circle-fill"></i> Unlimited Workflows</div>
+									<div><i class="bi bi-check-circle-fill"></i> Checkpoint & Resume</div>
+									<div><i class="bi bi-check-circle-fill"></i> Priority Support</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
