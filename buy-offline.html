@@ -536,6 +536,9 @@
 
 		// Initialize
 		document.addEventListener('DOMContentLoaded', async () => {
+			// Hide preloader
+			$('#preloader').delay(200).fadeOut(300);
+
 			// Get Stripe publishable key from server
 			try {
 				const response = await fetch(`${FIREBASE_URL}/getStripePublicKey`);
