@@ -3,151 +3,332 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Download - Flyto2 Core</title>
-	<meta name="description" content="Download the latest version of Flyto2 Core. Open source automation engine.">
+	<title>Download - Flyto2 Core Engine</title>
+	<meta name="description" content="Download Flyto2 Core - Open source automation engine. Works offline, cross-platform, Python 3.9+">
 	<link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="assets/img/icon.png" type="image/png" sizes="32x32">
 
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/bootstrap-icons.css">
 	<link rel="stylesheet" href="assets/css/fontawesome.all.min.css">
+	<link rel="stylesheet" href="assets/css/animate.css">
 	<link rel="stylesheet" href="assets/css/normalize.css">
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="assets/css/responsive.css">
 	<style>
+		/* Download Page Specific Styles */
 		.download-hero {
-			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-			padding: 120px 0 80px;
-			color: white;
+			background: linear-gradient(135deg, #667eea 0%, #7C3AED 50%, #764ba2 100%);
+			position: relative;
+			overflow: hidden;
 		}
-		.version-badge {
+		.download-hero::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></svg>');
+			background-size: 60px 60px;
+			animation: float 20s linear infinite;
+		}
+		@keyframes float {
+			0% { transform: translateY(0) rotate(0deg); }
+			100% { transform: translateY(-100px) rotate(360deg); }
+		}
+		.hero-download-content {
+			position: relative;
+			z-index: 2;
+		}
+		.version-pill {
 			background: rgba(255,255,255,0.2);
-			padding: 8px 20px;
-			border-radius: 30px;
-			display: inline-block;
-			margin-bottom: 20px;
-			font-size: 14px;
-		}
-		.download-card {
-			background: white;
-			border-radius: 15px;
-			padding: 30px;
-			box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-			margin-bottom: 30px;
-		}
-		.download-btn {
-			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-			color: white;
-			padding: 15px 40px;
-			border-radius: 30px;
-			text-decoration: none;
+			backdrop-filter: blur(10px);
+			padding: 10px 25px;
+			border-radius: 50px;
 			display: inline-flex;
 			align-items: center;
-			gap: 10px;
-			font-weight: 600;
-			transition: transform 0.3s, box-shadow 0.3s;
+			gap: 15px;
+			margin-bottom: 25px;
+			border: 1px solid rgba(255,255,255,0.3);
 		}
-		.download-btn:hover {
-			transform: translateY(-3px);
-			box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
-			color: white;
-		}
-		.download-btn-secondary {
-			background: #f8f9fa;
-			color: #333;
-			border: 2px solid #e9ecef;
-		}
-		.download-btn-secondary:hover {
-			background: #e9ecef;
-			color: #333;
-		}
-		.install-command {
-			background: #1e1e1e;
-			color: #4ec9b0;
-			padding: 20px 25px;
-			border-radius: 10px;
-			font-family: 'Monaco', 'Consolas', monospace;
-			position: relative;
-			margin: 20px 0;
-		}
-		.install-command code {
-			color: #4ec9b0;
-		}
-		.copy-btn {
-			position: absolute;
-			right: 15px;
-			top: 50%;
-			transform: translateY(-50%);
-			background: #333;
-			border: none;
-			color: #888;
-			padding: 8px 15px;
-			border-radius: 5px;
-			cursor: pointer;
-			transition: all 0.3s;
-		}
-		.copy-btn:hover {
-			background: #444;
-			color: white;
-		}
-		.copy-btn.copied {
-			background: #4ec9b0;
-			color: #1e1e1e;
-		}
-		.version-table {
-			width: 100%;
-			border-collapse: collapse;
-		}
-		.version-table th, .version-table td {
-			padding: 15px;
-			text-align: left;
-			border-bottom: 1px solid #eee;
-		}
-		.version-table th {
-			background: #f8f9fa;
-			font-weight: 600;
-		}
-		.version-table tr:hover {
-			background: #f8f9fa;
-		}
-		.file-size {
-			color: #888;
-			font-size: 14px;
-		}
-		.latest-tag {
+		.version-pill .badge {
 			background: #28a745;
-			color: white;
-			padding: 3px 10px;
-			border-radius: 15px;
+			padding: 5px 12px;
+			border-radius: 20px;
 			font-size: 12px;
+		}
+		.stats-pill {
+			background: rgba(40,167,69,0.3);
 			margin-left: 10px;
 		}
-		.loading {
-			text-align: center;
-			padding: 40px;
+		.download-btn-main {
+			background: white;
+			color: #7C3AED;
+			padding: 18px 45px;
+			border-radius: 50px;
+			font-weight: 600;
+			font-size: 18px;
+			display: inline-flex;
+			align-items: center;
+			gap: 12px;
+			transition: all 0.4s ease;
+			box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+		}
+		.download-btn-main:hover {
+			transform: translateY(-5px) scale(1.02);
+			box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+			color: #7C3AED;
+		}
+		.download-btn-main i {
+			font-size: 24px;
+			animation: bounce 2s infinite;
+		}
+		@keyframes bounce {
+			0%, 100% { transform: translateY(0); }
+			50% { transform: translateY(-5px); }
+		}
+		.github-btn {
+			background: transparent;
+			border: 2px solid rgba(255,255,255,0.5);
+			color: white;
+			padding: 16px 35px;
+			border-radius: 50px;
+			margin-left: 15px;
+		}
+		.github-btn:hover {
+			background: rgba(255,255,255,0.1);
+			border-color: white;
+			color: white;
+		}
+
+		/* Terminal Style Install Box */
+		.terminal-box {
+			background: #1a1a2e;
+			border-radius: 15px;
+			overflow: hidden;
+			box-shadow: 0 25px 80px rgba(0,0,0,0.3);
+		}
+		.terminal-header {
+			background: #16213e;
+			padding: 12px 20px;
+			display: flex;
+			align-items: center;
+			gap: 8px;
+		}
+		.terminal-dot {
+			width: 12px;
+			height: 12px;
+			border-radius: 50%;
+		}
+		.terminal-dot.red { background: #ff5f56; }
+		.terminal-dot.yellow { background: #ffbd2e; }
+		.terminal-dot.green { background: #27c93f; }
+		.terminal-title {
 			color: #888;
+			font-size: 13px;
+			margin-left: 15px;
 		}
-		.loading i {
-			animation: spin 1s linear infinite;
+		.terminal-body {
+			padding: 25px 30px;
+			font-family: 'Monaco', 'Consolas', monospace;
 		}
-		@keyframes spin {
+		.terminal-line {
+			display: flex;
+			align-items: center;
+			margin-bottom: 15px;
+		}
+		.terminal-prompt {
+			color: #27c93f;
+			margin-right: 10px;
+		}
+		.terminal-command {
+			color: #e0e0e0;
+			flex: 1;
+		}
+		.terminal-command .highlight { color: #7C3AED; }
+		.copy-btn {
+			background: #7C3AED;
+			border: none;
+			color: white;
+			padding: 8px 18px;
+			border-radius: 8px;
+			cursor: pointer;
+			font-size: 13px;
+			transition: all 0.3s;
+		}
+		.copy-btn:hover { background: #6d28d9; transform: scale(1.05); }
+		.copy-btn.copied { background: #27c93f; }
+
+		/* Version Cards */
+		.version-card {
+			background: white;
+			border-radius: 20px;
+			padding: 30px;
+			box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+			transition: all 0.4s ease;
+			border: 1px solid #f0f0f0;
+			position: relative;
+			overflow: hidden;
+		}
+		.version-card::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 4px;
+			background: linear-gradient(90deg, #7C3AED, #667eea);
+			transform: scaleX(0);
+			transition: transform 0.4s;
+		}
+		.version-card:hover {
+			transform: translateY(-10px);
+			box-shadow: 0 20px 60px rgba(124,58,237,0.15);
+		}
+		.version-card:hover::before { transform: scaleX(1); }
+		.version-card.latest { border-color: #7C3AED; }
+		.version-card.latest::before { transform: scaleX(1); }
+
+		.version-number {
+			font-size: 28px;
+			font-weight: 700;
+			color: #344767;
+		}
+		.latest-badge {
+			background: linear-gradient(135deg, #7C3AED, #667eea);
+			color: white;
+			padding: 5px 15px;
+			border-radius: 20px;
+			font-size: 12px;
+			font-weight: 600;
+			margin-left: 10px;
+			animation: pulse 2s infinite;
+		}
+		@keyframes pulse {
+			0%, 100% { box-shadow: 0 0 0 0 rgba(124,58,237,0.4); }
+			50% { box-shadow: 0 0 0 10px rgba(124,58,237,0); }
+		}
+		.version-meta {
+			color: #888;
+			font-size: 14px;
+			margin: 10px 0 20px;
+		}
+		.download-links {
+			display: flex;
+			gap: 10px;
+			flex-wrap: wrap;
+		}
+		.download-links a {
+			padding: 10px 20px;
+			border-radius: 10px;
+			font-size: 14px;
+			font-weight: 500;
+			transition: all 0.3s;
+		}
+		.btn-whl {
+			background: linear-gradient(135deg, #7C3AED, #667eea);
+			color: white;
+		}
+		.btn-whl:hover { transform: scale(1.05); color: white; box-shadow: 0 5px 20px rgba(124,58,237,0.4); }
+		.btn-tar {
+			background: #f8f9fa;
+			color: #344767;
+			border: 1px solid #e9ecef;
+		}
+		.btn-tar:hover { background: #e9ecef; color: #344767; }
+
+		/* Features Grid */
+		.feature-box {
+			text-align: center;
+			padding: 40px 30px;
+			background: white;
+			border-radius: 20px;
+			box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+			transition: all 0.4s;
+		}
+		.feature-box:hover {
+			transform: translateY(-10px);
+			box-shadow: 0 20px 60px rgba(124,58,237,0.1);
+		}
+		.feature-icon {
+			width: 80px;
+			height: 80px;
+			background: linear-gradient(135deg, rgba(124,58,237,0.1), rgba(102,126,234,0.1));
+			border-radius: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 auto 20px;
+			font-size: 32px;
+			color: #7C3AED;
+		}
+		.feature-box h4 { margin-bottom: 10px; }
+		.feature-box p { color: #888; margin: 0; }
+
+		/* Subscribe Section */
+		.subscribe-box {
+			background: linear-gradient(135deg, #7C3AED 0%, #667eea 100%);
+			border-radius: 25px;
+			padding: 50px;
+			position: relative;
+			overflow: hidden;
+		}
+		.subscribe-box::before {
+			content: '';
+			position: absolute;
+			top: -50%;
+			right: -50%;
+			width: 100%;
+			height: 100%;
+			background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+			animation: rotate 20s linear infinite;
+		}
+		@keyframes rotate {
 			from { transform: rotate(0deg); }
 			to { transform: rotate(360deg); }
 		}
-		.changelog-item {
-			padding: 20px;
-			border-left: 3px solid #667eea;
-			margin-bottom: 20px;
-			background: #f8f9fa;
-			border-radius: 0 10px 10px 0;
+		.subscribe-content {
+			position: relative;
+			z-index: 2;
 		}
-		.changelog-item h4 {
-			margin-bottom: 10px;
-			color: #333;
+		.subscribe-form {
+			display: flex;
+			gap: 15px;
+			max-width: 500px;
+			margin: 25px auto 0;
 		}
-		.changelog-item .date {
-			color: #888;
-			font-size: 14px;
+		.subscribe-form input {
+			flex: 1;
+			padding: 15px 25px;
+			border: none;
+			border-radius: 50px;
+			font-size: 16px;
+		}
+		.subscribe-form button {
+			background: white;
+			color: #7C3AED;
+			border: none;
+			padding: 15px 35px;
+			border-radius: 50px;
+			font-weight: 600;
+			cursor: pointer;
+			transition: all 0.3s;
+		}
+		.subscribe-form button:hover { transform: scale(1.05); box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+
+		/* Loading Spinner */
+		.loading-spinner {
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			border: 2px solid rgba(124,58,237,0.3);
+			border-radius: 50%;
+			border-top-color: #7C3AED;
+			animation: spin 1s linear infinite;
+		}
+		@keyframes spin {
+			to { transform: rotate(360deg); }
 		}
 	</style>
 </head>
@@ -159,7 +340,8 @@
 			<span></span>
 		</div>
 	</div>
-	<!-- Start Header Area -->
+
+	<!-- Header -->
 	<header class="header">
 		<div class="container">
 			<div class="row">
@@ -187,7 +369,8 @@
 								<li><a href="index.html">Home</a></li>
 								<li><a href="index.html#features">Features</a></li>
 								<li><a href="pricing.html">Pricing</a></li>
-								<li><a href="download.html" class="active">Download</a></li>
+								<li class="active"><a href="download.html">Download</a></li>
+								<li><a href="https://github.com/flytohub/flyto-core">Docs</a></li>
 								<li><a href="contact.html">Contact</a></li>
 							</ul>
 						</nav>
@@ -196,7 +379,6 @@
 			</div>
 		</div>
 	</header>
-	<!-- End Header Area -->
 
 	<!-- Mobile Menu -->
 	<div class="mobile-menu-area">
@@ -217,6 +399,7 @@
 						<li><a href="index.html#features">Features</a></li>
 						<li><a href="pricing.html">Pricing</a></li>
 						<li class="active"><a href="download.html">Download</a></li>
+						<li><a href="https://github.com/flytohub/flyto-core">Docs</a></li>
 						<li><a href="contact.html">Contact</a></li>
 					</ul>
 				</div>
@@ -224,29 +407,38 @@
 		</div>
 	</div>
 
-	<!-- Download Hero -->
-	<section class="download-hero">
+	<!-- Hero Section -->
+	<section class="download-hero pt-200 pb-150">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-8 offset-lg-2 text-center">
-					<div class="version-badge">
-						<i class="fas fa-tag"></i> Latest: <span id="latest-version">Loading...</span>
+				<div class="col-lg-8 offset-lg-2 text-center hero-download-content">
+					<div class="version-pill wow fadeInDown" data-wow-delay="0.1s">
+						<span><i class="fas fa-tag"></i> Latest: <strong id="latest-version">...</strong></span>
+						<span class="badge">Stable</span>
+						<span id="download-stats" class="badge stats-pill" style="display: none;"></span>
 					</div>
-					<span id="download-stats" class="version-badge" style="display: none; margin-left: 10px; background: rgba(40,167,69,0.3);"></span>
-					<h1>Download Flyto2 Core</h1>
-					<p style="font-size: 18px; opacity: 0.9; margin-bottom: 30px;">
+					<h1 class="text-white wow fadeInUp" data-wow-delay="0.2s" style="font-size: 48px; margin-bottom: 20px;">
+						Download Flyto2 Core
+					</h1>
+					<p class="text-white wow fadeInUp" data-wow-delay="0.3s" style="font-size: 20px; opacity: 0.9; margin-bottom: 40px;">
 						Open source automation engine. Works offline, no cloud required.
 					</p>
-					<a href="#" id="main-download-btn" class="download-btn">
-						<i class="fas fa-download"></i>
-						<span>Download .whl</span>
-					</a>
-					<a href="https://github.com/flytohub/flyto-core" class="download-btn download-btn-secondary" style="margin-left: 15px;">
-						<i class="fab fa-github"></i>
-						<span>View Source</span>
-					</a>
+					<div class="wow fadeInUp" data-wow-delay="0.4s">
+						<a href="#" id="main-download-btn" class="download-btn-main">
+							<i class="fas fa-download"></i>
+							<span>Download .whl</span>
+						</a>
+						<a href="https://github.com/flytohub/flyto-core" class="github-btn" target="_blank">
+							<i class="fab fa-github"></i> View Source
+						</a>
+					</div>
 				</div>
 			</div>
+		</div>
+		<div class="custom-shape-divider-bottom-1638549227">
+			<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+				<path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+			</svg>
 		</div>
 	</section>
 
@@ -255,21 +447,28 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 offset-lg-2">
-					<div class="download-card">
-						<h3><i class="fas fa-terminal" style="color: #667eea;"></i> Quick Install</h3>
-						<p>Install via pip (recommended):</p>
-						<div class="install-command">
-							<code>pip install flyto-core</code>
-							<button class="copy-btn" onclick="copyCommand(this, 'pip install flyto-core')">
-								<i class="fas fa-copy"></i> Copy
-							</button>
+					<div class="terminal-box wow fadeInUp" data-wow-delay="0.2s">
+						<div class="terminal-header">
+							<span class="terminal-dot red"></span>
+							<span class="terminal-dot yellow"></span>
+							<span class="terminal-dot green"></span>
+							<span class="terminal-title">Terminal - pip install</span>
 						</div>
-						<p>Or install specific version:</p>
-						<div class="install-command">
-							<code>pip install flyto-core==<span id="install-version">1.0.2</span></code>
-							<button class="copy-btn" onclick="copyCommand(this, 'pip install flyto-core==' + document.getElementById('install-version').textContent)">
-								<i class="fas fa-copy"></i> Copy
-							</button>
+						<div class="terminal-body">
+							<div class="terminal-line">
+								<span class="terminal-prompt">$</span>
+								<span class="terminal-command">pip install <span class="highlight">flyto-core</span></span>
+								<button class="copy-btn" onclick="copyCommand(this, 'pip install flyto-core')">
+									<i class="fas fa-copy"></i> Copy
+								</button>
+							</div>
+							<div class="terminal-line" style="margin-bottom: 0;">
+								<span class="terminal-prompt">$</span>
+								<span class="terminal-command">pip install <span class="highlight">flyto-core==<span id="install-version">1.0.2</span></span></span>
+								<button class="copy-btn" onclick="copyCommand(this, 'pip install flyto-core==' + document.getElementById('install-version').textContent)">
+									<i class="fas fa-copy"></i> Copy
+								</button>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -281,53 +480,71 @@
 	<section class="section-padding" style="background: #f8f9fa;">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-10 offset-lg-1">
-					<h2 class="text-center mb-50">All Versions</h2>
-					<div class="download-card">
-						<div id="versions-loading" class="loading">
-							<i class="fas fa-spinner"></i> Loading versions...
+				<div class="col-lg-12 text-center mb-50">
+					<h2 class="wow fadeInUp">All Versions</h2>
+					<p class="wow fadeInUp" data-wow-delay="0.1s" style="color: #888;">Choose your preferred version</p>
+				</div>
+			</div>
+			<div class="row" id="versions-container">
+				<div class="col-12 text-center" id="versions-loading">
+					<div class="loading-spinner"></div>
+					<p style="color: #888; margin-top: 15px;">Loading versions...</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Features -->
+	<section class="section-padding">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="feature-box wow fadeInUp" data-wow-delay="0.1s">
+						<div class="feature-icon">
+							<i class="fab fa-python"></i>
 						</div>
-						<table class="version-table" id="versions-table" style="display: none;">
-							<thead>
-								<tr>
-									<th>Version</th>
-									<th>Released</th>
-									<th>Size</th>
-									<th>Download</th>
-								</tr>
-							</thead>
-							<tbody id="versions-body">
-							</tbody>
-						</table>
+						<h4>Python 3.9+</h4>
+						<p>Built for modern Python with full type hints and async support</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="feature-box wow fadeInUp" data-wow-delay="0.2s">
+						<div class="feature-icon">
+							<i class="fas fa-desktop"></i>
+						</div>
+						<h4>Cross Platform</h4>
+						<p>Works on Windows, macOS, and Linux without modification</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="feature-box wow fadeInUp" data-wow-delay="0.3s">
+						<div class="feature-icon">
+							<i class="fas fa-wifi-slash"></i>
+						</div>
+						<h4>Works Offline</h4>
+						<p>No internet required after installation. Your data stays local</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<!-- Requirements -->
+	<!-- Subscribe -->
 	<section class="section-padding">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-4">
-					<div class="download-card text-center">
-						<i class="fab fa-python" style="font-size: 48px; color: #3776ab; margin-bottom: 20px;"></i>
-						<h4>Python 3.9+</h4>
-						<p>Requires Python 3.9 or higher</p>
-					</div>
-				</div>
-				<div class="col-lg-4">
-					<div class="download-card text-center">
-						<i class="fas fa-desktop" style="font-size: 48px; color: #667eea; margin-bottom: 20px;"></i>
-						<h4>Cross Platform</h4>
-						<p>Windows, macOS, Linux</p>
-					</div>
-				</div>
-				<div class="col-lg-4">
-					<div class="download-card text-center">
-						<i class="fas fa-wifi-slash" style="font-size: 48px; color: #28a745; margin-bottom: 20px;"></i>
-						<h4>Works Offline</h4>
-						<p>No internet required after install</p>
+				<div class="col-lg-10 offset-lg-1">
+					<div class="subscribe-box wow fadeInUp">
+						<div class="subscribe-content text-center text-white">
+							<h2 style="margin-bottom: 15px;"><i class="fas fa-bell"></i> Get Notified</h2>
+							<p style="opacity: 0.9;">Be the first to know when we release new versions</p>
+							<form id="subscribe-form" class="subscribe-form">
+								<input type="email" id="subscribe-email" placeholder="Enter your email" required>
+								<button type="submit">
+									<i class="fas fa-paper-plane"></i> Subscribe
+								</button>
+							</form>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -342,9 +559,7 @@
 					<div class="col-lg-4 col-sm-6 mb-30">
 						<div class="f-widgets-item">
 							<div class="f-logo">
-								<a href="index.html">
-									<img src="assets/img/logo.png" alt="Flyto2">
-								</a>
+								<a href="index.html"><img src="assets/img/logo.png" alt="Flyto2"></a>
 							</div>
 							<p>Automation that works like you do. Record once, replay forever.</p>
 							<ul>
@@ -375,18 +590,9 @@
 					</div>
 					<div class="col-lg-4 col-sm-6 mb-30">
 						<div class="f-widgets-item">
-							<h5>Stay Updated</h5>
-							<p>Get notified about new releases</p>
-							<form id="subscribe-form" style="margin-top: 15px;">
-								<div style="display: flex; gap: 10px;">
-									<input type="email" id="subscribe-email" placeholder="Your email" required
-										style="flex: 1; padding: 10px 15px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px;">
-									<button type="submit" class="button-2" style="white-space: nowrap;">
-										<i class="fas fa-bell"></i> Notify Me
-									</button>
-								</div>
-							</form>
-							<a href="https://github.com/flytohub/flyto-core" style="display: inline-block; margin-top: 10px; color: #888; font-size: 14px;">
+							<h5>Open Source</h5>
+							<p>Flyto2 Core is MIT licensed. Contribute on GitHub!</p>
+							<a href="https://github.com/flytohub/flyto-core" class="button-2" style="margin-top: 15px;">
 								<i class="fab fa-github"></i> Star on GitHub
 							</a>
 						</div>
@@ -408,46 +614,42 @@
 	<!-- Scripts -->
 	<script src="assets/js/jquery-3.6.0.min.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/wow.min.js"></script>
 	<script src="assets/js/mobile-menu.js"></script>
 	<script src="assets/js/script.js"></script>
 
 	<script>
+		// Initialize WOW.js animations
+		new WOW().init();
+
 		// Firebase Functions base URL
 		const FIREBASE_FUNCTIONS_URL = 'https://us-central1-ticket-helper-dbc0e.cloudfunctions.net';
 
 		// Fetch data from Firebase cache (with PyPI fallback)
 		async function fetchPyPIData() {
 			try {
-				// Try Firebase cache first
-				let data, releases, latestVersion, source = 'cache';
+				let releases, latestVersion;
 
 				try {
 					const cacheResponse = await fetch(`${FIREBASE_FUNCTIONS_URL}/getPyPICache`);
 					const cacheData = await cacheResponse.json();
-
 					if (cacheData.ok && cacheData.source === 'cache') {
-						data = cacheData.data;
-						releases = data.releases;
-						latestVersion = data.latest_version;
+						releases = cacheData.data.releases;
+						latestVersion = cacheData.data.latest_version;
 					} else {
 						throw new Error('Cache miss');
 					}
 				} catch (cacheErr) {
-					// Fallback to direct PyPI
 					console.log('Using PyPI fallback...');
-					source = 'pypi';
 					const response = await fetch('https://pypi.org/pypi/flyto-core/json');
 					const pypiData = await response.json();
 					latestVersion = pypiData.info.version;
 					releases = {};
-
-					// Convert PyPI format to our format
 					for (const [ver, files] of Object.entries(pypiData.releases)) {
 						if (files.length === 0) continue;
 						const whl = files.find(f => f.filename.endsWith('.whl'));
 						const tar = files.find(f => f.filename.endsWith('.tar.gz'));
 						if (!whl && !tar) continue;
-
 						releases[ver] = {
 							version: ver,
 							release_date: (whl || tar).upload_time,
@@ -459,64 +661,59 @@
 					}
 				}
 
-				// Update latest version display
+				// Update UI
 				document.getElementById('latest-version').textContent = latestVersion;
 				document.getElementById('install-version').textContent = latestVersion;
 
-				// Set main download button (use Firebase redirect for tracking)
 				const mainBtn = document.getElementById('main-download-btn');
 				mainBtn.href = `${FIREBASE_FUNCTIONS_URL}/downloadRelease?version=latest&type=whl`;
 				mainBtn.onclick = () => trackDownload(latestVersion, 'whl');
 
-				// Build versions table
-				const tbody = document.getElementById('versions-body');
-				const versions = Object.keys(releases).sort((a, b) => {
-					// Sort by version number descending
-					return b.localeCompare(a, undefined, { numeric: true });
-				});
+				// Build version cards
+				const container = document.getElementById('versions-container');
+				const versions = Object.keys(releases).sort((a, b) => b.localeCompare(a, undefined, { numeric: true }));
 
-				versions.forEach((version, index) => {
+				container.innerHTML = versions.map((version, index) => {
 					const release = releases[version];
-					if (!release) return;
-
-					const uploadDate = new Date(release.release_date).toLocaleDateString('en-US', {
-						year: 'numeric',
-						month: 'short',
-						day: 'numeric'
-					});
+					if (!release) return '';
+					const isLatest = index === 0;
+					const date = new Date(release.release_date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
 					const size = formatBytes(release.whl_size || release.tar_size || 0);
 
-					const row = document.createElement('tr');
-					row.innerHTML = `
-						<td>
-							<strong>${version}</strong>
-							${index === 0 ? '<span class="latest-tag">Latest</span>' : ''}
-						</td>
-						<td>${uploadDate}</td>
-						<td class="file-size">${size}</td>
-						<td>
-							${release.whl_url ? `<a href="${FIREBASE_FUNCTIONS_URL}/downloadRelease?version=${version}&type=whl" class="btn btn-sm btn-primary" onclick="trackDownload('${version}', 'whl')"><i class="fas fa-download"></i> .whl</a>` : ''}
-							${release.tar_url ? `<a href="${FIREBASE_FUNCTIONS_URL}/downloadRelease?version=${version}&type=tar" class="btn btn-sm btn-outline-secondary" style="margin-left: 5px;" onclick="trackDownload('${version}', 'tar')"><i class="fas fa-file-archive"></i> .tar.gz</a>` : ''}
-						</td>
+					return `
+						<div class="col-lg-4 col-md-6 mb-30">
+							<div class="version-card ${isLatest ? 'latest' : ''} wow fadeInUp" data-wow-delay="${0.1 + index * 0.1}s">
+								<div style="display: flex; align-items: center; margin-bottom: 5px;">
+									<span class="version-number">${version}</span>
+									${isLatest ? '<span class="latest-badge">Latest</span>' : ''}
+								</div>
+								<div class="version-meta">
+									<i class="far fa-calendar-alt"></i> ${date} &nbsp;&nbsp;
+									<i class="far fa-file-archive"></i> ${size}
+								</div>
+								<div class="download-links">
+									${release.whl_url ? `<a href="${FIREBASE_FUNCTIONS_URL}/downloadRelease?version=${version}&type=whl" class="btn-whl" onclick="trackDownload('${version}', 'whl')"><i class="fas fa-download"></i> .whl</a>` : ''}
+									${release.tar_url ? `<a href="${FIREBASE_FUNCTIONS_URL}/downloadRelease?version=${version}&type=tar" class="btn-tar" onclick="trackDownload('${version}', 'tar')"><i class="fas fa-file-archive"></i> .tar.gz</a>` : ''}
+								</div>
+							</div>
+						</div>
 					`;
-					tbody.appendChild(row);
-				});
-
-				// Show table, hide loading
-				document.getElementById('versions-loading').style.display = 'none';
-				document.getElementById('versions-table').style.display = 'table';
+				}).join('');
 
 				// Load download stats
 				loadDownloadStats();
 
 			} catch (error) {
 				console.error('Failed to fetch data:', error);
-				document.getElementById('versions-loading').innerHTML =
-					'<p style="color: #dc3545;"><i class="fas fa-exclamation-circle"></i> Failed to load versions. <a href="https://pypi.org/project/flyto-core/#history">View on PyPI</a></p>';
+				document.getElementById('versions-container').innerHTML = `
+					<div class="col-12 text-center">
+						<p style="color: #dc3545;"><i class="fas fa-exclamation-circle"></i> Failed to load versions.
+						<a href="https://pypi.org/project/flyto-core/#history">View on PyPI</a></p>
+					</div>
+				`;
 			}
 		}
 
-		// Track download event
 		async function trackDownload(version, fileType) {
 			try {
 				await fetch(`${FIREBASE_FUNCTIONS_URL}/trackDownload`, {
@@ -524,49 +721,25 @@
 					headers: { 'Content-Type': 'application/json' },
 					body: JSON.stringify({ version, file_type: fileType, source: 'landing_page' })
 				});
-			} catch (err) {
-				console.log('Track error:', err);
-			}
+			} catch (err) {}
 		}
 
-		// Load download statistics
 		async function loadDownloadStats() {
 			try {
 				const response = await fetch(`${FIREBASE_FUNCTIONS_URL}/getDownloadStats`);
 				const data = await response.json();
-
 				if (data.ok && data.total > 0) {
 					const statsEl = document.getElementById('download-stats');
-					if (statsEl) {
-						statsEl.innerHTML = `<i class="fas fa-download"></i> ${data.total.toLocaleString()} downloads`;
-						statsEl.style.display = 'inline-block';
-					}
+					statsEl.innerHTML = `<i class="fas fa-download"></i> ${data.total.toLocaleString()}`;
+					statsEl.style.display = 'inline-block';
 				}
-			} catch (err) {
-				console.log('Stats error:', err);
-			}
-		}
-
-		// Subscribe to release notifications
-		async function subscribeToReleases(email) {
-			try {
-				const response = await fetch(`${FIREBASE_FUNCTIONS_URL}/subscribeToReleases`, {
-					method: 'POST',
-					headers: { 'Content-Type': 'application/json' },
-					body: JSON.stringify({ email })
-				});
-				const data = await response.json();
-				return data.ok;
-			} catch (err) {
-				console.error('Subscribe error:', err);
-				return false;
-			}
+			} catch (err) {}
 		}
 
 		function formatBytes(bytes) {
-			if (!bytes || bytes === 0) return '0 Bytes';
+			if (!bytes || bytes === 0) return '0 B';
 			const k = 1024;
-			const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+			const sizes = ['B', 'KB', 'MB', 'GB'];
 			const i = Math.floor(Math.log(bytes) / Math.log(k));
 			return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
 		}
@@ -582,40 +755,42 @@
 			});
 		}
 
-		// Handle notification subscription form
-		document.addEventListener('DOMContentLoaded', () => {
-			fetchPyPIData();
+		// Subscribe form
+		document.getElementById('subscribe-form').addEventListener('submit', async (e) => {
+			e.preventDefault();
+			const email = document.getElementById('subscribe-email').value;
+			const btn = e.target.querySelector('button');
+			const originalText = btn.innerHTML;
 
-			const subscribeForm = document.getElementById('subscribe-form');
-			if (subscribeForm) {
-				subscribeForm.addEventListener('submit', async (e) => {
-					e.preventDefault();
-					const email = document.getElementById('subscribe-email').value;
-					const btn = subscribeForm.querySelector('button');
-					const originalText = btn.innerHTML;
+			btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+			btn.disabled = true;
 
-					btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Subscribing...';
-					btn.disabled = true;
-
-					const success = await subscribeToReleases(email);
-
-					if (success) {
-						btn.innerHTML = '<i class="fas fa-check"></i> Subscribed!';
-						btn.classList.add('btn-success');
-						document.getElementById('subscribe-email').value = '';
-					} else {
-						btn.innerHTML = '<i class="fas fa-times"></i> Failed';
-						btn.classList.add('btn-danger');
-					}
-
-					setTimeout(() => {
-						btn.innerHTML = originalText;
-						btn.disabled = false;
-						btn.classList.remove('btn-success', 'btn-danger');
-					}, 3000);
+			try {
+				const response = await fetch(`${FIREBASE_FUNCTIONS_URL}/subscribeToReleases`, {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify({ email })
 				});
+				const data = await response.json();
+
+				if (data.ok) {
+					btn.innerHTML = '<i class="fas fa-check"></i> Subscribed!';
+					document.getElementById('subscribe-email').value = '';
+				} else {
+					throw new Error();
+				}
+			} catch (err) {
+				btn.innerHTML = '<i class="fas fa-times"></i> Failed';
 			}
+
+			setTimeout(() => {
+				btn.innerHTML = originalText;
+				btn.disabled = false;
+			}, 3000);
 		});
+
+		// Load data on page load
+		document.addEventListener('DOMContentLoaded', fetchPyPIData);
 	</script>
 </body>
 </html>
