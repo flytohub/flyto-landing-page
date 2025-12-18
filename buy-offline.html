@@ -15,41 +15,148 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="assets/css/responsive.css">
 
+	<link rel="stylesheet" href="assets/css/animate.css">
 	<style>
+		/* Hero with animations */
 		.purchase-hero {
-			background: linear-gradient(135deg, #5B21B6 0%, #7C3AED 100%);
-			padding: 120px 0 60px;
+			background: linear-gradient(135deg, #0f0524 0%, #1e0a3c 20%, #2d1b4e 50%, #4c1d95 80%, #5b21b6 100%);
+			padding: 140px 0 100px;
 			color: #fff;
+			position: relative;
+			overflow: hidden;
+			min-height: 400px;
 		}
-		.purchase-hero h1 {
-			font-size: 42px;
-			margin-bottom: 15px;
+		.purchase-hero::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background:
+				radial-gradient(circle at 20% 80%, rgba(124, 58, 237, 0.5) 0%, transparent 40%),
+				radial-gradient(circle at 80% 20%, rgba(167, 139, 250, 0.4) 0%, transparent 40%),
+				radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.3) 0%, transparent 60%);
+			animation: aurora 6s ease-in-out infinite;
 		}
-		.purchase-hero p {
-			font-size: 18px;
-			opacity: 0.9;
+		@keyframes aurora {
+			0%, 100% { opacity: 1; transform: scale(1); }
+			50% { opacity: 0.8; transform: scale(1.1); }
 		}
+
+		/* Floating orbs */
+		.orb {
+			position: absolute;
+			border-radius: 50%;
+			filter: blur(40px);
+			animation: orb-float 8s ease-in-out infinite;
+		}
+		.orb-1 { width: 300px; height: 300px; background: rgba(124, 58, 237, 0.3); top: -100px; left: -100px; }
+		.orb-2 { width: 200px; height: 200px; background: rgba(167, 139, 250, 0.25); bottom: -50px; right: -50px; animation-delay: -4s; }
+		.orb-3 { width: 150px; height: 150px; background: rgba(196, 181, 253, 0.2); top: 50%; left: 60%; animation-delay: -2s; }
+		@keyframes orb-float {
+			0%, 100% { transform: translate(0, 0) scale(1); }
+			50% { transform: translate(20px, -20px) scale(1.1); }
+		}
+
+		/* Particles */
+		.particle {
+			position: absolute;
+			border-radius: 50%;
+			pointer-events: none;
+		}
+		.particle-1 { width: 8px; height: 8px; background: rgba(167, 139, 250, 0.8); top: 20%; left: 10%; animation: float-p 5s ease-in-out infinite; box-shadow: 0 0 15px rgba(167, 139, 250, 0.6); }
+		.particle-2 { width: 12px; height: 12px; background: rgba(124, 58, 237, 0.7); top: 60%; left: 85%; animation: float-p 7s ease-in-out infinite reverse; box-shadow: 0 0 20px rgba(124, 58, 237, 0.5); }
+		.particle-3 { width: 6px; height: 6px; background: rgba(196, 181, 253, 0.9); top: 30%; left: 70%; animation: float-p 4s ease-in-out infinite; box-shadow: 0 0 10px rgba(196, 181, 253, 0.7); }
+		.particle-4 { width: 10px; height: 10px; background: rgba(255, 255, 255, 0.6); top: 70%; left: 20%; animation: float-p 6s ease-in-out infinite; box-shadow: 0 0 15px rgba(255, 255, 255, 0.4); }
+		@keyframes float-p {
+			0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+			50% { transform: translate(20px, -30px) scale(1.2); opacity: 1; }
+		}
+
+		/* Hero title shine */
+		.hero-title {
+			font-size: 52px;
+			font-weight: 800;
+			margin-bottom: 20px;
+			background: linear-gradient(90deg, #fff 0%, #c4b5fd 25%, #a78bfa 50%, #c4b5fd 75%, #fff 100%);
+			background-size: 300% auto;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			animation: shine 4s linear infinite;
+		}
+		@keyframes shine {
+			0% { background-position: 0% center; }
+			100% { background-position: 300% center; }
+		}
+
+		/* Wave divider */
+		.wave-divider {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			overflow: hidden;
+			line-height: 0;
+		}
+		.wave-divider svg {
+			position: relative;
+			display: block;
+			width: calc(100% + 1.3px);
+			height: 60px;
+		}
+		.wave-divider .shape-fill {
+			fill: #f8f9ff;
+		}
+
+		/* Purchase container */
 		.purchase-container {
-			padding: 60px 0;
+			padding: 60px 0 80px;
+			background: linear-gradient(180deg, #f8f9ff 0%, #fff 100%);
 		}
+
+		/* Purchase card - 3D style */
 		.purchase-card {
-			background: #fff;
-			border-radius: 15px;
-			box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-			padding: 40px;
-			margin-top: -80px;
+			background: linear-gradient(145deg, #ffffff 0%, #f8f9ff 100%);
+			border-radius: 28px;
+			box-shadow:
+				0 30px 80px rgba(124, 58, 237, 0.12),
+				0 0 0 1px rgba(124, 58, 237, 0.05);
+			padding: 50px;
+			margin-top: -100px;
 			position: relative;
 			z-index: 10;
+			overflow: hidden;
 		}
+		.purchase-card::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 5px;
+			background: linear-gradient(90deg, #7c3aed, #a78bfa, #c4b5fd, #a78bfa, #7c3aed);
+			background-size: 200% 100%;
+			animation: gradient-move 3s linear infinite;
+		}
+		@keyframes gradient-move {
+			0% { background-position: 0% 0%; }
+			100% { background-position: 200% 0%; }
+		}
+
+		/* Step indicator - enhanced */
 		.step-indicator {
 			display: flex;
 			justify-content: center;
-			margin-bottom: 40px;
+			margin-bottom: 50px;
+			position: relative;
 		}
 		.step {
 			display: flex;
 			align-items: center;
-			color: #999;
+			color: #9ca3af;
+			transition: all 0.4s;
 		}
 		.step.active {
 			color: #7C3AED;
@@ -58,217 +165,400 @@
 			color: #22c55e;
 		}
 		.step-number {
-			width: 36px;
-			height: 36px;
+			width: 50px;
+			height: 50px;
 			border-radius: 50%;
-			background: #e5e7eb;
+			background: linear-gradient(145deg, #e5e7eb, #f3f4f6);
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			font-weight: 600;
-			margin-right: 10px;
+			font-weight: 700;
+			font-size: 18px;
+			margin-right: 12px;
+			transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+			box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 		}
 		.step.active .step-number {
-			background: #7C3AED;
+			background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
 			color: #fff;
+			box-shadow: 0 10px 30px rgba(124, 58, 237, 0.4);
+			transform: scale(1.1);
 		}
 		.step.completed .step-number {
-			background: #22c55e;
+			background: linear-gradient(135deg, #22c55e 0%, #4ade80 100%);
 			color: #fff;
+			box-shadow: 0 10px 30px rgba(34, 197, 94, 0.3);
+		}
+		.step span {
+			font-weight: 600;
+			font-size: 15px;
 		}
 		.step-line {
-			width: 60px;
-			height: 2px;
-			background: #e5e7eb;
-			margin: 0 15px;
+			width: 80px;
+			height: 3px;
+			background: linear-gradient(90deg, #e5e7eb, #f3f4f6);
+			margin: 0 20px;
+			border-radius: 2px;
+			position: relative;
+			overflow: hidden;
 		}
-		.step.completed + .step-line {
-			background: #22c55e;
+		.step-line::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 0%;
+			background: linear-gradient(90deg, #22c55e, #4ade80);
+			transition: width 0.5s ease;
 		}
+		.step.completed + .step-line::after {
+			width: 100%;
+		}
+
+		/* Plan summary - card style */
 		.plan-summary {
-			background: #f8f9fa;
-			border-radius: 10px;
-			padding: 25px;
-			margin-bottom: 30px;
+			background: linear-gradient(135deg, #1e0a3c 0%, #4c1d95 100%);
+			border-radius: 20px;
+			padding: 35px;
+			margin-bottom: 35px;
+			color: #fff;
+			position: relative;
+			overflow: hidden;
+		}
+		.plan-summary::before {
+			content: '';
+			position: absolute;
+			top: -50%;
+			right: -50%;
+			width: 100%;
+			height: 100%;
+			background: radial-gradient(circle, rgba(167, 139, 250, 0.2) 0%, transparent 70%);
+			animation: pulse-bg 4s ease-in-out infinite;
+		}
+		@keyframes pulse-bg {
+			0%, 100% { transform: scale(1); opacity: 0.5; }
+			50% { transform: scale(1.2); opacity: 0.8; }
 		}
 		.plan-summary h4 {
-			color: #7C3AED;
-			margin-bottom: 15px;
+			color: #c4b5fd;
+			margin-bottom: 20px;
+			font-size: 22px;
+			font-weight: 700;
+			position: relative;
+			z-index: 1;
 		}
 		.plan-features {
 			list-style: none;
 			padding: 0;
 			margin: 0;
+			position: relative;
+			z-index: 1;
 		}
 		.plan-features li {
-			padding: 8px 0;
+			padding: 12px 0;
 			display: flex;
 			align-items: center;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+			font-size: 15px;
+		}
+		.plan-features li:last-child {
+			border-bottom: none;
 		}
 		.plan-features li i {
-			color: #22c55e;
-			margin-right: 10px;
+			color: #4ade80;
+			margin-right: 12px;
+			font-size: 18px;
 		}
+
+		/* Price display - animated */
 		.price-display {
 			text-align: center;
-			padding: 20px;
-			background: linear-gradient(135deg, #5B21B6 0%, #7C3AED 100%);
-			border-radius: 10px;
+			padding: 30px;
+			background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+			border-radius: 20px;
 			color: #fff;
-			margin-bottom: 30px;
+			margin-bottom: 35px;
+			position: relative;
+			overflow: hidden;
+		}
+		.price-display::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -100%;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+			animation: price-shimmer 3s infinite;
+		}
+		@keyframes price-shimmer {
+			0% { left: -100%; }
+			100% { left: 100%; }
 		}
 		.price-display .amount {
-			font-size: 48px;
-			font-weight: 700;
+			font-size: 64px;
+			font-weight: 800;
+			position: relative;
+			z-index: 1;
 		}
 		.price-display .period {
-			font-size: 18px;
+			font-size: 16px;
 			opacity: 0.9;
+			position: relative;
+			z-index: 1;
 		}
+
+		/* Form section */
 		.form-section {
-			margin-bottom: 30px;
+			margin-bottom: 35px;
 		}
 		.form-section h5 {
-			margin-bottom: 20px;
-			padding-bottom: 10px;
-			border-bottom: 2px solid #f0f0f0;
+			margin-bottom: 25px;
+			padding-bottom: 15px;
+			border-bottom: 2px solid rgba(124, 58, 237, 0.1);
+			font-size: 18px;
+			font-weight: 700;
+			color: #1e0a3c;
 		}
 		.form-control {
-			padding: 12px 15px;
-			border-radius: 8px;
-			border: 1px solid #e0e0e0;
+			padding: 16px 20px;
+			border-radius: 14px;
+			border: 2px solid #e5e7eb;
+			font-size: 16px;
+			transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 		}
 		.form-control:focus {
 			border-color: #7C3AED;
-			box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+			box-shadow:
+				0 0 0 4px rgba(124, 58, 237, 0.15),
+				0 10px 30px rgba(124, 58, 237, 0.1);
+			transform: translateY(-2px);
 		}
+
+		/* Fingerprint box - enhanced */
 		.fingerprint-box {
-			background: #f8f9fa;
-			border: 2px dashed #ddd;
-			border-radius: 10px;
-			padding: 30px;
+			background: linear-gradient(145deg, #f8f9ff 0%, #fff 100%);
+			border: 3px dashed rgba(124, 58, 237, 0.3);
+			border-radius: 20px;
+			padding: 40px;
 			text-align: center;
+			transition: all 0.4s;
+		}
+		.fingerprint-box:hover {
+			border-color: rgba(124, 58, 237, 0.5);
+			box-shadow: 0 10px 40px rgba(124, 58, 237, 0.1);
 		}
 		.fingerprint-box.has-value {
 			border-color: #22c55e;
-			background: #f0fdf4;
+			border-style: solid;
+			background: linear-gradient(145deg, #f0fdf4 0%, #dcfce7 100%);
 		}
 		.fingerprint-box i {
-			font-size: 40px;
+			font-size: 50px;
 			color: #7C3AED;
-			margin-bottom: 15px;
+			margin-bottom: 20px;
+			display: block;
+			animation: icon-pulse 2s ease-in-out infinite;
+		}
+		@keyframes icon-pulse {
+			0%, 100% { transform: scale(1); }
+			50% { transform: scale(1.1); }
 		}
 		.fingerprint-input {
-			font-family: monospace;
-			font-size: 14px;
+			font-family: 'Monaco', 'Consolas', monospace;
+			font-size: 15px;
+			text-align: center;
 		}
+
+		/* Help text */
 		.help-text {
-			background: #fef3c7;
-			border-left: 4px solid #f59e0b;
-			padding: 15px;
-			border-radius: 0 8px 8px 0;
-			margin-top: 15px;
+			background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+			border-left: 5px solid #f59e0b;
+			padding: 20px;
+			border-radius: 0 16px 16px 0;
+			margin-top: 20px;
 		}
 		.help-text i {
 			color: #f59e0b;
 		}
+
+		/* Purchase button - enhanced */
 		.btn-purchase {
-			background: linear-gradient(135deg, #5B21B6 0%, #7C3AED 100%);
+			background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
 			color: #fff;
-			padding: 15px 40px;
+			padding: 18px 40px;
 			font-size: 18px;
+			font-weight: 700;
 			border: none;
-			border-radius: 10px;
+			border-radius: 16px;
 			width: 100%;
 			cursor: pointer;
-			transition: transform 0.2s, box-shadow 0.2s;
+			transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+			position: relative;
+			overflow: hidden;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+		}
+		.btn-purchase::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -100%;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+			transition: left 0.5s;
+		}
+		.btn-purchase:hover::before {
+			left: 100%;
 		}
 		.btn-purchase:hover {
-			transform: translateY(-2px);
-			box-shadow: 0 10px 30px rgba(124, 58, 237, 0.3);
+			transform: translateY(-4px) scale(1.02);
+			box-shadow:
+				0 20px 40px rgba(124, 58, 237, 0.4),
+				0 0 0 3px rgba(167, 139, 250, 0.3);
 		}
 		.btn-purchase:disabled {
 			opacity: 0.6;
 			cursor: not-allowed;
 			transform: none;
 		}
+
+		/* Secure badge */
 		.secure-badge {
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			margin-top: 20px;
-			color: #666;
+			margin-top: 25px;
+			color: #6b7280;
 			font-size: 14px;
+			padding: 15px;
+			background: rgba(34, 197, 94, 0.05);
+			border-radius: 12px;
 		}
 		.secure-badge i {
-			margin-right: 8px;
+			margin-right: 10px;
 			color: #22c55e;
+			font-size: 18px;
 		}
+
 		.step-content {
 			display: none;
+			animation: fadeIn 0.5s ease;
 		}
 		.step-content.active {
 			display: block;
 		}
+		@keyframes fadeIn {
+			from { opacity: 0; transform: translateY(20px); }
+			to { opacity: 1; transform: translateY(0); }
+		}
+
 		/* Success Page Styles */
 		.success-icon {
-			width: 100px;
-			height: 100px;
-			background: #22c55e;
+			width: 120px;
+			height: 120px;
+			background: linear-gradient(135deg, #22c55e 0%, #4ade80 100%);
 			border-radius: 50%;
 			display: flex;
 			align-items: center;
 			justify-content: center;
 			margin: 0 auto 30px;
+			animation: success-bounce 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+			box-shadow: 0 20px 50px rgba(34, 197, 94, 0.3);
+		}
+		@keyframes success-bounce {
+			0% { transform: scale(0); }
+			50% { transform: scale(1.2); }
+			100% { transform: scale(1); }
 		}
 		.success-icon i {
-			font-size: 50px;
+			font-size: 60px;
 			color: #fff;
 		}
+
 		.license-download-box {
-			background: #f8f9fa;
-			border-radius: 10px;
-			padding: 30px;
+			background: linear-gradient(145deg, #f8f9ff 0%, #fff 100%);
+			border-radius: 20px;
+			padding: 40px;
 			text-align: center;
 			margin: 30px 0;
+			border: 2px solid rgba(124, 58, 237, 0.1);
 		}
 		.license-file-icon {
-			font-size: 60px;
+			font-size: 70px;
 			color: #7C3AED;
-			margin-bottom: 15px;
+			margin-bottom: 20px;
+			animation: icon-pulse 2s ease-in-out infinite;
 		}
+
 		.btn-download {
-			background: #22c55e;
+			background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
 			color: #fff;
-			padding: 15px 40px;
+			padding: 18px 50px;
 			font-size: 18px;
+			font-weight: 700;
 			border: none;
-			border-radius: 10px;
+			border-radius: 16px;
 			cursor: pointer;
 			display: inline-flex;
 			align-items: center;
-			gap: 10px;
+			gap: 12px;
+			transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 		}
 		.btn-download:hover {
-			background: #16a34a;
+			transform: translateY(-4px) scale(1.02);
+			box-shadow: 0 15px 40px rgba(34, 197, 94, 0.4);
+			background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
 		}
+
 		.activation-steps {
 			text-align: left;
-			background: #f0f9ff;
-			border-radius: 10px;
-			padding: 25px;
+			background: linear-gradient(145deg, #f0f9ff 0%, #e0f2fe 100%);
+			border-radius: 20px;
+			padding: 30px;
 			margin-top: 30px;
+			border: 1px solid rgba(3, 105, 161, 0.1);
 		}
 		.activation-steps h5 {
 			color: #0369a1;
-			margin-bottom: 15px;
+			margin-bottom: 20px;
+			font-size: 18px;
+			font-weight: 700;
 		}
 		.activation-steps ol {
 			margin: 0;
-			padding-left: 20px;
+			padding-left: 25px;
 		}
 		.activation-steps li {
-			padding: 8px 0;
+			padding: 10px 0;
+			color: #1e40af;
+		}
+
+		/* Mobile responsive */
+		@media (max-width: 768px) {
+			.hero-title {
+				font-size: 36px;
+			}
+			.purchase-card {
+				padding: 30px 20px;
+				margin-top: -60px;
+			}
+			.step-indicator {
+				flex-wrap: wrap;
+				gap: 15px;
+			}
+			.step-line {
+				display: none;
+			}
+			.step-number {
+				width: 40px;
+				height: 40px;
+			}
+			.price-display .amount {
+				font-size: 48px;
+			}
 		}
 	</style>
 </head>
@@ -298,9 +588,8 @@
 							<ul>
 								<li><a href="index.html">Home</a></li>
 								<li><a href="pricing.html">Pricing</a></li>
-								<li><a href="buy-offline.html">Buy Pro</a></li>
+								<li class="active"><a href="buy-offline.html">Buy Pro</a></li>
 								<li><a href="download.html">Download</a></li>
-								<li><a href="faq.html">FAQ</a></li>
 								<li><a href="contact.html">Contact</a></li>
 							</ul>
 						</nav>
@@ -312,13 +601,25 @@
 
 	<!-- Hero -->
 	<section class="purchase-hero">
-		<div class="container">
+		<div class="orb orb-1"></div>
+		<div class="orb orb-2"></div>
+		<div class="orb orb-3"></div>
+		<div class="particle particle-1"></div>
+		<div class="particle particle-2"></div>
+		<div class="particle particle-3"></div>
+		<div class="particle particle-4"></div>
+		<div class="container" style="position: relative; z-index: 2;">
 			<div class="row">
 				<div class="col-lg-8 offset-lg-2 text-center">
-					<h1>Pro Offline License</h1>
-					<p>Work without internet. Your data stays on your machine.</p>
+					<h1 class="hero-title wow fadeInUp">Pro Offline License</h1>
+					<p class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 20px; opacity: 0.9;">Work without internet. Your data stays on your machine.</p>
 				</div>
 			</div>
+		</div>
+		<div class="wave-divider">
+			<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+				<path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+			</svg>
 		</div>
 	</section>
 
@@ -518,9 +819,13 @@
 	<!-- Scripts -->
 	<script src="assets/js/jquery-3.6.0.min.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/wow.min.js"></script>
 	<script src="https://js.stripe.com/v3/"></script>
 
 	<script>
+		// Initialize WOW.js
+		new WOW().init();
+
 		// Hide preloader immediately when jQuery is ready
 		$(document).ready(function() {
 			$('#preloader').delay(200).fadeOut(300);
