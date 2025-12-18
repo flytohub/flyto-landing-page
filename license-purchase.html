@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Purchase License - Flyto Workflow Automation</title>
+	<meta name="description" content="Purchase an offline license for Flyto. Deploy on your own infrastructure with full control.">
+	<link rel="icon" href="assets/img/icon.png" type="image/gif" sizes="16x16">
+	<link rel="icon" href="assets/img/icon.png" type="image/gif" sizes="18x18">
+	<link rel="icon" href="assets/img/icon.png" type="image/gif" sizes="20x20">
+
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+	<link rel="stylesheet" href="assets/css/lightcase.css">
+	<link rel="stylesheet" href="assets/css/fontawesome.all.min.css">
+	<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="assets/css/animate.css">
+	<link rel="stylesheet" href="assets/css/typed.css">
+	<link rel="stylesheet" href="assets/css/magnific-popup.css">
+	<link rel="stylesheet" href="assets/css/normalize.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="assets/css/responsive.css">
+	<style>
+		.plan-card {
+			background: linear-gradient(135deg, #7C3AED 0%, #5B21B6 100%);
+			color: white;
+			padding: 40px;
+			border-radius: 15px;
+			margin-bottom: 30px;
+		}
+		.plan-card h2 {
+			color: white;
+			margin-bottom: 10px;
+		}
+		.plan-card .price {
+			font-size: 48px;
+			font-weight: 700;
+		}
+		.plan-card .price span {
+			font-size: 18px;
+			font-weight: 400;
+		}
+		.plan-features {
+			list-style: none;
+			padding: 0;
+			margin: 20px 0;
+		}
+		.plan-features li {
+			padding: 8px 0;
+			border-bottom: 1px solid rgba(255,255,255,0.2);
+		}
+		.plan-features li:last-child {
+			border-bottom: none;
+		}
+		.plan-features i {
+			margin-right: 10px;
+		}
+		.purchase-form {
+			background: #f8f9fa;
+			padding: 40px;
+			border-radius: 15px;
+		}
+		.purchase-form .form-control {
+			padding: 12px;
+			border-radius: 8px;
+			border: 1px solid #ddd;
+			margin-bottom: 15px;
+		}
+		.purchase-form .form-control:focus {
+			border-color: #7C3AED;
+			box-shadow: 0 0 0 0.2rem rgba(124, 58, 237, 0.25);
+		}
+		.process-step {
+			display: flex;
+			align-items: flex-start;
+			margin-bottom: 20px;
+		}
+		.step-number {
+			width: 40px;
+			height: 40px;
+			background: #7C3AED;
+			color: white;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-weight: 700;
+			margin-right: 15px;
+			flex-shrink: 0;
+		}
+		.step-content h5 {
+			margin-bottom: 5px;
+		}
+		.step-content p {
+			margin: 0;
+			color: #666;
+		}
+	</style>
+</head>
+<body>
+	<!-- Preloader -->
+	<div id="preloader">
+		<div class="preloader">
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+	<!-- Start Header Area -->
+	<header class="header">
+		<div class="container">
+			<div class="row">
+				<!-- Logo -->
+				<div class="col-lg-3 align-self-center">
+					<div class="logo">
+						<a href="index.html">
+							<img src="assets/img/white-logo.png" alt="Flyto">
+						</a>
+					</div>
+					<div class="canvas_open">
+						<a href="javascript:void(0)">
+							<span></span>
+							<span></span>
+							<span></span>
+						</a>
+					</div>
+				</div>
+				<!-- Right -->
+				<div class="col-lg-9">
+					<!-- Header Right Button -->
+					<div class="hr_btn">
+						<a class="button-2" href="#">Get Started</a>
+					</div>
+					<!-- Menu -->
+					<div class="menu">
+						<nav>
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li><a href="index.html#features">Features</a></li>
+								<li><a href="pricing.html">Pricing</a></li>
+								<li><a href="https://github.com/flytohub/flyto-core">Docs</a></li>
+								<li><a href="contact.html">Contact</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- End Header Area -->
+	<!-- Start Mobile Menu Area -->
+	<div class="mobile-menu-area">
+		<div class="off_canvars_overlay"></div>
+		<div class="offcanvas_menu">
+			<div class="offcanvas_menu_wrapper">
+				<div class="canvas_close">
+					<a href="javascript:void(0)"><i class="fas fa-times"></i></a>
+				</div>
+				<div class="mobile-logo">
+					<a href="index.html">
+						<img src="assets/img/logo.png" alt="Flyto" />
+					</a>
+				</div>
+				<div id="menu" class="text-left">
+					<ul class="offcanvas_main_menu">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="index.html#features">Features</a></li>
+						<li><a href="pricing.html">Pricing</a></li>
+						<li><a href="https://github.com/flytohub/flyto-core">Docs</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Start Breadcrumb Area -->
+	<section class="breadcrumb-area" style="background-image: url('assets/img/breadcrumb.jpg');">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="breadcrumb-content">
+						<h2>Purchase License</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="pricing.html">Pricing</a></li>
+							<li>Purchase</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Breadcrumb Area -->
+
+	<!-- Start Purchase Section -->
+	<section class="section-padding">
+		<div class="container">
+			<div class="row">
+				<!-- Plan Details -->
+				<div class="col-lg-5 mb-30">
+					<div class="plan-card" id="planCard">
+						<h2 id="planName">Team License</h2>
+						<div class="price">$<span id="planPrice">499</span><span>/year</span></div>
+						<p id="planDesc">For small teams needing offline deployment</p>
+						<ul class="plan-features" id="planFeatures">
+							<li><i class="bi bi-check-circle-fill"></i> Up to 10 users</li>
+							<li><i class="bi bi-check-circle-fill"></i> All core modules</li>
+							<li><i class="bi bi-check-circle-fill"></i> Email support</li>
+							<li><i class="bi bi-check-circle-fill"></i> 1 year updates</li>
+						</ul>
+					</div>
+
+					<!-- How it works -->
+					<div style="background: #fff; padding: 30px; border-radius: 15px; border: 1px solid #eee;">
+						<h4 style="margin-bottom: 25px;">How It Works</h4>
+						<div class="process-step">
+							<div class="step-number">1</div>
+							<div class="step-content">
+								<h5>Submit Request</h5>
+								<p>Fill out the form with your company details.</p>
+							</div>
+						</div>
+						<div class="process-step">
+							<div class="step-number">2</div>
+							<div class="step-content">
+								<h5>Review & Invoice</h5>
+								<p>We'll review and send you an invoice within 24 hours.</p>
+							</div>
+						</div>
+						<div class="process-step">
+							<div class="step-number">3</div>
+							<div class="step-content">
+								<h5>Payment</h5>
+								<p>Pay via bank transfer, credit card, or wire transfer.</p>
+							</div>
+						</div>
+						<div class="process-step">
+							<div class="step-number">4</div>
+							<div class="step-content">
+								<h5>Receive License</h5>
+								<p>Get your license key and download link instantly.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Purchase Form -->
+				<div class="col-lg-7">
+					<div class="purchase-form">
+						<h3 style="margin-bottom: 25px;">Request License</h3>
+						<form id="purchaseForm">
+							<div class="row">
+								<div class="col-md-6">
+									<label class="form-label">First Name *</label>
+									<input type="text" class="form-control" name="firstName" required>
+								</div>
+								<div class="col-md-6">
+									<label class="form-label">Last Name *</label>
+									<input type="text" class="form-control" name="lastName" required>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<label class="form-label">Work Email *</label>
+									<input type="email" class="form-control" name="email" required>
+								</div>
+								<div class="col-md-6">
+									<label class="form-label">Phone</label>
+									<input type="tel" class="form-control" name="phone">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<label class="form-label">Company Name *</label>
+									<input type="text" class="form-control" name="company" required>
+								</div>
+								<div class="col-md-6">
+									<label class="form-label">Company Size *</label>
+									<select class="form-control" name="companySize" required>
+										<option value="">Select size</option>
+										<option value="1-10">1-10 employees</option>
+										<option value="11-50">11-50 employees</option>
+										<option value="51-200">51-200 employees</option>
+										<option value="201-500">201-500 employees</option>
+										<option value="500+">500+ employees</option>
+									</select>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<label class="form-label">Country *</label>
+									<input type="text" class="form-control" name="country" required>
+								</div>
+								<div class="col-md-6">
+									<label class="form-label">Industry</label>
+									<select class="form-control" name="industry">
+										<option value="">Select industry</option>
+										<option value="technology">Technology</option>
+										<option value="finance">Finance</option>
+										<option value="healthcare">Healthcare</option>
+										<option value="manufacturing">Manufacturing</option>
+										<option value="government">Government</option>
+										<option value="education">Education</option>
+										<option value="other">Other</option>
+									</select>
+								</div>
+							</div>
+							<div>
+								<label class="form-label">Billing Address</label>
+								<textarea class="form-control" name="address" rows="2"></textarea>
+							</div>
+							<div>
+								<label class="form-label">Additional Notes</label>
+								<textarea class="form-control" name="notes" rows="3" placeholder="Special requirements, questions, or comments..."></textarea>
+							</div>
+							<input type="hidden" name="plan" id="planInput" value="team">
+
+							<div class="form-check mb-3">
+								<input type="checkbox" class="form-check-input" id="agreeTerms" required>
+								<label class="form-check-label" for="agreeTerms">
+									I agree to the <a href="#" style="color: #7C3AED;">Terms of Service</a> and <a href="#" style="color: #7C3AED;">Privacy Policy</a>
+								</label>
+							</div>
+
+							<button type="submit" class="button-1" style="width: 100%;">
+								<i class="bi bi-send-fill me-2"></i> Submit License Request
+							</button>
+
+							<p style="text-align: center; margin-top: 15px; color: #666; font-size: 14px;">
+								<i class="bi bi-shield-lock-fill me-1"></i> Your information is secure and will never be shared.
+							</p>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Purchase Section -->
+
+	<!-- Start FAQ Section -->
+	<section class="section-padding section-bg">
+		<div class="container">
+			<div class="row mb-40">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="section-headding">
+						<h2>License FAQ</h2>
+						<p>Common questions about offline licenses</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2">
+					<div class="accordion" id="licenseFaq">
+						<div class="accordion-item">
+							<h2 class="accordion-header">
+								<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+									What's included in the offline license?
+								</button>
+							</h2>
+							<div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#licenseFaq">
+								<div class="accordion-body">
+									The offline license includes the full Flyto software package, all atomic modules available at the time of purchase, documentation, and the right to deploy on your own infrastructure without any internet connectivity requirements.
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+									How do license renewals work?
+								</button>
+							</h2>
+							<div id="faq2" class="accordion-collapse collapse" data-bs-parent="#licenseFaq">
+								<div class="accordion-body">
+									Licenses are valid for one year and include all updates during that period. Before your license expires, we'll send a renewal reminder. Renewal is optional - your software will continue to work, but you won't receive updates after the license expires.
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+									Can I transfer my license to another server?
+								</button>
+							</h2>
+							<div id="faq3" class="accordion-collapse collapse" data-bs-parent="#licenseFaq">
+								<div class="accordion-body">
+									Yes, licenses can be transferred between servers within your organization. Simply deactivate the license on the old server and activate it on the new one. Contact support if you need assistance with the transfer process.
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+									Do you offer volume discounts?
+								</button>
+							</h2>
+							<div id="faq4" class="accordion-collapse collapse" data-bs-parent="#licenseFaq">
+								<div class="accordion-body">
+									Yes, we offer volume discounts for organizations purchasing multiple licenses. Contact our sales team at <a href="mailto:sales@flyto.io" style="color: #7C3AED;">sales@flyto.io</a> for custom pricing.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End FAQ Section -->
+
+	<!-- Start Footer Area -->
+	<footer class="footer">
+		<!-- Footer Top -->
+		<div class="footer-top pt-70 pb-20">
+			<div class="container">
+				<div class="row">
+					<!-- Single -->
+					<div class="col-lg-3 col-sm-6 mb-30">
+						<div class="f-widgets-item">
+							<div class="f-logo">
+								<a href="index.html">
+									<img src="assets/img/logo.png" alt="Flyto">
+								</a>
+							</div>
+							<p>Git-native workflow automation with atomic modules and AI-driven evolution.</p>
+							<ul>
+								<li><a href="mailto:hello@flyto.io"><i class="bi bi-envelope-fill"></i> hello@flyto.io</a></li>
+								<li><a href="https://github.com/flytohub"><i class="bi bi-github"></i> github.com/flytohub</a></li>
+							</ul>
+						</div>
+					</div>
+					<!-- Single -->
+					<div class="col-lg-3 col-sm-6 mb-30">
+						<div class="f-widgets-item">
+							<h3>Product</h3>
+							<ul>
+								<li><a href="index.html#features">Features</a></li>
+								<li><a href="#">Modules</a></li>
+								<li><a href="#">Templates</a></li>
+								<li><a href="pricing.html">Pricing</a></li>
+								<li><a href="#">Changelog</a></li>
+							</ul>
+						</div>
+					</div>
+					<!-- Single -->
+					<div class="col-lg-3 col-sm-6 mb-30">
+						<div class="f-widgets-item">
+							<h3>Resources</h3>
+							<ul>
+								<li><a href="https://github.com/flytohub/flyto-core">Documentation</a></li>
+								<li><a href="#">API Reference</a></li>
+								<li><a href="#">Tutorials</a></li>
+								<li><a href="#">Examples</a></li>
+								<li><a href="#">Community</a></li>
+							</ul>
+						</div>
+					</div>
+					<!-- Single -->
+					<div class="col-lg-3 col-sm-6 mb-30">
+						<div class="f-widgets-item">
+							<h3>Open Source</h3>
+							<ul>
+								<li><a href="https://github.com/flytohub/flyto-core">flyto-core</a></li>
+								<li><a href="#">Contributing</a></li>
+								<li><a href="#">License</a></li>
+								<li><a href="#">Security</a></li>
+								<li><a href="#">Roadmap</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Footer Bottom -->
+		<div class="footer-bottom pt-30 pb-30">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 align-self-center">
+						<div class="copy-f-text">
+							<p>Copyright ©2024 <a href="index.html">Flyto</a>. All Rights Reserved</p>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="footer_social">
+							<ul>
+								<li><a href="https://github.com/flytohub"><i class="fab fa-github"></i></a></li>
+								<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fab fa-discord"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- End Footer Area -->
+	<div class="scroll-area">
+		<i class="bi bi-arrow-up"></i>
+	</div>
+
+	<!-- Js File -->
+	<script src="assets/js/modernizr.min.js"></script>
+	<script src="assets/js/jquery-3.6.0.min.js"></script>
+	<script src="assets/js/popper.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/owl.carousel.min.js"></script>
+	<script src="assets/js/jquery.nav.min.js"></script>
+	<script src="assets/js/jquery.magnific-popup.min.js"></script>
+	<script src="assets/js/mixitup.min.js"></script>
+	<script src="assets/js/wow.min.js"></script>
+	<script src="assets/js/lightcase.js"></script>
+	<script src="assets/js/jquery.waypoints.min.js"></script>
+	<script src="assets/js/jquery.counterup.min.js"></script>
+	<script src="assets/js/typed.js"></script>
+	<script src="assets/js/script.js"></script>
+	<script src="assets/js/mobile-menu.js"></script>
+	<script src="assets/js/ajax-form.js"></script>
+	<script>
+		// Plan data
+		const plans = {
+			team: {
+				name: 'Team License',
+				price: '499',
+				desc: 'For small teams needing offline deployment',
+				features: [
+					'Up to 10 users',
+					'All core modules',
+					'Email support',
+					'1 year updates'
+				]
+			},
+			enterprise: {
+				name: 'Enterprise License',
+				price: '1,999',
+				desc: 'For larger organizations with advanced needs',
+				features: [
+					'Unlimited users',
+					'All modules including Pro',
+					'Priority support (24h response)',
+					'1 year updates',
+					'Custom module development'
+				]
+			},
+			airgapped: {
+				name: 'Air-Gapped License',
+				price: '4,999',
+				desc: 'For high-security, fully isolated environments',
+				features: [
+					'Unlimited users',
+					'All modules + custom builds',
+					'Dedicated support engineer',
+					'On-site installation assistance',
+					'Compliance documentation',
+					'Security audit report'
+				]
+			}
+		};
+
+		// Get plan from URL
+		const urlParams = new URLSearchParams(window.location.search);
+		const planType = urlParams.get('plan') || 'team';
+		const plan = plans[planType] || plans.team;
+
+		// Update UI
+		document.getElementById('planName').textContent = plan.name;
+		document.getElementById('planPrice').textContent = plan.price;
+		document.getElementById('planDesc').textContent = plan.desc;
+		document.getElementById('planInput').value = planType;
+
+		const featuresHtml = plan.features.map(f =>
+			`<li><i class="bi bi-check-circle-fill"></i> ${f}</li>`
+		).join('');
+		document.getElementById('planFeatures').innerHTML = featuresHtml;
+
+		// Form submission
+		document.getElementById('purchaseForm').addEventListener('submit', function(e) {
+			e.preventDefault();
+			// In production, this would submit to a backend
+			alert('Thank you for your interest! We will contact you within 24 hours with a quote.');
+		});
+	</script>
+</body>
+</html>
