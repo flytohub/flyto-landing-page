@@ -1,0 +1,309 @@
+@media (min-width: 1200px){
+	.container {
+		max-width: 1240px;
+	}
+}
+@media (max-width: 991px) {
+	.canvas_open {
+		height: 100%;
+		align-items: center;
+		display: flex;
+		float: right;
+		margin-right: 25px;
+	}
+	.canvas_open a {
+		width: 35px;
+		height: 35px;
+	}
+	.canvas_open a span {
+		width: 100%;
+		height: 3px;
+		background: #000;
+		margin: 6px 0px;
+		display: block;
+	}
+	.canvas_open a span:nth-child(2) {
+		width: 85%;
+		margin-left: 15%;
+	}
+	.logo {
+		float: left;
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	.canvas_open {
+		padding-top: 22px;
+	}
+	.menu {
+		display: none;
+	}
+	.hr_btn {
+		display: none;
+	}
+	.analytics-toll-img {
+		margin-top: 30px;
+	}
+	.template-need .button-2.text-right {
+		float: left;
+	}
+	.template-need {
+		padding: 100px 0px;
+	}
+	.usefull-resourses-content {
+		margin-top: 30px;
+	}
+	.applicant-img img {
+		transform: translateY(0);
+	}
+	.applicant-img.applicant-img-2 img {
+		transform: translate(0);
+	}
+	.footer_social {
+		float: inherit;
+		text-align: center;
+		margin-top: 20px;
+	}
+	.copy-f-text {
+		text-align: center;
+	}
+	.hero-caption-2 h2 {
+		font-size: 36px;
+		margin-bottom: 15px;
+	}
+	.hero-caption-2 p {
+		font-size: 16px;
+		line-height: 30px;
+		margin-bottom: 15px;
+	}
+	.hero3-caption-img {
+		margin-top: 50px;
+	}
+	.help-desk-content {
+		padding-left: 0px;
+		margin-top: 60px;
+	}
+	.hdi-box-text {
+		bottom: -16px;
+		right: 0px;
+	}
+	.error-404-content h2 {
+		font-size: 70px;
+	}
+	 
+}
+@media (max-width: 767px) {
+	.hero-caption h2 {
+		font-size: 46px;
+	}
+	.vertical.dark {
+		display: none;
+	}
+	.template-need {
+		padding: 70px 0px;
+	}
+	.usefull-resourses-content h2 {
+		font-size: 35px;
+	}
+	.applicant-content h2 {
+		font-size: 35px;
+	}
+	.subscribe-content h2 {
+		font-size: 35px;
+	}
+	.hero-caption-2 {
+		padding-top: 50px;
+	}
+	.about-content-a h2 {
+		font-size: 35px;
+		margin-bottom: 10px;
+	}
+	.hero-area-4::after {
+		display: none;
+	}
+	.hero-caption-4 h2 {
+		font-size: 40px;
+	}
+	.hero-caption-4 {
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
+	.error-404-content {
+		text-align: center;
+		padding-top: 50px;
+	}
+ 
+}
+@media (max-width: 676px) {
+	.section-headding h2 {
+		font-size: 26px;
+	}
+	.section-headding p {
+		font-size: 16px;
+	}
+	.section-padding{
+		padding: 70px 0px;
+	}
+	.section-padding-2{
+		padding-top: 70px;
+		padding-bottom: 50px;
+	}
+	.section-padding-3{
+		padding: 70px 0px;
+	}
+	.analytics-toll-content h2 {
+		font-size: 30px;
+	}
+	.template-need h2 {
+		font-size: 32px;
+	}
+	.help-desk-content h2 {
+		font-size: 30px;
+		margin-bottom: 5px;
+	}
+ 
+}
+@media (max-width: 576px) {
+	.hero-caption {
+		padding-top: 100px;
+	}
+	.hero-caption h2 {
+		font-size: 35px;
+	}
+	.hero-caption p {
+		font-size: 16px;
+	}
+	.h_counter_section {
+		margin-left: 2%;
+		margin-right: 2%;
+		width: 96%;
+	}
+	.section-padding{
+		padding: 50px 0px;
+	}
+	.section-padding-2{
+		padding-top: 50px;
+		padding-bottom: 20px;
+	}
+	.section-padding-3{
+		padding: 50px 0px;
+	}
+	.usefull-resourses-content h2 {
+		font-size: 30px;
+	}
+	.usefull-resourses-content ul li {
+		width: 100%;
+	}
+	.applicant-content h2 {
+		font-size: 30px;
+	}
+	.subscribe-content h2 {
+		font-size: 30px;
+	}
+	.hero-img-shap {
+		display: none;
+	}
+	.hero-caption-2 {
+		padding-bottom: 50px;
+	}
+	.about-content-a h2 {
+		font-size: 30px;
+	}
+	.hero-caption-3 h4 {
+		padding-bottom: 10px;
+		font-size: 40px;
+	}
+	.hero3-caption-img {
+		padding: 120px 0px;
+	}
+	.hero-caption-4 h2 {
+		font-size: 30px;
+	}
+	.jobs_search_form .single-input.border-right {
+		border-bottom: 1px solid #ddd;
+		border-right: none;
+	}
+	.hdi-box-text {
+		max-width: 222px;
+		bottom: -16px;
+		right: 0px;
+		padding: 30px 20px;
+	}
+	.services-details h2.sc_title {
+		font-size: 35px;
+		line-height: 1.2;
+	}
+	.services-details h3 {
+		font-size: 24px;
+	}
+	.login-form-style3-main {
+		padding: 30px 30px;
+	}
+	.error-404-content h2 {
+		font-size: 50px;
+	}
+	.error-404-content h4 {
+		font-size: 25px;
+	}
+	.error-404-content p {
+		font-size: 16px;
+		margin-bottom: 23px;
+		line-height: 30px;
+	}
+	.comments-list-full ul li .thum {
+		width: 70px;
+		position: inherit;
+		margin-bottom: 10px;
+	}
+	.comments-list-full ul li {
+		padding-left: 0px;
+	}
+}
+@media (max-width: 360px) {
+	.services-details h2.sc_title {
+		font-size: 26px;
+		line-height: 1.2;
+	}
+	.help-desk-content h2 {
+		font-size: 26px;
+		margin-bottom: 5px;
+	}
+	.hero3-caption-img {
+		padding: 80px 0px;
+	}
+	.hero-caption-3 h4 {
+		font-size: 35px;
+	}
+	.hero-caption-3 p {
+		font-size: 16px;
+		line-height: 30px;
+	}
+	.testimonial-single-footer p {
+		font-size: 16px;
+		font-style: italic;
+		line-height: 30px;
+	}
+	.testimonial-single-footer {
+		padding: 13px 24px 20px 18px;
+	}
+	.hero-caption-2 h2 {
+		font-size: 30px;
+	}
+	.applicant-content h2 {
+		font-size: 24px;
+	}
+	.analytics-toll-content h2 {
+		font-size: 25px;
+	}
+	.usefull-resourses-content h2 {
+		font-size: 24px;
+	}
+	.help-desk-content p {
+		line-height: 28px;
+		font-size: 16px;
+		margin-bottom: 10px;
+	}
+	.breadcrumb-content h2 {
+		font-size: 35px;
+	}
+ 
+}
