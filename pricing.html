@@ -115,26 +115,6 @@
 			transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 			border: 1px solid rgba(124, 58, 237, 0.1);
 		}
-		.pricing-card-3d::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			height: 4px;
-			background: linear-gradient(90deg, #7c3aed, #a78bfa, #7c3aed);
-			background-size: 200% 100%;
-			animation: gradient-move 3s linear infinite;
-			opacity: 0;
-			transition: opacity 0.3s;
-		}
-		.pricing-card-3d:hover::before {
-			opacity: 1;
-		}
-		@keyframes gradient-move {
-			0% { background-position: 0% 0%; }
-			100% { background-position: 200% 0%; }
-		}
 		.pricing-card-3d:hover {
 			transform: translateY(-15px) scale(1.02);
 			box-shadow:
@@ -150,10 +130,6 @@
 			box-shadow:
 				0 25px 50px rgba(124, 58, 237, 0.3),
 				0 0 100px rgba(124, 58, 237, 0.1);
-		}
-		.pricing-card-popular::before {
-			opacity: 1;
-			background: linear-gradient(90deg, #a78bfa, #c4b5fd, #a78bfa);
 		}
 		.pricing-card-popular:hover {
 			transform: scale(1.08) translateY(-10px);
