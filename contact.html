@@ -21,6 +21,407 @@
 	<link rel="stylesheet" href="assets/css/normalize.css">
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="assets/css/responsive.css">
+	<style>
+		/* Contact page animations */
+
+		/* Hero */
+		.contact-hero {
+			background: linear-gradient(135deg, #0f0524 0%, #1e0a3c 20%, #2d1b4e 50%, #4c1d95 80%, #5b21b6 100%);
+			position: relative;
+			overflow: hidden;
+			min-height: 350px;
+		}
+		.contact-hero::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background:
+				radial-gradient(circle at 20% 80%, rgba(124, 58, 237, 0.3) 0%, transparent 50%),
+				radial-gradient(circle at 80% 20%, rgba(167, 139, 250, 0.2) 0%, transparent 50%);
+			animation: aurora 8s ease-in-out infinite;
+		}
+		@keyframes aurora {
+			0%, 100% { opacity: 1; }
+			50% { opacity: 0.7; }
+		}
+
+		/* Grid lines background */
+		.grid-bg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-image:
+				linear-gradient(rgba(124, 58, 237, 0.03) 1px, transparent 1px),
+				linear-gradient(90deg, rgba(124, 58, 237, 0.03) 1px, transparent 1px);
+			background-size: 50px 50px;
+			animation: grid-move 20s linear infinite;
+		}
+		@keyframes grid-move {
+			0% { transform: perspective(500px) rotateX(60deg) translateY(0); }
+			100% { transform: perspective(500px) rotateX(60deg) translateY(50px); }
+		}
+
+		/* Floating particles */
+		.particle {
+			position: absolute;
+			border-radius: 50%;
+			pointer-events: none;
+		}
+		.particle-1 { width: 6px; height: 6px; background: rgba(167, 139, 250, 0.6); top: 20%; left: 10%; animation: float-p 6s ease-in-out infinite; }
+		.particle-2 { width: 8px; height: 8px; background: rgba(124, 58, 237, 0.5); top: 60%; left: 85%; animation: float-p 8s ease-in-out infinite reverse; }
+		.particle-3 { width: 4px; height: 4px; background: rgba(196, 181, 253, 0.7); top: 30%; left: 70%; animation: float-p 5s ease-in-out infinite; }
+		.particle-4 { width: 10px; height: 10px; background: rgba(139, 92, 246, 0.4); top: 70%; left: 20%; animation: float-p 7s ease-in-out infinite; }
+		@keyframes float-p {
+			0%, 100% { transform: translate(0, 0); opacity: 0.6; }
+			50% { transform: translate(20px, -30px); opacity: 1; }
+		}
+
+		/* Hero title */
+		.hero-title {
+			background: linear-gradient(90deg, #fff 0%, #c4b5fd 50%, #fff 100%);
+			background-size: 200% auto;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			animation: shine 3s linear infinite;
+		}
+		@keyframes shine {
+			0% { background-position: 0% center; }
+			100% { background-position: 200% center; }
+		}
+
+		/* Contact cards */
+		.contact-card {
+			background: linear-gradient(145deg, #ffffff 0%, #f8f9ff 100%);
+			border-radius: 20px;
+			padding: 35px 30px;
+			position: relative;
+			transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+			border: 1px solid rgba(124, 58, 237, 0.1);
+			height: 100%;
+		}
+		.contact-card:hover {
+			transform: translateY(-10px);
+			box-shadow: 0 25px 50px rgba(124, 58, 237, 0.15);
+		}
+		.contact-card-icon {
+			width: 70px;
+			height: 70px;
+			background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+			border-radius: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 25px;
+			position: relative;
+			animation: icon-float 3s ease-in-out infinite;
+		}
+		.contact-card:nth-child(2) .contact-card-icon { animation-delay: 0.5s; }
+		.contact-card:nth-child(3) .contact-card-icon { animation-delay: 1s; }
+		@keyframes icon-float {
+			0%, 100% { transform: translateY(0); }
+			50% { transform: translateY(-8px); }
+		}
+		.contact-card-icon i {
+			font-size: 28px;
+			color: #fff;
+		}
+		.contact-card-icon::after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			border-radius: 20px;
+			background: inherit;
+			opacity: 0.3;
+			filter: blur(15px);
+			z-index: -1;
+		}
+		.contact-card h4 {
+			font-size: 20px;
+			font-weight: 700;
+			margin-bottom: 15px;
+			color: #1e0a3c;
+		}
+		.contact-card p {
+			color: #6b7280;
+			margin-bottom: 8px;
+		}
+		.contact-card a {
+			color: #7c3aed;
+			text-decoration: none;
+			transition: all 0.3s;
+			font-weight: 500;
+		}
+		.contact-card a:hover {
+			color: #5b21b6;
+		}
+
+		/* Form container */
+		.form-container {
+			background: linear-gradient(145deg, #ffffff 0%, #f8f9ff 100%);
+			border-radius: 24px;
+			padding: 50px;
+			box-shadow: 0 20px 60px rgba(124, 58, 237, 0.08);
+			border: 1px solid rgba(124, 58, 237, 0.1);
+			position: relative;
+			overflow: hidden;
+		}
+		.form-container::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -100%;
+			width: 50%;
+			height: 100%;
+			background: linear-gradient(90deg, transparent, rgba(124, 58, 237, 0.03), transparent);
+			animation: shimmer 4s infinite;
+		}
+		@keyframes shimmer {
+			0% { left: -100%; }
+			100% { left: 200%; }
+		}
+		.form-title {
+			font-size: 28px;
+			font-weight: 700;
+			margin-bottom: 10px;
+			background: linear-gradient(135deg, #1e0a3c 0%, #7c3aed 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+		}
+		.form-subtitle {
+			color: #6b7280;
+			margin-bottom: 30px;
+		}
+
+		/* Form inputs */
+		.form-group {
+			margin-bottom: 25px;
+			position: relative;
+		}
+		.form-group label {
+			font-weight: 600;
+			color: #1e0a3c;
+			margin-bottom: 10px;
+			display: block;
+			font-size: 14px;
+		}
+		.form-input {
+			width: 100%;
+			padding: 16px 20px;
+			border: 2px solid #e5e7eb;
+			border-radius: 12px;
+			font-size: 16px;
+			transition: all 0.3s;
+			background: #fff;
+		}
+		.form-input:focus {
+			outline: none;
+			border-color: #7c3aed;
+			box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.1);
+		}
+		.form-input::placeholder {
+			color: #9ca3af;
+		}
+		textarea.form-input {
+			resize: vertical;
+			min-height: 140px;
+		}
+
+		/* Submit button */
+		.btn-submit {
+			width: 100%;
+			padding: 18px 40px;
+			background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+			color: #fff;
+			border: none;
+			border-radius: 12px;
+			font-size: 18px;
+			font-weight: 600;
+			cursor: pointer;
+			transition: all 0.3s;
+			position: relative;
+			overflow: hidden;
+		}
+		.btn-submit::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -100%;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+			transition: left 0.5s;
+		}
+		.btn-submit:hover::before {
+			left: 100%;
+		}
+		.btn-submit:hover {
+			transform: translateY(-3px);
+			box-shadow: 0 15px 30px rgba(124, 58, 237, 0.4);
+		}
+		.btn-submit:disabled {
+			opacity: 0.7;
+			cursor: not-allowed;
+		}
+
+		/* Quick links section */
+		.quick-links-section {
+			background: linear-gradient(180deg, #f8f9ff 0%, #fff 100%);
+			position: relative;
+		}
+		.section-title {
+			position: relative;
+			display: inline-block;
+		}
+		.section-title::after {
+			content: '';
+			position: absolute;
+			bottom: -10px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 60px;
+			height: 4px;
+			background: linear-gradient(90deg, #7c3aed, #a78bfa);
+			border-radius: 2px;
+		}
+
+		/* Quick link cards */
+		.quick-card {
+			background: #fff;
+			border-radius: 20px;
+			padding: 40px 30px;
+			text-align: center;
+			transition: all 0.4s;
+			border: 1px solid rgba(124, 58, 237, 0.08);
+			height: 100%;
+		}
+		.quick-card:hover {
+			transform: translateY(-10px);
+			box-shadow: 0 20px 40px rgba(124, 58, 237, 0.12);
+		}
+		.quick-card-icon {
+			width: 80px;
+			height: 80px;
+			background: linear-gradient(135deg, rgba(124, 58, 237, 0.1) 0%, rgba(167, 139, 250, 0.1) 100%);
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 auto 25px;
+			transition: all 0.3s;
+		}
+		.quick-card:hover .quick-card-icon {
+			background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+			transform: scale(1.1) rotate(10deg);
+		}
+		.quick-card-icon i {
+			font-size: 32px;
+			color: #7c3aed;
+			transition: all 0.3s;
+		}
+		.quick-card:hover .quick-card-icon i {
+			color: #fff;
+		}
+		.quick-card h5 {
+			font-size: 20px;
+			font-weight: 700;
+			margin-bottom: 15px;
+			color: #1e0a3c;
+		}
+		.quick-card p {
+			color: #6b7280;
+			margin-bottom: 20px;
+			line-height: 1.6;
+		}
+		.quick-card-link {
+			display: inline-flex;
+			align-items: center;
+			color: #7c3aed;
+			font-weight: 600;
+			text-decoration: none;
+			transition: all 0.3s;
+		}
+		.quick-card-link i {
+			margin-left: 8px;
+			transition: transform 0.3s;
+		}
+		.quick-card-link:hover {
+			color: #5b21b6;
+		}
+		.quick-card-link:hover i {
+			transform: translateX(5px);
+		}
+
+		/* CTA section */
+		.cta-section {
+			background: linear-gradient(135deg, #1e0a3c 0%, #2d1b4e 30%, #4c1d95 70%, #5b21b6 100%);
+			position: relative;
+			overflow: hidden;
+			padding: 80px 0;
+		}
+		.cta-section::before {
+			content: '';
+			position: absolute;
+			top: -50%;
+			left: -50%;
+			width: 200%;
+			height: 200%;
+			background:
+				radial-gradient(circle at 30% 30%, rgba(167, 139, 250, 0.1) 0%, transparent 50%),
+				radial-gradient(circle at 70% 70%, rgba(124, 58, 237, 0.1) 0%, transparent 50%);
+			animation: rotate-bg 30s linear infinite;
+		}
+		@keyframes rotate-bg {
+			from { transform: rotate(0deg); }
+			to { transform: rotate(360deg); }
+		}
+		.cta-content {
+			position: relative;
+			z-index: 2;
+			text-align: center;
+		}
+		.cta-title {
+			font-size: 36px;
+			font-weight: 800;
+			color: #fff;
+			margin-bottom: 15px;
+		}
+		.cta-text {
+			font-size: 18px;
+			color: rgba(255, 255, 255, 0.8);
+			margin-bottom: 30px;
+		}
+		.cta-btn {
+			display: inline-block;
+			padding: 16px 40px;
+			background: #fff;
+			color: #5b21b6;
+			border-radius: 12px;
+			font-weight: 600;
+			text-decoration: none;
+			transition: all 0.3s;
+		}
+		.cta-btn:hover {
+			transform: translateY(-3px);
+			box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+			color: #5b21b6;
+		}
+
+		/* Mobile */
+		@media (max-width: 767px) {
+			.contact-hero { min-height: 280px; }
+			.form-container { padding: 30px 20px; }
+			.form-title { font-size: 24px; }
+			.cta-title { font-size: 28px; }
+		}
+	</style>
 </head>
 <body>
 	<!-- Preloader -->
@@ -97,17 +498,21 @@
 			</div>
 		</div>
 	</div>
-	<!-- Start Breadcrumb Area -->
-	<section class="breadcrumb-area hero-wave-bg">
-		<div class="container">
+
+	<!-- Start Hero Area -->
+	<section class="contact-hero">
+		<div class="grid-bg"></div>
+		<div class="particle particle-1"></div>
+		<div class="particle particle-2"></div>
+		<div class="particle particle-3"></div>
+		<div class="particle particle-4"></div>
+
+		<div class="container" style="position: relative; z-index: 2;">
 			<div class="row">
-				<div class="col-lg-12">
-					<div class="breadcrumb-content">
-						<h2>Contact Us</h2>
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li>Contact</li>
-						</ul>
+				<div class="col-lg-12 text-center">
+					<div class="breadcrumb-content wow fadeInUp" style="padding: 120px 0 80px;">
+						<h1 class="hero-title" style="font-size: 52px; font-weight: 800; margin-bottom: 20px;">Get in Touch</h1>
+						<p style="color: rgba(255,255,255,0.8); font-size: 20px;">We'd love to hear from you. Let's build something great together.</p>
 					</div>
 				</div>
 			</div>
@@ -118,89 +523,103 @@
 			</svg>
 		</div>
 	</section>
-	<!-- End Breadcrumb Area -->
+	<!-- End Hero Area -->
 
-	<!-- Start Contact Section -->
+	<!-- Start Contact Cards Section -->
 	<section class="section-padding">
 		<div class="container">
-			<div class="row">
-				<!-- Contact Info -->
-				<div class="col-lg-4 mb-30">
-					<div class="contact-info-box">
-						<h3>Get in Touch</h3>
-						<p>Have questions about Flyto2? We'd love to hear from you.</p>
-
-						<div class="contact-item" style="margin-top: 30px;">
-							<div class="icon" style="color: #7C3AED; font-size: 24px; margin-bottom: 10px;">
-								<i class="bi bi-envelope-fill"></i>
-							</div>
-							<h5>Email</h5>
-							<p><a href="mailto:hello@flyto.io">hello@flyto.io</a></p>
-							<p><a href="mailto:sales@flyto.io">sales@flyto.io</a> (Sales)</p>
-							<p><a href="mailto:support@flyto.io">support@flyto.io</a> (Support)</p>
+			<div class="row mb-50">
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="contact-card wow fadeInUp" data-wow-delay="0.1s">
+						<div class="contact-card-icon">
+							<i class="bi bi-envelope-fill"></i>
 						</div>
-
-						<div class="contact-item" style="margin-top: 30px;">
-							<div class="icon" style="color: #7C3AED; font-size: 24px; margin-bottom: 10px;">
-								<i class="bi bi-github"></i>
-							</div>
-							<h5>GitHub</h5>
-							<p><a href="https://github.com/flytohub">github.com/flytohub</a></p>
-							<p>Open issues, contribute, or star our repos!</p>
-						</div>
-
-						<div class="contact-item" style="margin-top: 30px;">
-							<div class="icon" style="color: #7C3AED; font-size: 24px; margin-bottom: 10px;">
-								<i class="bi bi-discord"></i>
-							</div>
-							<h5>Community</h5>
-							<p><a href="https://discord.gg/flyto">Join our Discord</a> (Coming Soon)</p>
-							<p>Chat with the community and get quick help.</p>
-						</div>
+						<h4>Email Us</h4>
+						<p><a href="mailto:hello@flyto.io">hello@flyto.io</a></p>
+						<p><a href="mailto:sales@flyto.io">sales@flyto.io</a> <span style="color: #9ca3af;">(Sales)</span></p>
+						<p><a href="mailto:support@flyto.io">support@flyto.io</a> <span style="color: #9ca3af;">(Support)</span></p>
 					</div>
 				</div>
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="contact-card wow fadeInUp" data-wow-delay="0.2s">
+						<div class="contact-card-icon">
+							<i class="bi bi-github"></i>
+						</div>
+						<h4>GitHub</h4>
+						<p><a href="https://github.com/flytohub">github.com/flytohub</a></p>
+						<p style="color: #6b7280;">Open issues, contribute, or star our repos!</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="contact-card wow fadeInUp" data-wow-delay="0.3s">
+						<div class="contact-card-icon">
+							<i class="bi bi-discord"></i>
+						</div>
+						<h4>Community</h4>
+						<p><a href="#">Join our Discord</a> <span style="color: #9ca3af;">(Coming Soon)</span></p>
+						<p style="color: #6b7280;">Chat with the community and get quick help.</p>
+					</div>
+				</div>
+			</div>
 
-				<!-- Contact Form -->
-				<div class="col-lg-8">
-					<div class="contact-form-box" style="background: #f8f9fa; padding: 40px; border-radius: 10px;">
-						<h3 style="margin-bottom: 20px;">Send us a Message</h3>
-						<form id="contactForm" action="#">
-							<!-- Honeypot field - hidden from humans, bots will fill it -->
+			<!-- Contact Form -->
+			<div class="row">
+				<div class="col-lg-10 offset-lg-1">
+					<div class="form-container wow fadeInUp" data-wow-delay="0.2s">
+						<h3 class="form-title">Send us a Message</h3>
+						<p class="form-subtitle">Fill out the form below and we'll get back to you as soon as possible.</p>
+
+						<form id="contactForm">
+							<!-- Honeypot -->
 							<div style="position: absolute; left: -9999px;" aria-hidden="true">
 								<input type="text" name="website" tabindex="-1" autocomplete="off">
 							</div>
+
 							<div class="row">
-								<div class="col-md-6 mb-3">
-									<label for="name" class="form-label">Name *</label>
-									<input type="text" class="form-control" id="name" name="name" required maxlength="200" style="padding: 12px; border-radius: 5px; border: 1px solid #ddd;">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Name *</label>
+										<input type="text" class="form-input" name="name" required maxlength="200" placeholder="Your name">
+									</div>
 								</div>
-								<div class="col-md-6 mb-3">
-									<label for="email" class="form-label">Email *</label>
-									<input type="email" class="form-control" id="email" name="email" required style="padding: 12px; border-radius: 5px; border: 1px solid #ddd;">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Email *</label>
+										<input type="email" class="form-input" name="email" required placeholder="your@email.com">
+									</div>
 								</div>
 							</div>
+
 							<div class="row">
-								<div class="col-md-6 mb-3">
-									<label for="company" class="form-label">Company</label>
-									<input type="text" class="form-control" id="company" name="company" style="padding: 12px; border-radius: 5px; border: 1px solid #ddd;">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Company</label>
+										<input type="text" class="form-input" name="company" placeholder="Your company (optional)">
+									</div>
 								</div>
-								<div class="col-md-6 mb-3">
-									<label for="subject" class="form-label">Subject *</label>
-									<select class="form-control" id="subject" name="subject" required style="padding: 12px; border-radius: 5px; border: 1px solid #ddd;">
-										<option value="">Select a topic</option>
-										<option value="sales">Sales Inquiry</option>
-										<option value="support">Technical Support</option>
-										<option value="enterprise">Enterprise License</option>
-										<option value="partnership">Partnership</option>
-										<option value="other">Other</option>
-									</select>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Subject *</label>
+										<select class="form-input" name="subject" required>
+											<option value="">Select a topic</option>
+											<option value="sales">Sales Inquiry</option>
+											<option value="support">Technical Support</option>
+											<option value="enterprise">Enterprise License</option>
+											<option value="partnership">Partnership</option>
+											<option value="other">Other</option>
+										</select>
+									</div>
 								</div>
 							</div>
-							<div class="mb-3">
-								<label for="message" class="form-label">Message * <small style="color: #666;">(max 2000 characters)</small></label>
-								<textarea class="form-control" id="message" name="message" rows="5" required maxlength="2000" style="padding: 12px; border-radius: 5px; border: 1px solid #ddd;"></textarea>
+
+							<div class="form-group">
+								<label>Message * <small style="color: #9ca3af; font-weight: 400;">(max 2000 characters)</small></label>
+								<textarea class="form-input" name="message" required maxlength="2000" placeholder="Tell us how we can help..."></textarea>
 							</div>
-							<button type="submit" class="button-1" style="width: 100%;">Send Message</button>
+
+							<button type="submit" class="btn-submit">
+								<i class="fas fa-paper-plane" style="margin-right: 10px;"></i>Send Message
+							</button>
 						</form>
 					</div>
 				</div>
@@ -210,55 +629,61 @@
 	<!-- End Contact Section -->
 
 	<!-- Start Quick Links Section -->
-	<section class="section-padding section-bg">
+	<section class="section-padding quick-links-section">
 		<div class="container">
-			<div class="row mb-40">
+			<div class="row mb-50">
 				<div class="col-lg-8 offset-lg-2 text-center">
-					<div class="section-headding">
-						<h2>Quick Links</h2>
-						<p>Find the resources you need</p>
-					</div>
+					<h2 class="section-title wow fadeInUp">Quick Links</h2>
+					<p class="wow fadeInUp" data-wow-delay="0.1s" style="color: #6b7280; margin-top: 20px;">Find the resources you need</p>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-3 col-md-6 mb-30">
-					<div class="info-box-s1 text-center" style="background: #fff; padding: 30px; border-radius: 10px;">
-						<div style="font-size: 40px; color: #7C3AED; margin-bottom: 15px;">
+					<div class="quick-card wow fadeInUp" data-wow-delay="0.1s">
+						<div class="quick-card-icon">
 							<i class="bi bi-book"></i>
 						</div>
 						<h5>Documentation</h5>
 						<p>Learn how to use Flyto2 with our comprehensive guides.</p>
-						<a href="https://github.com/flytohub/flyto-core" style="color: #7C3AED;">Read Docs →</a>
+						<a href="https://github.com/flytohub/flyto-core" class="quick-card-link">
+							Read Docs <i class="fas fa-arrow-right"></i>
+						</a>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 mb-30">
-					<div class="info-box-s1 text-center" style="background: #fff; padding: 30px; border-radius: 10px;">
-						<div style="font-size: 40px; color: #7C3AED; margin-bottom: 15px;">
+					<div class="quick-card wow fadeInUp" data-wow-delay="0.2s">
+						<div class="quick-card-icon">
 							<i class="bi bi-question-circle"></i>
 						</div>
 						<h5>FAQ</h5>
 						<p>Find answers to commonly asked questions.</p>
-						<a href="faq.html" style="color: #7C3AED;">View FAQ →</a>
+						<a href="faq.html" class="quick-card-link">
+							View FAQ <i class="fas fa-arrow-right"></i>
+						</a>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 mb-30">
-					<div class="info-box-s1 text-center" style="background: #fff; padding: 30px; border-radius: 10px;">
-						<div style="font-size: 40px; color: #7C3AED; margin-bottom: 15px;">
+					<div class="quick-card wow fadeInUp" data-wow-delay="0.3s">
+						<div class="quick-card-icon">
 							<i class="bi bi-bug"></i>
 						</div>
 						<h5>Report Issues</h5>
 						<p>Found a bug? Let us know on GitHub.</p>
-						<a href="https://github.com/flytohub/flyto-core/issues" style="color: #7C3AED;">Open Issue →</a>
+						<a href="https://github.com/flytohub/flyto-core/issues" class="quick-card-link">
+							Open Issue <i class="fas fa-arrow-right"></i>
+						</a>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 mb-30">
-					<div class="info-box-s1 text-center" style="background: #fff; padding: 30px; border-radius: 10px;">
-						<div style="font-size: 40px; color: #7C3AED; margin-bottom: 15px;">
+					<div class="quick-card wow fadeInUp" data-wow-delay="0.4s">
+						<div class="quick-card-icon">
 							<i class="bi bi-tags"></i>
 						</div>
 						<h5>Pricing</h5>
 						<p>Compare plans and find the right fit for you.</p>
-						<a href="pricing.html" style="color: #7C3AED;">View Plans →</a>
+						<a href="pricing.html" class="quick-card-link">
+							View Plans <i class="fas fa-arrow-right"></i>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -266,13 +691,25 @@
 	</section>
 	<!-- End Quick Links Section -->
 
+	<!-- Start CTA Section -->
+	<section class="cta-section">
+		<div class="container">
+			<div class="cta-content wow fadeInUp">
+				<h2 class="cta-title">Ready to automate?</h2>
+				<p class="cta-text">Start free with our open source core. No credit card required.</p>
+				<a href="download.html" class="cta-btn">
+					<i class="fas fa-download" style="margin-right: 10px;"></i>Download Now
+				</a>
+			</div>
+		</div>
+	</section>
+	<!-- End CTA Section -->
+
 	<!-- Start Footer Area -->
 	<footer class="footer">
-		<!-- Footer Top -->
 		<div class="footer-top pt-70 pb-20">
 			<div class="container">
 				<div class="row">
-					<!-- Single -->
 					<div class="col-lg-3 col-sm-6 mb-30">
 						<div class="f-widgets-item">
 							<div class="f-logo">
@@ -287,30 +724,26 @@
 							</ul>
 						</div>
 					</div>
-					<!-- Single -->
 					<div class="col-lg-3 col-sm-6 mb-30">
 						<div class="f-widgets-item">
 							<h3>Product</h3>
 							<ul>
 								<li><a href="pricing.html">Pricing</a></li>
+								<li><a href="download.html">Download</a></li>
 								<li><a href="https://github.com/flytohub/flyto-core/releases">Changelog</a></li>
 							</ul>
 						</div>
 					</div>
-					<!-- Single -->
 					<div class="col-lg-3 col-sm-6 mb-30">
 						<div class="f-widgets-item">
 							<h3>Resources</h3>
 							<ul>
 								<li><a href="https://github.com/flytohub/flyto-core">Documentation</a></li>
-								
-								
-								
-								
+								<li><a href="faq.html">FAQ</a></li>
+								<li><a href="contact.html">Contact</a></li>
 							</ul>
 						</div>
 					</div>
-					<!-- Single -->
 					<div class="col-lg-3 col-sm-6 mb-30">
 						<div class="f-widgets-item">
 							<h3>Open Source</h3>
@@ -318,21 +751,18 @@
 								<li><a href="https://github.com/flytohub/flyto-core">flyto-core</a></li>
 								<li><a href="https://github.com/flytohub/flyto-core/blob/main/CONTRIBUTING.md">Contributing</a></li>
 								<li><a href="https://github.com/flytohub/flyto-core/blob/main/LICENSE">License</a></li>
-								
-								
 							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- Footer Bottom -->
 		<div class="footer-bottom pt-30 pb-30">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-6 align-self-center">
 						<div class="copy-f-text">
-							<p>Copyright ©2024 <a href="index.html">Flyto2</a>. All Rights Reserved</p>
+							<p>Copyright 2024 <a href="index.html">Flyto2</a>. All Rights Reserved</p>
 						</div>
 					</div>
 					<div class="col-lg-6">
@@ -357,7 +787,6 @@
 	<script src="assets/js/popper.min.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/owl.carousel.min.js"></script>
-	<script src="assets/js/jquery.nav.min.js"></script>
 	<script src="assets/js/jquery.magnific-popup.min.js"></script>
 	<script src="assets/js/mixitup.min.js"></script>
 	<script src="assets/js/wow.min.js"></script>
@@ -386,7 +815,7 @@
 				company: this.company.value || '',
 				subject: this.subject.value,
 				message: this.message.value,
-				website: this.website.value, // Honeypot field
+				website: this.website.value,
 				timestamp: new Date().toISOString(),
 				source: 'landing-page-contact'
 			};
@@ -405,7 +834,6 @@
 					throw new Error('Server error');
 				}
 			} catch (error) {
-				// Fallback to mailto if Firebase fails
 				const subject = encodeURIComponent(`[${formData.subject}] Contact from ${formData.name}`);
 				const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\n\nMessage:\n${formData.message}`);
 				window.location.href = `mailto:hello@flyto.io?subject=${subject}&body=${body}`;
