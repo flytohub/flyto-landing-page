@@ -114,7 +114,6 @@
 			position: relative;
 			transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 			border: 1px solid rgba(124, 58, 237, 0.1);
-			overflow: hidden;
 		}
 		.pricing-card-3d::before {
 			content: '';
@@ -184,10 +183,15 @@
 			text-transform: uppercase;
 			letter-spacing: 1px;
 			position: absolute;
-			top: -12px;
+			top: -14px;
 			right: 20px;
 			animation: badge-pulse 2s ease-in-out infinite;
 			box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
+			z-index: 10;
+		}
+		/* Add space for badge */
+		.col-lg-4.mb-40, .col-lg-3.mb-40 {
+			margin-top: 20px;
 		}
 		@keyframes badge-pulse {
 			0%, 100% { transform: scale(1); box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4); }
