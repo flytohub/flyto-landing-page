@@ -152,6 +152,10 @@ img{
 	right: 0;
 	z-index: 99;
 }
+.logo img {
+	max-height: 45px;
+	width: auto;
+}
 .hr_btn {
 	float: right;
 	display: flex;
@@ -1404,6 +1408,10 @@ hr.vertical {
 }
 .f-widgets-item .f-logo {
 	margin-bottom: 25px;
+}
+.f-widgets-item .f-logo img {
+	max-height: 40px;
+	width: auto;
 }
 .f-widgets-item p {
 	font-size: 14px;
@@ -3374,6 +3382,10 @@ h2.accordion-header {
 .mobile-logo {
 	margin-bottom: 40px;
 	text-align: center;
+}
+.mobile-logo img {
+	max-height: 40px;
+	width: auto;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .canvas_open {
