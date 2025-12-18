@@ -21,6 +21,63 @@
 	<link rel="stylesheet" href="assets/css/normalize.css">
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="assets/css/responsive.css">
+	<style>
+		/* Hero Wave Background */
+		.hero-wave-bg {
+			background: linear-gradient(135deg, #1e0a3c 0%, #2d1b4e 30%, #4c1d95 70%, #5b21b6 100%);
+			position: relative;
+			overflow: hidden;
+		}
+		.hero-wave-bg::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background:
+				radial-gradient(circle at 20% 80%, rgba(124, 58, 237, 0.3) 0%, transparent 50%),
+				radial-gradient(circle at 80% 20%, rgba(167, 139, 250, 0.2) 0%, transparent 40%),
+				radial-gradient(circle at 40% 40%, rgba(139, 92, 246, 0.15) 0%, transparent 30%);
+			animation: float-bg 15s ease-in-out infinite;
+		}
+		@keyframes float-bg {
+			0%, 100% { transform: translateY(0) scale(1); }
+			50% { transform: translateY(-20px) scale(1.02); }
+		}
+		.hero-wave-bg .breadcrumb-content {
+			position: relative;
+			z-index: 2;
+		}
+		.hero-wave-bg::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-image: radial-gradient(rgba(255,255,255,0.1) 1px, transparent 1px);
+			background-size: 30px 30px;
+			z-index: 1;
+		}
+		.wave-divider {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			overflow: hidden;
+			line-height: 0;
+		}
+		.wave-divider svg {
+			position: relative;
+			display: block;
+			width: calc(100% + 1.3px);
+			height: 60px;
+		}
+		.wave-divider .shape-fill {
+			fill: #FFFFFF;
+		}
+	</style>
 </head>
 <body>
 	<!-- Preloader -->
@@ -100,7 +157,7 @@
 		</div>
 	</div>
 	<!-- Start Breadcrumb Area -->
-	<section class="breadcrumb-area" style="background-image: url('assets/img/breadcrumb.jpg');">
+	<section class="breadcrumb-area hero-wave-bg">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
@@ -113,6 +170,11 @@
 					</div>
 				</div>
 			</div>
+		</div>
+		<div class="wave-divider">
+			<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+				<path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+			</svg>
 		</div>
 	</section>
 	<!-- End Breadcrumb Area -->
