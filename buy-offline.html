@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Buy Pro Offline License - Flyto2</title>
+	<meta name="description" content="Purchase Flyto2 Pro Offline license. Work without internet, keep your data private.">
+	<link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="assets/img/icon.png" type="image/png" sizes="32x32">
+
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+	<link rel="stylesheet" href="assets/css/fontawesome.all.min.css">
+	<link rel="stylesheet" href="assets/css/normalize.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="assets/css/responsive.css">
+
+	<style>
+		.purchase-hero {
+			background: linear-gradient(135deg, #5B21B6 0%, #7C3AED 100%);
+			padding: 120px 0 60px;
+			color: #fff;
+		}
+		.purchase-hero h1 {
+			font-size: 42px;
+			margin-bottom: 15px;
+		}
+		.purchase-hero p {
+			font-size: 18px;
+			opacity: 0.9;
+		}
+		.purchase-container {
+			padding: 60px 0;
+		}
+		.purchase-card {
+			background: #fff;
+			border-radius: 15px;
+			box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+			padding: 40px;
+			margin-top: -80px;
+			position: relative;
+			z-index: 10;
+		}
+		.step-indicator {
+			display: flex;
+			justify-content: center;
+			margin-bottom: 40px;
+		}
+		.step {
+			display: flex;
+			align-items: center;
+			color: #999;
+		}
+		.step.active {
+			color: #7C3AED;
+		}
+		.step.completed {
+			color: #22c55e;
+		}
+		.step-number {
+			width: 36px;
+			height: 36px;
+			border-radius: 50%;
+			background: #e5e7eb;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-weight: 600;
+			margin-right: 10px;
+		}
+		.step.active .step-number {
+			background: #7C3AED;
+			color: #fff;
+		}
+		.step.completed .step-number {
+			background: #22c55e;
+			color: #fff;
+		}
+		.step-line {
+			width: 60px;
+			height: 2px;
+			background: #e5e7eb;
+			margin: 0 15px;
+		}
+		.step.completed + .step-line {
+			background: #22c55e;
+		}
+		.plan-summary {
+			background: #f8f9fa;
+			border-radius: 10px;
+			padding: 25px;
+			margin-bottom: 30px;
+		}
+		.plan-summary h4 {
+			color: #7C3AED;
+			margin-bottom: 15px;
+		}
+		.plan-features {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		.plan-features li {
+			padding: 8px 0;
+			display: flex;
+			align-items: center;
+		}
+		.plan-features li i {
+			color: #22c55e;
+			margin-right: 10px;
+		}
+		.price-display {
+			text-align: center;
+			padding: 20px;
+			background: linear-gradient(135deg, #5B21B6 0%, #7C3AED 100%);
+			border-radius: 10px;
+			color: #fff;
+			margin-bottom: 30px;
+		}
+		.price-display .amount {
+			font-size: 48px;
+			font-weight: 700;
+		}
+		.price-display .period {
+			font-size: 18px;
+			opacity: 0.9;
+		}
+		.form-section {
+			margin-bottom: 30px;
+		}
+		.form-section h5 {
+			margin-bottom: 20px;
+			padding-bottom: 10px;
+			border-bottom: 2px solid #f0f0f0;
+		}
+		.form-control {
+			padding: 12px 15px;
+			border-radius: 8px;
+			border: 1px solid #e0e0e0;
+		}
+		.form-control:focus {
+			border-color: #7C3AED;
+			box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+		}
+		.fingerprint-box {
+			background: #f8f9fa;
+			border: 2px dashed #ddd;
+			border-radius: 10px;
+			padding: 30px;
+			text-align: center;
+		}
+		.fingerprint-box.has-value {
+			border-color: #22c55e;
+			background: #f0fdf4;
+		}
+		.fingerprint-box i {
+			font-size: 40px;
+			color: #7C3AED;
+			margin-bottom: 15px;
+		}
+		.fingerprint-input {
+			font-family: monospace;
+			font-size: 14px;
+		}
+		.help-text {
+			background: #fef3c7;
+			border-left: 4px solid #f59e0b;
+			padding: 15px;
+			border-radius: 0 8px 8px 0;
+			margin-top: 15px;
+		}
+		.help-text i {
+			color: #f59e0b;
+		}
+		.btn-purchase {
+			background: linear-gradient(135deg, #5B21B6 0%, #7C3AED 100%);
+			color: #fff;
+			padding: 15px 40px;
+			font-size: 18px;
+			border: none;
+			border-radius: 10px;
+			width: 100%;
+			cursor: pointer;
+			transition: transform 0.2s, box-shadow 0.2s;
+		}
+		.btn-purchase:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 10px 30px rgba(124, 58, 237, 0.3);
+		}
+		.btn-purchase:disabled {
+			opacity: 0.6;
+			cursor: not-allowed;
+			transform: none;
+		}
+		.secure-badge {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-top: 20px;
+			color: #666;
+			font-size: 14px;
+		}
+		.secure-badge i {
+			margin-right: 8px;
+			color: #22c55e;
+		}
+		.step-content {
+			display: none;
+		}
+		.step-content.active {
+			display: block;
+		}
+		/* Success Page Styles */
+		.success-icon {
+			width: 100px;
+			height: 100px;
+			background: #22c55e;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 auto 30px;
+		}
+		.success-icon i {
+			font-size: 50px;
+			color: #fff;
+		}
+		.license-download-box {
+			background: #f8f9fa;
+			border-radius: 10px;
+			padding: 30px;
+			text-align: center;
+			margin: 30px 0;
+		}
+		.license-file-icon {
+			font-size: 60px;
+			color: #7C3AED;
+			margin-bottom: 15px;
+		}
+		.btn-download {
+			background: #22c55e;
+			color: #fff;
+			padding: 15px 40px;
+			font-size: 18px;
+			border: none;
+			border-radius: 10px;
+			cursor: pointer;
+			display: inline-flex;
+			align-items: center;
+			gap: 10px;
+		}
+		.btn-download:hover {
+			background: #16a34a;
+		}
+		.activation-steps {
+			text-align: left;
+			background: #f0f9ff;
+			border-radius: 10px;
+			padding: 25px;
+			margin-top: 30px;
+		}
+		.activation-steps h5 {
+			color: #0369a1;
+			margin-bottom: 15px;
+		}
+		.activation-steps ol {
+			margin: 0;
+			padding-left: 20px;
+		}
+		.activation-steps li {
+			padding: 8px 0;
+		}
+	</style>
+</head>
+<body>
+	<!-- Preloader -->
+	<div id="preloader">
+		<div class="preloader">
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+
+	<!-- Header -->
+	<header class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 align-self-center">
+					<div class="logo">
+						<a href="index.html">
+							<img src="assets/img/white-logo.png" alt="Flyto2">
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-9">
+					<div class="hr_btn">
+						<a class="button-2" href="pricing.html">View Plans</a>
+					</div>
+					<div class="menu">
+						<nav>
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li><a href="pricing.html">Pricing</a></li>
+								<li><a href="download.html">Download</a></li>
+								<li><a href="faq.html">FAQ</a></li>
+								<li><a href="contact.html">Contact</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Hero -->
+	<section class="purchase-hero">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<h1>Pro Offline License</h1>
+					<p>Work without internet. Your data stays on your machine.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Purchase Form -->
+	<section class="purchase-container">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2">
+					<div class="purchase-card">
+						<!-- Step Indicator -->
+						<div class="step-indicator">
+							<div class="step active" id="step1-indicator">
+								<div class="step-number">1</div>
+								<span>Fingerprint</span>
+							</div>
+							<div class="step-line"></div>
+							<div class="step" id="step2-indicator">
+								<div class="step-number">2</div>
+								<span>Payment</span>
+							</div>
+							<div class="step-line"></div>
+							<div class="step" id="step3-indicator">
+								<div class="step-number">3</div>
+								<span>Download</span>
+							</div>
+						</div>
+
+						<!-- Step 1: Machine Fingerprint -->
+						<div class="step-content active" id="step1">
+							<div class="plan-summary">
+								<h4><i class="bi bi-shield-lock-fill me-2"></i>Pro Offline License</h4>
+								<ul class="plan-features">
+									<li><i class="bi bi-check-circle-fill"></i> Record & playback workflows</li>
+									<li><i class="bi bi-check-circle-fill"></i> Works 100% offline</li>
+									<li><i class="bi bi-check-circle-fill"></i> Unlimited workflows</li>
+									<li><i class="bi bi-check-circle-fill"></i> Checkpoint & resume</li>
+									<li><i class="bi bi-check-circle-fill"></i> 1 year updates included</li>
+								</ul>
+							</div>
+
+							<div class="price-display">
+								<div class="amount">$199</div>
+								<div class="period">per year, per machine</div>
+							</div>
+
+							<div class="form-section">
+								<h5><i class="bi bi-fingerprint me-2"></i>Machine Fingerprint</h5>
+								<p class="text-muted mb-3">Your license will be locked to this machine. Get the fingerprint from Flyto2 app.</p>
+
+								<div class="fingerprint-box" id="fingerprintBox">
+									<i class="bi bi-cpu"></i>
+									<p>Paste your machine fingerprint below</p>
+									<textarea
+										class="form-control fingerprint-input"
+										id="machineFingerprint"
+										rows="3"
+										placeholder="XXXX-XXXX-XXXX-XXXX-XXXX-XXXX"
+										maxlength="100"
+									></textarea>
+								</div>
+
+								<div class="help-text">
+									<i class="bi bi-info-circle-fill me-2"></i>
+									<strong>How to get your fingerprint:</strong><br>
+									Open Flyto2 → Settings → License → Click "Copy Machine Fingerprint"
+								</div>
+							</div>
+
+							<button class="btn-purchase" id="btnToStep2" disabled>
+								Continue to Payment <i class="bi bi-arrow-right ms-2"></i>
+							</button>
+						</div>
+
+						<!-- Step 2: Payment -->
+						<div class="step-content" id="step2">
+							<div class="form-section">
+								<h5><i class="bi bi-person me-2"></i>Billing Information</h5>
+								<div class="row">
+									<div class="col-md-6 mb-3">
+										<label class="form-label">Full Name *</label>
+										<input type="text" class="form-control" id="billingName" required maxlength="100">
+									</div>
+									<div class="col-md-6 mb-3">
+										<label class="form-label">Email *</label>
+										<input type="email" class="form-control" id="billingEmail" required maxlength="200">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6 mb-3">
+										<label class="form-label">Company (Optional)</label>
+										<input type="text" class="form-control" id="billingCompany" maxlength="200">
+									</div>
+									<div class="col-md-6 mb-3">
+										<label class="form-label">Country *</label>
+										<select class="form-control" id="billingCountry" required>
+											<option value="">Select country</option>
+											<option value="US">United States</option>
+											<option value="GB">United Kingdom</option>
+											<option value="CA">Canada</option>
+											<option value="AU">Australia</option>
+											<option value="DE">Germany</option>
+											<option value="FR">France</option>
+											<option value="JP">Japan</option>
+											<option value="TW">Taiwan</option>
+											<option value="SG">Singapore</option>
+											<option value="OTHER">Other</option>
+										</select>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-section">
+								<h5><i class="bi bi-credit-card me-2"></i>Payment</h5>
+								<div id="card-element" style="padding: 15px; border: 1px solid #e0e0e0; border-radius: 8px; background: #fff;">
+									<!-- Stripe Card Element -->
+								</div>
+								<div id="card-errors" style="color: #dc3545; margin-top: 10px; font-size: 14px;"></div>
+							</div>
+
+							<div class="row">
+								<div class="col-6">
+									<button class="btn btn-outline-secondary w-100" id="btnBackToStep1">
+										<i class="bi bi-arrow-left me-2"></i> Back
+									</button>
+								</div>
+								<div class="col-6">
+									<button class="btn-purchase" id="btnPay">
+										Pay $199 <i class="bi bi-lock-fill ms-2"></i>
+									</button>
+								</div>
+							</div>
+
+							<div class="secure-badge">
+								<i class="bi bi-shield-check"></i>
+								Secured by Stripe. We never store your card details.
+							</div>
+						</div>
+
+						<!-- Step 3: Success / Download -->
+						<div class="step-content" id="step3">
+							<div class="text-center">
+								<div class="success-icon">
+									<i class="bi bi-check-lg"></i>
+								</div>
+								<h3>Payment Successful!</h3>
+								<p class="text-muted">Your Pro Offline license is ready.</p>
+
+								<div class="license-download-box">
+									<i class="bi bi-file-earmark-lock license-file-icon"></i>
+									<h5>flyto2-pro.license</h5>
+									<p class="text-muted">License ID: <span id="licenseId">-</span></p>
+									<button class="btn-download" id="btnDownload">
+										<i class="bi bi-download"></i> Download License File
+									</button>
+								</div>
+
+								<div class="activation-steps">
+									<h5><i class="bi bi-list-check me-2"></i>How to Activate</h5>
+									<ol>
+										<li>Download the license file above</li>
+										<li>Open Flyto2 application</li>
+										<li>Go to <strong>Settings → License</strong></li>
+										<li>Click <strong>"Import License"</strong></li>
+										<li>Select the downloaded <code>flyto2-pro.license</code> file</li>
+										<li>Done! Enjoy Pro Offline features.</li>
+									</ol>
+								</div>
+
+								<p style="margin-top: 30px;">
+									<i class="bi bi-envelope me-2"></i>
+									A copy has also been sent to <strong id="sentToEmail">your email</strong>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="footer" style="margin-top: 60px;">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<p>Copyright &copy;2024 <a href="index.html">Flyto2</a>. All Rights Reserved</p>
+				</div>
+				<div class="col-lg-6 text-end">
+					<a href="contact.html">Contact</a> |
+					<a href="faq.html">FAQ</a> |
+					<a href="mailto:support@flyto2.com">support@flyto2.com</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery-3.6.0.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="https://js.stripe.com/v3/"></script>
+
+	<script>
+		// Firebase Functions URL
+		const FIREBASE_URL = 'https://us-central1-flyto-cloud.cloudfunctions.net';
+
+		// Stripe (will be initialized with publishable key from server)
+		let stripe, cardElement;
+
+		// State
+		let machineFingerprint = '';
+		let purchaseData = {};
+
+		// Initialize
+		document.addEventListener('DOMContentLoaded', async () => {
+			// Get Stripe publishable key from server
+			try {
+				const response = await fetch(`${FIREBASE_URL}/getStripePublicKey`);
+				const data = await response.json();
+				if (data.ok) {
+					stripe = Stripe(data.publishableKey);
+					const elements = stripe.elements();
+					cardElement = elements.create('card', {
+						style: {
+							base: {
+								fontSize: '16px',
+								color: '#1e1b39',
+								'::placeholder': { color: '#aab7c4' }
+							}
+						}
+					});
+					cardElement.mount('#card-element');
+					cardElement.on('change', (event) => {
+						const displayError = document.getElementById('card-errors');
+						displayError.textContent = event.error ? event.error.message : '';
+					});
+				}
+			} catch (err) {
+				console.error('Failed to initialize Stripe:', err);
+			}
+
+			// Fingerprint input handling
+			const fingerprintInput = document.getElementById('machineFingerprint');
+			const fingerprintBox = document.getElementById('fingerprintBox');
+			const btnToStep2 = document.getElementById('btnToStep2');
+
+			fingerprintInput.addEventListener('input', (e) => {
+				const value = e.target.value.trim();
+				if (value.length >= 20) {
+					fingerprintBox.classList.add('has-value');
+					btnToStep2.disabled = false;
+					machineFingerprint = value;
+				} else {
+					fingerprintBox.classList.remove('has-value');
+					btnToStep2.disabled = true;
+				}
+			});
+
+			// Step navigation
+			btnToStep2.addEventListener('click', () => goToStep(2));
+			document.getElementById('btnBackToStep1').addEventListener('click', () => goToStep(1));
+
+			// Payment
+			document.getElementById('btnPay').addEventListener('click', handlePayment);
+
+			// Download
+			document.getElementById('btnDownload').addEventListener('click', downloadLicense);
+
+			// Check URL params for success redirect
+			const urlParams = new URLSearchParams(window.location.search);
+			const sessionId = urlParams.get('session_id');
+			if (sessionId) {
+				await checkPaymentSuccess(sessionId);
+			}
+		});
+
+		function goToStep(step) {
+			// Update indicators
+			for (let i = 1; i <= 3; i++) {
+				const indicator = document.getElementById(`step${i}-indicator`);
+				const content = document.getElementById(`step${i}`);
+
+				indicator.classList.remove('active', 'completed');
+				content.classList.remove('active');
+
+				if (i < step) {
+					indicator.classList.add('completed');
+				} else if (i === step) {
+					indicator.classList.add('active');
+					content.classList.add('active');
+				}
+			}
+		}
+
+		async function handlePayment() {
+			const btn = document.getElementById('btnPay');
+			const originalText = btn.innerHTML;
+			btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+			btn.disabled = true;
+
+			const billingData = {
+				name: document.getElementById('billingName').value,
+				email: document.getElementById('billingEmail').value,
+				company: document.getElementById('billingCompany').value || null,
+				country: document.getElementById('billingCountry').value,
+				fingerprint: machineFingerprint
+			};
+
+			// Validate
+			if (!billingData.name || !billingData.email || !billingData.country) {
+				alert('Please fill in all required fields');
+				btn.innerHTML = originalText;
+				btn.disabled = false;
+				return;
+			}
+
+			try {
+				// Create checkout session
+				const response = await fetch(`${FIREBASE_URL}/createOfflineLicenseCheckout`, {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify({
+						plan: 'pro_offline',
+						...billingData,
+						success_url: `${window.location.origin}/buy-offline.html?session_id={CHECKOUT_SESSION_ID}`,
+						cancel_url: `${window.location.origin}/buy-offline.html?canceled=true`
+					})
+				});
+
+				const data = await response.json();
+
+				if (data.ok && data.sessionId) {
+					// Redirect to Stripe Checkout
+					const result = await stripe.redirectToCheckout({ sessionId: data.sessionId });
+					if (result.error) {
+						throw new Error(result.error.message);
+					}
+				} else {
+					throw new Error(data.error || 'Failed to create checkout session');
+				}
+			} catch (err) {
+				console.error('Payment error:', err);
+				alert('Payment failed: ' + err.message);
+				btn.innerHTML = originalText;
+				btn.disabled = false;
+			}
+		}
+
+		async function checkPaymentSuccess(sessionId) {
+			try {
+				const response = await fetch(`${FIREBASE_URL}/verifyOfflineLicensePayment`, {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify({ session_id: sessionId })
+				});
+
+				const data = await response.json();
+
+				if (data.ok) {
+					purchaseData = data;
+					document.getElementById('licenseId').textContent = data.license_id;
+					document.getElementById('sentToEmail').textContent = data.email;
+					goToStep(3);
+				} else {
+					alert('Payment verification failed. Please contact support.');
+				}
+			} catch (err) {
+				console.error('Verification error:', err);
+			}
+		}
+
+		async function downloadLicense() {
+			if (!purchaseData.license_id) {
+				alert('License data not found. Please contact support.');
+				return;
+			}
+
+			try {
+				const response = await fetch(`${FIREBASE_URL}/downloadOfflineLicense`, {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify({ license_id: purchaseData.license_id })
+				});
+
+				if (response.ok) {
+					const blob = await response.blob();
+					const url = window.URL.createObjectURL(blob);
+					const a = document.createElement('a');
+					a.href = url;
+					a.download = 'flyto2-pro.license';
+					document.body.appendChild(a);
+					a.click();
+					document.body.removeChild(a);
+					window.URL.revokeObjectURL(url);
+				} else {
+					throw new Error('Download failed');
+				}
+			} catch (err) {
+				console.error('Download error:', err);
+				alert('Failed to download license. Please contact support.');
+			}
+		}
+	</script>
+</body>
+</html>
