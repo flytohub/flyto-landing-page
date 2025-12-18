@@ -3406,3 +3406,200 @@ h2.accordion-header {
   color: #fe3737;
   border-color: #fe3737;
 }
+
+/*
+ * #-Hero Wave Background (Shared Component)
+ */
+.hero-wave-bg {
+	background: linear-gradient(135deg, #1e0a3c 0%, #2d1b4e 30%, #4c1d95 70%, #5b21b6 100%);
+	position: relative;
+	overflow: hidden;
+}
+.hero-wave-bg::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background:
+		radial-gradient(circle at 20% 80%, rgba(124, 58, 237, 0.3) 0%, transparent 50%),
+		radial-gradient(circle at 80% 20%, rgba(167, 139, 250, 0.2) 0%, transparent 40%),
+		radial-gradient(circle at 40% 40%, rgba(139, 92, 246, 0.15) 0%, transparent 30%);
+	animation: hero-float-bg 15s ease-in-out infinite;
+}
+@keyframes hero-float-bg {
+	0%, 100% { transform: translateY(0) scale(1); }
+	50% { transform: translateY(-20px) scale(1.02); }
+}
+.hero-wave-bg .breadcrumb-content,
+.hero-wave-bg .hero-caption {
+	position: relative;
+	z-index: 2;
+}
+.hero-wave-bg::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: radial-gradient(rgba(255,255,255,0.1) 1px, transparent 1px);
+	background-size: 30px 30px;
+	z-index: 1;
+}
+.wave-divider {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+	z-index: 3;
+}
+.wave-divider svg {
+	position: relative;
+	display: block;
+	width: calc(100% + 1.3px);
+	height: 60px;
+}
+.wave-divider .shape-fill {
+	fill: #FFFFFF;
+}
+
+/*
+ * #-Auto Animations
+ */
+@keyframes float-slow {
+	0%, 100% { transform: translateY(0px); }
+	50% { transform: translateY(-20px); }
+}
+@keyframes float-medium {
+	0%, 100% { transform: translateY(0px) rotate(0deg); }
+	50% { transform: translateY(-15px) rotate(5deg); }
+}
+@keyframes pulse-glow {
+	0%, 100% { box-shadow: 0 0 20px rgba(124, 58, 237, 0.3); }
+	50% { box-shadow: 0 0 40px rgba(124, 58, 237, 0.6); }
+}
+@keyframes gradient-shift {
+	0% { background-position: 0% 50%; }
+	50% { background-position: 100% 50%; }
+	100% { background-position: 0% 50%; }
+}
+@keyframes rotate-slow {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}
+@keyframes scale-pulse {
+	0%, 100% { transform: scale(1); }
+	50% { transform: scale(1.05); }
+}
+.animate-float-slow {
+	animation: float-slow 6s ease-in-out infinite;
+}
+.animate-float-medium {
+	animation: float-medium 4s ease-in-out infinite;
+}
+.animate-pulse-glow {
+	animation: pulse-glow 3s ease-in-out infinite;
+}
+.animate-gradient {
+	background-size: 200% 200%;
+	animation: gradient-shift 8s ease infinite;
+}
+.animate-rotate-slow {
+	animation: rotate-slow 20s linear infinite;
+}
+.animate-scale-pulse {
+	animation: scale-pulse 4s ease-in-out infinite;
+}
+
+/* Staggered animation delays */
+.animate-delay-1 { animation-delay: 0.2s; }
+.animate-delay-2 { animation-delay: 0.4s; }
+.animate-delay-3 { animation-delay: 0.6s; }
+.animate-delay-4 { animation-delay: 0.8s; }
+.animate-delay-5 { animation-delay: 1s; }
+
+/*
+ * #-Floating Shapes (Decorative)
+ */
+.floating-shapes {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+	pointer-events: none;
+	z-index: 1;
+}
+.floating-shape {
+	position: absolute;
+	border-radius: 50%;
+	opacity: 0.1;
+}
+.floating-shape-1 {
+	width: 300px;
+	height: 300px;
+	background: linear-gradient(135deg, #7C3AED, #A78BFA);
+	top: 10%;
+	left: -100px;
+	animation: float-slow 8s ease-in-out infinite;
+}
+.floating-shape-2 {
+	width: 200px;
+	height: 200px;
+	background: linear-gradient(135deg, #A78BFA, #C4B5FD);
+	top: 60%;
+	right: -50px;
+	animation: float-medium 6s ease-in-out infinite;
+}
+.floating-shape-3 {
+	width: 150px;
+	height: 150px;
+	background: linear-gradient(135deg, #5B21B6, #7C3AED);
+	bottom: 20%;
+	left: 10%;
+	animation: float-slow 10s ease-in-out infinite;
+	animation-delay: 2s;
+}
+
+/*
+ * #-Glowing Cards
+ */
+.glow-card {
+	transition: all 0.4s ease;
+	position: relative;
+}
+.glow-card::before {
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	background: linear-gradient(135deg, #7C3AED, #A78BFA, #7C3AED);
+	border-radius: inherit;
+	z-index: -1;
+	opacity: 0;
+	transition: opacity 0.4s ease;
+	background-size: 200% 200%;
+	animation: gradient-shift 3s ease infinite;
+}
+.glow-card:hover::before {
+	opacity: 1;
+}
+
+/*
+ * #-Animated Counter Numbers
+ */
+.counter-animated {
+	background: linear-gradient(135deg, #7C3AED, #A78BFA);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	background-size: 200% 200%;
+	animation: gradient-shift 4s ease infinite;
+}

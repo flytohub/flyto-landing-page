@@ -21,6 +21,152 @@
 	<link rel="stylesheet" href="assets/css/normalize.css">
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="assets/css/responsive.css">
+	<style>
+		/* Homepage specific animations */
+		.hero-icon-float {
+			animation: hero-icon-bounce 3s ease-in-out infinite;
+		}
+		@keyframes hero-icon-bounce {
+			0%, 100% { transform: translateY(0) rotate(0deg); }
+			25% { transform: translateY(-10px) rotate(5deg); }
+			75% { transform: translateY(-10px) rotate(-5deg); }
+		}
+		.step-number-animated {
+			display: inline-block;
+			animation: step-pulse 2s ease-in-out infinite;
+		}
+		@keyframes step-pulse {
+			0%, 100% { transform: scale(1); opacity: 1; }
+			50% { transform: scale(1.1); opacity: 0.8; }
+		}
+		.icon-spin-slow {
+			animation: spin-slow 8s linear infinite;
+		}
+		@keyframes spin-slow {
+			from { transform: rotate(0deg); }
+			to { transform: rotate(360deg); }
+		}
+		.card-float {
+			animation: card-hover 4s ease-in-out infinite;
+		}
+		.card-float-delay-1 { animation-delay: 0.5s; }
+		.card-float-delay-2 { animation-delay: 1s; }
+		.card-float-delay-3 { animation-delay: 1.5s; }
+		@keyframes card-hover {
+			0%, 100% { transform: translateY(0); }
+			50% { transform: translateY(-8px); }
+		}
+		/* Glowing button */
+		.btn-glow {
+			animation: btn-pulse-glow 2s ease-in-out infinite;
+		}
+		@keyframes btn-pulse-glow {
+			0%, 100% { box-shadow: 0 0 20px rgba(124, 58, 237, 0.4); }
+			50% { box-shadow: 0 0 40px rgba(124, 58, 237, 0.8), 0 0 60px rgba(124, 58, 237, 0.4); }
+		}
+		/* Typing cursor */
+		.typing-cursor {
+			display: inline-block;
+			width: 3px;
+			height: 1em;
+			background: #fff;
+			margin-left: 5px;
+			animation: cursor-blink 1s infinite;
+			vertical-align: middle;
+		}
+		@keyframes cursor-blink {
+			0%, 50% { opacity: 1; }
+			51%, 100% { opacity: 0; }
+		}
+		/* Gradient text animation */
+		.gradient-text-animated {
+			background: linear-gradient(270deg, #7C3AED, #A78BFA, #C4B5FD, #7C3AED);
+			background-size: 300% 300%;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			animation: gradient-flow 6s ease infinite;
+		}
+		@keyframes gradient-flow {
+			0% { background-position: 0% 50%; }
+			50% { background-position: 100% 50%; }
+			100% { background-position: 0% 50%; }
+		}
+		/* Orbiting particles */
+		.orbit-container {
+			position: absolute;
+			width: 400px;
+			height: 400px;
+			top: 50%;
+			right: -100px;
+			transform: translateY(-50%);
+		}
+		.orbit {
+			position: absolute;
+			border: 1px solid rgba(255,255,255,0.1);
+			border-radius: 50%;
+			animation: orbit-rotate 20s linear infinite;
+		}
+		.orbit-1 { width: 200px; height: 200px; top: 100px; left: 100px; }
+		.orbit-2 { width: 300px; height: 300px; top: 50px; left: 50px; animation-duration: 30s; animation-direction: reverse; }
+		.orbit-3 { width: 400px; height: 400px; top: 0; left: 0; animation-duration: 40s; }
+		@keyframes orbit-rotate {
+			from { transform: rotate(0deg); }
+			to { transform: rotate(360deg); }
+		}
+		.orbit-dot {
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			background: rgba(167, 139, 250, 0.8);
+			border-radius: 50%;
+			top: -5px;
+			left: 50%;
+			box-shadow: 0 0 20px rgba(167, 139, 250, 0.6);
+		}
+		/* Feature icon animations */
+		.feature-icon-animated {
+			transition: all 0.3s ease;
+		}
+		.feature-icon-animated:hover {
+			transform: scale(1.2) rotate(10deg);
+		}
+		/* Line drawing animation */
+		.line-draw {
+			stroke-dasharray: 1000;
+			stroke-dashoffset: 1000;
+			animation: draw-line 3s ease forwards infinite;
+		}
+		@keyframes draw-line {
+			0% { stroke-dashoffset: 1000; }
+			50% { stroke-dashoffset: 0; }
+			100% { stroke-dashoffset: -1000; }
+		}
+		/* Subscribe wave bg */
+		.subscribe-wave-bg {
+			background: linear-gradient(135deg, #5b21b6 0%, #7c3aed 50%, #8b5cf6 100%);
+			position: relative;
+			overflow: hidden;
+		}
+		.subscribe-wave-bg::before {
+			content: '';
+			position: absolute;
+			top: -50%;
+			left: -50%;
+			width: 200%;
+			height: 200%;
+			background: radial-gradient(ellipse at center, rgba(255,255,255,0.1) 0%, transparent 50%);
+			animation: rotate-bg 20s linear infinite;
+		}
+		@keyframes rotate-bg {
+			from { transform: rotate(0deg); }
+			to { transform: rotate(360deg); }
+		}
+		.subscribe-wave-bg .subscribe-content {
+			position: relative;
+			z-index: 2;
+		}
+	</style>
 </head>
 <body>
 	<!-- Preloader -->
@@ -101,19 +247,39 @@
 	</div>
 
 	<!-- Start Hero Section -->
-	<section class="hero-area" style="background-image:url('assets/img/bg1.webp');">
+	<section class="hero-area hero-wave-bg">
+		<!-- Floating shapes -->
+		<div class="floating-shapes">
+			<div class="floating-shape floating-shape-1"></div>
+			<div class="floating-shape floating-shape-2"></div>
+			<div class="floating-shape floating-shape-3"></div>
+		</div>
+		<!-- Orbiting particles -->
+		<div class="orbit-container d-none d-lg-block">
+			<div class="orbit orbit-1"><div class="orbit-dot"></div></div>
+			<div class="orbit orbit-2"><div class="orbit-dot"></div></div>
+			<div class="orbit orbit-3"><div class="orbit-dot"></div></div>
+		</div>
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="hero-caption pt-150 pb-200">
-						<h2>An Assistant That Does<br>What You Show It</h2>
-						<p>Flyto2 is an automation tool that operates your computer like a human. Open browsers, click buttons, fill forms, upload files. You do it once, Flyto2 repeats it forever.</p>
-						<a class="button-1" href="pricing.html" style="margin-top: 20px;">Get Started Free</a>
+						<h2 class="wow fadeInUp" data-wow-delay="0.1s">
+							<span class="gradient-text-animated">An Assistant That Does</span><br>What You Show It
+						</h2>
+						<p class="wow fadeInUp" data-wow-delay="0.2s">
+							Flyto2 is an automation tool that operates your computer like a human.
+							Open browsers, click buttons, fill forms, upload files.
+							You do it once, Flyto2 repeats it forever.<span class="typing-cursor"></span>
+						</p>
+						<a class="button-1 btn-glow wow fadeInUp" data-wow-delay="0.3s" href="pricing.html" style="margin-top: 20px;">
+							<i class="fas fa-rocket" style="margin-right: 8px;"></i> Get Started Free
+						</a>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="custom-shape-divider-bottom-1638549227">
+		<div class="wave-divider">
 			<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
 				<path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
 			</svg>
@@ -129,9 +295,9 @@
 					<div class="row h_counter_section">
 						<!-- Single -->
 						<div class="col-md-4 position-relative">
-							<div class="counter_item_h">
+							<div class="counter_item_h wow fadeInUp" data-wow-delay="0.1s">
 								<div class="title">
-									<h2 class="text-gradient"><i class="fas fa-mouse-pointer"></i></h2>
+									<h2 class="text-gradient"><i class="fas fa-mouse-pointer hero-icon-float"></i></h2>
 								</div>
 								<h5>Record Once</h5>
 								<p class="text-sm">Show Flyto2 how you work. It learns by watching your clicks and keystrokes.</p>
@@ -140,9 +306,9 @@
 						</div>
 						<!-- Single -->
 						<div class="col-md-4 position-relative">
-							<div class="counter_item_h">
+							<div class="counter_item_h wow fadeInUp" data-wow-delay="0.2s">
 								<div class="title">
-									<h2 class="text-gradient"><i class="fas fa-redo"></i></h2>
+									<h2 class="text-gradient"><i class="fas fa-redo icon-spin-slow"></i></h2>
 								</div>
 								<h5>Replay Forever</h5>
 								<p class="text-sm">Run it again with different data. Batch process hundreds of items.</p>
@@ -151,9 +317,9 @@
 						</div>
 						<!-- Single -->
 						<div class="col-md-4">
-							<div class="counter_item_h">
+							<div class="counter_item_h wow fadeInUp" data-wow-delay="0.3s">
 								<div class="title">
-									<h2 class="text-gradient"><i class="fas fa-shield-alt"></i></h2>
+									<h2 class="text-gradient"><i class="fas fa-shield-alt animate-pulse-glow" style="border-radius: 50%;"></i></h2>
 								</div>
 								<h5>Stay in Control</h5>
 								<p class="text-sm">Pause, verify, and resume anytime. Never worry about runaway automation.</p>
@@ -171,8 +337,8 @@
 		<div class="container">
 			<div class="row mb-40">
 				<div class="col-lg-8 offset-lg-2 text-center">
-					<div class="section-headding">
-						<h2>Why Flyto2?</h2>
+					<div class="section-headding wow fadeInUp">
+						<h2>Why <span class="gradient-text-animated">Flyto2</span>?</h2>
 						<p>Many tasks aren't hard, they're just tedious.</p>
 					</div>
 				</div>
@@ -180,9 +346,9 @@
 			<div class="row">
 				<!-- Single -->
 				<div class="col-lg-4 col-sm-6 mb-30">
-					<div class="info-box-s1">
+					<div class="info-box-s1 card-float wow fadeInUp" data-wow-delay="0.1s">
 						<div class="icon">
-							<i class="fas fa-copy" style="font-size: 40px; color: #7C3AED;"></i>
+							<i class="fas fa-copy feature-icon-animated" style="font-size: 40px; color: #7C3AED;"></i>
 						</div>
 						<div class="content">
 							<h4 class="text-gradient">Copy-Paste Hell</h4>
@@ -192,9 +358,9 @@
 				</div>
 				<!-- Single -->
 				<div class="col-lg-4 col-sm-6 mb-30">
-					<div class="info-box-s1">
+					<div class="info-box-s1 card-float card-float-delay-1 wow fadeInUp" data-wow-delay="0.2s">
 						<div class="icon">
-							<i class="fas fa-ban" style="font-size: 40px; color: #7C3AED;"></i>
+							<i class="fas fa-ban feature-icon-animated" style="font-size: 40px; color: #7C3AED;"></i>
 						</div>
 						<div class="content">
 							<h4 class="text-gradient">No Batch Options</h4>
@@ -204,9 +370,9 @@
 				</div>
 				<!-- Single -->
 				<div class="col-lg-4 col-sm-6 mb-30">
-					<div class="info-box-s1">
+					<div class="info-box-s1 card-float card-float-delay-2 wow fadeInUp" data-wow-delay="0.3s">
 						<div class="icon">
-							<i class="fas fa-plug" style="font-size: 40px; color: #7C3AED;"></i>
+							<i class="fas fa-plug feature-icon-animated" style="font-size: 40px; color: #7C3AED;"></i>
 						</div>
 						<div class="content">
 							<h4 class="text-gradient">No API Available</h4>
@@ -216,7 +382,7 @@
 				</div>
 			</div>
 			<div class="row mt-30">
-				<div class="col-lg-8 offset-lg-2 text-center">
+				<div class="col-lg-8 offset-lg-2 text-center wow fadeInUp" data-wow-delay="0.4s">
 					<p style="font-size: 18px;">You know the process. You know it shouldn't take human effort.<br><strong>Flyto2 is built for exactly this.</strong></p>
 				</div>
 			</div>
@@ -225,12 +391,17 @@
 	<!-- End Why Flyto2 Section -->
 
 	<!-- Start What Makes Different Section -->
-	<section class="section-padding section-bg">
-		<div class="container">
+	<section class="section-padding section-bg" style="position: relative; overflow: hidden;">
+		<!-- Background floating shapes -->
+		<div class="floating-shapes" style="opacity: 0.05;">
+			<div class="floating-shape floating-shape-1"></div>
+			<div class="floating-shape floating-shape-2"></div>
+		</div>
+		<div class="container" style="position: relative; z-index: 2;">
 			<div class="row mb-40">
 				<div class="col-lg-8 offset-lg-2 text-center">
-					<div class="section-headding">
-						<h2>What Makes Flyto2 Different?</h2>
+					<div class="section-headding wow fadeInUp">
+						<h2>What Makes Flyto2 <span class="gradient-text-animated">Different</span>?</h2>
 						<p>Most automation tools only have two states: not running, or finished.</p>
 					</div>
 				</div>
@@ -238,26 +409,26 @@
 			<div class="row">
 				<div class="col-lg-6 align-self-center">
 					<div class="analytics-toll-content">
-						<h3 class="text-gradient" style="font-size: 28px;">Flyto2 adds a crucial ability:</h3>
-						<p style="font-size: 20px; font-style: italic; margin: 20px 0;">"Before, during, and when errors occur — you can always pause and verify."</p>
-						<p>With Flyto2, you can:</p>
+						<h3 class="text-gradient wow fadeInLeft" style="font-size: 28px;">Flyto2 adds a crucial ability:</h3>
+						<p class="wow fadeInLeft" data-wow-delay="0.1s" style="font-size: 20px; font-style: italic; margin: 20px 0;">"Before, during, and when errors occur — you can always pause and verify."</p>
+						<p class="wow fadeInLeft" data-wow-delay="0.2s">With Flyto2, you can:</p>
 						<ul style="list-style: none; padding: 0; margin: 20px 0;">
-							<li style="padding: 10px 0;"><i class="fas fa-check-circle" style="color: #7C3AED; margin-right: 10px;"></i> Run <strong>1 item</strong> first to check if it's correct</li>
-							<li style="padding: 10px 0;"><i class="fas fa-check-circle" style="color: #7C3AED; margin-right: 10px;"></i> Then run <strong>20 items</strong> to validate</li>
-							<li style="padding: 10px 0;"><i class="fas fa-check-circle" style="color: #7C3AED; margin-right: 10px;"></i> Once confirmed, run <strong>everything</strong></li>
+							<li class="wow fadeInLeft" data-wow-delay="0.3s" style="padding: 10px 0;"><i class="fas fa-check-circle animate-pulse-glow" style="color: #7C3AED; margin-right: 10px; border-radius: 50%;"></i> Run <strong>1 item</strong> first to check if it's correct</li>
+							<li class="wow fadeInLeft" data-wow-delay="0.4s" style="padding: 10px 0;"><i class="fas fa-check-circle animate-pulse-glow" style="color: #7C3AED; margin-right: 10px; border-radius: 50%;"></i> Then run <strong>20 items</strong> to validate</li>
+							<li class="wow fadeInLeft" data-wow-delay="0.5s" style="padding: 10px 0;"><i class="fas fa-check-circle animate-pulse-glow" style="color: #7C3AED; margin-right: 10px; border-radius: 50%;"></i> Once confirmed, run <strong>everything</strong></li>
 						</ul>
-						<p>If something goes wrong:</p>
+						<p class="wow fadeInLeft" data-wow-delay="0.6s">If something goes wrong:</p>
 						<ul style="list-style: none; padding: 0; margin: 20px 0;">
-							<li style="padding: 10px 0;"><i class="fas fa-pause-circle" style="color: #7C3AED; margin-right: 10px;"></i> Stop immediately</li>
-							<li style="padding: 10px 0;"><i class="fas fa-undo" style="color: #7C3AED; margin-right: 10px;"></i> Roll back if needed</li>
-							<li style="padding: 10px 0;"><i class="fas fa-play-circle" style="color: #7C3AED; margin-right: 10px;"></i> Resume from where it stopped</li>
+							<li class="wow fadeInLeft" data-wow-delay="0.7s" style="padding: 10px 0;"><i class="fas fa-pause-circle hero-icon-float" style="color: #7C3AED; margin-right: 10px;"></i> Stop immediately</li>
+							<li class="wow fadeInLeft" data-wow-delay="0.8s" style="padding: 10px 0;"><i class="fas fa-undo icon-spin-slow" style="color: #7C3AED; margin-right: 10px;"></i> Roll back if needed</li>
+							<li class="wow fadeInLeft" data-wow-delay="0.9s" style="padding: 10px 0;"><i class="fas fa-play-circle hero-icon-float" style="color: #7C3AED; margin-right: 10px;"></i> Resume from where it stopped</li>
 						</ul>
-						<p style="font-size: 18px; font-weight: 600;">Automation doesn't have to be "all or nothing."</p>
+						<p class="wow fadeInLeft" data-wow-delay="1s" style="font-size: 18px; font-weight: 600;">Automation doesn't have to be "all or nothing."</p>
 					</div>
 				</div>
-				<div class="col-lg-6">
-					<div class="analytics-toll-img">
-						<img src="assets/img/1.png" alt="Flyto2 Control">
+				<div class="col-lg-6 text-center align-self-center">
+					<div class="wow fadeInRight" data-wow-delay="0.3s">
+						<i class="fas fa-cogs icon-spin-slow" style="font-size: 180px; color: #7C3AED; opacity: 0.2;"></i>
 					</div>
 				</div>
 			</div>
@@ -270,44 +441,44 @@
 		<div class="container">
 			<div class="row mb-40">
 				<div class="col-lg-8 offset-lg-2 text-center">
-					<div class="section-headding">
-						<h2>No Coding Required</h2>
+					<div class="section-headding wow fadeInUp">
+						<h2>No <span class="gradient-text-animated">Coding</span> Required</h2>
 						<p>If you can use a browser, you can use Flyto2.</p>
 					</div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-3 col-md-6 mb-30">
-					<div class="info-box-s1 text-center" style="padding: 40px 20px;">
-						<div style="font-size: 50px; color: #7C3AED; margin-bottom: 20px;">1</div>
+					<div class="info-box-s1 text-center card-float wow fadeInUp" data-wow-delay="0.1s" style="padding: 40px 20px;">
+						<div class="step-number-animated" style="font-size: 50px; color: #7C3AED; margin-bottom: 20px;">1</div>
 						<h5>Open Browser</h5>
 						<p>Start Flyto2 and begin recording</p>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 mb-30">
-					<div class="info-box-s1 text-center" style="padding: 40px 20px;">
-						<div style="font-size: 50px; color: #7C3AED; margin-bottom: 20px;">2</div>
+					<div class="info-box-s1 text-center card-float card-float-delay-1 wow fadeInUp" data-wow-delay="0.2s" style="padding: 40px 20px;">
+						<div class="step-number-animated" style="font-size: 50px; color: #7C3AED; margin-bottom: 20px; animation-delay: 0.5s;">2</div>
 						<h5>Do Your Task</h5>
 						<p>Work as you normally would</p>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 mb-30">
-					<div class="info-box-s1 text-center" style="padding: 40px 20px;">
-						<div style="font-size: 50px; color: #7C3AED; margin-bottom: 20px;">3</div>
+					<div class="info-box-s1 text-center card-float card-float-delay-2 wow fadeInUp" data-wow-delay="0.3s" style="padding: 40px 20px;">
+						<div class="step-number-animated" style="font-size: 50px; color: #7C3AED; margin-bottom: 20px; animation-delay: 1s;">3</div>
 						<h5>Save It</h5>
 						<p>Flyto2 remembers every step</p>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 mb-30">
-					<div class="info-box-s1 text-center" style="padding: 40px 20px;">
-						<div style="font-size: 50px; color: #7C3AED; margin-bottom: 20px;">4</div>
+					<div class="info-box-s1 text-center card-float card-float-delay-3 wow fadeInUp" data-wow-delay="0.4s" style="padding: 40px 20px;">
+						<div class="step-number-animated" style="font-size: 50px; color: #7C3AED; margin-bottom: 20px; animation-delay: 1.5s;">4</div>
 						<h5>Replay Anytime</h5>
 						<p>Run it again, batch it, schedule it</p>
 					</div>
 				</div>
 			</div>
 			<div class="row mt-30">
-				<div class="col-lg-8 offset-lg-2 text-center">
+				<div class="col-lg-8 offset-lg-2 text-center wow fadeInUp" data-wow-delay="0.5s">
 					<p style="font-size: 18px;"><strong>You don't need to know code. You just need to know your job.</strong></p>
 				</div>
 			</div>
@@ -320,17 +491,17 @@
 		<div class="container">
 			<div class="row mb-40">
 				<div class="col-lg-8 offset-lg-2 text-center">
-					<div class="section-headding">
-						<h2>Built for People Who Worry About Mistakes</h2>
+					<div class="section-headding wow fadeInUp">
+						<h2>Built for People Who <span class="gradient-text-animated">Worry</span> About Mistakes</h2>
 						<p>Flyto2 is designed for those who need to be careful.</p>
 					</div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-6 col-md-6 mb-30">
-					<div class="info-box-s2">
+					<div class="info-box-s2 card-float wow fadeInUp" data-wow-delay="0.1s">
 						<div class="icon">
-							<i class="fas fa-eye" style="font-size: 30px; color: #7C3AED;"></i>
+							<i class="fas fa-eye feature-icon-animated" style="font-size: 30px; color: #7C3AED;"></i>
 						</div>
 						<div class="content">
 							<h4>Step-by-Step Verification</h4>
@@ -339,9 +510,9 @@
 					</div>
 				</div>
 				<div class="col-lg-6 col-md-6 mb-30">
-					<div class="info-box-s2">
+					<div class="info-box-s2 card-float card-float-delay-1 wow fadeInUp" data-wow-delay="0.2s">
 						<div class="icon">
-							<i class="fas fa-flask" style="font-size: 30px; color: #7C3AED;"></i>
+							<i class="fas fa-flask feature-icon-animated" style="font-size: 30px; color: #7C3AED;"></i>
 						</div>
 						<div class="content">
 							<h4>Trial Mode</h4>
@@ -350,9 +521,9 @@
 					</div>
 				</div>
 				<div class="col-lg-6 col-md-6 mb-30">
-					<div class="info-box-s2">
+					<div class="info-box-s2 card-float card-float-delay-2 wow fadeInUp" data-wow-delay="0.3s">
 						<div class="icon">
-							<i class="fas fa-history" style="font-size: 30px; color: #7C3AED;"></i>
+							<i class="fas fa-history icon-spin-slow" style="font-size: 30px; color: #7C3AED;"></i>
 						</div>
 						<div class="content">
 							<h4>Rollback & Resume</h4>
@@ -361,9 +532,9 @@
 					</div>
 				</div>
 				<div class="col-lg-6 col-md-6 mb-30">
-					<div class="info-box-s2">
+					<div class="info-box-s2 card-float card-float-delay-3 wow fadeInUp" data-wow-delay="0.4s">
 						<div class="icon">
-							<i class="fas fa-camera" style="font-size: 30px; color: #7C3AED;"></i>
+							<i class="fas fa-camera feature-icon-animated" style="font-size: 30px; color: #7C3AED;"></i>
 						</div>
 						<div class="content">
 							<h4>Full Audit Trail</h4>
@@ -377,15 +548,15 @@
 	<!-- End Safety Section -->
 
 	<!-- Start CTA Section -->
-	<section class="template-need" style="background-image:url('assets/img/cta-1.png');">
-		<div class="container">
+	<section class="hero-wave-bg" style="padding: 80px 0;">
+		<div class="container" style="position: relative; z-index: 2;">
 			<div class="row">
-				<div class="col-lg-6">
-					<h4>Not Another Zapier</h4>
-					<h2>When there's no API, only a browser — Flyto2 works.</h2>
+				<div class="col-lg-6 wow fadeInLeft">
+					<h4 style="color: rgba(255,255,255,0.8); margin-bottom: 10px;">Not Another Zapier</h4>
+					<h2 style="color: #fff; font-size: 32px;">When there's no API, only a browser — <span class="gradient-text-animated">Flyto2</span> works.</h2>
 				</div>
-				<div class="col-lg-6 align-self-center">
-					<a class="button-2 text-right" href="#features">See How It Works</a>
+				<div class="col-lg-6 align-self-center text-lg-end wow fadeInRight">
+					<a class="button-2 btn-glow" href="#features" style="margin-top: 20px;">See How It Works</a>
 				</div>
 			</div>
 		</div>
@@ -397,16 +568,16 @@
 		<div class="container">
 			<div class="row mb-40">
 				<div class="col-lg-8 offset-lg-2 text-center">
-					<div class="section-headding">
-						<h2>Who Is Flyto2 For?</h2>
+					<div class="section-headding wow fadeInUp">
+						<h2>Who Is <span class="gradient-text-animated">Flyto2</span> For?</h2>
 					</div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-4 col-md-6 mb-30">
-					<div class="info-box-s1 text-center">
+					<div class="info-box-s1 text-center card-float wow fadeInUp" data-wow-delay="0.1s">
 						<div class="icon">
-							<i class="fas fa-user-tie" style="font-size: 40px; color: #7C3AED;"></i>
+							<i class="fas fa-user-tie feature-icon-animated" style="font-size: 40px; color: #7C3AED;"></i>
 						</div>
 						<div class="content">
 							<h4 class="text-gradient">Administrative Staff</h4>
@@ -415,9 +586,9 @@
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 mb-30">
-					<div class="info-box-s1 text-center">
+					<div class="info-box-s1 text-center card-float card-float-delay-1 wow fadeInUp" data-wow-delay="0.2s">
 						<div class="icon">
-							<i class="fas fa-cogs" style="font-size: 40px; color: #7C3AED;"></i>
+							<i class="fas fa-cogs icon-spin-slow" style="font-size: 40px; color: #7C3AED;"></i>
 						</div>
 						<div class="content">
 							<h4 class="text-gradient">Operations Teams</h4>
@@ -426,9 +597,9 @@
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 mb-30">
-					<div class="info-box-s1 text-center">
+					<div class="info-box-s1 text-center card-float card-float-delay-2 wow fadeInUp" data-wow-delay="0.3s">
 						<div class="icon">
-							<i class="fas fa-bug" style="font-size: 40px; color: #7C3AED;"></i>
+							<i class="fas fa-bug feature-icon-animated" style="font-size: 40px; color: #7C3AED;"></i>
 						</div>
 						<div class="content">
 							<h4 class="text-gradient">QA & Testing</h4>
@@ -437,9 +608,9 @@
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 mb-30">
-					<div class="info-box-s1 text-center">
+					<div class="info-box-s1 text-center card-float card-float-delay-3 wow fadeInUp" data-wow-delay="0.4s">
 						<div class="icon">
-							<i class="fas fa-rocket" style="font-size: 40px; color: #7C3AED;"></i>
+							<i class="fas fa-rocket hero-icon-float" style="font-size: 40px; color: #7C3AED;"></i>
 						</div>
 						<div class="content">
 							<h4 class="text-gradient">Small Teams & Startups</h4>
@@ -448,9 +619,9 @@
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 mb-30">
-					<div class="info-box-s1 text-center">
+					<div class="info-box-s1 text-center card-float wow fadeInUp" data-wow-delay="0.5s">
 						<div class="icon">
-							<i class="fas fa-building" style="font-size: 40px; color: #7C3AED;"></i>
+							<i class="fas fa-building feature-icon-animated" style="font-size: 40px; color: #7C3AED;"></i>
 						</div>
 						<div class="content">
 							<h4 class="text-gradient">Enterprises</h4>
@@ -459,9 +630,9 @@
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 mb-30">
-					<div class="info-box-s1 text-center">
+					<div class="info-box-s1 text-center card-float card-float-delay-1 wow fadeInUp" data-wow-delay="0.6s">
 						<div class="icon">
-							<i class="fas fa-lock" style="font-size: 40px; color: #7C3AED;"></i>
+							<i class="fas fa-lock animate-pulse-glow" style="font-size: 40px; color: #7C3AED; border-radius: 50%;"></i>
 						</div>
 						<div class="content">
 							<h4 class="text-gradient">Regulated Industries</h4>
@@ -475,18 +646,22 @@
 	<!-- End Who Is It For Section -->
 
 	<!-- Start Offline Section -->
-	<section class="section-padding section-bg">
-		<div class="container">
+	<section class="section-padding section-bg" style="position: relative; overflow: hidden;">
+		<div class="floating-shapes" style="opacity: 0.05;">
+			<div class="floating-shape floating-shape-2"></div>
+			<div class="floating-shape floating-shape-3"></div>
+		</div>
+		<div class="container" style="position: relative; z-index: 2;">
 			<div class="row">
 				<div class="col-lg-6 align-self-center">
 					<div class="analytics-toll-content">
-						<h2 class="text-gradient">Works Completely Offline</h2>
-						<p class="contetn">This is one of Flyto2's biggest strengths.</p>
+						<h2 class="text-gradient wow fadeInLeft">Works Completely Offline</h2>
+						<p class="contetn wow fadeInLeft" data-wow-delay="0.1s">This is one of Flyto2's biggest strengths.</p>
 						<div class="row mt-30">
 							<div class="col-sm-6 mb-30">
-								<div class="info-box-s2">
+								<div class="info-box-s2 card-float wow fadeInUp" data-wow-delay="0.2s">
 									<div class="icon">
-										<i class="fas fa-wifi-slash" style="font-size: 24px; color: #7C3AED;"></i>
+										<i class="fas fa-plane feature-icon-animated" style="font-size: 24px; color: #7C3AED;"></i>
 									</div>
 									<div class="content">
 										<h4>No Internet Required</h4>
@@ -495,9 +670,9 @@
 								</div>
 							</div>
 							<div class="col-sm-6 mb-30">
-								<div class="info-box-s2">
+								<div class="info-box-s2 card-float card-float-delay-1 wow fadeInUp" data-wow-delay="0.3s">
 									<div class="icon">
-										<i class="fas fa-server" style="font-size: 24px; color: #7C3AED;"></i>
+										<i class="fas fa-server feature-icon-animated" style="font-size: 24px; color: #7C3AED;"></i>
 									</div>
 									<div class="content">
 										<h4>On Your Infrastructure</h4>
@@ -506,9 +681,9 @@
 								</div>
 							</div>
 							<div class="col-sm-6 mb-30">
-								<div class="info-box-s2">
+								<div class="info-box-s2 card-float card-float-delay-2 wow fadeInUp" data-wow-delay="0.4s">
 									<div class="icon">
-										<i class="fas fa-database" style="font-size: 24px; color: #7C3AED;"></i>
+										<i class="fas fa-database feature-icon-animated" style="font-size: 24px; color: #7C3AED;"></i>
 									</div>
 									<div class="content">
 										<h4>Data Stays Internal</h4>
@@ -517,9 +692,9 @@
 								</div>
 							</div>
 							<div class="col-sm-6 mb-30">
-								<div class="info-box-s2">
+								<div class="info-box-s2 card-float card-float-delay-3 wow fadeInUp" data-wow-delay="0.5s">
 									<div class="icon">
-										<i class="fas fa-key" style="font-size: 24px; color: #7C3AED;"></i>
+										<i class="fas fa-key hero-icon-float" style="font-size: 24px; color: #7C3AED;"></i>
 									</div>
 									<div class="content">
 										<h4>Offline Licensing</h4>
@@ -528,12 +703,12 @@
 								</div>
 							</div>
 						</div>
-						<a class="button-1" href="pricing.html">View Offline Plans</a>
+						<a class="button-1 btn-glow wow fadeInUp" data-wow-delay="0.6s" href="pricing.html">View Offline Plans</a>
 					</div>
 				</div>
-				<div class="col-lg-6">
-					<div class="analytics-toll-img text-center">
-						<i class="fas fa-shield-alt" style="font-size: 200px; color: #7C3AED; opacity: 0.3;"></i>
+				<div class="col-lg-6 text-center align-self-center">
+					<div class="wow fadeInRight" data-wow-delay="0.3s">
+						<i class="fas fa-shield-alt animate-float-slow" style="font-size: 200px; color: #7C3AED; opacity: 0.3;"></i>
 					</div>
 				</div>
 			</div>
@@ -546,10 +721,10 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 offset-lg-2 text-center">
-					<h2 style="margin-bottom: 30px;">Flyto2 Doesn't Replace You</h2>
-					<p style="font-size: 18px; margin-bottom: 20px;">Flyto2 isn't about "letting the robot run wild."</p>
-					<p style="font-size: 18px; margin-bottom: 30px;">Its role is simple:</p>
-					<div style="background: #f8f9fa; padding: 40px; border-radius: 10px; border-left: 4px solid #7C3AED;">
+					<h2 class="wow fadeInUp" style="margin-bottom: 30px;">Flyto2 Doesn't <span class="gradient-text-animated">Replace</span> You</h2>
+					<p class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 18px; margin-bottom: 20px;">Flyto2 isn't about "letting the robot run wild."</p>
+					<p class="wow fadeInUp" data-wow-delay="0.2s" style="font-size: 18px; margin-bottom: 30px;">Its role is simple:</p>
+					<div class="wow fadeInUp card-float" data-wow-delay="0.3s" style="background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%); padding: 40px; border-radius: 15px; border-left: 4px solid #7C3AED; box-shadow: 0 10px 40px rgba(124,58,237,0.1);">
 						<p style="font-size: 20px; margin: 0;"><strong>You decide. The computer executes. Problems stop immediately.</strong></p>
 					</div>
 				</div>
@@ -559,14 +734,16 @@
 	<!-- End Philosophy Section -->
 
 	<!-- Start Final CTA Section -->
-	<section class="subscribe-area" style="background-image: url('assets/img/sub.png');">
+	<section class="subscribe-area subscribe-wave-bg">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
-					<div class="subscribe-content">
+					<div class="subscribe-content wow fadeInUp">
 						<h2>Think of Flyto2 as:</h2>
-						<p style="font-size: 24px; font-style: italic;">"A computer assistant that follows your demonstration,<br>but never goes rogue."</p>
-						<a class="button-1" href="pricing.html" style="margin-top: 30px; display: inline-block;">Get Started Free</a>
+						<p style="font-size: 24px; font-style: italic;">"A computer assistant that follows your demonstration,<br>but never goes rogue."<span class="typing-cursor"></span></p>
+						<a class="button-1 btn-glow" href="pricing.html" style="margin-top: 30px; display: inline-block;">
+							<i class="fas fa-rocket" style="margin-right: 8px;"></i> Get Started Free
+						</a>
 						<ul style="margin-top: 30px;">
 							<li><i class="fas fa-check"></i> No credit card required</li>
 							<li><i class="fas fa-check"></i> Works offline</li>
@@ -603,6 +780,7 @@
 							<ul>
 								<li><a href="#features">Features</a></li>
 								<li><a href="pricing.html">Pricing</a></li>
+								<li><a href="download.html">Download</a></li>
 								<li><a href="https://github.com/flytohub/flyto-core/releases">Changelog</a></li>
 							</ul>
 						</div>
