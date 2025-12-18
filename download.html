@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Download - Flyto Core</title>
+	<meta name="description" content="Download the latest version of Flyto Core. Open source automation engine.">
+	<link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="assets/img/icon.png" type="image/png" sizes="32x32">
+
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+	<link rel="stylesheet" href="assets/css/fontawesome.all.min.css">
+	<link rel="stylesheet" href="assets/css/normalize.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="assets/css/responsive.css">
+	<style>
+		.download-hero {
+			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+			padding: 120px 0 80px;
+			color: white;
+		}
+		.version-badge {
+			background: rgba(255,255,255,0.2);
+			padding: 8px 20px;
+			border-radius: 30px;
+			display: inline-block;
+			margin-bottom: 20px;
+			font-size: 14px;
+		}
+		.download-card {
+			background: white;
+			border-radius: 15px;
+			padding: 30px;
+			box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+			margin-bottom: 30px;
+		}
+		.download-btn {
+			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+			color: white;
+			padding: 15px 40px;
+			border-radius: 30px;
+			text-decoration: none;
+			display: inline-flex;
+			align-items: center;
+			gap: 10px;
+			font-weight: 600;
+			transition: transform 0.3s, box-shadow 0.3s;
+		}
+		.download-btn:hover {
+			transform: translateY(-3px);
+			box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+			color: white;
+		}
+		.download-btn-secondary {
+			background: #f8f9fa;
+			color: #333;
+			border: 2px solid #e9ecef;
+		}
+		.download-btn-secondary:hover {
+			background: #e9ecef;
+			color: #333;
+		}
+		.install-command {
+			background: #1e1e1e;
+			color: #4ec9b0;
+			padding: 20px 25px;
+			border-radius: 10px;
+			font-family: 'Monaco', 'Consolas', monospace;
+			position: relative;
+			margin: 20px 0;
+		}
+		.install-command code {
+			color: #4ec9b0;
+		}
+		.copy-btn {
+			position: absolute;
+			right: 15px;
+			top: 50%;
+			transform: translateY(-50%);
+			background: #333;
+			border: none;
+			color: #888;
+			padding: 8px 15px;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: all 0.3s;
+		}
+		.copy-btn:hover {
+			background: #444;
+			color: white;
+		}
+		.copy-btn.copied {
+			background: #4ec9b0;
+			color: #1e1e1e;
+		}
+		.version-table {
+			width: 100%;
+			border-collapse: collapse;
+		}
+		.version-table th, .version-table td {
+			padding: 15px;
+			text-align: left;
+			border-bottom: 1px solid #eee;
+		}
+		.version-table th {
+			background: #f8f9fa;
+			font-weight: 600;
+		}
+		.version-table tr:hover {
+			background: #f8f9fa;
+		}
+		.file-size {
+			color: #888;
+			font-size: 14px;
+		}
+		.latest-tag {
+			background: #28a745;
+			color: white;
+			padding: 3px 10px;
+			border-radius: 15px;
+			font-size: 12px;
+			margin-left: 10px;
+		}
+		.loading {
+			text-align: center;
+			padding: 40px;
+			color: #888;
+		}
+		.loading i {
+			animation: spin 1s linear infinite;
+		}
+		@keyframes spin {
+			from { transform: rotate(0deg); }
+			to { transform: rotate(360deg); }
+		}
+		.changelog-item {
+			padding: 20px;
+			border-left: 3px solid #667eea;
+			margin-bottom: 20px;
+			background: #f8f9fa;
+			border-radius: 0 10px 10px 0;
+		}
+		.changelog-item h4 {
+			margin-bottom: 10px;
+			color: #333;
+		}
+		.changelog-item .date {
+			color: #888;
+			font-size: 14px;
+		}
+	</style>
+</head>
+<body>
+	<!-- Preloader -->
+	<div id="preloader">
+		<div class="preloader">
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+	<!-- Start Header Area -->
+	<header class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 align-self-center">
+					<div class="logo">
+						<a href="index.html">
+							<img src="assets/img/white-logo.png" alt="Flyto">
+						</a>
+					</div>
+					<div class="canvas_open">
+						<a href="javascript:void(0)">
+							<span></span>
+							<span></span>
+							<span></span>
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-9">
+					<div class="hr_btn">
+						<a class="button-2" href="pricing.html">Get Started</a>
+					</div>
+					<div class="menu">
+						<nav>
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li><a href="index.html#features">Features</a></li>
+								<li><a href="pricing.html">Pricing</a></li>
+								<li><a href="download.html" class="active">Download</a></li>
+								<li><a href="contact.html">Contact</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- End Header Area -->
+
+	<!-- Mobile Menu -->
+	<div class="mobile-menu-area">
+		<div class="off_canvars_overlay"></div>
+		<div class="offcanvas_menu">
+			<div class="offcanvas_menu_wrapper">
+				<div class="canvas_close">
+					<a href="javascript:void(0)"><i class="fas fa-times"></i></a>
+				</div>
+				<div class="mobile-logo">
+					<a href="index.html">
+						<img src="assets/img/logo.png" alt="Flyto" />
+					</a>
+				</div>
+				<div id="menu" class="text-left">
+					<ul class="offcanvas_main_menu">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="index.html#features">Features</a></li>
+						<li><a href="pricing.html">Pricing</a></li>
+						<li class="active"><a href="download.html">Download</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Download Hero -->
+	<section class="download-hero">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="version-badge">
+						<i class="fas fa-tag"></i> Latest: <span id="latest-version">Loading...</span>
+					</div>
+					<h1>Download Flyto Core</h1>
+					<p style="font-size: 18px; opacity: 0.9; margin-bottom: 30px;">
+						Open source automation engine. Works offline, no cloud required.
+					</p>
+					<a href="#" id="main-download-btn" class="download-btn">
+						<i class="fas fa-download"></i>
+						<span>Download .whl</span>
+					</a>
+					<a href="https://github.com/flytohub/flyto-core" class="download-btn download-btn-secondary" style="margin-left: 15px;">
+						<i class="fab fa-github"></i>
+						<span>View Source</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Quick Install -->
+	<section class="section-padding">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2">
+					<div class="download-card">
+						<h3><i class="fas fa-terminal" style="color: #667eea;"></i> Quick Install</h3>
+						<p>Install via pip (recommended):</p>
+						<div class="install-command">
+							<code>pip install flyto-core</code>
+							<button class="copy-btn" onclick="copyCommand(this, 'pip install flyto-core')">
+								<i class="fas fa-copy"></i> Copy
+							</button>
+						</div>
+						<p>Or install specific version:</p>
+						<div class="install-command">
+							<code>pip install flyto-core==<span id="install-version">1.0.2</span></code>
+							<button class="copy-btn" onclick="copyCommand(this, 'pip install flyto-core==' + document.getElementById('install-version').textContent)">
+								<i class="fas fa-copy"></i> Copy
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- All Versions -->
+	<section class="section-padding" style="background: #f8f9fa;">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-10 offset-lg-1">
+					<h2 class="text-center mb-50">All Versions</h2>
+					<div class="download-card">
+						<div id="versions-loading" class="loading">
+							<i class="fas fa-spinner"></i> Loading versions...
+						</div>
+						<table class="version-table" id="versions-table" style="display: none;">
+							<thead>
+								<tr>
+									<th>Version</th>
+									<th>Released</th>
+									<th>Size</th>
+									<th>Download</th>
+								</tr>
+							</thead>
+							<tbody id="versions-body">
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Requirements -->
+	<section class="section-padding">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="download-card text-center">
+						<i class="fab fa-python" style="font-size: 48px; color: #3776ab; margin-bottom: 20px;"></i>
+						<h4>Python 3.9+</h4>
+						<p>Requires Python 3.9 or higher</p>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="download-card text-center">
+						<i class="fas fa-desktop" style="font-size: 48px; color: #667eea; margin-bottom: 20px;"></i>
+						<h4>Cross Platform</h4>
+						<p>Windows, macOS, Linux</p>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="download-card text-center">
+						<i class="fas fa-wifi-slash" style="font-size: 48px; color: #28a745; margin-bottom: 20px;"></i>
+						<h4>Works Offline</h4>
+						<p>No internet required after install</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="footer-top pt-70 pb-20">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4 col-sm-6 mb-30">
+						<div class="f-widgets-item">
+							<div class="f-logo">
+								<a href="index.html">
+									<img src="assets/img/logo.png" alt="Flyto">
+								</a>
+							</div>
+							<p>Automation that works like you do. Record once, replay forever.</p>
+							<ul>
+								<li><a href="mailto:hello@flyto2.com"><i class="bi bi-envelope-fill"></i> hello@flyto2.com</a></li>
+								<li><a href="https://github.com/flytohub"><i class="bi bi-github"></i> github.com/flytohub</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-2 col-sm-6 mb-30">
+						<div class="f-widgets-item">
+							<h5>Product</h5>
+							<ul>
+								<li><a href="index.html#features">Features</a></li>
+								<li><a href="pricing.html">Pricing</a></li>
+								<li><a href="download.html">Download</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-2 col-sm-6 mb-30">
+						<div class="f-widgets-item">
+							<h5>Resources</h5>
+							<ul>
+								<li><a href="https://github.com/flytohub/flyto-core">Documentation</a></li>
+								<li><a href="https://pypi.org/project/flyto-core/">PyPI</a></li>
+								<li><a href="faq.html">FAQ</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-4 col-sm-6 mb-30">
+						<div class="f-widgets-item">
+							<h5>Stay Updated</h5>
+							<p>Get notified about new releases</p>
+							<a href="https://github.com/flytohub/flyto-core" class="button-2" style="margin-top: 15px;">
+								<i class="fab fa-github"></i> Star on GitHub
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<p>&copy; 2025 Flyto. All rights reserved.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery-3.6.0.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/app.js"></script>
+
+	<script>
+		// Fetch PyPI data
+		async function fetchPyPIData() {
+			try {
+				const response = await fetch('https://pypi.org/pypi/flyto-core/json');
+				const data = await response.json();
+
+				const latestVersion = data.info.version;
+				const releases = data.releases;
+
+				// Update latest version display
+				document.getElementById('latest-version').textContent = latestVersion;
+				document.getElementById('install-version').textContent = latestVersion;
+
+				// Find latest .whl file
+				const latestFiles = releases[latestVersion];
+				const latestWhl = latestFiles.find(f => f.filename.endsWith('.whl'));
+				if (latestWhl) {
+					document.getElementById('main-download-btn').href = latestWhl.url;
+				}
+
+				// Build versions table
+				const tbody = document.getElementById('versions-body');
+				const versions = Object.keys(releases).reverse();
+
+				versions.forEach((version, index) => {
+					const files = releases[version];
+					if (files.length === 0) return;
+
+					const whl = files.find(f => f.filename.endsWith('.whl'));
+					const tar = files.find(f => f.filename.endsWith('.tar.gz'));
+
+					if (!whl && !tar) return;
+
+					const file = whl || tar;
+					const uploadDate = new Date(file.upload_time).toLocaleDateString('en-US', {
+						year: 'numeric',
+						month: 'short',
+						day: 'numeric'
+					});
+					const size = formatBytes(file.size);
+
+					const row = document.createElement('tr');
+					row.innerHTML = `
+						<td>
+							<strong>${version}</strong>
+							${index === 0 ? '<span class="latest-tag">Latest</span>' : ''}
+						</td>
+						<td>${uploadDate}</td>
+						<td class="file-size">${size}</td>
+						<td>
+							${whl ? `<a href="${whl.url}" class="btn btn-sm btn-primary"><i class="fas fa-download"></i> .whl</a>` : ''}
+							${tar ? `<a href="${tar.url}" class="btn btn-sm btn-outline-secondary" style="margin-left: 5px;"><i class="fas fa-file-archive"></i> .tar.gz</a>` : ''}
+						</td>
+					`;
+					tbody.appendChild(row);
+				});
+
+				// Show table, hide loading
+				document.getElementById('versions-loading').style.display = 'none';
+				document.getElementById('versions-table').style.display = 'table';
+
+			} catch (error) {
+				console.error('Failed to fetch PyPI data:', error);
+				document.getElementById('versions-loading').innerHTML =
+					'<p style="color: #dc3545;"><i class="fas fa-exclamation-circle"></i> Failed to load versions. <a href="https://pypi.org/project/flyto-core/#history">View on PyPI</a></p>';
+			}
+		}
+
+		function formatBytes(bytes) {
+			if (bytes === 0) return '0 Bytes';
+			const k = 1024;
+			const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+			const i = Math.floor(Math.log(bytes) / Math.log(k));
+			return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
+		}
+
+		function copyCommand(btn, text) {
+			navigator.clipboard.writeText(text).then(() => {
+				btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+				btn.classList.add('copied');
+				setTimeout(() => {
+					btn.innerHTML = '<i class="fas fa-copy"></i> Copy';
+					btn.classList.remove('copied');
+				}, 2000);
+			});
+		}
+
+		// Load data on page load
+		document.addEventListener('DOMContentLoaded', fetchPyPIData);
+	</script>
+</body>
+</html>
