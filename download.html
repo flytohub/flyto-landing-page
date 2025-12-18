@@ -284,6 +284,7 @@
 								<li><a href="pricing.html">Pricing</a></li>
 								<li><a href="buy-offline.html">Buy Pro</a></li>
 								<li class="active"><a href="download.html">Download</a></li>
+								<li><a href="app.html">Get App</a></li>
 								<li><a href="https://github.com/flytohub/flyto-core">Docs</a></li>
 								<li><a href="contact.html">Contact</a></li>
 							</ul>
@@ -313,6 +314,7 @@
 						<li><a href="pricing.html">Pricing</a></li>
 						<li><a href="buy-offline.html">Buy Pro</a></li>
 						<li class="active"><a href="download.html">Download</a></li>
+						<li><a href="app.html">Get App</a></li>
 						<li><a href="https://github.com/flytohub/flyto-core">Docs</a></li>
 						<li><a href="contact.html">Contact</a></li>
 					</ul>
@@ -442,6 +444,116 @@
 		</div>
 	</section>
 	<!-- End Features Section -->
+
+	<!-- Start Docker Deployment Section -->
+	<section class="section-padding">
+		<div class="container">
+			<div class="row mb-40">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="section-headding wow fadeInUp">
+						<h2><i class="fab fa-docker" style="color: #2496ED;"></i> Self-Hosted Deployment</h2>
+						<p>Deploy Flyto2 Pro on your own infrastructure with Docker</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-6 mb-30">
+					<div class="terminal-box wow fadeInUp" data-wow-delay="0.1s">
+						<div class="terminal-header">
+							<span class="terminal-dot red"></span>
+							<span class="terminal-dot yellow"></span>
+							<span class="terminal-dot green"></span>
+							<span class="terminal-title">Docker Pull</span>
+						</div>
+						<div class="terminal-body">
+							<div class="terminal-line">
+								<span class="terminal-prompt">$</span>
+								<span class="terminal-command">docker pull <span class="highlight">flytohub/flyto-pro:latest</span></span>
+								<button class="copy-btn" onclick="copyCommand(this, 'docker pull flytohub/flyto-pro:latest')">
+									<i class="fas fa-copy"></i> Copy
+								</button>
+							</div>
+							<div class="terminal-line">
+								<span class="terminal-prompt">$</span>
+								<span class="terminal-command">docker run -d -p 8080:8080 <span class="highlight">flytohub/flyto-pro</span></span>
+								<button class="copy-btn" onclick="copyCommand(this, 'docker run -d -p 8080:8080 flytohub/flyto-pro')">
+									<i class="fas fa-copy"></i> Copy
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 mb-30">
+					<div class="terminal-box wow fadeInUp" data-wow-delay="0.2s">
+						<div class="terminal-header">
+							<span class="terminal-dot red"></span>
+							<span class="terminal-dot yellow"></span>
+							<span class="terminal-dot green"></span>
+							<span class="terminal-title">docker-compose.yml</span>
+						</div>
+						<div class="terminal-body" style="font-size: 13px;">
+							<pre style="margin: 0; color: #e0e0e0; white-space: pre-wrap;"><span style="color: #A78BFA;">version</span>: '3.8'
+<span style="color: #A78BFA;">services</span>:
+  <span style="color: #27c93f;">flyto-pro</span>:
+    <span style="color: #A78BFA;">image</span>: flytohub/flyto-pro:latest
+    <span style="color: #A78BFA;">ports</span>:
+      - "8080:8080"
+    <span style="color: #A78BFA;">volumes</span>:
+      - ./data:/app/data
+    <span style="color: #A78BFA;">environment</span>:
+      - LICENSE_KEY=${LICENSE_KEY}</pre>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row mt-30">
+				<div class="col-lg-4 col-sm-6 mb-30">
+					<div class="info-box-s1 wow fadeInUp" data-wow-delay="0.1s">
+						<div class="icon">
+							<i class="fas fa-server" style="font-size: 40px; color: #7C3AED;"></i>
+						</div>
+						<div class="content">
+							<h4 class="text-gradient">Your Infrastructure</h4>
+							<p>Run on any cloud provider or bare metal server. You control the data.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-sm-6 mb-30">
+					<div class="info-box-s1 wow fadeInUp" data-wow-delay="0.2s">
+						<div class="icon">
+							<i class="fas fa-sync-alt" style="font-size: 40px; color: #7C3AED;"></i>
+						</div>
+						<div class="content">
+							<h4 class="text-gradient">Auto Updates</h4>
+							<p>Automatic container updates with Docker Watchtower support.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-sm-6 mb-30">
+					<div class="info-box-s1 wow fadeInUp" data-wow-delay="0.3s">
+						<div class="icon">
+							<i class="fas fa-shield-alt" style="font-size: 40px; color: #7C3AED;"></i>
+						</div>
+						<div class="content">
+							<h4 class="text-gradient">Enterprise Ready</h4>
+							<p>Production-grade security with SSL/TLS and authentication support.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row mt-20">
+				<div class="col-lg-12 text-center wow fadeInUp">
+					<a href="buy-offline.html" class="button-1" style="margin-right: 15px;">
+						<i class="fas fa-key"></i> Get Pro License
+					</a>
+					<a href="https://github.com/flytohub/flyto-pro/blob/main/docs/docker.md" class="button-2" target="_blank">
+						<i class="fas fa-book"></i> Docker Docs
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Docker Deployment Section -->
 
 	<!-- Start All Versions Section -->
 	<section class="section-padding section-bg">
