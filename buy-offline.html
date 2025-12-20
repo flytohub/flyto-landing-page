@@ -8,12 +8,13 @@
 	<link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="assets/img/icon.png" type="image/png" sizes="32x32">
 
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 	<link rel="stylesheet" href="assets/css/fontawesome.all.min.css">
 	<link rel="stylesheet" href="assets/css/normalize.css">
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="assets/css/responsive.css">
+	<link rel="stylesheet" href="assets/css/auth.css">
 
 	<link rel="stylesheet" href="assets/css/animate.css">
 	<style>
@@ -743,18 +744,67 @@
 					</div>
 				</div>
 				<div class="col-lg-9">
-					<div class="menu">
+					<div class="menu d-flex align-items-center justify-content-end">
 						<nav>
 							<ul>
 								<li><a href="index.html">Home</a></li>
-								<li><a href="pricing.html">Pricing</a></li>
-								<li class="active"><a href="buy-offline.html">Buy Pro</a></li>
-								<li><a href="download.html">Download</a></li>
-								<li><a href="app.html">Get App</a></li>
-								<li><a href="https://github.com/flytohub/flyto-core">Docs</a></li>
-								<li><a href="contact.html">Contact</a></li>
+								<li class="nav-dropdown active">
+									<span class="nav-dropdown-toggle">Pricing</span>
+									<div class="nav-dropdown-menu">
+										<a href="pricing.html" class="nav-dropdown-item"><i class="bi bi-tag"></i>Plans & Pricing</a>
+										<a href="buy-offline.html" class="nav-dropdown-item"><i class="bi bi-shield-lock"></i>Buy Pro License</a>
+									</div>
+								</li>
+								<li class="nav-dropdown">
+									<span class="nav-dropdown-toggle">Download</span>
+									<div class="nav-dropdown-menu">
+										<a href="download.html" class="nav-dropdown-item"><i class="bi bi-terminal"></i>Flyto Core (CLI)</a>
+										<a href="app.html" class="nav-dropdown-item"><i class="bi bi-window"></i>Desktop App</a>
+									</div>
+								</li>
+								<li class="nav-dropdown">
+									<span class="nav-dropdown-toggle">Resources</span>
+									<div class="nav-dropdown-menu">
+										<a href="https://github.com/flytohub/flyto-core" class="nav-dropdown-item"><i class="bi bi-book"></i>Documentation</a>
+										<a href="faq.html" class="nav-dropdown-item"><i class="bi bi-question-circle"></i>FAQ</a>
+										<a href="contact.html" class="nav-dropdown-item"><i class="bi bi-envelope"></i>Contact Us</a>
+									</div>
+								</li>
 							</ul>
 						</nav>
+						<!-- Auth -->
+						<div class="header-auth">
+							<!-- Not logged in -->
+							<button id="headerLoginBtn" class="btn-header-login">
+								<i class="bi bi-person"></i>
+								<span>Sign In</span>
+							</button>
+							<!-- Logged in (hidden by default) -->
+							<div id="headerUserDropdown" class="user-dropdown d-none">
+								<div class="user-dropdown-toggle" onclick="this.parentElement.classList.toggle('show')">
+									<div class="user-avatar" id="headerUserAvatar">U</div>
+									<span class="user-email" id="headerUserEmail"></span>
+									<i class="bi bi-chevron-down dropdown-arrow"></i>
+								</div>
+								<div class="user-dropdown-menu">
+									<div class="dropdown-header">
+										<div class="dropdown-header-email" id="dropdownUserEmail"></div>
+										<div class="dropdown-header-label">Flyto2 Account</div>
+									</div>
+									<div class="dropdown-menu-items">
+										<a href="buy-offline.html" class="dropdown-menu-item">
+											<i class="bi bi-key"></i>
+											My Licenses
+										</a>
+										<div class="dropdown-divider"></div>
+										<button class="dropdown-menu-item text-danger" id="btnSignOut">
+											<i class="bi bi-box-arrow-right"></i>
+											Sign Out
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -803,8 +853,8 @@
 								<div class="card-icon">
 									<i class="bi bi-shield-check"></i>
 								</div>
-								<div class="card-price">$199</div>
-								<div class="card-period">per year / per machine</div>
+								<div class="card-price" id="heroPrice">$199</div>
+								<div class="card-period" id="heroPeriod">per year / per machine</div>
 								<div class="card-features">
 									<div><i class="bi bi-check-circle-fill"></i> Unlimited Workflows</div>
 									<div><i class="bi bi-check-circle-fill"></i> Checkpoint & Resume</div>
@@ -849,6 +899,32 @@
 
 						<!-- Step 1: Machine Fingerprint -->
 						<div class="step-content active" id="step1">
+							<!-- Login Notice (shown when not logged in) -->
+							<div id="loginNotice" class="alert mb-4" style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border: none; border-left: 4px solid #f59e0b; border-radius: 12px;">
+								<div class="d-flex align-items-center gap-3">
+									<i class="bi bi-info-circle-fill" style="font-size: 24px; color: #f59e0b;"></i>
+									<div>
+										<strong style="color: #92400e;">Sign in to continue</strong>
+										<p class="mb-0 mt-1" style="color: #a16207; font-size: 14px;">
+											Please sign in using the button in the header to purchase and manage your license.
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<!-- User Confirmed (shown when logged in) -->
+							<div id="userConfirmed" class="d-none alert mb-4" style="background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); border: none; border-left: 4px solid #10b981; border-radius: 12px;">
+								<div class="d-flex align-items-center gap-3">
+									<i class="bi bi-check-circle-fill" style="font-size: 24px; color: #10b981;"></i>
+									<div>
+										<strong style="color: #065f46;">Signed in as <span id="userEmailDisplay"></span></strong>
+										<p class="mb-0 mt-1" style="color: #047857; font-size: 14px;">
+											Your license will be linked to this account for easy management.
+										</p>
+									</div>
+								</div>
+							</div>
+
 							<div class="plan-summary">
 								<h4><i class="bi bi-shield-lock-fill me-2"></i>Pro Offline License</h4>
 								<ul class="plan-features">
@@ -861,8 +937,8 @@
 							</div>
 
 							<div class="price-display">
-								<div class="amount">$199</div>
-								<div class="period">per year, per machine</div>
+								<div class="amount" id="formPrice">$199</div>
+								<div class="period" id="formPeriod">per year, per machine</div>
 							</div>
 
 							<div class="form-section">
@@ -947,7 +1023,7 @@
 								</div>
 								<div class="col-6">
 									<button class="btn-purchase" id="btnPay">
-										Pay $199 <i class="bi bi-lock-fill ms-2"></i>
+										Pay <span id="payButtonPrice">$199</span> <i class="bi bi-lock-fill ms-2"></i>
 									</button>
 								</div>
 							</div>
@@ -1016,60 +1092,225 @@
 		</div>
 	</footer>
 
+	<!-- Login Modal -->
+	<div class="modal fade" id="authModal" tabindex="-1" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content" style="border-radius: 20px; border: none; overflow: hidden;">
+				<div class="modal-header" style="background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%); border: none; padding: 30px;">
+					<div class="text-center w-100">
+						<i class="bi bi-shield-lock-fill text-white" style="font-size: 40px;"></i>
+						<h4 class="text-white mt-3 mb-0" id="authModalTitle">Sign In to Purchase</h4>
+						<p class="text-white-50 mt-2 mb-0">Use your Flyto2 account to manage licenses</p>
+					</div>
+				</div>
+				<div class="modal-body p-4">
+					<!-- Login Form -->
+					<div id="loginForm">
+						<div class="mb-3">
+							<label class="form-label">Email</label>
+							<input type="email" class="form-control" id="authEmail" placeholder="your@email.com" required>
+						</div>
+						<div class="mb-3">
+							<label class="form-label">Password</label>
+							<input type="password" class="form-control" id="authPassword" placeholder="••••••••" required>
+						</div>
+						<div id="authError" class="alert alert-danger d-none" role="alert"></div>
+						<button class="btn btn-primary w-100 py-2" id="btnLogin" style="background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%); border: none; border-radius: 10px;">
+							<span id="loginBtnText">Sign In</span>
+							<span id="loginBtnSpinner" class="spinner-border spinner-border-sm d-none ms-2"></span>
+						</button>
+						<div class="text-center mt-3">
+							<span class="text-muted">Don't have an account?</span>
+							<a href="#" id="showRegister" class="text-purple ms-1" style="color: #7c3aed;">Create one</a>
+						</div>
+						<div class="text-center mt-2">
+							<a href="#" id="showForgotPassword" class="text-muted small">Forgot password?</a>
+						</div>
+					</div>
+					<!-- Register Form -->
+					<div id="registerForm" class="d-none">
+						<div class="mb-3">
+							<label class="form-label">Email</label>
+							<input type="email" class="form-control" id="registerEmail" placeholder="your@email.com" required>
+						</div>
+						<div class="mb-3">
+							<label class="form-label">Password</label>
+							<input type="password" class="form-control" id="registerPassword" placeholder="At least 6 characters" required>
+						</div>
+						<div class="mb-3">
+							<label class="form-label">Confirm Password</label>
+							<input type="password" class="form-control" id="registerPasswordConfirm" placeholder="••••••••" required>
+						</div>
+						<div id="registerError" class="alert alert-danger d-none" role="alert"></div>
+						<button class="btn btn-primary w-100 py-2" id="btnRegister" style="background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%); border: none; border-radius: 10px;">
+							<span id="registerBtnText">Create Account</span>
+							<span id="registerBtnSpinner" class="spinner-border spinner-border-sm d-none ms-2"></span>
+						</button>
+						<div class="text-center mt-3">
+							<span class="text-muted">Already have an account?</span>
+							<a href="#" id="showLogin" class="text-purple ms-1" style="color: #7c3aed;">Sign in</a>
+						</div>
+					</div>
+					<!-- Forgot Password Form -->
+					<div id="forgotPasswordForm" class="d-none">
+						<p class="text-muted mb-3">Enter your email and we'll send you a reset link.</p>
+						<div class="mb-3">
+							<label class="form-label">Email</label>
+							<input type="email" class="form-control" id="forgotEmail" placeholder="your@email.com" required>
+						</div>
+						<div id="forgotError" class="alert alert-danger d-none" role="alert"></div>
+						<div id="forgotSuccess" class="alert alert-success d-none" role="alert"></div>
+						<button class="btn btn-primary w-100 py-2" id="btnForgot" style="background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%); border: none; border-radius: 10px;">
+							Send Reset Link
+						</button>
+						<div class="text-center mt-3">
+							<a href="#" id="backToLogin" class="text-purple" style="color: #7c3aed;">Back to sign in</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<!-- Scripts -->
 	<script src="assets/js/jquery-3.6.0.min.js"></script>
-	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="assets/js/wow.min.js"></script>
 	<script src="https://js.stripe.com/v3/"></script>
+
+	<!-- Firebase SDK -->
+	<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js"></script>
+	<!-- Shared Auth -->
+	<script src="assets/js/auth.js"></script>
 
 	<script>
 		// Initialize WOW.js
 		new WOW().init();
 
-		// Hide preloader immediately when jQuery is ready
+		// Hide preloader
 		$(document).ready(function() {
 			$('#preloader').delay(200).fadeOut(300);
 		});
 
-		// Firebase Functions URL
-		const FIREBASE_URL = 'https://us-central1-ticket-helper-dbc0e.cloudfunctions.net';
-
-		// Stripe (will be initialized with publishable key from server)
-		let stripe, cardElement;
-
 		// State
+		let stripe, cardElement;
 		let machineFingerprint = '';
 		let purchaseData = {};
+		let currentPricing = null;
 
-		// Initialize
-		document.addEventListener('DOMContentLoaded', async () => {
-			// Get Stripe publishable key from server
+		// Page-specific auth state handling
+		window.addEventListener('authStateChanged', (e) => {
+			const user = e.detail.user;
+			updatePageAuthUI(user);
+		});
+
+		function updatePageAuthUI(user) {
+			// Update dropdown email
+			const dropdownEmail = document.getElementById('dropdownUserEmail');
+			if (dropdownEmail && user) {
+				dropdownEmail.textContent = user.email;
+			}
+
+			// Step 1 elements
+			const loginNotice = document.getElementById('loginNotice');
+			const userConfirmed = document.getElementById('userConfirmed');
+			const userEmailDisplay = document.getElementById('userEmailDisplay');
+
+			if (user) {
+				// User is signed in - Update Step 1
+				if (loginNotice) loginNotice.classList.add('d-none');
+				if (userConfirmed) {
+					userConfirmed.classList.remove('d-none');
+					if (userEmailDisplay) userEmailDisplay.textContent = user.email;
+				}
+
+				// Pre-fill billing email
+				const billingEmail = document.getElementById('billingEmail');
+				if (billingEmail && !billingEmail.value) {
+					billingEmail.value = user.email;
+				}
+			} else {
+				// User is signed out - Update Step 1
+				if (loginNotice) loginNotice.classList.remove('d-none');
+				if (userConfirmed) userConfirmed.classList.add('d-none');
+			}
+		}
+
+		// Close dropdown when clicking outside
+		document.addEventListener('click', (e) => {
+			const dropdown = document.getElementById('headerUserDropdown');
+			if (dropdown && !dropdown.contains(e.target)) {
+				dropdown.classList.remove('show');
+			}
+		});
+
+		/**
+		 * Fetch dynamic pricing from Firebase
+		 */
+		async function loadPricing() {
 			try {
-				const response = await fetch(`${FIREBASE_URL}/getStripePublicKey`);
+				const response = await fetch(`${window.FlytoAuth.FIREBASE_URL}/getPricing`);
+				const data = await response.json();
+
+				if (data.ok && data.pricing && data.pricing.pro_offline) {
+					currentPricing = data.pricing.pro_offline;
+					updatePriceDisplay(currentPricing);
+				}
+			} catch (err) {
+				console.error('Failed to load pricing:', err);
+			}
+		}
+
+		function updatePriceDisplay(pricing) {
+			const displayPrice = pricing.display_price || formatPrice(pricing.price, pricing.currency);
+			const displayPeriod = pricing.display_period || `per ${pricing.period}${pricing.per_machine ? ', per machine' : ''}`;
+
+			document.getElementById('heroPrice')?.textContent && (document.getElementById('heroPrice').textContent = displayPrice);
+			document.getElementById('heroPeriod')?.textContent && (document.getElementById('heroPeriod').textContent = displayPeriod);
+			document.getElementById('formPrice')?.textContent && (document.getElementById('formPrice').textContent = displayPrice);
+			document.getElementById('formPeriod')?.textContent && (document.getElementById('formPeriod').textContent = displayPeriod);
+			document.getElementById('payButtonPrice')?.textContent && (document.getElementById('payButtonPrice').textContent = displayPrice);
+
+			if (pricing.features && pricing.features.length > 0) {
+				const featuresList = document.querySelector('.plan-features');
+				if (featuresList) {
+					featuresList.innerHTML = pricing.features.map(f => `<li><i class="bi bi-check-circle-fill"></i> ${f}</li>`).join('');
+				}
+			}
+		}
+
+		function formatPrice(cents, currency = 'usd') {
+			const amount = cents / 100;
+			const symbols = { usd: '$', eur: '€', gbp: '£', jpy: '¥', cad: 'CA$', aud: 'A$' };
+			return `${symbols[currency] || '$'}${amount.toLocaleString()}`;
+		}
+
+		// Initialize page
+		document.addEventListener('DOMContentLoaded', async () => {
+			// Load pricing
+			await loadPricing();
+
+			// Initialize Stripe
+			try {
+				const response = await fetch(`${window.FlytoAuth.FIREBASE_URL}/getStripePublicKey`);
 				const data = await response.json();
 				if (data.ok) {
 					stripe = Stripe(data.publishableKey);
 					const elements = stripe.elements();
 					cardElement = elements.create('card', {
-						style: {
-							base: {
-								fontSize: '16px',
-								color: '#1e1b39',
-								'::placeholder': { color: '#aab7c4' }
-							}
-						}
+						style: { base: { fontSize: '16px', color: '#1e1b39', '::placeholder': { color: '#aab7c4' } } }
 					});
 					cardElement.mount('#card-element');
 					cardElement.on('change', (event) => {
-						const displayError = document.getElementById('card-errors');
-						displayError.textContent = event.error ? event.error.message : '';
+						document.getElementById('card-errors').textContent = event.error ? event.error.message : '';
 					});
 				}
 			} catch (err) {
 				console.error('Failed to initialize Stripe:', err);
 			}
 
-			// Fingerprint input handling
+			// Fingerprint input
 			const fingerprintInput = document.getElementById('machineFingerprint');
 			const fingerprintBox = document.getElementById('fingerprintBox');
 			const btnToStep2 = document.getElementById('btnToStep2');
@@ -1096,7 +1337,7 @@
 			// Download
 			document.getElementById('btnDownload').addEventListener('click', downloadLicense);
 
-			// Check URL params for success redirect
+			// Check for success redirect
 			const urlParams = new URLSearchParams(window.location.search);
 			const sessionId = urlParams.get('session_id');
 			if (sessionId) {
@@ -1105,17 +1346,21 @@
 		});
 
 		function goToStep(step) {
-			// Update indicators
+			const currentUser = window.FlytoAuth.getCurrentUser();
+			if (step === 2 && !currentUser) {
+				alert('Please sign in to continue with the purchase.');
+				window.FlytoAuth.showAuthModal();
+				return;
+			}
+
 			for (let i = 1; i <= 3; i++) {
 				const indicator = document.getElementById(`step${i}-indicator`);
 				const content = document.getElementById(`step${i}`);
-
 				indicator.classList.remove('active', 'completed');
 				content.classList.remove('active');
 
-				if (i < step) {
-					indicator.classList.add('completed');
-				} else if (i === step) {
+				if (i < step) indicator.classList.add('completed');
+				else if (i === step) {
 					indicator.classList.add('active');
 					content.classList.add('active');
 				}
@@ -1123,6 +1368,13 @@
 		}
 
 		async function handlePayment() {
+			const currentUser = window.FlytoAuth.getCurrentUser();
+			if (!currentUser) {
+				alert('Please sign in to continue with the purchase.');
+				window.FlytoAuth.showAuthModal();
+				return;
+			}
+
 			const btn = document.getElementById('btnPay');
 			const originalText = btn.innerHTML;
 			btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
@@ -1133,10 +1385,10 @@
 				email: document.getElementById('billingEmail').value,
 				company: document.getElementById('billingCompany').value || null,
 				country: document.getElementById('billingCountry').value,
-				fingerprint: machineFingerprint
+				fingerprint: machineFingerprint,
+				user_uid: currentUser.uid
 			};
 
-			// Validate
 			if (!billingData.name || !billingData.email || !billingData.country) {
 				alert('Please fill in all required fields');
 				btn.innerHTML = originalText;
@@ -1145,10 +1397,10 @@
 			}
 
 			try {
-				// Create checkout session
-				const response = await fetch(`${FIREBASE_URL}/createOfflineLicenseCheckout`, {
+				const idToken = await window.FlytoAuth.getIdToken();
+				const response = await fetch(`${window.FlytoAuth.FIREBASE_URL}/createOfflineLicenseCheckout`, {
 					method: 'POST',
-					headers: { 'Content-Type': 'application/json' },
+					headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${idToken}` },
 					body: JSON.stringify({
 						plan: 'pro_offline',
 						...billingData,
@@ -1158,13 +1410,9 @@
 				});
 
 				const data = await response.json();
-
 				if (data.ok && data.sessionId) {
-					// Redirect to Stripe Checkout
 					const result = await stripe.redirectToCheckout({ sessionId: data.sessionId });
-					if (result.error) {
-						throw new Error(result.error.message);
-					}
+					if (result.error) throw new Error(result.error.message);
 				} else {
 					throw new Error(data.error || 'Failed to create checkout session');
 				}
@@ -1178,14 +1426,13 @@
 
 		async function checkPaymentSuccess(sessionId) {
 			try {
-				const response = await fetch(`${FIREBASE_URL}/verifyOfflineLicensePayment`, {
+				const response = await fetch(`${window.FlytoAuth.FIREBASE_URL}/verifyOfflineLicensePayment`, {
 					method: 'POST',
 					headers: { 'Content-Type': 'application/json' },
 					body: JSON.stringify({ session_id: sessionId })
 				});
 
 				const data = await response.json();
-
 				if (data.ok) {
 					purchaseData = data;
 					document.getElementById('licenseId').textContent = data.license_id;
@@ -1206,7 +1453,7 @@
 			}
 
 			try {
-				const response = await fetch(`${FIREBASE_URL}/downloadOfflineLicense`, {
+				const response = await fetch(`${window.FlytoAuth.FIREBASE_URL}/downloadOfflineLicense`, {
 					method: 'POST',
 					headers: { 'Content-Type': 'application/json' },
 					body: JSON.stringify({ license_id: purchaseData.license_id })
