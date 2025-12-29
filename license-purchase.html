@@ -320,7 +320,7 @@
 							<div class="form-check mb-3">
 								<input type="checkbox" class="form-check-input" id="agreeTerms" required>
 								<label class="form-check-label" for="agreeTerms">
-									I agree to the <a href="mailto:support@flyto.io?subject=Terms%20of%20Service%20Request" style="color: #7C3AED;">Terms of Service</a> and <a href="mailto:support@flyto.io?subject=Privacy%20Policy%20Request" style="color: #7C3AED;">Privacy Policy</a>
+									I agree to the <a href="mailto:support@flyto2.com?subject=Terms%20of%20Service%20Request" style="color: #7C3AED;">Terms of Service</a> and <a href="mailto:support@flyto2.com?subject=Privacy%20Policy%20Request" style="color: #7C3AED;">Privacy Policy</a>
 								</label>
 							</div>
 
@@ -397,7 +397,7 @@
 							</h2>
 							<div id="faq4" class="accordion-collapse collapse" data-bs-parent="#licenseFaq">
 								<div class="accordion-body">
-									Yes, we offer volume discounts for organizations purchasing multiple licenses. Contact our sales team at <a href="mailto:sales@flyto.io" style="color: #7C3AED;">sales@flyto.io</a> for custom pricing.
+									Yes, we offer volume discounts for organizations purchasing multiple licenses. Contact our sales team at <a href="mailto:sales@flyto2.com" style="color: #7C3AED;">sales@flyto2.com</a> for custom pricing.
 								</div>
 							</div>
 						</div>
@@ -424,7 +424,7 @@
 							</div>
 							<p>Git-native workflow automation with atomic modules and AI-driven evolution.</p>
 							<ul>
-								<li><a href="mailto:hello@flyto.io"><i class="bi bi-envelope-fill"></i> hello@flyto.io</a></li>
+								<li><a href="mailto:info@flyto2.com"><i class="bi bi-envelope-fill"></i> info@flyto2.com</a></li>
 								<li><a href="https://github.com/flytohub"><i class="bi bi-github"></i> github.com/flytohub</a></li>
 							</ul>
 						</div>
@@ -615,7 +615,7 @@
 				// Fallback to mailto if Firebase fails
 				const subject = encodeURIComponent(`License Request: ${plan.name} - ${formData.company}`);
 				const body = encodeURIComponent(`License Request\n\nPlan: ${plan.name} ($${plan.price}/year)\n\nContact:\nName: ${formData.firstName} ${formData.lastName}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nCompany: ${formData.company}\nSize: ${formData.companySize}\nCountry: ${formData.country}\nIndustry: ${formData.industry}\n\nAddress:\n${formData.address}\n\nNotes:\n${formData.notes}`);
-				window.location.href = `mailto:sales@flyto.io?subject=${subject}&body=${body}`;
+				window.location.href = `mailto:sales@flyto2.com?subject=${subject}&body=${body}`;
 			} finally {
 				btn.innerHTML = originalText;
 				btn.disabled = false;
