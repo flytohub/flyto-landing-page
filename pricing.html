@@ -3,9 +3,43 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Pricing - Flyto2 Workflow Automation</title>
 	<meta name="description" content="Choose the right Flyto2 plan for your automation needs. Free open source core, Team plans, Enterprise solutions, and Offline licenses available.">
+
+	<!-- Content Security Policy -->
+	<meta http-equiv="Content-Security-Policy" content="
+		default-src 'self';
+		script-src 'self' 'unsafe-inline' https://www.gstatic.com https://cdn.jsdelivr.net;
+		style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com;
+		font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net;
+		img-src 'self' data: https:;
+		connect-src 'self' https://*.cloudfunctions.net https://*.firebaseio.com;
+		frame-ancestors 'self';
+	">
+
+	<!-- Security Headers -->
+	<meta http-equiv="X-Content-Type-Options" content="nosniff">
+	<meta name="referrer" content="strict-origin-when-cross-origin">
+	<meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+
+	<!-- SEO Meta Tags -->
+	<link rel="canonical" href="https://flyto2.com/pricing.html">
+	<meta name="robots" content="index, follow">
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://flyto2.com/pricing.html">
+	<meta property="og:title" content="Pricing - Flyto2 Workflow Automation">
+	<meta property="og:description" content="Choose the right Flyto2 plan for your automation needs. Free open source core, Team plans, Enterprise solutions, and Offline licenses available.">
+	<meta property="og:image" content="https://flyto2.com/assets/img/og-image.png">
+	<meta property="og:site_name" content="Flyto2">
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Pricing - Flyto2 Workflow Automation">
+	<meta name="twitter:description" content="Choose the right Flyto2 plan for your automation needs.">
+	<meta name="twitter:image" content="https://flyto2.com/assets/img/og-image.png">
+
 	<link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="assets/img/icon.png" type="image/png" sizes="32x32">
 
@@ -707,6 +741,9 @@
 	</style>
 </head>
 <body>
+	<!-- Skip Link for Accessibility -->
+	<a href="#main-content" class="skip-link">Skip to main content</a>
+
 	<!-- Preloader -->
 	<div id="preloader">
 		<div class="preloader">
@@ -741,21 +778,21 @@
 							<ul>
 								<li><a href="index.html">Home</a></li>
 								<li class="nav-dropdown active">
-									<span class="nav-dropdown-toggle">Pricing</span>
+									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">Pricing</span>
 									<div class="nav-dropdown-menu">
 										<a href="pricing.html" class="nav-dropdown-item"><i class="bi bi-tag"></i>Plans & Pricing</a>
 										<a href="buy-offline.html" class="nav-dropdown-item"><i class="bi bi-shield-lock"></i>Buy Pro License</a>
 									</div>
 								</li>
 								<li class="nav-dropdown">
-									<span class="nav-dropdown-toggle">Download</span>
+									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">Download</span>
 									<div class="nav-dropdown-menu">
 										<a href="download.html" class="nav-dropdown-item"><i class="bi bi-terminal"></i>Flyto Core (CLI)</a>
 										<a href="app.html" class="nav-dropdown-item"><i class="bi bi-window"></i>Desktop App</a>
 									</div>
 								</li>
 								<li class="nav-dropdown">
-									<span class="nav-dropdown-toggle">Resources</span>
+									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">Resources</span>
 									<div class="nav-dropdown-menu">
 										<a href="https://github.com/flytohub/flyto-core" class="nav-dropdown-item"><i class="bi bi-book"></i>Documentation</a>
 										<a href="faq.html" class="nav-dropdown-item"><i class="bi bi-question-circle"></i>FAQ</a>
@@ -771,7 +808,7 @@
 								<span>Sign In</span>
 							</button>
 							<div id="headerUserDropdown" class="user-dropdown d-none">
-								<div class="user-dropdown-toggle" onclick="this.parentElement.classList.toggle('show')">
+								<div class="user-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">
 									<div class="user-avatar" id="headerUserAvatar">U</div>
 									<span class="user-email" id="headerUserEmail"></span>
 									<i class="bi bi-chevron-down dropdown-arrow"></i>
@@ -830,7 +867,7 @@
 	</div>
 
 	<!-- Start Hero Area -->
-	<section class="pricing-hero">
+	<section id="main-content" class="pricing-hero">
 		<!-- Floating particles -->
 		<div class="particle particle-1"></div>
 		<div class="particle particle-2"></div>
@@ -939,7 +976,7 @@
 			<div class="row">
 				<div class="col-lg-8 offset-lg-2">
 					<div class="faq-item active wow fadeInUp" data-wow-delay="0.1s">
-						<div class="faq-question" onclick="toggleFaq(this)">
+						<div class="faq-question" tabindex="0" role="button">
 							<span>Can I switch between plans?</span>
 							<span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
 						</div>
@@ -948,7 +985,7 @@
 						</div>
 					</div>
 					<div class="faq-item wow fadeInUp" data-wow-delay="0.2s">
-						<div class="faq-question" onclick="toggleFaq(this)">
+						<div class="faq-question" tabindex="0" role="button">
 							<span>What happens when my offline license expires?</span>
 							<span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
 						</div>
@@ -957,7 +994,7 @@
 						</div>
 					</div>
 					<div class="faq-item wow fadeInUp" data-wow-delay="0.3s">
-						<div class="faq-question" onclick="toggleFaq(this)">
+						<div class="faq-question" tabindex="0" role="button">
 							<span>Do you offer refunds?</span>
 							<span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
 						</div>
@@ -966,7 +1003,7 @@
 						</div>
 					</div>
 					<div class="faq-item wow fadeInUp" data-wow-delay="0.4s">
-						<div class="faq-question" onclick="toggleFaq(this)">
+						<div class="faq-question" tabindex="0" role="button">
 							<span>Can I use the free version commercially?</span>
 							<span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
 						</div>
@@ -1014,7 +1051,7 @@
 						<div class="f-widgets-item">
 							<div class="f-logo">
 								<a href="index.html">
-									<img src="assets/img/logo.png" alt="Flyto2">
+									<img src="assets/img/logo.png" alt="Flyto2" loading="lazy">
 								</a>
 							</div>
 							<p>Git-native workflow automation with atomic modules and AI-driven evolution.</p>
@@ -1103,24 +1140,45 @@
 	<script src="assets/js/ajax-form.js"></script>
 
 	<script>
-		// FAQ toggle
+		// FAQ toggle using event delegation (no inline onclick)
 		function toggleFaq(element) {
-			const item = element.parentElement;
+			const item = element.closest('.faq-item');
+			if (!item) return;
 			const answer = item.querySelector('.faq-answer');
 			const isActive = item.classList.contains('active');
 
 			// Close all
 			document.querySelectorAll('.faq-item').forEach(faq => {
 				faq.classList.remove('active');
+				const q = faq.querySelector('.faq-question');
+				if (q) q.setAttribute('aria-expanded', 'false');
 				faq.querySelector('.faq-answer').style.display = 'none';
 			});
 
 			// Open clicked if it was closed
 			if (!isActive) {
 				item.classList.add('active');
+				element.setAttribute('aria-expanded', 'true');
 				answer.style.display = 'block';
 			}
 		}
+
+		// Event delegation for FAQ questions
+		document.addEventListener('click', function(e) {
+			const question = e.target.closest('.faq-question');
+			if (question) {
+				toggleFaq(question);
+			}
+		});
+
+		// Keyboard support for FAQ
+		document.addEventListener('keydown', function(e) {
+			const question = e.target.closest('.faq-question');
+			if (question && (e.key === 'Enter' || e.key === ' ')) {
+				e.preventDefault();
+				toggleFaq(question);
+			}
+		});
 	</script>
 
 	<!-- Firebase SDK -->

@@ -3,9 +3,45 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Flyto2 - Automation That Works Like You Do</title>
 	<meta name="description" content="Flyto2 is an automation tool that operates your computer like a human. Record once, replay forever. Safe, controllable, and works offline.">
+
+	<!-- Content Security Policy -->
+	<meta http-equiv="Content-Security-Policy" content="
+		default-src 'self';
+		script-src 'self' 'unsafe-inline' https://www.gstatic.com https://cdn.jsdelivr.net https://js.stripe.com;
+		style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com;
+		font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net;
+		img-src 'self' data: https:;
+		connect-src 'self' https://*.cloudfunctions.net https://*.firebaseio.com https://pypi.org https://api.stripe.com;
+		frame-src https://js.stripe.com;
+		frame-ancestors 'self';
+	">
+
+	<!-- Security Headers -->
+	<meta http-equiv="X-Content-Type-Options" content="nosniff">
+	<meta name="referrer" content="strict-origin-when-cross-origin">
+	<meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+
+	<!-- SEO Meta Tags -->
+	<link rel="canonical" href="https://flyto2.com/">
+	<meta name="robots" content="index, follow">
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://flyto2.com/">
+	<meta property="og:title" content="Flyto2 - Automation That Works Like You Do">
+	<meta property="og:description" content="Flyto2 is an automation tool that operates your computer like a human. Record once, replay forever. Safe, controllable, and works offline.">
+	<meta property="og:image" content="https://flyto2.com/assets/img/og-image.png">
+	<meta property="og:site_name" content="Flyto2">
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:url" content="https://flyto2.com/">
+	<meta name="twitter:title" content="Flyto2 - Automation That Works Like You Do">
+	<meta name="twitter:description" content="Flyto2 is an automation tool that operates your computer like a human. Record once, replay forever.">
+	<meta name="twitter:image" content="https://flyto2.com/assets/img/og-image.png">
+
 	<link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="assets/img/icon.png" type="image/png" sizes="32x32">
 
@@ -228,6 +264,9 @@
 	</style>
 </head>
 <body>
+	<!-- Skip Link for Accessibility -->
+	<a href="#main-content" class="skip-link">Skip to main content</a>
+
 	<!-- Preloader -->
 	<div id="preloader">
 		<div class="preloader">
@@ -262,21 +301,21 @@
 							<ul>
 								<li><a href="index.html">Home</a></li>
 								<li class="nav-dropdown">
-									<span class="nav-dropdown-toggle">Pricing</span>
+									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">Pricing</span>
 									<div class="nav-dropdown-menu">
 										<a href="pricing.html" class="nav-dropdown-item"><i class="bi bi-tag"></i>Plans & Pricing</a>
 										<a href="buy-offline.html" class="nav-dropdown-item"><i class="bi bi-shield-lock"></i>Buy Pro License</a>
 									</div>
 								</li>
 								<li class="nav-dropdown">
-									<span class="nav-dropdown-toggle">Download</span>
+									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">Download</span>
 									<div class="nav-dropdown-menu">
 										<a href="download.html" class="nav-dropdown-item"><i class="bi bi-terminal"></i>Flyto Core (CLI)</a>
 										<a href="app.html" class="nav-dropdown-item"><i class="bi bi-window"></i>Desktop App</a>
 									</div>
 								</li>
 								<li class="nav-dropdown">
-									<span class="nav-dropdown-toggle">Resources</span>
+									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">Resources</span>
 									<div class="nav-dropdown-menu">
 										<a href="https://github.com/flytohub/flyto-core" class="nav-dropdown-item"><i class="bi bi-book"></i>Documentation</a>
 										<a href="faq.html" class="nav-dropdown-item"><i class="bi bi-question-circle"></i>FAQ</a>
@@ -294,7 +333,7 @@
 							</button>
 							<!-- Logged in (hidden by default) -->
 							<div id="headerUserDropdown" class="user-dropdown d-none">
-								<div class="user-dropdown-toggle" onclick="this.parentElement.classList.toggle('show')">
+								<div class="user-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">
 									<div class="user-avatar" id="headerUserAvatar">U</div>
 									<span class="user-email" id="headerUserEmail"></span>
 									<i class="bi bi-chevron-down dropdown-arrow"></i>
@@ -352,7 +391,7 @@
 	</div>
 
 	<!-- Start Hero Section -->
-	<section class="hero-area hero-wave-bg">
+	<section id="main-content" class="hero-area hero-wave-bg">
 		<!-- Floating shapes -->
 		<div class="floating-shapes">
 			<div class="floating-shape floating-shape-1"></div>
@@ -369,9 +408,9 @@
 			<div class="row">
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="hero-caption pt-150 pb-200">
-						<h2 class="wow fadeInUp" data-wow-delay="0.1s">
+						<h1 class="wow fadeInUp" data-wow-delay="0.1s">
 							<span class="gradient-text-animated">An Assistant That Does</span><br>What You Show It
-						</h2>
+						</h1>
 						<p class="wow fadeInUp" data-wow-delay="0.2s">
 							Flyto2 is an automation tool that operates your computer like a human.
 							Open browsers, click buttons, fill forms, upload files.
@@ -941,7 +980,7 @@
 						<div class="f-widgets-item">
 							<div class="f-logo">
 								<a href="index.html">
-									<img src="assets/img/logo.png" alt="Flyto2">
+									<img src="assets/img/logo.png" alt="Flyto2" loading="lazy">
 								</a>
 							</div>
 							<p>Automation that works like you do. Record once, replay forever.</p>

@@ -3603,3 +3603,48 @@ h2.accordion-header {
 	background-size: 200% 200%;
 	animation: gradient-shift 4s ease infinite;
 }
+
+/*
+ * #-Accessibility: Reduced Motion Support
+ * Respects user preference for reduced motion
+ */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+
+	/* Disable WOW.js animations */
+	.wow {
+		visibility: visible !important;
+		animation: none !important;
+	}
+
+	/* Keep static gradients but remove animation */
+	.gradient-text-animated,
+	.counter-animated,
+	.hero-title-animated {
+		animation: none !important;
+		background-position: 0% 50% !important;
+	}
+
+	/* Disable floating/pulsing effects */
+	.hero-icon-float,
+	.card-float,
+	.step-number-animated,
+	.btn-glow,
+	.particle,
+	.orb {
+		animation: none !important;
+	}
+
+	/* Disable typing cursor blink */
+	.typing-cursor {
+		animation: none !important;
+		opacity: 1 !important;
+	}
+}

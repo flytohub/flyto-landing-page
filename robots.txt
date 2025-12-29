@@ -1,0 +1,11 @@
+# Flyto2 Robots.txt
+# https://flyto2.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://flyto2.com/sitemap.xml
+
+# Disallow sensitive paths
+Disallow: /assets/js/auth.js

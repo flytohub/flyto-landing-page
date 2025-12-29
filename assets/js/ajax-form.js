@@ -11,6 +11,11 @@ $(function() {
 		// Stop the browser from submitting the form.
 		e.preventDefault();
 
+		// Get submit button and show loading state
+		var submitBtn = $(form).find('button[type="submit"], input[type="submit"]');
+		var originalText = submitBtn.html();
+		submitBtn.html('<i class="fas fa-spinner fa-spin"></i> Sending...').prop('disabled', true);
+
 		// Serialize the form data.
 		var formData = $(form).serialize();
 
@@ -18,7 +23,8 @@ $(function() {
 		$.ajax({
 			type: 'POST',
 			url: $(form).attr('action'),
-			data: formData
+			data: formData,
+			timeout: 30000 // 30 second timeout
 		})
 		.done(function(response) {
 			// Make sure that the formMessages div has the 'success' class.
@@ -40,8 +46,12 @@ $(function() {
 			if (data.responseText !== '') {
 				$(formMessages).text(data.responseText);
 			} else {
-				$(formMessages).text('Oops! An error occured and your message could not be sent.');
+				$(formMessages).text('Oops! An error occurred and your message could not be sent.');
 			}
+		})
+		.always(function() {
+			// Restore button state
+			submitBtn.html(originalText).prop('disabled', false);
 		});
 	});
 

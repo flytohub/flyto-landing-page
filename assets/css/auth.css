@@ -3,6 +3,30 @@
  */
 
 /* ========================================
+   Skip Link for Accessibility
+   ======================================== */
+
+.skip-link {
+	position: absolute;
+	top: -40px;
+	left: 0;
+	background: #7C3AED;
+	color: #fff;
+	padding: 8px 16px;
+	z-index: 10000;
+	text-decoration: none;
+	font-weight: 600;
+	border-radius: 0 0 8px 0;
+	transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+	top: 0;
+	outline: 2px solid #A78BFA;
+	outline-offset: 2px;
+}
+
+/* ========================================
    Navigation Dropdown Styles
    ======================================== */
 
@@ -24,7 +48,8 @@
 	font-size: 16px;
 }
 
-.menu ul li:hover .nav-dropdown-toggle {
+.menu ul li:hover .nav-dropdown-toggle,
+.menu ul li:focus-within .nav-dropdown-toggle {
 	color: #A78BFA;
 	text-shadow: 0 0 10px rgba(167, 139, 250, 0.5);
 }
@@ -41,6 +66,7 @@
 }
 
 .nav-dropdown:hover .nav-dropdown-toggle::after,
+.nav-dropdown:focus-within .nav-dropdown-toggle::after,
 .nav-dropdown.show .nav-dropdown-toggle::after {
 	transform: rotate(-135deg);
 	margin-top: 2px;
@@ -63,6 +89,7 @@
 }
 
 .menu .nav-dropdown:hover .nav-dropdown-menu,
+.menu .nav-dropdown:focus-within .nav-dropdown-menu,
 .menu .nav-dropdown.show .nav-dropdown-menu {
 	opacity: 1;
 	visibility: visible;

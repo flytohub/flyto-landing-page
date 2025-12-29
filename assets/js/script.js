@@ -1,10 +1,25 @@
 (function($){
-	'use script';
+	'use strict';
 	$(window).on('load', function(event) {
         $('#preloader').delay(500).fadeOut(500);
     });
 	// WOW JS
 	new WOW().init();
+
+	// Throttle helper function for scroll events
+	function throttle(func, limit) {
+		var inThrottle;
+		return function() {
+			var args = arguments;
+			var context = this;
+			if (!inThrottle) {
+				func.apply(context, args);
+				inThrottle = true;
+				setTimeout(function() { inThrottle = false; }, limit);
+			}
+		};
+	}
+
 	// Scroll Area
 	$(document).ready(function(){
 	    $('.scroll-area').click(function(){
@@ -13,14 +28,15 @@
 	      	},700);
 	      	return false;
 	    });
-	    $(window).on('scroll',function(){
+	    // Throttled scroll handler for better performance
+	    $(window).on('scroll', throttle(function(){
 	      	var a = $(window).scrollTop();
 	      	if(a>400){
 	            $('.scroll-area').slideDown(300);
 	        }else{
 	            $('.scroll-area').slideUp(200);
 	        }
-	    });
+	    }, 100));
 	});
 	// Counter
     var $CounterUp = $('.counter');
@@ -98,12 +114,13 @@
             }
         });
      } 
-	// Counter
+	// Portfolio MixItUp
     var $PortfolioMixIT = $('.portfolio-full');
     if($PortfolioMixIT.length > 0){
-    	var mixer = mixitup('.portfolio-full');
-    	var mixer = mixitup('.portF');
-    	var mixer = mixitup('.portF', {
+    	// Initialize mixitup for each container
+    	mixitup('.portfolio-full');
+    	mixitup('.portF');
+    	mixitup('.portF', {
     		selectors: {
     			target: '.blog-item'
     		},

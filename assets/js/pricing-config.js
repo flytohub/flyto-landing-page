@@ -3,8 +3,17 @@
  * Reads pricing settings from Firestore and renders dynamically
  */
 
-// Fallback config when Firestore is unavailable
+/**
+ * IMPORTANT: Keep this fallback in sync with Firestore settings.pricing_v1
+ * Last updated: 2024-12-29
+ *
+ * To update:
+ * 1. Update Firestore first via admin panel
+ * 2. Then update this fallback
+ * 3. Update the date above
+ */
 const FALLBACK_PRICING = {
+	_lastUpdated: '2024-12-29',
 	version: 1,
 	sections: [
 		{
@@ -85,13 +94,175 @@ const FALLBACK_PRICING = {
 	]
 };
 
+// UI Timing Constants (in milliseconds)
+const UI_TIMING = {
+	BUTTON_RESET_SHORT: 2000,  // Time before button resets after duplicate submission
+	BUTTON_RESET_LONG: 3000,   // Time before button resets after successful submission
+	WAITLIST_EXPIRY_DAYS: 30   // Days before waitlist localStorage entries expire
+};
+
+// Price Constants
+const PRICE_DEFAULTS = {
+	PRO_OFFLINE_CENTS: 19900   // Default price in cents ($199.00)
+};
+
 /**
- * Fetch pricing config from Firestore
- * Supports new pricing_v1 format and legacy offline_pricing format
+ * HTML escape function to prevent XSS attacks
+ * @param {string} text - Text to escape
+ * @returns {string} - Escaped HTML-safe text
+ */
+function escapeHtml(text) {
+	if (text === null || text === undefined) return '';
+	const div = document.createElement('div');
+	div.textContent = String(text);
+	return div.innerHTML;
+}
+
+/**
+ * Clean up expired waitlist entries from localStorage
+ * Entries older than 30 days are removed to prevent localStorage bloat
+ */
+function cleanupWaitlistStorage() {
+	const EXPIRY_MS = UI_TIMING.WAITLIST_EXPIRY_DAYS * 24 * 60 * 60 * 1000;
+	const now = Date.now();
+	const keysToRemove = [];
+
+	for (let i = 0; i < localStorage.length; i++) {
+		const key = localStorage.key(i);
+		if (key && key.startsWith('waitlist_')) {
+			try {
+				const timestamp = parseInt(localStorage.getItem(key), 10);
+				if (isNaN(timestamp) || (now - timestamp) > EXPIRY_MS) {
+					keysToRemove.push(key);
+				}
+			} catch (e) {
+				// Remove malformed entries
+				keysToRemove.push(key);
+			}
+		}
+	}
+
+	keysToRemove.forEach(key => localStorage.removeItem(key));
+}
+
+/**
+ * Convert API pricing response to config format
+ * 2.1 Logic fix: Unified pricing source via Cloud Function
+ */
+function convertApiPricingToConfig(apiPricing) {
+	// If API returns full pricing_v1 format, use it directly
+	if (apiPricing.sections) {
+		return apiPricing;
+	}
+
+	// Otherwise, convert from legacy API format
+	const proOffline = apiPricing.pro_offline;
+	if (!proOffline) {
+		return FALLBACK_PRICING;
+	}
+
+	return {
+		version: 1,
+		sections: [
+			{
+				key: "cloud_saas",
+				title: "Cloud (SaaS)",
+				enabled: false,
+				comingSoon: true,
+				badge: "Coming Soon",
+				description: "Cloud version is in development. Join the waitlist to get early access.",
+				cta: { type: "waitlist", label: "Join Waitlist" },
+				plans: []
+			},
+			{
+				key: "pro",
+				title: "Pro",
+				enabled: false,
+				comingSoon: true,
+				badge: "Coming Soon",
+				description: "Pro features are coming soon. Stay tuned!",
+				cta: { type: "waitlist", label: "Get Notified" },
+				plans: []
+			},
+			{
+				key: "offline",
+				title: "Offline License",
+				enabled: true,
+				comingSoon: false,
+				badge: "Available",
+				description: "Perpetual license for air-gapped and secure environments.",
+				cta: { type: "buy", label: "Buy Now", url: "buy-offline.html" },
+				plans: [
+					{
+						id: "offline_pro",
+						name: "Pro Offline",
+						price: (proOffline.price || PRICE_DEFAULTS.PRO_OFFLINE_CENTS) / 100,
+						currency: (proOffline.currency || 'usd').toUpperCase(),
+						billing: proOffline.period === 'lifetime' ? 'one_time' : 'yearly',
+						period: proOffline.period || 'year',
+						features: proOffline.features || [
+							"Offline execution",
+							"License file activation",
+							"1 year updates included",
+							"Email support"
+						],
+						enabled: true,
+						popular: true
+					}
+				]
+			},
+			{
+				key: "enterprise",
+				title: "Enterprise",
+				enabled: true,
+				comingSoon: false,
+				badge: "Contact Us",
+				description: "Enterprise deployment with RBAC, audit logs, and dedicated support.",
+				cta: { type: "contact", label: "Contact Sales", url: "contact.html" },
+				plans: [
+					{
+						id: "enterprise_onprem",
+						name: "Enterprise On-Prem",
+						pricing_type: "contact",
+						price: null,
+						currency: "USD",
+						features: [
+							"Unlimited users",
+							"RBAC permissions",
+							"Audit logging",
+							"Private template library",
+							"Dedicated support",
+							"Custom integrations"
+						],
+						enabled: true,
+						popular: false
+					}
+				]
+			}
+		]
+	};
+}
+
+/**
+ * Fetch pricing config from Cloud Function or Firestore
+ * 2.1 Logic fix: Prioritize Cloud Function API for consistency with buy-offline.html
  */
 async function fetchPricingConfig() {
 	try {
-		// Check if Firebase is initialized
+		// 2.1: Try Cloud Function API first (same as buy-offline.html)
+		if (typeof window.FlytoAuth !== 'undefined' && window.FlytoAuth.FIREBASE_URL) {
+			try {
+				const response = await fetch(`${window.FlytoAuth.FIREBASE_URL}/getPricing`);
+				const data = await response.json();
+				if (data.ok && data.pricing) {
+					return convertApiPricingToConfig(data.pricing);
+				}
+			} catch (apiError) {
+				console.warn('Cloud Function API failed, falling back to Firestore:', apiError);
+			}
+		}
+
+		// Fallback: Check if Firebase Firestore is available
 		if (typeof firebase === 'undefined' || !firebase.firestore) {
 			console.warn('Firebase not available, using fallback pricing');
 			return FALLBACK_PRICING;
@@ -103,7 +274,6 @@ async function fetchPricingConfig() {
 		const v1Doc = await db.collection('settings').doc('pricing_v1').get();
 		if (v1Doc.exists) {
 			const data = v1Doc.data();
-			console.log('Loaded pricing_v1 config from Firestore');
 			return data;
 		}
 
@@ -111,14 +281,13 @@ async function fetchPricingConfig() {
 		const legacyDoc = await db.collection('settings').doc('offline_pricing').get();
 		if (legacyDoc.exists) {
 			const legacyData = legacyDoc.data();
-			console.log('Converting legacy offline_pricing to new format');
 			return convertLegacyPricing(legacyData);
 		}
 
-		console.warn('No pricing config found, using fallback');
+		// No pricing config found - use fallback silently
 		return FALLBACK_PRICING;
 	} catch (error) {
-		console.error('Error fetching pricing config:', error);
+		// Fetch error - use fallback silently
 		return FALLBACK_PRICING;
 	}
 }
@@ -173,7 +342,7 @@ function convertLegacyPricing(legacy) {
 					{
 						id: "offline_pro",
 						name: proOffline.display_price ? `Pro Offline` : "Pro Offline",
-						price: (proOffline.price || 19900) / 100,
+						price: (proOffline.price || PRICE_DEFAULTS.PRO_OFFLINE_CENTS) / 100,
 						currency: (proOffline.currency || 'usd').toUpperCase(),
 						billing: proOffline.period === 'lifetime' ? 'one_time' : 'yearly',
 						period: proOffline.period || 'year',
@@ -310,25 +479,27 @@ function renderPlanCard(plan, sectionCta, sectionKey) {
 		periodDisplay = billingText;
 	}
 
+	// XSS protection: escape all user-controlled content
 	const featuresHtml = (plan.features || []).map(f => `
 		<li class="pricing-feature-item">
 			<i class="bi bi-check-circle-fill feature-icon"></i>
-			<span>${f}</span>
+			<span>${escapeHtml(f)}</span>
 		</li>
 	`).join('');
 
-	const ctaUrl = sectionCta.url || '#';
-	const ctaLabel = isContact ? (sectionCta.label || 'Contact Sales') : sectionCta.label;
+	const ctaUrl = escapeHtml(sectionCta.url || '#');
+	const ctaLabel = escapeHtml(isContact ? (sectionCta.label || 'Contact Sales') : sectionCta.label);
+	const escapedPlanName = escapeHtml(plan.name || '');
 
 	return `
 		<div class="col-lg-4 col-md-6 mb-4">
 			<div class="pricing-card-3d ${isPopular ? 'pricing-card-popular' : ''} wow fadeInUp">
 				${isPopular ? '<div class="popular-badge"><i class="bi bi-star-fill"></i> Most Popular</div>' : ''}
-				<div class="pricing-card-title">${plan.name.toUpperCase()}</div>
+				<div class="pricing-card-title">${escapedPlanName.toUpperCase()}</div>
 				<div class="price-animated">
 					${priceDisplay}
 				</div>
-				<div class="price-period">${periodDisplay}</div>
+				<div class="price-period">${escapeHtml(periodDisplay)}</div>
 				<ul class="pricing-feature-list">
 					${featuresHtml}
 				</ul>
@@ -339,24 +510,31 @@ function renderPlanCard(plan, sectionCta, sectionKey) {
 }
 
 /**
- * Render Coming Soon card
+ * Render Coming Soon card with XSS protection
  */
 function renderComingSoonCard(section) {
+	const badge = escapeHtml(section.badge);
+	const title = escapeHtml(section.title);
+	const description = escapeHtml(section.description);
+	const sectionKey = escapeHtml(section.key);
+	const ctaLabel = escapeHtml(section.cta.label);
+	const ctaUrl = escapeHtml(section.cta.url || '#');
+
 	return `
 		<div class="col-lg-6 col-md-8 mx-auto mb-4">
 			<div class="pricing-card-3d coming-soon-card wow fadeInUp">
-				<div class="coming-soon-badge">${section.badge}</div>
-				<h3 class="coming-soon-title">${section.title}</h3>
-				<p class="coming-soon-desc">${section.description}</p>
+				<div class="coming-soon-badge">${badge}</div>
+				<h3 class="coming-soon-title">${title}</h3>
+				<p class="coming-soon-desc">${description}</p>
 				${section.cta.type === 'waitlist' ? `
-					<form class="waitlist-form" onsubmit="handleWaitlist(event, '${section.key}')">
+					<form class="waitlist-form" onsubmit="handleWaitlist(event, '${sectionKey}')">
 						<div class="input-group">
 							<input type="email" class="form-control" placeholder="Enter your email" required>
-							<button type="submit" class="btn-waitlist">${section.cta.label}</button>
+							<button type="submit" class="btn-waitlist">${ctaLabel}</button>
 						</div>
 					</form>
 				` : `
-					<a href="${section.cta.url || '#'}" class="btn-pricing">${section.cta.label}</a>
+					<a href="${ctaUrl}" class="btn-pricing">${ctaLabel}</a>
 				`}
 			</div>
 		</div>
@@ -420,10 +598,10 @@ function renderPricingTabs(config) {
 	const html = `
 		<div class="pricing-tabs-wrapper">
 			<div class="pricing-tab-buttons">
-				<button class="pricing-tab ${!hasCloudPlans ? '' : 'active'}" data-tab="cloud" onclick="switchPricingTab('cloud')">
+				<button class="pricing-tab ${!hasCloudPlans ? '' : 'active'}" data-tab="cloud" tabindex="0" role="tab" aria-selected="${hasCloudPlans ? 'true' : 'false'}">
 					<i class="bi bi-cloud"></i> Cloud
 				</button>
-				<button class="pricing-tab ${!hasCloudPlans ? 'active' : ''}" data-tab="offline" onclick="switchPricingTab('offline')">
+				<button class="pricing-tab ${!hasCloudPlans ? 'active' : ''}" data-tab="offline" tabindex="0" role="tab" aria-selected="${!hasCloudPlans ? 'true' : 'false'}">
 					<i class="bi bi-hdd"></i> Offline License
 				</button>
 			</div>
@@ -452,8 +630,10 @@ function switchPricingTab(tab) {
 	// Update tab buttons
 	document.querySelectorAll('.pricing-tab').forEach(btn => {
 		btn.classList.remove('active');
+		btn.setAttribute('aria-selected', 'false');
 		if (btn.dataset.tab === tab) {
 			btn.classList.add('active');
+			btn.setAttribute('aria-selected', 'true');
 		}
 	});
 
@@ -469,13 +649,33 @@ function switchPricingTab(tab) {
 }
 
 /**
- * Handle waitlist form submission
+ * Handle waitlist form submission with validation and duplicate prevention
  */
 async function handleWaitlist(event, sectionKey) {
 	event.preventDefault();
 	const form = event.target;
-	const email = form.querySelector('input[type="email"]').value;
+	const emailInput = form.querySelector('input[type="email"]');
+	const email = emailInput.value.trim();
 	const btn = form.querySelector('button');
+
+	// Email validation
+	const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+	if (!email || !emailRegex.test(email)) {
+		alert('Please enter a valid email address');
+		return;
+	}
+
+	// Duplicate submission prevention (check localStorage)
+	const waitlistKey = `waitlist_${sectionKey}_${email}`;
+	if (localStorage.getItem(waitlistKey)) {
+		btn.innerHTML = '<i class="bi bi-check"></i> Already Joined!';
+		btn.classList.add('btn-success');
+		setTimeout(() => {
+			btn.innerHTML = 'Join Waitlist';
+			btn.classList.remove('btn-success');
+		}, UI_TIMING.BUTTON_RESET_SHORT);
+		return;
+	}
 
 	btn.disabled = true;
 	btn.innerHTML = '<span class="spinner-border spinner-border-sm"></span>';
@@ -491,27 +691,43 @@ async function handleWaitlist(event, sectionKey) {
 			});
 		}
 
+		// Mark as submitted in localStorage
+		localStorage.setItem(waitlistKey, Date.now().toString());
+
 		btn.innerHTML = '<i class="bi bi-check"></i> Added!';
 		btn.classList.add('btn-success');
-		form.querySelector('input').value = '';
+		emailInput.value = '';
 
 		setTimeout(() => {
 			btn.innerHTML = 'Join Waitlist';
 			btn.classList.remove('btn-success');
 			btn.disabled = false;
-		}, 3000);
+		}, UI_TIMING.BUTTON_RESET_LONG);
 
 	} catch (error) {
-		console.error('Waitlist error:', error);
 		btn.innerHTML = 'Try Again';
 		btn.disabled = false;
 	}
 }
 
 /**
- * Initialize pricing page
+ * 3.1 Enhancement: Initialize pricing page with loading state
  */
 async function initPricing() {
+	const container = document.getElementById('pricingContainer');
+
+	// Show loading state
+	if (container) {
+		container.innerHTML = `
+			<div class="text-center py-5">
+				<div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
+					<span class="visually-hidden">Loading...</span>
+				</div>
+				<p class="mt-3 text-muted">Loading pricing information...</p>
+			</div>
+		`;
+	}
+
 	const config = await fetchPricingConfig();
 	renderPricingTabs(config);
 
@@ -521,8 +737,21 @@ async function initPricing() {
 	}
 }
 
+// Event delegation for pricing tabs (no inline onclick)
+document.addEventListener('click', function(e) {
+	const tab = e.target.closest('.pricing-tab');
+	if (tab && tab.dataset.tab) {
+		switchPricingTab(tab.dataset.tab);
+	}
+});
+
 // Auto-init when DOM is ready
-document.addEventListener('DOMContentLoaded', initPricing);
+document.addEventListener('DOMContentLoaded', function() {
+	// Clean up expired waitlist entries
+	cleanupWaitlistStorage();
+	// Initialize pricing
+	initPricing();
+});
 
 // Export for global access
 window.FlytoPrice = {

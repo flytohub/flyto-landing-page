@@ -5,11 +5,47 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Buy Pro Offline License - Flyto2</title>
 	<meta name="description" content="Purchase Flyto2 Pro Offline license. Work without internet, keep your data private.">
+
+	<!-- Content Security Policy -->
+	<meta http-equiv="Content-Security-Policy" content="
+		default-src 'self';
+		script-src 'self' 'unsafe-inline' https://www.gstatic.com https://cdn.jsdelivr.net https://js.stripe.com;
+		style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com;
+		font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net;
+		img-src 'self' data: https:;
+		connect-src 'self' https://*.cloudfunctions.net https://*.firebaseio.com https://api.stripe.com;
+		frame-src https://js.stripe.com;
+		frame-ancestors 'self';
+	">
+
+	<!-- Security Headers -->
+	<meta http-equiv="X-Content-Type-Options" content="nosniff">
+	<meta name="referrer" content="strict-origin-when-cross-origin">
+	<meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+
+	<!-- SEO Meta Tags -->
+	<link rel="canonical" href="https://flyto2.com/buy-offline.html">
+	<meta name="robots" content="index, follow">
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://flyto2.com/buy-offline.html">
+	<meta property="og:title" content="Buy Pro Offline License - Flyto2">
+	<meta property="og:description" content="Purchase Flyto2 Pro Offline license. Work without internet, keep your data private.">
+	<meta property="og:image" content="https://flyto2.com/assets/img/og-image.png">
+	<meta property="og:site_name" content="Flyto2">
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Buy Pro Offline License - Flyto2">
+	<meta name="twitter:description" content="Purchase Flyto2 Pro Offline license.">
+	<meta name="twitter:image" content="https://flyto2.com/assets/img/og-image.png">
+
 	<link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="assets/img/icon.png" type="image/png" sizes="32x32">
 
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" crossorigin="anonymous">
 	<link rel="stylesheet" href="assets/css/fontawesome.all.min.css">
 	<link rel="stylesheet" href="assets/css/normalize.css">
 	<link rel="stylesheet" href="style.css">
@@ -495,6 +531,14 @@
 			border-style: solid;
 			background: linear-gradient(145deg, #f0fdf4 0%, #dcfce7 100%);
 		}
+		.fingerprint-box.has-error {
+			border-color: #ef4444;
+			border-style: solid;
+			background: linear-gradient(145deg, #fef2f2 0%, #fee2e2 100%);
+		}
+		.fingerprint-box.has-error i {
+			color: #ef4444;
+		}
 		.fingerprint-box i {
 			font-size: 50px;
 			color: #7C3AED;
@@ -724,6 +768,9 @@
 	</style>
 </head>
 <body>
+	<!-- Skip Link for Accessibility -->
+	<a href="#main-content" class="skip-link">Skip to main content</a>
+
 	<!-- Preloader -->
 	<div id="preloader">
 		<div class="preloader">
@@ -749,21 +796,21 @@
 							<ul>
 								<li><a href="index.html">Home</a></li>
 								<li class="nav-dropdown active">
-									<span class="nav-dropdown-toggle">Pricing</span>
+									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">Pricing</span>
 									<div class="nav-dropdown-menu">
 										<a href="pricing.html" class="nav-dropdown-item"><i class="bi bi-tag"></i>Plans & Pricing</a>
 										<a href="buy-offline.html" class="nav-dropdown-item"><i class="bi bi-shield-lock"></i>Buy Pro License</a>
 									</div>
 								</li>
 								<li class="nav-dropdown">
-									<span class="nav-dropdown-toggle">Download</span>
+									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">Download</span>
 									<div class="nav-dropdown-menu">
 										<a href="download.html" class="nav-dropdown-item"><i class="bi bi-terminal"></i>Flyto Core (CLI)</a>
 										<a href="app.html" class="nav-dropdown-item"><i class="bi bi-window"></i>Desktop App</a>
 									</div>
 								</li>
 								<li class="nav-dropdown">
-									<span class="nav-dropdown-toggle">Resources</span>
+									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">Resources</span>
 									<div class="nav-dropdown-menu">
 										<a href="https://github.com/flytohub/flyto-core" class="nav-dropdown-item"><i class="bi bi-book"></i>Documentation</a>
 										<a href="faq.html" class="nav-dropdown-item"><i class="bi bi-question-circle"></i>FAQ</a>
@@ -781,7 +828,7 @@
 							</button>
 							<!-- Logged in (hidden by default) -->
 							<div id="headerUserDropdown" class="user-dropdown d-none">
-								<div class="user-dropdown-toggle" onclick="this.parentElement.classList.toggle('show')">
+								<div class="user-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">
 									<div class="user-avatar" id="headerUserAvatar">U</div>
 									<span class="user-email" id="headerUserEmail"></span>
 									<i class="bi bi-chevron-down dropdown-arrow"></i>
@@ -812,7 +859,7 @@
 	</header>
 
 	<!-- Hero -->
-	<section class="purchase-hero">
+	<section id="main-content" class="purchase-hero">
 		<div class="orb orb-1"></div>
 		<div class="orb orb-2"></div>
 		<div class="orb orb-3"></div>
@@ -1092,89 +1139,11 @@
 		</div>
 	</footer>
 
-	<!-- Login Modal -->
-	<div class="modal fade" id="authModal" tabindex="-1" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered">
-			<div class="modal-content" style="border-radius: 20px; border: none; overflow: hidden;">
-				<div class="modal-header" style="background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%); border: none; padding: 30px;">
-					<div class="text-center w-100">
-						<i class="bi bi-shield-lock-fill text-white" style="font-size: 40px;"></i>
-						<h4 class="text-white mt-3 mb-0" id="authModalTitle">Sign In to Purchase</h4>
-						<p class="text-white-50 mt-2 mb-0">Use your Flyto2 account to manage licenses</p>
-					</div>
-				</div>
-				<div class="modal-body p-4">
-					<!-- Login Form -->
-					<div id="loginForm">
-						<div class="mb-3">
-							<label class="form-label">Email</label>
-							<input type="email" class="form-control" id="authEmail" placeholder="your@email.com" required>
-						</div>
-						<div class="mb-3">
-							<label class="form-label">Password</label>
-							<input type="password" class="form-control" id="authPassword" placeholder="••••••••" required>
-						</div>
-						<div id="authError" class="alert alert-danger d-none" role="alert"></div>
-						<button class="btn btn-primary w-100 py-2" id="btnLogin" style="background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%); border: none; border-radius: 10px;">
-							<span id="loginBtnText">Sign In</span>
-							<span id="loginBtnSpinner" class="spinner-border spinner-border-sm d-none ms-2"></span>
-						</button>
-						<div class="text-center mt-3">
-							<span class="text-muted">Don't have an account?</span>
-							<a href="#" id="showRegister" class="text-purple ms-1" style="color: #7c3aed;">Create one</a>
-						</div>
-						<div class="text-center mt-2">
-							<a href="#" id="showForgotPassword" class="text-muted small">Forgot password?</a>
-						</div>
-					</div>
-					<!-- Register Form -->
-					<div id="registerForm" class="d-none">
-						<div class="mb-3">
-							<label class="form-label">Email</label>
-							<input type="email" class="form-control" id="registerEmail" placeholder="your@email.com" required>
-						</div>
-						<div class="mb-3">
-							<label class="form-label">Password</label>
-							<input type="password" class="form-control" id="registerPassword" placeholder="At least 6 characters" required>
-						</div>
-						<div class="mb-3">
-							<label class="form-label">Confirm Password</label>
-							<input type="password" class="form-control" id="registerPasswordConfirm" placeholder="••••••••" required>
-						</div>
-						<div id="registerError" class="alert alert-danger d-none" role="alert"></div>
-						<button class="btn btn-primary w-100 py-2" id="btnRegister" style="background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%); border: none; border-radius: 10px;">
-							<span id="registerBtnText">Create Account</span>
-							<span id="registerBtnSpinner" class="spinner-border spinner-border-sm d-none ms-2"></span>
-						</button>
-						<div class="text-center mt-3">
-							<span class="text-muted">Already have an account?</span>
-							<a href="#" id="showLogin" class="text-purple ms-1" style="color: #7c3aed;">Sign in</a>
-						</div>
-					</div>
-					<!-- Forgot Password Form -->
-					<div id="forgotPasswordForm" class="d-none">
-						<p class="text-muted mb-3">Enter your email and we'll send you a reset link.</p>
-						<div class="mb-3">
-							<label class="form-label">Email</label>
-							<input type="email" class="form-control" id="forgotEmail" placeholder="your@email.com" required>
-						</div>
-						<div id="forgotError" class="alert alert-danger d-none" role="alert"></div>
-						<div id="forgotSuccess" class="alert alert-success d-none" role="alert"></div>
-						<button class="btn btn-primary w-100 py-2" id="btnForgot" style="background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%); border: none; border-radius: 10px;">
-							Send Reset Link
-						</button>
-						<div class="text-center mt-3">
-							<a href="#" id="backToLogin" class="text-purple" style="color: #7c3aed;">Back to sign in</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	<!-- 2.2 Logic fix: Auth Modal is now dynamically injected by auth.js -->
 
 	<!-- Scripts -->
 	<script src="assets/js/jquery-3.6.0.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 	<script src="assets/js/wow.min.js"></script>
 	<script src="https://js.stripe.com/v3/"></script>
 
@@ -1198,6 +1167,9 @@
 		let machineFingerprint = '';
 		let purchaseData = {};
 		let currentPricing = null;
+
+		// 1.3 Security fix: Fingerprint format validation (XXXX-XXXX-XXXX-XXXX-XXXX-XXXX)
+		const FINGERPRINT_REGEX = /^[A-Z0-9]{4}(-[A-Z0-9]{4}){5}$/i;
 
 		// Page-specific auth state handling
 		window.addEventListener('authStateChanged', (e) => {
@@ -1258,7 +1230,7 @@
 					updatePriceDisplay(currentPricing);
 				}
 			} catch (err) {
-				console.error('Failed to load pricing:', err);
+				// Silent fail - use fallback pricing
 			}
 		}
 
@@ -1307,7 +1279,8 @@
 					});
 				}
 			} catch (err) {
-				console.error('Failed to initialize Stripe:', err);
+				// Stripe init failed - payment form will show error
+				document.getElementById('card-errors').textContent = 'Payment system unavailable. Please refresh the page.';
 			}
 
 			// Fingerprint input
@@ -1316,13 +1289,21 @@
 			const btnToStep2 = document.getElementById('btnToStep2');
 
 			fingerprintInput.addEventListener('input', (e) => {
-				const value = e.target.value.trim();
-				if (value.length >= 20) {
+				const value = e.target.value.trim().toUpperCase();
+				const isValid = FINGERPRINT_REGEX.test(value);
+
+				if (isValid) {
 					fingerprintBox.classList.add('has-value');
+					fingerprintBox.classList.remove('has-error');
 					btnToStep2.disabled = false;
 					machineFingerprint = value;
 				} else {
 					fingerprintBox.classList.remove('has-value');
+					if (value.length > 0) {
+						fingerprintBox.classList.add('has-error');
+					} else {
+						fingerprintBox.classList.remove('has-error');
+					}
 					btnToStep2.disabled = true;
 				}
 			});
@@ -1341,6 +1322,10 @@
 			const urlParams = new URLSearchParams(window.location.search);
 			const sessionId = urlParams.get('session_id');
 			if (sessionId) {
+				// 1.4 Security fix: Clean URL to avoid session_id in browser history
+				const cleanUrl = window.location.origin + window.location.pathname;
+				window.history.replaceState({}, document.title, cleanUrl);
+
 				await checkPaymentSuccess(sessionId);
 			}
 		});
@@ -1367,6 +1352,37 @@
 			}
 		}
 
+		// 3.3 Enhancement: Billing data validation
+		function validateBillingData(data) {
+			const errors = [];
+
+			// Name validation
+			if (!data.name || data.name.length < 2) {
+				errors.push('Name must be at least 2 characters');
+			}
+			if (data.name && data.name.length > 100) {
+				errors.push('Name is too long (max 100 characters)');
+			}
+
+			// Email validation
+			const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+			if (!data.email || !emailRegex.test(data.email)) {
+				errors.push('Please enter a valid email address');
+			}
+
+			// Country validation
+			if (!data.country) {
+				errors.push('Please select a country');
+			}
+
+			// Fingerprint validation
+			if (!data.fingerprint || !FINGERPRINT_REGEX.test(data.fingerprint)) {
+				errors.push('Invalid machine fingerprint format');
+			}
+
+			return errors;
+		}
+
 		async function handlePayment() {
 			const currentUser = window.FlytoAuth.getCurrentUser();
 			if (!currentUser) {
@@ -1381,16 +1397,18 @@
 			btn.disabled = true;
 
 			const billingData = {
-				name: document.getElementById('billingName').value,
-				email: document.getElementById('billingEmail').value,
-				company: document.getElementById('billingCompany').value || null,
+				name: document.getElementById('billingName').value.trim(),
+				email: document.getElementById('billingEmail').value.trim(),
+				company: document.getElementById('billingCompany').value.trim() || null,
 				country: document.getElementById('billingCountry').value,
 				fingerprint: machineFingerprint,
 				user_uid: currentUser.uid
 			};
 
-			if (!billingData.name || !billingData.email || !billingData.country) {
-				alert('Please fill in all required fields');
+			// Validate billing data
+			const validationErrors = validateBillingData(billingData);
+			if (validationErrors.length > 0) {
+				alert('Please fix the following errors:\n\n' + validationErrors.join('\n'));
 				btn.innerHTML = originalText;
 				btn.disabled = false;
 				return;
@@ -1417,8 +1435,8 @@
 					throw new Error(data.error || 'Failed to create checkout session');
 				}
 			} catch (err) {
-				console.error('Payment error:', err);
-				alert('Payment failed: ' + err.message);
+				// Show user-friendly error without logging sensitive details
+				alert('Payment failed: ' + (err.message || 'Please try again'));
 				btn.innerHTML = originalText;
 				btn.disabled = false;
 			}
@@ -1426,9 +1444,19 @@
 
 		async function checkPaymentSuccess(sessionId) {
 			try {
+				// 1.1 Security fix: Add authentication
+				const idToken = await window.FlytoAuth.getIdToken();
+				if (!idToken) {
+					alert('Please sign in to verify your purchase.');
+					window.FlytoAuth.showAuthModal();
+					return;
+				}
 				const response = await fetch(`${window.FlytoAuth.FIREBASE_URL}/verifyOfflineLicensePayment`, {
 					method: 'POST',
-					headers: { 'Content-Type': 'application/json' },
+					headers: {
+						'Content-Type': 'application/json',
+						'Authorization': `Bearer ${idToken}`
+					},
 					body: JSON.stringify({ session_id: sessionId })
 				});
 
@@ -1442,7 +1470,7 @@
 					alert('Payment verification failed. Please contact support.');
 				}
 			} catch (err) {
-				console.error('Verification error:', err);
+				alert('Verification failed. Please contact support if this persists.');
 			}
 		}
 
@@ -1453,9 +1481,19 @@
 			}
 
 			try {
+				// 1.2 Security fix: Add authentication
+				const idToken = await window.FlytoAuth.getIdToken();
+				if (!idToken) {
+					alert('Please sign in to download your license.');
+					window.FlytoAuth.showAuthModal();
+					return;
+				}
 				const response = await fetch(`${window.FlytoAuth.FIREBASE_URL}/downloadOfflineLicense`, {
 					method: 'POST',
-					headers: { 'Content-Type': 'application/json' },
+					headers: {
+						'Content-Type': 'application/json',
+						'Authorization': `Bearer ${idToken}`
+					},
 					body: JSON.stringify({ license_id: purchaseData.license_id })
 				});
 
@@ -1473,7 +1511,6 @@
 					throw new Error('Download failed');
 				}
 			} catch (err) {
-				console.error('Download error:', err);
 				alert('Failed to download license. Please contact support.');
 			}
 		}
