@@ -1171,6 +1171,14 @@
 		// 1.3 Security fix: Fingerprint format validation (XXXX-XXXX-XXXX-XXXX-XXXX-XXXX)
 		const FINGERPRINT_REGEX = /^[A-Z0-9]{4}(-[A-Z0-9]{4}){5}$/i;
 
+		// XSS protection helper
+		function escapeHtml(text) {
+			if (text === null || text === undefined) return '';
+			const div = document.createElement('div');
+			div.textContent = String(text);
+			return div.innerHTML;
+		}
+
 		// Page-specific auth state handling
 		window.addEventListener('authStateChanged', (e) => {
 			const user = e.detail.user;
@@ -1226,6 +1234,11 @@
 				const data = await response.json();
 
 				if (data.ok && data.pricing && data.pricing.pro_offline) {
+					// Check if offline license is enabled
+					if (data.pricing.pro_offline.enabled === false) {
+						showProductUnavailable();
+						return;
+					}
 					currentPricing = data.pricing.pro_offline;
 					updatePriceDisplay(currentPricing);
 				}
@@ -1234,20 +1247,45 @@
 			}
 		}
 
+		function showProductUnavailable() {
+			const container = document.querySelector('.purchase-container');
+			if (container) {
+				container.innerHTML = `
+					<div class="container text-center py-100">
+						<div class="wow fadeInUp">
+							<i class="bi bi-exclamation-triangle" style="font-size: 64px; color: #f59e0b;"></i>
+							<h2 style="margin-top: 30px; color: #1e1b39;">Currently Unavailable</h2>
+							<p style="color: #6b7280; margin-top: 15px;">Offline Pro license is not available for purchase at this time.</p>
+							<a href="pricing.html" class="btn-purchase" style="margin-top: 30px; display: inline-block;">
+								<i class="bi bi-arrow-left"></i> View Other Plans
+							</a>
+						</div>
+					</div>
+				`;
+			}
+		}
+
 		function updatePriceDisplay(pricing) {
 			const displayPrice = pricing.display_price || formatPrice(pricing.price, pricing.currency);
 			const displayPeriod = pricing.display_period || `per ${pricing.period}${pricing.per_machine ? ', per machine' : ''}`;
 
-			document.getElementById('heroPrice')?.textContent && (document.getElementById('heroPrice').textContent = displayPrice);
-			document.getElementById('heroPeriod')?.textContent && (document.getElementById('heroPeriod').textContent = displayPeriod);
-			document.getElementById('formPrice')?.textContent && (document.getElementById('formPrice').textContent = displayPrice);
-			document.getElementById('formPeriod')?.textContent && (document.getElementById('formPeriod').textContent = displayPeriod);
-			document.getElementById('payButtonPrice')?.textContent && (document.getElementById('payButtonPrice').textContent = displayPrice);
+			// Update all price display elements
+			const heroPrice = document.getElementById('heroPrice');
+			const heroPeriod = document.getElementById('heroPeriod');
+			const formPrice = document.getElementById('formPrice');
+			const formPeriod = document.getElementById('formPeriod');
+			const payButtonPrice = document.getElementById('payButtonPrice');
+
+			if (heroPrice) heroPrice.textContent = displayPrice;
+			if (heroPeriod) heroPeriod.textContent = displayPeriod;
+			if (formPrice) formPrice.textContent = displayPrice;
+			if (formPeriod) formPeriod.textContent = displayPeriod;
+			if (payButtonPrice) payButtonPrice.textContent = displayPrice;
 
 			if (pricing.features && pricing.features.length > 0) {
 				const featuresList = document.querySelector('.plan-features');
 				if (featuresList) {
-					featuresList.innerHTML = pricing.features.map(f => `<li><i class="bi bi-check-circle-fill"></i> ${f}</li>`).join('');
+					featuresList.innerHTML = pricing.features.map(f => `<li><i class="bi bi-check-circle-fill"></i> ${escapeHtml(f)}</li>`).join('');
 				}
 			}
 		}
