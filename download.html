@@ -930,7 +930,7 @@
 
 		async function trackDownload(version, fileType) {
 			try {
-				await fetch(`${FIREBASE_FUNCTIONS_URL}/trackDownload`, {
+				await fetch(`${getFirebaseUrl()}/trackDownload`, {
 					method: 'POST',
 					headers: { 'Content-Type': 'application/json' },
 					body: JSON.stringify({ version, file_type: fileType, source: 'landing_page' })
@@ -1032,7 +1032,7 @@
 			btn.disabled = true;
 
 			try {
-				const response = await fetch(`${FIREBASE_FUNCTIONS_URL}/subscribeToReleases`, {
+				const response = await fetch(`${getFirebaseUrl()}/subscribeToReleases`, {
 					method: 'POST',
 					headers: { 'Content-Type': 'application/json' },
 					body: JSON.stringify({ email })
