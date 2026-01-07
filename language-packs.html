@@ -487,22 +487,16 @@
 			'https://api.flyto2.net/i18n'
 		];
 
-		// Language metadata
-		const LANGUAGE_META = {
-			'en': { name: 'English', flag: '🇺🇸', native: 'English' },
-			'zh-TW': { name: 'Traditional Chinese', flag: '🇹🇼', native: '繁體中文' },
-			'zh-CN': { name: 'Simplified Chinese', flag: '🇨🇳', native: '简体中文' },
-			'ja': { name: 'Japanese', flag: '🇯🇵', native: '日本語' },
-			'ko': { name: 'Korean', flag: '🇰🇷', native: '한국어' },
-			'es': { name: 'Spanish', flag: '🇪🇸', native: 'Español' },
-			'fr': { name: 'French', flag: '🇫🇷', native: 'Français' },
-			'de': { name: 'German', flag: '🇩🇪', native: 'Deutsch' },
-			'pt': { name: 'Portuguese', flag: '🇧🇷', native: 'Português' },
-			'it': { name: 'Italian', flag: '🇮🇹', native: 'Italiano' },
-			'ru': { name: 'Russian', flag: '🇷🇺', native: 'Русский' },
-			'th': { name: 'Thai', flag: '🇹🇭', native: 'ไทย' },
-			'vi': { name: 'Vietnamese', flag: '🇻🇳', native: 'Tiếng Việt' }
-		};
+		// Convert region code to flag emoji (e.g., "US" -> "🇺🇸", "TW" -> "🇹🇼")
+		// Uses Unicode Regional Indicator Symbols
+		function regionToFlag(region) {
+			if (!region || region.length !== 2) return '🌐';
+			const offset = 127397; // Regional Indicator Symbol offset
+			return String.fromCodePoint(
+				region.toUpperCase().charCodeAt(0) + offset,
+				region.toUpperCase().charCodeAt(1) + offset
+			);
+		}
 
 		// Fetch with timeout
 		async function fetchWithTimeout(url, timeout = 5000) {
@@ -567,9 +561,13 @@
 					throw new Error('No languages available');
 				}
 
-				// Build language cards
+				// Build language cards - all data comes from manifest (dynamic)
 				const cards = Object.entries(locales).map(([code, info], index) => {
-					const meta = LANGUAGE_META[code] || { name: code, flag: '🌐', native: code };
+					// All metadata from manifest - no hardcoded values
+					const name = info.name || code;
+					const native = info.native || code;
+					const region = info.region || code.split('-').pop() || code.slice(0, 2);
+					const flag = regionToFlag(region);
 					const completion = info.completion || 0;
 					const isComplete = completion === 100;
 					const totalKeys = info.total_keys || 0;
@@ -580,8 +578,8 @@
 					return `
 						<div class="col-lg-4 col-md-6 mb-30">
 							<div class="lang-card ${isComplete ? 'complete' : ''} wow fadeInUp" data-wow-delay="${0.1 + (index % 3) * 0.1}s" style="position: relative;">
-								<div class="lang-flag">${meta.flag}</div>
-								<div class="lang-name">${meta.name}</div>
+								<div class="lang-flag">${flag}</div>
+								<div class="lang-name">${name}</div>
 								<div class="lang-code">${code}</div>
 								<div class="lang-stats">
 									<div class="lang-progress">
