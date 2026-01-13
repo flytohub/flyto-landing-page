@@ -3,6 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Preconnect to critical origins -->
+	<link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+	<link rel="dns-prefetch" href="https://www.gstatic.com">
+	<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 	<title>404 - Page Not Found | Flyto2</title>
 	<meta name="description" content="Page not found - The page you're looking for doesn't exist. Return to Flyto2 homepage to explore our automation platform.">
 	<meta name="robots" content="noindex, follow">
@@ -24,18 +30,32 @@
 	<link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="assets/img/icon.png" type="image/png" sizes="32x32">
 
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/bootstrap-icons.css">
-	<link rel="stylesheet" href="assets/css/lightcase.css">
-	<link rel="stylesheet" href="assets/css/fontawesome.all.min.css">
-	<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-	<link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
-	<link rel="stylesheet" href="assets/css/animate.css">
-	<link rel="stylesheet" href="assets/css/typed.css">
-	<link rel="stylesheet" href="assets/css/magnific-popup.css">
+	<!-- Critical CSS (render-blocking) -->
 	<link rel="stylesheet" href="assets/css/normalize.css">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/fontawesome.all.min.css">
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="assets/css/responsive.css">
+
+	<!-- Non-critical CSS (deferred loading) -->
+	<link rel="stylesheet" href="assets/css/bootstrap-icons.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="assets/css/lightcase.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="assets/css/owl.carousel.min.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="assets/css/owl.theme.default.min.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="assets/css/animate.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="assets/css/typed.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="assets/css/magnific-popup.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="assets/css/auth.css" media="print" onload="this.media='all'">
+	<noscript>
+		<link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+		<link rel="stylesheet" href="assets/css/lightcase.css">
+		<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+		<link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+		<link rel="stylesheet" href="assets/css/animate.css">
+		<link rel="stylesheet" href="assets/css/typed.css">
+		<link rel="stylesheet" href="assets/css/magnific-popup.css">
+		<link rel="stylesheet" href="assets/css/auth.css">
+	</noscript>
 
 </head>
 <body>
@@ -71,19 +91,19 @@
     <!-- Js File -->
     <script src="assets/js/modernizr.min.js"></script>
     <script src="assets/js/jquery-3.6.0.min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/jquery.nav.min.js"></script>
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="assets/js/mixitup.min.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/lightcase.js"></script>
-    <script src="assets/js/jquery.waypoints.min.js"></script>
-    <script src="assets/js/jquery.counterup.min.js"></script>
-    <script src="assets/js/typed.js"></script>
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/mobile-menu.js"></script>
-    <script src="assets/js/ajax-form.js"></script>
+    <script src="assets/js/popper.min.js" defer></script>
+    <script src="assets/js/bootstrap.min.js" defer></script>
+    <script src="assets/js/owl.carousel.min.js" defer></script>
+    <script src="assets/js/jquery.nav.min.js" defer></script>
+    <script src="assets/js/jquery.magnific-popup.min.js" defer></script>
+    <script src="assets/js/mixitup.min.js" defer></script>
+    <script src="assets/js/wow.min.js" defer></script>
+    <script src="assets/js/lightcase.js" defer></script>
+    <script src="assets/js/jquery.waypoints.min.js" defer></script>
+    <script src="assets/js/jquery.counterup.min.js" defer></script>
+    <script src="assets/js/typed.js" defer></script>
+    <script src="assets/js/script.js" defer></script>
+    <script src="assets/js/mobile-menu.js" defer></script>
+    <script src="assets/js/ajax-form.js" defer></script>
 </body>
 </html>

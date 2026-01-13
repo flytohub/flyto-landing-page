@@ -3,6 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Preconnect to critical origins -->
+	<link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+	<link rel="dns-prefetch" href="https://www.gstatic.com">
+	<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 	<title>Flyto2 Desktop App - Free Download for Mac, Windows, Linux</title>
 	<meta name="description" content="Download the Flyto2 visual automation app. Point-and-click interface, no coding needed. Auto-detects your OS. Record workflows in minutes. 100% free to start.">
 
@@ -49,14 +55,32 @@
 	<link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="../assets/img/icon.png" type="image/png" sizes="32x32">
 
-	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="../assets/css/bootstrap-icons.css">
-	<link rel="stylesheet" href="../assets/css/fontawesome.all.min.css">
-	<link rel="stylesheet" href="../assets/css/animate.css">
+	<!-- Critical CSS (render-blocking) -->
 	<link rel="stylesheet" href="../assets/css/normalize.css">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../assets/css/fontawesome.all.min.css">
+	<link rel="stylesheet" href="../style.css">
 	<link rel="stylesheet" href="../assets/css/responsive.css">
-	<link rel="stylesheet" href="../assets/css/auth.css">
+
+	<!-- Non-critical CSS (deferred loading) -->
+	<link rel="stylesheet" href="../assets/css/bootstrap-icons.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/lightcase.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/owl.carousel.min.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/owl.theme.default.min.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/animate.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/typed.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/magnific-popup.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/auth.css" media="print" onload="this.media='all'">
+	<noscript>
+		<link rel="stylesheet" href="../assets/css/bootstrap-icons.css">
+		<link rel="stylesheet" href="../assets/css/lightcase.css">
+		<link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+		<link rel="stylesheet" href="../assets/css/owl.theme.default.min.css">
+		<link rel="stylesheet" href="../assets/css/animate.css">
+		<link rel="stylesheet" href="../assets/css/typed.css">
+		<link rel="stylesheet" href="../assets/css/magnific-popup.css">
+		<link rel="stylesheet" href="../assets/css/auth.css">
+	</noscript>
 
 	<style>
 		/* Hero */
@@ -502,7 +526,10 @@
 				<div class="col-lg-3 align-self-center">
 					<div class="logo">
 						<a href="index.html">
-							<img src="../assets/img/white-logo.png" alt="Flyto2">
+							<picture>
+								<source srcset="../assets/img/white-logo.webp" type="image/webp">
+								<img src="../assets/img/white-logo.png" alt="Flyto2" fetchpriority="high">
+							</picture>
 						</a>
 					</div>
 					<div class="canvas_open">
@@ -576,7 +603,10 @@
 				</div>
 				<div class="mobile-logo">
 					<a href="index.html">
-						<img src="../assets/img/logo.png" alt="Flyto2" />
+						<picture>
+							<source srcset="../assets/img/logo.webp" type="image/webp">
+							<img src="../assets/img/logo.png" alt="Flyto2" />
+						</picture>
 					</a>
 				</div>
 				<div id="menu" class="text-left">
@@ -846,7 +876,10 @@
 						<div class="f-widgets-item">
 							<div class="f-logo">
 								<a href="index.html">
-									<img src="../assets/img/logo.png" alt="Flyto2" loading="lazy" />
+									<picture>
+										<source srcset="../assets/img/logo.webp" type="image/webp">
+										<img src="../assets/img/logo.png" alt="Flyto2" loading="lazy" />
+									</picture>
 								</a>
 							</div>
 							<p style="color: #666; margin: 20px 0;" data-i18n="landing.common.footer.tagline">像你一樣工作的自動化。錄製一次，永久重播。</p>
@@ -915,11 +948,11 @@
 	<!-- Scripts -->
 	<script src="../assets/js/modernizr.min.js"></script>
 	<script src="../assets/js/jquery-3.6.0.min.js"></script>
-	<script src="../assets/js/popper.min.js"></script>
-	<script src="../assets/js/bootstrap.min.js"></script>
-	<script src="../assets/js/wow.min.js"></script>
-	<script src="../assets/js/script.js"></script>
-	<script src="../assets/js/mobile-menu.js"></script>
+	<script src="../assets/js/popper.min.js" defer></script>
+	<script src="../assets/js/bootstrap.min.js" defer></script>
+	<script src="../assets/js/wow.min.js" defer></script>
+	<script src="../assets/js/script.js" defer></script>
+	<script src="../assets/js/mobile-menu.js" defer></script>
 
 	<script>
 		// OS Detection
@@ -1023,9 +1056,9 @@
 	</script>
 
 	<!-- Firebase SDK -->
-	<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js"></script>
-	<script src="../assets/js/auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js" defer></script>
+	<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js" defer></script>
+	<script src="../assets/js/auth.js" defer></script>
 	<script>
 		window.addEventListener('authStateChanged', (e) => {
 			const user = e.detail.user;

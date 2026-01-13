@@ -3,6 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Preconnect to critical origins -->
+	<link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+	<link rel="dns-prefetch" href="https://www.gstatic.com">
+	<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 	<title>About Flyto2 - The Enterprise Workflow Platform</title>
 	<meta name="description" content="Learn about Flyto2, the enterprise workflow platform built for human-in-the-loop automation. Open source core, offline-first design, built for teams that need control.">
 
@@ -50,14 +56,32 @@
 	<link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="../assets/img/icon.png" type="image/png" sizes="32x32">
 
-	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="../assets/css/bootstrap-icons.css">
-	<link rel="stylesheet" href="../assets/css/fontawesome.all.min.css">
-	<link rel="stylesheet" href="../assets/css/animate.css">
+	<!-- Critical CSS (render-blocking) -->
 	<link rel="stylesheet" href="../assets/css/normalize.css">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../assets/css/fontawesome.all.min.css">
+	<link rel="stylesheet" href="../style.css">
 	<link rel="stylesheet" href="../assets/css/responsive.css">
-	<link rel="stylesheet" href="../assets/css/auth.css">
+
+	<!-- Non-critical CSS (deferred loading) -->
+	<link rel="stylesheet" href="../assets/css/bootstrap-icons.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/lightcase.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/owl.carousel.min.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/owl.theme.default.min.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/animate.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/typed.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/magnific-popup.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/auth.css" media="print" onload="this.media='all'">
+	<noscript>
+		<link rel="stylesheet" href="../assets/css/bootstrap-icons.css">
+		<link rel="stylesheet" href="../assets/css/lightcase.css">
+		<link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+		<link rel="stylesheet" href="../assets/css/owl.theme.default.min.css">
+		<link rel="stylesheet" href="../assets/css/animate.css">
+		<link rel="stylesheet" href="../assets/css/typed.css">
+		<link rel="stylesheet" href="../assets/css/magnific-popup.css">
+		<link rel="stylesheet" href="../assets/css/auth.css">
+	</noscript>
 	<style>
 		.about-hero {
 			background: linear-gradient(135deg, #0f0524 0%, #1e0a3c 20%, #2d1b4e 50%, #4c1d95 80%, #5b21b6 100%);
@@ -224,7 +248,10 @@
 				<div class="col-lg-3 align-self-center">
 					<div class="logo">
 						<a href="index.html">
-							<img src="../assets/img/white-logo.png" alt="Flyto2">
+							<picture>
+								<source srcset="../assets/img/white-logo.webp" type="image/webp">
+								<img src="../assets/img/white-logo.png" alt="Flyto2" fetchpriority="high">
+							</picture>
 						</a>
 					</div>
 					<div class="canvas_open">
@@ -305,7 +332,10 @@
 				</div>
 				<div class="mobile-logo">
 					<a href="index.html">
-						<img src="../assets/img/logo.png" alt="Flyto2" />
+						<picture>
+							<source srcset="../assets/img/logo.webp" type="image/webp">
+							<img src="../assets/img/logo.png" alt="Flyto2" />
+						</picture>
 					</a>
 				</div>
 				<div id="menu" class="text-left">
@@ -542,7 +572,10 @@
 						<div class="f-widgets-item">
 							<div class="f-logo">
 								<a href="index.html">
-									<img src="../assets/img/logo.png" alt="Flyto2" loading="lazy">
+									<picture>
+										<source srcset="../assets/img/logo.webp" type="image/webp">
+										<img src="../assets/img/logo.png" alt="Flyto2" loading="lazy">
+									</picture>
 								</a>
 							</div>
 							<p data-i18n="landing.common.footer.tagline">あなたのように働く自動化。一度録画して、永遠に再生。</p>
@@ -613,15 +646,15 @@
 	<!-- Scripts -->
 	<script src="../assets/js/modernizr.min.js"></script>
 	<script src="../assets/js/jquery-3.6.0.min.js"></script>
-	<script src="../assets/js/popper.min.js"></script>
-	<script src="../assets/js/bootstrap.min.js"></script>
-	<script src="../assets/js/wow.min.js"></script>
-	<script src="../assets/js/script.js"></script>
-	<script src="../assets/js/mobile-menu.js"></script>
+	<script src="../assets/js/popper.min.js" defer></script>
+	<script src="../assets/js/bootstrap.min.js" defer></script>
+	<script src="../assets/js/wow.min.js" defer></script>
+	<script src="../assets/js/script.js" defer></script>
+	<script src="../assets/js/mobile-menu.js" defer></script>
 
 	<!-- Firebase SDK -->
-	<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js"></script>
-	<script src="../assets/js/auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js" defer></script>
+	<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js" defer></script>
+	<script src="../assets/js/auth.js" defer></script>
 </body>
 </html>
