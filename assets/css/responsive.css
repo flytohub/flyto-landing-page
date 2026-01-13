@@ -257,6 +257,36 @@
 	.comments-list-full ul li {
 		padding-left: 0px;
 	}
+	/* Breadcrumb buttons responsive */
+	.breadcrumb-content > div {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+		justify-content: center;
+	}
+	.breadcrumb-content .button-1,
+	.breadcrumb-content .button-2 {
+		margin-right: 0 !important;
+		width: 100%;
+		text-align: center;
+		justify-content: center;
+	}
+	/* Terminal responsive */
+	.terminal-line {
+		flex-direction: column;
+		align-items: flex-start !important;
+		gap: 10px;
+	}
+	.terminal-line .copy-btn {
+		align-self: flex-end;
+	}
+	.terminal-body {
+		padding: 20px 15px;
+	}
+	.terminal-command {
+		font-size: 13px;
+		word-break: break-all;
+	}
 }
 @media (max-width: 360px) {
 	.services-details h2.sc_title {
