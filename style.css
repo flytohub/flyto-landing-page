@@ -1419,11 +1419,12 @@ hr.vertical {
 	font-size: 14px;
 	line-height: 24px;
 	margin-bottom: 10px;
+	color: #4a5568;
 }
 .f-widgets-item ul li a {
 	display: inline-block;
 	font-size: 15px;
-	color: #6784a4;
+	color: #4a5568;
 	padding: 8px 0px;
 	-webkit-transition: all .4s ease-in-out;
 	transition: all .4s ease-in-out;
@@ -1449,9 +1450,10 @@ hr.vertical {
 }
 .copy-f-text p {
 	font-size: 15px;
+	color: #4a5568;
 }
 .copy-f-text p a {
-	color: #67748e;
+	color: #4a5568;
 	font-weight: 600;
 }
 .copy-f-text p a:hover{
