@@ -3291,7 +3291,7 @@ h2.accordion-header {
 	width: 290px;
 	position: fixed;
 	background: #fff;
-	z-index: 999;
+	z-index: 1000;
 	top: 0;
 	height: 100vh;
 	transition: .5s;
@@ -3335,17 +3335,21 @@ h2.accordion-header {
 }
 .offcanvas_main_menu li a {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
   text-transform: capitalize;
   display: block;
-  padding: 0px 10px;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
+  padding: 15px 10px;
+  margin-bottom: 0;
   border-bottom: 1px solid #ededed;
   color: #333;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(124, 58, 237, 0.1);
 }
-.offcanvas_main_menu li a:hover {
+.offcanvas_main_menu li a:hover,
+.offcanvas_main_menu li a:active {
   color: #7C3AED;
+  background: #f8f9ff;
 }
 .offcanvas_main_menu li ul.sub-menu {
   padding-left: 20px;
