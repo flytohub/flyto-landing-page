@@ -14,17 +14,24 @@
 		transform: translateY(-50%);
 		display: flex;
 		align-items: center;
+		z-index: 100;
+		cursor: pointer;
 	}
 	.canvas_open a {
 		width: 35px;
 		height: 35px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		cursor: pointer;
 	}
 	.canvas_open a span {
 		width: 100%;
 		height: 3px;
 		background: #fff;
-		margin: 6px 0px;
+		margin: 5px 0px;
 		display: block;
+		pointer-events: none;
 	}
 	.canvas_open a span:nth-child(2) {
 		width: 85%;
@@ -293,6 +300,10 @@
 	.terminal-command {
 		font-size: 13px;
 		word-break: break-all;
+	}
+	/* Hide large decorative icons on mobile */
+	.animate-float-slow {
+		display: none !important;
 	}
 }
 @media (max-width: 360px) {
