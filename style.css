@@ -2158,6 +2158,7 @@ hr.vertical {
 	text-align: center;
 	padding-bottom: 100px;
 }
+.breadcrumb-content h1,
 .breadcrumb-content h2 {
 	font-size: 40px;
 	font-weight: 700;
