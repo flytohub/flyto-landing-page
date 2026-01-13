@@ -353,5 +353,140 @@
 	.breadcrumb-content h2 {
 		font-size: 35px;
 	}
- 
+}
+
+/* ==========================================
+   COMPREHENSIVE MOBILE FIXES
+   ========================================== */
+
+/* Subscribe form - stack on mobile */
+@media (max-width: 767px) {
+	.subscribe-content form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 15px;
+	}
+	.subscribe-content form input {
+		max-width: 100%;
+		width: 100%;
+	}
+	.subscribe-content form button {
+		margin-left: 0;
+		width: 100%;
+		max-width: 300px;
+	}
+	.subscribe-content ul li {
+		display: block;
+		padding: 5px 0;
+	}
+
+	/* Footer social icons */
+	.footer_social {
+		text-align: center;
+	}
+	.footer_social ul {
+		justify-content: center;
+	}
+
+	/* Floating shapes */
+	.floating-shapes {
+		display: none !important;
+	}
+
+	/* Testimonial avatar */
+	.testimonial-single-header .thumbnail {
+		margin-left: 0;
+		float: none;
+		margin-bottom: 15px;
+	}
+
+	/* Help desk content */
+	.help-desk-content {
+		padding-left: 0 !important;
+	}
+}
+
+/* Login form fixes */
+@media (max-width: 576px) {
+	.login-form-style3-main {
+		padding: 20px 15px !important;
+		margin: 10px;
+	}
+
+	/* Social login buttons stack */
+	.login-register_style3-head ul {
+		flex-direction: column;
+	}
+	.login-register_style3-head ul li {
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+
+	/* Auth modal */
+	.auth-modal-content {
+		margin: 10px;
+		padding: 20px 15px;
+	}
+
+	/* Info boxes */
+	.info-box-s1,
+	.info-box-s2 {
+		padding: 20px 15px;
+	}
+
+	/* Version cards */
+	.version-card {
+		padding: 20px 15px;
+	}
+
+	/* Pricing items */
+	.pricing-item {
+		padding: 25px 15px;
+	}
+
+	/* Counter section items */
+	.counter_item_h {
+		padding: 25px 15px;
+	}
+
+	/* Vertical dividers hidden on mobile */
+	.vertical.dark,
+	hr.vertical {
+		display: none !important;
+	}
+}
+
+/* Reduce animations on mobile for performance */
+@media (max-width: 767px) {
+	.animate-float-slow,
+	.animate-float-medium,
+	.hero-icon-float,
+	.icon-spin-slow,
+	.animate-pulse-glow {
+		animation: none !important;
+	}
+
+	.card-float,
+	.card-float-delay-1,
+	.card-float-delay-2,
+	.card-float-delay-3 {
+		animation: none !important;
+	}
+
+	.orbit-container {
+		display: none !important;
+	}
+}
+
+/* Prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
 }

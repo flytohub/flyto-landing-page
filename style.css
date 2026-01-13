@@ -3296,7 +3296,7 @@ h2.accordion-header {
 	height: 100vh;
 	transition: .5s;
 	left: 0;
-	margin-left: -300px;
+	margin-left: -290px;
 	padding: 20px 0px 30px;
 	overflow-y: auto;
 }

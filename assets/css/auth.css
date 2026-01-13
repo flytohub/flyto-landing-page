@@ -644,3 +644,46 @@
 .btn-mobile-signout:hover {
 	background: #fef2f2;
 }
+
+/* ========================================
+   Mobile Auth Modal Fixes
+   ======================================== */
+@media (max-width: 576px) {
+	.auth-modal-content {
+		margin: 10px;
+		padding: 25px 20px;
+		border-radius: 16px !important;
+	}
+
+	.auth-modal-close {
+		top: 15px;
+		right: 15px;
+	}
+
+	.auth-tabs {
+		margin-bottom: 20px;
+	}
+
+	.auth-tab {
+		padding: 10px 15px;
+		font-size: 14px;
+	}
+
+	.auth-input {
+		padding: 12px 14px 12px 44px;
+		font-size: 14px;
+	}
+
+	.auth-btn {
+		padding: 12px 20px;
+		font-size: 15px;
+	}
+
+	.auth-subtitle {
+		font-size: 18px;
+	}
+
+	.header-auth {
+		margin-left: 10px;
+	}
+}
