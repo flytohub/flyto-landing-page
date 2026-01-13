@@ -274,16 +274,19 @@
 	/* Breadcrumb buttons responsive */
 	.breadcrumb-content > div {
 		display: flex;
-		flex-wrap: wrap;
+		flex-direction: column;
+		align-items: center;
 		gap: 10px;
-		justify-content: center;
 	}
 	.breadcrumb-content .button-1,
 	.breadcrumb-content .button-2 {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
 		margin-right: 0 !important;
 		width: 100%;
+		max-width: 280px;
 		text-align: center;
-		justify-content: center;
 	}
 	/* Terminal responsive */
 	.terminal-line {
