@@ -1837,6 +1837,12 @@ hr.vertical {
 .section-padding.pt-150 {
 	padding-top: 150px;
 }
+.pt-150 {
+	padding-top: 150px;
+}
+.pb-200 {
+	padding-bottom: 200px;
+}
 /*
  * #-Job Board Item
 */
