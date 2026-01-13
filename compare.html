@@ -288,22 +288,22 @@
 					<div class="menu d-flex align-items-center justify-content-end">
 						<nav>
 							<ul>
-								<li><a href="index.html">Home</a></li>
-								<li><a href="product.html">Platform</a></li>
+								<li><a href="index.html" data-i18n="landing.common.nav.home">Home</a></li>
+								<li><a href="product.html" data-i18n="landing.common.nav.platform">Platform</a></li>
 								<li class="nav-dropdown">
-									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">Pricing</span>
+									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" data-i18n="landing.common.nav.pricing">Pricing</span>
 									<div class="nav-dropdown-menu">
-										<a href="pricing.html" class="nav-dropdown-item"><i class="bi bi-tag"></i><span>Plans & Pricing</span></a>
-										<a href="buy-offline.html" class="nav-dropdown-item"><i class="bi bi-shield-lock"></i><span>Buy Pro License</span></a>
+										<a href="pricing.html" class="nav-dropdown-item"><i class="bi bi-tag"></i><span data-i18n="landing.common.nav.plansAndPricing">Plans & Pricing</span></a>
+										<a href="buy-offline.html" class="nav-dropdown-item"><i class="bi bi-shield-lock"></i><span data-i18n="landing.common.nav.buyProLicense">Buy Pro License</span></a>
 									</div>
 								</li>
 								<li class="nav-dropdown">
-									<span class="nav-dropdown-toggle active" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">Resources</span>
+									<span class="nav-dropdown-toggle active" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" data-i18n="landing.common.nav.resources">Resources</span>
 									<div class="nav-dropdown-menu">
-										<a href="use-cases.html" class="nav-dropdown-item"><i class="bi bi-briefcase"></i><span>Use Cases</span></a>
-										<a href="compare.html" class="nav-dropdown-item active"><i class="bi bi-arrow-left-right"></i><span>Compare</span></a>
-										<a href="faq.html" class="nav-dropdown-item"><i class="bi bi-question-circle"></i><span>FAQ</span></a>
-										<a href="contact.html" class="nav-dropdown-item"><i class="bi bi-envelope"></i><span>Contact Us</span></a>
+										<a href="use-cases.html" class="nav-dropdown-item"><i class="bi bi-briefcase"></i><span data-i18n="landing.common.nav.useCases">Use Cases</span></a>
+										<a href="compare.html" class="nav-dropdown-item active"><i class="bi bi-arrow-left-right"></i><span data-i18n="landing.common.nav.compare">Compare</span></a>
+										<a href="faq.html" class="nav-dropdown-item"><i class="bi bi-question-circle"></i><span data-i18n="landing.common.nav.faq">FAQ</span></a>
+										<a href="contact.html" class="nav-dropdown-item"><i class="bi bi-envelope"></i><span data-i18n="landing.common.nav.contactUs">Contact Us</span></a>
 									</div>
 								</li>
 							</ul>
@@ -311,7 +311,7 @@
 						<div class="header-auth">
 							<button id="headerLoginBtn" class="btn-header-login">
 								<i class="bi bi-person"></i>
-								<span>Sign In</span>
+								<span data-i18n="landing.common.auth.signIn">Sign In</span>
 							</button>
 							<div id="headerUserDropdown" class="user-dropdown d-none">
 								<div class="user-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">
@@ -322,17 +322,17 @@
 								<div class="user-dropdown-menu">
 									<div class="dropdown-header">
 										<div class="dropdown-header-email" id="dropdownUserEmail"></div>
-										<div class="dropdown-header-label">Flyto2 Account</div>
+										<div class="dropdown-header-label" data-i18n="landing.common.auth.flytoAccount">Flyto2 Account</div>
 									</div>
 									<div class="dropdown-menu-items">
 										<a href="buy-offline.html" class="dropdown-menu-item">
 											<i class="bi bi-key"></i>
-											My Licenses
+											<span data-i18n="landing.common.auth.myLicenses">My Licenses</span>
 										</a>
 										<div class="dropdown-divider"></div>
 										<button class="dropdown-menu-item text-danger" id="btnSignOut">
 											<i class="bi bi-box-arrow-right"></i>
-											Sign Out
+											<span data-i18n="landing.common.auth.signOut">Sign Out</span>
 										</button>
 									</div>
 								</div>
@@ -359,12 +359,12 @@
 				</div>
 				<div id="menu" class="text-left">
 					<ul class="offcanvas_main_menu">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="product.html">Platform</a></li>
-						<li><a href="pricing.html">Pricing</a></li>
-						<li><a href="use-cases.html">Use Cases</a></li>
-						<li class="active"><a href="compare.html">Compare</a></li>
-						<li><a href="contact.html">Contact</a></li>
+						<li><a href="index.html" data-i18n="landing.common.nav.home">Home</a></li>
+						<li><a href="product.html" data-i18n="landing.common.nav.platform">Platform</a></li>
+						<li><a href="pricing.html" data-i18n="landing.common.nav.pricing">Pricing</a></li>
+						<li><a href="use-cases.html" data-i18n="landing.common.nav.useCases">Use Cases</a></li>
+						<li class="active"><a href="compare.html" data-i18n="landing.common.nav.compare">Compare</a></li>
+						<li><a href="contact.html" data-i18n="landing.common.footer.contact">Contact</a></li>
 					</ul>
 				</div>
 			</div>
@@ -379,14 +379,14 @@
 					<div class="pt-150 pb-100">
 						<nav aria-label="breadcrumb" style="display: inline-block; margin-bottom: 20px;">
 							<ol class="breadcrumb" style="background: rgba(255,255,255,0.1); border-radius: 30px; padding: 10px 20px; margin: 0;">
-								<li class="breadcrumb-item"><a href="index.html" style="color: #a78bfa;">Home</a></li>
-								<li class="breadcrumb-item active" style="color: #fff;">Compare</li>
+								<li class="breadcrumb-item"><a href="index.html" style="color: #a78bfa;" data-i18n="landing.common.nav.home">Home</a></li>
+								<li class="breadcrumb-item active" style="color: #fff;" data-i18n="landing.common.nav.compare">Compare</li>
 							</ol>
 						</nav>
 						<h1 class="wow fadeInUp" style="color: #fff; font-size: 48px; font-weight: 800; margin-bottom: 20px;">
-							How Flyto2 <span style="color: #a78bfa;">Compares</span>
+							<span data-i18n="landing.compare.hero.title">How Flyto2</span> <span style="color: #a78bfa;" data-i18n="landing.compare.hero.titleHighlight">Compares</span>
 						</h1>
-						<p class="wow fadeInUp" data-wow-delay="0.1s" style="color: rgba(255,255,255,0.8); font-size: 20px; max-width: 700px; margin: 0 auto;">
+						<p class="wow fadeInUp" data-wow-delay="0.1s" style="color: rgba(255,255,255,0.8); font-size: 20px; max-width: 700px; margin: 0 auto;" data-i18n="landing.compare.hero.description">
 							See how Flyto2 stacks up against other workflow automation platforms. We focus on human oversight, offline capability, and enterprise compliance.
 						</p>
 					</div>
@@ -405,8 +405,8 @@
 		<div class="container">
 			<div class="row mb-50">
 				<div class="col-lg-8 offset-lg-2 text-center">
-					<h2 class="wow fadeInUp" style="font-size: 36px; font-weight: 700;">Quick <span class="gradient-text">Summary</span></h2>
-					<p class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 18px; color: #6b7280; margin-top: 15px;">
+					<h2 class="wow fadeInUp" style="font-size: 36px; font-weight: 700;"><span data-i18n="landing.compare.summary.title">Quick</span> <span class="gradient-text" data-i18n="landing.compare.summary.titleHighlight">Summary</span></h2>
+					<p class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 18px; color: #6b7280; margin-top: 15px;" data-i18n="landing.compare.summary.subtitle">
 						Different tools for different needs. Here's when to choose each.
 					</p>
 				</div>
@@ -414,37 +414,37 @@
 			<div class="row">
 				<div class="col-lg-4 mb-30">
 					<div class="summary-card wow fadeInUp" data-wow-delay="0.1s">
-						<span class="tag">Choose Flyto2 when</span>
-						<h3>Human Oversight Required</h3>
+						<span class="tag" data-i18n="landing.compare.summary.flyto.tag">Choose Flyto2 when</span>
+						<h3 data-i18n="landing.compare.summary.flyto.title">Human Oversight Required</h3>
 						<ul style="list-style: none; padding: 0; margin: 0;">
-							<li style="padding: 8px 0; color: #374151;"><i class="fas fa-check" style="color: #10b981; margin-right: 10px;"></i>Approval workflows</li>
-							<li style="padding: 8px 0; color: #374151;"><i class="fas fa-check" style="color: #10b981; margin-right: 10px;"></i>Offline/air-gapped deployment</li>
-							<li style="padding: 8px 0; color: #374151;"><i class="fas fa-check" style="color: #10b981; margin-right: 10px;"></i>Full audit trail needed</li>
-							<li style="padding: 8px 0; color: #374151;"><i class="fas fa-check" style="color: #10b981; margin-right: 10px;"></i>Pause & verify workflows</li>
+							<li style="padding: 8px 0; color: #374151;"><i class="fas fa-check" style="color: #10b981; margin-right: 10px;"></i><span data-i18n="landing.compare.summary.flyto.item1">Approval workflows</span></li>
+							<li style="padding: 8px 0; color: #374151;"><i class="fas fa-check" style="color: #10b981; margin-right: 10px;"></i><span data-i18n="landing.compare.summary.flyto.item2">Offline/air-gapped deployment</span></li>
+							<li style="padding: 8px 0; color: #374151;"><i class="fas fa-check" style="color: #10b981; margin-right: 10px;"></i><span data-i18n="landing.compare.summary.flyto.item3">Full audit trail needed</span></li>
+							<li style="padding: 8px 0; color: #374151;"><i class="fas fa-check" style="color: #10b981; margin-right: 10px;"></i><span data-i18n="landing.compare.summary.flyto.item4">Pause & verify workflows</span></li>
 						</ul>
 					</div>
 				</div>
 				<div class="col-lg-4 mb-30">
 					<div class="summary-card wow fadeInUp" data-wow-delay="0.2s">
-						<span class="tag" style="background: rgba(59, 130, 246, 0.1); color: #3b82f6;">Choose n8n when</span>
-						<h3>API Integrations Focus</h3>
+						<span class="tag" style="background: rgba(59, 130, 246, 0.1); color: #3b82f6;" data-i18n="landing.compare.summary.n8n.tag">Choose n8n when</span>
+						<h3 data-i18n="landing.compare.summary.n8n.title">API Integrations Focus</h3>
 						<ul style="list-style: none; padding: 0; margin: 0;">
-							<li style="padding: 8px 0; color: #374151;"><i class="fas fa-check" style="color: #3b82f6; margin-right: 10px;"></i>Connecting SaaS apps</li>
-							<li style="padding: 8px 0; color: #374151;"><i class="fas fa-check" style="color: #3b82f6; margin-right: 10px;"></i>Webhook-based triggers</li>
-							<li style="padding: 8px 0; color: #374151;"><i class="fas fa-check" style="color: #3b82f6; margin-right: 10px;"></i>Developer-friendly workflows</li>
-							<li style="padding: 8px 0; color: #374151;"><i class="fas fa-check" style="color: #3b82f6; margin-right: 10px;"></i>Self-hosted option needed</li>
+							<li style="padding: 8px 0; color: #374151;"><i class="fas fa-check" style="color: #3b82f6; margin-right: 10px;"></i><span data-i18n="landing.compare.summary.n8n.item1">Connecting SaaS apps</span></li>
+							<li style="padding: 8px 0; color: #374151;"><i class="fas fa-check" style="color: #3b82f6; margin-right: 10px;"></i><span data-i18n="landing.compare.summary.n8n.item2">Webhook-based triggers</span></li>
+							<li style="padding: 8px 0; color: #374151;"><i class="fas fa-check" style="color: #3b82f6; margin-right: 10px;"></i><span data-i18n="landing.compare.summary.n8n.item3">Developer-friendly workflows</span></li>
+							<li style="padding: 8px 0; color: #374151;"><i class="fas fa-check" style="color: #3b82f6; margin-right: 10px;"></i><span data-i18n="landing.compare.summary.n8n.item4">Self-hosted option needed</span></li>
 						</ul>
 					</div>
 				</div>
 				<div class="col-lg-4 mb-30">
 					<div class="summary-card wow fadeInUp" data-wow-delay="0.3s">
-						<span class="tag" style="background: rgba(249, 115, 22, 0.1); color: #f97316;">Choose UiPath when</span>
-						<h3>Enterprise RPA at Scale</h3>
+						<span class="tag" style="background: rgba(249, 115, 22, 0.1); color: #f97316;" data-i18n="landing.compare.summary.uipath.tag">Choose UiPath when</span>
+						<h3 data-i18n="landing.compare.summary.uipath.title">Enterprise RPA at Scale</h3>
 						<ul style="list-style: none; padding: 0; margin: 0;">
-							<li style="padding: 8px 0; color: #374151;"><i class="fas fa-check" style="color: #f97316; margin-right: 10px;"></i>Massive deployment (1000+ bots)</li>
-							<li style="padding: 8px 0; color: #374151;"><i class="fas fa-check" style="color: #f97316; margin-right: 10px;"></i>Existing RPA infrastructure</li>
-							<li style="padding: 8px 0; color: #374151;"><i class="fas fa-check" style="color: #f97316; margin-right: 10px;"></i>Dedicated RPA team</li>
-							<li style="padding: 8px 0; color: #374151;"><i class="fas fa-check" style="color: #f97316; margin-right: 10px;"></i>Budget for enterprise licensing</li>
+							<li style="padding: 8px 0; color: #374151;"><i class="fas fa-check" style="color: #f97316; margin-right: 10px;"></i><span data-i18n="landing.compare.summary.uipath.item1">Massive deployment (1000+ bots)</span></li>
+							<li style="padding: 8px 0; color: #374151;"><i class="fas fa-check" style="color: #f97316; margin-right: 10px;"></i><span data-i18n="landing.compare.summary.uipath.item2">Existing RPA infrastructure</span></li>
+							<li style="padding: 8px 0; color: #374151;"><i class="fas fa-check" style="color: #f97316; margin-right: 10px;"></i><span data-i18n="landing.compare.summary.uipath.item3">Dedicated RPA team</span></li>
+							<li style="padding: 8px 0; color: #374151;"><i class="fas fa-check" style="color: #f97316; margin-right: 10px;"></i><span data-i18n="landing.compare.summary.uipath.item4">Budget for enterprise licensing</span></li>
 						</ul>
 					</div>
 				</div>
@@ -636,8 +636,8 @@
 		<div class="container">
 			<div class="row mb-50">
 				<div class="col-lg-8 offset-lg-2 text-center">
-					<h2 class="wow fadeInUp" style="font-size: 36px; font-weight: 700;">When Flyto2 is <span class="gradient-text">NOT</span> the Right Choice</h2>
-					<p class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 18px; color: #6b7280; margin-top: 15px;">
+					<h2 class="wow fadeInUp" style="font-size: 36px; font-weight: 700;"><span data-i18n="landing.compare.notRight.title">When Flyto2 is</span> <span class="gradient-text" data-i18n="landing.compare.notRight.titleHighlight">NOT</span> <span data-i18n="landing.compare.notRight.titleEnd">the Right Choice</span></h2>
+					<p class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 18px; color: #6b7280; margin-top: 15px;" data-i18n="landing.compare.notRight.subtitle">
 						We believe in honest positioning. Here's when you should look elsewhere.
 					</p>
 				</div>
@@ -647,24 +647,24 @@
 					<div class="wow fadeInUp" data-wow-delay="0.1s" style="background: #fff; border-radius: 16px; padding: 30px; height: 100%; border-left: 4px solid #ef4444;">
 						<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 20px; color: #b91c1c;">
 							<i class="fas fa-times-circle" style="margin-right: 10px;"></i>
-							Skip Flyto2 if...
+							<span data-i18n="landing.compare.notRight.skip">Skip Flyto2 if...</span>
 						</h3>
 						<ul style="list-style: none; padding: 0; margin: 0;">
 							<li style="padding: 12px 0; border-bottom: 1px solid #f0f0f0; color: #374151;">
-								<strong>You need 100+ bots running simultaneously</strong><br>
-								<span style="font-size: 14px; color: #6b7280;">UiPath or Automation Anywhere have better orchestration</span>
+								<strong data-i18n="landing.compare.notRight.skip1.title">You need 100+ bots running simultaneously</strong><br>
+								<span style="font-size: 14px; color: #6b7280;" data-i18n="landing.compare.notRight.skip1.desc">UiPath or Automation Anywhere have better orchestration</span>
 							</li>
 							<li style="padding: 12px 0; border-bottom: 1px solid #f0f0f0; color: #374151;">
-								<strong>You only need API integrations</strong><br>
-								<span style="font-size: 14px; color: #6b7280;">n8n, Zapier, or Make are simpler for pure API workflows</span>
+								<strong data-i18n="landing.compare.notRight.skip2.title">You only need API integrations</strong><br>
+								<span style="font-size: 14px; color: #6b7280;" data-i18n="landing.compare.notRight.skip2.desc">n8n, Zapier, or Make are simpler for pure API workflows</span>
 							</li>
 							<li style="padding: 12px 0; border-bottom: 1px solid #f0f0f0; color: #374151;">
-								<strong>You want fully unattended automation</strong><br>
-								<span style="font-size: 14px; color: #6b7280;">Flyto2 is built for human oversight; if you don't need it, it's overhead</span>
+								<strong data-i18n="landing.compare.notRight.skip3.title">You want fully unattended automation</strong><br>
+								<span style="font-size: 14px; color: #6b7280;" data-i18n="landing.compare.notRight.skip3.desc">Flyto2 is built for human oversight; if you don't need it, it's overhead</span>
 							</li>
 							<li style="padding: 12px 0; color: #374151;">
-								<strong>You have a large existing RPA investment</strong><br>
-								<span style="font-size: 14px; color: #6b7280;">Extending your current platform may be more cost-effective</span>
+								<strong data-i18n="landing.compare.notRight.skip4.title">You have a large existing RPA investment</strong><br>
+								<span style="font-size: 14px; color: #6b7280;" data-i18n="landing.compare.notRight.skip4.desc">Extending your current platform may be more cost-effective</span>
 							</li>
 						</ul>
 					</div>
@@ -673,24 +673,24 @@
 					<div class="wow fadeInUp" data-wow-delay="0.2s" style="background: #fff; border-radius: 16px; padding: 30px; height: 100%; border-left: 4px solid #10b981;">
 						<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 20px; color: #065f46;">
 							<i class="fas fa-check-circle" style="margin-right: 10px;"></i>
-							Choose Flyto2 if...
+							<span data-i18n="landing.compare.notRight.choose">Choose Flyto2 if...</span>
 						</h3>
 						<ul style="list-style: none; padding: 0; margin: 0;">
 							<li style="padding: 12px 0; border-bottom: 1px solid #f0f0f0; color: #374151;">
-								<strong>Human approval is part of the workflow</strong><br>
-								<span style="font-size: 14px; color: #6b7280;">Built-in, not bolted-on human oversight</span>
+								<strong data-i18n="landing.compare.notRight.choose1.title">Human approval is part of the workflow</strong><br>
+								<span style="font-size: 14px; color: #6b7280;" data-i18n="landing.compare.notRight.choose1.desc">Built-in, not bolted-on human oversight</span>
 							</li>
 							<li style="padding: 12px 0; border-bottom: 1px solid #f0f0f0; color: #374151;">
-								<strong>You need offline/air-gapped deployment</strong><br>
-								<span style="font-size: 14px; color: #6b7280;">100% local operation, no cloud dependency</span>
+								<strong data-i18n="landing.compare.notRight.choose2.title">You need offline/air-gapped deployment</strong><br>
+								<span style="font-size: 14px; color: #6b7280;" data-i18n="landing.compare.notRight.choose2.desc">100% local operation, no cloud dependency</span>
 							</li>
 							<li style="padding: 12px 0; border-bottom: 1px solid #f0f0f0; color: #374151;">
-								<strong>Audit trails are non-negotiable</strong><br>
-								<span style="font-size: 14px; color: #6b7280;">Screenshots and logs for every action</span>
+								<strong data-i18n="landing.compare.notRight.choose3.title">Audit trails are non-negotiable</strong><br>
+								<span style="font-size: 14px; color: #6b7280;" data-i18n="landing.compare.notRight.choose3.desc">Screenshots and logs for every action</span>
 							</li>
 							<li style="padding: 12px 0; color: #374151;">
-								<strong>You want to test-run before full batch</strong><br>
-								<span style="font-size: 14px; color: #6b7280;">Run 1, verify, run batch - safely</span>
+								<strong data-i18n="landing.compare.notRight.choose4.title">You want to test-run before full batch</strong><br>
+								<span style="font-size: 14px; color: #6b7280;" data-i18n="landing.compare.notRight.choose4.desc">Run 1, verify, run batch - safely</span>
 							</li>
 						</ul>
 					</div>
@@ -704,12 +704,12 @@
 		<div class="container" style="position: relative; z-index: 2;">
 			<div class="row">
 				<div class="col-lg-8 offset-lg-2 text-center">
-					<h2 style="color: #fff; font-size: 36px; margin-bottom: 20px;">Ready to Try Flyto2?</h2>
-					<p style="color: rgba(255,255,255,0.8); font-size: 18px; margin-bottom: 30px;">Start free. No credit card required. See the difference human oversight makes.</p>
+					<h2 style="color: #fff; font-size: 36px; margin-bottom: 20px;" data-i18n="landing.compare.cta.title">Ready to Try Flyto2?</h2>
+					<p style="color: rgba(255,255,255,0.8); font-size: 18px; margin-bottom: 30px;" data-i18n="landing.compare.cta.description">Start free. No credit card required. See the difference human oversight makes.</p>
 					<a href="pricing.html" class="button-1" style="background: #fff; color: #7c3aed; margin-right: 15px;">
-						<i class="fas fa-rocket" style="margin-right: 8px;"></i> Get Started Free
+						<i class="fas fa-rocket" style="margin-right: 8px;"></i> <span data-i18n="landing.common.cta.getStartedFree">Get Started Free</span>
 					</a>
-					<a href="contact.html" class="button-2">
+					<a href="contact.html" class="button-2" data-i18n="landing.compare.cta.talkToUs">
 						Talk to Us
 					</a>
 				</div>
@@ -729,7 +729,7 @@
 									<img src="assets/img/logo.png" alt="Flyto2" loading="lazy">
 								</a>
 							</div>
-							<p>Automation that works like you do. Record once, replay forever.</p>
+							<p data-i18n="landing.common.footer.tagline">Automation that works like you do. Record once, replay forever.</p>
 							<ul>
 								<li><a href="mailto:info@flyto2.com"><i class="bi bi-envelope-fill"></i> info@flyto2.com</a></li>
 								<li><a href="https://github.com/flytohub"><i class="bi bi-github"></i> github.com/flytohub</a></li>
@@ -738,32 +738,32 @@
 					</div>
 					<div class="col-lg-3 col-sm-6 mb-30">
 						<div class="f-widgets-item">
-							<h3>Product</h3>
+							<h3 data-i18n="landing.common.footer.product">Product</h3>
 							<ul>
-								<li><a href="product.html">Platform</a></li>
-								<li><a href="pricing.html">Pricing</a></li>
-								<li><a href="download.html">Download</a></li>
+								<li><a href="product.html" data-i18n="landing.common.nav.platform">Platform</a></li>
+								<li><a href="pricing.html" data-i18n="landing.common.nav.pricing">Pricing</a></li>
+								<li><a href="download.html" data-i18n="landing.common.nav.download">Download</a></li>
 							</ul>
 						</div>
 					</div>
 					<div class="col-lg-3 col-sm-6 mb-30">
 						<div class="f-widgets-item">
-							<h3>Resources</h3>
+							<h3 data-i18n="landing.common.nav.resources">Resources</h3>
 							<ul>
-								<li><a href="use-cases.html">Use Cases</a></li>
-								<li><a href="compare.html">Compare</a></li>
-								<li><a href="faq.html">FAQ</a></li>
-								<li><a href="contact.html">Contact</a></li>
+								<li><a href="use-cases.html" data-i18n="landing.common.nav.useCases">Use Cases</a></li>
+								<li><a href="compare.html" data-i18n="landing.common.nav.compare">Compare</a></li>
+								<li><a href="faq.html" data-i18n="landing.common.nav.faq">FAQ</a></li>
+								<li><a href="contact.html" data-i18n="landing.common.footer.contact">Contact</a></li>
 							</ul>
 						</div>
 					</div>
 					<div class="col-lg-3 col-sm-6 mb-30">
 						<div class="f-widgets-item">
-							<h3>Company</h3>
+							<h3 data-i18n="landing.common.footer.company">Company</h3>
 							<ul>
-								<li><a href="about.html">About</a></li>
-								<li><a href="philosophy.html">Philosophy</a></li>
-								<li><a href="https://github.com/flytohub/flyto-core">Open Source</a></li>
+								<li><a href="about.html" data-i18n="landing.common.nav.about">About</a></li>
+								<li><a href="philosophy.html" data-i18n="landing.common.nav.philosophy">Philosophy</a></li>
+								<li><a href="https://github.com/flytohub/flyto-core" data-i18n="landing.common.footer.openSource">Open Source</a></li>
 							</ul>
 						</div>
 					</div>

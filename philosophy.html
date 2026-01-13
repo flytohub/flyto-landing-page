@@ -244,22 +244,22 @@
 					<div class="menu d-flex align-items-center justify-content-end">
 						<nav>
 							<ul>
-								<li><a href="index.html">Home</a></li>
-								<li><a href="product.html">Platform</a></li>
+								<li><a href="index.html" data-i18n="landing.common.nav.home">Home</a></li>
+								<li><a href="product.html" data-i18n="landing.common.nav.platform">Platform</a></li>
 								<li class="nav-dropdown">
-									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">Pricing</span>
+									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" data-i18n="landing.common.nav.pricing">Pricing</span>
 									<div class="nav-dropdown-menu">
-										<a href="pricing.html" class="nav-dropdown-item"><i class="bi bi-tag"></i><span>Plans & Pricing</span></a>
-										<a href="buy-offline.html" class="nav-dropdown-item"><i class="bi bi-shield-lock"></i><span>Buy Pro License</span></a>
+										<a href="pricing.html" class="nav-dropdown-item"><i class="bi bi-tag"></i><span data-i18n="landing.common.nav.plansAndPricing">Plans & Pricing</span></a>
+										<a href="buy-offline.html" class="nav-dropdown-item"><i class="bi bi-shield-lock"></i><span data-i18n="landing.common.nav.buyProLicense">Buy Pro License</span></a>
 									</div>
 								</li>
 								<li class="nav-dropdown">
-									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">Resources</span>
+									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" data-i18n="landing.common.nav.resources">Resources</span>
 									<div class="nav-dropdown-menu">
-										<a href="use-cases.html" class="nav-dropdown-item"><i class="bi bi-briefcase"></i><span>Use Cases</span></a>
-										<a href="compare.html" class="nav-dropdown-item"><i class="bi bi-arrow-left-right"></i><span>Compare</span></a>
-										<a href="faq.html" class="nav-dropdown-item"><i class="bi bi-question-circle"></i><span>FAQ</span></a>
-										<a href="contact.html" class="nav-dropdown-item"><i class="bi bi-envelope"></i><span>Contact Us</span></a>
+										<a href="use-cases.html" class="nav-dropdown-item"><i class="bi bi-briefcase"></i><span data-i18n="landing.common.nav.useCases">Use Cases</span></a>
+										<a href="compare.html" class="nav-dropdown-item"><i class="bi bi-arrow-left-right"></i><span data-i18n="landing.common.nav.compare">Compare</span></a>
+										<a href="faq.html" class="nav-dropdown-item"><i class="bi bi-question-circle"></i><span data-i18n="landing.common.nav.faq">FAQ</span></a>
+										<a href="contact.html" class="nav-dropdown-item"><i class="bi bi-envelope"></i><span data-i18n="landing.common.nav.contactUs">Contact Us</span></a>
 									</div>
 								</li>
 							</ul>
@@ -267,7 +267,7 @@
 						<div class="header-auth">
 							<button id="headerLoginBtn" class="btn-header-login">
 								<i class="bi bi-person"></i>
-								<span>Sign In</span>
+								<span data-i18n="landing.common.auth.signIn">Sign In</span>
 							</button>
 							<div id="headerUserDropdown" class="user-dropdown d-none">
 								<div class="user-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">
@@ -278,17 +278,17 @@
 								<div class="user-dropdown-menu">
 									<div class="dropdown-header">
 										<div class="dropdown-header-email" id="dropdownUserEmail"></div>
-										<div class="dropdown-header-label">Flyto2 Account</div>
+										<div class="dropdown-header-label" data-i18n="landing.common.auth.flytoAccount">Flyto2 Account</div>
 									</div>
 									<div class="dropdown-menu-items">
 										<a href="buy-offline.html" class="dropdown-menu-item">
 											<i class="bi bi-key"></i>
-											My Licenses
+											<span data-i18n="landing.common.auth.myLicenses">My Licenses</span>
 										</a>
 										<div class="dropdown-divider"></div>
 										<button class="dropdown-menu-item text-danger" id="btnSignOut">
 											<i class="bi bi-box-arrow-right"></i>
-											Sign Out
+											<span data-i18n="landing.common.auth.signOut">Sign Out</span>
 										</button>
 									</div>
 								</div>
@@ -315,12 +315,12 @@
 				</div>
 				<div id="menu" class="text-left">
 					<ul class="offcanvas_main_menu">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="product.html">Platform</a></li>
-						<li><a href="pricing.html">Pricing</a></li>
-						<li><a href="use-cases.html">Use Cases</a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="contact.html">Contact</a></li>
+						<li><a href="index.html" data-i18n="landing.common.nav.home">Home</a></li>
+						<li><a href="product.html" data-i18n="landing.common.nav.platform">Platform</a></li>
+						<li><a href="pricing.html" data-i18n="landing.common.nav.pricing">Pricing</a></li>
+						<li><a href="use-cases.html" data-i18n="landing.common.nav.useCases">Use Cases</a></li>
+						<li><a href="about.html" data-i18n="landing.common.nav.about">About</a></li>
+						<li><a href="contact.html" data-i18n="landing.common.nav.contact">Contact</a></li>
 					</ul>
 				</div>
 			</div>
@@ -335,14 +335,14 @@
 					<div class="pt-150 pb-120">
 						<nav aria-label="breadcrumb" style="display: inline-block; margin-bottom: 20px;">
 							<ol class="breadcrumb" style="background: rgba(255,255,255,0.1); border-radius: 30px; padding: 10px 20px; margin: 0;">
-								<li class="breadcrumb-item"><a href="index.html" style="color: #a78bfa;">Home</a></li>
-								<li class="breadcrumb-item active" style="color: #fff;">Philosophy</li>
+								<li class="breadcrumb-item"><a href="index.html" style="color: #a78bfa;" data-i18n="landing.common.nav.home">Home</a></li>
+								<li class="breadcrumb-item active" style="color: #fff;" data-i18n="landing.philosophy.breadcrumb">Philosophy</li>
 							</ol>
 						</nav>
-						<h1 class="wow fadeInUp" style="color: #fff; font-size: 52px; font-weight: 800; margin-bottom: 25px;">
+						<h1 class="wow fadeInUp" style="color: #fff; font-size: 52px; font-weight: 800; margin-bottom: 25px;" data-i18n="landing.philosophy.hero.title">
 							Why We Built <span style="color: #a78bfa;">Flyto2</span> Differently
 						</h1>
-						<p class="wow fadeInUp" data-wow-delay="0.1s" style="color: rgba(255,255,255,0.8); font-size: 22px; max-width: 750px; margin: 0 auto; line-height: 1.6;">
+						<p class="wow fadeInUp" data-wow-delay="0.1s" style="color: rgba(255,255,255,0.8); font-size: 22px; max-width: 750px; margin: 0 auto; line-height: 1.6;" data-i18n="landing.philosophy.hero.description">
 							Automation should augment human capability, not replace human judgment. This belief shaped every design decision in Flyto2.
 						</p>
 					</div>
@@ -361,8 +361,8 @@
 		<div class="container">
 			<div class="row mb-50">
 				<div class="col-lg-8 offset-lg-2 text-center">
-					<h2 class="wow fadeInUp" style="font-size: 36px; font-weight: 700;">Three <span class="gradient-text">Core Beliefs</span></h2>
-					<p class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 18px; color: #6b7280; margin-top: 15px;">
+					<h2 class="wow fadeInUp" style="font-size: 36px; font-weight: 700;" data-i18n="landing.philosophy.coreBeliefs.title">Three <span class="gradient-text">Core Beliefs</span></h2>
+					<p class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 18px; color: #6b7280; margin-top: 15px;" data-i18n="landing.philosophy.coreBeliefs.subtitle">
 						These principles guide every feature, every decision, every line of code.
 					</p>
 				</div>
@@ -371,12 +371,12 @@
 				<div class="col-lg-4 mb-30">
 					<div class="principle-card wow fadeInUp" data-wow-delay="0.1s">
 						<div class="principle-number">1</div>
-						<h3 style="font-size: 24px; font-weight: 700; margin-bottom: 15px; color: #1e0a3c;">Human Oversight is a Feature</h3>
-						<p style="color: #6b7280; line-height: 1.8; margin-bottom: 20px;">
+						<h3 style="font-size: 24px; font-weight: 700; margin-bottom: 15px; color: #1e0a3c;" data-i18n="landing.philosophy.coreBeliefs.principle1.title">Human Oversight is a Feature</h3>
+						<p style="color: #6b7280; line-height: 1.8; margin-bottom: 20px;" data-i18n="landing.philosophy.coreBeliefs.principle1.description">
 							Most automation tools treat human intervention as a failure mode. We see it as the point. The best automation knows when to stop and ask.
 						</p>
 						<div style="background: #f8f9ff; border-radius: 12px; padding: 20px;">
-							<p style="margin: 0; font-style: italic; color: #374151;">
+							<p style="margin: 0; font-style: italic; color: #374151;" data-i18n="landing.philosophy.coreBeliefs.principle1.quote">
 								"The goal isn't to remove humans from the loop. It's to remove the tedious work so humans can focus on decisions that matter."
 							</p>
 						</div>
@@ -385,12 +385,12 @@
 				<div class="col-lg-4 mb-30">
 					<div class="principle-card wow fadeInUp" data-wow-delay="0.2s">
 						<div class="principle-number">2</div>
-						<h3 style="font-size: 24px; font-weight: 700; margin-bottom: 15px; color: #1e0a3c;">Workflows Must Be Verifiable</h3>
-						<p style="color: #6b7280; line-height: 1.8; margin-bottom: 20px;">
+						<h3 style="font-size: 24px; font-weight: 700; margin-bottom: 15px; color: #1e0a3c;" data-i18n="landing.philosophy.coreBeliefs.principle2.title">Workflows Must Be Verifiable</h3>
+						<p style="color: #6b7280; line-height: 1.8; margin-bottom: 20px;" data-i18n="landing.philosophy.coreBeliefs.principle2.description">
 							If you can't verify what a workflow did, you can't trust it. Every action should leave a trace. Every step should be auditable. No exceptions.
 						</p>
 						<div style="background: #f8f9ff; border-radius: 12px; padding: 20px;">
-							<p style="margin: 0; font-style: italic; color: #374151;">
+							<p style="margin: 0; font-style: italic; color: #374151;" data-i18n="landing.philosophy.coreBeliefs.principle2.quote">
 								"Trust, but verify. Automation without audit trails is automation you can't defend in a compliance review."
 							</p>
 						</div>
@@ -399,12 +399,12 @@
 				<div class="col-lg-4 mb-30">
 					<div class="principle-card wow fadeInUp" data-wow-delay="0.3s">
 						<div class="principle-number">3</div>
-						<h3 style="font-size: 24px; font-weight: 700; margin-bottom: 15px; color: #1e0a3c;">Local-First, Always</h3>
-						<p style="color: #6b7280; line-height: 1.8; margin-bottom: 20px;">
+						<h3 style="font-size: 24px; font-weight: 700; margin-bottom: 15px; color: #1e0a3c;" data-i18n="landing.philosophy.coreBeliefs.principle3.title">Local-First, Always</h3>
+						<p style="color: #6b7280; line-height: 1.8; margin-bottom: 20px;" data-i18n="landing.philosophy.coreBeliefs.principle3.description">
 							Your data should stay on your infrastructure. Your workflows shouldn't break when the internet does. Control means nothing if it requires an external dependency.
 						</p>
 						<div style="background: #f8f9ff; border-radius: 12px; padding: 20px;">
-							<p style="margin: 0; font-style: italic; color: #374151;">
+							<p style="margin: 0; font-style: italic; color: #374151;" data-i18n="landing.philosophy.coreBeliefs.principle3.quote">
 								"Cloud is convenient until it's not. Offline capability isn't a feature—it's a fundamental right."
 							</p>
 						</div>
@@ -419,7 +419,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-10 offset-lg-1 text-center">
-					<p class="big-quote wow fadeInUp">
+					<p class="big-quote wow fadeInUp" data-i18n="landing.philosophy.quote">
 						Automation without human oversight is like a car without brakes.<br>
 						Fast, yes. Safe? Only until it isn't.
 					</p>
@@ -433,8 +433,8 @@
 		<div class="container">
 			<div class="row mb-50">
 				<div class="col-lg-8 offset-lg-2 text-center">
-					<h2 class="wow fadeInUp" style="font-size: 36px; font-weight: 700;">Why We're Not <span class="gradient-text">"Pure No-Code"</span></h2>
-					<p class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 18px; color: #6b7280; margin-top: 15px;">
+					<h2 class="wow fadeInUp" style="font-size: 36px; font-weight: 700;" data-i18n="landing.philosophy.notNoCode.title">Why We're Not <span class="gradient-text">"Pure No-Code"</span></h2>
+					<p class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 18px; color: #6b7280; margin-top: 15px;" data-i18n="landing.philosophy.notNoCode.subtitle">
 						No-code is great for many things. But it's not the right approach for critical business workflows.
 					</p>
 				</div>
@@ -444,24 +444,24 @@
 					<div class="contrast-box wrong wow fadeInUp" data-wow-delay="0.1s">
 						<h3 style="color: #b91c1c; font-size: 20px; font-weight: 700; margin-bottom: 20px;">
 							<i class="fas fa-times-circle" style="margin-right: 10px;"></i>
-							The No-Code Promise
+							<span data-i18n="landing.philosophy.notNoCode.noCodePromise.title">The No-Code Promise</span>
 						</h3>
 						<ul style="list-style: none; padding: 0; margin: 0;">
 							<li style="padding: 12px 0; border-bottom: 1px solid #fecaca; color: #374151;">
-								<strong>"Anyone can build anything"</strong><br>
-								<span style="font-size: 14px; color: #6b7280;">But can they build it securely? With proper error handling?</span>
+								<strong data-i18n="landing.philosophy.notNoCode.noCodePromise.item1.title">"Anyone can build anything"</strong><br>
+								<span style="font-size: 14px; color: #6b7280;" data-i18n="landing.philosophy.notNoCode.noCodePromise.item1.description">But can they build it securely? With proper error handling?</span>
 							</li>
 							<li style="padding: 12px 0; border-bottom: 1px solid #fecaca; color: #374151;">
-								<strong>"No technical knowledge needed"</strong><br>
-								<span style="font-size: 14px; color: #6b7280;">Until something breaks and no one knows why</span>
+								<strong data-i18n="landing.philosophy.notNoCode.noCodePromise.item2.title">"No technical knowledge needed"</strong><br>
+								<span style="font-size: 14px; color: #6b7280;" data-i18n="landing.philosophy.notNoCode.noCodePromise.item2.description">Until something breaks and no one knows why</span>
 							</li>
 							<li style="padding: 12px 0; border-bottom: 1px solid #fecaca; color: #374151;">
-								<strong>"Connect everything to everything"</strong><br>
-								<span style="font-size: 14px; color: #6b7280;">With no validation that the data flowing is correct</span>
+								<strong data-i18n="landing.philosophy.notNoCode.noCodePromise.item3.title">"Connect everything to everything"</strong><br>
+								<span style="font-size: 14px; color: #6b7280;" data-i18n="landing.philosophy.notNoCode.noCodePromise.item3.description">With no validation that the data flowing is correct</span>
 							</li>
 							<li style="padding: 12px 0; color: #374151;">
-								<strong>"Set it and forget it"</strong><br>
-								<span style="font-size: 14px; color: #6b7280;">The most dangerous phrase in automation</span>
+								<strong data-i18n="landing.philosophy.notNoCode.noCodePromise.item4.title">"Set it and forget it"</strong><br>
+								<span style="font-size: 14px; color: #6b7280;" data-i18n="landing.philosophy.notNoCode.noCodePromise.item4.description">The most dangerous phrase in automation</span>
 							</li>
 						</ul>
 					</div>
@@ -470,24 +470,24 @@
 					<div class="contrast-box right wow fadeInUp" data-wow-delay="0.2s">
 						<h3 style="color: #065f46; font-size: 20px; font-weight: 700; margin-bottom: 20px;">
 							<i class="fas fa-check-circle" style="margin-right: 10px;"></i>
-							The Flyto2 Approach
+							<span data-i18n="landing.philosophy.notNoCode.flytoApproach.title">The Flyto2 Approach</span>
 						</h3>
 						<ul style="list-style: none; padding: 0; margin: 0;">
 							<li style="padding: 12px 0; border-bottom: 1px solid #a7f3d0; color: #374151;">
-								<strong>"Record what you know"</strong><br>
-								<span style="font-size: 14px; color: #6b7280;">You understand the process; Flyto2 captures it</span>
+								<strong data-i18n="landing.philosophy.notNoCode.flytoApproach.item1.title">"Record what you know"</strong><br>
+								<span style="font-size: 14px; color: #6b7280;" data-i18n="landing.philosophy.notNoCode.flytoApproach.item1.description">You understand the process; Flyto2 captures it</span>
 							</li>
 							<li style="padding: 12px 0; border-bottom: 1px solid #a7f3d0; color: #374151;">
-								<strong>"Validation built-in"</strong><br>
-								<span style="font-size: 14px; color: #6b7280;">Every module checks inputs and outputs</span>
+								<strong data-i18n="landing.philosophy.notNoCode.flytoApproach.item2.title">"Validation built-in"</strong><br>
+								<span style="font-size: 14px; color: #6b7280;" data-i18n="landing.philosophy.notNoCode.flytoApproach.item2.description">Every module checks inputs and outputs</span>
 							</li>
 							<li style="padding: 12px 0; border-bottom: 1px solid #a7f3d0; color: #374151;">
-								<strong>"Test before you run"</strong><br>
-								<span style="font-size: 14px; color: #6b7280;">Run 1 item, verify, then batch process</span>
+								<strong data-i18n="landing.philosophy.notNoCode.flytoApproach.item3.title">"Test before you run"</strong><br>
+								<span style="font-size: 14px; color: #6b7280;" data-i18n="landing.philosophy.notNoCode.flytoApproach.item3.description">Run 1 item, verify, then batch process</span>
 							</li>
 							<li style="padding: 12px 0; color: #374151;">
-								<strong>"Stay in control"</strong><br>
-								<span style="font-size: 14px; color: #6b7280;">Pause, verify, resume—always</span>
+								<strong data-i18n="landing.philosophy.notNoCode.flytoApproach.item4.title">"Stay in control"</strong><br>
+								<span style="font-size: 14px; color: #6b7280;" data-i18n="landing.philosophy.notNoCode.flytoApproach.item4.description">Pause, verify, resume—always</span>
 							</li>
 						</ul>
 					</div>
@@ -501,7 +501,7 @@
 		<div class="container">
 			<div class="row mb-50">
 				<div class="col-lg-8 offset-lg-2 text-center">
-					<h2 class="wow fadeInUp" style="font-size: 36px; font-weight: 700;">Why Human Steps Are <span class="gradient-text">Core, Not Optional</span></h2>
+					<h2 class="wow fadeInUp" style="font-size: 36px; font-weight: 700;" data-i18n="landing.philosophy.humanSteps.title">Why Human Steps Are <span class="gradient-text">Core, Not Optional</span></h2>
 				</div>
 			</div>
 			<div class="row">
@@ -512,8 +512,8 @@
 								<i class="fas fa-brain"></i>
 							</div>
 							<div>
-								<h4 style="font-weight: 700; margin-bottom: 10px; color: #1e0a3c;">Judgment Can't Be Automated</h4>
-								<p style="color: #6b7280; margin: 0; line-height: 1.7;">Some decisions require context that no algorithm can capture. "Is this refund request legitimate?" "Should we approve this exception?" These need human judgment.</p>
+								<h4 style="font-weight: 700; margin-bottom: 10px; color: #1e0a3c;" data-i18n="landing.philosophy.humanSteps.belief1.title">Judgment Can't Be Automated</h4>
+								<p style="color: #6b7280; margin: 0; line-height: 1.7;" data-i18n="landing.philosophy.humanSteps.belief1.description">Some decisions require context that no algorithm can capture. "Is this refund request legitimate?" "Should we approve this exception?" These need human judgment.</p>
 							</div>
 						</div>
 						<div class="belief-item d-flex">
@@ -521,8 +521,8 @@
 								<i class="fas fa-balance-scale"></i>
 							</div>
 							<div>
-								<h4 style="font-weight: 700; margin-bottom: 10px; color: #1e0a3c;">Accountability Requires Humans</h4>
-								<p style="color: #6b7280; margin: 0; line-height: 1.7;">When a workflow affects financial records, patient data, or legal documents, someone needs to be accountable. You can't hold a bot responsible.</p>
+								<h4 style="font-weight: 700; margin-bottom: 10px; color: #1e0a3c;" data-i18n="landing.philosophy.humanSteps.belief2.title">Accountability Requires Humans</h4>
+								<p style="color: #6b7280; margin: 0; line-height: 1.7;" data-i18n="landing.philosophy.humanSteps.belief2.description">When a workflow affects financial records, patient data, or legal documents, someone needs to be accountable. You can't hold a bot responsible.</p>
 							</div>
 						</div>
 						<div class="belief-item d-flex">
@@ -530,8 +530,8 @@
 								<i class="fas fa-shield-alt"></i>
 							</div>
 							<div>
-								<h4 style="font-weight: 700; margin-bottom: 10px; color: #1e0a3c;">Errors Should Stop, Not Spread</h4>
-								<p style="color: #6b7280; margin: 0; line-height: 1.7;">One wrong record processed automatically becomes 1,000 wrong records. Human checkpoints catch errors before they cascade.</p>
+								<h4 style="font-weight: 700; margin-bottom: 10px; color: #1e0a3c;" data-i18n="landing.philosophy.humanSteps.belief3.title">Errors Should Stop, Not Spread</h4>
+								<p style="color: #6b7280; margin: 0; line-height: 1.7;" data-i18n="landing.philosophy.humanSteps.belief3.description">One wrong record processed automatically becomes 1,000 wrong records. Human checkpoints catch errors before they cascade.</p>
 							</div>
 						</div>
 						<div class="belief-item d-flex">
@@ -539,8 +539,8 @@
 								<i class="fas fa-users"></i>
 							</div>
 							<div>
-								<h4 style="font-weight: 700; margin-bottom: 10px; color: #1e0a3c;">Trust is Built Incrementally</h4>
-								<p style="color: #6b7280; margin: 0; line-height: 1.7;">You don't trust a new employee with everything on day one. Why would you trust a new automation without verification?</p>
+								<h4 style="font-weight: 700; margin-bottom: 10px; color: #1e0a3c;" data-i18n="landing.philosophy.humanSteps.belief4.title">Trust is Built Incrementally</h4>
+								<p style="color: #6b7280; margin: 0; line-height: 1.7;" data-i18n="landing.philosophy.humanSteps.belief4.description">You don't trust a new employee with everything on day one. Why would you trust a new automation without verification?</p>
 							</div>
 						</div>
 					</div>
@@ -554,27 +554,27 @@
 		<div class="container">
 			<div class="row mb-50">
 				<div class="col-lg-8 offset-lg-2 text-center">
-					<h2 class="wow fadeInUp" style="font-size: 36px; font-weight: 700;">The Result: <span class="gradient-text">Automation That Works With You</span></h2>
+					<h2 class="wow fadeInUp" style="font-size: 36px; font-weight: 700;" data-i18n="landing.philosophy.result.title">The Result: <span class="gradient-text">Automation That Works With You</span></h2>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-10 offset-lg-1">
 					<div class="timeline wow fadeInUp">
 						<div class="timeline-item">
-							<h4 style="font-weight: 700; color: #1e0a3c; margin-bottom: 10px;">You Record</h4>
-							<p style="color: #6b7280; margin: 0;">Show Flyto2 how you work. It learns your process by watching.</p>
+							<h4 style="font-weight: 700; color: #1e0a3c; margin-bottom: 10px;" data-i18n="landing.philosophy.result.step1.title">You Record</h4>
+							<p style="color: #6b7280; margin: 0;" data-i18n="landing.philosophy.result.step1.description">Show Flyto2 how you work. It learns your process by watching.</p>
 						</div>
 						<div class="timeline-item">
-							<h4 style="font-weight: 700; color: #1e0a3c; margin-bottom: 10px;">You Verify</h4>
-							<p style="color: #6b7280; margin: 0;">Run it once, check the results. Make sure it understood correctly.</p>
+							<h4 style="font-weight: 700; color: #1e0a3c; margin-bottom: 10px;" data-i18n="landing.philosophy.result.step2.title">You Verify</h4>
+							<p style="color: #6b7280; margin: 0;" data-i18n="landing.philosophy.result.step2.description">Run it once, check the results. Make sure it understood correctly.</p>
 						</div>
 						<div class="timeline-item">
-							<h4 style="font-weight: 700; color: #1e0a3c; margin-bottom: 10px;">You Set Checkpoints</h4>
-							<p style="color: #6b7280; margin: 0;">Decide where the workflow should pause for approval or verification.</p>
+							<h4 style="font-weight: 700; color: #1e0a3c; margin-bottom: 10px;" data-i18n="landing.philosophy.result.step3.title">You Set Checkpoints</h4>
+							<p style="color: #6b7280; margin: 0;" data-i18n="landing.philosophy.result.step3.description">Decide where the workflow should pause for approval or verification.</p>
 						</div>
 						<div class="timeline-item">
-							<h4 style="font-weight: 700; color: #1e0a3c; margin-bottom: 10px;">You Stay in Control</h4>
-							<p style="color: #6b7280; margin: 0;">At any moment, you can pause, review, rollback, or continue. The automation serves you, not the other way around.</p>
+							<h4 style="font-weight: 700; color: #1e0a3c; margin-bottom: 10px;" data-i18n="landing.philosophy.result.step4.title">You Stay in Control</h4>
+							<p style="color: #6b7280; margin: 0;" data-i18n="landing.philosophy.result.step4.description">At any moment, you can pause, review, rollback, or continue. The automation serves you, not the other way around.</p>
 						</div>
 					</div>
 				</div>
@@ -587,13 +587,13 @@
 		<div class="container" style="position: relative; z-index: 2;">
 			<div class="row">
 				<div class="col-lg-10 offset-lg-1 text-center">
-					<h2 style="color: #fff; font-size: 40px; font-weight: 700; margin-bottom: 30px;">
+					<h2 style="color: #fff; font-size: 40px; font-weight: 700; margin-bottom: 30px;" data-i18n="landing.philosophy.finalStatement.title">
 						Flyto2 doesn't replace you.<br>It removes the parts of your job that shouldn't need you.
 					</h2>
-					<p style="color: rgba(255,255,255,0.8); font-size: 20px; margin-bottom: 40px;">
+					<p style="color: rgba(255,255,255,0.8); font-size: 20px; margin-bottom: 40px;" data-i18n="landing.philosophy.finalStatement.description">
 						That's the difference. That's why we built it this way.
 					</p>
-					<a href="pricing.html" class="button-1" style="background: #fff; color: #7c3aed;">
+					<a href="pricing.html" class="button-1" style="background: #fff; color: #7c3aed;" data-i18n="landing.philosophy.finalStatement.cta">
 						<i class="fas fa-rocket" style="margin-right: 8px;"></i> Try Flyto2 Free
 					</a>
 				</div>
@@ -613,41 +613,41 @@
 									<img src="assets/img/logo.png" alt="Flyto2" loading="lazy">
 								</a>
 							</div>
-							<p>Automation that works like you do. Record once, replay forever.</p>
+							<p data-i18n="landing.common.footer.tagline">Automation that works like you do. Record once, replay forever.</p>
 							<ul>
-								<li><a href="mailto:info@flyto2.com"><i class="bi bi-envelope-fill"></i> info@flyto2.com</a></li>
+								<li><a href="mailto:info@flyto2.com"><i class="bi bi-envelope-fill"></i> <span data-i18n="landing.common.footer.contact">info@flyto2.com</span></a></li>
 								<li><a href="https://github.com/flytohub"><i class="bi bi-github"></i> github.com/flytohub</a></li>
 							</ul>
 						</div>
 					</div>
 					<div class="col-lg-3 col-sm-6 mb-30">
 						<div class="f-widgets-item">
-							<h3>Product</h3>
+							<h3 data-i18n="landing.common.footer.product">Product</h3>
 							<ul>
-								<li><a href="product.html">Platform</a></li>
-								<li><a href="pricing.html">Pricing</a></li>
-								<li><a href="download.html">Download</a></li>
+								<li><a href="product.html" data-i18n="landing.common.nav.platform">Platform</a></li>
+								<li><a href="pricing.html" data-i18n="landing.common.nav.pricing">Pricing</a></li>
+								<li><a href="download.html" data-i18n="landing.common.footer.download">Download</a></li>
 							</ul>
 						</div>
 					</div>
 					<div class="col-lg-3 col-sm-6 mb-30">
 						<div class="f-widgets-item">
-							<h3>Resources</h3>
+							<h3 data-i18n="landing.common.nav.resources">Resources</h3>
 							<ul>
-								<li><a href="use-cases.html">Use Cases</a></li>
-								<li><a href="compare.html">Compare</a></li>
-								<li><a href="faq.html">FAQ</a></li>
-								<li><a href="contact.html">Contact</a></li>
+								<li><a href="use-cases.html" data-i18n="landing.common.nav.useCases">Use Cases</a></li>
+								<li><a href="compare.html" data-i18n="landing.common.nav.compare">Compare</a></li>
+								<li><a href="faq.html" data-i18n="landing.common.nav.faq">FAQ</a></li>
+								<li><a href="contact.html" data-i18n="landing.common.nav.contact">Contact</a></li>
 							</ul>
 						</div>
 					</div>
 					<div class="col-lg-3 col-sm-6 mb-30">
 						<div class="f-widgets-item">
-							<h3>Company</h3>
+							<h3 data-i18n="landing.common.footer.company">Company</h3>
 							<ul>
-								<li><a href="about.html">About</a></li>
-								<li><a href="philosophy.html">Philosophy</a></li>
-								<li><a href="https://github.com/flytohub/flyto-core">Open Source</a></li>
+								<li><a href="about.html" data-i18n="landing.common.nav.about">About</a></li>
+								<li><a href="philosophy.html" data-i18n="landing.philosophy.breadcrumb">Philosophy</a></li>
+								<li><a href="https://github.com/flytohub/flyto-core" data-i18n="landing.common.footer.openSource">Open Source</a></li>
 							</ul>
 						</div>
 					</div>
