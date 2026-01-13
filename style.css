@@ -3311,8 +3311,14 @@ h2.accordion-header {
 .offcanvas_main_menu > li ul li.menu-item-has-children.menu-open span.menu-expand {
   transform: rotate(180deg);
 }
+.offcanvas_main_menu {
+  list-style: none;
+  margin: 0;
+  padding: 0 20px;
+}
 .offcanvas_main_menu li {
   position: relative;
+  display: block;
 }
 .offcanvas_main_menu li:last-child {
   margin: 0;
@@ -3397,6 +3403,7 @@ h2.accordion-header {
 }
 @media only screen and (max-width: 767px) {
   .canvas_open {
+    position: absolute;
     right: 20px;
     top: 27px;
     display: block;
