@@ -394,7 +394,7 @@
 			<div class="row">
 				<div class="col-lg-8 offset-lg-2">
 					<div class="info-box-offline wow fadeInUp">
-						<h5><i class="bi bi-info-circle"></i> <span data-i18n="landing.languagepacks.howto.title">How to Use Language Packs</span></h5>
+						<h2><i class="bi bi-info-circle"></i> <span data-i18n="landing.languagepacks.howto.title">How to Use Language Packs</span></h2>
 						<p>
 							<strong>1.</strong> <span data-i18n="landing.languagepacks.howto.step1">Download the language pack file (.json) below</span><br>
 							<strong>2.</strong> <span data-i18n="landing.languagepacks.howto.step2">Open Flyto2 Desktop App (offline version)</span><br>
@@ -538,8 +538,9 @@
 
 	<script>
 		// CDN endpoints (primary + fallback)
+		// Use release tag for cache stability (v1.x.x)
 		const CDN_ENDPOINTS = [
-			'https://cdn.jsdelivr.net/gh/flytohub/flyto-i18n@main',
+			'https://cdn.jsdelivr.net/gh/flytohub/flyto-i18n@v1.1.0',
 			'https://api.flyto2.net/i18n'
 		];
 
