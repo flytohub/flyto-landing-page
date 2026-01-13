@@ -1,0 +1,111 @@
+name: i18n Sync & Build
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '*.html'
+      - 'scripts/**'
+  workflow_dispatch:
+
+jobs:
+  extract-keys:
+    name: Extract i18n Keys
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout landing-page
+        uses: actions/checkout@v4
+        with:
+          path: flyto-landing-page
+
+      - name: Checkout flyto-i18n
+        uses: actions/checkout@v4
+        with:
+          repository: flytohub/flyto-i18n
+          path: flyto-i18n
+          token: ${{ secrets.I18N_REPO_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Extract keys and sync to i18n
+        run: |
+          cd flyto-landing-page
+          node scripts/extract-keys.js
+
+      - name: Check for changes in i18n
+        id: check-changes
+        run: |
+          cd flyto-i18n
+          if [[ -n $(git status --porcelain) ]]; then
+            echo "changes=true" >> $GITHUB_OUTPUT
+          else
+            echo "changes=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push to flyto-i18n
+        if: steps.check-changes.outputs.changes == 'true'
+        run: |
+          cd flyto-i18n
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "feat(landing): sync i18n keys from landing-page"
+          git push
+
+  build:
+    name: Build Multi-language HTML
+    runs-on: ubuntu-latest
+    needs: extract-keys
+    steps:
+      - name: Checkout landing-page
+        uses: actions/checkout@v4
+        with:
+          path: flyto-landing-page
+
+      - name: Checkout flyto-i18n
+        uses: actions/checkout@v4
+        with:
+          repository: flytohub/flyto-i18n
+          path: flyto-i18n
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build multi-language HTML
+        run: |
+          cd flyto-landing-page
+          node scripts/build-i18n.js
+
+      - name: Check for built files
+        id: check-build
+        run: |
+          cd flyto-landing-page
+          if [[ -d "zh" ]] || [[ -d "ja" ]]; then
+            echo "built=true" >> $GITHUB_OUTPUT
+          else
+            echo "built=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit built files
+        if: steps.check-build.outputs.built == 'true'
+        run: |
+          cd flyto-landing-page
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add zh/ ja/ 2>/dev/null || true
+          if [[ -n $(git status --porcelain) ]]; then
+            git commit -m "build: generate multi-language HTML"
+            git push
+          fi
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./flyto-landing-page
+          publish_branch: gh-pages

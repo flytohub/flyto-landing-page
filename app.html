@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Download App - Flyto2 Desktop Application</title>
-	<meta name="description" content="Download Flyto2 desktop application for macOS, Windows, and Linux. Automatic system detection.">
+	<title>Flyto2 Desktop App - Free Download for Mac, Windows, Linux</title>
+	<meta name="description" content="Download the Flyto2 visual automation app. Point-and-click interface, no coding needed. Auto-detects your OS. Record workflows in minutes. 100% free to start.">
 
 	<!-- Content Security Policy -->
 	<meta http-equiv="Content-Security-Policy" content="
@@ -29,15 +29,15 @@
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="https://flyto2.com/app.html">
-	<meta property="og:title" content="Download App - Flyto2 Desktop Application">
-	<meta property="og:description" content="Download Flyto2 desktop application for macOS, Windows, and Linux. Automatic system detection.">
+	<meta property="og:title" content="Flyto2 Desktop App - Free Download for Mac, Windows, Linux">
+	<meta property="og:description" content="Download the Flyto2 visual automation app. Point-and-click interface, no coding needed. Auto-detects your OS. 100% free to start.">
 	<meta property="og:image" content="https://flyto2.com/assets/img/og-image.png">
 	<meta property="og:site_name" content="Flyto2">
 
 	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:title" content="Download App - Flyto2 Desktop Application">
-	<meta name="twitter:description" content="Download Flyto2 desktop application for macOS, Windows, and Linux.">
+	<meta name="twitter:title" content="Flyto2 Desktop App - Free Download">
+	<meta name="twitter:description" content="Visual automation app for Mac, Windows, Linux. Point-and-click, no coding needed. Free to start.">
 	<meta name="twitter:image" content="https://flyto2.com/assets/img/og-image.png">
 
 	<link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
@@ -430,6 +430,52 @@
 			}
 		}
 	</style>
+
+	<!-- Structured Data - SoftwareApplication -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "SoftwareApplication",
+		"name": "Flyto2 Desktop",
+		"operatingSystem": "Windows, macOS, Linux",
+		"applicationCategory": "BusinessApplication",
+		"description": "Desktop application for workflow automation. Record once, replay forever. Visual interface with automatic system detection.",
+		"offers": {
+			"@type": "Offer",
+			"price": "0",
+			"priceCurrency": "USD",
+			"description": "Free version available"
+		},
+		"author": {
+			"@type": "Organization",
+			"name": "Flyto2",
+			"url": "https://flyto2.com"
+		},
+		"downloadUrl": "https://flyto2.com/app.html",
+		"screenshot": "https://flyto2.com/assets/img/dashbord.png"
+	}
+	</script>
+	<!-- Structured Data - BreadcrumbList -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		"itemListElement": [
+			{
+				"@type": "ListItem",
+				"position": 1,
+				"name": "Home",
+				"item": "https://flyto2.com/"
+			},
+			{
+				"@type": "ListItem",
+				"position": 2,
+				"name": "Desktop App",
+				"item": "https://flyto2.com/app.html"
+			}
+		]
+	}
+	</script>
 </head>
 <body>
 	<!-- Skip Link for Accessibility -->
@@ -465,33 +511,34 @@
 					<div class="menu d-flex align-items-center justify-content-end">
 						<nav>
 							<ul>
-								<li><a href="index.html">Home</a></li>
+								<li><a href="index.html" data-i18n="landing.common.nav.home">Home</a></li>
 								<li class="nav-dropdown">
-									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">Pricing</span>
+									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" data-i18n="landing.common.nav.pricing">Pricing</span>
 									<div class="nav-dropdown-menu">
-										<a href="pricing.html" class="nav-dropdown-item"><i class="bi bi-tag"></i>Plans & Pricing</a>
-										<a href="buy-offline.html" class="nav-dropdown-item"><i class="bi bi-shield-lock"></i>Buy Pro License</a>
+										<a href="pricing.html" class="nav-dropdown-item"><i class="bi bi-tag"></i><span data-i18n="landing.common.nav.plansAndPricing">Plans & Pricing</span></a>
+										<a href="buy-offline.html" class="nav-dropdown-item"><i class="bi bi-shield-lock"></i><span data-i18n="landing.common.nav.buyProLicense">Buy Pro License</span></a>
 									</div>
 								</li>
 								<li class="nav-dropdown active">
-									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">Download</span>
+									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" data-i18n="landing.common.nav.download">Download</span>
 									<div class="nav-dropdown-menu">
-										<a href="download.html" class="nav-dropdown-item"><i class="bi bi-terminal"></i>Flyto Core (CLI)</a>
-										<a href="app.html" class="nav-dropdown-item"><i class="bi bi-window"></i>Desktop App</a>
+										<a href="download.html" class="nav-dropdown-item"><i class="bi bi-terminal"></i><span data-i18n="landing.common.nav.flytoCli">Flyto Core (CLI)</span></a>
+										<a href="app.html" class="nav-dropdown-item"><i class="bi bi-window"></i><span data-i18n="landing.common.nav.desktopApp">Desktop App</span></a>
+										<a href="language-packs.html" class="nav-dropdown-item"><i class="bi bi-translate"></i><span data-i18n="landing.common.nav.languagePacks">Language Packs</span></a>
 									</div>
 								</li>
 								<li class="nav-dropdown">
-									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">Resources</span>
+									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" data-i18n="landing.common.nav.resources">Resources</span>
 									<div class="nav-dropdown-menu">
-										<a href="https://github.com/flytohub/flyto-core" class="nav-dropdown-item"><i class="bi bi-book"></i>Documentation</a>
-										<a href="faq.html" class="nav-dropdown-item"><i class="bi bi-question-circle"></i>FAQ</a>
-										<a href="contact.html" class="nav-dropdown-item"><i class="bi bi-envelope"></i>Contact Us</a>
+										<a href="https://github.com/flytohub/flyto-core" class="nav-dropdown-item"><i class="bi bi-book"></i><span data-i18n="landing.common.nav.documentation">Documentation</span></a>
+										<a href="faq.html" class="nav-dropdown-item"><i class="bi bi-question-circle"></i><span data-i18n="landing.common.nav.faq">FAQ</span></a>
+										<a href="contact.html" class="nav-dropdown-item"><i class="bi bi-envelope"></i><span data-i18n="landing.common.nav.contactUs">Contact Us</span></a>
 									</div>
 								</li>
 							</ul>
 						</nav>
 						<div class="header-auth">
-							<button id="headerLoginBtn" class="btn-header-login"><i class="bi bi-person"></i><span>Sign In</span></button>
+							<button id="headerLoginBtn" class="btn-header-login"><i class="bi bi-person"></i><span data-i18n="landing.common.nav.signIn">Sign In</span></button>
 							<div id="headerUserDropdown" class="user-dropdown d-none">
 								<div class="user-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">
 									<div class="user-avatar" id="headerUserAvatar">U</div>
@@ -499,11 +546,11 @@
 									<i class="bi bi-chevron-down dropdown-arrow"></i>
 								</div>
 								<div class="user-dropdown-menu">
-									<div class="dropdown-header"><div class="dropdown-header-email" id="dropdownUserEmail"></div><div class="dropdown-header-label">Flyto2 Account</div></div>
+									<div class="dropdown-header"><div class="dropdown-header-email" id="dropdownUserEmail"></div><div class="dropdown-header-label" data-i18n="landing.common.nav.flytoAccount">Flyto2 Account</div></div>
 									<div class="dropdown-menu-items">
-										<a href="buy-offline.html" class="dropdown-menu-item"><i class="bi bi-key"></i>My Licenses</a>
+										<a href="buy-offline.html" class="dropdown-menu-item"><i class="bi bi-key"></i><span data-i18n="landing.common.nav.myLicenses">My Licenses</span></a>
 										<div class="dropdown-divider"></div>
-										<button class="dropdown-menu-item text-danger" id="btnSignOut"><i class="bi bi-box-arrow-right"></i>Sign Out</button>
+										<button class="dropdown-menu-item text-danger" id="btnSignOut"><i class="bi bi-box-arrow-right"></i><span data-i18n="landing.common.nav.signOut">Sign Out</span></button>
 									</div>
 								</div>
 							</div>
@@ -528,13 +575,13 @@
 				</div>
 				<div id="menu" class="text-left">
 					<ul class="offcanvas_main_menu">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="pricing.html">Pricing</a></li>
-						<li><a href="buy-offline.html">Buy Pro</a></li>
-						<li><a href="download.html">Download</a></li>
-						<li class="active"><a href="app.html">Get App</a></li>
-						<li><a href="https://github.com/flytohub/flyto-core">Docs</a></li>
-						<li><a href="contact.html">Contact</a></li>
+						<li><a href="index.html" data-i18n="landing.common.nav.home">Home</a></li>
+						<li><a href="pricing.html" data-i18n="landing.common.nav.pricing">Pricing</a></li>
+						<li><a href="buy-offline.html" data-i18n="landing.common.nav.buyProLicense">Buy Pro</a></li>
+						<li><a href="download.html" data-i18n="landing.common.nav.download">Download</a></li>
+						<li class="active"><a href="app.html" data-i18n="landing.common.nav.desktopApp">Get App</a></li>
+						<li><a href="https://github.com/flytohub/flyto-core" data-i18n="landing.common.nav.documentation">Docs</a></li>
+						<li><a href="contact.html" data-i18n="landing.common.nav.contactUs">Contact</a></li>
 					</ul>
 				</div>
 			</div>
@@ -555,8 +602,8 @@
 		<div class="container" style="position: relative; z-index: 2;">
 			<div class="row">
 				<div class="col-lg-10 offset-lg-1 text-center">
-					<h1 class="hero-title wow fadeInUp">Download Flyto2</h1>
-					<p class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 20px; color: #c4b5fd; margin-bottom: 30px;">
+					<h1 class="hero-title wow fadeInUp" data-i18n="landing.app.hero.title">Download Flyto2</h1>
+					<p class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 20px; color: #c4b5fd; margin-bottom: 30px;" data-i18n="landing.app.hero.subtitle">
 						Automate your browser workflows. Works offline, your data stays private.
 					</p>
 
@@ -564,7 +611,7 @@
 					<div class="wow fadeInUp" data-wow-delay="0.2s">
 						<span class="detected-badge" id="detected-badge">
 							<i class="fas fa-microchip"></i>
-							<span id="detected-os">Detecting your system...</span>
+							<span id="detected-os" data-i18n="landing.app.hero.detecting">Detecting your system...</span>
 						</span>
 					</div>
 
@@ -573,15 +620,15 @@
 						<a href="#" class="btn-main-download" id="main-download-btn">
 							<i class="fas fa-download"></i>
 							<div>
-								<div id="download-btn-text">Download for Your System</div>
-								<div class="download-info" id="download-btn-info">Detecting...</div>
+								<div id="download-btn-text" data-i18n="landing.app.hero.downloadFor">Download for Your System</div>
+								<div class="download-info" id="download-btn-info" data-i18n="landing.app.hero.detectingInfo">Detecting...</div>
 							</div>
 						</a>
 					</div>
 
 					<p class="wow fadeInUp" data-wow-delay="0.4s" style="margin-top: 25px; color: rgba(255,255,255,0.6); font-size: 14px;">
 						<i class="fas fa-shield-alt" style="margin-right: 5px;"></i>
-						Free to download. Pro license required for full features.
+						<span data-i18n="landing.app.hero.proNote">Free to download. Pro license required for full features.</span>
 					</p>
 				</div>
 			</div>
@@ -599,8 +646,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 text-center">
-					<h2 class="section-title wow fadeInUp">All Platforms</h2>
-					<p class="section-subtitle wow fadeInUp" data-wow-delay="0.1s">Choose your operating system and architecture</p>
+					<h2 class="section-title wow fadeInUp" data-i18n="landing.app.platforms.title">All Platforms</h2>
+					<p class="section-subtitle wow fadeInUp" data-wow-delay="0.1s" data-i18n="landing.app.platforms.subtitle">Choose your operating system and architecture</p>
 				</div>
 			</div>
 			<div class="row" id="platform-cards">
@@ -697,7 +744,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 text-center mb-50">
-					<h2 class="section-title wow fadeInUp">System Requirements</h2>
+					<h2 class="section-title wow fadeInUp" data-i18n="landing.app.requirements.title">System Requirements</h2>
 				</div>
 			</div>
 			<div class="row">
@@ -743,8 +790,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 text-center mb-50">
-					<h2 class="section-title wow fadeInUp">Installation Guide</h2>
-					<p class="section-subtitle wow fadeInUp" data-wow-delay="0.1s">Get up and running in minutes</p>
+					<h2 class="section-title wow fadeInUp" data-i18n="landing.app.install.title">Installation Guide</h2>
+					<p class="section-subtitle wow fadeInUp" data-wow-delay="0.1s" data-i18n="landing.app.install.subtitle">Get up and running in minutes</p>
 				</div>
 			</div>
 			<div class="row">
@@ -752,29 +799,29 @@
 					<div class="install-step wow fadeInUp" data-wow-delay="0.1s">
 						<div class="step-number">1</div>
 						<div class="step-content">
-							<h5>Download the installer</h5>
-							<p>Choose the version for your operating system above</p>
+							<h5 data-i18n="landing.app.install.step1">Download the installer</h5>
+							<p data-i18n="landing.app.install.step1Desc">Choose the version for your operating system above</p>
 						</div>
 					</div>
 					<div class="install-step wow fadeInUp" data-wow-delay="0.2s">
 						<div class="step-number">2</div>
 						<div class="step-content">
-							<h5>Run the installer</h5>
-							<p>Double-click the downloaded file and follow the prompts</p>
+							<h5 data-i18n="landing.app.install.step2">Run the installer</h5>
+							<p data-i18n="landing.app.install.step2Desc">Double-click the downloaded file and follow the prompts</p>
 						</div>
 					</div>
 					<div class="install-step wow fadeInUp" data-wow-delay="0.3s">
 						<div class="step-number">3</div>
 						<div class="step-content">
-							<h5>Launch Flyto2</h5>
-							<p>Open the app and start automating your workflows</p>
+							<h5 data-i18n="landing.app.install.step3">Launch Flyto2</h5>
+							<p data-i18n="landing.app.install.step3Desc">Open the app and start automating your workflows</p>
 						</div>
 					</div>
 					<div class="install-step wow fadeInUp" data-wow-delay="0.4s">
 						<div class="step-number">4</div>
 						<div class="step-content">
-							<h5>Activate Pro (Optional)</h5>
-							<p>Import your license file to unlock all features</p>
+							<h5 data-i18n="landing.app.install.step4">Activate Pro (Optional)</h5>
+							<p data-i18n="landing.app.install.step4Desc">Import your license file to unlock all features</p>
 						</div>
 					</div>
 				</div>
@@ -794,7 +841,7 @@
 									<img src="assets/img/logo.png" alt="Flyto2" loading="lazy" />
 								</a>
 							</div>
-							<p style="color: #666; margin: 20px 0;">Automation that works like you do. Record once, replay forever.</p>
+							<p style="color: #666; margin: 20px 0;" data-i18n="landing.common.footer.tagline">Automation that works like you do. Record once, replay forever.</p>
 							<div class="f-social">
 								<a href="https://github.com/flytohub"><i class="fab fa-github"></i></a>
 							</div>
@@ -802,31 +849,31 @@
 					</div>
 					<div class="col-lg-2 col-sm-6 mb-30">
 						<div class="f-widgets-item">
-							<h3>Product</h3>
+							<h3 data-i18n="landing.common.footer.product">Product</h3>
 							<ul>
-								<li><a href="app.html">Download App</a></li>
-								<li><a href="pricing.html">Pricing</a></li>
-								<li><a href="buy-offline.html">Buy Pro</a></li>
+								<li><a href="app.html" data-i18n="landing.common.nav.desktopApp">Download App</a></li>
+								<li><a href="pricing.html" data-i18n="landing.common.nav.pricing">Pricing</a></li>
+								<li><a href="buy-offline.html" data-i18n="landing.common.nav.buyProLicense">Buy Pro</a></li>
 							</ul>
 						</div>
 					</div>
 					<div class="col-lg-3 col-sm-6 mb-30">
 						<div class="f-widgets-item">
-							<h3>Resources</h3>
+							<h3 data-i18n="landing.common.nav.resources">Resources</h3>
 							<ul>
-								<li><a href="https://github.com/flytohub/flyto-core">Documentation</a></li>
-								<li><a href="download.html">Developer Downloads</a></li>
-								<li><a href="faq.html">FAQ</a></li>
+								<li><a href="https://github.com/flytohub/flyto-core" data-i18n="landing.common.nav.documentation">Documentation</a></li>
+								<li><a href="download.html" data-i18n="landing.common.nav.download">Developer Downloads</a></li>
+								<li><a href="faq.html" data-i18n="landing.common.nav.faq">FAQ</a></li>
 							</ul>
 						</div>
 					</div>
 					<div class="col-lg-3 col-sm-6 mb-30">
 						<div class="f-widgets-item">
-							<h3>Open Source</h3>
+							<h3 data-i18n="landing.common.footer.openSource">Open Source</h3>
 							<ul>
 								<li><a href="https://github.com/flytohub/flyto-core">flyto-core</a></li>
-								<li><a href="https://github.com/flytohub/flyto-core/blob/main/CONTRIBUTING.md">Contributing</a></li>
-								<li><a href="https://github.com/flytohub/flyto-core/blob/main/LICENSE">License</a></li>
+								<li><a href="https://github.com/flytohub/flyto-core/blob/main/CONTRIBUTING.md" data-i18n="landing.common.footer.contributing">Contributing</a></li>
+								<li><a href="https://github.com/flytohub/flyto-core/blob/main/LICENSE" data-i18n="landing.common.footer.license">License</a></li>
 							</ul>
 						</div>
 					</div>
@@ -838,7 +885,7 @@
 				<div class="row">
 					<div class="col-lg-6 align-self-center">
 						<div class="copy-f-text">
-							<p>Copyright ©2025 <a href="index.html">Flyto2</a>. All Rights Reserved</p>
+							<p data-i18n="landing.common.footer.copyright">Copyright ©2025 <a href="index.html">Flyto2</a>. All Rights Reserved</p>
 						</div>
 					</div>
 					<div class="col-lg-6">

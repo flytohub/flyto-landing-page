@@ -1,0 +1,50 @@
+name: Rebuild on i18n Update
+
+on:
+  repository_dispatch:
+    types: [i18n-updated]
+  workflow_dispatch:
+
+jobs:
+  rebuild:
+    name: Rebuild with Latest Translations
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout landing-page
+        uses: actions/checkout@v4
+        with:
+          path: flyto-landing-page
+
+      - name: Checkout flyto-i18n
+        uses: actions/checkout@v4
+        with:
+          repository: flytohub/flyto-i18n
+          path: flyto-i18n
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build multi-language HTML
+        run: |
+          cd flyto-landing-page
+          node scripts/build-i18n.js
+
+      - name: Commit and push
+        run: |
+          cd flyto-landing-page
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add zh/ ja/ 2>/dev/null || true
+          if [[ -n $(git status --porcelain) ]]; then
+            git commit -m "build: update translations from flyto-i18n"
+            git push
+          fi
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./flyto-landing-page
+          publish_branch: gh-pages
