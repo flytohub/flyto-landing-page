@@ -688,7 +688,7 @@
 			</div>
 			<div class="row" id="platform-cards">
 				<!-- macOS Apple Silicon -->
-				<div class="col-lg-3 col-md-6 mb-30">
+				<div class="col-lg-4 col-md-6 mb-30">
 					<div class="platform-card wow fadeInUp" data-wow-delay="0.1s" id="card-macos-arm">
 						<div class="platform-icon">
 							<i class="fab fa-apple"></i>
@@ -701,23 +701,9 @@
 						</a>
 					</div>
 				</div>
-				<!-- macOS Intel -->
-				<div class="col-lg-3 col-md-6 mb-30">
-					<div class="platform-card wow fadeInUp" data-wow-delay="0.2s" id="card-macos-intel">
-						<div class="platform-icon">
-							<i class="fab fa-apple"></i>
-						</div>
-						<div class="platform-name">macOS</div>
-						<div class="platform-arch">Intel (x64)</div>
-						<div class="platform-size">~150 MB</div>
-						<a href="https://github.com/flytohub/flyto-cloud/releases/latest/download/flyto-desktop-macos-x64.dmg" class="btn-platform-download" data-platform="macos-x64">
-							<i class="fas fa-download"></i> Download .dmg
-						</a>
-					</div>
-				</div>
 				<!-- Windows -->
-				<div class="col-lg-3 col-md-6 mb-30">
-					<div class="platform-card wow fadeInUp" data-wow-delay="0.3s" id="card-windows">
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="platform-card wow fadeInUp" data-wow-delay="0.2s" id="card-windows">
 						<div class="platform-icon">
 							<i class="fab fa-windows"></i>
 						</div>
@@ -730,8 +716,8 @@
 					</div>
 				</div>
 				<!-- Linux x64 -->
-				<div class="col-lg-3 col-md-6 mb-30">
-					<div class="platform-card wow fadeInUp" data-wow-delay="0.4s" id="card-linux-x64">
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="platform-card wow fadeInUp" data-wow-delay="0.3s" id="card-linux-x64">
 						<div class="platform-icon">
 							<i class="fab fa-linux"></i>
 						</div>
@@ -944,7 +930,6 @@
 		// Download URLs mapping
 		const DOWNLOAD_URLS = {
 			'macos-arm64': `${RELEASE_BASE}/flyto-desktop-macos-arm64.dmg`,
-			'macos-x64': `${RELEASE_BASE}/flyto-desktop-macos-x64.dmg`,
 			'windows-x64': `${RELEASE_BASE}/flyto-desktop-windows-x64.zip`,
 			'linux-x64': `${RELEASE_BASE}/flyto-desktop-linux-x64.tar.gz`
 		};
@@ -972,32 +957,11 @@
 				fileInfo = '.zip archive';
 			} else if (userAgent.includes('mac')) {
 				os = 'macos';
-				osName = 'macOS';
-				// Detect Apple Silicon
-				try {
-					const canvas = document.createElement('canvas');
-					const gl = canvas.getContext('webgl');
-					const debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
-					const renderer = gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL);
-					if (renderer.includes('Apple')) {
-						arch = 'arm64';
-						osName = 'macOS (Apple Silicon)';
-						cardId = 'card-macos-arm';
-						downloadUrl = DOWNLOAD_URLS['macos-arm64'];
-					} else {
-						arch = 'x64';
-						osName = 'macOS (Intel)';
-						cardId = 'card-macos-intel';
-						downloadUrl = DOWNLOAD_URLS['macos-x64'];
-					}
-				} catch (e) {
-					// Fallback: assume Apple Silicon for newer Macs
-					arch = 'arm64';
-					osName = 'macOS (Apple Silicon)';
-					cardId = 'card-macos-arm';
-					downloadUrl = DOWNLOAD_URLS['macos-arm64'];
-				}
-				downloadText = 'Download for ' + osName;
+				osName = 'macOS (Apple Silicon)';
+				arch = 'arm64';
+				cardId = 'card-macos-arm';
+				downloadUrl = DOWNLOAD_URLS['macos-arm64'];
+				downloadText = 'Download for macOS';
 				fileInfo = '.dmg installer';
 			} else if (userAgent.includes('linux')) {
 				os = 'linux';
