@@ -688,88 +688,72 @@
 			</div>
 			<div class="row" id="platform-cards">
 				<!-- macOS Apple Silicon -->
-				<div class="col-lg-4 col-md-6 mb-30">
+				<div class="col-lg-3 col-md-6 mb-30">
 					<div class="platform-card wow fadeInUp" data-wow-delay="0.1s" id="card-macos-arm">
 						<div class="platform-icon">
 							<i class="fab fa-apple"></i>
 						</div>
 						<div class="platform-name">macOS</div>
 						<div class="platform-arch">Apple Silicon (M1/M2/M3)</div>
-						<div class="platform-size">~85 MB</div>
-						<a href="#" class="btn-platform-download" data-platform="macos-arm64">
+						<div class="platform-size">~150 MB</div>
+						<a href="https://github.com/flytohub/flyto-cloud/releases/latest/download/flyto-desktop-macos-arm64.dmg" class="btn-platform-download" data-platform="macos-arm64">
 							<i class="fas fa-download"></i> Download .dmg
 						</a>
 					</div>
 				</div>
 				<!-- macOS Intel -->
-				<div class="col-lg-4 col-md-6 mb-30">
+				<div class="col-lg-3 col-md-6 mb-30">
 					<div class="platform-card wow fadeInUp" data-wow-delay="0.2s" id="card-macos-intel">
 						<div class="platform-icon">
 							<i class="fab fa-apple"></i>
 						</div>
 						<div class="platform-name">macOS</div>
 						<div class="platform-arch">Intel (x64)</div>
-						<div class="platform-size">~90 MB</div>
-						<a href="#" class="btn-platform-download" data-platform="macos-x64">
+						<div class="platform-size">~150 MB</div>
+						<a href="https://github.com/flytohub/flyto-cloud/releases/latest/download/flyto-desktop-macos-x64.dmg" class="btn-platform-download" data-platform="macos-x64">
 							<i class="fas fa-download"></i> Download .dmg
 						</a>
 					</div>
 				</div>
 				<!-- Windows -->
-				<div class="col-lg-4 col-md-6 mb-30">
+				<div class="col-lg-3 col-md-6 mb-30">
 					<div class="platform-card wow fadeInUp" data-wow-delay="0.3s" id="card-windows">
 						<div class="platform-icon">
 							<i class="fab fa-windows"></i>
 						</div>
 						<div class="platform-name">Windows</div>
 						<div class="platform-arch">64-bit (x64)</div>
-						<div class="platform-size">~75 MB</div>
-						<a href="#" class="btn-platform-download" data-platform="windows-x64">
-							<i class="fas fa-download"></i> Download .exe
+						<div class="platform-size">~120 MB</div>
+						<a href="https://github.com/flytohub/flyto-cloud/releases/latest/download/flyto-desktop-windows-x64.zip" class="btn-platform-download" data-platform="windows-x64">
+							<i class="fas fa-download"></i> Download .zip
 						</a>
 					</div>
 				</div>
 				<!-- Linux x64 -->
-				<div class="col-lg-4 col-md-6 mb-30">
+				<div class="col-lg-3 col-md-6 mb-30">
 					<div class="platform-card wow fadeInUp" data-wow-delay="0.4s" id="card-linux-x64">
 						<div class="platform-icon">
 							<i class="fab fa-linux"></i>
 						</div>
 						<div class="platform-name">Linux</div>
 						<div class="platform-arch">x64 (AMD64)</div>
-						<div class="platform-size">~80 MB</div>
-						<a href="#" class="btn-platform-download" data-platform="linux-x64">
-							<i class="fas fa-download"></i> Download .AppImage
+						<div class="platform-size">~130 MB</div>
+						<a href="https://github.com/flytohub/flyto-cloud/releases/latest/download/flyto-desktop-linux-x64.tar.gz" class="btn-platform-download" data-platform="linux-x64">
+							<i class="fas fa-download"></i> Download .tar.gz
 						</a>
 					</div>
 				</div>
-				<!-- Linux ARM64 -->
-				<div class="col-lg-4 col-md-6 mb-30">
-					<div class="platform-card wow fadeInUp" data-wow-delay="0.5s" id="card-linux-arm">
-						<div class="platform-icon">
-							<i class="fab fa-linux"></i>
-						</div>
-						<div class="platform-name">Linux</div>
-						<div class="platform-arch">ARM64 (aarch64)</div>
-						<div class="platform-size">~78 MB</div>
-						<a href="#" class="btn-platform-download" data-platform="linux-arm64">
-							<i class="fas fa-download"></i> Download .AppImage
-						</a>
-					</div>
-				</div>
-				<!-- Developer -->
-				<div class="col-lg-4 col-md-6 mb-30">
-					<div class="platform-card wow fadeInUp" data-wow-delay="0.6s">
-						<div class="platform-icon">
-							<i class="fas fa-terminal"></i>
-						</div>
-						<div class="platform-name">Developers</div>
-						<div class="platform-arch">Python Package / Docker</div>
-						<div class="platform-size">pip install</div>
-						<a href="download.html" class="btn-platform-download" style="background: linear-gradient(135deg, #1e0a3c 0%, #4c1d95 100%);">
-							<i class="fas fa-code"></i> View Options
-						</a>
-					</div>
+			</div>
+			<!-- Developer Section -->
+			<div class="row mt-30">
+				<div class="col-lg-12 text-center">
+					<p style="color: #6b7280; margin-bottom: 20px;">
+						<i class="fas fa-code" style="color: #7c3aed;"></i>
+						Looking for Python package or Docker deployment?
+					</p>
+					<a href="download.html" class="btn-platform-download" style="background: linear-gradient(135deg, #1e0a3c 0%, #4c1d95 100%);">
+						<i class="fas fa-terminal"></i> Developer Downloads
+					</a>
 				</div>
 			</div>
 		</div>
@@ -954,10 +938,20 @@
 	<script src="assets/js/mobile-menu.js" defer></script>
 
 	<script>
+		// GitHub Release base URL
+		const RELEASE_BASE = 'https://github.com/flytohub/flyto-cloud/releases/latest/download';
+
+		// Download URLs mapping
+		const DOWNLOAD_URLS = {
+			'macos-arm64': `${RELEASE_BASE}/flyto-desktop-macos-arm64.dmg`,
+			'macos-x64': `${RELEASE_BASE}/flyto-desktop-macos-x64.dmg`,
+			'windows-x64': `${RELEASE_BASE}/flyto-desktop-windows-x64.zip`,
+			'linux-x64': `${RELEASE_BASE}/flyto-desktop-linux-x64.tar.gz`
+		};
+
 		// OS Detection
 		function detectOS() {
 			const userAgent = navigator.userAgent.toLowerCase();
-			const platform = navigator.platform.toLowerCase();
 
 			let os = 'unknown';
 			let arch = 'x64';
@@ -965,6 +959,7 @@
 			let downloadUrl = '#';
 			let downloadText = '';
 			let cardId = '';
+			let fileInfo = '';
 
 			// Detect OS
 			if (userAgent.includes('win')) {
@@ -973,68 +968,61 @@
 				arch = 'x64';
 				downloadText = 'Download for Windows';
 				cardId = 'card-windows';
+				downloadUrl = DOWNLOAD_URLS['windows-x64'];
+				fileInfo = '.zip archive';
 			} else if (userAgent.includes('mac')) {
 				os = 'macos';
 				osName = 'macOS';
 				// Detect Apple Silicon
-				if (userAgent.includes('arm') || (navigator.userAgentData && navigator.userAgentData.platform === 'macOS')) {
-					// Try to detect Apple Silicon using canvas
-					try {
-						const canvas = document.createElement('canvas');
-						const gl = canvas.getContext('webgl');
-						const debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
-						const renderer = gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL);
-						if (renderer.includes('Apple')) {
-							arch = 'arm64';
-							osName = 'macOS (Apple Silicon)';
-							cardId = 'card-macos-arm';
-						} else {
-							arch = 'x64';
-							osName = 'macOS (Intel)';
-							cardId = 'card-macos-intel';
-						}
-					} catch (e) {
-						// Fallback: check if running on newer macOS with ARM
+				try {
+					const canvas = document.createElement('canvas');
+					const gl = canvas.getContext('webgl');
+					const debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
+					const renderer = gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL);
+					if (renderer.includes('Apple')) {
 						arch = 'arm64';
 						osName = 'macOS (Apple Silicon)';
 						cardId = 'card-macos-arm';
+						downloadUrl = DOWNLOAD_URLS['macos-arm64'];
+					} else {
+						arch = 'x64';
+						osName = 'macOS (Intel)';
+						cardId = 'card-macos-intel';
+						downloadUrl = DOWNLOAD_URLS['macos-x64'];
 					}
-				} else {
-					arch = 'x64';
-					osName = 'macOS (Intel)';
-					cardId = 'card-macos-intel';
+				} catch (e) {
+					// Fallback: assume Apple Silicon for newer Macs
+					arch = 'arm64';
+					osName = 'macOS (Apple Silicon)';
+					cardId = 'card-macos-arm';
+					downloadUrl = DOWNLOAD_URLS['macos-arm64'];
 				}
 				downloadText = 'Download for ' + osName;
+				fileInfo = '.dmg installer';
 			} else if (userAgent.includes('linux')) {
 				os = 'linux';
-				osName = 'Linux';
-				if (userAgent.includes('aarch64') || userAgent.includes('arm64')) {
-					arch = 'arm64';
-					osName = 'Linux (ARM64)';
-					cardId = 'card-linux-arm';
-				} else {
-					arch = 'x64';
-					osName = 'Linux (x64)';
-					cardId = 'card-linux-x64';
-				}
-				downloadText = 'Download for ' + osName;
+				osName = 'Linux (x64)';
+				arch = 'x64';
+				cardId = 'card-linux-x64';
+				downloadUrl = DOWNLOAD_URLS['linux-x64'];
+				downloadText = 'Download for Linux';
+				fileInfo = '.tar.gz archive';
 			} else {
 				osName = 'your system';
 				downloadText = 'Select Your Platform';
+				fileInfo = 'Select below';
 			}
 
 			// Update UI
 			document.getElementById('detected-os').textContent = osName + ' detected';
 			document.getElementById('download-btn-text').textContent = downloadText;
-
-			// Set file info
-			let fileInfo = '';
-			if (os === 'windows') fileInfo = '.exe installer';
-			else if (os === 'macos') fileInfo = '.dmg installer';
-			else if (os === 'linux') fileInfo = '.AppImage';
-			else fileInfo = 'Select below';
-
 			document.getElementById('download-btn-info').textContent = fileInfo;
+
+			// Set main download button URL
+			const mainBtn = document.getElementById('main-download-btn');
+			if (downloadUrl !== '#') {
+				mainBtn.href = downloadUrl;
+			}
 
 			// Highlight recommended card
 			if (cardId) {
@@ -1044,7 +1032,7 @@
 				}
 			}
 
-			return { os, arch, osName };
+			return { os, arch, osName, downloadUrl };
 		}
 
 		// Initialize
