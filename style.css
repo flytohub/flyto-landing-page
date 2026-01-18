@@ -3668,3 +3668,261 @@ h2.accordion-header {
 		opacity: 1 !important;
 	}
 }
+
+/*
+ * #-Multi-language Support
+ * Fixes layout issues when switching between different languages
+ */
+
+/* CJK font stack for Chinese, Japanese, Korean */
+html[lang="zh"],
+html[lang="zh-TW"],
+html[lang="zh-CN"],
+html[lang="ja"],
+html[lang="ko"] {
+	font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+		'Noto Sans TC', 'Noto Sans SC', 'Noto Sans JP', 'Noto Sans KR',
+		'PingFang TC', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+		'Meiryo', 'Malgun Gothic', sans-serif;
+}
+
+/* Thai font support */
+html[lang="th"] {
+	font-family: 'Poppins', 'Noto Sans Thai', 'Tahoma', sans-serif;
+}
+
+/* Hindi/Devanagari font support */
+html[lang="hi"] {
+	font-family: 'Poppins', 'Noto Sans Devanagari', 'Mangal', sans-serif;
+}
+
+/* Arabic and RTL languages (future support) */
+html[lang="ar"] {
+	font-family: 'Poppins', 'Noto Sans Arabic', 'Tahoma', sans-serif;
+	direction: rtl;
+}
+
+/* Word breaking for CJK languages */
+html[lang="zh"] *,
+html[lang="zh-TW"] *,
+html[lang="zh-CN"] *,
+html[lang="ja"] *,
+html[lang="ko"] * {
+	word-break: break-word;
+	overflow-wrap: break-word;
+}
+
+/* Prevent text overflow in buttons */
+.button-1,
+.button-2,
+.btn-pricing,
+.btn-header-login,
+[class*="btn-"] {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 100%;
+}
+
+/* Allow wrapping for longer button text in certain languages */
+html[lang="de"] .button-1,
+html[lang="de"] .button-2,
+html[lang="fr"] .button-1,
+html[lang="fr"] .button-2,
+html[lang="es"] .button-1,
+html[lang="es"] .button-2,
+html[lang="pt"] .button-1,
+html[lang="pt"] .button-2,
+html[lang="it"] .button-1,
+html[lang="it"] .button-2 {
+	white-space: normal;
+	min-height: 48px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Navigation menu items - prevent overflow */
+.menu ul li a,
+.offcanvas_main_menu li a {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* Allow nav dropdowns to expand */
+.nav-dropdown-menu {
+	min-width: 200px;
+	width: max-content;
+	max-width: 280px;
+}
+
+.nav-dropdown-item {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* Hero section text handling */
+.hero-caption h2,
+.hero-caption-2 h2,
+.breadcrumb-content h2,
+.section-headding h2 {
+	word-break: break-word;
+	overflow-wrap: break-word;
+	hyphens: auto;
+}
+
+/* Card content consistency */
+.info-box-s1,
+.info-box-s2,
+.pricing-item,
+.feature-box,
+.summary-card {
+	min-height: 0;
+	height: auto;
+}
+
+/* Ensure equal height cards in grid */
+.row > [class*="col-"] > .info-box-s1,
+.row > [class*="col-"] > .info-box-s2,
+.row > [class*="col-"] > .pricing-item,
+.row > [class*="col-"] > .feature-box {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Footer consistent spacing */
+.f-widgets-item h3 {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.f-widgets-item ul li a {
+	word-break: break-word;
+}
+
+/* Comparison table text handling */
+.comparison-table td,
+.comparison-table th {
+	word-break: break-word;
+	min-width: 100px;
+}
+
+/* FAQ items */
+.faq-question span,
+.faq-answer {
+	word-break: break-word;
+	overflow-wrap: break-word;
+}
+
+/* Pricing cards equal height */
+.pricing-card-3d {
+	display: flex;
+	flex-direction: column;
+}
+
+.pricing-card-3d .pricing-features {
+	flex-grow: 1;
+}
+
+/* Feature list items */
+.pricing-feature-item,
+.pricing-feature-list .pricing-feature-item {
+	word-break: break-word;
+}
+
+/* Form labels and inputs */
+input::placeholder,
+textarea::placeholder {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* Mobile menu language fixes */
+@media (max-width: 991px) {
+	.offcanvas_main_menu li a {
+		white-space: normal;
+		word-break: break-word;
+	}
+
+	.nav-dropdown-menu {
+		min-width: auto;
+		width: 100%;
+	}
+}
+
+/* CJK specific line-height adjustments */
+html[lang="zh"] p,
+html[lang="zh-TW"] p,
+html[lang="zh-CN"] p,
+html[lang="ja"] p,
+html[lang="ko"] p {
+	line-height: 1.8;
+}
+
+html[lang="zh"] h1, html[lang="zh"] h2, html[lang="zh"] h3,
+html[lang="zh-TW"] h1, html[lang="zh-TW"] h2, html[lang="zh-TW"] h3,
+html[lang="zh-CN"] h1, html[lang="zh-CN"] h2, html[lang="zh-CN"] h3,
+html[lang="ja"] h1, html[lang="ja"] h2, html[lang="ja"] h3,
+html[lang="ko"] h1, html[lang="ko"] h2, html[lang="ko"] h3 {
+	line-height: 1.4;
+}
+
+/* Thai language specific */
+html[lang="th"] p {
+	line-height: 2;
+}
+
+/* German/Dutch long words */
+html[lang="de"] *,
+html[lang="nl"] * {
+	hyphens: auto;
+	-webkit-hyphens: auto;
+	-ms-hyphens: auto;
+}
+
+/* Ensure consistent button widths for CTA sections */
+.cta-content .button-1,
+.cta-content .button-2,
+.cta-content .btn-pricing {
+	min-width: 160px;
+	text-align: center;
+}
+
+/* Auth button in header */
+.btn-header-login {
+	min-width: 90px;
+	padding: 8px 16px;
+}
+
+/* User dropdown email truncation */
+.user-email,
+.dropdown-header-email {
+	max-width: 180px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/* Section backgrounds for different languages - ensure consistency */
+.section-bg {
+	background: #f8f9ff;
+}
+
+/* Tab and badge text */
+.badge-animated,
+.popular-badge,
+.winner-badge,
+.tag {
+	white-space: nowrap;
+}
+
+/* Counter numbers */
+.counter,
+.counter_item_h h2 {
+	white-space: nowrap;
+}
