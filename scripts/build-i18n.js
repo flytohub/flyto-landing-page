@@ -18,10 +18,23 @@ const CONFIG = {
   htmlDir: path.join(__dirname, '..'),
   i18nDir: path.join(__dirname, '..', '..', 'flyto-i18n', 'locales'),
   htmlFiles: ['index.html', 'pricing.html', 'download.html', 'app.html', 'faq.html', 'contact.html', 'buy-offline.html', 'language-packs.html', 'product.html', 'use-cases.html', 'compare.html', 'philosophy.html', 'about.html', 'blog.html'],
-  locales: ['zh-TW', 'ja'],  // Don't build 'en' - it's the source
+  // All 15 supported languages (excluding 'en' which is the source)
+  locales: ['zh-TW', 'ja', 'ko', 'de', 'es', 'fr', 'it', 'pt-BR', 'vi', 'id', 'th', 'tr', 'pl', 'hi'],
   localeMapping: {
     'zh-TW': 'zh',
-    'ja': 'ja'
+    'ja': 'ja',
+    'ko': 'ko',
+    'de': 'de',
+    'es': 'es',
+    'fr': 'fr',
+    'it': 'it',
+    'pt-BR': 'pt',
+    'vi': 'vi',
+    'id': 'id',
+    'th': 'th',
+    'tr': 'tr',
+    'pl': 'pl',
+    'hi': 'hi'
   }
 };
 
@@ -89,7 +102,48 @@ function translateHtml(html, translations, locale) {
     }
   );
 
+  // Update language switcher active state
+  translated = updateLangSwitcher(translated, localeDir);
+
   return translated;
+}
+
+// Update language switcher active class
+function updateLangSwitcher(html, currentLocale) {
+  // Remove active class from English and add to current locale
+  html = html.replace(
+    /<a href="\/" class="lang-option active"/g,
+    '<a href="/" class="lang-option"'
+  );
+
+  // Add active class to current locale
+  const pattern = new RegExp(`<a href="/${currentLocale}/" class="lang-option"`, 'g');
+  html = html.replace(pattern, `<a href="/${currentLocale}/" class="lang-option active"`);
+
+  // Update current-lang display
+  const langNames = {
+    'zh': 'ZH',
+    'ja': 'JA',
+    'ko': 'KO',
+    'de': 'DE',
+    'es': 'ES',
+    'fr': 'FR',
+    'it': 'IT',
+    'pt': 'PT',
+    'vi': 'VI',
+    'id': 'ID',
+    'th': 'TH',
+    'tr': 'TR',
+    'pl': 'PL',
+    'hi': 'HI'
+  };
+  const displayLang = langNames[currentLocale] || 'EN';
+  html = html.replace(
+    /<span class="current-lang">EN<\/span>/g,
+    `<span class="current-lang">${displayLang}</span>`
+  );
+
+  return html;
 }
 
 // Add/update hreflang tags
@@ -99,11 +153,23 @@ function updateHreflangTags(html, currentLocale) {
     return html;
   }
 
-  // Insert hreflang tags after <link rel="canonical"
+  // Insert hreflang tags after <link rel="canonical" for all 15 languages
   const hreflangTags = `
 	<link rel="alternate" hreflang="en" href="https://flyto2.com/" />
 	<link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/" />
 	<link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/" />
+	<link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/" />
+	<link rel="alternate" hreflang="de" href="https://flyto2.com/de/" />
+	<link rel="alternate" hreflang="es" href="https://flyto2.com/es/" />
+	<link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/" />
+	<link rel="alternate" hreflang="it" href="https://flyto2.com/it/" />
+	<link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/" />
+	<link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/" />
+	<link rel="alternate" hreflang="id" href="https://flyto2.com/id/" />
+	<link rel="alternate" hreflang="th" href="https://flyto2.com/th/" />
+	<link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/" />
+	<link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/" />
+	<link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/" />
 	<link rel="alternate" hreflang="x-default" href="https://flyto2.com/" />`;
 
   return html.replace(

@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Preconnect to critical origins -->
+	<link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+	<link rel="dns-prefetch" href="https://www.gstatic.com">
+	<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+	<title>Flyto2 Blog - Workflow Automation Insights & Best Practices</title>
+	<meta name="description" content="Insights on enterprise workflow automation, human-in-the-loop design patterns, and why traditional RPA fails. Architecture thoughts from the Flyto2 team.">
+
+	<!-- Content Security Policy -->
+	<meta http-equiv="Content-Security-Policy" content="
+		default-src 'self';
+		script-src 'self' 'unsafe-inline' https://www.gstatic.com https://cdn.jsdelivr.net https://apis.google.com;
+		style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com;
+		font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net;
+		img-src 'self' data: https:;
+		connect-src 'self' https://*.cloudfunctions.net https://*.firebaseio.com;
+		frame-src https://accounts.google.com https://*.firebaseapp.com;
+	\">
+
+	<!-- Security Headers -->
+	<meta http-equiv="X-Content-Type-Options" content="nosniff">
+	<meta name="referrer" content="strict-origin-when-cross-origin">
+	<meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+
+	<!-- SEO Meta Tags -->
+	<link rel="canonical" href="https://flyto2.com/pt/blog.html">
+	<link rel="alternate" hreflang="en" href="https://flyto2.com/pt/blog.html">
+	<link rel="alternate" hreflang="zh" href="https://flyto2.com/pt/zh/blog.html">
+	<link rel="alternate" hreflang="ja" href="https://flyto2.com/pt/ja/blog.html">
+	<link rel="alternate" hreflang="x-default" href="https://flyto2.com/pt/blog.html">
+	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+	<meta name="keywords" content="workflow automation blog, rpa best practices, human-in-the-loop automation, enterprise workflow design, automation architecture">
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://flyto2.com/blog.html">
+	<meta property="og:title" content="Flyto2 Blog - Workflow Automation Insights">
+	<meta property="og:description" content="Insights on enterprise workflow automation, human-in-the-loop design patterns, and architecture best practices.">
+	<meta property="og:image" content="https://flyto2.com/assets/img/og-image.png">
+	<meta property="og:site_name" content="Flyto2">
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Flyto2 Blog - Workflow Automation Insights">
+	<meta name="twitter:description" content="Insights on enterprise workflow automation and architecture best practices.">
+	<meta name="twitter:image" content="https://flyto2.com/assets/img/og-image.png">
+	<meta name="twitter:image:alt" content="Flyto2 - No-Code Automation Platform">
+
+	<link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="../assets/img/icon.png" type="image/png" sizes="32x32">
+
+	<!-- Critical CSS (render-blocking) -->
+	<link rel="stylesheet" href="../assets/css/normalize.css">
+	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../assets/css/fontawesome.all.min.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="../assets/css/responsive.css">
+
+	<!-- Non-critical CSS (deferred loading) -->
+	<link rel="stylesheet" href="../assets/css/bootstrap-icons.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/lightcase.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/owl.carousel.min.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/owl.theme.default.min.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/animate.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/typed.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/magnific-popup.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/auth.css" media="print" onload="this.media='all'">
+	<noscript>
+		<link rel="stylesheet" href="../assets/css/bootstrap-icons.css">
+		<link rel="stylesheet" href="../assets/css/lightcase.css">
+		<link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+		<link rel="stylesheet" href="../assets/css/owl.theme.default.min.css">
+		<link rel="stylesheet" href="../assets/css/animate.css">
+		<link rel="stylesheet" href="../assets/css/typed.css">
+		<link rel="stylesheet" href="../assets/css/magnific-popup.css">
+		<link rel="stylesheet" href="../assets/css/auth.css">
+	</noscript>
+	<style>
+		.blog-hero {
+			background: linear-gradient(135deg, #0f0524 0%, #1e0a3c 20%, #2d1b4e 50%, #4c1d95 80%, #5b21b6 100%);
+			position: relative;
+			overflow: hidden;
+			min-height: 350px;
+		}
+		.blog-hero::before {
+			content: '';
+			position: absolute;
+			top: 0; left: 0; right: 0; bottom: 0;
+			background:
+				radial-gradient(circle at 20% 80%, rgba(124, 58, 237, 0.3) 0%, transparent 50%),
+				radial-gradient(circle at 80% 20%, rgba(167, 139, 250, 0.2) 0%, transparent 50%);
+		}
+		.gradient-text {
+			background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+		}
+		.blog-card {
+			background: #fff;
+			border-radius: 20px;
+			overflow: hidden;
+			box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+			transition: all 0.3s;
+			height: 100%;
+		}
+		.blog-card:hover {
+			transform: translateY(-8px);
+			box-shadow: 0 20px 50px rgba(124, 58, 237, 0.15);
+		}
+		.blog-card-image {
+			height: 200px;
+			background: linear-gradient(135deg, #1e0a3c 0%, #4c1d95 100%);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+			overflow: hidden;
+		}
+		.blog-card-image i {
+			font-size: 60px;
+			color: rgba(255,255,255,0.2);
+		}
+		.blog-card-body {
+			padding: 30px;
+		}
+		.blog-category {
+			display: inline-block;
+			background: rgba(124, 58, 237, 0.1);
+			color: #7c3aed;
+			padding: 4px 12px;
+			border-radius: 20px;
+			font-size: 12px;
+			font-weight: 600;
+			margin-bottom: 15px;
+		}
+		.blog-card-title {
+			font-size: 20px;
+			font-weight: 700;
+			color: #1e0a3c;
+			margin-bottom: 12px;
+			line-height: 1.4;
+		}
+		.blog-card-excerpt {
+			color: #6b7280;
+			font-size: 15px;
+			line-height: 1.7;
+			margin-bottom: 20px;
+		}
+		.blog-card-meta {
+			display: flex;
+			align-items: center;
+			color: #9ca3af;
+			font-size: 14px;
+		}
+		.blog-card-meta span {
+			display: flex;
+			align-items: center;
+			margin-right: 20px;
+		}
+		.blog-card-meta i {
+			margin-right: 6px;
+		}
+		.featured-post {
+			background: #fff;
+			border-radius: 24px;
+			overflow: hidden;
+			box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+		}
+		.featured-image {
+			height: 350px;
+			background: linear-gradient(135deg, #1e0a3c 0%, #4c1d95 50%, #7c3aed 100%);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+		}
+		.featured-image i {
+			font-size: 100px;
+			color: rgba(255,255,255,0.15);
+		}
+		.featured-badge {
+			position: absolute;
+			top: 20px;
+			left: 20px;
+			background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+			color: #fff;
+			padding: 8px 16px;
+			border-radius: 20px;
+			font-size: 12px;
+			font-weight: 600;
+			text-transform: uppercase;
+		}
+		.featured-body {
+			padding: 40px;
+		}
+		.category-filter {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 10px;
+			margin-bottom: 40px;
+		}
+		.category-btn {
+			padding: 10px 20px;
+			border: 1px solid #e5e7eb;
+			border-radius: 30px;
+			background: #fff;
+			color: #6b7280;
+			font-size: 14px;
+			font-weight: 500;
+			cursor: pointer;
+			transition: all 0.2s;
+		}
+		.category-btn:hover,
+		.category-btn.active {
+			background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+			color: #fff;
+			border-color: transparent;
+		}
+		.coming-soon-overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: rgba(30, 10, 60, 0.9);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+		}
+		.coming-soon-text {
+			color: #a78bfa;
+			font-size: 14px;
+			font-weight: 600;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+		}
+	</style>
+
+	<!-- Structured Data -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Blog",
+		"name": "Flyto2 Blog",
+		"description": "Insights on enterprise workflow automation, human-in-the-loop design patterns, and architecture best practices.",
+		"url": "https://flyto2.com/blog.html",
+		"publisher": {
+			"@type": "Organization",
+			"name": "Flyto2",
+			"logo": "https://flyto2.com/assets/img/logo.png"
+		}
+	}
+	</script>
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		"itemListElement": [
+			{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://flyto2.com/"},
+			{"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://flyto2.com/blog.html"}
+		]
+	}
+	</script>
+</head>
+<body>
+	<!-- Preloader -->
+	<div id="preloader">
+		<div class="preloader">
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+
+	<!-- Header -->
+	<header class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 align-self-center">
+					<div class="logo">
+						<a href="index.html">
+							<picture>
+								<source srcset="assets/img/white-logo.webp" type="image/webp">
+								<img src="../assets/img/white-logo.png" alt="Flyto2" width="90" height="79" fetchpriority="high">
+							</picture>
+						</a>
+					</div>
+					<div class="canvas_open">
+						<a href="javascript:void(0)" aria-label="Open menu" role="button">
+							<span></span>
+							<span></span>
+							<span></span>
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-9">
+					<div class="menu d-flex align-items-center justify-content-end">
+						<nav>
+							<ul>
+								<li><a href="index.html" data-i18n="landing.common.nav.home">Inicio</a></li>
+								<li><a href="product.html" data-i18n="landing.common.nav.platform">Plataforma</a></li>
+								<li class="nav-dropdown">
+									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" data-i18n="landing.common.nav.pricing">Precos</span>
+									<div class="nav-dropdown-menu">
+										<a href="pricing.html" class="nav-dropdown-item"><i class="bi bi-tag"></i><span data-i18n="landing.common.nav.plansAndPricing">Planos e Precos</span></a>
+										<a href="buy-offline.html" class="nav-dropdown-item"><i class="bi bi-shield-lock"></i><span data-i18n="landing.common.nav.buyProLicense">Comprar Licenca Pro</span></a>
+									</div>
+								</li>
+								<li class="nav-dropdown">
+									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" data-i18n="landing.common.nav.resources">Recursos</span>
+									<div class="nav-dropdown-menu">
+										<a href="use-cases.html" class="nav-dropdown-item"><i class="bi bi-briefcase"></i><span data-i18n="landing.common.nav.useCases">Casos de Uso</span></a>
+										<a href="compare.html" class="nav-dropdown-item"><i class="bi bi-arrow-left-right"></i><span data-i18n="landing.common.nav.compare">Comparar</span></a>
+										<a href="blog.html" class="nav-dropdown-item active"><i class="bi bi-journal-text"></i><span data-i18n="landing.common.nav.blog">Blog</span></a>
+										<a href="faq.html" class="nav-dropdown-item"><i class="bi bi-question-circle"></i><span data-i18n="landing.common.nav.faq">FAQ</span></a>
+									</div>
+								</li>
+							</ul>
+						</nav>
+						<div class="header-auth">
+							<button id="headerLoginBtn" class="btn-header-login">
+								<i class="bi bi-person"></i>
+								<span data-i18n="landing.common.auth.signIn">Entrar</span>
+							</button>
+							<div id="headerUserDropdown" class="user-dropdown d-none">
+								<div class="user-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">
+									<div class="user-avatar" id="headerUserAvatar">U</div>
+									<span class="user-email" id="headerUserEmail"></span>
+									<i class="bi bi-chevron-down dropdown-arrow"></i>
+								</div>
+								<div class="user-dropdown-menu">
+									<div class="dropdown-header">
+										<div class="dropdown-header-email" id="dropdownUserEmail"></div>
+										<div class="dropdown-header-label" data-i18n="landing.common.auth.flytoAccount">Conta Flyto2</div>
+									</div>
+									<div class="dropdown-menu-items">
+										<a href="buy-offline.html" class="dropdown-menu-item">
+											<i class="bi bi-key"></i>
+											<span data-i18n="landing.common.auth.myLicenses">Minhas Licencas</span>
+										</a>
+										<div class="dropdown-divider"></div>
+										<button class="dropdown-menu-item text-danger" id="btnSignOut">
+											<i class="bi bi-box-arrow-right"></i>
+											<span data-i18n="landing.common.auth.signOut">Sair</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Mobile Menu -->
+	<div class="mobile-menu-area">
+		<div class="off_canvars_overlay"></div>
+		<div class="offcanvas_menu">
+			<div class="offcanvas_menu_wrapper">
+				<div class="canvas_close">
+					<a href="javascript:void(0)" aria-label="Close menu" role="button"><i class="fas fa-times"></i></a>
+				</div>
+				<div class="mobile-logo">
+					<a href="index.html">
+						<picture>
+							<source srcset="assets/img/logo.webp" type="image/webp">
+							<img src="../assets/img/logo.png" alt="Flyto2" width="90" height="79" />
+						</picture>
+					</a>
+				</div>
+				<div id="menu" class="text-left">
+					<ul class="offcanvas_main_menu">
+						<li><a href="index.html" data-i18n="landing.common.nav.home">Inicio</a></li>
+						<li><a href="product.html" data-i18n="landing.common.nav.platform">Plataforma</a></li>
+						<li><a href="pricing.html" data-i18n="landing.common.nav.pricing">Precos</a></li>
+						<li><a href="use-cases.html" data-i18n="landing.common.nav.useCases">Casos de Uso</a></li>
+						<li class="active"><a href="blog.html" data-i18n="landing.common.nav.blog">Blog</a></li>
+						<li><a href="contact.html" data-i18n="landing.common.nav.contactUs">Fale Conosco</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Hero Section -->
+	<section class="blog-hero">
+		<div class="container" style="position: relative; z-index: 2;">
+			<div class="row">
+				<div class="col-lg-10 offset-lg-1 text-center">
+					<div class="pt-150 pb-100">
+						<nav aria-label="breadcrumb" style="display: inline-block; margin-bottom: 20px;">
+							<ol class="breadcrumb" style="background: rgba(255,255,255,0.1); border-radius: 30px; padding: 10px 20px; margin: 0;">
+								<li class="breadcrumb-item"><a href="index.html" style="color: #a78bfa;" data-i18n="landing.common.nav.home">Inicio</a></li>
+								<li class="breadcrumb-item active" style="color: #fff;" data-i18n="landing.common.nav.blog">Blog</li>
+							</ol>
+						</nav>
+						<h1 class="wow fadeInUp" style="color: #fff; font-size: 48px; font-weight: 800; margin-bottom: 20px;" data-i18n="landing.blog.hero.title">
+							Workflow <span style="color: #a78bfa;">Insights</span>
+						</h1>
+						<p class="wow fadeInUp" data-wow-delay="0.1s" style="color: rgba(255,255,255,0.8); font-size: 20px; max-width: 700px; margin: 0 auto;" data-i18n="landing.blog.hero.description">Insights sobre automacao de workflows empresariais, padroes de design human-in-the-loop e melhores praticas de arquitetura.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wave-divider">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+				<path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+			</svg>
+		</div>
+	</section>
+
+	<!-- Category Filter -->
+	<section class="section-padding pb-0">
+		<div class="container">
+			<div class="category-filter wow fadeInUp">
+				<button class="category-btn active" data-i18n="landing.blog.categories.allPosts">Todos os Posts</button>
+				<button class="category-btn" data-i18n="landing.blog.categories.architecture">Arquitetura</button>
+				<button class="category-btn" data-i18n="landing.blog.categories.designPatterns">Padroes de Design</button>
+				<button class="category-btn" data-i18n="landing.blog.categories.rpaFailures">Falhas de RPA</button>
+			</div>
+		</div>
+	</section>
+
+	<!-- Featured Post -->
+	<section class="section-padding pt-0">
+		<div class="container">
+			<div class="featured-post wow fadeInUp">
+				<div class="row g-0">
+					<div class="col-lg-6">
+						<div class="featured-image" style="height: 100%; min-height: 350px;">
+							<span class="featured-badge" data-i18n="landing.blog.featured.badge">Destaque</span>
+							<i class="fas fa-brain"></i>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="featured-body" style="height: 100%; display: flex; flex-direction: column; justify-content: center;">
+							<span class="blog-category" data-i18n="landing.blog.categories.architecture">Arquitetura</span>
+							<h2 class="blog-card-title" style="font-size: 28px;" data-i18n="landing.blog.featured.title">Por Que o RPA Tradicional Falha no Human-in-the-Loop</h2>
+							<p class="blog-card-excerpt" style="font-size: 17px;" data-i18n="landing.blog.featured.excerpt">Uma analise profunda de por que a maioria das ferramentas RPA falha em se adaptar a workflows que requerem aprovacao, validacao ou supervisao humana.</p>
+							<div class="blog-card-meta">
+								<span><i class="far fa-calendar"></i> <span data-i18n="landing.blog.comingSoon">Em Breve</span></span>
+								<span><i class="far fa-clock"></i> <span data-i18n="landing.blog.featured.readTime">8 min de leitura</span></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Blog Posts Grid -->
+	<section class="section-padding section-bg">
+		<div class="container">
+			<div class="row mb-40">
+				<div class="col-lg-8">
+					<h2 style="font-size: 28px; font-weight: 700;" data-i18n="landing.blog.latestArticles.title">Latest <span class="gradient-text">Articles</span></h2>
+				</div>
+			</div>
+			<div class="row">
+				<!-- Post 1 -->
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="blog-card wow fadeInUp" data-wow-delay="0.1s">
+						<div class="blog-card-image" style="position: relative;">
+							<i class="fas fa-project-diagram"></i>
+							<div class="coming-soon-overlay">
+								<span class="coming-soon-text" data-i18n="landing.blog.comingSoon">Em Breve</span>
+							</div>
+						</div>
+						<div class="blog-card-body">
+							<span class="blog-category" data-i18n="landing.blog.categories.designPatterns">Padroes de Design</span>
+							<h3 class="blog-card-title" data-i18n="landing.blog.posts.post1.title">Projetando Workflows Pausaveis</h3>
+							<p class="blog-card-excerpt" data-i18n="landing.blog.posts.post1.excerpt">Como construir workflows que requerem validacao humana sem sacrificar a eficiencia da automacao.</p>
+							<div class="blog-card-meta">
+								<span><i class="far fa-clock"></i> <span data-i18n="landing.blog.posts.post1.readTime">6 min de leitura</span></span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Post 2 -->
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="blog-card wow fadeInUp" data-wow-delay="0.2s">
+						<div class="blog-card-image" style="position: relative;">
+							<i class="fas fa-exclamation-triangle"></i>
+							<div class="coming-soon-overlay">
+								<span class="coming-soon-text" data-i18n="landing.blog.comingSoon">Em Breve</span>
+							</div>
+						</div>
+						<div class="blog-card-body">
+							<span class="blog-category" data-i18n="landing.blog.categories.rpaFailures">Falhas de RPA</span>
+							<h3 class="blog-card-title" data-i18n="landing.blog.posts.post2.title">O Caso para Automacao Offline-First</h3>
+							<p class="blog-card-excerpt" data-i18n="landing.blog.posts.post2.excerpt">Por que suas ferramentas de automacao nao devem precisar de conexao com a internet, e como fazer isso acontecer.</p>
+							<div class="blog-card-meta">
+								<span><i class="far fa-clock"></i> <span data-i18n="landing.blog.posts.post2.readTime">5 min de leitura</span></span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Post 3 -->
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="blog-card wow fadeInUp" data-wow-delay="0.3s">
+						<div class="blog-card-image" style="position: relative;">
+							<i class="fas fa-check-double"></i>
+							<div class="coming-soon-overlay">
+								<span class="coming-soon-text" data-i18n="landing.blog.comingSoon">Em Breve</span>
+							</div>
+						</div>
+						<div class="blog-card-body">
+							<span class="blog-category" data-i18n="landing.blog.categories.architecture">Arquitetura</span>
+							<h3 class="blog-card-title" data-i18n="landing.blog.posts.post3.title">Do UiPath ao Flyto2: Uma Historia de Migracao</h3>
+							<p class="blog-card-excerpt" data-i18n="landing.blog.posts.post3.excerpt">Um estudo de caso real de como uma empresa migrou do RPA tradicional para workflows human-in-the-loop.</p>
+							<div class="blog-card-meta">
+								<span><i class="far fa-clock"></i> <span data-i18n="landing.blog.posts.post3.readTime">10 min de leitura</span></span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Post 4 -->
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="blog-card wow fadeInUp" data-wow-delay="0.1s">
+						<div class="blog-card-image" style="position: relative;">
+							<i class="fas fa-wifi-slash"></i>
+							<div class="coming-soon-overlay">
+								<span class="coming-soon-text" data-i18n="landing.blog.comingSoon">Em Breve</span>
+							</div>
+						</div>
+						<div class="blog-card-body">
+							<span class="blog-category" data-i18n="landing.blog.categories.architecture">Arquitetura</span>
+							<h3 class="blog-card-title" data-i18n="landing.blog.posts.post4.title">Construindo Trilhas de Auditoria que Realmente Funcionam</h3>
+							<p class="blog-card-excerpt" data-i18n="landing.blog.posts.post4.excerpt">Indo alem do logging basico para construir trilhas de auditoria que realmente importam para conformidade.</p>
+							<div class="blog-card-meta">
+								<span><i class="far fa-clock"></i> <span data-i18n="landing.blog.posts.post4.readTime">7 min de leitura</span></span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Post 5 -->
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="blog-card wow fadeInUp" data-wow-delay="0.2s">
+						<div class="blog-card-image" style="position: relative;">
+							<i class="fas fa-undo-alt"></i>
+							<div class="coming-soon-overlay">
+								<span class="coming-soon-text" data-i18n="landing.blog.comingSoon">Em Breve</span>
+							</div>
+						</div>
+						<div class="blog-card-body">
+							<span class="blog-category" data-i18n="landing.blog.categories.designPatterns">Padroes de Design</span>
+							<h3 class="blog-card-title" data-i18n="landing.blog.posts.post5.title">Padroes de Validacao para Workflows Empresariais</h3>
+							<p class="blog-card-excerpt" data-i18n="landing.blog.posts.post5.excerpt">Padroes para validar dados em cada etapa para evitar falhas de lote inteiras.</p>
+							<div class="blog-card-meta">
+								<span><i class="far fa-clock"></i> <span data-i18n="landing.blog.posts.post5.readTime">6 min de leitura</span></span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Post 6 -->
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="blog-card wow fadeInUp" data-wow-delay="0.3s">
+						<div class="blog-card-image" style="position: relative;">
+							<i class="fas fa-shield-alt"></i>
+							<div class="coming-soon-overlay">
+								<span class="coming-soon-text" data-i18n="landing.blog.comingSoon">Em Breve</span>
+							</div>
+						</div>
+						<div class="blog-card-body">
+							<span class="blog-category" data-i18n="landing.blog.categories.rpaFailures">Falhas de RPA</span>
+							<h3 class="blog-card-title" data-i18n="landing.blog.posts.post6.title">Novidades no Flyto2 v2.0</h3>
+							<p class="blog-card-excerpt" data-i18n="landing.blog.posts.post6.excerpt">Explore os novos recursos, melhorias e correcoes de bugs na ultima versao.</p>
+							<div class="blog-card-meta">
+								<span><i class="far fa-clock"></i> <span data-i18n="landing.blog.posts.post6.readTime">4 min de leitura</span></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Newsletter Section -->
+	<section class="section-padding">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="wow fadeInUp" style="background: linear-gradient(145deg, #f8f9ff 0%, #fff 100%); border-radius: 24px; padding: 50px 40px; border: 1px solid rgba(124, 58, 237, 0.1);">
+						<h2 style="font-size: 32px; font-weight: 700; margin-bottom: 15px;" data-i18n="landing.blog.newsletter.title">Fique Atualizado</h2>
+						<p style="font-size: 18px; color: #6b7280; margin-bottom: 30px;" data-i18n="landing.blog.newsletter.description">Inscreva-se em nossa newsletter para os ultimos insights de automacao e atualizacoes de produto.</p>
+						<div style="display: flex; gap: 15px; max-width: 500px; margin: 0 auto; flex-wrap: wrap; justify-content: center;">
+							<input type="email" data-i18n-placeholder="landing.blog.newsletter.emailPlaceholder" placeholder="Enter your email" style="flex: 1; min-width: 250px; padding: 15px 20px; border: 1px solid #e5e7eb; border-radius: 10px; font-size: 16px;">
+							<button class="button-1" style="white-space: nowrap;">
+								<i class="fas fa-paper-plane" style="margin-right: 8px;"></i> <span data-i18n="landing.blog.newsletter.subscribe">Inscrever-se</span>
+							</button>
+						</div>
+						<p style="font-size: 14px; color: #9ca3af; margin-top: 15px;" data-i18n="landing.blog.newsletter.noSpam">Sem spam. Cancele quando quiser.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="hero-wave-bg" style="padding: 80px 0;">
+		<div class="container" style="position: relative; z-index: 2;">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<h2 style="color: #fff; font-size: 36px; margin-bottom: 20px;" data-i18n="landing.blog.cta.title">Pronto para experimentar o Flyto2?</h2>
+					<p style="color: rgba(255,255,255,0.8); font-size: 18px; margin-bottom: 30px;" data-i18n="landing.blog.cta.description">Comece gratuitamente. Sem necessidade de cartao de credito. Experimente a automacao com humano no loop.</p>
+					<a href="pricing.html" class="button-1" style="background: #fff; color: #7c3aed;">
+						<i class="fas fa-rocket" style="margin-right: 8px;"></i> <span data-i18n="landing.blog.cta.button">Comece Gratis</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="footer-top pt-70 pb-20">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-sm-6 mb-30">
+						<div class="f-widgets-item">
+							<div class="f-logo">
+								<a href="index.html">
+									<picture>
+										<source srcset="assets/img/logo.webp" type="image/webp">
+										<img src="../assets/img/logo.png" alt="Flyto2" width="90" height="79" loading="lazy">
+									</picture>
+								</a>
+							</div>
+							<p data-i18n="landing.common.footer.tagline">Automacao que funciona como voce. Grave uma vez, reproduza para sempre.</p>
+							<ul>
+								<li><a href="mailto:info@flyto2.com"><i class="bi bi-envelope-fill"></i> info@flyto2.com</a></li>
+								<li><a href="https://github.com/flytohub" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> github.com/flytohub</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6 mb-30">
+						<div class="f-widgets-item">
+							<h3 data-i18n="landing.common.footer.product">Produto</h3>
+							<ul>
+								<li><a href="product.html" data-i18n="landing.common.nav.platform">Plataforma</a></li>
+								<li><a href="pricing.html" data-i18n="landing.common.nav.pricing">Precos</a></li>
+								<li><a href="download.html" data-i18n="landing.common.footer.download">Download</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6 mb-30">
+						<div class="f-widgets-item">
+							<h3 data-i18n="landing.common.nav.resources">Recursos</h3>
+							<ul>
+								<li><a href="use-cases.html" data-i18n="landing.common.nav.useCases">Casos de Uso</a></li>
+								<li><a href="compare.html" data-i18n="landing.common.nav.compare">Comparar</a></li>
+								<li><a href="blog.html" data-i18n="landing.common.nav.blog">Blog</a></li>
+								<li><a href="faq.html" data-i18n="landing.common.nav.faq">FAQ</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6 mb-30">
+						<div class="f-widgets-item">
+							<h3 data-i18n="landing.common.footer.company">Empresa</h3>
+							<ul>
+								<li><a href="about.html" data-i18n="landing.common.footer.about">Sobre</a></li>
+								<li><a href="philosophy.html" data-i18n="landing.common.footer.philosophy">Filosofia</a></li>
+								<li><a href="contact.html" data-i18n="landing.common.nav.contactUs">Fale Conosco</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom pt-30 pb-30">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 align-self-center">
+						<div class="copy-f-text">
+							<p>Copyright &copy;2025 Flyto2. All Rights Reserved</p>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="footer_social">
+							<ul>
+								<li><a href="https://github.com/flytohub" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+										<li><a href="https://www.youtube.com/channel/UCZ9OOqx4RM3Jjy1annWtsRA" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<div class="scroll-area">
+		<i class="bi bi-arrow-up"></i>
+	</div>
+
+	<!-- Scripts -->
+	<script src="../assets/js/modernizr.min.js"></script>
+	<script src="../assets/js/jquery-3.6.0.min.js"></script>
+	<script src="../assets/js/popper.min.js" defer></script>
+	<script src="../assets/js/bootstrap.min.js" defer></script>
+	<script src="../assets/js/wow.min.js" defer></script>
+	<script src="../assets/js/script.js" defer></script>
+	<script src="../assets/js/mobile-menu.js" defer></script>
+
+	<!-- Firebase SDK -->
+	<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js" defer></script>
+	<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js" defer></script>
+	<script src="../assets/js/auth.js" defer></script>
+</body>
+</html>

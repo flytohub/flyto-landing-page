@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Preconnect to critical origins -->
+	<link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+	<link rel="dns-prefetch" href="https://www.gstatic.com">
+	<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+	<title>Flyto2 Platform - UI-Driven Workflow Automation with Human Oversight</title>
+	<meta name="description" content="Discover why traditional RPA fails for complex workflows. Flyto2 combines UI-driven automation with human approval steps, validation checkpoints, and full audit trails. The workflow platform built for enterprise needs.">
+
+	<!-- Content Security Policy -->
+	<meta http-equiv="Content-Security-Policy" content="
+		default-src 'self';
+		script-src 'self' 'unsafe-inline' https://www.gstatic.com https://cdn.jsdelivr.net https://apis.google.com;
+		style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com;
+		font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net;
+		img-src 'self' data: https:;
+		connect-src 'self' https://*.cloudfunctions.net https://*.firebaseio.com;
+		frame-src https://accounts.google.com https://*.firebaseapp.com;
+	\">
+
+	<!-- Security Headers -->
+	<meta http-equiv="X-Content-Type-Options" content="nosniff">
+	<meta name="referrer" content="strict-origin-when-cross-origin">
+	<meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+
+	<!-- SEO Meta Tags -->
+	<link rel="canonical" href="https://flyto2.com/ko/product.html">
+	<link rel="alternate" hreflang="en" href="https://flyto2.com/ko/product.html">
+	<link rel="alternate" hreflang="zh" href="https://flyto2.com/ko/zh/product.html">
+	<link rel="alternate" hreflang="ja" href="https://flyto2.com/ko/ja/product.html">
+	<link rel="alternate" hreflang="x-default" href="https://flyto2.com/ko/product.html">
+	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+	<meta name="keywords" content="workflow platform, UI-driven automation, human-in-the-loop, workflow validation, enterprise automation, RPA alternative, approval workflow, audit trail">
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://flyto2.com/product.html">
+	<meta property="og:title" content="Flyto2 Platform - UI-Driven Workflow Automation">
+	<meta property="og:description" content="Discover why traditional RPA fails. Flyto2 combines UI-driven automation with human approval steps and validation checkpoints.">
+	<meta property="og:image" content="https://flyto2.com/assets/img/og-image.png">
+	<meta property="og:site_name" content="Flyto2">
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Flyto2 Platform - UI-Driven Workflow Automation">
+	<meta name="twitter:description" content="Discover why traditional RPA fails. Flyto2 combines UI-driven automation with human approval steps.">
+	<meta name="twitter:image" content="https://flyto2.com/assets/img/og-image.png">
+	<meta name="twitter:image:alt" content="Flyto2 - No-Code Automation Platform">
+
+	<link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="../assets/img/icon.png" type="image/png" sizes="32x32">
+
+	<!-- Critical CSS (render-blocking) -->
+	<link rel="stylesheet" href="../assets/css/normalize.css">
+	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../assets/css/fontawesome.all.min.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="../assets/css/responsive.css">
+
+	<!-- Non-critical CSS (deferred loading) -->
+	<link rel="stylesheet" href="../assets/css/bootstrap-icons.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/lightcase.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/owl.carousel.min.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/owl.theme.default.min.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/animate.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/typed.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/magnific-popup.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/auth.css" media="print" onload="this.media='all'">
+	<noscript>
+		<link rel="stylesheet" href="../assets/css/bootstrap-icons.css">
+		<link rel="stylesheet" href="../assets/css/lightcase.css">
+		<link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+		<link rel="stylesheet" href="../assets/css/owl.theme.default.min.css">
+		<link rel="stylesheet" href="../assets/css/animate.css">
+		<link rel="stylesheet" href="../assets/css/typed.css">
+		<link rel="stylesheet" href="../assets/css/magnific-popup.css">
+		<link rel="stylesheet" href="../assets/css/auth.css">
+	</noscript>
+	<style>
+		.product-hero {
+			background: linear-gradient(135deg, #0f0524 0%, #1e0a3c 20%, #2d1b4e 50%, #4c1d95 80%, #5b21b6 100%);
+			position: relative;
+			overflow: hidden;
+			min-height: 400px;
+		}
+		.product-hero::before {
+			content: '';
+			position: absolute;
+			top: 0; left: 0; right: 0; bottom: 0;
+			background:
+				radial-gradient(circle at 20% 80%, rgba(124, 58, 237, 0.3) 0%, transparent 50%),
+				radial-gradient(circle at 80% 20%, rgba(167, 139, 250, 0.2) 0%, transparent 50%);
+		}
+		.gradient-text {
+			background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+		}
+		.problem-card {
+			background: linear-gradient(145deg, #fee2e2 0%, #fecaca 100%);
+			border-left: 4px solid #ef4444;
+			border-radius: 12px;
+			padding: 25px;
+			margin-bottom: 20px;
+		}
+		.solution-card {
+			background: linear-gradient(145deg, #d1fae5 0%, #a7f3d0 100%);
+			border-left: 4px solid #10b981;
+			border-radius: 12px;
+			padding: 25px;
+			margin-bottom: 20px;
+		}
+		.feature-box {
+			background: #fff;
+			border-radius: 20px;
+			padding: 35px 30px;
+			height: 100%;
+			border: 1px solid rgba(124, 58, 237, 0.1);
+			transition: all 0.3s;
+			box-shadow: 0 10px 40px rgba(124, 58, 237, 0.05);
+		}
+		.feature-box:hover {
+			transform: translateY(-8px);
+			box-shadow: 0 20px 50px rgba(124, 58, 237, 0.15);
+		}
+		.feature-icon {
+			width: 70px;
+			height: 70px;
+			background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+			border-radius: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 25px;
+		}
+		.feature-icon i {
+			font-size: 30px;
+			color: #fff;
+		}
+		.architecture-diagram {
+			background: linear-gradient(145deg, #f8f9ff 0%, #fff 100%);
+			border-radius: 24px;
+			padding: 40px;
+			border: 1px solid rgba(124, 58, 237, 0.1);
+		}
+		.arch-step {
+			display: flex;
+			align-items: center;
+			padding: 20px;
+			background: #fff;
+			border-radius: 12px;
+			margin-bottom: 15px;
+			box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+		}
+		.arch-step-number {
+			width: 40px;
+			height: 40px;
+			background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #fff;
+			font-weight: 700;
+			margin-right: 20px;
+			flex-shrink: 0;
+		}
+		.comparison-table {
+			background: #fff;
+			border-radius: 20px;
+			overflow: hidden;
+			box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+		}
+		.comparison-table th {
+			background: linear-gradient(135deg, #1e0a3c 0%, #4c1d95 100%);
+			color: #fff;
+			padding: 20px;
+			font-weight: 600;
+		}
+		.comparison-table td {
+			padding: 18px 20px;
+			border-bottom: 1px solid #f0f0f0;
+		}
+		.comparison-table tr:last-child td {
+			border-bottom: none;
+		}
+		.check-yes {
+			color: #10b981;
+			font-size: 20px;
+		}
+		.check-no {
+			color: #ef4444;
+			font-size: 20px;
+		}
+	</style>
+
+	<!-- Structured Data -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "WebPage",
+		"name": "Flyto2 Platform",
+		"description": "UI-driven workflow automation platform with human oversight, validation checkpoints, and full audit trails.",
+		"url": "https://flyto2.com/product.html",
+		"mainEntity": {
+			"@type": "SoftwareApplication",
+			"name": "Flyto2",
+			"applicationCategory": "BusinessApplication",
+			"operatingSystem": "Windows, macOS, Linux"
+		}
+	}
+	</script>
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		"itemListElement": [
+			{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://flyto2.com/"},
+			{"@type": "ListItem", "position": 2, "name": "Platform", "item": "https://flyto2.com/product.html"}
+		]
+	}
+	</script>
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "SoftwareApplication",
+		"name": "Flyto2",
+		"applicationCategory": "BusinessApplication",
+		"operatingSystem": "Windows, macOS, Linux",
+		"description": "No-code automation platform that operates your computer like a human. Record once, automate forever.",
+		"offers": {
+			"@type": "Offer",
+			"price": "0",
+			"priceCurrency": "USD",
+			"availability": "https://schema.org/InStock"
+		},
+		"aggregateRating": {
+			"@type": "AggregateRating",
+			"ratingValue": "4.8",
+			"ratingCount": "150"
+		}
+	}
+	</script>
+</head>
+<body>
+	<!-- Preloader -->
+	<div id="preloader">
+		<div class="preloader">
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+
+	<!-- Header -->
+	<header class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 align-self-center">
+					<div class="logo">
+						<a href="index.html">
+							<picture>
+								<source srcset="assets/img/white-logo.webp" type="image/webp">
+								<img src="../assets/img/white-logo.png" alt="Flyto2" width="90" height="79" fetchpriority="high">
+							</picture>
+						</a>
+					</div>
+					<div class="canvas_open">
+						<a href="javascript:void(0)" aria-label="Open menu" role="button">
+							<span></span>
+							<span></span>
+							<span></span>
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-9">
+					<div class="menu d-flex align-items-center justify-content-end">
+						<nav>
+							<ul>
+								<li><a href="index.html" data-i18n="landing.common.nav.home">홈</a></li>
+								<li><a href="product.html" class="active" data-i18n="landing.common.nav.platform">플랫폼</a></li>
+								<li class="nav-dropdown">
+									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" data-i18n="landing.common.nav.pricing">가격</span>
+									<div class="nav-dropdown-menu">
+										<a href="pricing.html" class="nav-dropdown-item"><i class="bi bi-tag"></i><span data-i18n="landing.common.nav.plansAndPricing">요금제 및 가격</span></a>
+										<a href="buy-offline.html" class="nav-dropdown-item"><i class="bi bi-shield-lock"></i><span data-i18n="landing.common.nav.buyProLicense">Pro 라이선스 구매</span></a>
+									</div>
+								</li>
+								<li class="nav-dropdown">
+									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" data-i18n="landing.common.nav.resources">리소스</span>
+									<div class="nav-dropdown-menu">
+										<a href="use-cases.html" class="nav-dropdown-item"><i class="bi bi-briefcase"></i><span data-i18n="landing.common.nav.useCases">사용 사례</span></a>
+										<a href="compare.html" class="nav-dropdown-item"><i class="bi bi-arrow-left-right"></i><span data-i18n="landing.common.nav.compare">비교</span></a>
+										<a href="faq.html" class="nav-dropdown-item"><i class="bi bi-question-circle"></i><span data-i18n="landing.common.nav.faq">FAQ</span></a>
+										<a href="contact.html" class="nav-dropdown-item"><i class="bi bi-envelope"></i><span data-i18n="landing.common.nav.contactUs">문의하기</span></a>
+									</div>
+								</li>
+							</ul>
+						</nav>
+						<div class="header-auth">
+							<button id="headerLoginBtn" class="btn-header-login">
+								<i class="bi bi-person"></i>
+								<span data-i18n="landing.common.auth.signIn">로그인</span>
+							</button>
+							<div id="headerUserDropdown" class="user-dropdown d-none">
+								<div class="user-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">
+									<div class="user-avatar" id="headerUserAvatar">U</div>
+									<span class="user-email" id="headerUserEmail"></span>
+									<i class="bi bi-chevron-down dropdown-arrow"></i>
+								</div>
+								<div class="user-dropdown-menu">
+									<div class="dropdown-header">
+										<div class="dropdown-header-email" id="dropdownUserEmail"></div>
+										<div class="dropdown-header-label" data-i18n="landing.common.auth.flytoAccount">Flyto2 계정</div>
+									</div>
+									<div class="dropdown-menu-items">
+										<a href="buy-offline.html" class="dropdown-menu-item">
+											<i class="bi bi-key"></i>
+											<span data-i18n="landing.common.auth.myLicenses">내 라이선스</span>
+										</a>
+										<div class="dropdown-divider"></div>
+										<button class="dropdown-menu-item text-danger" id="btnSignOut">
+											<i class="bi bi-box-arrow-right"></i>
+											<span data-i18n="landing.common.auth.signOut">로그아웃</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Mobile Menu -->
+	<div class="mobile-menu-area">
+		<div class="off_canvars_overlay"></div>
+		<div class="offcanvas_menu">
+			<div class="offcanvas_menu_wrapper">
+				<div class="canvas_close">
+					<a href="javascript:void(0)" aria-label="Close menu" role="button"><i class="fas fa-times"></i></a>
+				</div>
+				<div class="mobile-logo">
+					<a href="index.html">
+						<picture>
+							<source srcset="assets/img/logo.webp" type="image/webp">
+							<img src="../assets/img/logo.png" alt="Flyto2" width="90" height="79" />
+						</picture>
+					</a>
+				</div>
+				<div id="menu" class="text-left">
+					<ul class="offcanvas_main_menu">
+						<li><a href="index.html" data-i18n="landing.common.nav.home">홈</a></li>
+						<li class="active"><a href="product.html" data-i18n="landing.common.nav.platform">플랫폼</a></li>
+						<li><a href="pricing.html" data-i18n="landing.common.nav.pricing">가격</a></li>
+						<li><a href="use-cases.html" data-i18n="landing.common.nav.useCases">사용 사례</a></li>
+						<li><a href="compare.html" data-i18n="landing.common.nav.compare">비교</a></li>
+						<li><a href="contact.html" data-i18n="landing.common.footer.contact">문의</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Hero Section -->
+	<section class="product-hero">
+		<div class="container" style="position: relative; z-index: 2;">
+			<div class="row">
+				<div class="col-lg-10 offset-lg-1 text-center">
+					<div class="pt-150 pb-100">
+						<nav aria-label="breadcrumb" style="display: inline-block; margin-bottom: 20px;">
+							<ol class="breadcrumb" style="background: rgba(255,255,255,0.1); border-radius: 30px; padding: 10px 20px; margin: 0;">
+								<li class="breadcrumb-item"><a href="index.html" style="color: #a78bfa;" data-i18n="landing.common.nav.home">홈</a></li>
+								<li class="breadcrumb-item active" style="color: #fff;" data-i18n="landing.common.nav.platform">플랫폼</li>
+							</ol>
+						</nav>
+						<h1 class="wow fadeInUp" style="color: #fff; font-size: 48px; font-weight: 800; margin-bottom: 20px;">
+							<span data-i18n="landing.product.hero.title">폭주하지 않는</span> <span class="gradient-text" style="-webkit-text-fill-color: #a78bfa;" data-i18n="landing.product.hero.titleHighlight">워크플로 플랫폼</span>
+						</h1>
+						<p class="wow fadeInUp" data-wow-delay="0.1s" style="color: rgba(255,255,255,0.8); font-size: 20px; max-width: 700px; margin: 0 auto;" data-i18n="landing.product.hero.description">기존 RPA는 인간의 판단이 필요할 때 실패합니다. Flyto2는 인간 감독을 처음부터 핵심 기능으로 만듭니다, 나중 생각이 아닌.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wave-divider">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+				<path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+			</svg>
+		</div>
+	</section>
+
+	<!-- Problem Section -->
+	<section class="section-padding">
+		<div class="container">
+			<div class="row mb-50">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<h2 class="wow fadeInUp" style="font-size: 36px; font-weight: 700;"><span data-i18n="landing.product.problem.title">기존 RPA가</span> <span class="gradient-text" data-i18n="landing.product.problem.titleHighlight">해결할 수 없는 문제</span></h2>
+					<p class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 18px; color: #6b7280; margin-top: 15px;" data-i18n="landing.product.problem.subtitle">대부분의 자동화 도구에는 근본적인 결함이 있습니다: 인간 개입 없이 실행되도록 설계되었습니다.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-6 mb-30">
+					<div class="problem-card wow fadeInUp" data-wow-delay="0.1s">
+						<h3 style="color: #b91c1c; font-size: 20px; margin-bottom: 15px;">
+							<i class="fas fa-exclamation-triangle" style="margin-right: 10px;"></i>
+							<span data-i18n="landing.product.problem.allOrNothing.title">전부 아니면 전무 실행</span>
+						</h3>
+						<p style="color: #7f1d1d; margin: 0;" data-i18n="landing.product.problem.allOrNothing.desc">기존 RPA는 완료 또는 충돌까지 실행됩니다. 중간 지점이 없습니다. 1,000개의 레코드를 처리할 때 전체 데이터셋에 피해가 퍼질 때까지 뭔가 잘못된 것을 알지 못합니다.</p>
+					</div>
+				</div>
+				<div class="col-lg-6 mb-30">
+					<div class="problem-card wow fadeInUp" data-wow-delay="0.2s">
+						<h3 style="color: #b91c1c; font-size: 20px; margin-bottom: 15px;">
+							<i class="fas fa-exclamation-triangle" style="margin-right: 10px;"></i>
+							<span data-i18n="landing.product.problem.noApproval.title">승인 워크플로 없음</span>
+						</h3>
+						<p style="color: #7f1d1d; margin: 0;" data-i18n="landing.product.problem.noApproval.desc">대부분의 RPA 도구는 인간 승인을 위해 일시 정지할 수 없습니다. 모든 작업에 검증이 필요한 규제 산업에서는 중요한 프로세스를 자동화하는 것이 불가능합니다.</p>
+					</div>
+				</div>
+				<div class="col-lg-6 mb-30">
+					<div class="problem-card wow fadeInUp" data-wow-delay="0.3s">
+						<h3 style="color: #b91c1c; font-size: 20px; margin-bottom: 15px;">
+							<i class="fas fa-exclamation-triangle" style="margin-right: 10px;"></i>
+							<span data-i18n="landing.product.problem.validation.title">검증은 나중 생각</span>
+						</h3>
+						<p style="color: #7f1d1d; margin: 0;" data-i18n="landing.product.problem.validation.desc">기존 RPA의 데이터 검증은 덧붙여진 것이지 내장된 것이 아닙니다. 데이터가 예상과 일치하지 않으면 워크플로가 조용히 실패하여 명확한 복구 경로 없이 손상된 레코드를 남깁니다.</p>
+					</div>
+				</div>
+				<div class="col-lg-6 mb-30">
+					<div class="problem-card wow fadeInUp" data-wow-delay="0.4s">
+						<h3 style="color: #b91c1c; font-size: 20px; margin-bottom: 15px;">
+							<i class="fas fa-exclamation-triangle" style="margin-right: 10px;"></i>
+							<span data-i18n="landing.product.problem.cloud.title">클라우드 종속성</span>
+						</h3>
+						<p style="color: #7f1d1d; margin: 0;" data-i18n="landing.product.problem.cloud.desc">엔터프라이즈 데이터는 종종 네트워크를 떠날 수 없습니다. 대부분의 현대 자동화 플랫폼은 클라우드 연결이 필요하여 에어갭 환경이나 엄격한 규정 준수 요구 사항에 적합하지 않습니다.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Solution Section -->
+	<section class="section-padding section-bg">
+		<div class="container">
+			<div class="row mb-50">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<h2 class="wow fadeInUp" style="font-size: 36px; font-weight: 700;"><span data-i18n="landing.product.solution.title">왜 워크플로와 인터페이스를</span> <span class="gradient-text" data-i18n="landing.product.solution.titleHighlight">함께 설계해야 하는가</span></h2>
+					<p class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 18px; color: #6b7280; margin-top: 15px;" data-i18n="landing.product.solution.subtitle">Flyto2는 '자동화 로직'과 '사용자 상호 작용'을 구분하지 않습니다. 같은 것입니다.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 mb-30">
+					<div class="feature-box wow fadeInUp" data-wow-delay="0.1s">
+						<div class="feature-icon">
+							<i class="fas fa-pause-circle"></i>
+						</div>
+						<h3 style="font-size: 22px; font-weight: 700; margin-bottom: 15px; color: #1e0a3c;" data-i18n="landing.product.solution.pause.title">언제든지 일시 정지</h3>
+						<p style="color: #6b7280; line-height: 1.7;" data-i18n="landing.product.solution.pause.desc">모든 워크플로는 인간 검토를 위해 일시 정지할 수 있습니다. 하나 실행하고, 올바른지 확인하고, 배치 처리를 계속하세요. 더 이상 맹목적 자동화 없음.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 mb-30">
+					<div class="feature-box wow fadeInUp" data-wow-delay="0.2s">
+						<div class="feature-icon">
+							<i class="fas fa-user-check"></i>
+						</div>
+						<h3 style="font-size: 22px; font-weight: 700; margin-bottom: 15px; color: #1e0a3c;" data-i18n="landing.product.solution.approval.title">인간 승인 단계</h3>
+						<p style="color: #6b7280; line-height: 1.7;" data-i18n="landing.product.solution.approval.desc">워크플로에 직접 승인 체크포인트를 구축하세요. 중요한 작업은 진행하기 전에 인간 확인을 기다립니다.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 mb-30">
+					<div class="feature-box wow fadeInUp" data-wow-delay="0.3s">
+						<div class="feature-icon">
+							<i class="fas fa-shield-alt"></i>
+						</div>
+						<h3 style="font-size: 22px; font-weight: 700; margin-bottom: 15px; color: #1e0a3c;" data-i18n="landing.product.solution.builtin.title">내장 검증</h3>
+						<p style="color: #6b7280; line-height: 1.7;" data-i18n="landing.product.solution.builtin.desc">데이터 검증은 추가 기능이 아닙니다. 모든 모듈이 입력과 출력을 검증합니다. 잘못된 형식의 데이터는 명확한 오류 메시지와 함께 워크플로를 즉시 중지합니다.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 mb-30">
+					<div class="feature-box wow fadeInUp" data-wow-delay="0.4s">
+						<div class="feature-icon">
+							<i class="fas fa-history"></i>
+						</div>
+						<h3 style="font-size: 22px; font-weight: 700; margin-bottom: 15px; color: #1e0a3c;" data-i18n="landing.product.solution.rollback.title">롤백 및 재개</h3>
+						<p style="color: #6b7280; line-height: 1.7;" data-i18n="landing.product.solution.rollback.desc">실수가 처음부터 다시 시작하는 것을 의미하지 않습니다. 체크포인트로 롤백하고, 문제를 수정하고, 멈춘 곳에서 계속하세요.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 mb-30">
+					<div class="feature-box wow fadeInUp" data-wow-delay="0.5s">
+						<div class="feature-icon">
+							<i class="fas fa-camera"></i>
+						</div>
+						<h3 style="font-size: 22px; font-weight: 700; margin-bottom: 15px; color: #1e0a3c;" data-i18n="landing.product.solution.audit.title">전체 감사 추적</h3>
+						<p style="color: #6b7280; line-height: 1.7;" data-i18n="landing.product.solution.audit.desc">모든 작업에는 스크린샷, 로그 및 타임스탬프가 있습니다. 정확히 무슨 일이 일어났는지, 언제, 누가 승인했는지 알 수 있습니다. 규정 준수에 완벽합니다.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 mb-30">
+					<div class="feature-box wow fadeInUp" data-wow-delay="0.6s">
+						<div class="feature-icon">
+							<i class="fas fa-wifi-slash"></i>
+						</div>
+						<h3 style="font-size: 22px; font-weight: 700; margin-bottom: 15px; color: #1e0a3c;" data-i18n="landing.product.solution.offline.title">100% 오프라인</h3>
+						<p style="color: #6b7280; line-height: 1.7;" data-i18n="landing.product.solution.offline.desc">클라우드 종속성 없음. 집으로 전화 없음. 완전한 데이터 주권으로 인프라에 배포하세요.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Validation Section -->
+	<section class="section-padding">
+		<div class="container">
+			<div class="row mb-50">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<h2 class="wow fadeInUp" style="font-size: 36px; font-weight: 700;"><span data-i18n="landing.product.validation.title">왜 검증이</span> <span class="gradient-text" data-i18n="landing.product.validation.titleHighlight">코어 엔진에 내장되어야 하는가</span></h2>
+					<p class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 18px; color: #6b7280; margin-top: 15px;" data-i18n="landing.product.validation.subtitle">대부분의 자동화 실패는 로직 오류가 아닙니다 - 제때 잡히지 않은 데이터 오류입니다.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-10 offset-lg-1">
+					<div class="architecture-diagram wow fadeInUp">
+						<div class="arch-step">
+							<div class="arch-step-number">1</div>
+							<div>
+								<h4 style="font-weight: 700; margin-bottom: 5px;" data-i18n="landing.product.validation.step1.title">입력 검증</h4>
+								<p style="margin: 0; color: #6b7280;" data-i18n="landing.product.validation.step1.desc">모든 모듈은 실행 전에 입력을 검증합니다. 잘못된 데이터 유형? 누락된 필드? 워크플로가 명확한 오류 메시지와 함께 즉시 중지됩니다.</p>
+							</div>
+						</div>
+						<div class="arch-step">
+							<div class="arch-step-number">2</div>
+							<div>
+								<h4 style="font-weight: 700; margin-bottom: 5px;" data-i18n="landing.product.validation.step2.title">스키마 적용</h4>
+								<p style="margin: 0; color: #6b7280;" data-i18n="landing.product.validation.step2.desc">모듈 간에 흐르는 데이터는 정의된 스키마를 준수해야 합니다. 조용한 타입 강제 변환 없음, '가끔 작동함' 시나리오 없음.</p>
+							</div>
+						</div>
+						<div class="arch-step">
+							<div class="arch-step-number">3</div>
+							<div>
+								<h4 style="font-weight: 700; margin-bottom: 5px;" data-i18n="landing.product.validation.step3.title">출력 검증</h4>
+								<p style="margin: 0; color: #6b7280;" data-i18n="landing.product.validation.step3.desc">각 단계가 완료된 후 출력이 예상 스키마와 비교하여 검증됩니다. 뭔가 잘못되면 다운스트림 프로세스에 영향을 미치기 전에 알 수 있습니다.</p>
+							</div>
+						</div>
+						<div class="arch-step">
+							<div class="arch-step-number">4</div>
+							<div>
+								<h4 style="font-weight: 700; margin-bottom: 5px;" data-i18n="landing.product.validation.step4.title">체크포인트 생성</h4>
+								<p style="margin: 0; color: #6b7280;" data-i18n="landing.product.validation.step4.desc">구성 가능한 간격으로 Flyto2가 체크포인트를 생성합니다. 나중에 검증이 실패하면 마지막으로 알려진 양호한 상태로 롤백할 수 있습니다.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Comparison Section -->
+	<section class="section-padding section-bg">
+		<div class="container">
+			<div class="row mb-50">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<h2 class="wow fadeInUp" style="font-size: 36px; font-weight: 700;"><span data-i18n="landing.product.comparison.title">Flyto2 vs 기존</span> <span class="gradient-text" data-i18n="landing.product.comparison.titleHighlight">자동화 도구</span></h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-10 offset-lg-1">
+					<div class="comparison-table wow fadeInUp">
+						<table style="width: 100%; border-collapse: collapse;">
+							<thead>
+								<tr>
+									<th style="text-align: left;" data-i18n="landing.product.comparison.feature">기능</th>
+									<th style="text-align: center;">Flyto2</th>
+									<th style="text-align: center;" data-i18n="landing.product.comparison.traditionalRpa">기존 RPA</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong data-i18n="landing.product.comparison.humanApproval">인간 승인 단계</strong></td>
+									<td style="text-align: center;"><i class="fas fa-check-circle check-yes"></i></td>
+									<td style="text-align: center;"><i class="fas fa-times-circle check-no"></i></td>
+								</tr>
+								<tr>
+									<td><strong data-i18n="landing.product.comparison.pauseResume">워크플로에서 일시 정지 및 재개</strong></td>
+									<td style="text-align: center;"><i class="fas fa-check-circle check-yes"></i></td>
+									<td style="text-align: center;"><i class="fas fa-times-circle check-no"></i></td>
+								</tr>
+								<tr>
+									<td><strong data-i18n="landing.product.comparison.builtinValidation">내장 데이터 검증</strong></td>
+									<td style="text-align: center;"><i class="fas fa-check-circle check-yes"></i></td>
+									<td style="text-align: center;"><i class="fas fa-times-circle check-no"></i></td>
+								</tr>
+								<tr>
+									<td><strong data-i18n="landing.product.comparison.rollback">체크포인트로 롤백</strong></td>
+									<td style="text-align: center;"><i class="fas fa-check-circle check-yes"></i></td>
+									<td style="text-align: center;"><i class="fas fa-times-circle check-no"></i></td>
+								</tr>
+								<tr>
+									<td><strong data-i18n="landing.product.comparison.auditTrail">전체 감사 추적</strong></td>
+									<td style="text-align: center;"><i class="fas fa-check-circle check-yes"></i></td>
+									<td style="text-align: center;" data-i18n="landing.product.comparison.partial">부분적</td>
+								</tr>
+								<tr>
+									<td><strong data-i18n="landing.product.comparison.offline">100% 오프라인 운영</strong></td>
+									<td style="text-align: center;"><i class="fas fa-check-circle check-yes"></i></td>
+									<td style="text-align: center;"><i class="fas fa-times-circle check-no"></i></td>
+								</tr>
+								<tr>
+									<td><strong data-i18n="landing.product.comparison.openSource">오픈 소스 코어</strong></td>
+									<td style="text-align: center;"><i class="fas fa-check-circle check-yes"></i></td>
+									<td style="text-align: center;"><i class="fas fa-times-circle check-no"></i></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="row mt-50">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<a href="compare.html" class="button-1" style="margin-right: 15px;" data-i18n="landing.product.comparison.detailedBtn">상세 비교 보기</a>
+					<a href="pricing.html" class="button-2" data-i18n="landing.common.nav.viewPricing">가격 보기</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="hero-wave-bg" style="padding: 80px 0;">
+		<div class="container" style="position: relative; z-index: 2;">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<h2 style="color: #fff; font-size: 36px; margin-bottom: 20px;" data-i18n="landing.product.cta.title">인간 참여 자동화를 경험할 준비가 되셨나요?</h2>
+					<p style="color: rgba(255,255,255,0.8); font-size: 18px; margin-bottom: 30px;" data-i18n="landing.product.cta.description">무료로 시작하세요. 신용카드 불필요. 오프라인 작동.</p>
+					<a href="pricing.html" class="button-1" style="background: #fff; color: #7c3aed;">
+						<i class="fas fa-rocket" style="margin-right: 8px;"></i> <span data-i18n="landing.common.cta.getStartedFree">무료로 시작하기</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="footer-top pt-70 pb-20">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-sm-6 mb-30">
+						<div class="f-widgets-item">
+							<div class="f-logo">
+								<a href="index.html">
+									<picture>
+										<source srcset="assets/img/logo.webp" type="image/webp">
+										<img src="../assets/img/logo.png" alt="Flyto2" width="90" height="79" loading="lazy">
+									</picture>
+								</a>
+							</div>
+							<p data-i18n="landing.common.footer.tagline">당신처럼 작동하는 자동화. 한 번 녹화하고 영원히 재생하세요.</p>
+							<ul>
+								<li><a href="mailto:info@flyto2.com"><i class="bi bi-envelope-fill"></i> info@flyto2.com</a></li>
+								<li><a href="https://github.com/flytohub" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> github.com/flytohub</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6 mb-30">
+						<div class="f-widgets-item">
+							<h3 data-i18n="landing.common.footer.product">제품</h3>
+							<ul>
+								<li><a href="product.html" data-i18n="landing.common.nav.platform">플랫폼</a></li>
+								<li><a href="pricing.html" data-i18n="landing.common.nav.pricing">가격</a></li>
+								<li><a href="download.html" data-i18n="landing.common.nav.download">다운로드</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6 mb-30">
+						<div class="f-widgets-item">
+							<h3 data-i18n="landing.common.nav.resources">리소스</h3>
+							<ul>
+								<li><a href="use-cases.html" data-i18n="landing.common.nav.useCases">사용 사례</a></li>
+								<li><a href="compare.html" data-i18n="landing.common.nav.compare">비교</a></li>
+								<li><a href="faq.html" data-i18n="landing.common.nav.faq">FAQ</a></li>
+								<li><a href="contact.html" data-i18n="landing.common.footer.contact">문의</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6 mb-30">
+						<div class="f-widgets-item">
+							<h3 data-i18n="landing.common.footer.company">회사</h3>
+							<ul>
+								<li><a href="about.html" data-i18n="landing.common.nav.about">소개</a></li>
+								<li><a href="philosophy.html" data-i18n="landing.common.nav.philosophy">철학</a></li>
+								<li><a href="https://github.com/flytohub/flyto-core" data-i18n="landing.common.footer.openSource" target="_blank" rel="noopener noreferrer">오픈 소스</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom pt-30 pb-30">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 align-self-center">
+						<div class="copy-f-text">
+							<p>Copyright &copy;2025 Flyto2. All Rights Reserved</p>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="footer_social">
+							<ul>
+								<li><a href="https://github.com/flytohub" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+										<li><a href="https://www.youtube.com/channel/UCZ9OOqx4RM3Jjy1annWtsRA" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<div class="scroll-area">
+		<i class="bi bi-arrow-up"></i>
+	</div>
+
+	<!-- Scripts -->
+	<script src="../assets/js/modernizr.min.js"></script>
+	<script src="../assets/js/jquery-3.6.0.min.js"></script>
+	<script src="../assets/js/popper.min.js" defer></script>
+	<script src="../assets/js/bootstrap.min.js" defer></script>
+	<script src="../assets/js/wow.min.js" defer></script>
+	<script src="../assets/js/script.js" defer></script>
+	<script src="../assets/js/mobile-menu.js" defer></script>
+
+	<!-- Firebase SDK -->
+	<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js" defer></script>
+	<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js" defer></script>
+	<script src="../assets/js/auth.js" defer></script>
+</body>
+</html>

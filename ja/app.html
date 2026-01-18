@@ -30,10 +30,10 @@
 
 	<!-- SEO Meta Tags -->
 	<link rel="canonical" href="https://flyto2.com/ja/app.html">
-	<link rel="alternate" hreflang="en" href="https://flyto2.com/app.html">
-	<link rel="alternate" hreflang="zh" href="https://flyto2.com/zh/app.html">
-	<link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/app.html">
-	<link rel="alternate" hreflang="x-default" href="https://flyto2.com/app.html">
+	<link rel="alternate" hreflang="en" href="https://flyto2.com/ja/app.html">
+	<link rel="alternate" hreflang="zh" href="https://flyto2.com/ja/zh/app.html">
+	<link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/ja/app.html">
+	<link rel="alternate" hreflang="x-default" href="https://flyto2.com/ja/app.html">
 	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
 	<!-- Open Graph / Facebook -->
@@ -43,7 +43,6 @@
 	<meta property="og:description" content="Download the Flyto2 visual automation app. Point-and-click interface, no coding needed. Auto-detects your OS. 100% free to start.">
 	<meta property="og:image" content="https://flyto2.com/assets/img/og-image.png">
 	<meta property="og:site_name" content="Flyto2">
-	<meta property="og:locale" content="ja_JP">
 
 	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image">
@@ -59,7 +58,7 @@
 	<link rel="stylesheet" href="../assets/css/normalize.css">
 	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../assets/css/fontawesome.all.min.css">
-	<link rel="stylesheet" href="../style.css">
+	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="../assets/css/responsive.css">
 
 	<!-- Non-critical CSS (deferred loading) -->
@@ -527,8 +526,8 @@
 					<div class="logo">
 						<a href="index.html">
 							<picture>
-								<source srcset="../assets/img/white-logo.webp" type="image/webp">
-								<img src="../assets/img/white-logo.png" alt="Flyto2" fetchpriority="high">
+								<source srcset="assets/img/white-logo.webp" type="image/webp">
+								<img src="../assets/img/white-logo.png" alt="Flyto2" width="90" height="79" fetchpriority="high">
 							</picture>
 						</a>
 					</div>
@@ -604,8 +603,8 @@
 				<div class="mobile-logo">
 					<a href="index.html">
 						<picture>
-							<source srcset="../assets/img/logo.webp" type="image/webp">
-							<img src="../assets/img/logo.png" alt="Flyto2" />
+							<source srcset="assets/img/logo.webp" type="image/webp">
+							<img src="../assets/img/logo.png" alt="Flyto2" width="90" height="79" />
 						</picture>
 					</a>
 				</div>
@@ -639,16 +638,14 @@
 		<div class="container" style="position: relative; z-index: 2;">
 			<div class="row">
 				<div class="col-lg-10 offset-lg-1 text-center">
-					<h1 class="hero-title wow fadeInUp" data-i18n="landing.app.hero.title">Download Flyto2</h1>
-					<p class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 20px; color: #c4b5fd; margin-bottom: 30px;" data-i18n="landing.app.hero.subtitle">
-						Automate your browser workflows. Works offline, your data stays private.
-					</p>
+					<h1 class="hero-title wow fadeInUp" data-i18n="landing.app.hero.title">Flyto2をダウンロード</h1>
+					<p class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 20px; color: #c4b5fd; margin-bottom: 30px;" data-i18n="landing.app.hero.subtitle">ブラウザワークフローを自動化。オフラインで動作し、データはプライベートに保持。</p>
 
 					<!-- Detected system badge -->
 					<div class="wow fadeInUp" data-wow-delay="0.2s">
 						<span class="detected-badge" id="detected-badge">
 							<i class="fas fa-microchip"></i>
-							<span id="detected-os" data-i18n="landing.app.hero.detecting">Detecting your system...</span>
+							<span id="detected-os" data-i18n="landing.app.hero.detecting">システムを検出中...</span>
 						</span>
 					</div>
 
@@ -657,15 +654,15 @@
 						<a href="#" class="btn-main-download" id="main-download-btn">
 							<i class="fas fa-download"></i>
 							<div>
-								<div id="download-btn-text" data-i18n="landing.app.hero.downloadFor">Download for Your System</div>
-								<div class="download-info" id="download-btn-info" data-i18n="landing.app.hero.detectingInfo">Detecting...</div>
+								<div id="download-btn-text" data-i18n="landing.app.hero.downloadFor">お使いのシステム用をダウンロード</div>
+								<div class="download-info" id="download-btn-info" data-i18n="landing.app.hero.detectingInfo">検出中...</div>
 							</div>
 						</a>
 					</div>
 
 					<p class="wow fadeInUp" data-wow-delay="0.4s" style="margin-top: 25px; color: rgba(255,255,255,0.6); font-size: 14px;">
 						<i class="fas fa-shield-alt" style="margin-right: 5px;"></i>
-						<span data-i18n="landing.app.hero.proNote">Free to download. Pro license required for full features.</span>
+						<span data-i18n="landing.app.hero.proNote">ダウンロード無料。全機能のご利用にはProライセンスが必要です。</span>
 					</p>
 				</div>
 			</div>
@@ -683,8 +680,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 text-center">
-					<h2 class="section-title wow fadeInUp" data-i18n="landing.app.platforms.title">All Platforms</h2>
-					<p class="section-subtitle wow fadeInUp" data-wow-delay="0.1s" data-i18n="landing.app.platforms.subtitle">Choose your operating system and architecture</p>
+					<h2 class="section-title wow fadeInUp" data-i18n="landing.app.platforms.title">すべてのプラットフォーム</h2>
+					<p class="section-subtitle wow fadeInUp" data-wow-delay="0.1s" data-i18n="landing.app.platforms.subtitle">お使いのOSとアーキテクチャを選択</p>
 				</div>
 			</div>
 			<div class="row" id="platform-cards">
@@ -696,81 +693,51 @@
 						</div>
 						<div class="platform-name">macOS</div>
 						<div class="platform-arch">Apple Silicon (M1/M2/M3)</div>
-						<div class="platform-size">~85 MB</div>
-						<a href="#" class="btn-platform-download" data-platform="macos-arm64">
-							<i class="fas fa-download"></i> Download .dmg
-						</a>
-					</div>
-				</div>
-				<!-- macOS Intel -->
-				<div class="col-lg-4 col-md-6 mb-30">
-					<div class="platform-card wow fadeInUp" data-wow-delay="0.2s" id="card-macos-intel">
-						<div class="platform-icon">
-							<i class="fab fa-apple"></i>
-						</div>
-						<div class="platform-name">macOS</div>
-						<div class="platform-arch">Intel (x64)</div>
-						<div class="platform-size">~90 MB</div>
-						<a href="#" class="btn-platform-download" data-platform="macos-x64">
+						<div class="platform-size">~150 MB</div>
+						<a href="https://github.com/flytohub/flyto-cloud/releases/latest/download/flyto-desktop-macos-arm64.dmg" class="btn-platform-download" data-platform="macos-arm64">
 							<i class="fas fa-download"></i> Download .dmg
 						</a>
 					</div>
 				</div>
 				<!-- Windows -->
 				<div class="col-lg-4 col-md-6 mb-30">
-					<div class="platform-card wow fadeInUp" data-wow-delay="0.3s" id="card-windows">
+					<div class="platform-card wow fadeInUp" data-wow-delay="0.2s" id="card-windows">
 						<div class="platform-icon">
 							<i class="fab fa-windows"></i>
 						</div>
 						<div class="platform-name">Windows</div>
 						<div class="platform-arch">64-bit (x64)</div>
-						<div class="platform-size">~75 MB</div>
-						<a href="#" class="btn-platform-download" data-platform="windows-x64">
-							<i class="fas fa-download"></i> Download .exe
+						<div class="platform-size">~120 MB</div>
+						<a href="https://github.com/flytohub/flyto-cloud/releases/latest/download/flyto-desktop-windows-x64.zip" class="btn-platform-download" data-platform="windows-x64">
+							<i class="fas fa-download"></i> Download .zip
 						</a>
 					</div>
 				</div>
 				<!-- Linux x64 -->
 				<div class="col-lg-4 col-md-6 mb-30">
-					<div class="platform-card wow fadeInUp" data-wow-delay="0.4s" id="card-linux-x64">
+					<div class="platform-card wow fadeInUp" data-wow-delay="0.3s" id="card-linux-x64">
 						<div class="platform-icon">
 							<i class="fab fa-linux"></i>
 						</div>
 						<div class="platform-name">Linux</div>
 						<div class="platform-arch">x64 (AMD64)</div>
-						<div class="platform-size">~80 MB</div>
-						<a href="#" class="btn-platform-download" data-platform="linux-x64">
-							<i class="fas fa-download"></i> Download .AppImage
+						<div class="platform-size">~130 MB</div>
+						<a href="https://github.com/flytohub/flyto-cloud/releases/latest/download/flyto-desktop-linux-x64.tar.gz" class="btn-platform-download" data-platform="linux-x64">
+							<i class="fas fa-download"></i> Download .tar.gz
 						</a>
 					</div>
 				</div>
-				<!-- Linux ARM64 -->
-				<div class="col-lg-4 col-md-6 mb-30">
-					<div class="platform-card wow fadeInUp" data-wow-delay="0.5s" id="card-linux-arm">
-						<div class="platform-icon">
-							<i class="fab fa-linux"></i>
-						</div>
-						<div class="platform-name">Linux</div>
-						<div class="platform-arch">ARM64 (aarch64)</div>
-						<div class="platform-size">~78 MB</div>
-						<a href="#" class="btn-platform-download" data-platform="linux-arm64">
-							<i class="fas fa-download"></i> Download .AppImage
-						</a>
-					</div>
-				</div>
-				<!-- Developer -->
-				<div class="col-lg-4 col-md-6 mb-30">
-					<div class="platform-card wow fadeInUp" data-wow-delay="0.6s">
-						<div class="platform-icon">
-							<i class="fas fa-terminal"></i>
-						</div>
-						<div class="platform-name">Developers</div>
-						<div class="platform-arch">Python Package / Docker</div>
-						<div class="platform-size">pip install</div>
-						<a href="download.html" class="btn-platform-download" style="background: linear-gradient(135deg, #1e0a3c 0%, #4c1d95 100%);">
-							<i class="fas fa-code"></i> View Options
-						</a>
-					</div>
+			</div>
+			<!-- Developer Section -->
+			<div class="row mt-30">
+				<div class="col-lg-12 text-center">
+					<p style="color: #6b7280; margin-bottom: 20px;">
+						<i class="fas fa-code" style="color: #7c3aed;"></i>
+						Looking for Python package or Docker deployment?
+					</p>
+					<a href="download.html" class="btn-platform-download" style="background: linear-gradient(135deg, #1e0a3c 0%, #4c1d95 100%);">
+						<i class="fas fa-terminal"></i> Developer Downloads
+					</a>
 				</div>
 			</div>
 		</div>
@@ -781,7 +748,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 text-center mb-50">
-					<h2 class="section-title wow fadeInUp" data-i18n="landing.app.requirements.title">System Requirements</h2>
+					<h2 class="section-title wow fadeInUp" data-i18n="landing.app.requirements.title">システム要件</h2>
 				</div>
 			</div>
 			<div class="row">
@@ -827,8 +794,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 text-center mb-50">
-					<h2 class="section-title wow fadeInUp" data-i18n="landing.app.install.title">Installation Guide</h2>
-					<p class="section-subtitle wow fadeInUp" data-wow-delay="0.1s" data-i18n="landing.app.install.subtitle">Get up and running in minutes</p>
+					<h2 class="section-title wow fadeInUp" data-i18n="landing.app.install.title">インストールガイド</h2>
+					<p class="section-subtitle wow fadeInUp" data-wow-delay="0.1s" data-i18n="landing.app.install.subtitle">数分で使い始められます</p>
 				</div>
 			</div>
 			<div class="row">
@@ -836,29 +803,29 @@
 					<div class="install-step wow fadeInUp" data-wow-delay="0.1s">
 						<div class="step-number">1</div>
 						<div class="step-content">
-							<h3 data-i18n="landing.app.install.step1">Download the installer</h3>
-							<p data-i18n="landing.app.install.step1Desc">Choose the version for your operating system above</p>
+							<h3 data-i18n="landing.app.install.step1">インストーラーをダウンロード</h3>
+							<p data-i18n="landing.app.install.step1Desc">上記からお使いのOSに合ったバージョンを選択</p>
 						</div>
 					</div>
 					<div class="install-step wow fadeInUp" data-wow-delay="0.2s">
 						<div class="step-number">2</div>
 						<div class="step-content">
-							<h3 data-i18n="landing.app.install.step2">Run the installer</h3>
-							<p data-i18n="landing.app.install.step2Desc">Double-click the downloaded file and follow the prompts</p>
+							<h3 data-i18n="landing.app.install.step2">インストーラーを実行</h3>
+							<p data-i18n="landing.app.install.step2Desc">ダウンロードしたファイルをダブルクリックして指示に従う</p>
 						</div>
 					</div>
 					<div class="install-step wow fadeInUp" data-wow-delay="0.3s">
 						<div class="step-number">3</div>
 						<div class="step-content">
-							<h3 data-i18n="landing.app.install.step3">Launch Flyto2</h3>
-							<p data-i18n="landing.app.install.step3Desc">Open the app and start automating your workflows</p>
+							<h3 data-i18n="landing.app.install.step3">Flyto2を起動</h3>
+							<p data-i18n="landing.app.install.step3Desc">アプリを開いてワークフローの自動化を開始</p>
 						</div>
 					</div>
 					<div class="install-step wow fadeInUp" data-wow-delay="0.4s">
 						<div class="step-number">4</div>
 						<div class="step-content">
-							<h3 data-i18n="landing.app.install.step4">Activate Pro (Optional)</h3>
-							<p data-i18n="landing.app.install.step4Desc">Import your license file to unlock all features</p>
+							<h3 data-i18n="landing.app.install.step4">Proをアクティベート（オプション）</h3>
+							<p data-i18n="landing.app.install.step4Desc">ライセンスファイルをインポートして全機能をアンロック</p>
 						</div>
 					</div>
 				</div>
@@ -877,8 +844,8 @@
 							<div class="f-logo">
 								<a href="index.html">
 									<picture>
-										<source srcset="../assets/img/logo.webp" type="image/webp">
-										<img src="../assets/img/logo.png" alt="Flyto2" loading="lazy" />
+										<source srcset="assets/img/logo.webp" type="image/webp">
+										<img src="../assets/img/logo.png" alt="Flyto2" width="90" height="79" loading="lazy" />
 									</picture>
 								</a>
 							</div>
@@ -933,6 +900,7 @@
 						<div class="footer_social">
 							<ul>
 								<li><a href="https://github.com/flytohub" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+										<li><a href="https://www.youtube.com/channel/UCZ9OOqx4RM3Jjy1annWtsRA" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
 							</ul>
 						</div>
 					</div>
@@ -955,10 +923,19 @@
 	<script src="../assets/js/mobile-menu.js" defer></script>
 
 	<script>
+		// GitHub Release base URL
+		const RELEASE_BASE = 'https://github.com/flytohub/flyto-cloud/releases/latest/download';
+
+		// Download URLs mapping
+		const DOWNLOAD_URLS = {
+			'macos-arm64': `${RELEASE_BASE}/flyto-desktop-macos-arm64.dmg`,
+			'windows-x64': `${RELEASE_BASE}/flyto-desktop-windows-x64.zip`,
+			'linux-x64': `${RELEASE_BASE}/flyto-desktop-linux-x64.tar.gz`
+		};
+
 		// OS Detection
 		function detectOS() {
 			const userAgent = navigator.userAgent.toLowerCase();
-			const platform = navigator.platform.toLowerCase();
 
 			let os = 'unknown';
 			let arch = 'x64';
@@ -966,6 +943,7 @@
 			let downloadUrl = '#';
 			let downloadText = '';
 			let cardId = '';
+			let fileInfo = '';
 
 			// Detect OS
 			if (userAgent.includes('win')) {
@@ -974,68 +952,40 @@
 				arch = 'x64';
 				downloadText = 'Download for Windows';
 				cardId = 'card-windows';
+				downloadUrl = DOWNLOAD_URLS['windows-x64'];
+				fileInfo = '.zip archive';
 			} else if (userAgent.includes('mac')) {
 				os = 'macos';
-				osName = 'macOS';
-				// Detect Apple Silicon
-				if (userAgent.includes('arm') || (navigator.userAgentData && navigator.userAgentData.platform === 'macOS')) {
-					// Try to detect Apple Silicon using canvas
-					try {
-						const canvas = document.createElement('canvas');
-						const gl = canvas.getContext('webgl');
-						const debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
-						const renderer = gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL);
-						if (renderer.includes('Apple')) {
-							arch = 'arm64';
-							osName = 'macOS (Apple Silicon)';
-							cardId = 'card-macos-arm';
-						} else {
-							arch = 'x64';
-							osName = 'macOS (Intel)';
-							cardId = 'card-macos-intel';
-						}
-					} catch (e) {
-						// Fallback: check if running on newer macOS with ARM
-						arch = 'arm64';
-						osName = 'macOS (Apple Silicon)';
-						cardId = 'card-macos-arm';
-					}
-				} else {
-					arch = 'x64';
-					osName = 'macOS (Intel)';
-					cardId = 'card-macos-intel';
-				}
-				downloadText = 'Download for ' + osName;
+				osName = 'macOS (Apple Silicon)';
+				arch = 'arm64';
+				cardId = 'card-macos-arm';
+				downloadUrl = DOWNLOAD_URLS['macos-arm64'];
+				downloadText = 'Download for macOS';
+				fileInfo = '.dmg installer';
 			} else if (userAgent.includes('linux')) {
 				os = 'linux';
-				osName = 'Linux';
-				if (userAgent.includes('aarch64') || userAgent.includes('arm64')) {
-					arch = 'arm64';
-					osName = 'Linux (ARM64)';
-					cardId = 'card-linux-arm';
-				} else {
-					arch = 'x64';
-					osName = 'Linux (x64)';
-					cardId = 'card-linux-x64';
-				}
-				downloadText = 'Download for ' + osName;
+				osName = 'Linux (x64)';
+				arch = 'x64';
+				cardId = 'card-linux-x64';
+				downloadUrl = DOWNLOAD_URLS['linux-x64'];
+				downloadText = 'Download for Linux';
+				fileInfo = '.tar.gz archive';
 			} else {
 				osName = 'your system';
 				downloadText = 'Select Your Platform';
+				fileInfo = 'Select below';
 			}
 
 			// Update UI
 			document.getElementById('detected-os').textContent = osName + ' detected';
 			document.getElementById('download-btn-text').textContent = downloadText;
-
-			// Set file info
-			let fileInfo = '';
-			if (os === 'windows') fileInfo = '.exe installer';
-			else if (os === 'macos') fileInfo = '.dmg installer';
-			else if (os === 'linux') fileInfo = '.AppImage';
-			else fileInfo = 'Select below';
-
 			document.getElementById('download-btn-info').textContent = fileInfo;
+
+			// Set main download button URL
+			const mainBtn = document.getElementById('main-download-btn');
+			if (downloadUrl !== '#') {
+				mainBtn.href = downloadUrl;
+			}
 
 			// Highlight recommended card
 			if (cardId) {
@@ -1045,7 +995,7 @@
 				}
 			}
 
-			return { os, arch, osName };
+			return { os, arch, osName, downloadUrl };
 		}
 
 		// Initialize

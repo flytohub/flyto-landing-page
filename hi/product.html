@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html class="no-js" lang="hi">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Preconnect to critical origins -->
+	<link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+	<link rel="dns-prefetch" href="https://www.gstatic.com">
+	<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+	<title>Flyto2 Platform - UI-Driven Workflow Automation with Human Oversight</title>
+	<meta name="description" content="Discover why traditional RPA fails for complex workflows. Flyto2 combines UI-driven automation with human approval steps, validation checkpoints, and full audit trails. The workflow platform built for enterprise needs.">
+
+	<!-- Content Security Policy -->
+	<meta http-equiv="Content-Security-Policy" content="
+		default-src 'self';
+		script-src 'self' 'unsafe-inline' https://www.gstatic.com https://cdn.jsdelivr.net https://apis.google.com;
+		style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com;
+		font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net;
+		img-src 'self' data: https:;
+		connect-src 'self' https://*.cloudfunctions.net https://*.firebaseio.com;
+		frame-src https://accounts.google.com https://*.firebaseapp.com;
+	\">
+
+	<!-- Security Headers -->
+	<meta http-equiv="X-Content-Type-Options" content="nosniff">
+	<meta name="referrer" content="strict-origin-when-cross-origin">
+	<meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+
+	<!-- SEO Meta Tags -->
+	<link rel="canonical" href="https://flyto2.com/hi/product.html">
+	<link rel="alternate" hreflang="en" href="https://flyto2.com/hi/product.html">
+	<link rel="alternate" hreflang="zh" href="https://flyto2.com/hi/zh/product.html">
+	<link rel="alternate" hreflang="ja" href="https://flyto2.com/hi/ja/product.html">
+	<link rel="alternate" hreflang="x-default" href="https://flyto2.com/hi/product.html">
+	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+	<meta name="keywords" content="workflow platform, UI-driven automation, human-in-the-loop, workflow validation, enterprise automation, RPA alternative, approval workflow, audit trail">
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://flyto2.com/product.html">
+	<meta property="og:title" content="Flyto2 Platform - UI-Driven Workflow Automation">
+	<meta property="og:description" content="Discover why traditional RPA fails. Flyto2 combines UI-driven automation with human approval steps and validation checkpoints.">
+	<meta property="og:image" content="https://flyto2.com/assets/img/og-image.png">
+	<meta property="og:site_name" content="Flyto2">
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Flyto2 Platform - UI-Driven Workflow Automation">
+	<meta name="twitter:description" content="Discover why traditional RPA fails. Flyto2 combines UI-driven automation with human approval steps.">
+	<meta name="twitter:image" content="https://flyto2.com/assets/img/og-image.png">
+	<meta name="twitter:image:alt" content="Flyto2 - No-Code Automation Platform">
+
+	<link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="../assets/img/icon.png" type="image/png" sizes="32x32">
+
+	<!-- Critical CSS (render-blocking) -->
+	<link rel="stylesheet" href="../assets/css/normalize.css">
+	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../assets/css/fontawesome.all.min.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="../assets/css/responsive.css">
+
+	<!-- Non-critical CSS (deferred loading) -->
+	<link rel="stylesheet" href="../assets/css/bootstrap-icons.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/lightcase.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/owl.carousel.min.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/owl.theme.default.min.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/animate.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/typed.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/magnific-popup.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/auth.css" media="print" onload="this.media='all'">
+	<noscript>
+		<link rel="stylesheet" href="../assets/css/bootstrap-icons.css">
+		<link rel="stylesheet" href="../assets/css/lightcase.css">
+		<link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+		<link rel="stylesheet" href="../assets/css/owl.theme.default.min.css">
+		<link rel="stylesheet" href="../assets/css/animate.css">
+		<link rel="stylesheet" href="../assets/css/typed.css">
+		<link rel="stylesheet" href="../assets/css/magnific-popup.css">
+		<link rel="stylesheet" href="../assets/css/auth.css">
+	</noscript>
+	<style>
+		.product-hero {
+			background: linear-gradient(135deg, #0f0524 0%, #1e0a3c 20%, #2d1b4e 50%, #4c1d95 80%, #5b21b6 100%);
+			position: relative;
+			overflow: hidden;
+			min-height: 400px;
+		}
+		.product-hero::before {
+			content: '';
+			position: absolute;
+			top: 0; left: 0; right: 0; bottom: 0;
+			background:
+				radial-gradient(circle at 20% 80%, rgba(124, 58, 237, 0.3) 0%, transparent 50%),
+				radial-gradient(circle at 80% 20%, rgba(167, 139, 250, 0.2) 0%, transparent 50%);
+		}
+		.gradient-text {
+			background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+		}
+		.problem-card {
+			background: linear-gradient(145deg, #fee2e2 0%, #fecaca 100%);
+			border-left: 4px solid #ef4444;
+			border-radius: 12px;
+			padding: 25px;
+			margin-bottom: 20px;
+		}
+		.solution-card {
+			background: linear-gradient(145deg, #d1fae5 0%, #a7f3d0 100%);
+			border-left: 4px solid #10b981;
+			border-radius: 12px;
+			padding: 25px;
+			margin-bottom: 20px;
+		}
+		.feature-box {
+			background: #fff;
+			border-radius: 20px;
+			padding: 35px 30px;
+			height: 100%;
+			border: 1px solid rgba(124, 58, 237, 0.1);
+			transition: all 0.3s;
+			box-shadow: 0 10px 40px rgba(124, 58, 237, 0.05);
+		}
+		.feature-box:hover {
+			transform: translateY(-8px);
+			box-shadow: 0 20px 50px rgba(124, 58, 237, 0.15);
+		}
+		.feature-icon {
+			width: 70px;
+			height: 70px;
+			background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+			border-radius: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 25px;
+		}
+		.feature-icon i {
+			font-size: 30px;
+			color: #fff;
+		}
+		.architecture-diagram {
+			background: linear-gradient(145deg, #f8f9ff 0%, #fff 100%);
+			border-radius: 24px;
+			padding: 40px;
+			border: 1px solid rgba(124, 58, 237, 0.1);
+		}
+		.arch-step {
+			display: flex;
+			align-items: center;
+			padding: 20px;
+			background: #fff;
+			border-radius: 12px;
+			margin-bottom: 15px;
+			box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+		}
+		.arch-step-number {
+			width: 40px;
+			height: 40px;
+			background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #fff;
+			font-weight: 700;
+			margin-right: 20px;
+			flex-shrink: 0;
+		}
+		.comparison-table {
+			background: #fff;
+			border-radius: 20px;
+			overflow: hidden;
+			box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+		}
+		.comparison-table th {
+			background: linear-gradient(135deg, #1e0a3c 0%, #4c1d95 100%);
+			color: #fff;
+			padding: 20px;
+			font-weight: 600;
+		}
+		.comparison-table td {
+			padding: 18px 20px;
+			border-bottom: 1px solid #f0f0f0;
+		}
+		.comparison-table tr:last-child td {
+			border-bottom: none;
+		}
+		.check-yes {
+			color: #10b981;
+			font-size: 20px;
+		}
+		.check-no {
+			color: #ef4444;
+			font-size: 20px;
+		}
+	</style>
+
+	<!-- Structured Data -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "WebPage",
+		"name": "Flyto2 Platform",
+		"description": "UI-driven workflow automation platform with human oversight, validation checkpoints, and full audit trails.",
+		"url": "https://flyto2.com/product.html",
+		"mainEntity": {
+			"@type": "SoftwareApplication",
+			"name": "Flyto2",
+			"applicationCategory": "BusinessApplication",
+			"operatingSystem": "Windows, macOS, Linux"
+		}
+	}
+	</script>
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		"itemListElement": [
+			{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://flyto2.com/"},
+			{"@type": "ListItem", "position": 2, "name": "Platform", "item": "https://flyto2.com/product.html"}
+		]
+	}
+	</script>
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "SoftwareApplication",
+		"name": "Flyto2",
+		"applicationCategory": "BusinessApplication",
+		"operatingSystem": "Windows, macOS, Linux",
+		"description": "No-code automation platform that operates your computer like a human. Record once, automate forever.",
+		"offers": {
+			"@type": "Offer",
+			"price": "0",
+			"priceCurrency": "USD",
+			"availability": "https://schema.org/InStock"
+		},
+		"aggregateRating": {
+			"@type": "AggregateRating",
+			"ratingValue": "4.8",
+			"ratingCount": "150"
+		}
+	}
+	</script>
+</head>
+<body>
+	<!-- Preloader -->
+	<div id="preloader">
+		<div class="preloader">
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+
+	<!-- Header -->
+	<header class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 align-self-center">
+					<div class="logo">
+						<a href="index.html">
+							<picture>
+								<source srcset="assets/img/white-logo.webp" type="image/webp">
+								<img src="../assets/img/white-logo.png" alt="Flyto2" width="90" height="79" fetchpriority="high">
+							</picture>
+						</a>
+					</div>
+					<div class="canvas_open">
+						<a href="javascript:void(0)" aria-label="Open menu" role="button">
+							<span></span>
+							<span></span>
+							<span></span>
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-9">
+					<div class="menu d-flex align-items-center justify-content-end">
+						<nav>
+							<ul>
+								<li><a href="index.html" data-i18n="landing.common.nav.home">होम</a></li>
+								<li><a href="product.html" class="active" data-i18n="landing.common.nav.platform">प्लेटफ़ॉर्म</a></li>
+								<li class="nav-dropdown">
+									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" data-i18n="landing.common.nav.pricing">मूल्य</span>
+									<div class="nav-dropdown-menu">
+										<a href="pricing.html" class="nav-dropdown-item"><i class="bi bi-tag"></i><span data-i18n="landing.common.nav.plansAndPricing">योजनाएं और मूल्य</span></a>
+										<a href="buy-offline.html" class="nav-dropdown-item"><i class="bi bi-shield-lock"></i><span data-i18n="landing.common.nav.buyProLicense">Pro लाइसेंस खरीदें</span></a>
+									</div>
+								</li>
+								<li class="nav-dropdown">
+									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" data-i18n="landing.common.nav.resources">संसाधन</span>
+									<div class="nav-dropdown-menu">
+										<a href="use-cases.html" class="nav-dropdown-item"><i class="bi bi-briefcase"></i><span data-i18n="landing.common.nav.useCases">उपयोग के मामले</span></a>
+										<a href="compare.html" class="nav-dropdown-item"><i class="bi bi-arrow-left-right"></i><span data-i18n="landing.common.nav.compare">तुलना</span></a>
+										<a href="faq.html" class="nav-dropdown-item"><i class="bi bi-question-circle"></i><span data-i18n="landing.common.nav.faq">FAQ</span></a>
+										<a href="contact.html" class="nav-dropdown-item"><i class="bi bi-envelope"></i><span data-i18n="landing.common.nav.contactUs">संपर्क करें</span></a>
+									</div>
+								</li>
+							</ul>
+						</nav>
+						<div class="header-auth">
+							<button id="headerLoginBtn" class="btn-header-login">
+								<i class="bi bi-person"></i>
+								<span data-i18n="landing.common.auth.signIn">साइन इन</span>
+							</button>
+							<div id="headerUserDropdown" class="user-dropdown d-none">
+								<div class="user-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">
+									<div class="user-avatar" id="headerUserAvatar">U</div>
+									<span class="user-email" id="headerUserEmail"></span>
+									<i class="bi bi-chevron-down dropdown-arrow"></i>
+								</div>
+								<div class="user-dropdown-menu">
+									<div class="dropdown-header">
+										<div class="dropdown-header-email" id="dropdownUserEmail"></div>
+										<div class="dropdown-header-label" data-i18n="landing.common.auth.flytoAccount">Flyto2 खाता</div>
+									</div>
+									<div class="dropdown-menu-items">
+										<a href="buy-offline.html" class="dropdown-menu-item">
+											<i class="bi bi-key"></i>
+											<span data-i18n="landing.common.auth.myLicenses">मेरे लाइसेंस</span>
+										</a>
+										<div class="dropdown-divider"></div>
+										<button class="dropdown-menu-item text-danger" id="btnSignOut">
+											<i class="bi bi-box-arrow-right"></i>
+											<span data-i18n="landing.common.auth.signOut">साइन आउट</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Mobile Menu -->
+	<div class="mobile-menu-area">
+		<div class="off_canvars_overlay"></div>
+		<div class="offcanvas_menu">
+			<div class="offcanvas_menu_wrapper">
+				<div class="canvas_close">
+					<a href="javascript:void(0)" aria-label="Close menu" role="button"><i class="fas fa-times"></i></a>
+				</div>
+				<div class="mobile-logo">
+					<a href="index.html">
+						<picture>
+							<source srcset="assets/img/logo.webp" type="image/webp">
+							<img src="../assets/img/logo.png" alt="Flyto2" width="90" height="79" />
+						</picture>
+					</a>
+				</div>
+				<div id="menu" class="text-left">
+					<ul class="offcanvas_main_menu">
+						<li><a href="index.html" data-i18n="landing.common.nav.home">होम</a></li>
+						<li class="active"><a href="product.html" data-i18n="landing.common.nav.platform">प्लेटफ़ॉर्म</a></li>
+						<li><a href="pricing.html" data-i18n="landing.common.nav.pricing">मूल्य</a></li>
+						<li><a href="use-cases.html" data-i18n="landing.common.nav.useCases">उपयोग के मामले</a></li>
+						<li><a href="compare.html" data-i18n="landing.common.nav.compare">तुलना</a></li>
+						<li><a href="contact.html" data-i18n="landing.common.footer.contact">संपर्क</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Hero Section -->
+	<section class="product-hero">
+		<div class="container" style="position: relative; z-index: 2;">
+			<div class="row">
+				<div class="col-lg-10 offset-lg-1 text-center">
+					<div class="pt-150 pb-100">
+						<nav aria-label="breadcrumb" style="display: inline-block; margin-bottom: 20px;">
+							<ol class="breadcrumb" style="background: rgba(255,255,255,0.1); border-radius: 30px; padding: 10px 20px; margin: 0;">
+								<li class="breadcrumb-item"><a href="index.html" style="color: #a78bfa;" data-i18n="landing.common.nav.home">होम</a></li>
+								<li class="breadcrumb-item active" style="color: #fff;" data-i18n="landing.common.nav.platform">प्लेटफ़ॉर्म</li>
+							</ol>
+						</nav>
+						<h1 class="wow fadeInUp" style="color: #fff; font-size: 48px; font-weight: 800; margin-bottom: 20px;">
+							<span data-i18n="landing.product.hero.title">एक वर्कफ़्लो प्लेटफ़ॉर्म जो</span> <span class="gradient-text" style="-webkit-text-fill-color: #a78bfa;" data-i18n="landing.product.hero.titleHighlight">बेकाबू नहीं होगा</span>
+						</h1>
+						<p class="wow fadeInUp" data-wow-delay="0.1s" style="color: rgba(255,255,255,0.8); font-size: 20px; max-width: 700px; margin: 0 auto;" data-i18n="landing.product.hero.description">पारंपरिक RPA विफल होता है जब मानवीय निर्णय की आवश्यकता होती है। Flyto2 मानवीय निरीक्षण को पहले दिन से मूल सुविधा बनाता है, बाद में सोचने का काम नहीं।</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wave-divider">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+				<path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+			</svg>
+		</div>
+	</section>
+
+	<!-- Problem Section -->
+	<section class="section-padding">
+		<div class="container">
+			<div class="row mb-50">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<h2 class="wow fadeInUp" style="font-size: 36px; font-weight: 700;"><span data-i18n="landing.product.problem.title">समस्याएं जो पारंपरिक RPA</span> <span class="gradient-text" data-i18n="landing.product.problem.titleHighlight">हल नहीं कर सकता</span></h2>
+					<p class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 18px; color: #6b7280; margin-top: 15px;" data-i18n="landing.product.problem.subtitle">अधिकांश ऑटोमेशन टूल्स में एक मौलिक दोष है: वे मानवीय हस्तक्षेप के बिना चलने के लिए डिज़ाइन किए गए हैं।</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-6 mb-30">
+					<div class="problem-card wow fadeInUp" data-wow-delay="0.1s">
+						<h3 style="color: #b91c1c; font-size: 20px; margin-bottom: 15px;">
+							<i class="fas fa-exclamation-triangle" style="margin-right: 10px;"></i>
+							<span data-i18n="landing.product.problem.allOrNothing.title">सब-या-कुछ-नहीं निष्पादन</span>
+						</h3>
+						<p style="color: #7f1d1d; margin: 0;" data-i18n="landing.product.problem.allOrNothing.desc">पारंपरिक RPA पूर्णता या क्रैश तक चलता है। कोई बीच का रास्ता नहीं। 1,000 रिकॉर्ड प्रोसेस करते समय, आपको पता नहीं चलेगा कि कुछ गलत है जब तक नुकसान पूरे डेटासेट में फैल न जाए।</p>
+					</div>
+				</div>
+				<div class="col-lg-6 mb-30">
+					<div class="problem-card wow fadeInUp" data-wow-delay="0.2s">
+						<h3 style="color: #b91c1c; font-size: 20px; margin-bottom: 15px;">
+							<i class="fas fa-exclamation-triangle" style="margin-right: 10px;"></i>
+							<span data-i18n="landing.product.problem.noApproval.title">कोई अनुमोदन वर्कफ़्लो नहीं</span>
+						</h3>
+						<p style="color: #7f1d1d; margin: 0;" data-i18n="landing.product.problem.noApproval.desc">अधिकांश RPA टूल्स मानवीय अनुमोदन के लिए नहीं रुक सकते। विनियमित उद्योगों में जहां हर क्रिया को सत्यापन की आवश्यकता होती है, यह महत्वपूर्ण प्रक्रियाओं को स्वचालित करना असंभव बनाता है।</p>
+					</div>
+				</div>
+				<div class="col-lg-6 mb-30">
+					<div class="problem-card wow fadeInUp" data-wow-delay="0.3s">
+						<h3 style="color: #b91c1c; font-size: 20px; margin-bottom: 15px;">
+							<i class="fas fa-exclamation-triangle" style="margin-right: 10px;"></i>
+							<span data-i18n="landing.product.problem.validation.title">वैलिडेशन बाद में सोचने का काम है</span>
+						</h3>
+						<p style="color: #7f1d1d; margin: 0;" data-i18n="landing.product.problem.validation.desc">पारंपरिक RPA में डेटा वैलिडेशन बोल्ट-ऑन है, बिल्ट-इन नहीं। जब डेटा अपेक्षाओं से मेल नहीं खाता, वर्कफ़्लो चुपचाप विफल हो जाते हैं, बिना स्पष्ट रिकवरी पथ के दूषित रिकॉर्ड छोड़ते हैं।</p>
+					</div>
+				</div>
+				<div class="col-lg-6 mb-30">
+					<div class="problem-card wow fadeInUp" data-wow-delay="0.4s">
+						<h3 style="color: #b91c1c; font-size: 20px; margin-bottom: 15px;">
+							<i class="fas fa-exclamation-triangle" style="margin-right: 10px;"></i>
+							<span data-i18n="landing.product.problem.cloud.title">क्लाउड निर्भरता</span>
+						</h3>
+						<p style="color: #7f1d1d; margin: 0;" data-i18n="landing.product.problem.cloud.desc">एंटरप्राइज़ डेटा अक्सर आपके नेटवर्क से बाहर नहीं जा सकता। अधिकांश आधुनिक ऑटोमेशन प्लेटफ़ॉर्म क्लाउड कनेक्टिविटी की आवश्यकता होती है, जो उन्हें एयर-गैप्ड वातावरण या सख्त अनुपालन आवश्यकताओं के लिए अनुपयुक्त बनाता है।</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Solution Section -->
+	<section class="section-padding section-bg">
+		<div class="container">
+			<div class="row mb-50">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<h2 class="wow fadeInUp" style="font-size: 36px; font-weight: 700;"><span data-i18n="landing.product.solution.title">वर्कफ़्लो और इंटरफ़ेस को क्यों</span> <span class="gradient-text" data-i18n="landing.product.solution.titleHighlight">एक साथ डिज़ाइन करना चाहिए</span></h2>
+					<p class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 18px; color: #6b7280; margin-top: 15px;" data-i18n="landing.product.solution.subtitle">Flyto2 'ऑटोमेशन लॉजिक' और 'यूज़र इंटरैक्शन' के बीच अंतर नहीं करता। वे एक ही चीज़ हैं।</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 mb-30">
+					<div class="feature-box wow fadeInUp" data-wow-delay="0.1s">
+						<div class="feature-icon">
+							<i class="fas fa-pause-circle"></i>
+						</div>
+						<h3 style="font-size: 22px; font-weight: 700; margin-bottom: 15px; color: #1e0a3c;" data-i18n="landing.product.solution.pause.title">कभी भी रोकें</h3>
+						<p style="color: #6b7280; line-height: 1.7;" data-i18n="landing.product.solution.pause.desc">हर वर्कफ़्लो मानवीय समीक्षा के लिए रुक सकता है। एक चलाएं, पुष्टि करें कि यह सही है, फिर बैच प्रोसेसिंग जारी रखें। कोई अंधा ऑटोमेशन नहीं।</p>
+					</div>
+				</div>
+				<div class="col-lg-4 mb-30">
+					<div class="feature-box wow fadeInUp" data-wow-delay="0.2s">
+						<div class="feature-icon">
+							<i class="fas fa-user-check"></i>
+						</div>
+						<h3 style="font-size: 22px; font-weight: 700; margin-bottom: 15px; color: #1e0a3c;" data-i18n="landing.product.solution.approval.title">मानवीय अनुमोदन चरण</h3>
+						<p style="color: #6b7280; line-height: 1.7;" data-i18n="landing.product.solution.approval.desc">अपने वर्कफ़्लो में सीधे अनुमोदन चेकपॉइंट बनाएं। महत्वपूर्ण क्रियाएं आगे बढ़ने से पहले मानवीय पुष्टि की प्रतीक्षा करती हैं।</p>
+					</div>
+				</div>
+				<div class="col-lg-4 mb-30">
+					<div class="feature-box wow fadeInUp" data-wow-delay="0.3s">
+						<div class="feature-icon">
+							<i class="fas fa-shield-alt"></i>
+						</div>
+						<h3 style="font-size: 22px; font-weight: 700; margin-bottom: 15px; color: #1e0a3c;" data-i18n="landing.product.solution.builtin.title">बिल्ट-इन वैलिडेशन</h3>
+						<p style="color: #6b7280; line-height: 1.7;" data-i18n="landing.product.solution.builtin.desc">डेटा वैलिडेशन एक ऐड-ऑन नहीं है। हर मॉड्यूल इनपुट और आउटपुट को मान्य करता है। खराब डेटा स्पष्ट त्रुटि संदेशों के साथ वर्कफ़्लो को तुरंत रोक देता है।</p>
+					</div>
+				</div>
+				<div class="col-lg-4 mb-30">
+					<div class="feature-box wow fadeInUp" data-wow-delay="0.4s">
+						<div class="feature-icon">
+							<i class="fas fa-history"></i>
+						</div>
+						<h3 style="font-size: 22px; font-weight: 700; margin-bottom: 15px; color: #1e0a3c;" data-i18n="landing.product.solution.rollback.title">रोलबैक और रिज़्यूम</h3>
+						<p style="color: #6b7280; line-height: 1.7;" data-i18n="landing.product.solution.rollback.desc">गलतियों का मतलब शुरू से शुरू करना नहीं है। चेकपॉइंट पर वापस जाएं, समस्या ठीक करें, और जहां छोड़ा वहां से जारी रखें।</p>
+					</div>
+				</div>
+				<div class="col-lg-4 mb-30">
+					<div class="feature-box wow fadeInUp" data-wow-delay="0.5s">
+						<div class="feature-icon">
+							<i class="fas fa-camera"></i>
+						</div>
+						<h3 style="font-size: 22px; font-weight: 700; margin-bottom: 15px; color: #1e0a3c;" data-i18n="landing.product.solution.audit.title">पूर्ण ऑडिट ट्रेल</h3>
+						<p style="color: #6b7280; line-height: 1.7;" data-i18n="landing.product.solution.audit.desc">हर क्रिया में स्क्रीनशॉट, लॉग और टाइमस्टैम्प हैं। जानें कि वास्तव में क्या हुआ, कब, और किसने अनुमोदित किया। अनुपालन के लिए उत्तम।</p>
+					</div>
+				</div>
+				<div class="col-lg-4 mb-30">
+					<div class="feature-box wow fadeInUp" data-wow-delay="0.6s">
+						<div class="feature-icon">
+							<i class="fas fa-wifi-slash"></i>
+						</div>
+						<h3 style="font-size: 22px; font-weight: 700; margin-bottom: 15px; color: #1e0a3c;" data-i18n="landing.product.solution.offline.title">100% ऑफ़लाइन</h3>
+						<p style="color: #6b7280; line-height: 1.7;" data-i18n="landing.product.solution.offline.desc">कोई क्लाउड निर्भरता नहीं। कोई फ़ोनिंग होम नहीं। पूर्ण डेटा संप्रभुता के साथ अपने इंफ्रास्ट्रक्चर पर डिप्लॉय करें।</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Validation Section -->
+	<section class="section-padding">
+		<div class="container">
+			<div class="row mb-50">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<h2 class="wow fadeInUp" style="font-size: 36px; font-weight: 700;"><span data-i18n="landing.product.validation.title">वैलिडेशन को क्यों बनाना चाहिए</span> <span class="gradient-text" data-i18n="landing.product.validation.titleHighlight">कोर इंजन में</span></h2>
+					<p class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 18px; color: #6b7280; margin-top: 15px;" data-i18n="landing.product.validation.subtitle">अधिकांश ऑटोमेशन विफलताएं लॉजिक त्रुटियां नहीं हैं - वे डेटा त्रुटियां हैं जो समय पर नहीं पकड़ी गईं।</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-10 offset-lg-1">
+					<div class="architecture-diagram wow fadeInUp">
+						<div class="arch-step">
+							<div class="arch-step-number">1</div>
+							<div>
+								<h4 style="font-weight: 700; margin-bottom: 5px;" data-i18n="landing.product.validation.step1.title">इनपुट वैलिडेशन</h4>
+								<p style="margin: 0; color: #6b7280;" data-i18n="landing.product.validation.step1.desc">हर मॉड्यूल निष्पादन से पहले इनपुट को मान्य करता है। गलत डेटा प्रकार? गायब फ़ील्ड? वर्कफ़्लो स्पष्ट त्रुटि संदेशों के साथ तुरंत रुक जाता है।</p>
+							</div>
+						</div>
+						<div class="arch-step">
+							<div class="arch-step-number">2</div>
+							<div>
+								<h4 style="font-weight: 700; margin-bottom: 5px;" data-i18n="landing.product.validation.step2.title">स्कीमा एनफोर्समेंट</h4>
+								<p style="margin: 0; color: #6b7280;" data-i18n="landing.product.validation.step2.desc">मॉड्यूल के बीच बहने वाला डेटा परिभाषित स्कीमा के अनुरूप होना चाहिए। कोई साइलेंट टाइप कोर्शन नहीं, कोई 'कभी-कभी काम करता है' परिदृश्य नहीं।</p>
+							</div>
+						</div>
+						<div class="arch-step">
+							<div class="arch-step-number">3</div>
+							<div>
+								<h4 style="font-weight: 700; margin-bottom: 5px;" data-i18n="landing.product.validation.step3.title">आउटपुट वैलिडेशन</h4>
+								<p style="margin: 0; color: #6b7280;" data-i18n="landing.product.validation.step3.desc">प्रत्येक चरण पूरा होने के बाद, आउटपुट अपेक्षित स्कीमा के खिलाफ मान्य होते हैं। अगर कुछ गड़बड़ है, आपको पता चलता है इससे पहले कि यह डाउनस्ट्रीम प्रक्रियाओं को प्रभावित करे।</p>
+							</div>
+						</div>
+						<div class="arch-step">
+							<div class="arch-step-number">4</div>
+							<div>
+								<h4 style="font-weight: 700; margin-bottom: 5px;" data-i18n="landing.product.validation.step4.title">चेकपॉइंट निर्माण</h4>
+								<p style="margin: 0; color: #6b7280;" data-i18n="landing.product.validation.step4.desc">कॉन्फ़िगर करने योग्य अंतराल पर, Flyto2 चेकपॉइंट बनाता है। अगर वैलिडेशन बाद में विफल होता है, आप अंतिम ज्ञात अच्छी स्थिति पर वापस जा सकते हैं।</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Comparison Section -->
+	<section class="section-padding section-bg">
+		<div class="container">
+			<div class="row mb-50">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<h2 class="wow fadeInUp" style="font-size: 36px; font-weight: 700;"><span data-i18n="landing.product.comparison.title">Flyto2 बनाम पारंपरिक</span> <span class="gradient-text" data-i18n="landing.product.comparison.titleHighlight">ऑटोमेशन टूल्स</span></h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-10 offset-lg-1">
+					<div class="comparison-table wow fadeInUp">
+						<table style="width: 100%; border-collapse: collapse;">
+							<thead>
+								<tr>
+									<th style="text-align: left;" data-i18n="landing.product.comparison.feature">सुविधा</th>
+									<th style="text-align: center;">Flyto2</th>
+									<th style="text-align: center;" data-i18n="landing.product.comparison.traditionalRpa">पारंपरिक RPA</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong data-i18n="landing.product.comparison.humanApproval">मानवीय अनुमोदन चरण</strong></td>
+									<td style="text-align: center;"><i class="fas fa-check-circle check-yes"></i></td>
+									<td style="text-align: center;"><i class="fas fa-times-circle check-no"></i></td>
+								</tr>
+								<tr>
+									<td><strong data-i18n="landing.product.comparison.pauseResume">वर्कफ़्लो में रोकें और फिर शुरू करें</strong></td>
+									<td style="text-align: center;"><i class="fas fa-check-circle check-yes"></i></td>
+									<td style="text-align: center;"><i class="fas fa-times-circle check-no"></i></td>
+								</tr>
+								<tr>
+									<td><strong data-i18n="landing.product.comparison.builtinValidation">बिल्ट-इन डेटा वैलिडेशन</strong></td>
+									<td style="text-align: center;"><i class="fas fa-check-circle check-yes"></i></td>
+									<td style="text-align: center;"><i class="fas fa-times-circle check-no"></i></td>
+								</tr>
+								<tr>
+									<td><strong data-i18n="landing.product.comparison.rollback">चेकपॉइंट पर रोलबैक</strong></td>
+									<td style="text-align: center;"><i class="fas fa-check-circle check-yes"></i></td>
+									<td style="text-align: center;"><i class="fas fa-times-circle check-no"></i></td>
+								</tr>
+								<tr>
+									<td><strong data-i18n="landing.product.comparison.auditTrail">पूर्ण ऑडिट ट्रेल</strong></td>
+									<td style="text-align: center;"><i class="fas fa-check-circle check-yes"></i></td>
+									<td style="text-align: center;" data-i18n="landing.product.comparison.partial">आंशिक</td>
+								</tr>
+								<tr>
+									<td><strong data-i18n="landing.product.comparison.offline">100% ऑफ़लाइन ऑपरेशन</strong></td>
+									<td style="text-align: center;"><i class="fas fa-check-circle check-yes"></i></td>
+									<td style="text-align: center;"><i class="fas fa-times-circle check-no"></i></td>
+								</tr>
+								<tr>
+									<td><strong data-i18n="landing.product.comparison.openSource">ओपन सोर्स कोर</strong></td>
+									<td style="text-align: center;"><i class="fas fa-check-circle check-yes"></i></td>
+									<td style="text-align: center;"><i class="fas fa-times-circle check-no"></i></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="row mt-50">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<a href="compare.html" class="button-1" style="margin-right: 15px;" data-i18n="landing.product.comparison.detailedBtn">विस्तृत तुलना देखें</a>
+					<a href="pricing.html" class="button-2" data-i18n="landing.common.nav.viewPricing">मूल्य देखें</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="hero-wave-bg" style="padding: 80px 0;">
+		<div class="container" style="position: relative; z-index: 2;">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<h2 style="color: #fff; font-size: 36px; margin-bottom: 20px;" data-i18n="landing.product.cta.title">ह्यूमन-इन-द-लूप ऑटोमेशन अनुभव करने के लिए तैयार?</h2>
+					<p style="color: rgba(255,255,255,0.8); font-size: 18px; margin-bottom: 30px;" data-i18n="landing.product.cta.description">मुफ़्त में शुरू करें। क्रेडिट कार्ड की आवश्यकता नहीं। ऑफ़लाइन काम करता है।</p>
+					<a href="pricing.html" class="button-1" style="background: #fff; color: #7c3aed;">
+						<i class="fas fa-rocket" style="margin-right: 8px;"></i> <span data-i18n="landing.common.cta.getStartedFree">मुफ़्त शुरू करें</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="footer-top pt-70 pb-20">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-sm-6 mb-30">
+						<div class="f-widgets-item">
+							<div class="f-logo">
+								<a href="index.html">
+									<picture>
+										<source srcset="assets/img/logo.webp" type="image/webp">
+										<img src="../assets/img/logo.png" alt="Flyto2" width="90" height="79" loading="lazy">
+									</picture>
+								</a>
+							</div>
+							<p data-i18n="landing.common.footer.tagline">ऑटोमेशन जो आपकी तरह काम करता है। एक बार रिकॉर्ड करें, हमेशा के लिए रीप्ले करें।</p>
+							<ul>
+								<li><a href="mailto:info@flyto2.com"><i class="bi bi-envelope-fill"></i> info@flyto2.com</a></li>
+								<li><a href="https://github.com/flytohub" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> github.com/flytohub</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6 mb-30">
+						<div class="f-widgets-item">
+							<h3 data-i18n="landing.common.footer.product">उत्पाद</h3>
+							<ul>
+								<li><a href="product.html" data-i18n="landing.common.nav.platform">प्लेटफ़ॉर्म</a></li>
+								<li><a href="pricing.html" data-i18n="landing.common.nav.pricing">मूल्य</a></li>
+								<li><a href="download.html" data-i18n="landing.common.nav.download">डाउनलोड</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6 mb-30">
+						<div class="f-widgets-item">
+							<h3 data-i18n="landing.common.nav.resources">संसाधन</h3>
+							<ul>
+								<li><a href="use-cases.html" data-i18n="landing.common.nav.useCases">उपयोग के मामले</a></li>
+								<li><a href="compare.html" data-i18n="landing.common.nav.compare">तुलना</a></li>
+								<li><a href="faq.html" data-i18n="landing.common.nav.faq">FAQ</a></li>
+								<li><a href="contact.html" data-i18n="landing.common.footer.contact">संपर्क</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6 mb-30">
+						<div class="f-widgets-item">
+							<h3 data-i18n="landing.common.footer.company">कंपनी</h3>
+							<ul>
+								<li><a href="about.html" data-i18n="landing.common.nav.about">के बारे में</a></li>
+								<li><a href="philosophy.html" data-i18n="landing.common.nav.philosophy">दर्शन</a></li>
+								<li><a href="https://github.com/flytohub/flyto-core" data-i18n="landing.common.footer.openSource" target="_blank" rel="noopener noreferrer">ओपन सोर्स</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom pt-30 pb-30">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 align-self-center">
+						<div class="copy-f-text">
+							<p>Copyright &copy;2025 Flyto2. All Rights Reserved</p>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="footer_social">
+							<ul>
+								<li><a href="https://github.com/flytohub" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+										<li><a href="https://www.youtube.com/channel/UCZ9OOqx4RM3Jjy1annWtsRA" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<div class="scroll-area">
+		<i class="bi bi-arrow-up"></i>
+	</div>
+
+	<!-- Scripts -->
+	<script src="../assets/js/modernizr.min.js"></script>
+	<script src="../assets/js/jquery-3.6.0.min.js"></script>
+	<script src="../assets/js/popper.min.js" defer></script>
+	<script src="../assets/js/bootstrap.min.js" defer></script>
+	<script src="../assets/js/wow.min.js" defer></script>
+	<script src="../assets/js/script.js" defer></script>
+	<script src="../assets/js/mobile-menu.js" defer></script>
+
+	<!-- Firebase SDK -->
+	<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js" defer></script>
+	<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js" defer></script>
+	<script src="../assets/js/auth.js" defer></script>
+</body>
+</html>

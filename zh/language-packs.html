@@ -29,10 +29,10 @@
 
 	<!-- SEO Meta Tags -->
 	<link rel="canonical" href="https://flyto2.com/zh/language-packs.html">
-	<link rel="alternate" hreflang="en" href="https://flyto2.com/language-packs.html">
-	<link rel="alternate" hreflang="zh" href="https://flyto2.com/zh/language-packs.html">
-	<link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/language-packs.html">
-	<link rel="alternate" hreflang="x-default" href="https://flyto2.com/language-packs.html">
+	<link rel="alternate" hreflang="en" href="https://flyto2.com/zh/language-packs.html">
+	<link rel="alternate" hreflang="zh" href="https://flyto2.com/zh/zh/language-packs.html">
+	<link rel="alternate" hreflang="ja" href="https://flyto2.com/zh/ja/language-packs.html">
+	<link rel="alternate" hreflang="x-default" href="https://flyto2.com/zh/language-packs.html">
 	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
 	<!-- Open Graph -->
@@ -42,7 +42,6 @@
 	<meta property="og:description" content="Download language packs for Flyto2 offline version. Support for English, Chinese, Japanese and more.">
 	<meta property="og:image" content="https://flyto2.com/assets/img/og-image.png">
 	<meta property="og:site_name" content="Flyto2">
-	<meta property="og:locale" content="zh_TW">
 
 	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image">
@@ -58,7 +57,7 @@
 	<link rel="stylesheet" href="../assets/css/normalize.css">
 	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../assets/css/fontawesome.all.min.css">
-	<link rel="stylesheet" href="../style.css">
+	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="../assets/css/responsive.css">
 
 	<!-- Non-critical CSS (deferred loading) -->
@@ -300,8 +299,8 @@
 					<div class="logo">
 						<a href="index.html">
 							<picture>
-								<source srcset="../assets/img/white-logo.webp" type="image/webp">
-								<img src="../assets/img/white-logo.png" alt="Flyto2" fetchpriority="high">
+								<source srcset="assets/img/white-logo.webp" type="image/webp">
+								<img src="../assets/img/white-logo.png" alt="Flyto2" width="90" height="79" fetchpriority="high">
 							</picture>
 						</a>
 					</div>
@@ -381,8 +380,8 @@
 				<div class="mobile-logo">
 					<a href="index.html">
 						<picture>
-							<source srcset="../assets/img/logo.webp" type="image/webp">
-							<img src="../assets/img/logo.png" alt="Flyto2" />
+							<source srcset="assets/img/logo.webp" type="image/webp">
+							<img src="../assets/img/logo.png" alt="Flyto2" width="90" height="79" />
 						</picture>
 					</a>
 				</div>
@@ -406,10 +405,8 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="breadcrumb-content wow fadeInUp">
-						<h1><i class="bi bi-translate"></i> <span data-i18n="landing.languagepacks.hero.title">Language Packs</span></h1>
-						<p style="color: rgba(255,255,255,0.9); font-size: 18px; margin-bottom: 25px;" data-i18n="landing.languagepacks.hero.description">
-							Download translation files for offline use. No internet required after import.
-						</p>
+						<h1><i class="bi bi-translate"></i> <span data-i18n="landing.languagepacks.hero.title">語言套件</span></h1>
+						<p style="color: rgba(255,255,255,0.9); font-size: 18px; margin-bottom: 25px;" data-i18n="landing.languagepacks.hero.description">下載 Flyto2 離線使用的翻譯檔案</p>
 						<ul>
 							<li><a href="index.html" data-i18n="landing.common.nav.home">首頁</a></li>
 							<li data-i18n="landing.common.nav.languagePacks">語言套件</li>
@@ -431,12 +428,12 @@
 			<div class="row">
 				<div class="col-lg-8 offset-lg-2">
 					<div class="info-box-offline wow fadeInUp">
-						<h2><i class="bi bi-info-circle"></i> <span data-i18n="landing.languagepacks.howto.title">How to Use Language Packs</span></h2>
+						<h2><i class="bi bi-info-circle"></i> <span data-i18n="landing.languagepacks.howto.title">安裝方式</span></h2>
 						<p>
-							<strong>1.</strong> <span data-i18n="landing.languagepacks.howto.step1">Download the language pack file (.json) below</span><br>
-							<strong>2.</strong> <span data-i18n="landing.languagepacks.howto.step2">Open Flyto2 Desktop App (offline version)</span><br>
-							<strong>3.</strong> <span data-i18n="landing.languagepacks.howto.step3">Go to</span> <code>Settings > Language > Import Language Pack</code><br>
-							<strong>4.</strong> <span data-i18n="landing.languagepacks.howto.step4">Select the downloaded file and restart the app</span>
+							<strong>1.</strong> <span data-i18n="landing.languagepacks.howto.step1">下載語言套件檔案 (.json)</span><br>
+							<strong>2.</strong> <span data-i18n="landing.languagepacks.howto.step2">開啟 Flyto2 應用程式</span><br>
+							<strong>3.</strong> <span data-i18n="landing.languagepacks.howto.step3">前往 設定 → 語言</span> <code>Settings > Language > Import Language Pack</code><br>
+							<strong>4.</strong> <span data-i18n="landing.languagepacks.howto.step4">點擊「匯入語言套件」並選擇檔案</span>
 						</p>
 					</div>
 				</div>
@@ -450,8 +447,8 @@
 			<div class="row mb-40">
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="section-headding wow fadeInUp">
-						<h2 data-i18n="landing.languagepacks.available.title">Available Languages</h2>
-						<p data-i18n="landing.languagepacks.available.subtitle">Download translation files for your preferred language</p>
+						<h2 data-i18n="landing.languagepacks.available.title">可用的語言套件</h2>
+						<p data-i18n="landing.languagepacks.available.subtitle">下載並安裝離線語言套件</p>
 					</div>
 				</div>
 			</div>
@@ -459,7 +456,7 @@
 				<div class="col-12 text-center" id="languages-loading">
 					<div class="loading-pulse">
 						<i class="fas fa-spinner fa-spin" style="font-size: 30px; color: #7C3AED;"></i>
-						<p style="margin-top: 15px; color: #67748e;" data-i18n="landing.languagepacks.available.loading">Loading available languages...</p>
+						<p style="margin-top: 15px; color: #67748e;" data-i18n="landing.languagepacks.available.loading">正在載入可用的語言套件...</p>
 					</div>
 				</div>
 			</div>
@@ -472,16 +469,16 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="subscribe-content wow fadeInUp">
-						<h2 data-i18n="landing.languagepacks.request.title">Need Another Language?</h2>
-						<p data-i18n="landing.languagepacks.request.subtitle">We're always adding new translations. Let us know what language you need!</p>
+						<h2 data-i18n="landing.languagepacks.request.title">請求新增語言</h2>
+						<p data-i18n="landing.languagepacks.request.subtitle">找不到您的語言？讓我們知道！</p>
 						<div style="margin-top: 20px;">
 							<a href="contact.html" class="button-1">
-								<i class="fas fa-envelope"></i> <span data-i18n="landing.languagepacks.request.btn">Request Language</span>
+								<i class="fas fa-envelope"></i> <span data-i18n="landing.languagepacks.request.btn">請求新增語言</span>
 							</a>
 						</div>
 						<ul>
-							<li><i class="fas fa-check"></i> <span data-i18n="landing.languagepacks.request.feature1">Community translations welcome</span></li>
-							<li><i class="fas fa-check"></i> <span data-i18n="landing.languagepacks.request.feature2">Open source on GitHub</span></li>
+							<li><i class="fas fa-check"></i> <span data-i18n="landing.languagepacks.request.feature1">社群驅動的翻譯</span></li>
+							<li><i class="fas fa-check"></i> <span data-i18n="landing.languagepacks.request.feature2">定期更新</span></li>
 						</ul>
 					</div>
 				</div>
@@ -500,8 +497,8 @@
 							<div class="f-logo">
 								<a href="index.html">
 									<picture>
-										<source srcset="../assets/img/logo.webp" type="image/webp">
-										<img src="../assets/img/logo.png" alt="Flyto2" loading="lazy">
+										<source srcset="assets/img/logo.webp" type="image/webp">
+										<img src="../assets/img/logo.png" alt="Flyto2" width="90" height="79" loading="lazy">
 									</picture>
 								</a>
 							</div>
@@ -556,6 +553,7 @@
 						<div class="footer_social">
 							<ul>
 								<li><a href="https://github.com/flytohub" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+										<li><a href="https://www.youtube.com/channel/UCZ9OOqx4RM3Jjy1annWtsRA" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
 							</ul>
 						</div>
 					</div>

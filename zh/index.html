@@ -9,6 +9,7 @@
 	<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 	<link rel="dns-prefetch" href="https://www.gstatic.com">
 	<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
 	<title>Flyto2 - Enterprise Workflow Platform with UI & AI | Human-in-the-Loop Automation</title>
 	<meta name="description" content="Flyto2 is an enterprise workflow platform that combines UI-driven automation with human oversight. Build workflows with approval steps, validation checkpoints, and full audit trails. Works 100% offline.">
 
@@ -30,10 +31,10 @@
 
 	<!-- SEO Meta Tags -->
 	<link rel="canonical" href="https://flyto2.com/zh/">
-	<link rel="alternate" hreflang="en" href="https://flyto2.com/">
-	<link rel="alternate" hreflang="zh" href="https://flyto2.com/zh/">
-	<link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/">
-	<link rel="alternate" hreflang="x-default" href="https://flyto2.com/">
+	<link rel="alternate" hreflang="en" href="https://flyto2.com/zh/">
+	<link rel="alternate" hreflang="zh" href="https://flyto2.com/zh/zh/">
+	<link rel="alternate" hreflang="ja" href="https://flyto2.com/zh/ja/">
+	<link rel="alternate" hreflang="x-default" href="https://flyto2.com/zh/">
 	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 	<meta name="keywords" content="enterprise workflow platform, UI-driven automation, workflow with human approval, RPA alternative, human-in-the-loop automation, workflow validation, offline workflow automation, business process automation">
 	<meta name="author" content="Flyto2">
@@ -66,7 +67,7 @@
 	<link rel="stylesheet" href="../assets/css/normalize.css">
 	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../assets/css/fontawesome.all.min.css">
-	<link rel="stylesheet" href="../style.css">
+	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="../assets/css/responsive.css">
 
 	<!-- Non-critical CSS (deferred loading) -->
@@ -405,8 +406,8 @@
 					<div class="logo">
 						<a href="index.html">
 							<picture>
-								<source srcset="../assets/img/white-logo.webp" type="image/webp">
-								<img src="../assets/img/white-logo.png" alt="Flyto2 - No-Code Automation Tool">
+								<source srcset="assets/img/white-logo.webp" type="image/webp">
+								<img src="../assets/img/white-logo.png" alt="Flyto2 - No-Code Automation Tool" width="90" height="79" fetchpriority="high">
 							</picture>
 						</a>
 					</div>
@@ -451,6 +452,32 @@
 							</ul>
 						</nav>
 						<!-- Auth -->
+						<!-- Language Switcher -->
+						<div class="lang-switcher">
+							<button class="lang-switcher-toggle" aria-label="Select language" aria-haspopup="true" aria-expanded="false">
+								<i class="bi bi-globe2"></i>
+								<span class="current-lang">ZH</span>
+								<i class="bi bi-chevron-down"></i>
+							</button>
+							<div class="lang-switcher-menu">
+								<a href="/" class="lang-option" data-lang="en">English</a>
+								<a href="/zh/" class="lang-option active" data-lang="zh">繁體中文</a>
+								<a href="/ja/" class="lang-option" data-lang="ja">日本語</a>
+								<a href="/ko/" class="lang-option" data-lang="ko">한국어</a>
+								<a href="/de/" class="lang-option" data-lang="de">Deutsch</a>
+								<a href="/es/" class="lang-option" data-lang="es">Español</a>
+								<a href="/fr/" class="lang-option" data-lang="fr">Français</a>
+								<a href="/it/" class="lang-option" data-lang="it">Italiano</a>
+								<a href="/pt/" class="lang-option" data-lang="pt">Português</a>
+								<a href="/vi/" class="lang-option" data-lang="vi">Tiếng Việt</a>
+								<a href="/id/" class="lang-option" data-lang="id">Bahasa Indonesia</a>
+								<a href="/th/" class="lang-option" data-lang="th">ไทย</a>
+								<a href="/tr/" class="lang-option" data-lang="tr">Türkçe</a>
+								<a href="/pl/" class="lang-option" data-lang="pl">Polski</a>
+								<a href="/hi/" class="lang-option" data-lang="hi">हिन्दी</a>
+							</div>
+						</div>
+
 						<div class="header-auth">
 							<!-- Not logged in -->
 							<button id="headerLoginBtn" class="btn-header-login">
@@ -500,8 +527,8 @@
 				<div class="mobile-logo">
 					<a href="index.html">
 						<picture>
-							<source srcset="../assets/img/logo.webp" type="image/webp">
-							<img src="../assets/img/logo.png" alt="Flyto2 - No-Code Automation Tool" />
+							<source srcset="assets/img/logo.webp" type="image/webp">
+							<img src="../assets/img/logo.png" alt="Flyto2 - No-Code Automation Tool" width="90" height="79" />
 						</picture>
 					</a>
 				</div>
@@ -539,13 +566,9 @@
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="hero-caption pt-150 pb-200">
 						<h1 class="wow fadeInUp" data-wow-delay="0.1s">
-							<span class="gradient-text-animated" data-i18n="landing.index.hero.titleHighlight">Automation That Does</span><br><span data-i18n="landing.index.hero.titleEnd">What You Show It</span>
+							<span class="gradient-text-animated" data-i18n="landing.index.hero.titleHighlight">自動化執行</span><br><span data-i18n="landing.index.hero.titleEnd">你所示範的</span>
 						</h1>
-						<p class="wow fadeInUp" data-wow-delay="0.2s" data-i18n="landing.index.hero.description">
-							Flyto2 is an automation tool that operates your computer like a human.
-							Open browsers, click buttons, fill forms, upload files.
-							You do it once, Flyto2 repeats it forever.
-						</p>
+						<p class="wow fadeInUp" data-wow-delay="0.2s" data-i18n="landing.index.hero.description">Flyto2 是一款像人類一樣操作電腦的自動化工具。開啟瀏覽器、點擊按鈕、填寫表單、上傳檔案。你做一次，Flyto2 幫你重複執行。</p>
 						<a class="button-1 btn-glow wow fadeInUp" data-wow-delay="0.3s" href="pricing.html" style="margin-top: 20px;">
 							<i class="fas fa-rocket" style="margin-right: 8px;"></i> <span data-i18n="landing.common.cta.getStartedFree">免費開始</span>
 						</a>
@@ -573,8 +596,8 @@
 								<div class="title">
 									<div class="text-gradient" style="font-size: 2rem;"><i class="fas fa-mouse-pointer hero-icon-float"></i></div>
 								</div>
-								<h3 data-i18n="landing.index.counter.recordOnce">Record Once</h3>
-								<p class="text-sm" data-i18n="landing.index.counter.recordOnceDesc">Show Flyto2 how you work. It learns by watching your clicks and keystrokes.</p>
+								<h3 data-i18n="landing.index.counter.recordOnce">錄製一次</h3>
+								<p class="text-sm" data-i18n="landing.index.counter.recordOnceDesc">讓 Flyto2 看你操作一次。它會學習你的點擊和輸入動作。</p>
 								<hr class="vertical dark">
 							</div>
 						</div>
@@ -584,8 +607,8 @@
 								<div class="title">
 									<div class="text-gradient" style="font-size: 2rem;"><i class="fas fa-redo icon-spin-slow"></i></div>
 								</div>
-								<h3 data-i18n="landing.index.counter.replayForever">Replay Forever</h3>
-								<p class="text-sm" data-i18n="landing.index.counter.replayForeverDesc">Run it again with different data. Batch process hundreds of items.</p>
+								<h3 data-i18n="landing.index.counter.replayForever">永遠重播</h3>
+								<p class="text-sm" data-i18n="landing.index.counter.replayForeverDesc">用不同的資料再次執行。批次處理數百個項目。</p>
 								<hr class="vertical dark">
 							</div>
 						</div>
@@ -595,8 +618,8 @@
 								<div class="title">
 									<div class="text-gradient" style="font-size: 2rem;"><i class="fas fa-shield-alt animate-pulse-glow" style="border-radius: 50%;"></i></div>
 								</div>
-								<h3 data-i18n="landing.index.counter.stayInControl">Stay in Control</h3>
-								<p class="text-sm" data-i18n="landing.index.counter.stayInControlDesc">Pause, verify, and resume anytime. Never worry about runaway automation.</p>
+								<h3 data-i18n="landing.index.counter.stayInControl">保持掌控</h3>
+								<p class="text-sm" data-i18n="landing.index.counter.stayInControlDesc">隨時暫停、確認、繼續。不用擔心自動化失控。</p>
 							</div>
 						</div>
 					</div>
@@ -612,8 +635,8 @@
 			<div class="row mb-40">
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="section-headding wow fadeInUp">
-						<h2><span data-i18n="landing.index.why.title">Why</span> <span class="gradient-text-animated">Flyto2</span>?</h2>
-						<p data-i18n="landing.index.why.subtitle">Many tasks aren't hard, they're just tedious.</p>
+						<h2><span data-i18n="landing.index.why.title">為什麼選擇 Flyto2</span> <span class="gradient-text-animated">Flyto2</span>?</h2>
+						<p data-i18n="landing.index.why.subtitle">很多任務不難，只是很煩。</p>
 					</div>
 				</div>
 			</div>
@@ -1112,8 +1135,11 @@
 							<div class="f-logo">
 								<a href="index.html">
 									<picture>
-										<source srcset="../assets/img/logo.webp" type="image/webp">
-										<img src="../assets/img/logo.png" alt="Flyto2 - No-Code Automation Tool" loading="lazy">
+										<source srcset="assets/img/logo.webp" type="image/webp">
+										<picture>
+										<source srcset="assets/img/logo.webp" type="image/webp">
+										<img src="../assets/img/logo.png" alt="Flyto2 - No-Code Automation Tool" width="90" height="79" loading="lazy">
+									</picture>
 									</picture>
 								</a>
 							</div>
@@ -1169,6 +1195,7 @@
 						<div class="footer_social">
 							<ul>
 								<li><a href="https://github.com/flytohub" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+										<li><a href="https://www.youtube.com/channel/UCZ9OOqx4RM3Jjy1annWtsRA" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
 							</ul>
 						</div>
 					</div>
@@ -1182,11 +1209,13 @@
 		<i class="bi bi-arrow-up"></i>
 	</div>
 
-	<!-- Js File -->
+	<!-- Critical JS (render-blocking) -->
 	<script src="../assets/js/modernizr.min.js"></script>
 	<script src="../assets/js/jquery-3.6.0.min.js"></script>
 	<script src="../assets/js/popper.min.js" defer></script>
 	<script src="../assets/js/bootstrap.min.js" defer></script>
+
+	<!-- Non-critical JS (deferred) -->
 	<script src="../assets/js/owl.carousel.min.js" defer></script>
 	<script src="../assets/js/jquery.magnific-popup.min.js" defer></script>
 	<script src="../assets/js/mixitup.min.js" defer></script>
@@ -1199,12 +1228,43 @@
 	<script src="../assets/js/mobile-menu.js" defer></script>
 	<script src="../assets/js/ajax-form.js" defer></script>
 
-	<!-- Firebase SDK -->
+	<!-- Firebase SDK (deferred) -->
 	<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js" defer></script>
 	<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js" defer></script>
 	<!-- Auth -->
 	<script src="../assets/js/auth.js" defer></script>
 	<script>
+		// Language Switcher
+		(function() {
+			const langSwitcher = document.querySelector('.lang-switcher');
+			const langToggle = document.querySelector('.lang-switcher-toggle');
+
+			if (langToggle && langSwitcher) {
+				langToggle.addEventListener('click', (e) => {
+					e.stopPropagation();
+					langSwitcher.classList.toggle('show');
+				});
+
+				// Set current language based on URL path
+				const path = window.location.pathname;
+				const langMatch = path.match(/^\/(zh|ja|ko|de|es|fr|it|pt|vi|id|th|tr|pl|hi)\//);
+				const currentLang = langMatch ? langMatch[1].toUpperCase() : 'EN';
+				const currentLangSpan = langSwitcher.querySelector('.current-lang');
+				if (currentLangSpan) {
+					currentLangSpan.textContent = currentLang;
+				}
+
+				// Mark active language
+				const langOptions = langSwitcher.querySelectorAll('.lang-option');
+				langOptions.forEach(opt => {
+					opt.classList.remove('active');
+					if (opt.getAttribute('data-lang') === (langMatch ? langMatch[1] : 'en')) {
+						opt.classList.add('active');
+					}
+				});
+			}
+		})();
+
 		// Update dropdown email when auth state changes
 		window.addEventListener('authStateChanged', (e) => {
 			const user = e.detail.user;
@@ -1214,11 +1274,16 @@
 			}
 		});
 
-		// Close dropdown when clicking outside
+		// Close dropdowns when clicking outside
 		document.addEventListener('click', (e) => {
-			const dropdown = document.getElementById('headerUserDropdown');
-			if (dropdown && !dropdown.contains(e.target)) {
-				dropdown.classList.remove('show');
+			const userDropdown = document.getElementById('headerUserDropdown');
+			if (userDropdown && !userDropdown.contains(e.target)) {
+				userDropdown.classList.remove('show');
+			}
+
+			const langSwitcher = document.querySelector('.lang-switcher');
+			if (langSwitcher && !langSwitcher.contains(e.target)) {
+				langSwitcher.classList.remove('show');
 			}
 		});
 	</script>
