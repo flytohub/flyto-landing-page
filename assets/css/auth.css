@@ -137,12 +137,40 @@
 }
 
 /* ========================================
+   Header Menu Alignment Fix
+   ======================================== */
+
+/* Ensure all menu items align vertically */
+.menu.d-flex {
+	gap: 0;
+}
+
+.menu.d-flex > nav {
+	display: flex;
+	align-items: center;
+}
+
+.menu.d-flex > nav > ul {
+	display: flex;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+}
+
+.menu.d-flex > nav > ul > li {
+	display: flex;
+	align-items: center;
+}
+
+/* ========================================
    Language Switcher
    ======================================== */
 
 .lang-switcher {
 	position: relative;
 	margin-right: 15px;
+	display: flex;
+	align-items: center;
 }
 
 .lang-switcher-toggle {

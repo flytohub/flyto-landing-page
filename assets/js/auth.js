@@ -135,7 +135,7 @@ function injectAuthModal() {
 
 				<!-- Logo -->
 				<div class="auth-modal-logo">
-					<img src="assets/img/logo.png" alt="Flyto2 Logo" style="height: 40px;">
+					<img src="/assets/img/logo.png" alt="Flyto2 Logo" style="height: 40px;">
 				</div>
 
 				<!-- Modal Title (visually hidden for screen readers) -->
