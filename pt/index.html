@@ -451,34 +451,7 @@
 								</li>
 							</ul>
 						</nav>
-						<!-- Auth -->
-						<!-- Language Switcher -->
-						<div class="lang-switcher">
-							<button class="lang-switcher-toggle" aria-label="Select language" aria-haspopup="true" aria-expanded="false">
-								<i class="bi bi-globe2"></i>
-								<span class="current-lang">PT</span>
-								<i class="bi bi-chevron-down"></i>
-							</button>
-							<div class="lang-switcher-menu">
-								<a href="/" class="lang-option" data-lang="en">English</a>
-								<a href="/zh/" class="lang-option" data-lang="zh">繁體中文</a>
-								<a href="/ja/" class="lang-option" data-lang="ja">日本語</a>
-								<a href="/ko/" class="lang-option" data-lang="ko">한국어</a>
-								<a href="/de/" class="lang-option" data-lang="de">Deutsch</a>
-								<a href="/es/" class="lang-option" data-lang="es">Español</a>
-								<a href="/fr/" class="lang-option" data-lang="fr">Français</a>
-								<a href="/it/" class="lang-option" data-lang="it">Italiano</a>
-								<a href="/pt/" class="lang-option active" data-lang="pt">Português</a>
-								<a href="/vi/" class="lang-option" data-lang="vi">Tiếng Việt</a>
-								<a href="/id/" class="lang-option" data-lang="id">Bahasa Indonesia</a>
-								<a href="/th/" class="lang-option" data-lang="th">ไทย</a>
-								<a href="/tr/" class="lang-option" data-lang="tr">Türkçe</a>
-								<a href="/pl/" class="lang-option" data-lang="pl">Polski</a>
-								<a href="/hi/" class="lang-option" data-lang="hi">हिन्दी</a>
-							</div>
-						</div>
-
-						<div class="header-auth">
+						<!-- Auth -->						<div class="header-auth">
 							<!-- Not logged in -->
 							<button id="headerLoginBtn" class="btn-header-login">
 								<i class="bi bi-person"></i>
@@ -1234,37 +1207,6 @@
 	<!-- Auth -->
 	<script src="../assets/js/auth.js" defer></script>
 	<script>
-		// Language Switcher
-		(function() {
-			const langSwitcher = document.querySelector('.lang-switcher');
-			const langToggle = document.querySelector('.lang-switcher-toggle');
-
-			if (langToggle && langSwitcher) {
-				langToggle.addEventListener('click', (e) => {
-					e.stopPropagation();
-					langSwitcher.classList.toggle('show');
-				});
-
-				// Set current language based on URL path
-				const path = window.location.pathname;
-				const langMatch = path.match(/^\/(zh|ja|ko|de|es|fr|it|pt|vi|id|th|tr|pl|hi)\//);
-				const currentLang = langMatch ? langMatch[1].toUpperCase() : 'EN';
-				const currentLangSpan = langSwitcher.querySelector('.current-lang');
-				if (currentLangSpan) {
-					currentLangSpan.textContent = currentLang;
-				}
-
-				// Mark active language
-				const langOptions = langSwitcher.querySelectorAll('.lang-option');
-				langOptions.forEach(opt => {
-					opt.classList.remove('active');
-					if (opt.getAttribute('data-lang') === (langMatch ? langMatch[1] : 'en')) {
-						opt.classList.add('active');
-					}
-				});
-			}
-		})();
-
 		// Update dropdown email when auth state changes
 		window.addEventListener('authStateChanged', (e) => {
 			const user = e.detail.user;
@@ -1274,16 +1216,11 @@
 			}
 		});
 
-		// Close dropdowns when clicking outside
+		// Close user dropdown when clicking outside
 		document.addEventListener('click', (e) => {
 			const userDropdown = document.getElementById('headerUserDropdown');
 			if (userDropdown && !userDropdown.contains(e.target)) {
 				userDropdown.classList.remove('show');
-			}
-
-			const langSwitcher = document.querySelector('.lang-switcher');
-			if (langSwitcher && !langSwitcher.contains(e.target)) {
-				langSwitcher.classList.remove('show');
 			}
 		});
 	</script>

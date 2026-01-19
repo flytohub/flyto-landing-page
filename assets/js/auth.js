@@ -711,3 +711,113 @@ window.FlytoAuth = {
 };
 
 })(); // End of IIFE
+
+/**
+ * Language Switcher Module
+ * Auto-initializes on pages with .header-auth element
+ */
+(function() {
+'use strict';
+
+const LANGUAGES = [
+	{ code: 'en', flag: '🇺🇸', name: 'English' },
+	{ code: 'zh', flag: '🇹🇼', name: '繁體中文' },
+	{ code: 'ja', flag: '🇯🇵', name: '日本語' },
+	{ code: 'ko', flag: '🇰🇷', name: '한국어' },
+	{ code: 'de', flag: '🇩🇪', name: 'Deutsch' },
+	{ code: 'es', flag: '🇪🇸', name: 'Español' },
+	{ code: 'fr', flag: '🇫🇷', name: 'Français' },
+	{ code: 'it', flag: '🇮🇹', name: 'Italiano' },
+	{ code: 'pt', flag: '🇧🇷', name: 'Português' },
+	{ code: 'vi', flag: '🇻🇳', name: 'Tiếng Việt' },
+	{ code: 'id', flag: '🇮🇩', name: 'Indonesia' },
+	{ code: 'th', flag: '🇹🇭', name: 'ไทย' },
+	{ code: 'tr', flag: '🇹🇷', name: 'Türkçe' },
+	{ code: 'pl', flag: '🇵🇱', name: 'Polski' },
+	{ code: 'hi', flag: '🇮🇳', name: 'हिन्दी' }
+];
+
+function getCurrentLang() {
+	const path = window.location.pathname;
+	const match = path.match(/^\/(zh|ja|ko|de|es|fr|it|pt|vi|id|th|tr|pl|hi)\//);
+	return match ? match[1] : 'en';
+}
+
+function getCurrentPage() {
+	const path = window.location.pathname;
+	// Remove language prefix if present
+	const cleanPath = path.replace(/^\/(zh|ja|ko|de|es|fr|it|pt|vi|id|th|tr|pl|hi)\//, '/');
+	// Get the page name
+	const page = cleanPath.split('/').pop() || 'index.html';
+	return page.endsWith('.html') ? page : 'index.html';
+}
+
+function buildLangUrl(langCode) {
+	const currentPage = getCurrentPage();
+	if (langCode === 'en') {
+		return currentPage === 'index.html' ? '/' : '/' + currentPage;
+	}
+	return '/' + langCode + '/' + (currentPage === 'index.html' ? '' : currentPage);
+}
+
+function createLangSwitcher() {
+	const currentLang = getCurrentLang();
+	const currentLangData = LANGUAGES.find(l => l.code === currentLang) || LANGUAGES[0];
+
+	const switcher = document.createElement('div');
+	switcher.className = 'lang-switcher';
+	switcher.innerHTML = `
+		<button class="lang-switcher-toggle" aria-label="Select language" aria-haspopup="true" aria-expanded="false">
+			<span class="lang-flag">${currentLangData.flag}</span>
+			<span class="lang-code">${currentLang.toUpperCase()}</span>
+			<i class="bi bi-chevron-down"></i>
+		</button>
+		<div class="lang-switcher-menu">
+			${LANGUAGES.map(lang => `
+				<a href="${buildLangUrl(lang.code)}" class="lang-option${lang.code === currentLang ? ' active' : ''}" data-lang="${lang.code}">
+					<span class="lang-flag">${lang.flag}</span>
+					<span class="lang-name">${lang.name}</span>
+				</a>
+			`).join('')}
+		</div>
+	`;
+
+	// Toggle menu
+	const toggle = switcher.querySelector('.lang-switcher-toggle');
+	toggle.addEventListener('click', (e) => {
+		e.stopPropagation();
+		switcher.classList.toggle('show');
+		toggle.setAttribute('aria-expanded', switcher.classList.contains('show'));
+	});
+
+	// Close on outside click
+	document.addEventListener('click', (e) => {
+		if (!switcher.contains(e.target)) {
+			switcher.classList.remove('show');
+			toggle.setAttribute('aria-expanded', 'false');
+		}
+	});
+
+	// Close on Escape
+	document.addEventListener('keydown', (e) => {
+		if (e.key === 'Escape') {
+			switcher.classList.remove('show');
+			toggle.setAttribute('aria-expanded', 'false');
+		}
+	});
+
+	return switcher;
+}
+
+function initLangSwitcher() {
+	// Find header-auth and insert switcher before it
+	const headerAuth = document.querySelector('.header-auth');
+	if (headerAuth && !document.querySelector('.lang-switcher')) {
+		const switcher = createLangSwitcher();
+		headerAuth.parentNode.insertBefore(switcher, headerAuth);
+	}
+}
+
+document.addEventListener('DOMContentLoaded', initLangSwitcher);
+
+})();
