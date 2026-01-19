@@ -1225,11 +1225,9 @@
 	<script src="assets/js/auth.js" defer></script>
 
 	<script>
-		// Initialize WOW.js
-		new WOW().init();
-
-		// Hide preloader
+		// Initialize WOW.js and hide preloader
 		$(document).ready(function() {
+			new WOW().init();
 			$('#preloader').delay(200).fadeOut(300);
 		});
 
