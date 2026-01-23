@@ -18,31 +18,13 @@ const CONFIG = {
   htmlDir: path.join(__dirname, '..'),
   i18nDir: path.join(__dirname, '..', '..', 'flyto-i18n', 'locales'),
   htmlFiles: ['index.html', 'pricing.html', 'download.html', 'app.html', 'faq.html', 'contact.html', 'buy-offline.html', 'language-packs.html', 'product.html', 'use-cases.html', 'compare.html', 'philosophy.html', 'about.html', 'blog.html'],
-  // All 15 supported languages (excluding 'en' which is the source)
-  locales: ['zh-TW', 'ja', 'ko', 'de', 'es', 'fr', 'it', 'pt-BR', 'vi', 'id', 'th', 'tr', 'pl', 'hi'],
-  localeMapping: {
-    'zh-TW': 'zh',
-    'ja': 'ja',
-    'ko': 'ko',
-    'de': 'de',
-    'es': 'es',
-    'fr': 'fr',
-    'it': 'it',
-    'pt-BR': 'pt',
-    'vi': 'vi',
-    'id': 'id',
-    'th': 'th',
-    'tr': 'tr',
-    'pl': 'pl',
-    'hi': 'hi'
-  }
+  locales: [],
+  localeMapping: {},
+  localeEntries: []
 };
 
 // Parse command line args
 const specificLocale = process.argv.find(arg => arg.startsWith('--locale='))?.split('=')[1];
-if (specificLocale) {
-  CONFIG.locales = [specificLocale];
-}
 
 // Load all translations for a locale
 function loadTranslations(locale) {
@@ -68,8 +50,79 @@ function loadTranslations(locale) {
   return translations;
 }
 
+function getLocalesFromI18n() {
+  if (!fs.existsSync(CONFIG.i18nDir)) {
+    console.warn(`⚠️  i18n directory not found: ${CONFIG.i18nDir}`);
+    return [];
+  }
+
+  return fs.readdirSync(CONFIG.i18nDir)
+    .filter((entry) => {
+      if (entry.startsWith('.')) {
+        return false;
+      }
+      const fullPath = path.join(CONFIG.i18nDir, entry);
+      return fs.statSync(fullPath).isDirectory() && entry.toLowerCase() !== 'en';
+    })
+    .sort();
+}
+
+function localeToDir(locale) {
+  const normalized = locale.replace('_', '-');
+  const lower = normalized.toLowerCase();
+  if (lower.startsWith('zh')) {
+    return 'zh';
+  }
+  if (lower.startsWith('pt-')) {
+    return 'pt';
+  }
+  return normalized.split('-')[0].toLowerCase();
+}
+
+function normalizeHreflang(locale) {
+  const normalized = locale.replace('_', '-');
+  const lower = normalized.toLowerCase();
+  if (lower.startsWith('zh')) {
+    if (lower.includes('hant') || lower.includes('tw') || lower.includes('hk') || lower.includes('mo')) {
+      return 'zh-Hant';
+    }
+    if (lower.includes('hans') || lower.includes('cn') || lower.includes('sg')) {
+      return 'zh-Hans';
+    }
+    return 'zh';
+  }
+  return normalized;
+}
+
+function normalizeLangAttr(locale) {
+  return locale.replace('_', '-');
+}
+
+function resolveLocales(targetLocale) {
+  const locales = targetLocale ? [targetLocale] : getLocalesFromI18n();
+  const localeEntries = [];
+  const seenDirs = new Set();
+
+  for (const locale of locales) {
+    const dir = localeToDir(locale);
+    if (seenDirs.has(dir)) {
+      console.warn(`⚠️  Skipping locale ${locale} - output dir "${dir}" already used`);
+      continue;
+    }
+    seenDirs.add(dir);
+    localeEntries.push({
+      locale,
+      dir,
+      hreflang: normalizeHreflang(locale)
+    });
+  }
+
+  const localeMapping = Object.fromEntries(localeEntries.map(entry => [entry.locale, entry.dir]));
+  return { locales: localeEntries.map(entry => entry.locale), localeMapping, localeEntries };
+}
+
 // Replace data-i18n content in HTML
-function translateHtml(html, translations, locale) {
+function translateHtml(html, translations, locale, htmlFile) {
   // Replace content inside elements with data-i18n attribute
   // Pattern: <tag data-i18n="key">original content</tag>
   let translated = html.replace(
@@ -83,26 +136,15 @@ function translateHtml(html, translations, locale) {
     }
   );
 
-  // Update hreflang tags
-  translated = updateHreflangTags(translated, locale);
+  // Update canonical, hreflang tags, and og:url
+  translated = updateSeoLinks(translated, locale, htmlFile);
 
   // Update html lang attribute
-  const langCode = CONFIG.localeMapping[locale] || locale.split('-')[0];
+  const langCode = normalizeLangAttr(locale);
   translated = translated.replace(/<html([^>]*)lang="en"/, `<html$1lang="${langCode}"`);
 
-  // Update canonical and og:url for localized pages
-  const localeDir = CONFIG.localeMapping[locale] || locale.toLowerCase();
-  translated = translated.replace(
-    /href="https:\/\/flyto2\.com\/([^"]*?)"/g,
-    (match, pagePath) => {
-      if (pagePath === '' || pagePath === 'index.html') {
-        return `href="https://flyto2.com/${localeDir}/"`;
-      }
-      return `href="https://flyto2.com/${localeDir}/${pagePath}"`;
-    }
-  );
-
   // Update language switcher active state
+  const localeDir = CONFIG.localeMapping[locale] || locale.toLowerCase();
   translated = updateLangSwitcher(translated, localeDir);
 
   return translated;
@@ -137,7 +179,7 @@ function updateLangSwitcher(html, currentLocale) {
     'pl': 'PL',
     'hi': 'HI'
   };
-  const displayLang = langNames[currentLocale] || 'EN';
+  const displayLang = langNames[currentLocale] || currentLocale.toUpperCase() || 'EN';
   html = html.replace(
     /<span class="current-lang">EN<\/span>/g,
     `<span class="current-lang">${displayLang}</span>`
@@ -146,36 +188,52 @@ function updateLangSwitcher(html, currentLocale) {
   return html;
 }
 
-// Add/update hreflang tags
-function updateHreflangTags(html, currentLocale) {
-  // Check if hreflang already exists
-  if (html.includes('hreflang=')) {
-    return html;
-  }
+// Update canonical, hreflang, and og:url for localized pages
+function updateSeoLinks(html, locale, htmlFile) {
+  const localeDir = CONFIG.localeMapping[locale] || locale.toLowerCase();
+  const pagePath = htmlFile === 'index.html' ? '' : htmlFile;
+  const localizedUrl = buildPageUrl(localeDir, pagePath);
 
-  // Insert hreflang tags after <link rel="canonical" for all 15 languages
-  const hreflangTags = `
-	<link rel="alternate" hreflang="en" href="https://flyto2.com/" />
-	<link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/" />
-	<link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/" />
-	<link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/" />
-	<link rel="alternate" hreflang="de" href="https://flyto2.com/de/" />
-	<link rel="alternate" hreflang="es" href="https://flyto2.com/es/" />
-	<link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/" />
-	<link rel="alternate" hreflang="it" href="https://flyto2.com/it/" />
-	<link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/" />
-	<link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/" />
-	<link rel="alternate" hreflang="id" href="https://flyto2.com/id/" />
-	<link rel="alternate" hreflang="th" href="https://flyto2.com/th/" />
-	<link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/" />
-	<link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/" />
-	<link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/" />
-	<link rel="alternate" hreflang="x-default" href="https://flyto2.com/" />`;
+  // Update canonical link
+  html = html.replace(
+    /<link rel="canonical" href="[^"]*"\s*\/?>/,
+    `<link rel="canonical" href="${localizedUrl}">`
+  );
 
-  return html.replace(
+  // Update og:url meta
+  html = html.replace(
+    /<meta property="og:url" content="[^"]*"\s*\/?>/,
+    `<meta property="og:url" content="${localizedUrl}">`
+  );
+
+  // Remove existing hreflang tags and insert fresh set after canonical
+  html = html.replace(/<link\s+rel="alternate"\s+hreflang="[^"]+"\s+href="[^"]*"\s*\/?>\s*/g, '');
+  const hreflangTags = buildHreflangTags(pagePath);
+  html = html.replace(
     /(<link rel="canonical"[^>]+>)/,
     `$1${hreflangTags}`
   );
+
+  return html;
+}
+
+function buildPageUrl(localeDir, pagePath) {
+  if (!pagePath) {
+    return localeDir === 'en' ? 'https://flyto2.com/' : `https://flyto2.com/${localeDir}/`;
+  }
+  return localeDir === 'en'
+    ? `https://flyto2.com/${pagePath}`
+    : `https://flyto2.com/${localeDir}/${pagePath}`;
+}
+
+function buildHreflangTags(pagePath) {
+  const tags = CONFIG.localeEntries.map((entry) => {
+    const url = buildPageUrl(entry.dir, pagePath);
+    return `\t<link rel="alternate" hreflang="${entry.hreflang}" href="${url}" />`;
+  });
+  tags.unshift(`\t<link rel="alternate" hreflang="en" href="${buildPageUrl('en', pagePath)}" />`);
+  tags.push(`\t<link rel="alternate" hreflang="x-default" href="${buildPageUrl('en', pagePath)}" />`);
+  return `\n${tags.join('\n')}`;
 }
 
 // Fix relative paths for subdirectory
@@ -193,6 +251,14 @@ function fixRelativePaths(html) {
 // Main function
 function main() {
   console.log('🏗️  Building multi-language HTML files...\n');
+  const resolved = resolveLocales(specificLocale);
+  CONFIG.locales = resolved.locales;
+  CONFIG.localeMapping = resolved.localeMapping;
+  CONFIG.localeEntries = resolved.localeEntries;
+
+  if (CONFIG.locales.length === 0) {
+    console.warn('⚠️  No locales found to build.');
+  }
 
   for (const locale of CONFIG.locales) {
     console.log(`\n🌐 Building locale: ${locale}`);
@@ -226,7 +292,7 @@ function main() {
       let html = fs.readFileSync(sourcePath, 'utf8');
 
       // Translate content
-      html = translateHtml(html, translations, locale);
+      html = translateHtml(html, translations, locale, htmlFile);
 
       // Fix relative paths
       html = fixRelativePaths(html);
@@ -239,7 +305,26 @@ function main() {
     }
   }
 
+  updateEnglishSeo();
   console.log('\n✅ Build complete!');
+}
+
+function updateEnglishSeo() {
+  if (CONFIG.localeEntries.length === 0) {
+    return;
+  }
+  console.log('\n🔧 Updating English SEO tags...');
+  for (const htmlFile of CONFIG.htmlFiles) {
+    const sourcePath = path.join(CONFIG.htmlDir, htmlFile);
+    if (!fs.existsSync(sourcePath)) {
+      continue;
+    }
+
+    let html = fs.readFileSync(sourcePath, 'utf8');
+    html = updateSeoLinks(html, 'en', htmlFile);
+    fs.writeFileSync(sourcePath, html);
+    console.log(`   ✅ ${htmlFile}`);
+  }
 }
 
 main();
