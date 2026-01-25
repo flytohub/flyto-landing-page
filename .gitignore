@@ -29,6 +29,23 @@ dist/
 build/
 *.min.js.map
 
+# Generated language directories (auto-built by scripts/build-i18n.js)
+# Do NOT commit - these are generated during CI/CD deployment
+/zh/
+/ja/
+/ko/
+/de/
+/fr/
+/es/
+/it/
+/pt/
+/pl/
+/tr/
+/th/
+/vi/
+/id/
+/hi/
+
 # Backup files
 *.bak
 *.backup
