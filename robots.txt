@@ -1,11 +1,270 @@
 # Flyto2 Robots.txt
-# https://flyto2.com/robots.txt
+# Auto-generated from seo-config.json
+# Generated: 2026-01-25
+#
+# SEO Strategy: Whitelist-based indexing
+# Edit scripts/seo-config.json to modify
 
+# ===========================================
+# All Crawlers
+# ===========================================
 User-agent: *
-Allow: /
 
-# Sitemap location
+# Allowed: Root pages
+Allow: /$
+Allow: /pricing.html
+Allow: /download.html
+Allow: /app.html
+Allow: /faq.html
+Allow: /contact.html
+Allow: /buy-offline.html
+Allow: /language-packs.html
+Allow: /about.html
+Allow: /product.html
+Allow: /philosophy.html
+Allow: /use-cases.html
+Allow: /compare.html
+Allow: /blog.html
+
+# Allowed: Language versions
+Allow: /de/$
+Allow: /de/pricing.html
+Allow: /de/download.html
+Allow: /de/app.html
+Allow: /de/faq.html
+Allow: /de/contact.html
+Allow: /de/buy-offline.html
+Allow: /de/language-packs.html
+Allow: /de/about.html
+Allow: /de/product.html
+Allow: /de/philosophy.html
+Allow: /de/use-cases.html
+Allow: /de/compare.html
+Allow: /de/blog.html
+Allow: /es/$
+Allow: /es/pricing.html
+Allow: /es/download.html
+Allow: /es/app.html
+Allow: /es/faq.html
+Allow: /es/contact.html
+Allow: /es/buy-offline.html
+Allow: /es/language-packs.html
+Allow: /es/about.html
+Allow: /es/product.html
+Allow: /es/philosophy.html
+Allow: /es/use-cases.html
+Allow: /es/compare.html
+Allow: /es/blog.html
+Allow: /fr/$
+Allow: /fr/pricing.html
+Allow: /fr/download.html
+Allow: /fr/app.html
+Allow: /fr/faq.html
+Allow: /fr/contact.html
+Allow: /fr/buy-offline.html
+Allow: /fr/language-packs.html
+Allow: /fr/about.html
+Allow: /fr/product.html
+Allow: /fr/philosophy.html
+Allow: /fr/use-cases.html
+Allow: /fr/compare.html
+Allow: /fr/blog.html
+Allow: /hi/$
+Allow: /hi/pricing.html
+Allow: /hi/download.html
+Allow: /hi/app.html
+Allow: /hi/faq.html
+Allow: /hi/contact.html
+Allow: /hi/buy-offline.html
+Allow: /hi/language-packs.html
+Allow: /hi/about.html
+Allow: /hi/product.html
+Allow: /hi/philosophy.html
+Allow: /hi/use-cases.html
+Allow: /hi/compare.html
+Allow: /hi/blog.html
+Allow: /id/$
+Allow: /id/pricing.html
+Allow: /id/download.html
+Allow: /id/app.html
+Allow: /id/faq.html
+Allow: /id/contact.html
+Allow: /id/buy-offline.html
+Allow: /id/language-packs.html
+Allow: /id/about.html
+Allow: /id/product.html
+Allow: /id/philosophy.html
+Allow: /id/use-cases.html
+Allow: /id/compare.html
+Allow: /id/blog.html
+Allow: /it/$
+Allow: /it/pricing.html
+Allow: /it/download.html
+Allow: /it/app.html
+Allow: /it/faq.html
+Allow: /it/contact.html
+Allow: /it/buy-offline.html
+Allow: /it/language-packs.html
+Allow: /it/about.html
+Allow: /it/product.html
+Allow: /it/philosophy.html
+Allow: /it/use-cases.html
+Allow: /it/compare.html
+Allow: /it/blog.html
+Allow: /ja/$
+Allow: /ja/pricing.html
+Allow: /ja/download.html
+Allow: /ja/app.html
+Allow: /ja/faq.html
+Allow: /ja/contact.html
+Allow: /ja/buy-offline.html
+Allow: /ja/language-packs.html
+Allow: /ja/about.html
+Allow: /ja/product.html
+Allow: /ja/philosophy.html
+Allow: /ja/use-cases.html
+Allow: /ja/compare.html
+Allow: /ja/blog.html
+Allow: /ko/$
+Allow: /ko/pricing.html
+Allow: /ko/download.html
+Allow: /ko/app.html
+Allow: /ko/faq.html
+Allow: /ko/contact.html
+Allow: /ko/buy-offline.html
+Allow: /ko/language-packs.html
+Allow: /ko/about.html
+Allow: /ko/product.html
+Allow: /ko/philosophy.html
+Allow: /ko/use-cases.html
+Allow: /ko/compare.html
+Allow: /ko/blog.html
+Allow: /pl/$
+Allow: /pl/pricing.html
+Allow: /pl/download.html
+Allow: /pl/app.html
+Allow: /pl/faq.html
+Allow: /pl/contact.html
+Allow: /pl/buy-offline.html
+Allow: /pl/language-packs.html
+Allow: /pl/about.html
+Allow: /pl/product.html
+Allow: /pl/philosophy.html
+Allow: /pl/use-cases.html
+Allow: /pl/compare.html
+Allow: /pl/blog.html
+Allow: /pt/$
+Allow: /pt/pricing.html
+Allow: /pt/download.html
+Allow: /pt/app.html
+Allow: /pt/faq.html
+Allow: /pt/contact.html
+Allow: /pt/buy-offline.html
+Allow: /pt/language-packs.html
+Allow: /pt/about.html
+Allow: /pt/product.html
+Allow: /pt/philosophy.html
+Allow: /pt/use-cases.html
+Allow: /pt/compare.html
+Allow: /pt/blog.html
+Allow: /th/$
+Allow: /th/pricing.html
+Allow: /th/download.html
+Allow: /th/app.html
+Allow: /th/faq.html
+Allow: /th/contact.html
+Allow: /th/buy-offline.html
+Allow: /th/language-packs.html
+Allow: /th/about.html
+Allow: /th/product.html
+Allow: /th/philosophy.html
+Allow: /th/use-cases.html
+Allow: /th/compare.html
+Allow: /th/blog.html
+Allow: /tr/$
+Allow: /tr/pricing.html
+Allow: /tr/download.html
+Allow: /tr/app.html
+Allow: /tr/faq.html
+Allow: /tr/contact.html
+Allow: /tr/buy-offline.html
+Allow: /tr/language-packs.html
+Allow: /tr/about.html
+Allow: /tr/product.html
+Allow: /tr/philosophy.html
+Allow: /tr/use-cases.html
+Allow: /tr/compare.html
+Allow: /tr/blog.html
+Allow: /vi/$
+Allow: /vi/pricing.html
+Allow: /vi/download.html
+Allow: /vi/app.html
+Allow: /vi/faq.html
+Allow: /vi/contact.html
+Allow: /vi/buy-offline.html
+Allow: /vi/language-packs.html
+Allow: /vi/about.html
+Allow: /vi/product.html
+Allow: /vi/philosophy.html
+Allow: /vi/use-cases.html
+Allow: /vi/compare.html
+Allow: /vi/blog.html
+Allow: /zh/$
+Allow: /zh/pricing.html
+Allow: /zh/download.html
+Allow: /zh/app.html
+Allow: /zh/faq.html
+Allow: /zh/contact.html
+Allow: /zh/buy-offline.html
+Allow: /zh/language-packs.html
+Allow: /zh/about.html
+Allow: /zh/product.html
+Allow: /zh/philosophy.html
+Allow: /zh/use-cases.html
+Allow: /zh/compare.html
+Allow: /zh/blog.html
+
+# Allowed: Assets for page rendering
+Allow: /assets/css/
+Allow: /assets/images/
+Allow: /assets/fonts/
+Allow: /style.css
+
+# Blocked: Specific pages
+Disallow: /404.html
+Disallow: /license-purchase.html
+
+# Blocked: Paths
+Disallow: /assets/js/
+Disallow: /scripts/
+Disallow: /*.json
+Disallow: /.git/
+Disallow: /.github/
+Disallow: /.idea/
+
+# Crawl settings
+Crawl-delay: 1
+
+# ===========================================
+# Sitemap
+# ===========================================
 Sitemap: https://flyto2.com/sitemap.xml
 
-# Disallow sensitive paths
-Disallow: /assets/js/auth.js
+# ===========================================
+# Blocked Bots (AI crawlers, etc.)
+# ===========================================
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /

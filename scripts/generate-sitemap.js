@@ -3,6 +3,7 @@
  * generate-sitemap.js
  *
  * Generates sitemap.xml with full hreflang coverage.
+ * Reads page config from seo-config.json.
  *
  * Usage:
  *   node scripts/generate-sitemap.js
@@ -11,42 +12,15 @@
 const fs = require('fs');
 const path = require('path');
 
+const CONFIG_PATH = path.join(__dirname, 'seo-config.json');
+const seoConfig = JSON.parse(fs.readFileSync(CONFIG_PATH, 'utf8'));
+
 const CONFIG = {
   htmlDir: path.join(__dirname, '..'),
   i18nDir: path.join(__dirname, '..', '..', 'flyto-i18n', 'locales'),
-  htmlFiles: [
-    'index.html',
-    'pricing.html',
-    'download.html',
-    'app.html',
-    'faq.html',
-    'contact.html',
-    'buy-offline.html',
-    'language-packs.html',
-    'product.html',
-    'use-cases.html',
-    'compare.html',
-    'philosophy.html',
-    'about.html',
-    'blog.html'
-  ],
-  localeEntries: [],
-  pageMeta: {
-    'index.html': { changefreq: 'weekly', priority: '1.0' },
-    'pricing.html': { changefreq: 'weekly', priority: '0.9' },
-    'download.html': { changefreq: 'monthly', priority: '0.8' },
-    'app.html': { changefreq: 'monthly', priority: '0.8' },
-    'faq.html': { changefreq: 'monthly', priority: '0.7' },
-    'contact.html': { changefreq: 'monthly', priority: '0.6' },
-    'buy-offline.html': { changefreq: 'monthly', priority: '0.7' },
-    'language-packs.html': { changefreq: 'monthly', priority: '0.6' },
-    'about.html': { changefreq: 'monthly', priority: '0.6' },
-    'product.html': { changefreq: 'monthly', priority: '0.7' },
-    'philosophy.html': { changefreq: 'monthly', priority: '0.5' },
-    'use-cases.html': { changefreq: 'monthly', priority: '0.6' },
-    'compare.html': { changefreq: 'monthly', priority: '0.6' },
-    'blog.html': { changefreq: 'weekly', priority: '0.6' }
-  }
+  baseUrl: seoConfig.baseUrl,
+  pages: seoConfig.pages,
+  localeEntries: []
 };
 
 function getLocalesFromI18n() {
@@ -57,9 +31,7 @@ function getLocalesFromI18n() {
 
   return fs.readdirSync(CONFIG.i18nDir)
     .filter((entry) => {
-      if (entry.startsWith('.')) {
-        return false;
-      }
+      if (entry.startsWith('.')) return false;
       const fullPath = path.join(CONFIG.i18nDir, entry);
       return fs.statSync(fullPath).isDirectory() && entry.toLowerCase() !== 'en';
     })
@@ -69,12 +41,8 @@ function getLocalesFromI18n() {
 function localeToDir(locale) {
   const normalized = locale.replace('_', '-');
   const lower = normalized.toLowerCase();
-  if (lower.startsWith('zh')) {
-    return 'zh';
-  }
-  if (lower.startsWith('pt-')) {
-    return 'pt';
-  }
+  if (lower.startsWith('zh')) return 'zh';
+  if (lower.startsWith('pt-')) return 'pt';
   return normalized.split('-')[0].toLowerCase();
 }
 
@@ -105,11 +73,7 @@ function resolveLocales() {
       continue;
     }
     seenDirs.add(dir);
-    localeEntries.push({
-      locale,
-      dir,
-      hreflang: normalizeHreflang(locale)
-    });
+    localeEntries.push({ locale, dir, hreflang: normalizeHreflang(locale) });
   }
 
   return localeEntries;
@@ -121,11 +85,11 @@ function pagePath(htmlFile) {
 
 function buildUrl(localeDir, pagePathValue) {
   if (!pagePathValue) {
-    return localeDir === 'en' ? 'https://flyto2.com/' : `https://flyto2.com/${localeDir}/`;
+    return localeDir === 'en' ? `${CONFIG.baseUrl}/` : `${CONFIG.baseUrl}/${localeDir}/`;
   }
   return localeDir === 'en'
-    ? `https://flyto2.com/${pagePathValue}`
-    : `https://flyto2.com/${localeDir}/${pagePathValue}`;
+    ? `${CONFIG.baseUrl}/${pagePathValue}`
+    : `${CONFIG.baseUrl}/${localeDir}/${pagePathValue}`;
 }
 
 function formatDate(date) {
@@ -162,7 +126,7 @@ function buildUrlEntry(localeDir, htmlFile) {
   const pagePathValue = pagePath(htmlFile);
   const loc = buildUrl(localeDir, pagePathValue);
   const lastmod = getLastmod(localeDir, htmlFile);
-  const meta = CONFIG.pageMeta[htmlFile] || { changefreq: 'monthly', priority: '0.5' };
+  const meta = CONFIG.pages[htmlFile] || { changefreq: 'monthly', priority: '0.5' };
   const alternates = buildAlternateLinks(pagePathValue);
 
   return [
@@ -178,17 +142,23 @@ function buildUrlEntry(localeDir, htmlFile) {
 
 function generateSitemap() {
   CONFIG.localeEntries = resolveLocales();
+
+  // Only include pages marked for indexing
+  const indexablePages = Object.entries(CONFIG.pages)
+    .filter(([_, meta]) => meta.index !== false)
+    .map(([page, _]) => page);
+
   const header = [
     '<?xml version="1.0" encoding="UTF-8"?>',
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">'
   ];
 
   const body = [];
-  for (const htmlFile of CONFIG.htmlFiles) {
+  for (const htmlFile of indexablePages) {
     body.push(buildUrlEntry('en', htmlFile));
   }
   for (const entry of CONFIG.localeEntries) {
-    for (const htmlFile of CONFIG.htmlFiles) {
+    for (const htmlFile of indexablePages) {
       body.push(buildUrlEntry(entry.dir, htmlFile));
     }
   }
@@ -198,7 +168,10 @@ function generateSitemap() {
 
   const outputPath = path.join(CONFIG.htmlDir, 'sitemap.xml');
   fs.writeFileSync(outputPath, xml, 'utf8');
-  console.log(`✅ sitemap.xml generated (${CONFIG.localeEntries.length + 1} locales)`);
+
+  const totalUrls = indexablePages.length * (CONFIG.localeEntries.length + 1);
+  console.log(`✅ sitemap.xml generated`);
+  console.log(`   - ${indexablePages.length} pages × ${CONFIG.localeEntries.length + 1} locales = ${totalUrls} URLs`);
 }
 
 generateSitemap();

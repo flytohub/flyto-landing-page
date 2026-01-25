@@ -31,14 +31,38 @@ jobs:
           cd flyto-landing-page
           node scripts/build-i18n.js
 
+      - name: Fetch SEO config from Firebase
+        run: |
+          cd flyto-landing-page
+          node scripts/fetch-seo-config.js
+        env:
+          FIREBASE_PROJECT_ID: ${{ vars.FIREBASE_PROJECT_ID || 'flyto-cloud' }}
+
+      - name: Inject analytics
+        run: |
+          cd flyto-landing-page
+          node scripts/inject-analytics.js
+
+      - name: Generate sitemap and robots.txt
+        run: |
+          cd flyto-landing-page
+          node scripts/generate-sitemap.js
+          node scripts/generate-robots.js
+
       - name: Commit and push
         run: |
           cd flyto-landing-page
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add zh/ ja/ 2>/dev/null || true
+          # Dynamically add all language directories (2-letter dirs with index.html)
+          for dir in */; do
+            if [[ ${#dir} -eq 3 ]] && [[ -f "${dir}index.html" ]]; then
+              git add "$dir" 2>/dev/null || true
+            fi
+          done
+          git add sitemap.xml robots.txt 2>/dev/null || true
           if [[ -n $(git status --porcelain) ]]; then
-            git commit -m "build: update translations from flyto-i18n"
+            git commit -m "build: update translations and sitemap from flyto-i18n"
             git push
           fi
 

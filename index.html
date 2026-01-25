@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
+	<!-- Google Analytics (GA4) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFSSQK3KW"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-8XFSSQK3KW');
+	</script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -16,11 +24,11 @@
 	<!-- Content Security Policy -->
 	<meta http-equiv="Content-Security-Policy" content="
 		default-src 'self';
-		script-src 'self' 'unsafe-inline' https://www.gstatic.com https://cdn.jsdelivr.net https://apis.google.com https://js.stripe.com;
+		script-src 'self' 'unsafe-inline' https://www.gstatic.com https://cdn.jsdelivr.net https://apis.google.com https://js.stripe.com https://www.googletagmanager.com;
 		style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com;
 		font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net;
 		img-src 'self' data: https:;
-		connect-src 'self' https://www.gstatic.com https://cdn.jsdelivr.net https://*.cloudfunctions.net https://*.firebaseio.com https://pypi.org https://api.stripe.com https://*.googleapis.com;
+		connect-src 'self' https://www.gstatic.com https://cdn.jsdelivr.net https://*.cloudfunctions.net https://*.firebaseio.com https://pypi.org https://api.stripe.com https://*.googleapis.com https://www.google-analytics.com https://www.googletagmanager.com;
 		frame-src https://js.stripe.com https://accounts.google.com https://*.firebaseapp.com;
 	">
 
@@ -31,10 +39,22 @@
 
 	<!-- SEO Meta Tags -->
 	<link rel="canonical" href="https://flyto2.com/">
-	<link rel="alternate" hreflang="en" href="https://flyto2.com/">
-	<link rel="alternate" hreflang="zh" href="https://flyto2.com/zh/">
-	<link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/">
-	<link rel="alternate" hreflang="x-default" href="https://flyto2.com/">
+	<link rel="alternate" hreflang="en" href="https://flyto2.com/" />
+	<link rel="alternate" hreflang="de" href="https://flyto2.com/de/" />
+	<link rel="alternate" hreflang="es" href="https://flyto2.com/es/" />
+	<link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/" />
+	<link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/" />
+	<link rel="alternate" hreflang="id" href="https://flyto2.com/id/" />
+	<link rel="alternate" hreflang="it" href="https://flyto2.com/it/" />
+	<link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/" />
+	<link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/" />
+	<link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/" />
+	<link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/" />
+	<link rel="alternate" hreflang="th" href="https://flyto2.com/th/" />
+	<link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/" />
+	<link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/" />
+	<link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/" />
+	<link rel="alternate" hreflang="x-default" href="https://flyto2.com/" />
 	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 	<meta name="keywords" content="enterprise workflow platform, UI-driven automation, workflow with human approval, RPA alternative, human-in-the-loop automation, workflow validation, offline workflow automation, business process automation">
 	<meta name="author" content="Flyto2">
