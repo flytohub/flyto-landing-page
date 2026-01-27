@@ -136,8 +136,8 @@ function translateHtml(html, translations, locale, htmlFile) {
     }
   );
 
-  // Update canonical, hreflang tags, and og:url
-  translated = updateSeoLinks(translated, locale, htmlFile);
+  // Update canonical, hreflang tags, og:url, og:locale, and meta descriptions
+  translated = updateSeoLinks(translated, locale, htmlFile, translations);
 
   // Update html lang attribute
   const langCode = normalizeLangAttr(locale);
@@ -188,8 +188,8 @@ function updateLangSwitcher(html, currentLocale) {
   return html;
 }
 
-// Update canonical, hreflang, and og:url for localized pages
-function updateSeoLinks(html, locale, htmlFile) {
+// Update canonical, hreflang, og:url, og:locale, and meta descriptions for localized pages
+function updateSeoLinks(html, locale, htmlFile, translations) {
   const localeDir = CONFIG.localeMapping[locale] || locale.toLowerCase();
   const pagePath = htmlFile === 'index.html' ? '' : htmlFile;
   const localizedUrl = buildPageUrl(localeDir, pagePath);
@@ -206,6 +206,42 @@ function updateSeoLinks(html, locale, htmlFile) {
     `<meta property="og:url" content="${localizedUrl}">`
   );
 
+  // Update og:locale meta
+  const ogLocale = getOgLocale(locale);
+  html = html.replace(
+    /<meta property="og:locale" content="[^"]*"\s*\/?>/,
+    `<meta property="og:locale" content="${ogLocale}">`
+  );
+
+  // Update meta description from translations
+  const pageKey = htmlFile.replace('.html', '').replace('-', '');
+  const metaDescKey = `landing.meta.${pageKey}.description`;
+  const ogDescKey = `landing.meta.${pageKey}.ogDescription`;
+
+  if (translations[metaDescKey]) {
+    html = html.replace(
+      /<meta name="description" content="[^"]*"\s*\/?>/,
+      `<meta name="description" content="${escapeHtml(translations[metaDescKey])}">`
+    );
+  }
+
+  // Update og:description
+  const ogDesc = translations[ogDescKey] || translations[metaDescKey];
+  if (ogDesc) {
+    html = html.replace(
+      /<meta property="og:description" content="[^"]*"\s*\/?>/,
+      `<meta property="og:description" content="${escapeHtml(ogDesc)}">`
+    );
+  }
+
+  // Update twitter:description
+  if (translations[metaDescKey]) {
+    html = html.replace(
+      /<meta name="twitter:description" content="[^"]*"\s*\/?>/,
+      `<meta name="twitter:description" content="${escapeHtml(translations[metaDescKey].substring(0, 200))}">`
+    );
+  }
+
   // Remove existing hreflang tags and insert fresh set after canonical
   html = html.replace(/<link\s+rel="alternate"\s+hreflang="[^"]+"\s+href="[^"]*"\s*\/?>\s*/g, '');
   const hreflangTags = buildHreflangTags(pagePath);
@@ -215,6 +251,38 @@ function updateSeoLinks(html, locale, htmlFile) {
   );
 
   return html;
+}
+
+// Get og:locale format from locale code
+function getOgLocale(locale) {
+  const localeMap = {
+    'ja': 'ja_JP',
+    'zh-TW': 'zh_TW',
+    'zh_TW': 'zh_TW',
+    'ko': 'ko_KR',
+    'de': 'de_DE',
+    'es': 'es_ES',
+    'fr': 'fr_FR',
+    'it': 'it_IT',
+    'pt-BR': 'pt_BR',
+    'vi': 'vi_VN',
+    'id': 'id_ID',
+    'th': 'th_TH',
+    'tr': 'tr_TR',
+    'pl': 'pl_PL',
+    'hi': 'hi_IN'
+  };
+  return localeMap[locale] || 'en_US';
+}
+
+// Escape HTML special characters
+function escapeHtml(str) {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
 }
 
 function buildPageUrl(localeDir, pagePath) {
@@ -314,6 +382,7 @@ function updateEnglishSeo() {
     return;
   }
   console.log('\n🔧 Updating English SEO tags...');
+  const translations = loadTranslations('en');
   for (const htmlFile of CONFIG.htmlFiles) {
     const sourcePath = path.join(CONFIG.htmlDir, htmlFile);
     if (!fs.existsSync(sourcePath)) {
@@ -321,7 +390,7 @@ function updateEnglishSeo() {
     }
 
     let html = fs.readFileSync(sourcePath, 'utf8');
-    html = updateSeoLinks(html, 'en', htmlFile);
+    html = updateSeoLinks(html, 'en', htmlFile, translations);
     fs.writeFileSync(sourcePath, html);
     console.log(`   ✅ ${htmlFile}`);
   }
