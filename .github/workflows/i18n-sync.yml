@@ -35,6 +35,16 @@ jobs:
           cd flyto-landing-page
           node scripts/extract-keys.js
 
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Sync all locales with English base
+        run: |
+          cd flyto-i18n
+          python scripts/sync-locales.py
+
       - name: Check for changes in i18n
         id: check-changes
         run: |
