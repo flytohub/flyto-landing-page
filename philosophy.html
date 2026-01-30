@@ -13,10 +13,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!-- Preconnect to critical origins -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="preconnect" href="https://www.gstatic.com" crossorigin>
 	<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 	<link rel="dns-prefetch" href="https://www.gstatic.com">
 	<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
+	<!-- Google Fonts (moved from CSS @import for better performance) -->
+	<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" media="print" onload="this.media='all'">
+	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"></noscript>
 	<title>Flyto2 Philosophy - Human-Centered Automation</title>
 	<meta name="description" content="Our philosophy on automation. Why we believe in human oversight, transparency, and putting users in control.">
 
@@ -64,9 +71,11 @@
 	<meta property="og:description" content="Our philosophy on automation. Why we believe in human oversight, transparency, and putting users in control.">
 	<meta property="og:image" content="https://flyto2.com/assets/img/og-image.png">
 	<meta property="og:site_name" content="Flyto2">
+	<meta property="og:locale" content="en_US">
 
 	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@flyto2">
 	<meta name="twitter:title" content="Flyto2 Philosophy - Human-Centered Automation">
 	<meta name="twitter:description" content="Our philosophy on automation. Why we believe in human oversight, transparency, and putting users in control.">
 	<meta name="twitter:image" content="https://flyto2.com/assets/img/og-image.png">
@@ -74,6 +83,7 @@
 
 	<link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="assets/img/icon.png" type="image/png" sizes="32x32">
+	<link rel="apple-touch-icon" href="assets/img/icon.png" sizes="180x180">
 
 	<!-- Critical CSS (render-blocking) -->
 	<link rel="stylesheet" href="assets/css/normalize.css">
