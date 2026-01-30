@@ -242,6 +242,42 @@ function updateSeoLinks(html, locale, htmlFile, translations) {
     );
   }
 
+  // Update page title
+  const titleKey = `landing.meta.${pageKey}.title`;
+  if (translations[titleKey]) {
+    html = html.replace(
+      /<title>[^<]*<\/title>/,
+      `<title>${escapeHtml(translations[titleKey])}</title>`
+    );
+  }
+
+  // Update og:title
+  const ogTitleKey = `landing.meta.${pageKey}.ogTitle`;
+  const ogTitle = translations[ogTitleKey] || translations[titleKey];
+  if (ogTitle) {
+    html = html.replace(
+      /<meta property="og:title" content="[^"]*"\s*\/?>/,
+      `<meta property="og:title" content="${escapeHtml(ogTitle)}">`
+    );
+  }
+
+  // Update twitter:title
+  if (ogTitle) {
+    html = html.replace(
+      /<meta name="twitter:title" content="[^"]*"\s*\/?>/,
+      `<meta name="twitter:title" content="${escapeHtml(ogTitle)}">`
+    );
+  }
+
+  // Update keywords
+  const keywordsKey = `landing.meta.${pageKey}.keywords`;
+  if (translations[keywordsKey]) {
+    html = html.replace(
+      /<meta name="keywords" content="[^"]*"\s*\/?>/,
+      `<meta name="keywords" content="${escapeHtml(translations[keywordsKey])}">`
+    );
+  }
+
   // Remove existing hreflang tags and insert fresh set after canonical
   html = html.replace(/<link\s+rel="alternate"\s+hreflang="[^"]+"\s+href="[^"]*"\s*\/?>\s*/g, '');
   const hreflangTags = buildHreflangTags(pagePath);

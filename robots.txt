@@ -226,7 +226,7 @@ Allow: /zh/blog.html
 
 # Allowed: Assets for page rendering
 Allow: /assets/css/
-Allow: /assets/images/
+Allow: /assets/img/
 Allow: /assets/fonts/
 Allow: /style.css
 
