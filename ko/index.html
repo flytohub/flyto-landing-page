@@ -608,24 +608,10 @@
 				</div>
 				<!-- Mobile Language Switcher -->
 				<div class="mobile-lang-switcher">
-					<div class="mobile-lang-title"><i class="bi bi-globe"></i> Language</div>
-					<select class="mobile-lang-select" onchange="if(this.value) window.location.href=this.value">
-						<option value="/">English</option>
-						<option value="/zh/">繁體中文</option>
-						<option value="/ja/">日本語</option>
-						<option value="/ko/" selected>한국어</option>
-						<option value="/de/">Deutsch</option>
-						<option value="/es/">Español</option>
-						<option value="/fr/">Français</option>
-						<option value="/it/">Italiano</option>
-						<option value="/pt/">Português</option>
-						<option value="/vi/">Tiếng Việt</option>
-						<option value="/th/">ไทย</option>
-						<option value="/id/">Indonesia</option>
-						<option value="/tr/">Türkçe</option>
-						<option value="/pl/">Polski</option>
-						<option value="/hi/">हिन्दी</option>
-					</select>
+					<button class="mobile-lang-trigger" onclick="document.getElementById('langSheet').classList.add('active');document.getElementById('langOverlay').classList.add('active');">
+						<span class="trigger-text"><i class="bi bi-globe"></i> <span class="current-lang-name">한국어</span></span>
+						<i class="bi bi-chevron-up"></i>
+					</button>
 				</div>
 			</div>
 		</div>
@@ -1336,5 +1322,33 @@
 			}
 		});
 	</script>
+
+	<!-- Language Bottom Sheet -->
+	<div id="langOverlay" class="lang-sheet-overlay" onclick="this.classList.remove('active');document.getElementById('langSheet').classList.remove('active');"></div>
+	<div id="langSheet" class="lang-sheet">
+		<div class="lang-sheet-header">
+			<h3><i class="bi bi-translate"></i> Select Language</h3>
+			<button class="lang-sheet-close" onclick="document.getElementById('langSheet').classList.remove('active');document.getElementById('langOverlay').classList.remove('active');">
+				<i class="bi bi-x-lg"></i>
+			</button>
+		</div>
+		<div class="lang-sheet-body">
+			<a href="/" class="lang-sheet-item"><span>English</span></a>
+			<a href="/zh/" class="lang-sheet-item"><span>繁體中文</span></a>
+			<a href="/ja/" class="lang-sheet-item"><span>日本語</span></a>
+			<a href="/ko/" class="lang-sheet-item active"><span>한국어</span></a>
+			<a href="/de/" class="lang-sheet-item"><span>Deutsch</span></a>
+			<a href="/es/" class="lang-sheet-item"><span>Español</span></a>
+			<a href="/fr/" class="lang-sheet-item"><span>Français</span></a>
+			<a href="/it/" class="lang-sheet-item"><span>Italiano</span></a>
+			<a href="/pt/" class="lang-sheet-item"><span>Português</span></a>
+			<a href="/vi/" class="lang-sheet-item"><span>Tiếng Việt</span></a>
+			<a href="/th/" class="lang-sheet-item"><span>ไทย</span></a>
+			<a href="/id/" class="lang-sheet-item"><span>Indonesia</span></a>
+			<a href="/tr/" class="lang-sheet-item"><span>Türkçe</span></a>
+			<a href="/pl/" class="lang-sheet-item"><span>Polski</span></a>
+			<a href="/hi/" class="lang-sheet-item"><span>हिन्दी</span></a>
+		</div>
+	</div>
 </body>
 </html>

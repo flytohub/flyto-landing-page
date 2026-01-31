@@ -200,17 +200,17 @@ function updateLangSwitcher(html, currentLocale) {
   const desktopPattern = new RegExp(`<a href="/${currentLocale}/" class="lang-option"`, 'g');
   html = html.replace(desktopPattern, `<a href="/${currentLocale}/" class="lang-option active"`);
 
-  // Mobile language switcher (select dropdown) - Remove selected from English
+  // Bottom sheet language switcher - Remove active class from English
   html = html.replace(
-    /<option value="\/" selected>/g,
-    '<option value="/">'
+    /<a href="\/" class="lang-sheet-item active"/g,
+    '<a href="/" class="lang-sheet-item"'
   );
-  // Mobile language switcher - Add selected to current locale
-  const selectPattern = new RegExp(`<option value="/${currentLocale}/">`, 'g');
-  html = html.replace(selectPattern, `<option value="/${currentLocale}/" selected>`);
+  // Bottom sheet - Add active class to current locale
+  const sheetPattern = new RegExp(`<a href="/${currentLocale}/" class="lang-sheet-item"`, 'g');
+  html = html.replace(sheetPattern, `<a href="/${currentLocale}/" class="lang-sheet-item active"`);
 
-  // Update current-lang display
-  const langNames = {
+  // Update current-lang display (header)
+  const langCodes = {
     'zh': 'ZH',
     'ja': 'JA',
     'ko': 'KO',
@@ -226,10 +226,33 @@ function updateLangSwitcher(html, currentLocale) {
     'pl': 'PL',
     'hi': 'HI'
   };
-  const displayLang = langNames[currentLocale] || currentLocale.toUpperCase() || 'EN';
+  const displayLang = langCodes[currentLocale] || currentLocale.toUpperCase() || 'EN';
   html = html.replace(
     /<span class="current-lang">EN<\/span>/g,
     `<span class="current-lang">${displayLang}</span>`
+  );
+
+  // Update current-lang-name display (mobile trigger button)
+  const langNames = {
+    'zh': '繁體中文',
+    'ja': '日本語',
+    'ko': '한국어',
+    'de': 'Deutsch',
+    'es': 'Español',
+    'fr': 'Français',
+    'it': 'Italiano',
+    'pt': 'Português',
+    'vi': 'Tiếng Việt',
+    'id': 'Indonesia',
+    'th': 'ไทย',
+    'tr': 'Türkçe',
+    'pl': 'Polski',
+    'hi': 'हिन्दी'
+  };
+  const displayName = langNames[currentLocale] || 'English';
+  html = html.replace(
+    /<span class="current-lang-name">English<\/span>/g,
+    `<span class="current-lang-name">${displayName}</span>`
   );
 
   return html;
