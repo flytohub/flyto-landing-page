@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pl">
+<head>
+	<!-- Google Analytics (GA4) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFSSQK3KW"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-8XFSSQK3KW');
+	</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Preconnect to critical origins -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+	<link rel="dns-prefetch" href="https://www.gstatic.com">
+	<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
+	<!-- Google Fonts (moved from CSS @import for better performance) -->
+	<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" media="print" onload="this.media='all'">
+	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"></noscript>
+
+	<title>Flyto2 - Platforma Workflow dla Przedsiębiorstw | Automatyzacja Human-in-the-Loop</title>
+	<meta name="description" content="Flyto2 to platforma workflow dla przedsiębiorstw, łącząca automatyzację opartą na UI z nadzorem człowieka. Twórz przepływy pracy z krokami zatwierdzania, punktami kontrolnymi walidacji i pełnymi ścieżkami audytu. 100% offline.">
+
+	<!-- Content Security Policy -->
+	<meta http-equiv="Content-Security-Policy" content="
+		default-src 'self';
+		script-src 'self' 'unsafe-inline' https://www.gstatic.com https://cdn.jsdelivr.net https://apis.google.com https://js.stripe.com https://www.googletagmanager.com;
+		style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com;
+		font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net;
+		img-src 'self' data: https:;
+		connect-src 'self' https://www.gstatic.com https://cdn.jsdelivr.net https://*.cloudfunctions.net https://*.firebaseio.com https://pypi.org https://api.stripe.com https://*.googleapis.com https://www.google-analytics.com https://www.googletagmanager.com;
+		frame-src https://js.stripe.com https://accounts.google.com https://*.firebaseapp.com;
+	">
+
+	<!-- Security Headers -->
+	<meta http-equiv="X-Content-Type-Options" content="nosniff">
+	<meta name="referrer" content="strict-origin-when-cross-origin">
+	<meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+
+	<!-- SEO Meta Tags -->
+	<link rel="canonical" href="https://flyto2.com/pl/">
+	<link rel="alternate" hreflang="en" href="https://flyto2.com/" />
+	<link rel="alternate" hreflang="de" href="https://flyto2.com/de/" />
+	<link rel="alternate" hreflang="es" href="https://flyto2.com/es/" />
+	<link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/" />
+	<link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/" />
+	<link rel="alternate" hreflang="id" href="https://flyto2.com/id/" />
+	<link rel="alternate" hreflang="it" href="https://flyto2.com/it/" />
+	<link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/" />
+	<link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/" />
+	<link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/" />
+	<link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/" />
+	<link rel="alternate" hreflang="th" href="https://flyto2.com/th/" />
+	<link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/" />
+	<link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/" />
+	<link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/" />
+	<link rel="alternate" hreflang="x-default" href="https://flyto2.com/" />
+	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+	<meta name="keywords" content="platforma workflow przedsiębiorstwa, automatyzacja oparta na UI, workflow z zatwierdzeniem człowieka, alternatywa RPA, human-in-the-loop, walidacja workflow, automatyzacja offline, automatyzacja procesów biznesowych">
+	<meta name="author" content="Flyto2">
+	<meta name="generator" content="Flyto2">
+	<meta name="rating" content="general">
+	<meta name="coverage" content="Worldwide">
+	<meta name="distribution" content="global">
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://flyto2.com/pl/">
+	<meta property="og:title" content="Flyto2 - Platforma Workflow dla Przedsiębiorstw | Automatyzacja Human-in-the-Loop">
+	<meta property="og:description" content="Flyto2 to platforma workflow dla przedsiębiorstw, łącząca automatyzację opartą na UI z nadzorem człowieka. Twórz przepływy pracy z krokami zatwierdzania, punktami kontrolnymi walidacji i pełnymi ścieżkami audytu. 100% offline.">
+	<meta property="og:image" content="https://flyto2.com/assets/img/og-image.png">
+	<meta property="og:site_name" content="Flyto2">
+	<meta property="og:locale" content="pl_PL">
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@flyto2">
+	<meta name="twitter:title" content="Flyto2 - Platforma Workflow dla Przedsiębiorstw | Automatyzacja Human-in-the-Loop">
+	<meta name="twitter:description" content="Flyto2 to platforma workflow dla przedsiębiorstw, łącząca automatyzację opartą na UI z nadzorem człowieka. Twórz przepływy pracy z krokami zatwierdzania, punktami kontrolnymi walidacji i pełnymi ścież">
+	<meta name="twitter:image" content="https://flyto2.com/assets/img/og-image.png">
+	<meta name="twitter:image:alt" content="Flyto2 - Enterprise Workflow Platform">
+
+	<!-- Structured Data (Schema.org) -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Organization",
+		"name": "Flyto2",
+		"url": "https://flyto2.com",
+		"logo": "https://flyto2.com/assets/img/logo.png",
+		"sameAs": [
+			"https://twitter.com/flyto2"
+		]
+	}
+	</script>
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "SoftwareApplication",
+		"name": "Flyto2",
+		"applicationCategory": "BusinessApplication",
+		"operatingSystem": "Windows, macOS, Linux",
+		"description": "Enterprise workflow platform with UI-driven automation and human oversight. Build workflows with approval steps, validation checkpoints, and full audit trails.",
+		"url": "https://flyto2.com",
+		"offers": {
+			"@type": "Offer",
+			"price": "0",
+			"priceCurrency": "USD"
+		},
+		"featureList": [
+			"Human-in-the-loop automation",
+			"Visual workflow builder",
+			"Offline-first architecture",
+			"Audit trails",
+			"Multi-language support"
+		]
+	}
+	</script>
+
+	<link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="../assets/img/icon.png" type="image/png" sizes="32x32">
+	<link rel="apple-touch-icon" href="../assets/img/icon.png" sizes="180x180">
+
+	<!-- Critical CSS (render-blocking) -->
+	<link rel="stylesheet" href="../assets/css/normalize.css">
+	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../assets/css/fontawesome.all.min.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="../assets/css/responsive.css">
+
+	<!-- Non-critical CSS (deferred loading) -->
+	<link rel="stylesheet" href="../assets/css/bootstrap-icons.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/lightcase.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/owl.carousel.min.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/owl.theme.default.min.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/animate.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/typed.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/magnific-popup.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/auth.css" media="print" onload="this.media='all'">
+	<noscript>
+		<link rel="stylesheet" href="../assets/css/bootstrap-icons.css">
+		<link rel="stylesheet" href="../assets/css/lightcase.css">
+		<link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+		<link rel="stylesheet" href="../assets/css/owl.theme.default.min.css">
+		<link rel="stylesheet" href="../assets/css/animate.css">
+		<link rel="stylesheet" href="../assets/css/typed.css">
+		<link rel="stylesheet" href="../assets/css/magnific-popup.css">
+		<link rel="stylesheet" href="../assets/css/auth.css">
+	</noscript>
+	<style>
+		/* Hero h1 text color */
+		.hero-caption h1 {
+			font-size: 60px;
+			color: #fff;
+			font-weight: 900;
+			line-height: 1.2;
+			margin-bottom: 20px;
+		}
+		/* Homepage specific animations */
+		.hero-icon-float {
+			animation: hero-icon-bounce 3s ease-in-out infinite;
+		}
+		@keyframes hero-icon-bounce {
+			0%, 100% { transform: translateY(0) rotate(0deg); }
+			25% { transform: translateY(-10px) rotate(5deg); }
+			75% { transform: translateY(-10px) rotate(-5deg); }
+		}
+		.step-number-animated {
+			display: inline-block;
+			animation: step-pulse 2s ease-in-out infinite;
+		}
+		@keyframes step-pulse {
+			0%, 100% { transform: scale(1); opacity: 1; }
+			50% { transform: scale(1.1); opacity: 0.8; }
+		}
+		.icon-spin-slow {
+			animation: spin-slow 8s linear infinite;
+		}
+		@keyframes spin-slow {
+			from { transform: rotate(0deg); }
+			to { transform: rotate(360deg); }
+		}
+		.card-float {
+			animation: card-hover 4s ease-in-out infinite;
+		}
+		.card-float-delay-1 { animation-delay: 0.5s; }
+		.card-float-delay-2 { animation-delay: 1s; }
+		.card-float-delay-3 { animation-delay: 1.5s; }
+		@keyframes card-hover {
+			0%, 100% { transform: translateY(0); }
+			50% { transform: translateY(-8px); }
+		}
+		/* Glowing button */
+		.btn-glow {
+			animation: btn-pulse-glow 2s ease-in-out infinite;
+		}
+		@keyframes btn-pulse-glow {
+			0%, 100% { box-shadow: 0 0 20px rgba(124, 58, 237, 0.4); }
+			50% { box-shadow: 0 0 40px rgba(124, 58, 237, 0.8), 0 0 60px rgba(124, 58, 237, 0.4); }
+		}
+		/* Typing cursor */
+		.typing-cursor {
+			display: inline-block;
+			width: 3px;
+			height: 1em;
+			background: #fff;
+			margin-left: 5px;
+			animation: cursor-blink 1s infinite;
+			vertical-align: middle;
+		}
+		@keyframes cursor-blink {
+			0%, 50% { opacity: 1; }
+			51%, 100% { opacity: 0; }
+		}
+		/* Gradient text animation */
+		.gradient-text-animated {
+			background: linear-gradient(270deg, #7C3AED, #A78BFA, #C4B5FD, #7C3AED);
+			background-size: 300% 300%;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			animation: gradient-flow 6s ease infinite;
+		}
+		@keyframes gradient-flow {
+			0% { background-position: 0% 50%; }
+			50% { background-position: 100% 50%; }
+			100% { background-position: 0% 50%; }
+		}
+		/* Orbiting particles */
+		.orbit-container {
+			position: absolute;
+			width: 400px;
+			height: 400px;
+			top: 50%;
+			right: -100px;
+			transform: translateY(-50%);
+		}
+		.orbit {
+			position: absolute;
+			border: 1px solid rgba(255,255,255,0.1);
+			border-radius: 50%;
+			animation: orbit-rotate 20s linear infinite;
+		}
+		.orbit-1 { width: 200px; height: 200px; top: 100px; left: 100px; }
+		.orbit-2 { width: 300px; height: 300px; top: 50px; left: 50px; animation-duration: 30s; animation-direction: reverse; }
+		.orbit-3 { width: 400px; height: 400px; top: 0; left: 0; animation-duration: 40s; }
+		@keyframes orbit-rotate {
+			from { transform: rotate(0deg); }
+			to { transform: rotate(360deg); }
+		}
+		.orbit-dot {
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			background: rgba(167, 139, 250, 0.8);
+			border-radius: 50%;
+			top: -5px;
+			left: 50%;
+			box-shadow: 0 0 20px rgba(167, 139, 250, 0.6);
+		}
+		/* Feature icon animations */
+		.feature-icon-animated {
+			transition: all 0.3s ease;
+		}
+		.feature-icon-animated:hover {
+			transform: scale(1.2) rotate(10deg);
+		}
+		/* Line drawing animation */
+		.line-draw {
+			stroke-dasharray: 1000;
+			stroke-dashoffset: 1000;
+			animation: draw-line 3s ease forwards infinite;
+		}
+		@keyframes draw-line {
+			0% { stroke-dashoffset: 1000; }
+			50% { stroke-dashoffset: 0; }
+			100% { stroke-dashoffset: -1000; }
+		}
+		/* Mobile alignment fixes */
+		@media (max-width: 767px) {
+			.hero-caption {
+				padding-top: 100px !important;
+				padding-bottom: 120px !important;
+				text-align: center;
+			}
+			.hero-caption h2 {
+				font-size: 28px;
+				line-height: 1.3;
+			}
+			.hero-caption p {
+				font-size: 16px;
+				padding: 0 15px;
+			}
+			.counter_item_h {
+				text-align: center;
+				padding: 20px 15px;
+			}
+			.section-headding h2 {
+				font-size: 26px;
+			}
+			.info-box-s1, .info-box-s2 {
+				text-align: center;
+			}
+			.analytics-toll-content {
+				text-align: center;
+				padding: 0 10px;
+			}
+			.analytics-toll-content ul li {
+				text-align: left;
+			}
+			.subscribe-content {
+				text-align: center;
+				padding: 0 15px;
+			}
+			.subscribe-content p {
+				font-size: 18px !important;
+			}
+			.floating-shapes {
+				display: none;
+			}
+			.footer .f-widgets-item {
+				text-align: center;
+			}
+			.footer .f-widgets-item ul {
+				padding-left: 0;
+			}
+			.col-lg-6.text-lg-end {
+				text-align: center !important;
+				margin-top: 20px;
+			}
+		}
+		@media (max-width: 991px) {
+			.orbit-container {
+				display: none !important;
+			}
+		}
+		/* Subscribe wave bg */
+		.subscribe-wave-bg {
+			background: linear-gradient(135deg, #5b21b6 0%, #7c3aed 50%, #8b5cf6 100%);
+			position: relative;
+			overflow: hidden;
+		}
+		.subscribe-wave-bg::before {
+			content: '';
+			position: absolute;
+			top: -50%;
+			left: -50%;
+			width: 200%;
+			height: 200%;
+			background: radial-gradient(ellipse at center, rgba(255,255,255,0.1) 0%, transparent 50%);
+			animation: rotate-bg 20s linear infinite;
+		}
+		@keyframes rotate-bg {
+			from { transform: rotate(0deg); }
+			to { transform: rotate(360deg); }
+		}
+		.subscribe-wave-bg .subscribe-content {
+			position: relative;
+			z-index: 2;
+		}
+	</style>
+
+	<!-- Structured Data - JSON-LD -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Organization",
+		"name": "Flyto2",
+		"alternateName": "Flyto",
+		"url": "https://flyto2.com",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://flyto2.com/assets/img/logo.png",
+			"width": 200,
+			"height": 60
+		},
+		"description": "Flyto2 is an enterprise workflow platform that combines UI-driven automation with human oversight. Build workflows with approval steps, validation checkpoints, and full audit trails.",
+		"foundingDate": "2024",
+		"sameAs": [
+			"https://github.com/flytohub",
+			"https://pypi.org/project/flyto/"
+		],
+		"contactPoint": [
+			{
+				"@type": "ContactPoint",
+				"email": "info@flyto2.com",
+				"contactType": "customer service",
+				"availableLanguage": ["English", "Chinese"]
+			},
+			{
+				"@type": "ContactPoint",
+				"email": "sales@flyto2.com",
+				"contactType": "sales",
+				"availableLanguage": ["English", "Chinese"]
+			}
+		],
+		"offers": {
+			"@type": "AggregateOffer",
+			"lowPrice": "0",
+			"highPrice": "299",
+			"priceCurrency": "USD",
+			"offerCount": "4"
+		}
+	}
+	</script>
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "WebSite",
+		"name": "Flyto2",
+		"url": "https://flyto2.com",
+		"potentialAction": {
+			"@type": "SearchAction",
+			"target": "https://flyto2.com/?q={search_term_string}",
+			"query-input": "required name=search_term_string"
+		}
+	}
+	</script>
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "SoftwareApplication",
+		"name": "Flyto2",
+		"operatingSystem": "Windows, macOS, Linux",
+		"applicationCategory": "BusinessApplication",
+		"description": "Enterprise workflow platform with UI-driven automation, human approval steps, and validation checkpoints. Pause, verify, and resume anytime.",
+		"offers": {
+			"@type": "Offer",
+			"price": "0",
+			"priceCurrency": "USD",
+			"description": "Free open source core version"
+		},
+		"author": {
+			"@type": "Organization",
+			"name": "Flyto2"
+		},
+		"downloadUrl": "https://flyto2.com/download.html",
+		"softwareVersion": "1.0",
+		"aggregateRating": {
+			"@type": "AggregateRating",
+			"ratingValue": "5",
+			"ratingCount": "1"
+		}
+	}
+	</script>
+</head>
+<body>
+	<!-- Skip Link for Accessibility -->
+	<a href="#main-content" class="skip-link">Skip to main content</a>
+
+	<!-- Preloader -->
+	<div id="preloader">
+		<div class="preloader">
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+	<!-- Start Header Area -->
+	<header class="header">
+		<div class="container">
+			<div class="row">
+				<!-- Logo -->
+				<div class="col-lg-3 align-self-center">
+					<div class="logo">
+						<a href="index.html">
+							<picture>
+								<source srcset="assets/img/white-logo.webp" type="image/webp">
+								<img src="../assets/img/white-logo.png" alt="Flyto2 - No-Code Automation Tool" width="90" height="79" fetchpriority="high">
+							</picture>
+						</a>
+					</div>
+					<div class="canvas_open">
+						<a href="javascript:void(0)" aria-label="Open menu" role="button">
+							<span></span>
+							<span></span>
+							<span></span>
+						</a>
+					</div>
+				</div>
+				<!-- Right -->
+				<div class="col-lg-9">
+					<!-- Menu -->
+					<div class="menu d-flex align-items-center justify-content-end">
+						<nav>
+							<ul>
+								<li><a href="index.html" data-i18n="landing.common.nav.home">Strona glowna</a></li>
+								<li class="nav-dropdown">
+									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" data-i18n="landing.common.nav.pricing">Cennik</span>
+									<div class="nav-dropdown-menu">
+										<a href="pricing.html" class="nav-dropdown-item"><i class="bi bi-tag"></i><span data-i18n="landing.common.nav.plansAndPricing">Plany i cennik</span></a>
+										<a href="buy-offline.html" class="nav-dropdown-item"><i class="bi bi-shield-lock"></i><span data-i18n="landing.common.nav.buyProLicense">Kup licencje Pro</span></a>
+									</div>
+								</li>
+								<li class="nav-dropdown">
+									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" data-i18n="landing.common.nav.download">Pobierz</span>
+									<div class="nav-dropdown-menu">
+										<a href="download.html" class="nav-dropdown-item"><i class="bi bi-terminal"></i><span data-i18n="landing.common.nav.flytoCli">Flyto Core (CLI)</span></a>
+										<a href="app.html" class="nav-dropdown-item"><i class="bi bi-window"></i><span data-i18n="landing.common.nav.desktopApp">Aplikacja desktopowa</span></a>
+										<a href="language-packs.html" class="nav-dropdown-item"><i class="bi bi-translate"></i><span data-i18n="landing.common.nav.languagePacks">Pakiety jezykowe</span></a>
+									</div>
+								</li>
+								<li class="nav-dropdown">
+									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" data-i18n="landing.common.nav.resources">Zasoby</span>
+									<div class="nav-dropdown-menu">
+										<a href="https://github.com/flytohub/flyto-core" class="nav-dropdown-item" target="_blank" rel="noopener noreferrer"><i class="bi bi-book"></i><span data-i18n="landing.common.nav.documentation">Dokumentacja</span></a>
+										<a href="faq.html" class="nav-dropdown-item"><i class="bi bi-question-circle"></i><span data-i18n="landing.common.nav.faq">FAQ</span></a>
+										<a href="contact.html" class="nav-dropdown-item"><i class="bi bi-envelope"></i><span data-i18n="landing.common.nav.contactUs">Skontaktuj sie z nami</span></a>
+									</div>
+								</li>
+							</ul>
+						</nav>
+						<!-- Auth -->						<div class="header-auth">
+							<!-- Not logged in -->
+							<button id="headerLoginBtn" class="btn-header-login">
+								<i class="bi bi-person"></i>
+								<span>Sign In</span>
+							</button>
+							<!-- Logged in (hidden by default) -->
+							<div id="headerUserDropdown" class="user-dropdown d-none">
+								<div class="user-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">
+									<div class="user-avatar" id="headerUserAvatar">U</div>
+									<span class="user-email" id="headerUserEmail"></span>
+									<i class="bi bi-chevron-down dropdown-arrow"></i>
+								</div>
+								<div class="user-dropdown-menu">
+									<div class="dropdown-header">
+										<div class="dropdown-header-email" id="dropdownUserEmail"></div>
+										<div class="dropdown-header-label">Flyto2 Account</div>
+									</div>
+									<div class="dropdown-menu-items">
+										<a href="buy-offline.html" class="dropdown-menu-item">
+											<i class="bi bi-key"></i>
+											My Licenses
+										</a>
+										<div class="dropdown-divider"></div>
+										<button class="dropdown-menu-item text-danger" id="btnSignOut">
+											<i class="bi bi-box-arrow-right"></i>
+											Sign Out
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- End Header Area -->
+	<!-- Start Mobile Menu Area -->
+	<div class="mobile-menu-area">
+		<div class="off_canvars_overlay"></div>
+		<div class="offcanvas_menu">
+			<div class="offcanvas_menu_wrapper">
+				<div class="canvas_close">
+					<a href="javascript:void(0)" aria-label="Close menu" role="button"><i class="fas fa-times"></i></a>
+				</div>
+				<div class="mobile-logo">
+					<a href="index.html">
+						<picture>
+							<source srcset="assets/img/logo.webp" type="image/webp">
+							<img src="../assets/img/logo.png" alt="Flyto2 - No-Code Automation Tool" width="90" height="79" />
+						</picture>
+					</a>
+				</div>
+				<div id="menu" class="text-left">
+					<ul class="offcanvas_main_menu">
+						<li class="active"><a href="index.html">Home</a></li>
+						<li><a href="pricing.html">Pricing</a></li>
+						<li><a href="download.html">Download</a></li>
+						<li><a href="app.html">Get App</a></li>
+						<li><a href="https://github.com/flytohub/flyto-core" target="_blank" rel="noopener noreferrer">Docs</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Start Hero Section -->
+	<main>
+	<section id="main-content" class="hero-area hero-wave-bg">
+		<!-- Floating shapes -->
+		<div class="floating-shapes">
+			<div class="floating-shape floating-shape-1"></div>
+			<div class="floating-shape floating-shape-2"></div>
+			<div class="floating-shape floating-shape-3"></div>
+		</div>
+		<!-- Orbiting particles -->
+		<div class="orbit-container d-none d-lg-block">
+			<div class="orbit orbit-1"><div class="orbit-dot"></div></div>
+			<div class="orbit orbit-2"><div class="orbit-dot"></div></div>
+			<div class="orbit orbit-3"><div class="orbit-dot"></div></div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="hero-caption pt-150 pb-200">
+						<h1 class="wow fadeInUp" data-wow-delay="0.1s">
+							<span class="gradient-text-animated" data-i18n="landing.index.hero.titleHighlight">Automatyzacja, ktora robi</span><br><span data-i18n="landing.index.hero.titleEnd">co mu pokazesz</span>
+						</h1>
+						<p class="wow fadeInUp" data-wow-delay="0.2s" data-i18n="landing.index.hero.description">Flyto2 to narzedzie automatyzacji, ktore obsluguje Twoj komputer jak czlowiek. Otwiera przegladarki, klika przyciski, wypelnia formularze, przesyla pliki. Robisz to raz, Flyto2 powtarza to na zawsze.</p>
+						<a class="button-1 btn-glow wow fadeInUp" data-wow-delay="0.3s" href="pricing.html" style="margin-top: 20px;">
+							<i class="fas fa-rocket" style="margin-right: 8px;"></i> <span data-i18n="landing.common.cta.getStartedFree">Zacznij za darmo</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wave-divider">
+			<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+				<path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+			</svg>
+		</div>
+	</section>
+	<!-- End Hero Section -->
+
+	<!-- Header Counter Area -->
+	<section class="h_counter_area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-10 offset-lg-1">
+					<div class="row h_counter_section">
+						<!-- Single -->
+						<div class="col-md-4 position-relative">
+							<div class="counter_item_h wow fadeInUp" data-wow-delay="0.1s">
+								<div class="title">
+									<div class="text-gradient" style="font-size: 2rem;"><i class="fas fa-mouse-pointer hero-icon-float"></i></div>
+								</div>
+								<h3 data-i18n="landing.index.counter.recordOnce">Nagraj raz</h3>
+								<p class="text-sm" data-i18n="landing.index.counter.recordOnceDesc">Pokaz Flyto2, jak pracujesz. Uczy sie obserwujac Twoje klikniecia i nacisniecialwy.</p>
+								<hr class="vertical dark">
+							</div>
+						</div>
+						<!-- Single -->
+						<div class="col-md-4 position-relative">
+							<div class="counter_item_h wow fadeInUp" data-wow-delay="0.2s">
+								<div class="title">
+									<div class="text-gradient" style="font-size: 2rem;"><i class="fas fa-redo icon-spin-slow"></i></div>
+								</div>
+								<h3 data-i18n="landing.index.counter.replayForever">Odtwarzaj na zawsze</h3>
+								<p class="text-sm" data-i18n="landing.index.counter.replayForeverDesc">Uruchom ponownie z innymi danymi. Przetwarzaj partie setek elementow.</p>
+								<hr class="vertical dark">
+							</div>
+						</div>
+						<!-- Single -->
+						<div class="col-md-4">
+							<div class="counter_item_h wow fadeInUp" data-wow-delay="0.3s">
+								<div class="title">
+									<div class="text-gradient" style="font-size: 2rem;"><i class="fas fa-shield-alt animate-pulse-glow" style="border-radius: 50%;"></i></div>
+								</div>
+								<h3 data-i18n="landing.index.counter.stayInControl">Zachowaj kontrole</h3>
+								<p class="text-sm" data-i18n="landing.index.counter.stayInControlDesc">Wstrzymuj, weryfikuj i wznawiaj w dowolnym momencie. Nigdy nie martw sie o niekontrolowana automatyzacje.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Header Counter Area -->
+
+	<!-- Start Why Flyto2 Section -->
+	<section class="section-padding">
+		<div class="container">
+			<div class="row mb-40">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="section-headding wow fadeInUp">
+						<h2><span data-i18n="landing.index.why.title">Dlaczego</span> <span class="gradient-text-animated">Flyto2</span>?</h2>
+						<p data-i18n="landing.index.why.subtitle">Wiele zadan nie jest trudnych, sa po prostu nuzace.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<!-- Single -->
+				<div class="col-lg-4 col-sm-6 mb-30">
+					<div class="info-box-s1 card-float wow fadeInUp" data-wow-delay="0.1s">
+						<div class="icon">
+							<i class="fas fa-copy feature-icon-animated" style="font-size: 40px; color: #7C3AED;"></i>
+						</div>
+						<div class="content">
+							<h3 class="text-gradient">Copy-Paste Hell</h3>
+							<p>Logging into dashboards, copying data from one system to another, day after day.</p>
+						</div>
+					</div>
+				</div>
+				<!-- Single -->
+				<div class="col-lg-4 col-sm-6 mb-30">
+					<div class="info-box-s1 card-float card-float-delay-1 wow fadeInUp" data-wow-delay="0.2s">
+						<div class="icon">
+							<i class="fas fa-ban feature-icon-animated" style="font-size: 40px; color: #7C3AED;"></i>
+						</div>
+						<div class="content">
+							<h3 class="text-gradient">No Batch Options</h3>
+							<p>Your ERP or admin panel only lets you process one item at a time. No bulk actions.</p>
+						</div>
+					</div>
+				</div>
+				<!-- Single -->
+				<div class="col-lg-4 col-sm-6 mb-30">
+					<div class="info-box-s1 card-float card-float-delay-2 wow fadeInUp" data-wow-delay="0.3s">
+						<div class="icon">
+							<i class="fas fa-plug feature-icon-animated" style="font-size: 40px; color: #7C3AED;"></i>
+						</div>
+						<div class="content">
+							<h3 class="text-gradient">No API Available</h3>
+							<p>The system has no API. Your only option is clicking through the browser manually.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row mt-30">
+				<div class="col-lg-8 offset-lg-2 text-center wow fadeInUp" data-wow-delay="0.4s">
+					<p style="font-size: 18px;">You know the process. You know it shouldn't take human effort.<br><strong>Flyto2 is built for exactly this.</strong></p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Why Flyto2 Section -->
+
+	<!-- Start What Makes Different Section -->
+	<section class="section-padding section-bg" style="position: relative; overflow: hidden;">
+		<div class="container" style="position: relative; z-index: 2;">
+			<div class="row mb-50">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="section-headding wow fadeInUp">
+						<h2>What Makes Flyto2 <span class="gradient-text-animated">Different</span>?</h2>
+						<p style="font-size: 18px; margin-top: 15px;">Most automation tools only have two states: <strong>not running</strong> or <strong>finished</strong>.</p>
+					</div>
+				</div>
+			</div>
+			<!-- Quote Box -->
+			<div class="row mb-50">
+				<div class="col-lg-10 offset-lg-1">
+					<div class="wow fadeInUp" data-wow-delay="0.1s" style="background: linear-gradient(135deg, #1e0a3c 0%, #4c1d95 100%); border-radius: 24px; padding: 40px 50px; text-align: center; position: relative; overflow: hidden;">
+						<div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: rgba(167, 139, 250, 0.1); border-radius: 50%;"></div>
+						<div style="position: absolute; bottom: -30px; left: -30px; width: 100px; height: 100px; background: rgba(124, 58, 237, 0.15); border-radius: 50%;"></div>
+						<p style="font-size: 24px; color: #fff; font-weight: 600; margin: 0; position: relative; z-index: 2;">
+							<i class="fas fa-quote-left" style="color: #a78bfa; margin-right: 15px; opacity: 0.6;"></i>
+							Before, during, and when errors occur — you can always <span style="color: #a78bfa;">pause and verify</span>.
+							<i class="fas fa-quote-right" style="color: #a78bfa; margin-left: 15px; opacity: 0.6;"></i>
+						</p>
+					</div>
+				</div>
+			</div>
+			<!-- Feature Cards -->
+			<div class="row mb-40">
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="wow fadeInUp" data-wow-delay="0.1s" style="background: #fff; border-radius: 20px; padding: 35px 30px; height: 100%; border: 1px solid rgba(124, 58, 237, 0.1); transition: all 0.3s; box-shadow: 0 10px 40px rgba(124, 58, 237, 0.05);">
+						<div style="width: 60px; height: 60px; background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
+							<i class="fas fa-play" style="color: #fff; font-size: 24px;"></i>
+						</div>
+						<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 15px; color: #1e0a3c;">Run 1 Item First</h3>
+						<p style="color: #6b7280; line-height: 1.7; margin: 0;">Check if it's correct before processing more. Test safely.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="wow fadeInUp" data-wow-delay="0.2s" style="background: #fff; border-radius: 20px; padding: 35px 30px; height: 100%; border: 1px solid rgba(124, 58, 237, 0.1); transition: all 0.3s; box-shadow: 0 10px 40px rgba(124, 58, 237, 0.05);">
+						<div style="width: 60px; height: 60px; background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
+							<i class="fas fa-layer-group" style="color: #fff; font-size: 24px;"></i>
+						</div>
+						<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 15px; color: #1e0a3c;">Then Run a Batch</h3>
+						<p style="color: #6b7280; line-height: 1.7; margin: 0;">Validate with a larger batch. Catch edge cases early.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="wow fadeInUp" data-wow-delay="0.3s" style="background: #fff; border-radius: 20px; padding: 35px 30px; height: 100%; border: 1px solid rgba(124, 58, 237, 0.1); transition: all 0.3s; box-shadow: 0 10px 40px rgba(124, 58, 237, 0.05);">
+						<div style="width: 60px; height: 60px; background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
+							<i class="fas fa-rocket" style="color: #fff; font-size: 24px;"></i>
+						</div>
+						<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 15px; color: #1e0a3c;">Run Everything</h3>
+						<p style="color: #6b7280; line-height: 1.7; margin: 0;">Once confirmed, process the full batch with confidence.</p>
+					</div>
+				</div>
+			</div>
+			<!-- Error Handling -->
+			<div class="row">
+				<div class="col-lg-10 offset-lg-1">
+					<div class="wow fadeInUp" data-wow-delay="0.2s" style="background: linear-gradient(145deg, #fff 0%, #f8f9ff 100%); border-radius: 20px; padding: 40px; border: 1px solid rgba(124, 58, 237, 0.1);">
+						<h3 style="text-align: center; font-size: 22px; font-weight: 700; margin-bottom: 30px; color: #1e0a3c;">If something goes wrong:</h3>
+						<div class="row">
+							<div class="col-md-4 text-center mb-20">
+								<div style="width: 70px; height: 70px; background: linear-gradient(135deg, #ef4444 0%, #f87171 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+									<i class="fas fa-stop" style="color: #fff; font-size: 28px;"></i>
+								</div>
+								<h4 style="font-weight: 700; color: #1e0a3c;">Stop Immediately</h4>
+								<p style="color: #6b7280; font-size: 14px;">Halt execution instantly</p>
+							</div>
+							<div class="col-md-4 text-center mb-20">
+								<div style="width: 70px; height: 70px; background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+									<i class="fas fa-undo-alt" style="color: #fff; font-size: 28px;"></i>
+								</div>
+								<h4 style="font-weight: 700; color: #1e0a3c;">Roll Back</h4>
+								<p style="color: #6b7280; font-size: 14px;">Revert if needed</p>
+							</div>
+							<div class="col-md-4 text-center mb-20">
+								<div style="width: 70px; height: 70px; background: linear-gradient(135deg, #10b981 0%, #34d399 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+									<i class="fas fa-play" style="color: #fff; font-size: 28px;"></i>
+								</div>
+								<h4 style="font-weight: 700; color: #1e0a3c;">Resume</h4>
+								<p style="color: #6b7280; font-size: 14px;">Continue from where it stopped</p>
+							</div>
+						</div>
+						<p style="text-align: center; margin-top: 20px; font-size: 18px; font-weight: 600; color: #7c3aed;">Automation doesn't have to be "all or nothing."</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End What Makes Different Section -->
+
+	<!-- Start No Coding Section -->
+	<section class="section-padding" style="background: linear-gradient(180deg, #fff 0%, #f8f9ff 100%);">
+		<div class="container">
+			<div class="row mb-50">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="section-headding wow fadeInUp">
+						<h2>No <span class="gradient-text-animated">Coding</span> Required</h2>
+						<p style="font-size: 18px; margin-top: 15px;">If you can use a browser, you can use Flyto2.</p>
+					</div>
+				</div>
+			</div>
+			<!-- Timeline Steps -->
+			<div class="row">
+				<div class="col-lg-10 offset-lg-1">
+					<div class="row">
+						<!-- Step 1 -->
+						<div class="col-lg-3 col-md-6 mb-30">
+							<div class="wow fadeInUp" data-wow-delay="0.1s" style="text-align: center; position: relative;">
+								<div style="width: 100px; height: 100px; background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; box-shadow: 0 15px 40px rgba(124, 58, 237, 0.3); position: relative;">
+									<i class="fas fa-globe" style="font-size: 40px; color: #fff;"></i>
+									<div style="position: absolute; top: -5px; right: -5px; width: 35px; height: 35px; background: #1e0a3c; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; color: #fff; font-size: 16px; border: 3px solid #fff;">1</div>
+								</div>
+								<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: #1e0a3c;">Open Browser</h3>
+								<p style="color: #6b7280; font-size: 15px; line-height: 1.6;">Start Flyto2 and begin recording your workflow</p>
+							</div>
+						</div>
+						<!-- Step 2 -->
+						<div class="col-lg-3 col-md-6 mb-30">
+							<div class="wow fadeInUp" data-wow-delay="0.2s" style="text-align: center; position: relative;">
+								<div style="width: 100px; height: 100px; background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; box-shadow: 0 15px 40px rgba(124, 58, 237, 0.3); position: relative;">
+									<i class="fas fa-mouse-pointer" style="font-size: 40px; color: #fff;"></i>
+									<div style="position: absolute; top: -5px; right: -5px; width: 35px; height: 35px; background: #1e0a3c; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; color: #fff; font-size: 16px; border: 3px solid #fff;">2</div>
+								</div>
+								<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: #1e0a3c;">Do Your Task</h3>
+								<p style="color: #6b7280; font-size: 15px; line-height: 1.6;">Work as you normally would - click, type, navigate</p>
+							</div>
+						</div>
+						<!-- Step 3 -->
+						<div class="col-lg-3 col-md-6 mb-30">
+							<div class="wow fadeInUp" data-wow-delay="0.3s" style="text-align: center; position: relative;">
+								<div style="width: 100px; height: 100px; background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; box-shadow: 0 15px 40px rgba(124, 58, 237, 0.3); position: relative;">
+									<i class="fas fa-save" style="font-size: 40px; color: #fff;"></i>
+									<div style="position: absolute; top: -5px; right: -5px; width: 35px; height: 35px; background: #1e0a3c; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; color: #fff; font-size: 16px; border: 3px solid #fff;">3</div>
+								</div>
+								<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: #1e0a3c;">Save It</h3>
+								<p style="color: #6b7280; font-size: 15px; line-height: 1.6;">Flyto2 captures and remembers every step</p>
+							</div>
+						</div>
+						<!-- Step 4 -->
+						<div class="col-lg-3 col-md-6 mb-30">
+							<div class="wow fadeInUp" data-wow-delay="0.4s" style="text-align: center; position: relative;">
+								<div style="width: 100px; height: 100px; background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; box-shadow: 0 15px 40px rgba(124, 58, 237, 0.3); position: relative;">
+									<i class="fas fa-sync-alt" style="font-size: 40px; color: #fff;"></i>
+									<div style="position: absolute; top: -5px; right: -5px; width: 35px; height: 35px; background: #1e0a3c; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; color: #fff; font-size: 16px; border: 3px solid #fff;">4</div>
+								</div>
+								<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: #1e0a3c;">Replay Anytime</h3>
+								<p style="color: #6b7280; font-size: 15px; line-height: 1.6;">Run it again, batch process, or schedule it</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Bottom CTA -->
+			<div class="row mt-40">
+				<div class="col-lg-8 offset-lg-2">
+					<div class="wow fadeInUp" data-wow-delay="0.5s" style="background: linear-gradient(135deg, #1e0a3c 0%, #4c1d95 100%); border-radius: 20px; padding: 35px 40px; text-align: center;">
+						<p style="font-size: 20px; color: #fff; margin: 0; font-weight: 600;">
+							<i class="fas fa-code" style="margin-right: 12px; opacity: 0.5;"></i>
+							You don't need to know code. You just need to know <span style="color: #a78bfa;">your job</span>.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End No Coding Section -->
+
+	<!-- Start Safety Section -->
+	<section class="section-padding section-bg">
+		<div class="container">
+			<div class="row mb-40">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="section-headding wow fadeInUp">
+						<h2>Built for People Who <span class="gradient-text-animated">Worry</span> About Mistakes</h2>
+						<p>Flyto2 is designed for those who need to be careful.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-6 col-md-6 mb-30">
+					<div class="info-box-s2 card-float wow fadeInUp" data-wow-delay="0.1s">
+						<div class="icon">
+							<i class="fas fa-eye feature-icon-animated" style="font-size: 30px; color: #7C3AED;"></i>
+						</div>
+						<div class="content">
+							<h3>Step-by-Step Verification</h3>
+							<p>See exactly what happens at each step before proceeding.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 mb-30">
+					<div class="info-box-s2 card-float card-float-delay-1 wow fadeInUp" data-wow-delay="0.2s">
+						<div class="icon">
+							<i class="fas fa-flask feature-icon-animated" style="font-size: 30px; color: #7C3AED;"></i>
+						</div>
+						<div class="content">
+							<h3>Trial Mode</h3>
+							<p>Test with a few items first before running the full batch.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 mb-30">
+					<div class="info-box-s2 card-float card-float-delay-2 wow fadeInUp" data-wow-delay="0.3s">
+						<div class="icon">
+							<i class="fas fa-history icon-spin-slow" style="font-size: 30px; color: #7C3AED;"></i>
+						</div>
+						<div class="content">
+							<h3>Rollback & Resume</h3>
+							<p>Errors don't mean starting over. Go back and continue.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 mb-30">
+					<div class="info-box-s2 card-float card-float-delay-3 wow fadeInUp" data-wow-delay="0.4s">
+						<div class="icon">
+							<i class="fas fa-camera feature-icon-animated" style="font-size: 30px; color: #7C3AED;"></i>
+						</div>
+						<div class="content">
+							<h3>Full Audit Trail</h3>
+							<p>Screenshots and logs for everything. Know what happened, when, and by whom.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Safety Section -->
+
+	<!-- Start CTA Section -->
+	<section class="hero-wave-bg" style="padding: 80px 0;">
+		<div class="container" style="position: relative; z-index: 2;">
+			<div class="row">
+				<div class="col-lg-6 wow fadeInLeft">
+					<h3 style="color: rgba(255,255,255,0.8); margin-bottom: 10px;">Not Another Zapier</h3>
+					<h2 style="color: #fff; font-size: 32px;">When there's no API, only a browser — <span class="gradient-text-animated">Flyto2</span> works.</h2>
+				</div>
+				<div class="col-lg-6 align-self-center text-lg-end wow fadeInRight">
+					<a class="button-2 btn-glow" href="pricing.html" style="margin-top: 20px;">View Pricing</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End CTA Section -->
+
+	<!-- Start Who Is It For Section -->
+	<section class="section-padding">
+		<div class="container">
+			<div class="row mb-40">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="section-headding wow fadeInUp">
+						<h2>Who Is <span class="gradient-text-animated">Flyto2</span> For?</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="info-box-s1 text-center card-float wow fadeInUp" data-wow-delay="0.1s">
+						<div class="icon">
+							<i class="fas fa-user-tie feature-icon-animated" style="font-size: 40px; color: #7C3AED;"></i>
+						</div>
+						<div class="content">
+							<h3 class="text-gradient">Administrative Staff</h3>
+							<p>Data entry, backend operations, report generation</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="info-box-s1 text-center card-float card-float-delay-1 wow fadeInUp" data-wow-delay="0.2s">
+						<div class="icon">
+							<i class="fas fa-cogs icon-spin-slow" style="font-size: 40px; color: #7C3AED;"></i>
+						</div>
+						<div class="content">
+							<h3 class="text-gradient">Operations Teams</h3>
+							<p>ERP, orders, invoices, inventory management</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="info-box-s1 text-center card-float card-float-delay-2 wow fadeInUp" data-wow-delay="0.3s">
+						<div class="icon">
+							<i class="fas fa-bug feature-icon-animated" style="font-size: 40px; color: #7C3AED;"></i>
+						</div>
+						<div class="content">
+							<h3 class="text-gradient">QA & Testing</h3>
+							<p>Repetitive test flows, regression testing</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="info-box-s1 text-center card-float card-float-delay-3 wow fadeInUp" data-wow-delay="0.4s">
+						<div class="icon">
+							<i class="fas fa-rocket hero-icon-float" style="font-size: 40px; color: #7C3AED;"></i>
+						</div>
+						<div class="content">
+							<h3 class="text-gradient">Small Teams & Startups</h3>
+							<p>Automate without hiring engineers</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="info-box-s1 text-center card-float wow fadeInUp" data-wow-delay="0.5s">
+						<div class="icon">
+							<i class="fas fa-building feature-icon-animated" style="font-size: 40px; color: #7C3AED;"></i>
+						</div>
+						<div class="content">
+							<h3 class="text-gradient">Enterprises</h3>
+							<p>Need offline deployment, data stays internal</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="info-box-s1 text-center card-float card-float-delay-1 wow fadeInUp" data-wow-delay="0.6s">
+						<div class="icon">
+							<i class="fas fa-lock animate-pulse-glow" style="font-size: 40px; color: #7C3AED; border-radius: 50%;"></i>
+						</div>
+						<div class="content">
+							<h3 class="text-gradient">Regulated Industries</h3>
+							<p>Finance, healthcare, government — full control required</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Who Is It For Section -->
+
+	<!-- Start Offline Section -->
+	<section class="section-padding section-bg" style="position: relative; overflow: hidden;">
+		<div class="floating-shapes" style="opacity: 0.05;">
+			<div class="floating-shape floating-shape-2"></div>
+			<div class="floating-shape floating-shape-3"></div>
+		</div>
+		<div class="container" style="position: relative; z-index: 2;">
+			<div class="row">
+				<div class="col-lg-6 align-self-center">
+					<div class="analytics-toll-content">
+						<h2 class="text-gradient wow fadeInLeft">Works Completely Offline</h2>
+						<p class="contetn wow fadeInLeft" data-wow-delay="0.1s">This is one of Flyto2's biggest strengths.</p>
+						<div class="row mt-30">
+							<div class="col-sm-6 mb-30">
+								<div class="info-box-s2 card-float wow fadeInUp" data-wow-delay="0.2s">
+									<div class="icon">
+										<i class="fas fa-plane feature-icon-animated" style="font-size: 24px; color: #7C3AED;"></i>
+									</div>
+									<div class="content">
+										<h3>No Internet Required</h3>
+										<p>Run in air-gapped environments</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 mb-30">
+								<div class="info-box-s2 card-float card-float-delay-1 wow fadeInUp" data-wow-delay="0.3s">
+									<div class="icon">
+										<i class="fas fa-server feature-icon-animated" style="font-size: 24px; color: #7C3AED;"></i>
+									</div>
+									<div class="content">
+										<h3>On Your Infrastructure</h3>
+										<p>Deploy on your own servers</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 mb-30">
+								<div class="info-box-s2 card-float card-float-delay-2 wow fadeInUp" data-wow-delay="0.4s">
+									<div class="icon">
+										<i class="fas fa-database feature-icon-animated" style="font-size: 24px; color: #7C3AED;"></i>
+									</div>
+									<div class="content">
+										<h3>Data Stays Internal</h3>
+										<p>Nothing leaves your network</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 mb-30">
+								<div class="info-box-s2 card-float card-float-delay-3 wow fadeInUp" data-wow-delay="0.5s">
+									<div class="icon">
+										<i class="fas fa-key hero-icon-float" style="font-size: 24px; color: #7C3AED;"></i>
+									</div>
+									<div class="content">
+										<h3>Offline Licensing</h3>
+										<p>No phone-home requirements</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<a class="button-1 btn-glow wow fadeInUp" data-wow-delay="0.6s" href="pricing.html">View Offline Plans</a>
+					</div>
+				</div>
+				<div class="col-lg-6 text-center align-self-center">
+					<div class="wow fadeInRight" data-wow-delay="0.3s">
+						<i class="fas fa-shield-alt animate-float-slow" style="font-size: 200px; color: #7C3AED; opacity: 0.3;"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Offline Section -->
+
+	<!-- Start Philosophy Section -->
+	<section class="section-padding">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<h2 class="wow fadeInUp" style="margin-bottom: 30px;">Flyto2 Doesn't <span class="gradient-text-animated">Replace</span> You</h2>
+					<p class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 18px; margin-bottom: 20px;">Flyto2 isn't about "letting the robot run wild."</p>
+					<p class="wow fadeInUp" data-wow-delay="0.2s" style="font-size: 18px; margin-bottom: 30px;">Its role is simple:</p>
+					<div class="wow fadeInUp card-float" data-wow-delay="0.3s" style="background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%); padding: 40px; border-radius: 15px; border-left: 4px solid #7C3AED; box-shadow: 0 10px 40px rgba(124,58,237,0.1);">
+						<p style="font-size: 20px; margin: 0;"><strong>You decide. The computer executes. Problems stop immediately.</strong></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Philosophy Section -->
+
+	<!-- Start Final CTA Section -->
+	<section class="subscribe-area subscribe-wave-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="subscribe-content wow fadeInUp">
+						<h2>Think of Flyto2 as:</h2>
+						<p style="font-size: 24px; font-style: italic;">"An automation tool that follows your demonstration,<br>but never goes rogue."<span class="typing-cursor"></span></p>
+						<a class="button-1 btn-glow" href="pricing.html" style="margin-top: 30px; display: inline-block;">
+							<i class="fas fa-rocket" style="margin-right: 8px;"></i> Get Started Free
+						</a>
+						<ul style="margin-top: 30px;">
+							<li><i class="fas fa-check"></i> No credit card required</li>
+							<li><i class="fas fa-check"></i> Works offline</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Final CTA Section -->
+
+	<!-- Start Footer Area -->
+	</main>
+	<footer class="footer">
+		<div class="footer-top pt-70 pb-20">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-sm-6 mb-30">
+						<div class="f-widgets-item">
+							<div class="f-logo">
+								<a href="index.html">
+									<picture>
+										<source srcset="assets/img/logo.webp" type="image/webp">
+										<picture>
+										<source srcset="assets/img/logo.webp" type="image/webp">
+										<img src="../assets/img/logo.png" alt="Flyto2 - No-Code Automation Tool" width="90" height="79" loading="lazy">
+									</picture>
+									</picture>
+								</a>
+							</div>
+							<p data-i18n="landing.common.footer.tagline">Automatyzacja, ktora dziala jak Ty. Nagraj raz, odtwarzaj na zawsze.</p>
+							<ul>
+								<li><a href="mailto:info@flyto2.com"><i class="bi bi-envelope-fill"></i> info@flyto2.com</a></li>
+								<li><a href="https://github.com/flytohub" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> github.com/flytohub</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6 mb-30">
+						<div class="f-widgets-item">
+							<h3 data-i18n="landing.common.footer.product">Produkt</h3>
+							<ul>
+								<li><a href="pricing.html" data-i18n="landing.common.nav.pricing">Cennik</a></li>
+								<li><a href="download.html" data-i18n="landing.common.nav.download">Pobierz</a></li>
+								<li><a href="https://github.com/flytohub/flyto-core/releases" data-i18n="landing.common.footer.changelog" target="_blank" rel="noopener noreferrer">Historia zmian</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6 mb-30">
+						<div class="f-widgets-item">
+							<h3 data-i18n="landing.common.nav.resources">Zasoby</h3>
+							<ul>
+								<li><a href="https://github.com/flytohub/flyto-core" data-i18n="landing.common.nav.documentation" target="_blank" rel="noopener noreferrer">Dokumentacja</a></li>
+								<li><a href="faq.html" data-i18n="landing.common.nav.faq">FAQ</a></li>
+								<li><a href="contact.html" data-i18n="landing.common.footer.contact">Kontakt</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6 mb-30">
+						<div class="f-widgets-item">
+							<h3 data-i18n="landing.common.footer.openSource">Open Source</h3>
+							<ul>
+								<li><a href="https://github.com/flytohub/flyto-core" target="_blank" rel="noopener noreferrer">flyto-core</a></li>
+								<li><a href="https://github.com/flytohub/flyto-core/blob/main/CONTRIBUTING.md" data-i18n="landing.common.footer.contributing" target="_blank" rel="noopener noreferrer">Wspolpraca</a></li>
+								<li><a href="https://github.com/flytohub/flyto-core/blob/main/LICENSE" data-i18n="landing.common.footer.license" target="_blank" rel="noopener noreferrer">Licencja</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom pt-30 pb-30">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 align-self-center">
+						<div class="copy-f-text">
+							<p data-i18n="landing.common.footer.copyright">Copyright ©2025 Flyto2. Wszelkie prawa zastrzezone</p>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="footer_social">
+							<ul>
+								<li><a href="https://github.com/flytohub" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+										<li><a href="https://www.youtube.com/channel/UCZ9OOqx4RM3Jjy1annWtsRA" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- End Footer Area -->
+
+	<div class="scroll-area">
+		<i class="bi bi-arrow-up"></i>
+	</div>
+
+	<!-- Critical JS (render-blocking) -->
+	<script src="../assets/js/modernizr.min.js"></script>
+	<script src="../assets/js/jquery-3.6.0.min.js"></script>
+	<script src="../assets/js/popper.min.js" defer></script>
+	<script src="../assets/js/bootstrap.min.js" defer></script>
+
+	<!-- Non-critical JS (deferred) -->
+	<script src="../assets/js/owl.carousel.min.js" defer></script>
+	<script src="../assets/js/jquery.magnific-popup.min.js" defer></script>
+	<script src="../assets/js/mixitup.min.js" defer></script>
+	<script src="../assets/js/wow.min.js" defer></script>
+	<script src="../assets/js/lightcase.js" defer></script>
+	<script src="../assets/js/jquery.waypoints.min.js" defer></script>
+	<script src="../assets/js/jquery.counterup.min.js" defer></script>
+	<script src="../assets/js/typed.js" defer></script>
+	<script src="../assets/js/script.js" defer></script>
+	<script src="../assets/js/mobile-menu.js" defer></script>
+	<script src="../assets/js/ajax-form.js" defer></script>
+
+	<!-- Firebase SDK (deferred) -->
+	<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js" defer></script>
+	<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js" defer></script>
+	<!-- Auth -->
+	<script src="../assets/js/auth.js" defer></script>
+	<script>
+		// Update dropdown email when auth state changes
+		window.addEventListener('authStateChanged', (e) => {
+			const user = e.detail.user;
+			const dropdownEmail = document.getElementById('dropdownUserEmail');
+			if (dropdownEmail && user) {
+				dropdownEmail.textContent = user.email;
+			}
+		});
+
+		// Close user dropdown when clicking outside
+		document.addEventListener('click', (e) => {
+			const userDropdown = document.getElementById('headerUserDropdown');
+			if (userDropdown && !userDropdown.contains(e.target)) {
+				userDropdown.classList.remove('show');
+			}
+		});
+	</script>
+</body>
+</html>

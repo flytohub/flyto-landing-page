@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html class="no-js" lang="vi">
+<head>
+	<!-- Google Analytics (GA4) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFSSQK3KW"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-8XFSSQK3KW');
+	</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Preconnect to critical origins -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+	<link rel="dns-prefetch" href="https://www.gstatic.com">
+	<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
+	<!-- Google Fonts (moved from CSS @import for better performance) -->
+	<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" media="print" onload="this.media='all'">
+	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"></noscript>
+	<title>Trường hợp Sử dụng Flyto2 - Ví dụ Tự động hóa Thực tế</title>
+	<meta name="description" content="Khám phá cách các doanh nghiệp sử dụng Flyto2 để tự động hóa quy trình. Ví dụ thực tế từ tài chính, nhân sự, vận hành và hơn thế nữa.">
+
+	<!-- Content Security Policy -->
+	<meta http-equiv="Content-Security-Policy" content="
+		default-src 'self';
+		script-src 'self' 'unsafe-inline' https://www.gstatic.com https://cdn.jsdelivr.net https://apis.google.com https://www.googletagmanager.com;
+		style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com;
+		font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net;
+		img-src 'self' data: https:;
+		connect-src 'self' https://www.gstatic.com https://cdn.jsdelivr.net https://*.cloudfunctions.net https://*.firebaseio.com https://www.google-analytics.com https://www.googletagmanager.com;
+		frame-src https://accounts.google.com https://*.firebaseapp.com;
+	\">
+
+	<!-- Security Headers -->
+	<meta http-equiv="X-Content-Type-Options" content="nosniff">
+	<meta name="referrer" content="strict-origin-when-cross-origin">
+	<meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+
+	<!-- SEO Meta Tags -->
+	<link rel="canonical" href="https://flyto2.com/vi/use-cases.html">
+	<link rel="alternate" hreflang="en" href="https://flyto2.com/use-cases.html" />
+	<link rel="alternate" hreflang="de" href="https://flyto2.com/de/use-cases.html" />
+	<link rel="alternate" hreflang="es" href="https://flyto2.com/es/use-cases.html" />
+	<link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/use-cases.html" />
+	<link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/use-cases.html" />
+	<link rel="alternate" hreflang="id" href="https://flyto2.com/id/use-cases.html" />
+	<link rel="alternate" hreflang="it" href="https://flyto2.com/it/use-cases.html" />
+	<link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/use-cases.html" />
+	<link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/use-cases.html" />
+	<link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/use-cases.html" />
+	<link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/use-cases.html" />
+	<link rel="alternate" hreflang="th" href="https://flyto2.com/th/use-cases.html" />
+	<link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/use-cases.html" />
+	<link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/use-cases.html" />
+	<link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/use-cases.html" />
+	<link rel="alternate" hreflang="x-default" href="https://flyto2.com/use-cases.html" />
+	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+	<meta name="keywords" content="trường hợp sử dụng tự động hóa, ví dụ quy trình, tự động hóa doanh nghiệp, ví dụ RPA">
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://flyto2.com/vi/use-cases.html">
+	<meta property="og:title" content="Trường hợp Sử dụng Flyto2 - Ví dụ Tự động hóa Thực tế">
+	<meta property="og:description" content="Khám phá cách các doanh nghiệp sử dụng Flyto2 để tự động hóa quy trình. Ví dụ thực tế từ tài chính, nhân sự, vận hành và hơn thế nữa.">
+	<meta property="og:image" content="https://flyto2.com/assets/img/og-image.png">
+	<meta property="og:site_name" content="Flyto2">
+	<meta property="og:locale" content="vi_VN">
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@flyto2">
+	<meta name="twitter:title" content="Trường hợp Sử dụng Flyto2 - Ví dụ Tự động hóa Thực tế">
+	<meta name="twitter:description" content="Khám phá cách các doanh nghiệp sử dụng Flyto2 để tự động hóa quy trình. Ví dụ thực tế từ tài chính, nhân sự, vận hành và hơn thế nữa.">
+	<meta name="twitter:image" content="https://flyto2.com/assets/img/og-image.png">
+	<meta name="twitter:image:alt" content="Flyto2 - No-Code Automation Platform">
+
+	<link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="../assets/img/icon.png" type="image/png" sizes="32x32">
+	<link rel="apple-touch-icon" href="../assets/img/icon.png" sizes="180x180">
+
+	<!-- Critical CSS (render-blocking) -->
+	<link rel="stylesheet" href="../assets/css/normalize.css">
+	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../assets/css/fontawesome.all.min.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="../assets/css/responsive.css">
+
+	<!-- Non-critical CSS (deferred loading) -->
+	<link rel="stylesheet" href="../assets/css/bootstrap-icons.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/lightcase.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/owl.carousel.min.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/owl.theme.default.min.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/animate.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/typed.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/magnific-popup.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/auth.css" media="print" onload="this.media='all'">
+	<noscript>
+		<link rel="stylesheet" href="../assets/css/bootstrap-icons.css">
+		<link rel="stylesheet" href="../assets/css/lightcase.css">
+		<link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+		<link rel="stylesheet" href="../assets/css/owl.theme.default.min.css">
+		<link rel="stylesheet" href="../assets/css/animate.css">
+		<link rel="stylesheet" href="../assets/css/typed.css">
+		<link rel="stylesheet" href="../assets/css/magnific-popup.css">
+		<link rel="stylesheet" href="../assets/css/auth.css">
+	</noscript>
+	<style>
+		.use-cases-hero {
+			background: linear-gradient(135deg, #0f0524 0%, #1e0a3c 20%, #2d1b4e 50%, #4c1d95 80%, #5b21b6 100%);
+			position: relative;
+			overflow: hidden;
+			min-height: 400px;
+		}
+		.use-cases-hero::before {
+			content: '';
+			position: absolute;
+			top: 0; left: 0; right: 0; bottom: 0;
+			background:
+				radial-gradient(circle at 20% 80%, rgba(124, 58, 237, 0.3) 0%, transparent 50%),
+				radial-gradient(circle at 80% 20%, rgba(167, 139, 250, 0.2) 0%, transparent 50%);
+		}
+		.gradient-text {
+			background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+		}
+		.use-case-card {
+			background: #fff;
+			border-radius: 24px;
+			overflow: hidden;
+			box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+			transition: all 0.3s;
+			height: 100%;
+		}
+		.use-case-card:hover {
+			transform: translateY(-10px);
+			box-shadow: 0 20px 50px rgba(124, 58, 237, 0.15);
+		}
+		.use-case-header {
+			background: linear-gradient(135deg, #1e0a3c 0%, #4c1d95 100%);
+			padding: 30px;
+			color: #fff;
+		}
+		.use-case-header h3 {
+			font-size: 24px;
+			font-weight: 700;
+			margin-bottom: 10px;
+		}
+		.use-case-header p {
+			color: rgba(255,255,255,0.8);
+			margin: 0;
+			font-size: 15px;
+		}
+		.use-case-body {
+			padding: 30px;
+		}
+		.use-case-tag {
+			display: inline-block;
+			background: rgba(124, 58, 237, 0.1);
+			color: #7c3aed;
+			padding: 4px 12px;
+			border-radius: 20px;
+			font-size: 12px;
+			font-weight: 600;
+			margin-right: 8px;
+			margin-bottom: 8px;
+		}
+		.workflow-step {
+			display: flex;
+			align-items: flex-start;
+			margin-bottom: 15px;
+		}
+		.workflow-step-icon {
+			width: 32px;
+			height: 32px;
+			background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-right: 15px;
+			flex-shrink: 0;
+		}
+		.workflow-step-icon i {
+			color: #fff;
+			font-size: 14px;
+		}
+		.industry-badge {
+			display: inline-flex;
+			align-items: center;
+			background: linear-gradient(135deg, #f8f9ff 0%, #fff 100%);
+			border: 1px solid rgba(124, 58, 237, 0.2);
+			padding: 15px 25px;
+			border-radius: 12px;
+			margin: 8px;
+			transition: all 0.3s;
+		}
+		.industry-badge:hover {
+			transform: translateY(-3px);
+			box-shadow: 0 10px 30px rgba(124, 58, 237, 0.15);
+		}
+		.industry-badge i {
+			font-size: 24px;
+			color: #7c3aed;
+			margin-right: 12px;
+		}
+		.benefit-item {
+			display: flex;
+			align-items: center;
+			padding: 12px 0;
+			border-bottom: 1px solid #f0f0f0;
+		}
+		.benefit-item:last-child {
+			border-bottom: none;
+		}
+		.benefit-icon {
+			width: 40px;
+			height: 40px;
+			background: rgba(16, 185, 129, 0.1);
+			border-radius: 10px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-right: 15px;
+		}
+		.benefit-icon i {
+			color: #10b981;
+			font-size: 18px;
+		}
+	</style>
+
+	<!-- Structured Data -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "WebPage",
+		"name": "Flyto2 Use Cases",
+		"description": "Enterprise workflow automation use cases including approval workflows, human-in-the-loop automation, and RPA replacement.",
+		"url": "https://flyto2.com/use-cases.html"
+	}
+	</script>
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		"itemListElement": [
+			{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://flyto2.com/"},
+			{"@type": "ListItem", "position": 2, "name": "Use Cases", "item": "https://flyto2.com/use-cases.html"}
+		]
+	}
+	</script>
+</head>
+<body>
+	<!-- Preloader -->
+	<div id="preloader">
+		<div class="preloader">
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+
+	<!-- Header -->
+	<header class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 align-self-center">
+					<div class="logo">
+						<a href="index.html">
+							<picture>
+								<source srcset="assets/img/white-logo.webp" type="image/webp">
+								<img src="../assets/img/white-logo.png" alt="Flyto2" width="90" height="79" fetchpriority="high">
+							</picture>
+						</a>
+					</div>
+					<div class="canvas_open">
+						<a href="javascript:void(0)" aria-label="Open menu" role="button">
+							<span></span>
+							<span></span>
+							<span></span>
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-9">
+					<div class="menu d-flex align-items-center justify-content-end">
+						<nav>
+							<ul>
+								<li><a href="index.html" data-i18n="landing.common.nav.home">Trang chủ</a></li>
+								<li><a href="product.html" data-i18n="landing.common.nav.platform">Nền tảng</a></li>
+								<li class="nav-dropdown">
+									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" data-i18n="landing.common.nav.pricing">Bảng giá</span>
+									<div class="nav-dropdown-menu">
+										<a href="pricing.html" class="nav-dropdown-item"><i class="bi bi-tag"></i><span data-i18n="landing.common.nav.plansAndPricing">Gói & Bảng giá</span></a>
+										<a href="buy-offline.html" class="nav-dropdown-item"><i class="bi bi-shield-lock"></i><span data-i18n="landing.common.nav.buyProLicense">Mua giấy phép Pro</span></a>
+									</div>
+								</li>
+								<li class="nav-dropdown">
+									<span class="nav-dropdown-toggle active" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" data-i18n="landing.common.nav.resources">Tài nguyên</span>
+									<div class="nav-dropdown-menu">
+										<a href="use-cases.html" class="nav-dropdown-item active"><i class="bi bi-briefcase"></i><span data-i18n="landing.common.nav.useCases">Trường hợp sử dụng</span></a>
+										<a href="compare.html" class="nav-dropdown-item"><i class="bi bi-arrow-left-right"></i><span data-i18n="landing.common.nav.compare">So sánh</span></a>
+										<a href="faq.html" class="nav-dropdown-item"><i class="bi bi-question-circle"></i><span data-i18n="landing.common.nav.faq">Câu hỏi thường gặp</span></a>
+										<a href="contact.html" class="nav-dropdown-item"><i class="bi bi-envelope"></i><span data-i18n="landing.common.nav.contactUs">Liên hệ chúng tôi</span></a>
+									</div>
+								</li>
+							</ul>
+						</nav>
+						<div class="header-auth">
+							<button id="headerLoginBtn" class="btn-header-login">
+								<i class="bi bi-person"></i>
+								<span data-i18n="landing.common.auth.signIn">Đăng nhập</span>
+							</button>
+							<div id="headerUserDropdown" class="user-dropdown d-none">
+								<div class="user-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">
+									<div class="user-avatar" id="headerUserAvatar">U</div>
+									<span class="user-email" id="headerUserEmail"></span>
+									<i class="bi bi-chevron-down dropdown-arrow"></i>
+								</div>
+								<div class="user-dropdown-menu">
+									<div class="dropdown-header">
+										<div class="dropdown-header-email" id="dropdownUserEmail"></div>
+										<div class="dropdown-header-label" data-i18n="landing.common.auth.flytoAccount">Tài khoản Flyto2</div>
+									</div>
+									<div class="dropdown-menu-items">
+										<a href="buy-offline.html" class="dropdown-menu-item">
+											<i class="bi bi-key"></i>
+											<span data-i18n="landing.common.auth.myLicenses">Giấy phép của tôi</span>
+										</a>
+										<div class="dropdown-divider"></div>
+										<button class="dropdown-menu-item text-danger" id="btnSignOut">
+											<i class="bi bi-box-arrow-right"></i>
+											<span data-i18n="landing.common.auth.signOut">Đăng xuất</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Mobile Menu -->
+	<div class="mobile-menu-area">
+		<div class="off_canvars_overlay"></div>
+		<div class="offcanvas_menu">
+			<div class="offcanvas_menu_wrapper">
+				<div class="canvas_close">
+					<a href="javascript:void(0)" aria-label="Close menu" role="button"><i class="fas fa-times"></i></a>
+				</div>
+				<div class="mobile-logo">
+					<a href="index.html">
+						<picture>
+							<source srcset="assets/img/logo.webp" type="image/webp">
+							<img src="../assets/img/logo.png" alt="Flyto2" width="90" height="79" />
+						</picture>
+					</a>
+				</div>
+				<div id="menu" class="text-left">
+					<ul class="offcanvas_main_menu">
+						<li><a href="index.html" data-i18n="landing.common.nav.home">Trang chủ</a></li>
+						<li><a href="product.html" data-i18n="landing.common.nav.platform">Nền tảng</a></li>
+						<li><a href="pricing.html" data-i18n="landing.common.nav.pricing">Bảng giá</a></li>
+						<li class="active"><a href="use-cases.html" data-i18n="landing.common.nav.useCases">Trường hợp sử dụng</a></li>
+						<li><a href="compare.html" data-i18n="landing.common.nav.compare">So sánh</a></li>
+						<li><a href="contact.html" data-i18n="landing.common.footer.contact">Liên hệ</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Hero Section -->
+	<section class="use-cases-hero">
+		<div class="container" style="position: relative; z-index: 2;">
+			<div class="row">
+				<div class="col-lg-10 offset-lg-1 text-center">
+					<div class="pt-150 pb-100">
+						<nav aria-label="breadcrumb" style="display: inline-block; margin-bottom: 20px;">
+							<ol class="breadcrumb" style="background: rgba(255,255,255,0.1); border-radius: 30px; padding: 10px 20px; margin: 0;">
+								<li class="breadcrumb-item"><a href="index.html" style="color: #a78bfa;" data-i18n="landing.common.nav.home">Trang chủ</a></li>
+								<li class="breadcrumb-item active" style="color: #fff;" data-i18n="landing.common.nav.useCases">Trường hợp sử dụng</li>
+							</ol>
+						</nav>
+						<h1 class="wow fadeInUp" style="color: #fff; font-size: 48px; font-weight: 800; margin-bottom: 20px;">
+							<span data-i18n="landing.useCases.hero.title">Tự động hóa Workflow</span> <span style="color: #a78bfa;" data-i18n="landing.useCases.hero.titleHighlight">thực tế</span>
+						</h1>
+						<p class="wow fadeInUp" data-wow-delay="0.1s" style="color: rgba(255,255,255,0.8); font-size: 20px; max-width: 700px; margin: 0 auto;" data-i18n="landing.useCases.hero.description">Xem cách các doanh nghiệp sử dụng Flyto2 để tự động hóa các workflow phức tạp đòi hỏi phán đoán của con người, bước phê duyệt và bản ghi kiểm toán đầy đủ.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wave-divider">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+				<path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+			</svg>
+		</div>
+	</section>
+
+	<!-- Use Case 1: Enterprise Approval Workflow -->
+	<section class="section-padding" id="approval-workflow">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 mb-30">
+					<div class="use-case-card wow fadeInUp">
+						<div class="use-case-header">
+							<div style="margin-bottom: 15px;">
+								<span class="use-case-tag" style="background: rgba(255,255,255,0.2); color: #fff;" data-i18n="landing.useCases.approval.tag">Phổ biến nhất</span>
+							</div>
+							<h2 style="font-size: 28px; font-weight: 700; margin-bottom: 10px;" data-i18n="landing.useCases.approval.title">Workflow phê duyệt doanh nghiệp</h2>
+							<p data-i18n="landing.useCases.approval.subtitle">Luồng phê duyệt nhiều bước với bản ghi kiểm toán cho tuân thủ</p>
+						</div>
+						<div class="use-case-body">
+							<div style="margin-bottom: 20px;">
+								<span class="use-case-tag" data-i18n="landing.useCases.tags.finance">Tài chính</span>
+								<span class="use-case-tag" data-i18n="landing.useCases.tags.hr">Nhân sự</span>
+								<span class="use-case-tag" data-i18n="landing.useCases.tags.procurement">Mua sắm</span>
+								<span class="use-case-tag" data-i18n="landing.useCases.tags.compliance">Tuân thủ</span>
+							</div>
+							<h4 style="font-weight: 700; margin-bottom: 15px;" data-i18n="landing.useCases.common.problem">Vấn đề</h4>
+							<p style="color: #6b7280; margin-bottom: 20px;" data-i18n="landing.useCases.approval.problem">Tự động hóa truyền thống không thể tạm dừng để phê duyệt. Đơn đặt hàng, báo cáo chi phí và hợp đồng cần chữ ký của quản lý, nhưng các công cụ RPA cứ chạy thẳng qua.</p>
+
+							<h4 style="font-weight: 700; margin-bottom: 15px;" data-i18n="landing.useCases.common.solution">Giải pháp Flyto2</h4>
+							<div class="workflow-step">
+								<div class="workflow-step-icon"><i class="fas fa-play"></i></div>
+								<div>
+									<strong data-i18n="landing.useCases.approval.step1.label">Kích hoạt:</strong> <span data-i18n="landing.useCases.approval.step1.text">Yêu cầu mua hàng mới được gửi</span>
+								</div>
+							</div>
+							<div class="workflow-step">
+								<div class="workflow-step-icon"><i class="fas fa-check"></i></div>
+								<div>
+									<strong data-i18n="landing.useCases.approval.step2.label">Xác thực:</strong> <span data-i18n="landing.useCases.approval.step2.text">Kiểm tra ngân sách, trạng thái nhà cung cấp, giới hạn phê duyệt</span>
+								</div>
+							</div>
+							<div class="workflow-step">
+								<div class="workflow-step-icon"><i class="fas fa-user"></i></div>
+								<div>
+									<strong data-i18n="landing.useCases.approval.step3.label">Bước con người:</strong> <span data-i18n="landing.useCases.approval.step3.text">Định tuyến đến quản lý để phê duyệt</span>
+								</div>
+							</div>
+							<div class="workflow-step">
+								<div class="workflow-step-icon"><i class="fas fa-cog"></i></div>
+								<div>
+									<strong data-i18n="landing.useCases.approval.step4.label">Tự động hóa:</strong> <span data-i18n="landing.useCases.approval.step4.text">Tạo PO, thông báo nhà cung cấp, cập nhật ERP</span>
+								</div>
+							</div>
+							<div class="workflow-step">
+								<div class="workflow-step-icon"><i class="fas fa-camera"></i></div>
+								<div>
+									<strong data-i18n="landing.useCases.approval.step5.label">Kiểm toán:</strong> <span data-i18n="landing.useCases.approval.step5.text">Chụp màn hình mỗi bước, ghi lại tất cả quyết định</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 mb-30">
+					<div style="background: linear-gradient(145deg, #f8f9ff 0%, #fff 100%); border-radius: 24px; padding: 35px; height: 100%;" class="wow fadeInUp" data-wow-delay="0.1s">
+						<h3 style="font-weight: 700; margin-bottom: 25px;"><i class="fas fa-chart-line" style="color: #7c3aed; margin-right: 10px;"></i><span data-i18n="landing.useCases.common.results">Kết quả</span></h3>
+						<div class="benefit-item">
+							<div class="benefit-icon">
+								<i class="fas fa-clock"></i>
+							</div>
+							<div>
+								<strong style="font-size: 18px;" data-i18n="landing.useCases.approval.result1.title">Xử lý nhanh hơn 80%</strong>
+								<p style="margin: 0; color: #6b7280; font-size: 14px;" data-i18n="landing.useCases.approval.result1.desc">Phê duyệt tiêu chuẩn từ ngày xuống giờ</p>
+							</div>
+						</div>
+						<div class="benefit-item">
+							<div class="benefit-icon">
+								<i class="fas fa-shield-alt"></i>
+							</div>
+							<div>
+								<strong style="font-size: 18px;" data-i18n="landing.useCases.approval.result2.title">100% tuân thủ kiểm toán</strong>
+								<p style="margin: 0; color: #6b7280; font-size: 14px;" data-i18n="landing.useCases.approval.result2.desc">Mọi hành động được đánh dấu thời gian</p>
+							</div>
+						</div>
+						<div class="benefit-item">
+							<div class="benefit-icon">
+								<i class="fas fa-undo"></i>
+							</div>
+							<div>
+								<strong style="font-size: 18px;" data-i18n="landing.useCases.approval.result3.title">Không mất dữ liệu khi lỗi</strong>
+								<p style="margin: 0; color: #6b7280; font-size: 14px;" data-i18n="landing.useCases.approval.result3.desc">Quay lại checkpoint, sửa, tiếp tục</p>
+							</div>
+						</div>
+						<div class="benefit-item">
+							<div class="benefit-icon">
+								<i class="fas fa-user-check"></i>
+							</div>
+							<div>
+								<strong style="font-size: 18px;" data-i18n="landing.useCases.approval.result4.title">Giữ nguyên giám sát của con người</strong>
+								<p style="margin: 0; color: #6b7280; font-size: 14px;" data-i18n="landing.useCases.approval.result4.desc">Các quyết định quan trọng vẫn do con người đưa ra</p>
+							</div>
+						</div>
+						<div style="margin-top: 30px; padding: 20px; background: rgba(124, 58, 237, 0.05); border-radius: 12px;">
+							<p style="margin: 0; font-style: italic; color: #6b7280;" data-i18n="landing.useCases.approval.quote">"Chúng tôi đã tự động hóa hơn 200 workflow phê duyệt trong khi vẫn giữ được phán đoán của con người mà tuân thủ yêu cầu."</p>
+							<p style="margin: 10px 0 0 0; font-weight: 600; color: #1e0a3c;" data-i18n="landing.useCases.approval.quoteAuthor">- Đội Tài chính Doanh nghiệp</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Use Case 2: Human-in-the-Loop Automation -->
+	<section class="section-padding section-bg" id="human-in-the-loop">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 mb-30 order-lg-2">
+					<div class="use-case-card wow fadeInUp">
+						<div class="use-case-header" style="background: linear-gradient(135deg, #065f46 0%, #10b981 100%);">
+							<h2 style="font-size: 28px; font-weight: 700; margin-bottom: 10px;" data-i18n="landing.useCases.hitl.title">Tự động hóa có con người trong vòng lặp</h2>
+							<p data-i18n="landing.useCases.hitl.subtitle">Tự động hóa tạm dừng ở những thời điểm quan trọng để xác minh</p>
+						</div>
+						<div class="use-case-body">
+							<div style="margin-bottom: 20px;">
+								<span class="use-case-tag" data-i18n="landing.useCases.tags.dataEntry">Nhập dữ liệu</span>
+								<span class="use-case-tag" data-i18n="landing.useCases.tags.qualityControl">Kiểm soát chất lượng</span>
+								<span class="use-case-tag" data-i18n="landing.useCases.tags.exceptionHandling">Xử lý ngoại lệ</span>
+							</div>
+							<h4 style="font-weight: 700; margin-bottom: 15px;" data-i18n="landing.useCases.common.problem">Vấn đề</h4>
+							<p style="color: #6b7280; margin-bottom: 20px;" data-i18n="landing.useCases.hitl.problem">Tự động hóa hoạt động tốt cho 95% trường hợp. Nhưng 5% trường hợp biên đó có thể gây thiệt hại lớn nếu xử lý tự động. Bạn cần tự động hóa biết khi nào nên dừng và hỏi.</p>
+
+							<h4 style="font-weight: 700; margin-bottom: 15px;" data-i18n="landing.useCases.common.solution">Giải pháp Flyto2</h4>
+							<div class="workflow-step">
+								<div class="workflow-step-icon" style="background: linear-gradient(135deg, #065f46 0%, #10b981 100%);"><i class="fas fa-database"></i></div>
+								<div>
+									<strong data-i18n="landing.useCases.hitl.step1.label">Lô:</strong> <span data-i18n="landing.useCases.hitl.step1.text">Tải 1.000 bản ghi để xử lý</span>
+								</div>
+							</div>
+							<div class="workflow-step">
+								<div class="workflow-step-icon" style="background: linear-gradient(135deg, #065f46 0%, #10b981 100%);"><i class="fas fa-filter"></i></div>
+								<div>
+									<strong data-i18n="landing.useCases.hitl.step2.label">Xác thực:</strong> <span data-i18n="landing.useCases.hitl.step2.text">Kiểm tra mỗi bản ghi theo quy tắc</span>
+								</div>
+							</div>
+							<div class="workflow-step">
+								<div class="workflow-step-icon" style="background: linear-gradient(135deg, #065f46 0%, #10b981 100%);"><i class="fas fa-exclamation-triangle"></i></div>
+								<div>
+									<strong data-i18n="landing.useCases.hitl.step3.label">Tạm dừng ngoại lệ:</strong> <span data-i18n="landing.useCases.hitl.step3.text">Đánh dấu số tiền bất thường, dữ liệu thiếu, trùng lặp</span>
+								</div>
+							</div>
+							<div class="workflow-step">
+								<div class="workflow-step-icon" style="background: linear-gradient(135deg, #065f46 0%, #10b981 100%);"><i class="fas fa-user"></i></div>
+								<div>
+									<strong data-i18n="landing.useCases.hitl.step4.label">Xem xét con người:</strong> <span data-i18n="landing.useCases.hitl.step4.text">Người vận hành xem xét và phê duyệt/từ chối các mục được đánh dấu</span>
+								</div>
+							</div>
+							<div class="workflow-step">
+								<div class="workflow-step-icon" style="background: linear-gradient(135deg, #065f46 0%, #10b981 100%);"><i class="fas fa-play"></i></div>
+								<div>
+									<strong data-i18n="landing.useCases.hitl.step5.label">Tiếp tục:</strong> <span data-i18n="landing.useCases.hitl.step5.text">Xử lý các mục được phê duyệt, bỏ qua các mục bị từ chối</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 mb-30 order-lg-1">
+					<div style="background: #fff; border-radius: 24px; padding: 35px; height: 100%;" class="wow fadeInUp" data-wow-delay="0.1s">
+						<h3 style="font-weight: 700; margin-bottom: 25px;"><i class="fas fa-lightbulb" style="color: #10b981; margin-right: 10px;"></i><span data-i18n="landing.useCases.hitl.insight.title">Thông tin quan trọng</span></h3>
+						<p style="font-size: 18px; line-height: 1.8; color: #374151; margin-bottom: 25px;" data-i18n="landing.useCases.hitl.insight.desc">Tự động hóa tốt nhất không hoàn toàn tự động. Đó là tự động hóa biết giới hạn của mình và xin trợ giúp khi cần.</p>
+						<h4 style="font-weight: 700; margin-bottom: 15px;" data-i18n="landing.useCases.hitl.whenToUse">Khi nào sử dụng Con người trong vòng lặp</h4>
+						<ul style="list-style: none; padding: 0;">
+							<li style="padding: 10px 0; border-bottom: 1px solid #f0f0f0;">
+								<i class="fas fa-check-circle" style="color: #10b981; margin-right: 10px;"></i>
+								<span data-i18n="landing.useCases.hitl.when1">Giao dịch giá trị cao vượt ngưỡng</span>
+							</li>
+							<li style="padding: 10px 0; border-bottom: 1px solid #f0f0f0;">
+								<i class="fas fa-check-circle" style="color: #10b981; margin-right: 10px;"></i>
+								<span data-i18n="landing.useCases.hitl.when2">Dữ liệu không khớp với mẫu dự kiến</span>
+							</li>
+							<li style="padding: 10px 0; border-bottom: 1px solid #f0f0f0;">
+								<i class="fas fa-check-circle" style="color: #10b981; margin-right: 10px;"></i>
+								<span data-i18n="landing.useCases.hitl.when3">Tương tác lần đầu với nhà cung cấp hoặc khách hàng</span>
+							</li>
+							<li style="padding: 10px 0; border-bottom: 1px solid #f0f0f0;">
+								<i class="fas fa-check-circle" style="color: #10b981; margin-right: 10px;"></i>
+								<span data-i18n="landing.useCases.hitl.when4">Hoạt động nhạy cảm về quy định</span>
+							</li>
+							<li style="padding: 10px 0;">
+								<i class="fas fa-check-circle" style="color: #10b981; margin-right: 10px;"></i>
+								<span data-i18n="landing.useCases.hitl.when5">Bất kỳ hành động nào khó hoàn tác</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Use Case 3: RPA Replacement -->
+	<section class="section-padding" id="rpa-replacement">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 mb-30">
+					<div class="use-case-card wow fadeInUp">
+						<div class="use-case-header" style="background: linear-gradient(135deg, #9f1239 0%, #f43f5e 100%);">
+							<h2 style="font-size: 28px; font-weight: 700; margin-bottom: 10px;" data-i18n="landing.useCases.rpa.title">Thay thế RPA cho công cụ nội bộ</h2>
+							<p data-i18n="landing.useCases.rpa.subtitle">Khi hệ thống của bạn không có API nhưng bạn cần tự động hóa</p>
+						</div>
+						<div class="use-case-body">
+							<div style="margin-bottom: 20px;">
+								<span class="use-case-tag" data-i18n="landing.useCases.tags.legacySystems">Hệ thống cũ</span>
+								<span class="use-case-tag" data-i18n="landing.useCases.tags.internalTools">Công cụ nội bộ</span>
+								<span class="use-case-tag" data-i18n="landing.useCases.tags.noApi">Không có API</span>
+							</div>
+							<h4 style="font-weight: 700; margin-bottom: 15px;" data-i18n="landing.useCases.common.problem">Vấn đề</h4>
+							<p style="color: #6b7280; margin-bottom: 20px;" data-i18n="landing.useCases.rpa.problem">Cổng quản trị nội bộ của bạn không có API. ERP của bạn từ năm 2005. Cổng nhà cung cấp của bạn chỉ hoạt động trên Internet Explorer. Bạn không thể chờ nhiều năm để IT xây dựng tích hợp.</p>
+
+							<h4 style="font-weight: 700; margin-bottom: 15px;" data-i18n="landing.useCases.rpa.whyFails">Tại sao RPA truyền thống thất bại ở đây</h4>
+							<ul style="list-style: none; padding: 0; margin-bottom: 20px;">
+								<li style="padding: 8px 0; color: #6b7280;">
+									<i class="fas fa-times-circle" style="color: #ef4444; margin-right: 10px;"></i>
+									<span data-i18n="landing.useCases.rpa.fail1">Dễ hỏng khi UI thay đổi</span>
+								</li>
+								<li style="padding: 8px 0; color: #6b7280;">
+									<i class="fas fa-times-circle" style="color: #ef4444; margin-right: 10px;"></i>
+									<span data-i18n="landing.useCases.rpa.fail2">Không thể xác thực trước khi tiếp tục</span>
+								</li>
+								<li style="padding: 8px 0; color: #6b7280;">
+									<i class="fas fa-times-circle" style="color: #ef4444; margin-right: 10px;"></i>
+									<span data-i18n="landing.useCases.rpa.fail3">Lỗi lan truyền khắp toàn bộ lô</span>
+								</li>
+								<li style="padding: 8px 0; color: #6b7280;">
+									<i class="fas fa-times-circle" style="color: #ef4444; margin-right: 10px;"></i>
+									<span data-i18n="landing.useCases.rpa.fail4">Không có bản ghi kiểm toán cho tuân thủ</span>
+								</li>
+							</ul>
+
+							<h4 style="font-weight: 700; margin-bottom: 15px;" data-i18n="landing.useCases.rpa.flytoApproach">Cách tiếp cận Flyto2</h4>
+							<ul style="list-style: none; padding: 0;">
+								<li style="padding: 8px 0; color: #374151;">
+									<i class="fas fa-check-circle" style="color: #10b981; margin-right: 10px;"></i>
+									<span data-i18n="landing.useCases.rpa.approach1">Ghi workflow bằng cách trình diễn</span>
+								</li>
+								<li style="padding: 8px 0; color: #374151;">
+									<i class="fas fa-check-circle" style="color: #10b981; margin-right: 10px;"></i>
+									<span data-i18n="landing.useCases.rpa.approach2">Chạy 1, xác thực, sau đó chạy lô</span>
+								</li>
+								<li style="padding: 8px 0; color: #374151;">
+									<i class="fas fa-check-circle" style="color: #10b981; margin-right: 10px;"></i>
+									<span data-i18n="landing.useCases.rpa.approach3">Tự động tạm dừng khi xác thực thất bại</span>
+								</li>
+								<li style="padding: 8px 0; color: #374151;">
+									<i class="fas fa-check-circle" style="color: #10b981; margin-right: 10px;"></i>
+									<span data-i18n="landing.useCases.rpa.approach4">Chụp màn hình mọi hành động để kiểm toán</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 mb-30">
+					<div style="background: linear-gradient(145deg, #fef2f2 0%, #fff 100%); border-radius: 24px; padding: 35px; height: 100%; border: 1px solid rgba(244, 63, 94, 0.1);" class="wow fadeInUp" data-wow-delay="0.1s">
+						<h3 style="font-weight: 700; margin-bottom: 25px; color: #9f1239;"><i class="fas fa-exchange-alt" style="margin-right: 10px;"></i><span data-i18n="landing.useCases.rpa.migration.title">Lộ trình di chuyển</span></h3>
+						<p style="font-size: 16px; color: #6b7280; margin-bottom: 25px;" data-i18n="landing.useCases.rpa.migration.desc">Đã đầu tư vào UiPath, Blue Prism hoặc Automation Anywhere? Đây là cách Flyto2 bổ sung (không thay thế) thiết lập hiện có của bạn:</p>
+						<div style="background: #fff; border-radius: 12px; padding: 20px; margin-bottom: 15px; border-left: 4px solid #f43f5e;">
+							<h4 style="font-size: 16px; font-weight: 700; margin-bottom: 8px;" data-i18n="landing.useCases.rpa.useFlyto">Sử dụng Flyto2 cho:</h4>
+							<ul style="margin: 0; padding-left: 20px; color: #6b7280;">
+								<li data-i18n="landing.useCases.rpa.useFlyto1">Workflow yêu cầu phê duyệt của con người</li>
+								<li data-i18n="landing.useCases.rpa.useFlyto2">Môi trường ngoại tuyến/cách ly</li>
+								<li data-i18n="landing.useCases.rpa.useFlyto3">Nguyên mẫu nhanh trước khi triển khai doanh nghiệp</li>
+								<li data-i18n="landing.useCases.rpa.useFlyto4">Quy trình với UI thay đổi thường xuyên</li>
+							</ul>
+						</div>
+						<div style="background: #fff; border-radius: 12px; padding: 20px; border-left: 4px solid #7c3aed;">
+							<h4 style="font-size: 16px; font-weight: 700; margin-bottom: 8px;" data-i18n="landing.useCases.rpa.keepRpa">Tiếp tục sử dụng RPA hiện có của bạn cho:</h4>
+							<ul style="margin: 0; padding-left: 20px; color: #6b7280;">
+								<li data-i18n="landing.useCases.rpa.keepRpa1">Quy trình khối lượng lớn, ổn định</li>
+								<li data-i18n="landing.useCases.rpa.keepRpa2">Workflow với điều phối hiện có</li>
+								<li data-i18n="landing.useCases.rpa.keepRpa3">Quy trình không cần phê duyệt</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Use Case 4: AI-Assisted Operations -->
+	<section class="section-padding section-bg" id="ai-assisted">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 mb-30 order-lg-2">
+					<div class="use-case-card wow fadeInUp">
+						<div class="use-case-header" style="background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);">
+							<h2 style="font-size: 28px; font-weight: 700; margin-bottom: 10px;" data-i18n="landing.useCases.ai.title">Workflow vận hành có hỗ trợ AI</h2>
+							<p data-i18n="landing.useCases.ai.subtitle">Để AI đề xuất, để con người quyết định</p>
+						</div>
+						<div class="use-case-body">
+							<div style="margin-bottom: 20px;">
+								<span class="use-case-tag" data-i18n="landing.useCases.tags.documentProcessing">Xử lý tài liệu</span>
+								<span class="use-case-tag" data-i18n="landing.useCases.tags.dataClassification">Phân loại dữ liệu</span>
+								<span class="use-case-tag" data-i18n="landing.useCases.tags.anomalyDetection">Phát hiện bất thường</span>
+							</div>
+							<h4 style="font-weight: 700; margin-bottom: 15px;" data-i18n="landing.useCases.ai.approach">Cách tiếp cận</h4>
+							<p style="color: #6b7280; margin-bottom: 20px;" data-i18n="landing.useCases.ai.approachDesc">AI mạnh mẽ nhưng không hoàn hảo. Flyto2 cho phép bạn tận dụng AI để đề xuất và phân tích trong khi giữ con người kiểm soát các quyết định cuối cùng.</p>
+
+							<h4 style="font-weight: 700; margin-bottom: 15px;" data-i18n="landing.useCases.ai.example">Ví dụ: Xử lý hóa đơn</h4>
+							<div class="workflow-step">
+								<div class="workflow-step-icon" style="background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);"><i class="fas fa-file-invoice"></i></div>
+								<div>
+									<strong data-i18n="landing.useCases.ai.step1.label">Đầu vào:</strong> <span data-i18n="landing.useCases.ai.step1.text">Hóa đơn quét đến</span>
+								</div>
+							</div>
+							<div class="workflow-step">
+								<div class="workflow-step-icon" style="background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);"><i class="fas fa-brain"></i></div>
+								<div>
+									<strong data-i18n="landing.useCases.ai.step2.label">AI:</strong> <span data-i18n="landing.useCases.ai.step2.text">Trích xuất nhà cung cấp, số tiền, mục hàng, ngày đến hạn</span>
+								</div>
+							</div>
+							<div class="workflow-step">
+								<div class="workflow-step-icon" style="background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);"><i class="fas fa-percentage"></i></div>
+								<div>
+									<strong data-i18n="landing.useCases.ai.step3.label">Độ tin cậy:</strong> <span data-i18n="landing.useCases.ai.step3.text">Đánh dấu các trích xuất có độ tin cậy thấp</span>
+								</div>
+							</div>
+							<div class="workflow-step">
+								<div class="workflow-step-icon" style="background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);"><i class="fas fa-user"></i></div>
+								<div>
+									<strong data-i18n="landing.useCases.ai.step4.label">Con người:</strong> <span data-i18n="landing.useCases.ai.step4.text">Xem xét các mục được đánh dấu, sửa nếu cần</span>
+								</div>
+							</div>
+							<div class="workflow-step">
+								<div class="workflow-step-icon" style="background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);"><i class="fas fa-cog"></i></div>
+								<div>
+									<strong data-i18n="landing.useCases.ai.step5.label">Xử lý:</strong> <span data-i18n="landing.useCases.ai.step5.text">Tạo mục AP, định tuyến để phê duyệt</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 mb-30 order-lg-1">
+					<div style="background: #fff; border-radius: 24px; padding: 35px; height: 100%;" class="wow fadeInUp" data-wow-delay="0.1s">
+						<h3 style="font-weight: 700; margin-bottom: 25px;"><i class="fas fa-balance-scale" style="color: #3b82f6; margin-right: 10px;"></i><span data-i18n="landing.useCases.ai.balance.title">Sự cân bằng đúng đắn</span></h3>
+						<p style="font-size: 16px; color: #6b7280; margin-bottom: 25px;" data-i18n="landing.useCases.ai.balance.desc">AI nên khuếch đại khả năng của con người, không thay thế phán đoán của con người. Flyto2 được thiết kế với nguyên tắc này làm cốt lõi.</p>
+						<div style="background: linear-gradient(145deg, #eff6ff 0%, #fff 100%); border-radius: 12px; padding: 25px; margin-bottom: 20px;">
+							<h4 style="color: #1e40af; font-size: 18px; margin-bottom: 15px;"><i class="fas fa-robot" style="margin-right: 10px;"></i><span data-i18n="landing.useCases.ai.aiDoes">AI xử lý:</span></h4>
+							<ul style="margin: 0; padding-left: 20px; color: #374151;">
+								<li data-i18n="landing.useCases.ai.aiDoes1">Nhận dạng mẫu</li>
+								<li data-i18n="landing.useCases.ai.aiDoes2">Trích xuất dữ liệu</li>
+								<li data-i18n="landing.useCases.ai.aiDoes3">Phát hiện bất thường</li>
+								<li data-i18n="landing.useCases.ai.aiDoes4">Đề xuất phân loại</li>
+							</ul>
+						</div>
+						<div style="background: linear-gradient(145deg, #f0fdf4 0%, #fff 100%); border-radius: 12px; padding: 25px;">
+							<h4 style="color: #065f46; font-size: 18px; margin-bottom: 15px;"><i class="fas fa-user" style="margin-right: 10px;"></i><span data-i18n="landing.useCases.ai.humanDoes">Con người xử lý:</span></h4>
+							<ul style="margin: 0; padding-left: 20px; color: #374151;">
+								<li data-i18n="landing.useCases.ai.humanDoes1">Quyết định phê duyệt cuối cùng</li>
+								<li data-i18n="landing.useCases.ai.humanDoes2">Xử lý ngoại lệ</li>
+								<li data-i18n="landing.useCases.ai.humanDoes3">Xác minh chất lượng</li>
+								<li data-i18n="landing.useCases.ai.humanDoes4">Ký duyệt tuân thủ</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Industries Section -->
+	<section class="section-padding">
+		<div class="container">
+			<div class="row mb-50">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<h2 class="wow fadeInUp" style="font-size: 36px; font-weight: 700;"><span data-i18n="landing.useCases.industries.title">Các ngành sử dụng Flyto2</span> <span class="gradient-text">Flyto2</span></h2>
+					<p class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 18px; color: #6b7280; margin-top: 15px;" data-i18n="landing.useCases.industries.subtitle">Bất kỳ workflow nào cần giám sát của con người và bản ghi kiểm toán</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<div class="wow fadeInUp" data-wow-delay="0.1s">
+						<div class="industry-badge">
+							<i class="fas fa-university"></i>
+							<span style="font-weight: 600;" data-i18n="landing.useCases.industries.finance">Tài chính & Ngân hàng</span>
+						</div>
+						<div class="industry-badge">
+							<i class="fas fa-heartbeat"></i>
+							<span style="font-weight: 600;" data-i18n="landing.useCases.industries.healthcare">Y tế</span>
+						</div>
+						<div class="industry-badge">
+							<i class="fas fa-landmark"></i>
+							<span style="font-weight: 600;" data-i18n="landing.useCases.industries.government">Chính phủ</span>
+						</div>
+						<div class="industry-badge">
+							<i class="fas fa-industry"></i>
+							<span style="font-weight: 600;" data-i18n="landing.useCases.industries.manufacturing">Sản xuất</span>
+						</div>
+						<div class="industry-badge">
+							<i class="fas fa-store"></i>
+							<span style="font-weight: 600;" data-i18n="landing.useCases.industries.retail">Bán lẻ & Thương mại điện tử</span>
+						</div>
+						<div class="industry-badge">
+							<i class="fas fa-truck"></i>
+							<span style="font-weight: 600;" data-i18n="landing.useCases.industries.logistics">Logistics</span>
+						</div>
+						<div class="industry-badge">
+							<i class="fas fa-graduation-cap"></i>
+							<span style="font-weight: 600;" data-i18n="landing.useCases.industries.education">Giáo dục</span>
+						</div>
+						<div class="industry-badge">
+							<i class="fas fa-gavel"></i>
+							<span style="font-weight: 600;" data-i18n="landing.useCases.industries.legal">Pháp lý</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="hero-wave-bg" style="padding: 80px 0;">
+		<div class="container" style="position: relative; z-index: 2;">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<h2 style="color: #fff; font-size: 36px; margin-bottom: 20px;" data-i18n="landing.useCases.cta.title">Trường hợp sử dụng nào phù hợp với nhu cầu của bạn?</h2>
+					<p style="color: rgba(255,255,255,0.8); font-size: 18px; margin-bottom: 30px;" data-i18n="landing.useCases.cta.description">Liên hệ với chúng tôi về các thách thức workflow cụ thể của bạn. Chúng tôi sẽ cho bạn thấy cách Flyto2 có thể giúp đỡ.</p>
+					<a href="contact.html" class="button-1" style="background: #fff; color: #7c3aed; margin-right: 15px;">
+						<i class="fas fa-envelope" style="margin-right: 8px;"></i> <span data-i18n="landing.common.nav.contactUs">Liên hệ chúng tôi</span>
+					</a>
+					<a href="pricing.html" class="button-2" data-i18n="landing.common.nav.viewPricing">Xem bảng giá</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="footer-top pt-70 pb-20">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-sm-6 mb-30">
+						<div class="f-widgets-item">
+							<div class="f-logo">
+								<a href="index.html">
+									<picture>
+										<source srcset="assets/img/logo.webp" type="image/webp">
+										<img src="../assets/img/logo.png" alt="Flyto2" width="90" height="79" loading="lazy">
+									</picture>
+								</a>
+							</div>
+							<p data-i18n="landing.common.footer.tagline">Tự động hóa hoạt động như bạn. Ghi một lần, phát lại mãi mãi.</p>
+							<ul>
+								<li><a href="mailto:info@flyto2.com"><i class="bi bi-envelope-fill"></i> info@flyto2.com</a></li>
+								<li><a href="https://github.com/flytohub" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> github.com/flytohub</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6 mb-30">
+						<div class="f-widgets-item">
+							<h3 data-i18n="landing.common.footer.product">Sản phẩm</h3>
+							<ul>
+								<li><a href="product.html" data-i18n="landing.common.nav.platform">Nền tảng</a></li>
+								<li><a href="pricing.html" data-i18n="landing.common.nav.pricing">Bảng giá</a></li>
+								<li><a href="download.html" data-i18n="landing.common.nav.download">Tải xuống</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6 mb-30">
+						<div class="f-widgets-item">
+							<h3 data-i18n="landing.common.nav.resources">Tài nguyên</h3>
+							<ul>
+								<li><a href="use-cases.html" data-i18n="landing.common.nav.useCases">Trường hợp sử dụng</a></li>
+								<li><a href="compare.html" data-i18n="landing.common.nav.compare">So sánh</a></li>
+								<li><a href="faq.html" data-i18n="landing.common.nav.faq">Câu hỏi thường gặp</a></li>
+								<li><a href="contact.html" data-i18n="landing.common.footer.contact">Liên hệ</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6 mb-30">
+						<div class="f-widgets-item">
+							<h3 data-i18n="landing.common.footer.company">Công ty</h3>
+							<ul>
+								<li><a href="about.html" data-i18n="landing.common.nav.about">Giới thiệu</a></li>
+								<li><a href="philosophy.html" data-i18n="landing.common.nav.philosophy">Triết lý</a></li>
+								<li><a href="https://github.com/flytohub/flyto-core" data-i18n="landing.common.footer.openSource" target="_blank" rel="noopener noreferrer">Mã nguồn mở</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom pt-30 pb-30">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 align-self-center">
+						<div class="copy-f-text">
+							<p>Copyright &copy;2025 Flyto2. All Rights Reserved</p>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="footer_social">
+							<ul>
+								<li><a href="https://github.com/flytohub" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+										<li><a href="https://www.youtube.com/channel/UCZ9OOqx4RM3Jjy1annWtsRA" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<div class="scroll-area">
+		<i class="bi bi-arrow-up"></i>
+	</div>
+
+	<!-- Scripts -->
+	<script src="../assets/js/modernizr.min.js"></script>
+	<script src="../assets/js/jquery-3.6.0.min.js"></script>
+	<script src="../assets/js/popper.min.js" defer></script>
+	<script src="../assets/js/bootstrap.min.js" defer></script>
+	<script src="../assets/js/wow.min.js" defer></script>
+	<script src="../assets/js/script.js" defer></script>
+	<script src="../assets/js/mobile-menu.js" defer></script>
+
+	<!-- Firebase SDK -->
+	<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js" defer></script>
+	<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js" defer></script>
+	<script src="../assets/js/auth.js" defer></script>
+</body>
+</html>
