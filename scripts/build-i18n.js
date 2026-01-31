@@ -13,6 +13,45 @@
 const fs = require('fs');
 const path = require('path');
 
+// Load SEO config from Firebase (fetched by fetch-seo-config.js)
+const SEO_CONFIG_PATH = path.join(__dirname, 'seo-config.json');
+let seoConfig = null;
+
+function loadSeoConfig() {
+  if (fs.existsSync(SEO_CONFIG_PATH)) {
+    try {
+      seoConfig = JSON.parse(fs.readFileSync(SEO_CONFIG_PATH, 'utf8'));
+      console.log('📋 Loaded seo-config.json');
+      if (seoConfig.pageMeta) {
+        const pageCount = Object.keys(seoConfig.pageMeta).length;
+        console.log(`   - ${pageCount} pages with custom SEO meta`);
+      }
+    } catch (e) {
+      console.warn(`⚠️  Failed to load seo-config.json: ${e.message}`);
+    }
+  }
+}
+
+/**
+ * Get SEO meta from Firebase pageMeta, fallback to translations
+ * @param {string} htmlFile - e.g., 'index.html'
+ * @param {string} locale - e.g., 'zh-TW', 'en'
+ * @param {string} field - e.g., 'title', 'description', 'keywords', 'ogTitle', 'ogDescription', 'ogImage'
+ * @param {object} translations - flyto-i18n translations
+ * @returns {string|null}
+ */
+function getSeoMeta(htmlFile, locale, field, translations) {
+  // 1. Try Firebase pageMeta first
+  if (seoConfig?.pageMeta?.[htmlFile]?.[locale]?.[field]) {
+    return seoConfig.pageMeta[htmlFile][locale][field];
+  }
+
+  // 2. Fallback to flyto-i18n translations
+  const pageKey = htmlFile.replace('.html', '').replace('-', '');
+  const translationKey = `landing.meta.${pageKey}.${field}`;
+  return translations[translationKey] || null;
+}
+
 // Configuration
 const CONFIG = {
   htmlDir: path.join(__dirname, '..'),
@@ -189,6 +228,7 @@ function updateLangSwitcher(html, currentLocale) {
 }
 
 // Update canonical, hreflang, og:url, og:locale, and meta descriptions for localized pages
+// Priority: Firebase pageMeta > flyto-i18n translations
 function updateSeoLinks(html, locale, htmlFile, translations) {
   const localeDir = CONFIG.localeMapping[locale] || locale.toLowerCase();
   const pagePath = htmlFile === 'index.html' ? '' : htmlFile;
@@ -213,20 +253,23 @@ function updateSeoLinks(html, locale, htmlFile, translations) {
     `<meta property="og:locale" content="${ogLocale}">`
   );
 
-  // Update meta description from translations
-  const pageKey = htmlFile.replace('.html', '').replace('-', '');
-  const metaDescKey = `landing.meta.${pageKey}.description`;
-  const ogDescKey = `landing.meta.${pageKey}.ogDescription`;
+  // Get SEO meta (Firebase first, fallback to translations)
+  const metaDesc = getSeoMeta(htmlFile, locale, 'description', translations);
+  const ogDesc = getSeoMeta(htmlFile, locale, 'ogDescription', translations) || metaDesc;
+  const title = getSeoMeta(htmlFile, locale, 'title', translations);
+  const ogTitle = getSeoMeta(htmlFile, locale, 'ogTitle', translations) || title;
+  const keywords = getSeoMeta(htmlFile, locale, 'keywords', translations);
+  const ogImage = getSeoMeta(htmlFile, locale, 'ogImage', translations);
 
-  if (translations[metaDescKey]) {
+  // Update meta description
+  if (metaDesc) {
     html = html.replace(
       /<meta name="description" content="[^"]*"\s*\/?>/,
-      `<meta name="description" content="${escapeHtml(translations[metaDescKey])}">`
+      `<meta name="description" content="${escapeHtml(metaDesc)}">`
     );
   }
 
   // Update og:description
-  const ogDesc = translations[ogDescKey] || translations[metaDescKey];
   if (ogDesc) {
     html = html.replace(
       /<meta property="og:description" content="[^"]*"\s*\/?>/,
@@ -235,25 +278,22 @@ function updateSeoLinks(html, locale, htmlFile, translations) {
   }
 
   // Update twitter:description
-  if (translations[metaDescKey]) {
+  if (metaDesc) {
     html = html.replace(
       /<meta name="twitter:description" content="[^"]*"\s*\/?>/,
-      `<meta name="twitter:description" content="${escapeHtml(translations[metaDescKey].substring(0, 200))}">`
+      `<meta name="twitter:description" content="${escapeHtml(metaDesc.substring(0, 200))}">`
     );
   }
 
   // Update page title
-  const titleKey = `landing.meta.${pageKey}.title`;
-  if (translations[titleKey]) {
+  if (title) {
     html = html.replace(
       /<title>[^<]*<\/title>/,
-      `<title>${escapeHtml(translations[titleKey])}</title>`
+      `<title>${escapeHtml(title)}</title>`
     );
   }
 
   // Update og:title
-  const ogTitleKey = `landing.meta.${pageKey}.ogTitle`;
-  const ogTitle = translations[ogTitleKey] || translations[titleKey];
   if (ogTitle) {
     html = html.replace(
       /<meta property="og:title" content="[^"]*"\s*\/?>/,
@@ -270,11 +310,22 @@ function updateSeoLinks(html, locale, htmlFile, translations) {
   }
 
   // Update keywords
-  const keywordsKey = `landing.meta.${pageKey}.keywords`;
-  if (translations[keywordsKey]) {
+  if (keywords) {
     html = html.replace(
       /<meta name="keywords" content="[^"]*"\s*\/?>/,
-      `<meta name="keywords" content="${escapeHtml(translations[keywordsKey])}">`
+      `<meta name="keywords" content="${escapeHtml(keywords)}">`
+    );
+  }
+
+  // Update og:image (if custom image specified in Firebase)
+  if (ogImage) {
+    html = html.replace(
+      /<meta property="og:image" content="[^"]*"\s*\/?>/,
+      `<meta property="og:image" content="${escapeHtml(ogImage)}">`
+    );
+    html = html.replace(
+      /<meta name="twitter:image" content="[^"]*"\s*\/?>/,
+      `<meta name="twitter:image" content="${escapeHtml(ogImage)}">`
     );
   }
 
@@ -355,6 +406,10 @@ function fixRelativePaths(html) {
 // Main function
 function main() {
   console.log('🏗️  Building multi-language HTML files...\n');
+
+  // Load SEO config from Firebase (for pageMeta overrides)
+  loadSeoConfig();
+
   const resolved = resolveLocales(specificLocale);
   CONFIG.locales = resolved.locales;
   CONFIG.localeMapping = resolved.localeMapping;
