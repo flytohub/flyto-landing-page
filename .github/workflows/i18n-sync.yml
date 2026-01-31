@@ -68,7 +68,8 @@ jobs:
   build:
     name: Build Multi-language HTML
     runs-on: ubuntu-latest
-    needs: extract-keys
+    # Run even if extract-keys fails (i18n repo is public, can checkout without token)
+    if: always()
     steps:
       - name: Checkout landing-page
         uses: actions/checkout@v4
@@ -86,17 +87,17 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Build multi-language HTML
-        run: |
-          cd flyto-landing-page
-          node scripts/build-i18n.js
-
       - name: Fetch SEO config from Firebase
         run: |
           cd flyto-landing-page
           node scripts/fetch-seo-config.js
         env:
           FIREBASE_PROJECT_ID: ${{ vars.FIREBASE_PROJECT_ID || 'flyto-cloud' }}
+
+      - name: Build multi-language HTML
+        run: |
+          cd flyto-landing-page
+          node scripts/build-i18n.js
 
       - name: Inject analytics
         run: |
