@@ -200,14 +200,14 @@ function updateLangSwitcher(html, currentLocale) {
   const desktopPattern = new RegExp(`<a href="/${currentLocale}/" class="lang-option"`, 'g');
   html = html.replace(desktopPattern, `<a href="/${currentLocale}/" class="lang-option active"`);
 
-  // Mobile language switcher - Remove active class from English
+  // Mobile language switcher (select dropdown) - Remove selected from English
   html = html.replace(
-    /<a href="\/" class="mobile-lang-option active"/g,
-    '<a href="/" class="mobile-lang-option"'
+    /<option value="\/" selected>/g,
+    '<option value="/">'
   );
-  // Mobile language switcher - Add active class to current locale
-  const mobilePattern = new RegExp(`<a href="/${currentLocale}/" class="mobile-lang-option"`, 'g');
-  html = html.replace(mobilePattern, `<a href="/${currentLocale}/" class="mobile-lang-option active"`);
+  // Mobile language switcher - Add selected to current locale
+  const selectPattern = new RegExp(`<option value="/${currentLocale}/">`, 'g');
+  html = html.replace(selectPattern, `<option value="/${currentLocale}/" selected>`);
 
   // Update current-lang display
   const langNames = {

@@ -419,23 +419,23 @@
 				<!-- Mobile Language Switcher -->
 				<div class="mobile-lang-switcher">
 					<div class="mobile-lang-title"><i class="bi bi-globe"></i> Language</div>
-					<div class="mobile-lang-grid">
-						<a href="/" class="mobile-lang-option">EN</a>
-						<a href="/zh/" class="mobile-lang-option">中文</a>
-						<a href="/ja/" class="mobile-lang-option">日本語</a>
-						<a href="/ko/" class="mobile-lang-option">한국어</a>
-						<a href="/de/" class="mobile-lang-option">DE</a>
-						<a href="/es/" class="mobile-lang-option active">ES</a>
-						<a href="/fr/" class="mobile-lang-option">FR</a>
-						<a href="/it/" class="mobile-lang-option">IT</a>
-						<a href="/pt/" class="mobile-lang-option">PT</a>
-						<a href="/vi/" class="mobile-lang-option">VI</a>
-						<a href="/th/" class="mobile-lang-option">TH</a>
-						<a href="/id/" class="mobile-lang-option">ID</a>
-						<a href="/tr/" class="mobile-lang-option">TR</a>
-						<a href="/pl/" class="mobile-lang-option">PL</a>
-						<a href="/hi/" class="mobile-lang-option">HI</a>
-					</div>
+					<select class="mobile-lang-select" onchange="if(this.value) window.location.href=this.value">
+						<option value="/">English</option>
+						<option value="/zh/">繁體中文</option>
+						<option value="/ja/">日本語</option>
+						<option value="/ko/">한국어</option>
+						<option value="/de/">Deutsch</option>
+						<option value="/es/" selected>Español</option>
+						<option value="/fr/">Français</option>
+						<option value="/it/">Italiano</option>
+						<option value="/pt/">Português</option>
+						<option value="/vi/">Tiếng Việt</option>
+						<option value="/th/">ไทย</option>
+						<option value="/id/">Indonesia</option>
+						<option value="/tr/">Türkçe</option>
+						<option value="/pl/">Polski</option>
+						<option value="/hi/">हिन्दी</option>
+					</select>
 				</div>
 			</div>
 		</div>
