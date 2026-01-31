@@ -1,6 +1,6 @@
 # Flyto2 Robots.txt
 # Auto-generated from seo-config.json
-# Generated: 2026-01-25
+# Generated: 2026-01-31
 #
 # SEO Strategy: Whitelist-based indexing
 # Edit scripts/seo-config.json to modify
