@@ -118,13 +118,13 @@ jobs:
           cd flyto-landing-page
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          # Dynamically add all language directories (2-letter dirs with index.html)
+          # Force add language directories (they are in .gitignore but need to be deployed)
           for dir in */; do
             if [[ ${#dir} -eq 3 ]] && [[ -f "${dir}index.html" ]]; then
-              git add "$dir" 2>/dev/null || true
+              git add -f "$dir" 2>/dev/null || true
             fi
           done
-          git add sitemap.xml robots.txt 2>/dev/null || true
+          git add -f sitemap.xml robots.txt 2>/dev/null || true
           if [[ -n $(git status --porcelain) ]]; then
             git commit -m "build: generate multi-language HTML and sitemap"
             git push
