@@ -396,6 +396,7 @@ function fixRelativePaths(html) {
   // Fix asset paths: assets/ -> ../assets/
   html = html.replace(/href="assets\//g, 'href="../assets/');
   html = html.replace(/src="assets\//g, 'src="../assets/');
+  html = html.replace(/srcset="assets\//g, 'srcset="../assets/');
 
   // Fix root-level CSS files (style.css, etc.)
   html = html.replace(/href="style\.css"/g, 'href="../style.css"');
