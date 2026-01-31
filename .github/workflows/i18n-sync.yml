@@ -70,11 +70,14 @@ jobs:
     runs-on: ubuntu-latest
     # Run even if extract-keys fails (i18n repo is public, can checkout without token)
     if: always()
+    permissions:
+      contents: write
     steps:
       - name: Checkout landing-page
         uses: actions/checkout@v4
         with:
           path: flyto-landing-page
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Checkout flyto-i18n
         uses: actions/checkout@v4
