@@ -191,15 +191,23 @@ function translateHtml(html, translations, locale, htmlFile) {
 
 // Update language switcher active class
 function updateLangSwitcher(html, currentLocale) {
-  // Remove active class from English and add to current locale
+  // Desktop language switcher - Remove active class from English
   html = html.replace(
     /<a href="\/" class="lang-option active"/g,
     '<a href="/" class="lang-option"'
   );
+  // Desktop language switcher - Add active class to current locale
+  const desktopPattern = new RegExp(`<a href="/${currentLocale}/" class="lang-option"`, 'g');
+  html = html.replace(desktopPattern, `<a href="/${currentLocale}/" class="lang-option active"`);
 
-  // Add active class to current locale
-  const pattern = new RegExp(`<a href="/${currentLocale}/" class="lang-option"`, 'g');
-  html = html.replace(pattern, `<a href="/${currentLocale}/" class="lang-option active"`);
+  // Mobile language switcher - Remove active class from English
+  html = html.replace(
+    /<a href="\/" class="mobile-lang-option active"/g,
+    '<a href="/" class="mobile-lang-option"'
+  );
+  // Mobile language switcher - Add active class to current locale
+  const mobilePattern = new RegExp(`<a href="/${currentLocale}/" class="mobile-lang-option"`, 'g');
+  html = html.replace(mobilePattern, `<a href="/${currentLocale}/" class="mobile-lang-option active"`);
 
   // Update current-lang display
   const langNames = {
