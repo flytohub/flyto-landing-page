@@ -20,12 +20,12 @@
 	<link rel="dns-prefetch" href="https://www.gstatic.com">
 	<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 
-	<!-- Google Fonts (moved from CSS @import for better performance) -->
+	<!-- Google Fonts -->
 	<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" media="print" onload="this.media='all'">
 	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"></noscript>
-	<title>Flyto2 Desktop App - Workflow Automation for Windows, macOS, Linux</title>
-	<meta name="description" content="Download Flyto2 desktop application. Automate your browser workflows offline. Available for Windows, macOS, and Linux.">
+	<title>Flyto2 WebAssembly - Run Automation in the Browser</title>
+	<meta name="description" content="Flyto2 WebAssembly module. Run workflow automation directly in the browser. No installation required, full offline support.">
 
 	<!-- Content Security Policy -->
 	<meta http-equiv="Content-Security-Policy" content="
@@ -44,30 +44,17 @@
 	<meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
 
 	<!-- SEO Meta Tags -->
-	<link rel="canonical" href="https://flyto2.com/app.html">
-	<link rel="alternate" hreflang="en" href="https://flyto2.com/app.html" />
-	<link rel="alternate" hreflang="de" href="https://flyto2.com/de/app.html" />
-	<link rel="alternate" hreflang="es" href="https://flyto2.com/es/app.html" />
-	<link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/app.html" />
-	<link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/app.html" />
-	<link rel="alternate" hreflang="id" href="https://flyto2.com/id/app.html" />
-	<link rel="alternate" hreflang="it" href="https://flyto2.com/it/app.html" />
-	<link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/app.html" />
-	<link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/app.html" />
-	<link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/app.html" />
-	<link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/app.html" />
-	<link rel="alternate" hreflang="th" href="https://flyto2.com/th/app.html" />
-	<link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/app.html" />
-	<link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/app.html" />
-	<link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/app.html" />
-	<link rel="alternate" hreflang="x-default" href="https://flyto2.com/app.html" />
+	<link rel="canonical" href="https://flyto2.com/wasm.html">
+	<link rel="alternate" hreflang="en" href="https://flyto2.com/wasm.html" />
+	<link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/wasm.html" />
+	<link rel="alternate" hreflang="x-default" href="https://flyto2.com/wasm.html" />
 	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://flyto2.com/app.html">
-	<meta property="og:title" content="Flyto2 Desktop App - Workflow Automation">
-	<meta property="og:description" content="Download Flyto2 desktop application. Automate your browser workflows offline. Available for Windows, macOS, and Linux.">
+	<meta property="og:url" content="https://flyto2.com/wasm.html">
+	<meta property="og:title" content="Flyto2 WebAssembly - Run Automation in the Browser">
+	<meta property="og:description" content="Flyto2 WebAssembly module. Run workflow automation directly in the browser. No installation required.">
 	<meta property="og:image" content="https://flyto2.com/assets/img/og-image.png">
 	<meta property="og:site_name" content="Flyto2">
 	<meta property="og:locale" content="en_US">
@@ -75,52 +62,41 @@
 	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@flyto2">
-	<meta name="twitter:title" content="Flyto2 Desktop App - Workflow Automation">
-	<meta name="twitter:description" content="Download Flyto2 desktop application. Automate your browser workflows offline. Available for Windows, macOS, and Linux.">
+	<meta name="twitter:title" content="Flyto2 WebAssembly - Run Automation in the Browser">
+	<meta name="twitter:description" content="Flyto2 WebAssembly module. Run workflow automation directly in the browser. No installation required.">
 	<meta name="twitter:image" content="https://flyto2.com/assets/img/og-image.png">
-	<meta name="twitter:image:alt" content="Flyto2 - No-Code Automation Platform">
 
 	<link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="assets/img/icon.png" type="image/png" sizes="32x32">
 	<link rel="apple-touch-icon" href="assets/img/icon.png" sizes="180x180">
 
-	<!-- Critical CSS (render-blocking) -->
+	<!-- Critical CSS -->
 	<link rel="stylesheet" href="assets/css/normalize.css">
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/fontawesome.all.min.css">
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="assets/css/responsive.css">
 
-	<!-- Non-critical CSS (deferred loading) -->
+	<!-- Non-critical CSS -->
 	<link rel="stylesheet" href="assets/css/bootstrap-icons.css" media="print" onload="this.media='all'">
-	<link rel="stylesheet" href="assets/css/lightcase.css" media="print" onload="this.media='all'">
-	<link rel="stylesheet" href="assets/css/owl.carousel.min.css" media="print" onload="this.media='all'">
-	<link rel="stylesheet" href="assets/css/owl.theme.default.min.css" media="print" onload="this.media='all'">
 	<link rel="stylesheet" href="assets/css/animate.css" media="print" onload="this.media='all'">
-	<link rel="stylesheet" href="assets/css/typed.css" media="print" onload="this.media='all'">
-	<link rel="stylesheet" href="assets/css/magnific-popup.css" media="print" onload="this.media='all'">
 	<link rel="stylesheet" href="assets/css/auth.css" media="print" onload="this.media='all'">
 	<noscript>
 		<link rel="stylesheet" href="assets/css/bootstrap-icons.css">
-		<link rel="stylesheet" href="assets/css/lightcase.css">
-		<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-		<link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
 		<link rel="stylesheet" href="assets/css/animate.css">
-		<link rel="stylesheet" href="assets/css/typed.css">
-		<link rel="stylesheet" href="assets/css/magnific-popup.css">
 		<link rel="stylesheet" href="assets/css/auth.css">
 	</noscript>
 
 	<style>
 		/* Hero */
-		.app-hero {
+		.wasm-hero {
 			background: linear-gradient(135deg, #0f0524 0%, #1e0a3c 20%, #2d1b4e 50%, #4c1d95 80%, #5b21b6 100%);
 			position: relative;
 			overflow: hidden;
 			min-height: 500px;
 			padding: 140px 0 120px;
 		}
-		.app-hero::before {
+		.wasm-hero::before {
 			content: '';
 			position: absolute;
 			top: 0;
@@ -210,56 +186,6 @@
 			50% { box-shadow: 0 0 40px rgba(124, 58, 237, 0.5); }
 		}
 
-		/* Main download button */
-		.btn-main-download {
-			display: inline-flex;
-			align-items: center;
-			gap: 15px;
-			background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
-			color: #fff;
-			padding: 22px 50px;
-			border-radius: 20px;
-			font-size: 20px;
-			font-weight: 700;
-			text-decoration: none;
-			transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-			position: relative;
-			overflow: hidden;
-			box-shadow: 0 15px 40px rgba(124, 58, 237, 0.4);
-			border: none;
-			cursor: pointer;
-		}
-		.btn-main-download::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: -100%;
-			width: 100%;
-			height: 100%;
-			background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-			transition: left 0.5s;
-		}
-		.btn-main-download:hover::before {
-			left: 100%;
-		}
-		.btn-main-download:hover {
-			transform: translateY(-5px) scale(1.03);
-			box-shadow: 0 25px 50px rgba(124, 58, 237, 0.5);
-			color: #fff;
-		}
-		.btn-main-download i {
-			font-size: 28px;
-		}
-		.btn-main-download.disabled {
-			opacity: 0.6;
-			cursor: not-allowed;
-			pointer-events: none;
-		}
-		.download-info {
-			font-size: 14px;
-			opacity: 0.9;
-		}
-
 		/* Notify form */
 		.notify-form {
 			max-width: 500px;
@@ -335,9 +261,9 @@
 			fill: #f8f9ff;
 		}
 
-		/* All platforms section */
-		.platforms-section {
-			background: linear-gradient(180deg, #f8f9ff 0%, #fff 100%);
+		/* Features section */
+		.features-preview {
+			background: #fff;
 			padding: 80px 0;
 		}
 		.section-title {
@@ -350,150 +276,6 @@
 			color: #6b7280;
 			font-size: 18px;
 			margin-bottom: 50px;
-		}
-
-		/* Platform cards */
-		.platform-card {
-			background: linear-gradient(145deg, #ffffff 0%, #f8f9ff 100%);
-			border-radius: 24px;
-			padding: 40px 30px;
-			text-align: center;
-			transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-			box-shadow: 0 10px 40px rgba(124, 58, 237, 0.08);
-			height: 100%;
-			position: relative;
-			overflow: hidden;
-		}
-		.platform-card::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			height: 4px;
-			background: linear-gradient(90deg, #7c3aed, #a78bfa);
-			transform: scaleX(0);
-			transition: transform 0.4s;
-		}
-		.platform-card:hover::before {
-			transform: scaleX(1);
-		}
-		.platform-card:hover {
-			transform: translateY(-10px);
-			box-shadow: 0 25px 60px rgba(124, 58, 237, 0.15);
-		}
-		.platform-card.recommended {
-			border: 2px solid #7c3aed;
-		}
-		.platform-card.recommended::after {
-			content: attr(data-recommend-text);
-			position: absolute;
-			top: 15px;
-			right: -35px;
-			background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
-			color: #fff;
-			padding: 5px 40px;
-			font-size: 11px;
-			font-weight: 700;
-			text-transform: uppercase;
-			transform: rotate(45deg);
-		}
-		.platform-card.disabled {
-			opacity: 0.6;
-		}
-		.platform-card.disabled:hover {
-			transform: none;
-			box-shadow: 0 10px 40px rgba(124, 58, 237, 0.08);
-		}
-		.platform-card.disabled::before {
-			display: none;
-		}
-		.platform-icon {
-			width: 80px;
-			height: 80px;
-			background: linear-gradient(135deg, rgba(124, 58, 237, 0.1) 0%, rgba(167, 139, 250, 0.1) 100%);
-			border-radius: 24px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			margin: 0 auto 25px;
-			transition: all 0.4s;
-		}
-		.platform-card:not(.disabled):hover .platform-icon {
-			background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
-			transform: scale(1.1) rotate(5deg);
-		}
-		.platform-icon i {
-			font-size: 36px;
-			color: #7c3aed;
-			transition: all 0.4s;
-		}
-		.platform-card:not(.disabled):hover .platform-icon i {
-			color: #fff;
-		}
-		.platform-name {
-			font-size: 22px;
-			font-weight: 700;
-			color: #1e0a3c;
-			margin-bottom: 8px;
-		}
-		.platform-arch {
-			color: #6b7280;
-			font-size: 14px;
-			margin-bottom: 20px;
-		}
-		.platform-size {
-			color: #9ca3af;
-			font-size: 13px;
-			margin-bottom: 20px;
-		}
-		.btn-platform-download {
-			display: inline-flex;
-			align-items: center;
-			gap: 8px;
-			background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
-			color: #fff;
-			padding: 14px 30px;
-			border-radius: 14px;
-			font-size: 15px;
-			font-weight: 600;
-			text-decoration: none;
-			transition: all 0.3s;
-			border: none;
-			cursor: pointer;
-		}
-		.btn-platform-download:hover {
-			transform: translateY(-3px);
-			box-shadow: 0 10px 30px rgba(124, 58, 237, 0.4);
-			color: #fff;
-		}
-		.btn-platform-download.disabled {
-			background: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%);
-			cursor: not-allowed;
-			pointer-events: none;
-		}
-		.btn-platform-download.disabled:hover {
-			transform: none;
-			box-shadow: none;
-		}
-
-		/* Coming soon badge on cards */
-		.coming-soon-tag {
-			display: inline-block;
-			background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-			color: #1e0a3c;
-			padding: 6px 16px;
-			border-radius: 20px;
-			font-size: 12px;
-			font-weight: 700;
-			text-transform: uppercase;
-			letter-spacing: 0.5px;
-		}
-
-		/* Features preview section */
-		.features-preview {
-			background: #fff;
-			padding: 80px 0;
 		}
 		.feature-preview-card {
 			background: linear-gradient(145deg, #f8f9ff 0%, #fff 100%);
@@ -533,48 +315,80 @@
 			line-height: 1.6;
 		}
 
-		/* Requirements section */
-		.requirements-section {
-			background: linear-gradient(180deg, #fff 0%, #f8f9ff 100%);
+		/* Code preview section */
+		.code-section {
+			background: linear-gradient(180deg, #f8f9ff 0%, #fff 100%);
 			padding: 80px 0;
 		}
-		.req-card {
+		.terminal-box {
+			background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+			border-radius: 16px;
+			overflow: hidden;
+			box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+		}
+		.terminal-header {
+			background: rgba(0,0,0,0.3);
+			padding: 14px 20px;
+			display: flex;
+			align-items: center;
+			gap: 8px;
+		}
+		.terminal-dot {
+			width: 12px;
+			height: 12px;
+			border-radius: 50%;
+		}
+		.terminal-dot.red { background: #ff5f56; }
+		.terminal-dot.yellow { background: #ffbd2e; }
+		.terminal-dot.green { background: #27c93f; }
+		.terminal-title {
+			color: #888;
+			font-size: 13px;
+			margin-left: 15px;
+			font-family: 'Monaco', 'Consolas', monospace;
+		}
+		.terminal-body {
+			padding: 25px;
+			font-family: 'Monaco', 'Consolas', 'Courier New', monospace;
+			font-size: 14px;
+		}
+		.terminal-body pre {
+			margin: 0;
+			color: #e0e0e0;
+			white-space: pre-wrap;
+		}
+		.terminal-body .keyword { color: #c792ea; }
+		.terminal-body .string { color: #c3e88d; }
+		.terminal-body .function { color: #82aaff; }
+		.terminal-body .comment { color: #676e95; }
+
+		/* Use cases section */
+		.use-cases-section {
+			background: #fff;
+			padding: 80px 0;
+		}
+		.use-case-card {
 			background: linear-gradient(145deg, #f8f9ff 0%, #fff 100%);
 			border-radius: 20px;
 			padding: 35px;
 			height: 100%;
 			border: 1px solid rgba(124, 58, 237, 0.1);
 		}
-		.req-card h4 {
+		.use-case-card h4 {
 			font-size: 20px;
 			font-weight: 700;
 			color: #1e0a3c;
-			margin-bottom: 20px;
+			margin-bottom: 12px;
 			display: flex;
 			align-items: center;
 			gap: 12px;
 		}
-		.req-card h4 i {
+		.use-case-card h4 i {
 			color: #7c3aed;
 		}
-		.req-list {
-			list-style: none;
-			padding: 0;
+		.use-case-card p {
+			color: #6b7280;
 			margin: 0;
-		}
-		.req-list li {
-			display: flex;
-			align-items: center;
-			gap: 10px;
-			padding: 10px 0;
-			color: #4b5563;
-			border-bottom: 1px solid rgba(124, 58, 237, 0.05);
-		}
-		.req-list li:last-child {
-			border-bottom: none;
-		}
-		.req-list li i {
-			color: #22c55e;
 		}
 
 		/* Mobile responsive */
@@ -584,18 +398,11 @@
 			}
 		}
 		@media (max-width: 768px) {
-			.app-hero {
+			.wasm-hero {
 				padding: 120px 0 100px;
 			}
 			.hero-title {
 				font-size: 32px;
-			}
-			.btn-main-download {
-				padding: 18px 35px;
-				font-size: 17px;
-			}
-			.platform-card.recommended::after {
-				display: none;
 			}
 			.notify-form .input-group {
 				flex-direction: column;
@@ -606,49 +413,25 @@
 		}
 	</style>
 
-	<!-- Structured Data - SoftwareApplication -->
+	<!-- Structured Data -->
 	<script type="application/ld+json">
 	{
 		"@context": "https://schema.org",
 		"@type": "SoftwareApplication",
-		"name": "Flyto2 Desktop",
-		"operatingSystem": "Windows, macOS, Linux",
-		"applicationCategory": "BusinessApplication",
-		"description": "Desktop application for workflow automation. Record once, replay forever. Visual interface with automatic system detection.",
+		"name": "Flyto2 WebAssembly",
+		"operatingSystem": "Browser",
+		"applicationCategory": "DeveloperApplication",
+		"description": "WebAssembly module for running Flyto2 automation workflows directly in the browser. Zero installation, full offline support.",
 		"offers": {
 			"@type": "Offer",
 			"price": "0",
-			"priceCurrency": "USD",
-			"description": "Free version available"
+			"priceCurrency": "USD"
 		},
 		"author": {
 			"@type": "Organization",
 			"name": "Flyto2",
 			"url": "https://flyto2.com"
-		},
-		"downloadUrl": "https://flyto2.com/app.html",
-		"screenshot": "https://flyto2.com/assets/img/dashbord.png"
-	}
-	</script>
-	<!-- Structured Data - BreadcrumbList -->
-	<script type="application/ld+json">
-	{
-		"@context": "https://schema.org",
-		"@type": "BreadcrumbList",
-		"itemListElement": [
-			{
-				"@type": "ListItem",
-				"position": 1,
-				"name": "Home",
-				"item": "https://flyto2.com/"
-			},
-			{
-				"@type": "ListItem",
-				"position": 2,
-				"name": "Desktop App",
-				"item": "https://flyto2.com/app.html"
-			}
-		]
+		}
 	}
 	</script>
 </head>
@@ -704,7 +487,6 @@
 										<a href="app.html" class="nav-dropdown-item"><i class="bi bi-window"></i><span data-i18n="landing.common.nav.desktopApp">Desktop App</span></a>
 										<a href="wasm.html" class="nav-dropdown-item"><i class="bi bi-globe2"></i><span data-i18n="landing.common.nav.wasmModule">WebAssembly</span></a>
 										<a href="node.html" class="nav-dropdown-item"><i class="bi bi-braces"></i><span data-i18n="landing.common.nav.nodePackage">Node.js</span></a>
-										<a href="language-packs.html" class="nav-dropdown-item"><i class="bi bi-translate"></i><span data-i18n="landing.common.nav.languagePacks">Language Packs</span></a>
 									</div>
 								</li>
 								<li class="nav-dropdown">
@@ -760,10 +542,9 @@
 					<ul class="offcanvas_main_menu">
 						<li><a href="index.html" data-i18n="landing.common.nav.home">Home</a></li>
 						<li><a href="pricing.html" data-i18n="landing.common.nav.pricing">Pricing</a></li>
-						<li><a href="buy-offline.html" data-i18n="landing.common.nav.buyProLicense">Buy Pro</a></li>
 						<li><a href="download.html" data-i18n="landing.common.nav.download">Download</a></li>
-						<li class="active"><a href="app.html" data-i18n="landing.common.nav.desktopApp">Get App</a></li>
-						<li><a href="https://github.com/flytohub/flyto-core" data-i18n="landing.common.nav.documentation" target="_blank" rel="noopener noreferrer">Docs</a></li>
+						<li class="active"><a href="wasm.html" data-i18n="landing.common.nav.wasmModule">WASM</a></li>
+						<li><a href="node.html" data-i18n="landing.common.nav.nodePackage">Node.js</a></li>
 						<li><a href="contact.html" data-i18n="landing.common.nav.contactUs">Contact</a></li>
 					</ul>
 				</div>
@@ -781,7 +562,7 @@
 	<main id="main-content">
 
 	<!-- Hero Area -->
-	<section class="app-hero">
+	<section class="wasm-hero">
 		<div class="orb orb-1"></div>
 		<div class="orb orb-2"></div>
 		<div class="orb orb-3"></div>
@@ -793,56 +574,39 @@
 		<div class="container" style="position: relative; z-index: 2;">
 			<div class="row">
 				<div class="col-lg-10 offset-lg-1 text-center">
-					<h1 class="hero-title wow fadeInUp" data-i18n="landing.app.hero.title">Flyto2 Desktop App</h1>
-					<p class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 20px; color: #c4b5fd; margin-bottom: 30px;" data-i18n="landing.app.hero.subtitle">
-						Automate your browser workflows. Works offline, your data stays private.
+					<h1 class="hero-title wow fadeInUp" data-i18n="landing.wasm.hero.title">Flyto2 WebAssembly</h1>
+					<p class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 20px; color: #c4b5fd; margin-bottom: 30px;" data-i18n="landing.wasm.hero.subtitle">
+						Run automation workflows directly in your browser. Zero installation required.
 					</p>
 
-					<!-- Status badge - controlled by Firebase -->
+					<!-- Status badge -->
 					<div class="wow fadeInUp" data-wow-delay="0.2s">
 						<span class="status-badge coming-soon" id="status-badge">
 							<i class="fas fa-rocket"></i>
-							<span id="status-text" data-i18n="landing.app.hero.comingSoon">Coming Soon</span>
+							<span id="status-text" data-i18n="landing.wasm.hero.comingSoon">Coming Soon</span>
 						</span>
 					</div>
 
 					<!-- Coming Soon: Notify Form -->
 					<div id="coming-soon-content" class="wow fadeInUp" data-wow-delay="0.3s">
-						<p style="color: rgba(255,255,255,0.8); font-size: 16px; margin-bottom: 25px;" data-i18n="landing.app.hero.notifyDesc">
-							Be the first to know when the desktop app launches.
+						<p style="color: rgba(255,255,255,0.8); font-size: 16px; margin-bottom: 25px;" data-i18n="landing.wasm.hero.notifyDesc">
+							Be the first to know when the WebAssembly module is ready.
 						</p>
 						<form class="notify-form" id="notify-form">
 							<div class="input-group">
-								<input type="email" id="notify-email" placeholder="Enter your email" data-i18n-placeholder="landing.app.hero.emailPlaceholder" required>
+								<input type="email" id="notify-email" placeholder="Enter your email" data-i18n-placeholder="landing.wasm.hero.emailPlaceholder" required>
 								<button type="submit" id="notify-btn">
-									<i class="fas fa-bell"></i> <span data-i18n="landing.app.hero.notifyMe">Notify Me</span>
+									<i class="fas fa-bell"></i> <span data-i18n="landing.wasm.hero.notifyMe">Notify Me</span>
 								</button>
 							</div>
 						</form>
 						<p class="notify-success" id="notify-success">
-							<i class="fas fa-check-circle"></i> <span data-i18n="landing.app.hero.notifySuccess">You're on the list! We'll email you when it's ready.</span>
+							<i class="fas fa-check-circle"></i> <span data-i18n="landing.wasm.hero.notifySuccess">You're on the list! We'll email you when it's ready.</span>
 						</p>
 						<p style="margin-top: 20px; color: rgba(255,255,255,0.5); font-size: 14px;">
-							<i class="fas fa-code" style="margin-right: 8px;"></i>
-							<span data-i18n="landing.app.hero.cliAvailable">Want to start now?</span>
-							<a href="download.html" style="color: #a78bfa; text-decoration: underline;" data-i18n="landing.app.hero.tryCli">Try Flyto Core (CLI)</a>
-						</p>
-					</div>
-
-					<!-- Available: Download Button (hidden by default) -->
-					<div id="available-content" style="display: none;">
-						<div class="wow fadeInUp" data-wow-delay="0.3s">
-							<a href="#" class="btn-main-download" id="main-download-btn">
-								<i class="fas fa-download"></i>
-								<div>
-									<div id="download-btn-text" data-i18n="landing.app.hero.downloadFor">Download for Your System</div>
-									<div class="download-info" id="download-btn-info">Detecting...</div>
-								</div>
-							</a>
-						</div>
-						<p class="wow fadeInUp" data-wow-delay="0.4s" style="margin-top: 25px; color: rgba(255,255,255,0.6); font-size: 14px;">
-							<i class="fas fa-shield-alt" style="margin-right: 5px;"></i>
-							<span data-i18n="landing.app.hero.proNote">Free to download. Pro license required for full features.</span>
+							<i class="fab fa-python" style="margin-right: 8px;"></i>
+							<span data-i18n="landing.wasm.hero.cliAvailable">Need automation now?</span>
+							<a href="download.html" style="color: #a78bfa; text-decoration: underline;" data-i18n="landing.wasm.hero.tryCli">Try Flyto Core (CLI)</a>
 						</p>
 					</div>
 				</div>
@@ -856,176 +620,138 @@
 		</div>
 	</section>
 
-	<!-- Features Preview Section (shown when coming soon) -->
+	<!-- Features Preview Section -->
 	<section class="features-preview" id="features-preview-section">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 text-center">
-					<h2 class="section-title wow fadeInUp" data-i18n="landing.app.features.title">What's Coming</h2>
-					<p class="section-subtitle wow fadeInUp" data-wow-delay="0.1s" data-i18n="landing.app.features.subtitle">A powerful desktop experience for workflow automation</p>
+					<h2 class="section-title wow fadeInUp" data-i18n="landing.wasm.features.title">What's Coming</h2>
+					<p class="section-subtitle wow fadeInUp" data-wow-delay="0.1s" data-i18n="landing.wasm.features.subtitle">Browser-native automation powered by WebAssembly</p>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-4 col-md-6 mb-30">
 					<div class="feature-preview-card wow fadeInUp" data-wow-delay="0.1s">
 						<div class="icon">
-							<i class="fas fa-desktop"></i>
+							<i class="fas fa-bolt"></i>
 						</div>
-						<h4 data-i18n="landing.app.features.visual">Visual Workflow Builder</h4>
-						<p data-i18n="landing.app.features.visualDesc">Drag-and-drop interface to create automation workflows without writing code.</p>
+						<h4 data-i18n="landing.wasm.features.nearNative">Near-Native Speed</h4>
+						<p data-i18n="landing.wasm.features.nearNativeDesc">WebAssembly runs at near-native speed. Execute complex workflows without lag.</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 mb-30">
 					<div class="feature-preview-card wow fadeInUp" data-wow-delay="0.2s">
 						<div class="icon">
-							<i class="fas fa-wifi-slash"></i>
+							<i class="fas fa-download"></i>
 						</div>
-						<h4 data-i18n="landing.app.features.offline">100% Offline</h4>
-						<p data-i18n="landing.app.features.offlineDesc">Works completely offline. Your data never leaves your computer.</p>
+						<h4 data-i18n="landing.wasm.features.zeroInstall">Zero Installation</h4>
+						<p data-i18n="landing.wasm.features.zeroInstallDesc">No downloads, no setup. Just import the module and start automating.</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 mb-30">
 					<div class="feature-preview-card wow fadeInUp" data-wow-delay="0.3s">
 						<div class="icon">
-							<i class="fas fa-robot"></i>
+							<i class="fas fa-shield-alt"></i>
 						</div>
-						<h4 data-i18n="landing.app.features.browser">Browser Automation</h4>
-						<p data-i18n="landing.app.features.browserDesc">Record and replay browser actions. Automate repetitive web tasks.</p>
+						<h4 data-i18n="landing.wasm.features.sandboxed">Sandboxed Security</h4>
+						<p data-i18n="landing.wasm.features.sandboxedDesc">Runs in browser sandbox. No file system access unless explicitly granted.</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 mb-30">
 					<div class="feature-preview-card wow fadeInUp" data-wow-delay="0.4s">
 						<div class="icon">
-							<i class="fas fa-clock"></i>
+							<i class="fas fa-globe"></i>
 						</div>
-						<h4 data-i18n="landing.app.features.schedule">Scheduled Tasks</h4>
-						<p data-i18n="landing.app.features.scheduleDesc">Run workflows on a schedule. Set it and forget it.</p>
+						<h4 data-i18n="landing.wasm.features.crossBrowser">Cross-Browser</h4>
+						<p data-i18n="landing.wasm.features.crossBrowserDesc">Works in Chrome, Firefox, Safari, and Edge. One module, all browsers.</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 mb-30">
 					<div class="feature-preview-card wow fadeInUp" data-wow-delay="0.5s">
 						<div class="icon">
-							<i class="fas fa-cubes"></i>
+							<i class="fas fa-wifi-slash"></i>
 						</div>
-						<h4 data-i18n="landing.app.features.modules">250+ Modules</h4>
-						<p data-i18n="landing.app.features.modulesDesc">Built-in modules for data processing, file operations, API calls, and more.</p>
+						<h4 data-i18n="landing.wasm.features.offline">Offline Capable</h4>
+						<p data-i18n="landing.wasm.features.offlineDesc">Cache the module and run workflows offline. Perfect for PWAs.</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 mb-30">
 					<div class="feature-preview-card wow fadeInUp" data-wow-delay="0.6s">
 						<div class="icon">
-							<i class="fas fa-lock"></i>
+							<i class="fas fa-cubes"></i>
 						</div>
-						<h4 data-i18n="landing.app.features.secure">Secure & Private</h4>
-						<p data-i18n="landing.app.features.secureDesc">No cloud dependency. Your workflows and data stay on your machine.</p>
+						<h4 data-i18n="landing.wasm.features.modules">250+ Modules</h4>
+						<p data-i18n="landing.wasm.features.modulesDesc">Same powerful modules as the CLI. String, array, data, and more.</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<!-- All Platforms Section -->
-	<section class="platforms-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12 text-center">
-					<h2 class="section-title wow fadeInUp" data-i18n="landing.app.platforms.title">Available Platforms</h2>
-					<p class="section-subtitle wow fadeInUp" data-wow-delay="0.1s" data-i18n="landing.app.platforms.subtitle">Choose your operating system and architecture</p>
-				</div>
-			</div>
-			<div class="row" id="platform-cards">
-				<!-- macOS Apple Silicon -->
-				<div class="col-lg-4 col-md-6 mb-30">
-					<div class="platform-card disabled wow fadeInUp" data-wow-delay="0.1s" id="card-macos-arm" data-recommend-text="Recommended">
-						<div class="platform-icon">
-							<i class="fab fa-apple"></i>
-						</div>
-						<div class="platform-name">macOS</div>
-						<div class="platform-arch">Apple Silicon (M1/M2/M3/M4)</div>
-						<div class="platform-size" id="size-macos-arm">~150 MB</div>
-						<span class="coming-soon-tag" data-i18n="landing.app.platforms.comingSoon">Coming Soon</span>
-					</div>
-				</div>
-				<!-- Windows -->
-				<div class="col-lg-4 col-md-6 mb-30">
-					<div class="platform-card disabled wow fadeInUp" data-wow-delay="0.2s" id="card-windows" data-recommend-text="Recommended">
-						<div class="platform-icon">
-							<i class="fab fa-windows"></i>
-						</div>
-						<div class="platform-name">Windows</div>
-						<div class="platform-arch">64-bit (x64)</div>
-						<div class="platform-size" id="size-windows">~120 MB</div>
-						<span class="coming-soon-tag" data-i18n="landing.app.platforms.comingSoon">Coming Soon</span>
-					</div>
-				</div>
-				<!-- Linux x64 -->
-				<div class="col-lg-4 col-md-6 mb-30">
-					<div class="platform-card disabled wow fadeInUp" data-wow-delay="0.3s" id="card-linux-x64" data-recommend-text="Recommended">
-						<div class="platform-icon">
-							<i class="fab fa-linux"></i>
-						</div>
-						<div class="platform-name">Linux</div>
-						<div class="platform-arch">x64 (AMD64)</div>
-						<div class="platform-size" id="size-linux">~130 MB</div>
-						<span class="coming-soon-tag" data-i18n="landing.app.platforms.comingSoon">Coming Soon</span>
-					</div>
-				</div>
-			</div>
-			<!-- Developer Section -->
-			<div class="row mt-30">
-				<div class="col-lg-12 text-center">
-					<p style="color: #6b7280; margin-bottom: 20px;">
-						<i class="fas fa-code" style="color: #7c3aed;"></i>
-						<span data-i18n="landing.app.platforms.devNote">Looking for Python package or Docker deployment?</span>
-					</p>
-					<a href="download.html" class="btn-platform-download" style="background: linear-gradient(135deg, #1e0a3c 0%, #4c1d95 100%);">
-						<i class="fas fa-terminal"></i> <span data-i18n="landing.app.platforms.devDownloads">Developer Downloads</span>
-					</a>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- System Requirements -->
-	<section class="requirements-section">
+	<!-- Code Preview Section -->
+	<section class="code-section">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 text-center mb-50">
-					<h2 class="section-title wow fadeInUp" data-i18n="landing.app.requirements.title">System Requirements</h2>
+					<h2 class="section-title wow fadeInUp" data-i18n="landing.wasm.code.title">Simple Integration</h2>
+					<p class="section-subtitle wow fadeInUp" data-wow-delay="0.1s" data-i18n="landing.wasm.code.subtitle">A preview of how easy it will be to use</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2">
+					<div class="terminal-box wow fadeInUp" data-wow-delay="0.2s">
+						<div class="terminal-header">
+							<span class="terminal-dot red"></span>
+							<span class="terminal-dot yellow"></span>
+							<span class="terminal-dot green"></span>
+							<span class="terminal-title">script.js</span>
+						</div>
+						<div class="terminal-body">
+							<pre><span class="comment">// Import the Flyto2 WASM module</span>
+<span class="keyword">import</span> { Flyto } <span class="keyword">from</span> <span class="string">'@flyto/wasm'</span>;
+
+<span class="comment">// Initialize</span>
+<span class="keyword">const</span> flyto = <span class="keyword">await</span> Flyto.<span class="function">init</span>();
+
+<span class="comment">// Execute a workflow</span>
+<span class="keyword">const</span> result = <span class="keyword">await</span> flyto.<span class="function">execute</span>(<span class="string">'string.uppercase'</span>, {
+  <span class="keyword">text</span>: <span class="string">'hello world'</span>
+});
+
+console.<span class="function">log</span>(result.data); <span class="comment">// "HELLO WORLD"</span></pre>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Use Cases Section -->
+	<section class="use-cases-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center mb-50">
+					<h2 class="section-title wow fadeInUp" data-i18n="landing.wasm.useCases.title">Use Cases</h2>
+					<p class="section-subtitle wow fadeInUp" data-wow-delay="0.1s" data-i18n="landing.wasm.useCases.subtitle">Perfect for browser-based applications</p>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-4 col-md-6 mb-30">
-					<div class="req-card wow fadeInUp" data-wow-delay="0.1s">
-						<h4><i class="fab fa-apple"></i> macOS</h4>
-						<ul class="req-list">
-							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.macosVersion">macOS 11 (Big Sur) or later</span></li>
-							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.macosProcessor">Apple Silicon or Intel processor</span></li>
-							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.ram">4 GB RAM minimum</span></li>
-							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.disk">500 MB disk space</span></li>
-						</ul>
+					<div class="use-case-card wow fadeInUp" data-wow-delay="0.1s">
+						<h4><i class="fas fa-globe"></i> <span data-i18n="landing.wasm.useCases.webApps">Web Applications</span></h4>
+						<p data-i18n="landing.wasm.useCases.webAppsDesc">Add automation features to your web app without backend dependencies.</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 mb-30">
-					<div class="req-card wow fadeInUp" data-wow-delay="0.2s">
-						<h4><i class="fab fa-windows"></i> Windows</h4>
-						<ul class="req-list">
-							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.windowsVersion">Windows 10 (64-bit) or later</span></li>
-							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.windowsProcessor">x64 processor</span></li>
-							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.ram">4 GB RAM minimum</span></li>
-							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.disk">500 MB disk space</span></li>
-						</ul>
+					<div class="use-case-card wow fadeInUp" data-wow-delay="0.2s">
+						<h4><i class="fas fa-mobile-alt"></i> <span data-i18n="landing.wasm.useCases.pwa">PWAs</span></h4>
+						<p data-i18n="landing.wasm.useCases.pwaDesc">Progressive Web Apps with full offline automation capability.</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 mb-30">
-					<div class="req-card wow fadeInUp" data-wow-delay="0.3s">
-						<h4><i class="fab fa-linux"></i> Linux</h4>
-						<ul class="req-list">
-							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.linuxVersion">Ubuntu 20.04+ / Debian 11+</span></li>
-							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.linuxProcessor">x64 or ARM64 processor</span></li>
-							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.ram">4 GB RAM minimum</span></li>
-							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.disk">500 MB disk space</span></li>
-						</ul>
+					<div class="use-case-card wow fadeInUp" data-wow-delay="0.3s">
+						<h4><i class="fas fa-puzzle-piece"></i> <span data-i18n="landing.wasm.useCases.extensions">Browser Extensions</span></h4>
+						<p data-i18n="landing.wasm.useCases.extensionsDesc">Build Chrome/Firefox extensions with powerful automation modules.</p>
 					</div>
 				</div>
 			</div>
@@ -1058,9 +784,9 @@
 						<div class="f-widgets-item">
 							<h3 data-i18n="landing.common.footer.product">Product</h3>
 							<ul>
-								<li><a href="app.html" data-i18n="landing.common.nav.desktopApp">Download App</a></li>
+								<li><a href="download.html" data-i18n="landing.common.nav.download">Download</a></li>
+								<li><a href="app.html" data-i18n="landing.common.nav.desktopApp">Desktop App</a></li>
 								<li><a href="pricing.html" data-i18n="landing.common.nav.pricing">Pricing</a></li>
-								<li><a href="buy-offline.html" data-i18n="landing.common.nav.buyProLicense">Buy Pro</a></li>
 							</ul>
 						</div>
 					</div>
@@ -1069,8 +795,8 @@
 							<h3 data-i18n="landing.common.nav.resources">Resources</h3>
 							<ul>
 								<li><a href="https://github.com/flytohub/flyto-core" data-i18n="landing.common.nav.documentation" target="_blank" rel="noopener noreferrer">Documentation</a></li>
-								<li><a href="download.html" data-i18n="landing.common.nav.download">Developer Downloads</a></li>
 								<li><a href="faq.html" data-i18n="landing.common.nav.faq">FAQ</a></li>
+								<li><a href="contact.html" data-i18n="landing.common.nav.contactUs">Contact</a></li>
 							</ul>
 						</div>
 					</div>
@@ -1122,161 +848,9 @@
 	<script src="assets/js/mobile-menu.js" defer></script>
 
 	<script>
-		// Firebase URL (from auth.js)
+		// Firebase URL
 		function getFirebaseUrl() {
 			return window.FlytoAuth?.FIREBASE_URL || 'https://us-central1-ticket-helper-dbc0e.cloudfunctions.net';
-		}
-
-		// App state
-		let appConfig = {
-			available: false,
-			version: null,
-			downloads: {
-				'macos-arm64': null,
-				'windows-x64': null,
-				'linux-x64': null
-			}
-		};
-
-		// Fetch app config from Firebase
-		async function fetchAppConfig() {
-			try {
-				const response = await fetch(`${getFirebaseUrl()}/getDesktopAppConfig`);
-				const data = await response.json();
-				if (data.ok) {
-					appConfig = data.config;
-					updateUI();
-				}
-			} catch (err) {
-				// Config fetch failed - show coming soon state (default)
-				console.debug('Desktop app config not available, showing coming soon state');
-			}
-		}
-
-		// Update UI based on config
-		function updateUI() {
-			const statusBadge = document.getElementById('status-badge');
-			const statusText = document.getElementById('status-text');
-			const comingSoonContent = document.getElementById('coming-soon-content');
-			const availableContent = document.getElementById('available-content');
-			const featuresSection = document.getElementById('features-preview-section');
-
-			if (appConfig.available) {
-				// App is available - show download UI
-				statusBadge.classList.remove('coming-soon');
-				statusBadge.innerHTML = '<i class="fas fa-microchip"></i><span id="detected-os">Detecting your system...</span>';
-
-				comingSoonContent.style.display = 'none';
-				availableContent.style.display = 'block';
-				featuresSection.style.display = 'none';
-
-				// Update platform cards
-				updatePlatformCards();
-
-				// Detect OS and update download button
-				detectOS();
-			} else {
-				// App not available - show coming soon (default state)
-				statusBadge.classList.add('coming-soon');
-			}
-		}
-
-		// Update platform cards for available state
-		function updatePlatformCards() {
-			const platforms = ['macos-arm64', 'windows-x64', 'linux-x64'];
-			const cardIds = {
-				'macos-arm64': 'card-macos-arm',
-				'windows-x64': 'card-windows',
-				'linux-x64': 'card-linux-x64'
-			};
-
-			platforms.forEach(platform => {
-				const card = document.getElementById(cardIds[platform]);
-				if (!card) return;
-
-				const downloadInfo = appConfig.downloads[platform];
-				if (downloadInfo && downloadInfo.url) {
-					card.classList.remove('disabled');
-
-					// Replace coming soon tag with download button
-					const comingSoonTag = card.querySelector('.coming-soon-tag');
-					if (comingSoonTag) {
-						const btn = document.createElement('a');
-						btn.href = downloadInfo.url;
-						btn.className = 'btn-platform-download';
-						btn.setAttribute('data-platform', platform);
-						btn.innerHTML = `<i class="fas fa-download"></i> ${downloadInfo.filename || 'Download'}`;
-						comingSoonTag.replaceWith(btn);
-					}
-
-					// Update size if available
-					if (downloadInfo.size) {
-						const sizeEl = card.querySelector('.platform-size');
-						if (sizeEl) {
-							sizeEl.textContent = downloadInfo.size;
-						}
-					}
-				}
-			});
-		}
-
-		// OS Detection
-		function detectOS() {
-			const userAgent = navigator.userAgent.toLowerCase();
-			let osName = '';
-			let downloadUrl = '#';
-			let downloadText = '';
-			let cardId = '';
-			let fileInfo = '';
-
-			if (userAgent.includes('win')) {
-				osName = 'Windows';
-				downloadText = 'Download for Windows';
-				cardId = 'card-windows';
-				downloadUrl = appConfig.downloads['windows-x64']?.url || '#';
-				fileInfo = '.zip archive';
-			} else if (userAgent.includes('mac')) {
-				osName = 'macOS (Apple Silicon)';
-				cardId = 'card-macos-arm';
-				downloadUrl = appConfig.downloads['macos-arm64']?.url || '#';
-				downloadText = 'Download for macOS';
-				fileInfo = '.dmg installer';
-			} else if (userAgent.includes('linux')) {
-				osName = 'Linux (x64)';
-				cardId = 'card-linux-x64';
-				downloadUrl = appConfig.downloads['linux-x64']?.url || '#';
-				downloadText = 'Download for Linux';
-				fileInfo = '.tar.gz archive';
-			} else {
-				osName = 'your system';
-				downloadText = 'Select Your Platform';
-				fileInfo = 'Select below';
-			}
-
-			// Update UI
-			const detectedOs = document.getElementById('detected-os');
-			if (detectedOs) {
-				detectedOs.textContent = osName + ' detected';
-			}
-
-			const downloadBtnText = document.getElementById('download-btn-text');
-			const downloadBtnInfo = document.getElementById('download-btn-info');
-			if (downloadBtnText) downloadBtnText.textContent = downloadText;
-			if (downloadBtnInfo) downloadBtnInfo.textContent = fileInfo;
-
-			// Set main download button URL
-			const mainBtn = document.getElementById('main-download-btn');
-			if (mainBtn && downloadUrl !== '#') {
-				mainBtn.href = downloadUrl;
-			}
-
-			// Highlight recommended card
-			if (cardId) {
-				const card = document.getElementById(cardId);
-				if (card && !card.classList.contains('disabled')) {
-					card.classList.add('recommended');
-				}
-			}
 		}
 
 		// Notify form submission
@@ -1290,10 +864,10 @@
 			btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
 
 			try {
-				const response = await fetch(`${getFirebaseUrl()}/subscribeDesktopAppNotify`, {
+				const response = await fetch(`${getFirebaseUrl()}/subscribeWasmNotify`, {
 					method: 'POST',
 					headers: { 'Content-Type': 'application/json' },
-					body: JSON.stringify({ email, source: 'desktop_app_page' })
+					body: JSON.stringify({ email, source: 'wasm_page' })
 				});
 				const data = await response.json();
 
@@ -1307,7 +881,7 @@
 			} catch (err) {
 				btn.innerHTML = '<i class="fas fa-times"></i> Failed';
 				setTimeout(() => {
-					btn.innerHTML = '<i class="fas fa-bell"></i> <span data-i18n="landing.app.hero.notifyMe">Notify Me</span>';
+					btn.innerHTML = '<i class="fas fa-bell"></i> <span data-i18n="landing.wasm.hero.notifyMe">Notify Me</span>';
 					btn.disabled = false;
 				}, 2000);
 			}
@@ -1316,7 +890,6 @@
 		// Initialize
 		document.addEventListener('DOMContentLoaded', function() {
 			new WOW().init();
-			fetchAppConfig();
 		});
 	</script>
 
@@ -1349,17 +922,6 @@
 			<a href="/zh/" class="lang-sheet-item"><span>繁體中文</span></a>
 			<a href="/ja/" class="lang-sheet-item"><span>日本語</span></a>
 			<a href="/ko/" class="lang-sheet-item"><span>한국어</span></a>
-			<a href="/de/" class="lang-sheet-item"><span>Deutsch</span></a>
-			<a href="/es/" class="lang-sheet-item"><span>Español</span></a>
-			<a href="/fr/" class="lang-sheet-item"><span>Français</span></a>
-			<a href="/it/" class="lang-sheet-item"><span>Italiano</span></a>
-			<a href="/pt/" class="lang-sheet-item"><span>Português</span></a>
-			<a href="/vi/" class="lang-sheet-item"><span>Tiếng Việt</span></a>
-			<a href="/th/" class="lang-sheet-item"><span>ไทย</span></a>
-			<a href="/id/" class="lang-sheet-item"><span>Indonesia</span></a>
-			<a href="/tr/" class="lang-sheet-item"><span>Türkçe</span></a>
-			<a href="/pl/" class="lang-sheet-item"><span>Polski</span></a>
-			<a href="/hi/" class="lang-sheet-item"><span>हिन्दी</span></a>
 		</div>
 	</div>
 </body>
