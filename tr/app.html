@@ -36,7 +36,7 @@
 		img-src 'self' data: https:;
 		connect-src 'self' https://www.gstatic.com https://cdn.jsdelivr.net https://*.cloudfunctions.net https://*.firebaseio.com https://www.google-analytics.com https://www.googletagmanager.com;
 		frame-src https://accounts.google.com https://*.firebaseapp.com;
-	\">
+	">
 
 	<!-- Security Headers -->
 	<meta http-equiv="X-Content-Type-Options" content="nosniff">
@@ -185,8 +185,8 @@
 			100% { background-position: 300% center; }
 		}
 
-		/* Detected OS badge */
-		.detected-badge {
+		/* Status badge */
+		.status-badge {
 			display: inline-flex;
 			align-items: center;
 			gap: 10px;
@@ -199,6 +199,11 @@
 			font-weight: 600;
 			margin-bottom: 30px;
 			animation: badge-pulse 2s ease-in-out infinite;
+		}
+		.status-badge.coming-soon {
+			background: rgba(251, 191, 36, 0.15);
+			border-color: rgba(251, 191, 36, 0.5);
+			color: #fcd34d;
 		}
 		@keyframes badge-pulse {
 			0%, 100% { box-shadow: 0 0 20px rgba(124, 58, 237, 0.3); }
@@ -221,6 +226,8 @@
 			position: relative;
 			overflow: hidden;
 			box-shadow: 0 15px 40px rgba(124, 58, 237, 0.4);
+			border: none;
+			cursor: pointer;
 		}
 		.btn-main-download::before {
 			content: '';
@@ -243,9 +250,70 @@
 		.btn-main-download i {
 			font-size: 28px;
 		}
+		.btn-main-download.disabled {
+			opacity: 0.6;
+			cursor: not-allowed;
+			pointer-events: none;
+		}
 		.download-info {
 			font-size: 14px;
 			opacity: 0.9;
+		}
+
+		/* Notify form */
+		.notify-form {
+			max-width: 500px;
+			margin: 0 auto;
+		}
+		.notify-form .input-group {
+			display: flex;
+			gap: 12px;
+			background: rgba(255, 255, 255, 0.1);
+			border-radius: 16px;
+			padding: 8px;
+			backdrop-filter: blur(10px);
+			border: 1px solid rgba(255, 255, 255, 0.2);
+		}
+		.notify-form input {
+			flex: 1;
+			background: transparent;
+			border: none;
+			padding: 14px 20px;
+			font-size: 16px;
+			color: #fff;
+			outline: none;
+		}
+		.notify-form input::placeholder {
+			color: rgba(255, 255, 255, 0.5);
+		}
+		.notify-form button {
+			background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+			border: none;
+			padding: 14px 30px;
+			border-radius: 12px;
+			color: #fff;
+			font-weight: 600;
+			font-size: 15px;
+			cursor: pointer;
+			transition: all 0.3s;
+			white-space: nowrap;
+		}
+		.notify-form button:hover {
+			transform: scale(1.05);
+			box-shadow: 0 10px 30px rgba(124, 58, 237, 0.4);
+		}
+		.notify-form button:disabled {
+			opacity: 0.7;
+			cursor: not-allowed;
+		}
+		.notify-success {
+			display: none;
+			color: #34d399;
+			font-size: 15px;
+			margin-top: 15px;
+		}
+		.notify-success.show {
+			display: block;
 		}
 
 		/* Wave divider */
@@ -318,7 +386,7 @@
 			border: 2px solid #7c3aed;
 		}
 		.platform-card.recommended::after {
-			content: 'Recommended';
+			content: attr(data-recommend-text);
 			position: absolute;
 			top: 15px;
 			right: -35px;
@@ -329,6 +397,16 @@
 			font-weight: 700;
 			text-transform: uppercase;
 			transform: rotate(45deg);
+		}
+		.platform-card.disabled {
+			opacity: 0.6;
+		}
+		.platform-card.disabled:hover {
+			transform: none;
+			box-shadow: 0 10px 40px rgba(124, 58, 237, 0.08);
+		}
+		.platform-card.disabled::before {
+			display: none;
 		}
 		.platform-icon {
 			width: 80px;
@@ -341,7 +419,7 @@
 			margin: 0 auto 25px;
 			transition: all 0.4s;
 		}
-		.platform-card:hover .platform-icon {
+		.platform-card:not(.disabled):hover .platform-icon {
 			background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
 			transform: scale(1.1) rotate(5deg);
 		}
@@ -350,7 +428,7 @@
 			color: #7c3aed;
 			transition: all 0.4s;
 		}
-		.platform-card:hover .platform-icon i {
+		.platform-card:not(.disabled):hover .platform-icon i {
 			color: #fff;
 		}
 		.platform-name {
@@ -381,16 +459,83 @@
 			font-weight: 600;
 			text-decoration: none;
 			transition: all 0.3s;
+			border: none;
+			cursor: pointer;
 		}
 		.btn-platform-download:hover {
 			transform: translateY(-3px);
 			box-shadow: 0 10px 30px rgba(124, 58, 237, 0.4);
 			color: #fff;
 		}
+		.btn-platform-download.disabled {
+			background: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%);
+			cursor: not-allowed;
+			pointer-events: none;
+		}
+		.btn-platform-download.disabled:hover {
+			transform: none;
+			box-shadow: none;
+		}
+
+		/* Coming soon badge on cards */
+		.coming-soon-tag {
+			display: inline-block;
+			background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+			color: #1e0a3c;
+			padding: 6px 16px;
+			border-radius: 20px;
+			font-size: 12px;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 0.5px;
+		}
+
+		/* Features preview section */
+		.features-preview {
+			background: #fff;
+			padding: 80px 0;
+		}
+		.feature-preview-card {
+			background: linear-gradient(145deg, #f8f9ff 0%, #fff 100%);
+			border-radius: 20px;
+			padding: 35px;
+			height: 100%;
+			border: 1px solid rgba(124, 58, 237, 0.1);
+			transition: all 0.3s;
+		}
+		.feature-preview-card:hover {
+			border-color: rgba(124, 58, 237, 0.3);
+			box-shadow: 0 10px 30px rgba(124, 58, 237, 0.1);
+		}
+		.feature-preview-card .icon {
+			width: 60px;
+			height: 60px;
+			background: linear-gradient(135deg, rgba(124, 58, 237, 0.1) 0%, rgba(167, 139, 250, 0.1) 100%);
+			border-radius: 16px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 20px;
+		}
+		.feature-preview-card .icon i {
+			font-size: 24px;
+			color: #7c3aed;
+		}
+		.feature-preview-card h4 {
+			font-size: 20px;
+			font-weight: 700;
+			color: #1e0a3c;
+			margin-bottom: 12px;
+		}
+		.feature-preview-card p {
+			color: #6b7280;
+			margin: 0;
+			line-height: 1.6;
+		}
 
 		/* Requirements section */
 		.requirements-section {
-			background: #fff;
+			background: linear-gradient(180deg, #fff 0%, #f8f9ff 100%);
 			padding: 80px 0;
 		}
 		.req-card {
@@ -432,41 +577,6 @@
 			color: #22c55e;
 		}
 
-		/* Installation section */
-		.install-section {
-			background: linear-gradient(180deg, #fff 0%, #f8f9ff 100%);
-			padding: 80px 0;
-		}
-		.install-step {
-			display: flex;
-			gap: 25px;
-			margin-bottom: 30px;
-		}
-		.step-number {
-			width: 50px;
-			height: 50px;
-			background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
-			border-radius: 50%;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			color: #fff;
-			font-weight: 800;
-			font-size: 20px;
-			flex-shrink: 0;
-			box-shadow: 0 10px 30px rgba(124, 58, 237, 0.3);
-		}
-		.step-content h5 {
-			font-size: 18px;
-			font-weight: 700;
-			color: #1e0a3c;
-			margin-bottom: 8px;
-		}
-		.step-content p {
-			color: #6b7280;
-			margin: 0;
-		}
-
 		/* Mobile responsive */
 		@media (max-width: 991px) {
 			.hero-title {
@@ -486,6 +596,12 @@
 			}
 			.platform-card.recommended::after {
 				display: none;
+			}
+			.notify-form .input-group {
+				flex-direction: column;
+			}
+			.notify-form button {
+				width: 100%;
 			}
 		}
 	</style>
@@ -663,7 +779,7 @@
 	<main id="main-content">
 
 	<!-- Hero Area -->
-	<section id="main-content" class="app-hero">
+	<section class="app-hero">
 		<div class="orb orb-1"></div>
 		<div class="orb orb-2"></div>
 		<div class="orb orb-3"></div>
@@ -678,29 +794,53 @@
 					<h1 class="hero-title wow fadeInUp" data-i18n="landing.app.hero.title">Flyto2'yi İndirin</h1>
 					<p class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 20px; color: #c4b5fd; margin-bottom: 30px;" data-i18n="landing.app.hero.subtitle">Tarayıcı iş akışlarınızı otomatikleştirin. Çevrimdışı çalışır, verileriniz gizli kalır.</p>
 
-					<!-- Detected system badge -->
+					<!-- Status badge - controlled by Firebase -->
 					<div class="wow fadeInUp" data-wow-delay="0.2s">
-						<span class="detected-badge" id="detected-badge">
-							<i class="fas fa-microchip"></i>
-							<span id="detected-os" data-i18n="landing.app.hero.detecting">Sisteminiz algılanıyor...</span>
+						<span class="status-badge coming-soon" id="status-badge">
+							<i class="fas fa-rocket"></i>
+							<span id="status-text" data-i18n="landing.app.hero.comingSoon">Coming Soon</span>
 						</span>
 					</div>
 
-					<!-- Main download button -->
-					<div class="wow fadeInUp" data-wow-delay="0.3s">
-						<a href="#" class="btn-main-download" id="main-download-btn">
-							<i class="fas fa-download"></i>
-							<div>
-								<div id="download-btn-text" data-i18n="landing.app.hero.downloadFor">Sisteminiz için İndirin</div>
-								<div class="download-info" id="download-btn-info" data-i18n="landing.app.hero.detectingInfo">Algılanıyor...</div>
+					<!-- Coming Soon: Notify Form -->
+					<div id="coming-soon-content" class="wow fadeInUp" data-wow-delay="0.3s">
+						<p style="color: rgba(255,255,255,0.8); font-size: 16px; margin-bottom: 25px;" data-i18n="landing.app.hero.notifyDesc">
+							Be the first to know when the desktop app launches.
+						</p>
+						<form class="notify-form" id="notify-form">
+							<div class="input-group">
+								<input type="email" id="notify-email" placeholder="Enter your email" data-i18n-placeholder="landing.app.hero.emailPlaceholder" required>
+								<button type="submit" id="notify-btn">
+									<i class="fas fa-bell"></i> <span data-i18n="landing.app.hero.notifyMe">Notify Me</span>
+								</button>
 							</div>
-						</a>
+						</form>
+						<p class="notify-success" id="notify-success">
+							<i class="fas fa-check-circle"></i> <span data-i18n="landing.app.hero.notifySuccess">You're on the list! We'll email you when it's ready.</span>
+						</p>
+						<p style="margin-top: 20px; color: rgba(255,255,255,0.5); font-size: 14px;">
+							<i class="fas fa-code" style="margin-right: 8px;"></i>
+							<span data-i18n="landing.app.hero.cliAvailable">Want to start now?</span>
+							<a href="download.html" style="color: #a78bfa; text-decoration: underline;" data-i18n="landing.app.hero.tryCli">Try Flyto Core (CLI)</a>
+						</p>
 					</div>
 
-					<p class="wow fadeInUp" data-wow-delay="0.4s" style="margin-top: 25px; color: rgba(255,255,255,0.6); font-size: 14px;">
-						<i class="fas fa-shield-alt" style="margin-right: 5px;"></i>
-						<span data-i18n="landing.app.hero.proNote">Ücretsiz indirin. Tüm özellikler için Pro lisansı gereklidir.</span>
-					</p>
+					<!-- Available: Download Button (hidden by default) -->
+					<div id="available-content" style="display: none;">
+						<div class="wow fadeInUp" data-wow-delay="0.3s">
+							<a href="#" class="btn-main-download" id="main-download-btn">
+								<i class="fas fa-download"></i>
+								<div>
+									<div id="download-btn-text" data-i18n="landing.app.hero.downloadFor">Sisteminiz için İndirin</div>
+									<div class="download-info" id="download-btn-info">Detecting...</div>
+								</div>
+							</a>
+						</div>
+						<p class="wow fadeInUp" data-wow-delay="0.4s" style="margin-top: 25px; color: rgba(255,255,255,0.6); font-size: 14px;">
+							<i class="fas fa-shield-alt" style="margin-right: 5px;"></i>
+							<span data-i18n="landing.app.hero.proNote">Ücretsiz indirin. Tüm özellikler için Pro lisansı gereklidir.</span>
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -709,6 +849,74 @@
 			<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
 				<path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
 			</svg>
+		</div>
+	</section>
+
+	<!-- Features Preview Section (shown when coming soon) -->
+	<section class="features-preview" id="features-preview-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h2 class="section-title wow fadeInUp" data-i18n="landing.app.features.title">What's Coming</h2>
+					<p class="section-subtitle wow fadeInUp" data-wow-delay="0.1s" data-i18n="landing.app.features.subtitle">A powerful desktop experience for workflow automation</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="feature-preview-card wow fadeInUp" data-wow-delay="0.1s">
+						<div class="icon">
+							<i class="fas fa-desktop"></i>
+						</div>
+						<h4 data-i18n="landing.app.features.visual">Visual Workflow Builder</h4>
+						<p data-i18n="landing.app.features.visualDesc">Drag-and-drop interface to create automation workflows without writing code.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="feature-preview-card wow fadeInUp" data-wow-delay="0.2s">
+						<div class="icon">
+							<i class="fas fa-wifi-slash"></i>
+						</div>
+						<h4 data-i18n="landing.app.features.offline">100% Offline</h4>
+						<p data-i18n="landing.app.features.offlineDesc">Works completely offline. Your data never leaves your computer.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="feature-preview-card wow fadeInUp" data-wow-delay="0.3s">
+						<div class="icon">
+							<i class="fas fa-robot"></i>
+						</div>
+						<h4 data-i18n="landing.app.features.browser">Browser Automation</h4>
+						<p data-i18n="landing.app.features.browserDesc">Record and replay browser actions. Automate repetitive web tasks.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="feature-preview-card wow fadeInUp" data-wow-delay="0.4s">
+						<div class="icon">
+							<i class="fas fa-clock"></i>
+						</div>
+						<h4 data-i18n="landing.app.features.schedule">Scheduled Tasks</h4>
+						<p data-i18n="landing.app.features.scheduleDesc">Run workflows on a schedule. Set it and forget it.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="feature-preview-card wow fadeInUp" data-wow-delay="0.5s">
+						<div class="icon">
+							<i class="fas fa-cubes"></i>
+						</div>
+						<h4 data-i18n="landing.app.features.modules">250+ Modules</h4>
+						<p data-i18n="landing.app.features.modulesDesc">Built-in modules for data processing, file operations, API calls, and more.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="feature-preview-card wow fadeInUp" data-wow-delay="0.6s">
+						<div class="icon">
+							<i class="fas fa-lock"></i>
+						</div>
+						<h4 data-i18n="landing.app.features.secure">Secure & Private</h4>
+						<p data-i18n="landing.app.features.secureDesc">No cloud dependency. Your workflows and data stay on your machine.</p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 
@@ -724,44 +932,38 @@
 			<div class="row" id="platform-cards">
 				<!-- macOS Apple Silicon -->
 				<div class="col-lg-4 col-md-6 mb-30">
-					<div class="platform-card wow fadeInUp" data-wow-delay="0.1s" id="card-macos-arm">
+					<div class="platform-card disabled wow fadeInUp" data-wow-delay="0.1s" id="card-macos-arm" data-recommend-text="Recommended">
 						<div class="platform-icon">
 							<i class="fab fa-apple"></i>
 						</div>
 						<div class="platform-name">macOS</div>
-						<div class="platform-arch">Apple Silicon (M1/M2/M3)</div>
-						<div class="platform-size">~150 MB</div>
-						<a href="https://github.com/flytohub/flyto-cloud/releases/latest/download/flyto-desktop-macos-arm64.dmg" class="btn-platform-download" data-platform="macos-arm64">
-							<i class="fas fa-download"></i> Download .dmg
-						</a>
+						<div class="platform-arch">Apple Silicon (M1/M2/M3/M4)</div>
+						<div class="platform-size" id="size-macos-arm">~150 MB</div>
+						<span class="coming-soon-tag" data-i18n="landing.app.platforms.comingSoon">Coming Soon</span>
 					</div>
 				</div>
 				<!-- Windows -->
 				<div class="col-lg-4 col-md-6 mb-30">
-					<div class="platform-card wow fadeInUp" data-wow-delay="0.2s" id="card-windows">
+					<div class="platform-card disabled wow fadeInUp" data-wow-delay="0.2s" id="card-windows" data-recommend-text="Recommended">
 						<div class="platform-icon">
 							<i class="fab fa-windows"></i>
 						</div>
 						<div class="platform-name">Windows</div>
 						<div class="platform-arch">64-bit (x64)</div>
-						<div class="platform-size">~120 MB</div>
-						<a href="https://github.com/flytohub/flyto-cloud/releases/latest/download/flyto-desktop-windows-x64.zip" class="btn-platform-download" data-platform="windows-x64">
-							<i class="fas fa-download"></i> Download .zip
-						</a>
+						<div class="platform-size" id="size-windows">~120 MB</div>
+						<span class="coming-soon-tag" data-i18n="landing.app.platforms.comingSoon">Coming Soon</span>
 					</div>
 				</div>
 				<!-- Linux x64 -->
 				<div class="col-lg-4 col-md-6 mb-30">
-					<div class="platform-card wow fadeInUp" data-wow-delay="0.3s" id="card-linux-x64">
+					<div class="platform-card disabled wow fadeInUp" data-wow-delay="0.3s" id="card-linux-x64" data-recommend-text="Recommended">
 						<div class="platform-icon">
 							<i class="fab fa-linux"></i>
 						</div>
 						<div class="platform-name">Linux</div>
 						<div class="platform-arch">x64 (AMD64)</div>
-						<div class="platform-size">~130 MB</div>
-						<a href="https://github.com/flytohub/flyto-cloud/releases/latest/download/flyto-desktop-linux-x64.tar.gz" class="btn-platform-download" data-platform="linux-x64">
-							<i class="fas fa-download"></i> Download .tar.gz
-						</a>
+						<div class="platform-size" id="size-linux">~130 MB</div>
+						<span class="coming-soon-tag" data-i18n="landing.app.platforms.comingSoon">Coming Soon</span>
 					</div>
 				</div>
 			</div>
@@ -770,10 +972,10 @@
 				<div class="col-lg-12 text-center">
 					<p style="color: #6b7280; margin-bottom: 20px;">
 						<i class="fas fa-code" style="color: #7c3aed;"></i>
-						Looking for Python package or Docker deployment?
+						<span data-i18n="landing.app.platforms.devNote">Looking for Python package or Docker deployment?</span>
 					</p>
 					<a href="download.html" class="btn-platform-download" style="background: linear-gradient(135deg, #1e0a3c 0%, #4c1d95 100%);">
-						<i class="fas fa-terminal"></i> Developer Downloads
+						<i class="fas fa-terminal"></i> <span data-i18n="landing.app.platforms.devDownloads">Developer Downloads</span>
 					</a>
 				</div>
 			</div>
@@ -791,79 +993,35 @@
 			<div class="row">
 				<div class="col-lg-4 col-md-6 mb-30">
 					<div class="req-card wow fadeInUp" data-wow-delay="0.1s">
-						<h3><i class="fab fa-apple"></i> macOS</h3>
+						<h4><i class="fab fa-apple"></i> macOS</h4>
 						<ul class="req-list">
-							<li><i class="fas fa-check-circle"></i> macOS 11 (Big Sur) or later</li>
-							<li><i class="fas fa-check-circle"></i> Apple Silicon or Intel processor</li>
-							<li><i class="fas fa-check-circle"></i> 4 GB RAM minimum</li>
-							<li><i class="fas fa-check-circle"></i> 500 MB disk space</li>
+							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.macosVersion">macOS 11 (Big Sur) or later</span></li>
+							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.macosProcessor">Apple Silicon or Intel processor</span></li>
+							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.ram">4 GB RAM minimum</span></li>
+							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.disk">500 MB disk space</span></li>
 						</ul>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 mb-30">
 					<div class="req-card wow fadeInUp" data-wow-delay="0.2s">
-						<h3><i class="fab fa-windows"></i> Windows</h3>
+						<h4><i class="fab fa-windows"></i> Windows</h4>
 						<ul class="req-list">
-							<li><i class="fas fa-check-circle"></i> Windows 10 (64-bit) or later</li>
-							<li><i class="fas fa-check-circle"></i> x64 processor</li>
-							<li><i class="fas fa-check-circle"></i> 4 GB RAM minimum</li>
-							<li><i class="fas fa-check-circle"></i> 500 MB disk space</li>
+							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.windowsVersion">Windows 10 (64-bit) or later</span></li>
+							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.windowsProcessor">x64 processor</span></li>
+							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.ram">4 GB RAM minimum</span></li>
+							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.disk">500 MB disk space</span></li>
 						</ul>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 mb-30">
 					<div class="req-card wow fadeInUp" data-wow-delay="0.3s">
-						<h3><i class="fab fa-linux"></i> Linux</h3>
+						<h4><i class="fab fa-linux"></i> Linux</h4>
 						<ul class="req-list">
-							<li><i class="fas fa-check-circle"></i> Ubuntu 20.04+ / Debian 11+</li>
-							<li><i class="fas fa-check-circle"></i> x64 or ARM64 processor</li>
-							<li><i class="fas fa-check-circle"></i> 4 GB RAM minimum</li>
-							<li><i class="fas fa-check-circle"></i> 500 MB disk space</li>
+							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.linuxVersion">Ubuntu 20.04+ / Debian 11+</span></li>
+							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.linuxProcessor">x64 or ARM64 processor</span></li>
+							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.ram">4 GB RAM minimum</span></li>
+							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.disk">500 MB disk space</span></li>
 						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- Installation Steps -->
-	<section class="install-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12 text-center mb-50">
-					<h2 class="section-title wow fadeInUp" data-i18n="landing.app.install.title">Kurulum Kılavuzu</h2>
-					<p class="section-subtitle wow fadeInUp" data-wow-delay="0.1s" data-i18n="landing.app.install.subtitle">Birkaç dakikada çalışmaya başlayın</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-6 offset-lg-3">
-					<div class="install-step wow fadeInUp" data-wow-delay="0.1s">
-						<div class="step-number">1</div>
-						<div class="step-content">
-							<h3 data-i18n="landing.app.install.step1">Yükleyiciyi indirin</h3>
-							<p data-i18n="landing.app.install.step1Desc">Yukarıdan işletim sisteminize uygun sürümü seçin</p>
-						</div>
-					</div>
-					<div class="install-step wow fadeInUp" data-wow-delay="0.2s">
-						<div class="step-number">2</div>
-						<div class="step-content">
-							<h3 data-i18n="landing.app.install.step2">Yükleyiciyi çalıştırın</h3>
-							<p data-i18n="landing.app.install.step2Desc">İndirilen dosyaya çift tıklayın ve talimatları izleyin</p>
-						</div>
-					</div>
-					<div class="install-step wow fadeInUp" data-wow-delay="0.3s">
-						<div class="step-number">3</div>
-						<div class="step-content">
-							<h3 data-i18n="landing.app.install.step3">Flyto2'yi başlatın</h3>
-							<p data-i18n="landing.app.install.step3Desc">Uygulamayı açın ve iş akışlarınızı otomatikleştirmeye başlayın</p>
-						</div>
-					</div>
-					<div class="install-step wow fadeInUp" data-wow-delay="0.4s">
-						<div class="step-number">4</div>
-						<div class="step-content">
-							<h3 data-i18n="landing.app.install.step4">Pro'yu Etkinleştirin (İsteğe Bağlı)</h3>
-							<p data-i18n="landing.app.install.step4Desc">Tüm özelliklerin kilidini açmak için lisans dosyanızı içe aktarın</p>
-						</div>
 					</div>
 				</div>
 			</div>
@@ -937,7 +1095,7 @@
 						<div class="footer_social">
 							<ul>
 								<li><a href="https://github.com/flytohub" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
-										<li><a href="https://www.youtube.com/channel/UCZ9OOqx4RM3Jjy1annWtsRA" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+								<li><a href="https://www.youtube.com/channel/UCZ9OOqx4RM3Jjy1annWtsRA" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
 							</ul>
 						</div>
 					</div>
@@ -960,51 +1118,129 @@
 	<script src="../assets/js/mobile-menu.js" defer></script>
 
 	<script>
-		// GitHub Release base URL
-		const RELEASE_BASE = 'https://github.com/flytohub/flyto-cloud/releases/latest/download';
+		// Firebase URL (from auth.js)
+		function getFirebaseUrl() {
+			return window.FlytoAuth?.FIREBASE_URL || 'https://us-central1-ticket-helper-dbc0e.cloudfunctions.net';
+		}
 
-		// Download URLs mapping
-		const DOWNLOAD_URLS = {
-			'macos-arm64': `${RELEASE_BASE}/flyto-desktop-macos-arm64.dmg`,
-			'windows-x64': `${RELEASE_BASE}/flyto-desktop-windows-x64.zip`,
-			'linux-x64': `${RELEASE_BASE}/flyto-desktop-linux-x64.tar.gz`
+		// App state
+		let appConfig = {
+			available: false,
+			version: null,
+			downloads: {
+				'macos-arm64': null,
+				'windows-x64': null,
+				'linux-x64': null
+			}
 		};
+
+		// Fetch app config from Firebase
+		async function fetchAppConfig() {
+			try {
+				const response = await fetch(`${getFirebaseUrl()}/getDesktopAppConfig`);
+				const data = await response.json();
+				if (data.ok) {
+					appConfig = data.config;
+					updateUI();
+				}
+			} catch (err) {
+				// Config fetch failed - show coming soon state (default)
+				console.debug('Desktop app config not available, showing coming soon state');
+			}
+		}
+
+		// Update UI based on config
+		function updateUI() {
+			const statusBadge = document.getElementById('status-badge');
+			const statusText = document.getElementById('status-text');
+			const comingSoonContent = document.getElementById('coming-soon-content');
+			const availableContent = document.getElementById('available-content');
+			const featuresSection = document.getElementById('features-preview-section');
+
+			if (appConfig.available) {
+				// App is available - show download UI
+				statusBadge.classList.remove('coming-soon');
+				statusBadge.innerHTML = '<i class="fas fa-microchip"></i><span id="detected-os">Detecting your system...</span>';
+
+				comingSoonContent.style.display = 'none';
+				availableContent.style.display = 'block';
+				featuresSection.style.display = 'none';
+
+				// Update platform cards
+				updatePlatformCards();
+
+				// Detect OS and update download button
+				detectOS();
+			} else {
+				// App not available - show coming soon (default state)
+				statusBadge.classList.add('coming-soon');
+			}
+		}
+
+		// Update platform cards for available state
+		function updatePlatformCards() {
+			const platforms = ['macos-arm64', 'windows-x64', 'linux-x64'];
+			const cardIds = {
+				'macos-arm64': 'card-macos-arm',
+				'windows-x64': 'card-windows',
+				'linux-x64': 'card-linux-x64'
+			};
+
+			platforms.forEach(platform => {
+				const card = document.getElementById(cardIds[platform]);
+				if (!card) return;
+
+				const downloadInfo = appConfig.downloads[platform];
+				if (downloadInfo && downloadInfo.url) {
+					card.classList.remove('disabled');
+
+					// Replace coming soon tag with download button
+					const comingSoonTag = card.querySelector('.coming-soon-tag');
+					if (comingSoonTag) {
+						const btn = document.createElement('a');
+						btn.href = downloadInfo.url;
+						btn.className = 'btn-platform-download';
+						btn.setAttribute('data-platform', platform);
+						btn.innerHTML = `<i class="fas fa-download"></i> ${downloadInfo.filename || 'Download'}`;
+						comingSoonTag.replaceWith(btn);
+					}
+
+					// Update size if available
+					if (downloadInfo.size) {
+						const sizeEl = card.querySelector('.platform-size');
+						if (sizeEl) {
+							sizeEl.textContent = downloadInfo.size;
+						}
+					}
+				}
+			});
+		}
 
 		// OS Detection
 		function detectOS() {
 			const userAgent = navigator.userAgent.toLowerCase();
-
-			let os = 'unknown';
-			let arch = 'x64';
 			let osName = '';
 			let downloadUrl = '#';
 			let downloadText = '';
 			let cardId = '';
 			let fileInfo = '';
 
-			// Detect OS
 			if (userAgent.includes('win')) {
-				os = 'windows';
 				osName = 'Windows';
-				arch = 'x64';
 				downloadText = 'Download for Windows';
 				cardId = 'card-windows';
-				downloadUrl = DOWNLOAD_URLS['windows-x64'];
+				downloadUrl = appConfig.downloads['windows-x64']?.url || '#';
 				fileInfo = '.zip archive';
 			} else if (userAgent.includes('mac')) {
-				os = 'macos';
 				osName = 'macOS (Apple Silicon)';
-				arch = 'arm64';
 				cardId = 'card-macos-arm';
-				downloadUrl = DOWNLOAD_URLS['macos-arm64'];
+				downloadUrl = appConfig.downloads['macos-arm64']?.url || '#';
 				downloadText = 'Download for macOS';
 				fileInfo = '.dmg installer';
 			} else if (userAgent.includes('linux')) {
-				os = 'linux';
 				osName = 'Linux (x64)';
-				arch = 'x64';
 				cardId = 'card-linux-x64';
-				downloadUrl = DOWNLOAD_URLS['linux-x64'];
+				downloadUrl = appConfig.downloads['linux-x64']?.url || '#';
 				downloadText = 'Download for Linux';
 				fileInfo = '.tar.gz archive';
 			} else {
@@ -1014,31 +1250,69 @@
 			}
 
 			// Update UI
-			document.getElementById('detected-os').textContent = osName + ' detected';
-			document.getElementById('download-btn-text').textContent = downloadText;
-			document.getElementById('download-btn-info').textContent = fileInfo;
+			const detectedOs = document.getElementById('detected-os');
+			if (detectedOs) {
+				detectedOs.textContent = osName + ' detected';
+			}
+
+			const downloadBtnText = document.getElementById('download-btn-text');
+			const downloadBtnInfo = document.getElementById('download-btn-info');
+			if (downloadBtnText) downloadBtnText.textContent = downloadText;
+			if (downloadBtnInfo) downloadBtnInfo.textContent = fileInfo;
 
 			// Set main download button URL
 			const mainBtn = document.getElementById('main-download-btn');
-			if (downloadUrl !== '#') {
+			if (mainBtn && downloadUrl !== '#') {
 				mainBtn.href = downloadUrl;
 			}
 
 			// Highlight recommended card
 			if (cardId) {
 				const card = document.getElementById(cardId);
-				if (card) {
+				if (card && !card.classList.contains('disabled')) {
 					card.classList.add('recommended');
 				}
 			}
-
-			return { os, arch, osName, downloadUrl };
 		}
+
+		// Notify form submission
+		document.getElementById('notify-form').addEventListener('submit', async (e) => {
+			e.preventDefault();
+			const email = document.getElementById('notify-email').value;
+			const btn = document.getElementById('notify-btn');
+			const successMsg = document.getElementById('notify-success');
+
+			btn.disabled = true;
+			btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+
+			try {
+				const response = await fetch(`${getFirebaseUrl()}/subscribeDesktopAppNotify`, {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify({ email, source: 'desktop_app_page' })
+				});
+				const data = await response.json();
+
+				if (data.ok) {
+					successMsg.classList.add('show');
+					document.getElementById('notify-email').value = '';
+					btn.innerHTML = '<i class="fas fa-check"></i> Subscribed';
+				} else {
+					throw new Error(data.error || 'Subscription failed');
+				}
+			} catch (err) {
+				btn.innerHTML = '<i class="fas fa-times"></i> Failed';
+				setTimeout(() => {
+					btn.innerHTML = '<i class="fas fa-bell"></i> <span data-i18n="landing.app.hero.notifyMe">Notify Me</span>';
+					btn.disabled = false;
+				}, 2000);
+			}
+		});
 
 		// Initialize
 		document.addEventListener('DOMContentLoaded', function() {
 			new WOW().init();
-			detectOS();
+			fetchAppConfig();
 		});
 	</script>
 
