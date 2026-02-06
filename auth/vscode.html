@@ -5,183 +5,370 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign in to Flyto2 - VS Code</title>
   <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #0f0f1a;
-      color: #e2e8f0;
+      font-family: 'Poppins', sans-serif;
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
+      background: linear-gradient(310deg, #5B21B6 0%, #7C3AED 50%, #a78bfa 100%);
+      overflow: hidden;
+      position: relative;
     }
+
+    /* Floating orbs */
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.4;
+      animation: float 8s ease-in-out infinite;
+    }
+    .orb-1 {
+      width: 300px; height: 300px;
+      background: #a78bfa;
+      top: -80px; left: -80px;
+      animation-delay: 0s;
+    }
+    .orb-2 {
+      width: 250px; height: 250px;
+      background: #7c3aed;
+      bottom: -60px; right: -60px;
+      animation-delay: -3s;
+    }
+    .orb-3 {
+      width: 180px; height: 180px;
+      background: #c4b5fd;
+      top: 50%; right: 15%;
+      animation-delay: -5s;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-30px) scale(1.05); }
+    }
+
+    /* Card */
     .card {
-      background: #1a1a2e;
-      border: 1px solid #2d2d44;
-      border-radius: 16px;
-      padding: 40px;
+      background: #fff;
+      border-radius: 24px;
+      padding: 44px 40px;
       width: 100%;
-      max-width: 400px;
+      max-width: 420px;
       margin: 20px;
+      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.15);
+      position: relative;
+      z-index: 1;
+      animation: cardIn 0.5s ease-out;
     }
+    @keyframes cardIn {
+      from { opacity: 0; transform: translateY(20px) scale(0.97); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    /* Logo */
     .logo {
       text-align: center;
       margin-bottom: 32px;
     }
     .logo h1 {
-      font-size: 24px;
+      font-size: 28px;
       font-weight: 700;
-      background: linear-gradient(135deg, #7c3aed, #a78bfa);
+      background: linear-gradient(310deg, #5B21B6, #7C3AED);
+      background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     .logo p {
-      color: #94a3b8;
+      color: #67748e;
       font-size: 14px;
-      margin-top: 8px;
+      margin-top: 6px;
+      font-weight: 400;
     }
+
+    /* Badge */
+    .vscode-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #f3f0ff;
+      color: #7c3aed;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 28px;
+    }
+    .vscode-badge svg {
+      width: 14px; height: 14px;
+    }
+
+    /* Form Fields */
     .field {
-      margin-bottom: 16px;
+      margin-bottom: 20px;
     }
     .field label {
       display: block;
-      font-size: 12px;
       font-weight: 500;
-      color: #94a3b8;
-      margin-bottom: 6px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+      font-size: 14px;
+      color: #374151;
+      margin-bottom: 8px;
+    }
+    .input-wrapper {
+      position: relative;
+    }
+    .input-wrapper i {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #9ca3af;
+      font-size: 16px;
+      transition: color 0.3s ease;
+      pointer-events: none;
     }
     .field input {
       width: 100%;
-      padding: 10px 14px;
-      background: #0f0f1a;
-      border: 1px solid #2d2d44;
-      border-radius: 8px;
-      color: #e2e8f0;
-      font-size: 14px;
+      padding: 14px 16px 14px 46px;
+      border: 2px solid #e5e7eb;
+      border-radius: 12px;
+      font-size: 15px;
+      font-family: 'Poppins', sans-serif;
+      color: #1f2937;
+      background: #fff;
       outline: none;
-      transition: border-color 0.2s;
+      transition: all 0.3s ease;
     }
     .field input:focus {
       border-color: #7c3aed;
+      box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.1);
+    }
+    .field input:focus + i,
+    .input-wrapper:focus-within i {
+      color: #7c3aed;
     }
     .field input::placeholder {
-      color: #4a5568;
+      color: #9ca3af;
     }
+
+    /* Button */
     .btn {
       width: 100%;
-      padding: 12px;
+      padding: 14px 24px;
       border: none;
-      border-radius: 8px;
-      font-size: 14px;
+      border-radius: 12px;
+      font-size: 16px;
       font-weight: 600;
+      font-family: 'Poppins', sans-serif;
       cursor: pointer;
-      transition: opacity 0.2s;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       margin-top: 8px;
     }
-    .btn:hover { opacity: 0.9; }
-    .btn:disabled { opacity: 0.5; cursor: not-allowed; }
     .btn-primary {
-      background: linear-gradient(135deg, #7c3aed, #5b21b6);
+      background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
       color: #fff;
     }
-    .error {
-      color: #f87171;
-      font-size: 13px;
-      text-align: center;
-      margin-top: 12px;
-      min-height: 20px;
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(124, 58, 237, 0.35);
     }
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+    .btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none !important;
+      box-shadow: none !important;
+    }
+
+    /* Error */
+    .error-inline {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      color: #dc2626;
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-size: 13px;
+      margin-top: 14px;
+      text-align: center;
+      animation: shake 0.4s ease;
+      display: none;
+    }
+    .error-inline.show { display: block; }
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      20%, 60% { transform: translateX(-6px); }
+      40%, 80% { transform: translateX(6px); }
+    }
+
+    /* Hint */
     .hint {
       text-align: center;
-      font-size: 12px;
-      color: #64748b;
+      font-size: 13px;
+      color: #67748e;
       margin-top: 24px;
       line-height: 1.6;
     }
-    .hint .vscode-icon {
-      display: inline-block;
-      width: 16px;
-      height: 16px;
+    .hint svg {
+      width: 15px; height: 15px;
       vertical-align: text-bottom;
-      margin-right: 4px;
+      margin-right: 3px;
     }
 
     /* States */
     .state { display: none; text-align: center; }
     .state.active { display: block; }
+
     .state-icon {
-      font-size: 48px;
-      margin-bottom: 16px;
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      margin-bottom: 20px;
+      animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
+    @keyframes popIn {
+      from { opacity: 0; transform: scale(0.5); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .state-icon.success {
+      background: #f0fdf4;
+      color: #16a34a;
+    }
+    .state-icon.error {
+      background: #fef2f2;
+      color: #dc2626;
+    }
+    .state-icon.loading {
+      background: #f3f0ff;
+    }
+
     .state h2 {
-      font-size: 18px;
+      font-size: 20px;
       font-weight: 600;
+      color: #344767;
       margin-bottom: 8px;
     }
     .state p {
-      color: #94a3b8;
+      color: #67748e;
       font-size: 14px;
       line-height: 1.6;
     }
+
+    /* Spinner */
     .spinner {
-      width: 40px;
-      height: 40px;
-      border: 3px solid #2d2d44;
+      width: 36px;
+      height: 36px;
+      border: 3px solid #e9d5ff;
       border-top-color: #7c3aed;
       border-radius: 50%;
-      animation: spin 0.8s linear infinite;
-      margin: 0 auto 16px;
+      animation: spin 0.7s linear infinite;
+      margin: 0 auto;
     }
     @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* Redirect link */
+    .redirect-link {
+      display: inline-block;
+      margin-top: 16px;
+      color: #7c3aed;
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .redirect-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      .card { padding: 32px 24px; margin: 12px; }
+      .logo h1 { font-size: 24px; }
+    }
   </style>
 </head>
 <body>
-  <!-- Login Form -->
-  <div class="card" id="loginCard">
+  <!-- Background orbs -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <div class="card">
     <div class="logo">
       <h1>Flyto2</h1>
-      <p>Sign in to connect VS Code</p>
+      <p>Sign in to connect your account</p>
     </div>
 
+    <!-- Login Form -->
     <div id="formState" class="state active">
+      <div style="text-align:center">
+        <span class="vscode-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 0L24 6.5V17.5L17.5 24L0 12L5.5 7.5L17.5 15.5V8.5L12 3L17.5 0Z"/></svg>
+          VS Code Extension
+        </span>
+      </div>
+
       <div class="field">
         <label>Email</label>
-        <input type="email" id="email" placeholder="you@example.com" autocomplete="email" />
+        <div class="input-wrapper">
+          <input type="email" id="email" placeholder="you@example.com" autocomplete="email" />
+          <i>&#9993;</i>
+        </div>
       </div>
       <div class="field">
         <label>Password</label>
-        <input type="password" id="password" placeholder="Enter password" autocomplete="current-password" />
+        <div class="input-wrapper">
+          <input type="password" id="password" placeholder="Enter your password" autocomplete="current-password" />
+          <i>&#128274;</i>
+        </div>
       </div>
+
       <button class="btn btn-primary" id="loginBtn">Sign In</button>
-      <div class="error" id="error"></div>
+
+      <div class="error-inline" id="error"></div>
+
       <p class="hint">
-        <svg class="vscode-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M17.5 0L24 6.5V17.5L17.5 24L0 12L5.5 7.5L17.5 15.5V8.5L12 3L17.5 0Z" fill="#64748b"/>
-        </svg>
+        <svg viewBox="0 0 24 24" fill="#7c3aed" opacity="0.6"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
         You will be redirected back to VS Code after signing in.
       </p>
     </div>
 
+    <!-- Loading -->
     <div id="loadingState" class="state">
-      <div class="spinner"></div>
-      <h2>Signing in...</h2>
-      <p>Please wait while we verify your credentials.</p>
+      <div class="state-icon loading">
+        <div class="spinner"></div>
+      </div>
+      <h2>Signing you in...</h2>
+      <p>Verifying your credentials and<br>preparing the redirect.</p>
     </div>
 
+    <!-- Success -->
     <div id="successState" class="state">
-      <div class="state-icon">&#10003;</div>
-      <h2>Signed in successfully!</h2>
-      <p>Redirecting back to VS Code...<br>You can close this tab.</p>
+      <div class="state-icon success">&#10003;</div>
+      <h2>Welcome back!</h2>
+      <p>Opening VS Code now...<br>You can safely close this tab.</p>
+      <a href="#" id="retryRedirect" class="redirect-link">Click here if VS Code didn't open</a>
     </div>
 
+    <!-- Error -->
     <div id="errorState" class="state">
-      <div class="state-icon">&#10007;</div>
+      <div class="state-icon error">&#10007;</div>
       <h2>Something went wrong</h2>
       <p id="errorStateMsg">Please try again.</p>
-      <button class="btn btn-primary" style="margin-top:20px" onclick="showForm()">Try Again</button>
+      <button class="btn btn-primary" style="margin-top:24px" onclick="showForm()">Try Again</button>
     </div>
   </div>
 
@@ -190,7 +377,6 @@
   <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js"></script>
 
   <script>
-    // Firebase config (same as main site)
     const firebaseConfig = {
       apiKey: "AIzaSyCKXJNd28MRs0yDQHK3xZKlJkIqv0MbxZE",
       authDomain: "ticket-helper-dbc0e.firebaseapp.com",
@@ -206,24 +392,32 @@
     }
     const auth = firebase.auth();
 
-    // Backend API
     const API_BASE = 'https://api.flyto2.net/api';
-
-    // Read state param from URL
     const params = new URLSearchParams(window.location.search);
     const stateParam = params.get('state') || '';
 
-    // UI helpers
+    let lastVscodeUri = '';
+
     function showState(id) {
       document.querySelectorAll('.state').forEach(el => el.classList.remove('active'));
       document.getElementById(id).classList.add('active');
     }
-    function showForm() { showState('formState'); }
+    function showForm() {
+      showState('formState');
+      document.getElementById('error').classList.remove('show');
+      document.getElementById('error').textContent = '';
+    }
 
-    // Login flow
     document.getElementById('loginBtn').addEventListener('click', doLogin);
+    document.getElementById('email').addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') document.getElementById('password').focus();
+    });
     document.getElementById('password').addEventListener('keydown', function(e) {
       if (e.key === 'Enter') doLogin();
+    });
+    document.getElementById('retryRedirect').addEventListener('click', function(e) {
+      e.preventDefault();
+      if (lastVscodeUri) window.location.href = lastVscodeUri;
     });
 
     async function doLogin() {
@@ -232,19 +426,18 @@
       const errorEl = document.getElementById('error');
 
       if (!email || !password) {
-        errorEl.textContent = 'Please enter email and password.';
+        errorEl.textContent = 'Please enter your email and password.';
+        errorEl.classList.add('show');
         return;
       }
 
-      errorEl.textContent = '';
+      errorEl.classList.remove('show');
       showState('loadingState');
 
       try {
-        // 1. Sign in with Firebase
         const cred = await auth.signInWithEmailAndPassword(email, password);
         const idToken = await cred.user.getIdToken();
 
-        // 2. Exchange Firebase token for one-time auth code
         const res = await fetch(API_BASE + '/auth/vscode-code', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -256,29 +449,29 @@
           throw new Error(data.error || 'Failed to generate auth code');
         }
 
-        // 3. Redirect to VSCode
-        showState('successState');
-
-        const vscodeUri = 'vscode://flyto.flyto2/auth-callback'
+        lastVscodeUri = 'vscode://flyto.flyto2/auth-callback'
           + '?code=' + encodeURIComponent(data.code)
           + '&state=' + encodeURIComponent(stateParam);
 
-        window.location.href = vscodeUri;
+        showState('successState');
+        window.location.href = lastVscodeUri;
 
       } catch (err) {
         let msg = err.message || 'Login failed';
-        // Friendly Firebase error messages
-        if (err.code === 'auth/wrong-password' || err.code === 'auth/user-not-found') {
+        if (err.code === 'auth/wrong-password' || err.code === 'auth/user-not-found' || err.code === 'auth/invalid-credential') {
           msg = 'Invalid email or password.';
         } else if (err.code === 'auth/too-many-requests') {
           msg = 'Too many attempts. Please try again later.';
-        } else if (err.code === 'auth/invalid-credential') {
-          msg = 'Invalid email or password.';
         }
         document.getElementById('errorStateMsg').textContent = msg;
         showState('errorState');
       }
     }
+
+    // Auto-focus email on load
+    window.addEventListener('load', function() {
+      document.getElementById('email').focus();
+    });
   </script>
 </body>
 </html>
