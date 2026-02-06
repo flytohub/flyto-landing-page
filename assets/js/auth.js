@@ -16,7 +16,7 @@
 
 // Firebase Configuration (private)
 const firebaseConfig = {
-	apiKey: "AIzaSyCKXJNd28MRs0yDQHK3xZKlJkIqv0MbxZE",
+	apiKey: "AIzaSyA07a63HTr6L7UOlAEbp6iJntDgKQstMcI",
 	authDomain: "ticket-helper-dbc0e.firebaseapp.com",
 	projectId: "ticket-helper-dbc0e",
 	storageBucket: "ticket-helper-dbc0e.firebasestorage.app",
