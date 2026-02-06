@@ -720,6 +720,26 @@
       if (lastVscodeUri) window.location.href = lastVscodeUri;
     });
 
+    async function exchangeTokenAndRedirect(idToken) {
+      var res = await fetch(API_BASE + '/auth/vscode-code', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ firebase_token: idToken }),
+      });
+      var data = await res.json();
+
+      if (!data.ok || !data.code) {
+        throw new Error(data.error || 'Failed to generate auth code');
+      }
+
+      lastVscodeUri = 'vscode://flyto.flyto2/auth-callback'
+        + '?code=' + encodeURIComponent(data.code)
+        + '&state=' + encodeURIComponent(stateParam);
+
+      showState('successState');
+      window.location.href = lastVscodeUri;
+    }
+
     async function doLogin() {
       var email = document.getElementById('email').value.trim();
       var password = document.getElementById('password').value;
@@ -737,25 +757,7 @@
       try {
         var cred = await auth.signInWithEmailAndPassword(email, password);
         var idToken = await cred.user.getIdToken();
-
-        var res = await fetch(API_BASE + '/auth/vscode-code', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ firebase_token: idToken }),
-        });
-        var data = await res.json();
-
-        if (!data.ok || !data.code) {
-          throw new Error(data.error || 'Failed to generate auth code');
-        }
-
-        lastVscodeUri = 'vscode://flyto.flyto2/auth-callback'
-          + '?code=' + encodeURIComponent(data.code)
-          + '&state=' + encodeURIComponent(stateParam);
-
-        showState('successState');
-        window.location.href = lastVscodeUri;
-
+        await exchangeTokenAndRedirect(idToken);
       } catch (err) {
         var msg = err.message || 'Login failed';
         if (err.code === 'auth/wrong-password' || err.code === 'auth/user-not-found' || err.code === 'auth/invalid-credential') {
@@ -768,8 +770,25 @@
       }
     }
 
-    window.addEventListener('load', function() {
-      document.getElementById('email').focus();
+    // Auto-detect existing login from flyto2.com
+    var autoLoginHandled = false;
+    auth.onAuthStateChanged(async function(user) {
+      if (autoLoginHandled) return;
+      autoLoginHandled = true;
+
+      if (user && stateParam) {
+        // Already logged in on flyto2.com — skip the form
+        showState('loadingState');
+        try {
+          var idToken = await user.getIdToken();
+          await exchangeTokenAndRedirect(idToken);
+        } catch (err) {
+          document.getElementById('errorStateMsg').textContent = err.message || 'Auto sign-in failed';
+          showState('errorState');
+        }
+      } else {
+        document.getElementById('email').focus();
+      }
     });
   </script>
 </body>
