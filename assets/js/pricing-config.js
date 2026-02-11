@@ -37,33 +37,6 @@ const FALLBACK_PRICING = {
 			plans: []
 		},
 		{
-			key: "offline",
-			title: "Offline License",
-			enabled: true,
-			comingSoon: false,
-			badge: "Available",
-			description: "Perpetual license for air-gapped and secure environments.",
-			cta: { type: "buy", label: "Buy Now", url: "buy-offline.html" },
-			plans: [
-				{
-					id: "offline_pro",
-					name: "Pro Offline",
-					price: 199,
-					currency: "USD",
-					billing: "one_time",
-					period: "lifetime",
-					features: [
-						"Offline execution",
-						"License file activation",
-						"1 year updates included",
-						"Email support"
-					],
-					enabled: true,
-					popular: true
-				}
-			]
-		},
-		{
 			key: "enterprise",
 			title: "Enterprise",
 			enabled: true,
@@ -99,11 +72,6 @@ const UI_TIMING = {
 	BUTTON_RESET_SHORT: 2000,  // Time before button resets after duplicate submission
 	BUTTON_RESET_LONG: 3000,   // Time before button resets after successful submission
 	WAITLIST_EXPIRY_DAYS: 30   // Days before waitlist localStorage entries expire
-};
-
-// Price Constants
-const PRICE_DEFAULTS = {
-	PRO_OFFLINE_CENTS: 19900   // Default price in cents ($199.00)
 };
 
 /**
@@ -156,11 +124,6 @@ function convertApiPricingToConfig(apiPricing) {
 	}
 
 	// Otherwise, convert from legacy API format
-	const proOffline = apiPricing.pro_offline;
-	if (!proOffline) {
-		return FALLBACK_PRICING;
-	}
-
 	return {
 		version: 1,
 		sections: [
@@ -183,33 +146,6 @@ function convertApiPricingToConfig(apiPricing) {
 				description: "Pro features are coming soon. Stay tuned!",
 				cta: { type: "waitlist", label: "Get Notified" },
 				plans: []
-			},
-			{
-				key: "offline",
-				title: "Offline License",
-				enabled: true,
-				comingSoon: false,
-				badge: "Available",
-				description: "Perpetual license for air-gapped and secure environments.",
-				cta: { type: "buy", label: "Buy Now", url: "buy-offline.html" },
-				plans: [
-					{
-						id: "offline_pro",
-						name: "Pro Offline",
-						price: (proOffline.price || PRICE_DEFAULTS.PRO_OFFLINE_CENTS) / 100,
-						currency: (proOffline.currency || 'usd').toUpperCase(),
-						billing: proOffline.period === 'lifetime' ? 'one_time' : 'yearly',
-						period: proOffline.period || 'year',
-						features: proOffline.features || [
-							"Offline execution",
-							"License file activation",
-							"1 year updates included",
-							"Email support"
-						],
-						enabled: true,
-						popular: true
-					}
-				]
 			},
 			{
 				key: "enterprise",
@@ -245,11 +181,10 @@ function convertApiPricingToConfig(apiPricing) {
 
 /**
  * Fetch pricing config from Cloud Function or Firestore
- * 2.1 Logic fix: Prioritize Cloud Function API for consistency with buy-offline.html
  */
 async function fetchPricingConfig() {
 	try {
-		// 2.1: Try Cloud Function API first (same as buy-offline.html)
+		// Try Cloud Function API first
 		if (typeof window.FlytoAuth !== 'undefined' && window.FlytoAuth.FIREBASE_URL) {
 			try {
 				const response = await fetch(`${window.FlytoAuth.FIREBASE_URL}/getPricing`);
@@ -296,13 +231,6 @@ async function fetchPricingConfig() {
  * Convert legacy offline_pricing format to new pricing_v1 format
  */
 function convertLegacyPricing(legacy) {
-	const plans = legacy.plans || {};
-	const proOffline = plans.pro_offline;
-
-	if (!proOffline) {
-		return FALLBACK_PRICING;
-	}
-
 	// Build new format
 	const config = {
 		version: 1,
@@ -329,35 +257,7 @@ function convertLegacyPricing(legacy) {
 				cta: { type: "waitlist", label: "Get Notified" },
 				plans: []
 			},
-			// Offline License - From AdminPricing
-			{
-				key: "offline",
-				title: "Offline License",
-				enabled: true,
-				comingSoon: false,
-				badge: "Available",
-				description: "Perpetual license for air-gapped and secure environments.",
-				cta: { type: "buy", label: "Buy Now", url: "buy-offline.html" },
-				plans: [
-					{
-						id: "offline_pro",
-						name: proOffline.display_price ? `Pro Offline` : "Pro Offline",
-						price: (proOffline.price || PRICE_DEFAULTS.PRO_OFFLINE_CENTS) / 100,
-						currency: (proOffline.currency || 'usd').toUpperCase(),
-						billing: proOffline.period === 'lifetime' ? 'one_time' : 'yearly',
-						period: proOffline.period || 'year',
-						features: proOffline.features || [
-							"Offline execution",
-							"License file activation",
-							"1 year updates included",
-							"Email support"
-						],
-						enabled: true,
-						popular: true
-					}
-				]
-			},
-			// Enterprise Offline
+			// Enterprise
 			{
 				key: "enterprise",
 				title: "Enterprise",
@@ -565,58 +465,23 @@ function renderSection(section) {
 }
 
 /**
- * Render all pricing sections into tabs
+ * Render all pricing sections
  */
 function renderPricingTabs(config) {
 	const container = document.getElementById('pricingContainer');
 	if (!container) return;
 
-	// Separate sections into categories
-	const cloudSections = (config.sections || []).filter(s =>
-		['cloud_saas', 'pro'].includes(s.key)
-	);
-	const offlineSections = (config.sections || []).filter(s =>
-		['offline', 'enterprise'].includes(s.key)
-	);
+	const sections = (config.sections || []).filter(s => s.key !== 'offline');
 
-	// Check if cloud has any enabled plans
-	const hasCloudPlans = cloudSections.some(s => s.enabled && s.plans?.length > 0);
-
-	// Render Cloud tab content
-	let cloudContent = '';
-	cloudSections.forEach(section => {
-		cloudContent += renderSection(section);
+	// Render all enabled sections directly (no tabs)
+	let sectionsContent = '';
+	sections.forEach(section => {
+		sectionsContent += renderSection(section);
 	});
 
-	// Render Offline tab content
-	let offlineContent = '';
-	offlineSections.forEach(section => {
-		offlineContent += renderSection(section);
-	});
-
-	// Build tabs HTML
 	const html = `
-		<div class="pricing-tabs-wrapper">
-			<div class="pricing-tab-buttons">
-				<button class="pricing-tab ${!hasCloudPlans ? '' : 'active'}" data-tab="cloud" tabindex="0" role="tab" aria-selected="${hasCloudPlans ? 'true' : 'false'}">
-					<i class="bi bi-cloud"></i> Cloud
-				</button>
-				<button class="pricing-tab ${!hasCloudPlans ? 'active' : ''}" data-tab="offline" tabindex="0" role="tab" aria-selected="${!hasCloudPlans ? 'true' : 'false'}">
-					<i class="bi bi-hdd"></i> Offline License
-				</button>
-			</div>
-		</div>
-
-		<div class="pricing-tab-content" id="tabCloud" style="display: ${!hasCloudPlans ? 'none' : 'block'}">
-			<div class="row justify-content-center">
-				${cloudContent || '<div class="col-12 text-center text-muted">No plans available</div>'}
-			</div>
-		</div>
-
-		<div class="pricing-tab-content" id="tabOffline" style="display: ${!hasCloudPlans ? 'block' : 'none'}">
-			<div class="row justify-content-center">
-				${offlineContent || '<div class="col-12 text-center text-muted">No plans available</div>'}
-			</div>
+		<div class="row justify-content-center">
+			${sectionsContent || '<div class="col-12 text-center text-muted">No plans available</div>'}
 		</div>
 	`;
 
@@ -624,7 +489,7 @@ function renderPricingTabs(config) {
 }
 
 /**
- * Switch between pricing tabs
+ * Switch between pricing tabs (kept for API compatibility)
  */
 function switchPricingTab(tab) {
 	// Update tab buttons
@@ -642,7 +507,7 @@ function switchPricingTab(tab) {
 		content.style.display = 'none';
 	});
 
-	const targetTab = document.getElementById(tab === 'cloud' ? 'tabCloud' : 'tabOffline');
+	const targetTab = document.getElementById('tab' + tab.charAt(0).toUpperCase() + tab.slice(1));
 	if (targetTab) {
 		targetTab.style.display = 'block';
 	}

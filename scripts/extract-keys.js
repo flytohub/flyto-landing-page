@@ -17,7 +17,7 @@ const path = require('path');
 const CONFIG = {
   htmlDir: path.join(__dirname, '..'),
   i18nDir: path.join(__dirname, '..', '..', 'flyto-i18n', 'locales'),
-  htmlFiles: ['index.html', 'pricing.html', 'download.html', 'app.html', 'faq.html', 'contact.html', 'buy-offline.html', 'language-packs.html', 'product.html', 'use-cases.html', 'compare.html', 'philosophy.html', 'about.html', 'blog.html'],
+  htmlFiles: ['index.html', 'pricing.html', 'download.html', 'app.html', 'faq.html', 'contact.html', 'language-packs.html', 'product.html', 'use-cases.html', 'compare.html', 'philosophy.html', 'about.html', 'blog.html'],
   locales: ['en', 'zh-TW', 'ja', 'ko', 'fr', 'es', 'de', 'pt-BR', 'vi', 'id', 'th', 'tr', 'pl', 'it', 'hi'],
   dryRun: process.argv.includes('--dry-run')
 };

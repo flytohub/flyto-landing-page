@@ -356,7 +356,6 @@
 									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" data-i18n="landing.common.nav.pricing">Pricing</span>
 									<div class="nav-dropdown-menu">
 										<a href="pricing.html" class="nav-dropdown-item"><i class="bi bi-tag"></i><span data-i18n="landing.common.nav.plansAndPricing">Plans & Pricing</span></a>
-										<a href="buy-offline.html" class="nav-dropdown-item"><i class="bi bi-shield-lock"></i><span data-i18n="landing.common.nav.buyProLicense">Buy Pro License</span></a>
 									</div>
 								</li>
 								<li class="nav-dropdown">
@@ -387,7 +386,7 @@
 										<div class="dropdown-header-label" data-i18n="landing.common.auth.flytoAccount">Flyto2 Account</div>
 									</div>
 									<div class="dropdown-menu-items">
-										<a href="buy-offline.html" class="dropdown-menu-item">
+										<a href="pricing.html" class="dropdown-menu-item">
 											<i class="bi bi-key"></i>
 											<span data-i18n="landing.common.auth.myLicenses">My Licenses</span>
 										</a>
@@ -459,7 +458,7 @@
 							<span data-i18n="landing.compare.hero.title">How Flyto2</span> <span style="color: #a78bfa;" data-i18n="landing.compare.hero.titleHighlight">Compares</span>
 						</h1>
 						<p class="wow fadeInUp" data-wow-delay="0.1s" style="color: rgba(255,255,255,0.8); font-size: 20px; max-width: 700px; margin: 0 auto;" data-i18n="landing.compare.hero.description">
-							See how Flyto2 stacks up against other workflow automation platforms. We focus on human oversight, offline capability, and enterprise compliance.
+							See how Flyto2 stacks up against other workflow automation platforms. We focus on human oversight and enterprise compliance.
 						</p>
 					</div>
 				</div>
@@ -490,7 +489,6 @@
 						<h3 data-i18n="landing.compare.summary.flyto.title">Human Oversight Required</h3>
 						<ul style="list-style: none; padding: 0; margin: 0;">
 							<li style="padding: 8px 0; color: #374151;"><i class="fas fa-check" style="color: #10b981; margin-right: 10px;"></i><span data-i18n="landing.compare.summary.flyto.item1">Approval workflows</span></li>
-							<li style="padding: 8px 0; color: #374151;"><i class="fas fa-check" style="color: #10b981; margin-right: 10px;"></i><span data-i18n="landing.compare.summary.flyto.item2">Offline/air-gapped deployment</span></li>
 							<li style="padding: 8px 0; color: #374151;"><i class="fas fa-check" style="color: #10b981; margin-right: 10px;"></i><span data-i18n="landing.compare.summary.flyto.item3">Full audit trail needed</span></li>
 							<li style="padding: 8px 0; color: #374151;"><i class="fas fa-check" style="color: #10b981; margin-right: 10px;"></i><span data-i18n="landing.compare.summary.flyto.item4">Pause & verify workflows</span></li>
 						</ul>
@@ -561,11 +559,6 @@
 								<td><i class="fas fa-check-circle check-yes"></i></td>
 								<td><i class="fas fa-times-circle check-no"></i></td>
 							</tr>
-							<tr class="flyto-highlight">
-								<td>Works 100% offline</td>
-								<td><i class="fas fa-check-circle check-yes"></i><span class="winner-badge">Best</span></td>
-								<td><span class="check-partial">Self-hosted only</span></td>
-							</tr>
 							<tr>
 								<td>UI automation (browser/desktop)</td>
 								<td><i class="fas fa-check-circle check-yes"></i></td>
@@ -604,7 +597,7 @@
 						</tbody>
 					</table>
 					<div class="comparison-note">
-						<strong>Key Difference:</strong> API integration tools excel at connecting SaaS applications via webhooks and APIs. Flyto2 excels when you need to automate UI interactions with human oversight points. If your workflow involves approvals or needs to work offline, Flyto2 is the better choice.
+						<strong>Key Difference:</strong> API integration tools excel at connecting SaaS applications via webhooks and APIs. Flyto2 excels when you need to automate UI interactions with human oversight points. If your workflow involves approvals or human oversight, Flyto2 is the better choice.
 					</div>
 				</div>
 			</div>
@@ -649,11 +642,6 @@
 								<td><span class="check-partial">Complex setup</span></td>
 							</tr>
 							<tr class="flyto-highlight">
-								<td>Offline licensing (no phone-home)</td>
-								<td><i class="fas fa-check-circle check-yes"></i><span class="winner-badge">Best</span></td>
-								<td><i class="fas fa-times-circle check-no"></i></td>
-							</tr>
-							<tr class="flyto-highlight">
 								<td>Setup time</td>
 								<td>Minutes<span class="winner-badge">Best</span></td>
 								<td>Days/Weeks</td>
@@ -696,7 +684,7 @@
 						</tbody>
 					</table>
 					<div class="comparison-note">
-						<strong>Key Difference:</strong> Traditional RPA platforms are designed for large-scale enterprise deployments with dedicated teams and significant budgets. Flyto2 is designed for teams that need human oversight built-in, want offline capability, and prefer a simpler setup. If you're replacing legacy systems in air-gapped environments, Flyto2 is the clear choice.
+						<strong>Key Difference:</strong> Traditional RPA platforms are designed for large-scale enterprise deployments with dedicated teams and significant budgets. Flyto2 is designed for teams that need human oversight built-in and prefer a simpler setup.
 					</div>
 				</div>
 			</div>
@@ -753,8 +741,8 @@
 								<span style="font-size: 14px; color: #6b7280;" data-i18n="landing.compare.notRight.choose1.desc">Built-in, not bolted-on human oversight</span>
 							</li>
 							<li style="padding: 12px 0; border-bottom: 1px solid #f0f0f0; color: #374151;">
-								<strong data-i18n="landing.compare.notRight.choose2.title">You need offline/air-gapped deployment</strong><br>
-								<span style="font-size: 14px; color: #6b7280;" data-i18n="landing.compare.notRight.choose2.desc">100% local operation, no cloud dependency</span>
+								<strong data-i18n="landing.compare.notRight.choose2.title">You need self-hosted deployment</strong><br>
+								<span style="font-size: 14px; color: #6b7280;" data-i18n="landing.compare.notRight.choose2.desc">Deploy on your infrastructure with full data control</span>
 							</li>
 							<li style="padding: 12px 0; border-bottom: 1px solid #f0f0f0; color: #374151;">
 								<strong data-i18n="landing.compare.notRight.choose3.title">Audit trails are non-negotiable</strong><br>
