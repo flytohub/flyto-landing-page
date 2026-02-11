@@ -459,22 +459,6 @@
 			50% { width: 100px; }
 		}
 
-		/* Offline section */
-		.offline-section {
-			background: linear-gradient(180deg, #f8f9ff 0%, #fff 100%);
-			position: relative;
-			overflow: hidden;
-		}
-		.offline-section::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			height: 1px;
-			background: linear-gradient(90deg, transparent, rgba(124, 58, 237, 0.3), transparent);
-		}
-
 		/* Info box animated */
 		.info-box-animated {
 			background: #fff;
@@ -894,7 +878,6 @@
 									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" data-i18n="landing.common.nav.pricing">Fiyatlandırma</span>
 									<div class="nav-dropdown-menu">
 										<a href="pricing.html" class="nav-dropdown-item"><i class="bi bi-tag"></i><span data-i18n="landing.common.nav.plansAndPricing">Planlar ve Fiyatlandırma</span></a>
-										<a href="buy-offline.html" class="nav-dropdown-item"><i class="bi bi-shield-lock"></i><span data-i18n="landing.common.nav.buyProLicense">Pro Lisans Satın Al</span></a>
 									</div>
 								</li>
 								<li class="nav-dropdown">
@@ -935,7 +918,7 @@
 										<div class="dropdown-header-label" data-i18n="landing.common.nav.flytoAccount">Flyto2 Hesabı</div>
 									</div>
 									<div class="dropdown-menu-items">
-										<a href="buy-offline.html" class="dropdown-menu-item">
+										<a href="pricing.html" class="dropdown-menu-item">
 											<i class="bi bi-key"></i>
 											<span data-i18n="landing.common.nav.myLicenses">Lisanslarım</span>
 										</a>
@@ -974,7 +957,6 @@
 					<ul class="offcanvas_main_menu">
 						<li><a href="index.html" data-i18n="landing.common.nav.home">Ana Sayfa</a></li>
 						<li class="active"><a href="pricing.html" data-i18n="landing.common.nav.pricing">Fiyatlandırma</a></li>
-						<li><a href="buy-offline.html" data-i18n="landing.common.nav.buyProLicense">Pro Lisans Satın Al</a></li>
 						<li><a href="download.html" data-i18n="landing.common.nav.download">İndir</a></li>
 						<li><a href="app.html" data-i18n="landing.common.nav.desktopApp">Masaüstü Uygulaması</a></li>
 						<li><a href="https://github.com/flytohub/flyto-core" data-i18n="landing.common.nav.documentation" target="_blank" rel="noopener noreferrer">Dokümantasyon</a></li>
@@ -1051,45 +1033,6 @@
 	</section>
 	<!-- End Dynamic Pricing Section -->
 
-	<!-- Start Offline License Info Section -->
-	<section class="section-padding offline-section" id="offline-info">
-		<div class="container">
-			<!-- License Info -->
-			<div class="row">
-				<div class="col-lg-8 offset-lg-2">
-					<div class="info-box-animated wow fadeInUp">
-						<h3 style="text-align: center; margin-bottom: 30px; color: #1e0a3c;">
-							<i class="fas fa-info-circle" style="color: #7c3aed; margin-right: 10px;"></i>
-							<span data-i18n="landing.pricing.offline.title">Çevrimdışı Lisanslar Nasıl Çalışır</span>
-						</h3>
-						<div class="info-step">
-							<span class="step-number">1</span>
-							<span data-i18n="landing.pricing.offline.step1">Çevrimiçi bir lisans anahtarı satın alın</span>
-						</div>
-						<div class="info-step">
-							<span class="step-number">2</span>
-							<span data-i18n="landing.pricing.offline.step2">Makinenizde etkinleştirin (tek seferlik internet gerekli)</span>
-						</div>
-						<div class="info-step">
-							<span class="step-number">3</span>
-							<span data-i18n="landing.pricing.offline.step3">Lisans süresi boyunca tamamen çevrimdışı kullanın</span>
-						</div>
-						<div class="info-step">
-							<span class="step-number">4</span>
-							<span data-i18n="landing.pricing.offline.step4">Güncellemeleri ve desteği uzatmak için istediğiniz zaman yenileyin</span>
-						</div>
-						<div style="text-align: center; margin-top: 25px;">
-							<a href="faq.html#offline" style="color: #7c3aed; font-weight: 600; text-decoration: none;" data-i18n="landing.pricing.offline.learnMore">
-								Learn more about offline licensing <i class="fas fa-arrow-right" style="margin-left: 5px;"></i>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- End Offline License Section -->
-
 	<!-- Start FAQ Section -->
 	<section class="section-padding">
 		<div class="container">
@@ -1110,13 +1053,6 @@
 						<div class="faq-answer" data-i18n="landing.pricing.faq.a1">Evet, bulut planınızı istediğiniz zaman yükseltebilir veya düşürebilirsiniz. Çevrimdışı lisanslar için farkı ödeyerek yükseltebilirsiniz.</div>
 					</div>
 					<div class="faq-item wow fadeInUp" data-wow-delay="0.2s">
-						<div class="faq-question" tabindex="0" role="button">
-							<span data-i18n="landing.pricing.faq.q2">Çevrimdışı lisansımın süresi dolduğunda ne olur?</span>
-							<span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
-						</div>
-						<div class="faq-answer" style="display: none;" data-i18n="landing.pricing.faq.a2">İş akışlarınız süresiz olarak çalışmaya devam eder. Yalnızca güncellemelere ve desteğe erişiminizi kaybedersiniz. En son özellikleri almak için istediğiniz zaman yenileyebilirsiniz.</div>
-					</div>
-					<div class="faq-item wow fadeInUp" data-wow-delay="0.3s">
 						<div class="faq-question" tabindex="0" role="button">
 							<span data-i18n="landing.pricing.faq.q3">Geri ödeme sunuyor musunuz?</span>
 							<span class="faq-icon"><i class="fas fa-chevron-down"></i></span>

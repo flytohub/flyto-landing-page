@@ -694,7 +694,6 @@
 									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" data-i18n="landing.common.nav.pricing">Harga</span>
 									<div class="nav-dropdown-menu">
 										<a href="pricing.html" class="nav-dropdown-item"><i class="bi bi-tag"></i><span data-i18n="landing.common.nav.plansAndPricing">Paket & Harga</span></a>
-										<a href="buy-offline.html" class="nav-dropdown-item"><i class="bi bi-shield-lock"></i><span data-i18n="landing.common.nav.buyProLicense">Beli Lisensi Pro</span></a>
 									</div>
 								</li>
 								<li class="nav-dropdown active">
@@ -728,7 +727,7 @@
 								<div class="user-dropdown-menu">
 									<div class="dropdown-header"><div class="dropdown-header-email" id="dropdownUserEmail"></div><div class="dropdown-header-label" data-i18n="landing.common.nav.flytoAccount">Akun Flyto2</div></div>
 									<div class="dropdown-menu-items">
-										<a href="buy-offline.html" class="dropdown-menu-item"><i class="bi bi-key"></i><span data-i18n="landing.common.nav.myLicenses">Lisensi Saya</span></a>
+										<a href="pricing.html" class="dropdown-menu-item"><i class="bi bi-key"></i><span data-i18n="landing.common.nav.myLicenses">Lisensi Saya</span></a>
 										<div class="dropdown-divider"></div>
 										<button class="dropdown-menu-item text-danger" id="btnSignOut"><i class="bi bi-box-arrow-right"></i><span data-i18n="landing.common.nav.signOut">Keluar</span></button>
 									</div>
@@ -760,7 +759,6 @@
 					<ul class="offcanvas_main_menu">
 						<li><a href="index.html" data-i18n="landing.common.nav.home">Beranda</a></li>
 						<li><a href="pricing.html" data-i18n="landing.common.nav.pricing">Harga</a></li>
-						<li><a href="buy-offline.html" data-i18n="landing.common.nav.buyProLicense">Beli Lisensi Pro</a></li>
 						<li><a href="download.html" data-i18n="landing.common.nav.download">Unduh</a></li>
 						<li class="active"><a href="app.html" data-i18n="landing.common.nav.desktopApp">Aplikasi Desktop</a></li>
 						<li><a href="https://github.com/flytohub/flyto-core" data-i18n="landing.common.nav.documentation" target="_blank" rel="noopener noreferrer">Dokumentasi</a></li>
@@ -800,30 +798,28 @@
 					<div class="wow fadeInUp" data-wow-delay="0.2s">
 						<span class="status-badge coming-soon" id="status-badge">
 							<i class="fas fa-rocket"></i>
-							<span id="status-text" data-i18n="landing.app.hero.comingSoon">Coming Soon</span>
+							<span id="status-text" data-i18n="landing.app.hero.comingSoon">Segera Hadir</span>
 						</span>
 					</div>
 
 					<!-- Coming Soon: Notify Form -->
 					<div id="coming-soon-content" class="wow fadeInUp" data-wow-delay="0.3s">
-						<p style="color: rgba(255,255,255,0.8); font-size: 16px; margin-bottom: 25px;" data-i18n="landing.app.hero.notifyDesc">
-							Be the first to know when the desktop app launches.
-						</p>
+						<p style="color: rgba(255,255,255,0.8); font-size: 16px; margin-bottom: 25px;" data-i18n="landing.app.hero.notifyDesc">Jadilah yang pertama tahu saat aplikasi desktop diluncurkan.</p>
 						<form class="notify-form" id="notify-form">
 							<div class="input-group">
 								<input type="email" id="notify-email" placeholder="Enter your email" data-i18n-placeholder="landing.app.hero.emailPlaceholder" required>
 								<button type="submit" id="notify-btn">
-									<i class="fas fa-bell"></i> <span data-i18n="landing.app.hero.notifyMe">Notify Me</span>
+									<i class="fas fa-bell"></i> <span data-i18n="landing.app.hero.notifyMe">Beri Tahu Saya</span>
 								</button>
 							</div>
 						</form>
 						<p class="notify-success" id="notify-success">
-							<i class="fas fa-check-circle"></i> <span data-i18n="landing.app.hero.notifySuccess">You're on the list! We'll email you when it's ready.</span>
+							<i class="fas fa-check-circle"></i> <span data-i18n="landing.app.hero.notifySuccess">Anda sudah masuk daftar! Kami akan email Anda saat siap.</span>
 						</p>
 						<p style="margin-top: 20px; color: rgba(255,255,255,0.5); font-size: 14px;">
 							<i class="fas fa-code" style="margin-right: 8px;"></i>
-							<span data-i18n="landing.app.hero.cliAvailable">Want to start now?</span>
-							<a href="download.html" style="color: #a78bfa; text-decoration: underline;" data-i18n="landing.app.hero.tryCli">Try Flyto Core (CLI)</a>
+							<span data-i18n="landing.app.hero.cliAvailable">Ingin mulai sekarang?</span>
+							<a href="download.html" style="color: #a78bfa; text-decoration: underline;" data-i18n="landing.app.hero.tryCli">Coba Flyto Core (CLI)</a>
 						</p>
 					</div>
 
@@ -859,8 +855,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 text-center">
-					<h2 class="section-title wow fadeInUp" data-i18n="landing.app.features.title">What's Coming</h2>
-					<p class="section-subtitle wow fadeInUp" data-wow-delay="0.1s" data-i18n="landing.app.features.subtitle">A powerful desktop experience for workflow automation</p>
+					<h2 class="section-title wow fadeInUp" data-i18n="landing.app.features.title">Apa yang Akan Hadir</h2>
+					<p class="section-subtitle wow fadeInUp" data-wow-delay="0.1s" data-i18n="landing.app.features.subtitle">Pengalaman desktop yang kuat untuk otomatisasi alur kerja</p>
 				</div>
 			</div>
 			<div class="row">
@@ -869,17 +865,8 @@
 						<div class="icon">
 							<i class="fas fa-desktop"></i>
 						</div>
-						<h4 data-i18n="landing.app.features.visual">Visual Workflow Builder</h4>
-						<p data-i18n="landing.app.features.visualDesc">Drag-and-drop interface to create automation workflows without writing code.</p>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 mb-30">
-					<div class="feature-preview-card wow fadeInUp" data-wow-delay="0.2s">
-						<div class="icon">
-							<i class="fas fa-wifi-slash"></i>
-						</div>
-						<h4 data-i18n="landing.app.features.offline">100% Offline</h4>
-						<p data-i18n="landing.app.features.offlineDesc">Works completely offline. Your data never leaves your computer.</p>
+						<h4 data-i18n="landing.app.features.visual">Pembuat Alur Kerja Visual</h4>
+						<p data-i18n="landing.app.features.visualDesc">Antarmuka drag-and-drop untuk membuat alur kerja otomatis tanpa menulis kode.</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 mb-30">
@@ -887,8 +874,8 @@
 						<div class="icon">
 							<i class="fas fa-robot"></i>
 						</div>
-						<h4 data-i18n="landing.app.features.browser">Browser Automation</h4>
-						<p data-i18n="landing.app.features.browserDesc">Record and replay browser actions. Automate repetitive web tasks.</p>
+						<h4 data-i18n="landing.app.features.browser">Otomatisasi Browser</h4>
+						<p data-i18n="landing.app.features.browserDesc">Rekam dan putar ulang aksi browser. Otomatisasi tugas web berulang.</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 mb-30">
@@ -896,8 +883,8 @@
 						<div class="icon">
 							<i class="fas fa-clock"></i>
 						</div>
-						<h4 data-i18n="landing.app.features.schedule">Scheduled Tasks</h4>
-						<p data-i18n="landing.app.features.scheduleDesc">Run workflows on a schedule. Set it and forget it.</p>
+						<h4 data-i18n="landing.app.features.schedule">Tugas Terjadwal</h4>
+						<p data-i18n="landing.app.features.scheduleDesc">Jalankan alur kerja sesuai jadwal. Atur dan lupakan.</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 mb-30">
@@ -905,8 +892,8 @@
 						<div class="icon">
 							<i class="fas fa-cubes"></i>
 						</div>
-						<h4 data-i18n="landing.app.features.modules">250+ Modules</h4>
-						<p data-i18n="landing.app.features.modulesDesc">Built-in modules for data processing, file operations, API calls, and more.</p>
+						<h4 data-i18n="landing.app.features.modules">250+ Modul</h4>
+						<p data-i18n="landing.app.features.modulesDesc">Modul bawaan untuk pemrosesan data, operasi file, panggilan API, dan lainnya.</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 mb-30">
@@ -914,8 +901,8 @@
 						<div class="icon">
 							<i class="fas fa-lock"></i>
 						</div>
-						<h4 data-i18n="landing.app.features.secure">Secure & Private</h4>
-						<p data-i18n="landing.app.features.secureDesc">No cloud dependency. Your workflows and data stay on your machine.</p>
+						<h4 data-i18n="landing.app.features.secure">Aman & Pribadi</h4>
+						<p data-i18n="landing.app.features.secureDesc">Tidak bergantung pada cloud. Alur kerja dan data Anda tetap di mesin Anda.</p>
 					</div>
 				</div>
 			</div>
@@ -941,7 +928,7 @@
 						<div class="platform-name">macOS</div>
 						<div class="platform-arch">Apple Silicon (M1/M2/M3/M4)</div>
 						<div class="platform-size" id="size-macos-arm">~150 MB</div>
-						<span class="coming-soon-tag" data-i18n="landing.app.platforms.comingSoon">Coming Soon</span>
+						<span class="coming-soon-tag" data-i18n="landing.app.platforms.comingSoon">Segera Hadir</span>
 					</div>
 				</div>
 				<!-- Windows -->
@@ -953,7 +940,7 @@
 						<div class="platform-name">Windows</div>
 						<div class="platform-arch">64-bit (x64)</div>
 						<div class="platform-size" id="size-windows">~120 MB</div>
-						<span class="coming-soon-tag" data-i18n="landing.app.platforms.comingSoon">Coming Soon</span>
+						<span class="coming-soon-tag" data-i18n="landing.app.platforms.comingSoon">Segera Hadir</span>
 					</div>
 				</div>
 				<!-- Linux x64 -->
@@ -965,7 +952,7 @@
 						<div class="platform-name">Linux</div>
 						<div class="platform-arch">x64 (AMD64)</div>
 						<div class="platform-size" id="size-linux">~130 MB</div>
-						<span class="coming-soon-tag" data-i18n="landing.app.platforms.comingSoon">Coming Soon</span>
+						<span class="coming-soon-tag" data-i18n="landing.app.platforms.comingSoon">Segera Hadir</span>
 					</div>
 				</div>
 			</div>
@@ -974,10 +961,10 @@
 				<div class="col-lg-12 text-center">
 					<p style="color: #6b7280; margin-bottom: 20px;">
 						<i class="fas fa-code" style="color: #7c3aed;"></i>
-						<span data-i18n="landing.app.platforms.devNote">Looking for Python package or Docker deployment?</span>
+						<span data-i18n="landing.app.platforms.devNote">Mencari paket Python atau penerapan Docker?</span>
 					</p>
 					<a href="download.html" class="btn-platform-download" style="background: linear-gradient(135deg, #1e0a3c 0%, #4c1d95 100%);">
-						<i class="fas fa-terminal"></i> <span data-i18n="landing.app.platforms.devDownloads">Developer Downloads</span>
+						<i class="fas fa-terminal"></i> <span data-i18n="landing.app.platforms.devDownloads">Unduhan Pengembang</span>
 					</a>
 				</div>
 			</div>
@@ -997,10 +984,10 @@
 					<div class="req-card wow fadeInUp" data-wow-delay="0.1s">
 						<h4><i class="fab fa-apple"></i> macOS</h4>
 						<ul class="req-list">
-							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.macosVersion">macOS 11 (Big Sur) or later</span></li>
-							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.macosProcessor">Apple Silicon or Intel processor</span></li>
+							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.macosVersion">macOS 11 (Big Sur) atau lebih baru</span></li>
+							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.macosProcessor">Prosesor Apple Silicon atau Intel</span></li>
 							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.ram">4 GB RAM minimum</span></li>
-							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.disk">500 MB disk space</span></li>
+							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.disk">500 MB ruang disk</span></li>
 						</ul>
 					</div>
 				</div>
@@ -1008,10 +995,10 @@
 					<div class="req-card wow fadeInUp" data-wow-delay="0.2s">
 						<h4><i class="fab fa-windows"></i> Windows</h4>
 						<ul class="req-list">
-							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.windowsVersion">Windows 10 (64-bit) or later</span></li>
-							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.windowsProcessor">x64 processor</span></li>
+							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.windowsVersion">Windows 10 (64-bit) atau lebih baru</span></li>
+							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.windowsProcessor">Prosesor x64</span></li>
 							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.ram">4 GB RAM minimum</span></li>
-							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.disk">500 MB disk space</span></li>
+							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.disk">500 MB ruang disk</span></li>
 						</ul>
 					</div>
 				</div>
@@ -1020,9 +1007,9 @@
 						<h4><i class="fab fa-linux"></i> Linux</h4>
 						<ul class="req-list">
 							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.linuxVersion">Ubuntu 20.04+ / Debian 11+</span></li>
-							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.linuxProcessor">x64 or ARM64 processor</span></li>
+							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.linuxProcessor">Prosesor x64 atau ARM64</span></li>
 							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.ram">4 GB RAM minimum</span></li>
-							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.disk">500 MB disk space</span></li>
+							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.disk">500 MB ruang disk</span></li>
 						</ul>
 					</div>
 				</div>
@@ -1058,7 +1045,6 @@
 							<ul>
 								<li><a href="app.html" data-i18n="landing.common.nav.desktopApp">Aplikasi Desktop</a></li>
 								<li><a href="pricing.html" data-i18n="landing.common.nav.pricing">Harga</a></li>
-								<li><a href="buy-offline.html" data-i18n="landing.common.nav.buyProLicense">Beli Lisensi Pro</a></li>
 							</ul>
 						</div>
 					</div>
@@ -1305,7 +1291,7 @@
 			} catch (err) {
 				btn.innerHTML = '<i class="fas fa-times"></i> Failed';
 				setTimeout(() => {
-					btn.innerHTML = '<i class="fas fa-bell"></i> <span data-i18n="landing.app.hero.notifyMe">Notify Me</span>';
+					btn.innerHTML = '<i class="fas fa-bell"></i> <span data-i18n="landing.app.hero.notifyMe">Beri Tahu Saya</span>';
 					btn.disabled = false;
 				}, 2000);
 			}

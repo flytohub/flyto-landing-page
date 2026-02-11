@@ -459,22 +459,6 @@
 			50% { width: 100px; }
 		}
 
-		/* Offline section */
-		.offline-section {
-			background: linear-gradient(180deg, #f8f9ff 0%, #fff 100%);
-			position: relative;
-			overflow: hidden;
-		}
-		.offline-section::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			height: 1px;
-			background: linear-gradient(90deg, transparent, rgba(124, 58, 237, 0.3), transparent);
-		}
-
 		/* Info box animated */
 		.info-box-animated {
 			background: #fff;
@@ -894,7 +878,6 @@
 									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" data-i18n="landing.common.nav.pricing">मूल्य</span>
 									<div class="nav-dropdown-menu">
 										<a href="pricing.html" class="nav-dropdown-item"><i class="bi bi-tag"></i><span data-i18n="landing.common.nav.plansAndPricing">योजनाएं और मूल्य</span></a>
-										<a href="buy-offline.html" class="nav-dropdown-item"><i class="bi bi-shield-lock"></i><span data-i18n="landing.common.nav.buyProLicense">Pro लाइसेंस खरीदें</span></a>
 									</div>
 								</li>
 								<li class="nav-dropdown">
@@ -935,7 +918,7 @@
 										<div class="dropdown-header-label" data-i18n="landing.common.nav.flytoAccount">Flyto2 खाता</div>
 									</div>
 									<div class="dropdown-menu-items">
-										<a href="buy-offline.html" class="dropdown-menu-item">
+										<a href="pricing.html" class="dropdown-menu-item">
 											<i class="bi bi-key"></i>
 											<span data-i18n="landing.common.nav.myLicenses">मेरे लाइसेंस</span>
 										</a>
@@ -974,7 +957,6 @@
 					<ul class="offcanvas_main_menu">
 						<li><a href="index.html" data-i18n="landing.common.nav.home">होम</a></li>
 						<li class="active"><a href="pricing.html" data-i18n="landing.common.nav.pricing">मूल्य</a></li>
-						<li><a href="buy-offline.html" data-i18n="landing.common.nav.buyProLicense">Pro लाइसेंस खरीदें</a></li>
 						<li><a href="download.html" data-i18n="landing.common.nav.download">डाउनलोड</a></li>
 						<li><a href="app.html" data-i18n="landing.common.nav.desktopApp">डेस्कटॉप ऐप</a></li>
 						<li><a href="https://github.com/flytohub/flyto-core" data-i18n="landing.common.nav.documentation" target="_blank" rel="noopener noreferrer">दस्तावेज़ीकरण</a></li>
@@ -1051,45 +1033,6 @@
 	</section>
 	<!-- End Dynamic Pricing Section -->
 
-	<!-- Start Offline License Info Section -->
-	<section class="section-padding offline-section" id="offline-info">
-		<div class="container">
-			<!-- License Info -->
-			<div class="row">
-				<div class="col-lg-8 offset-lg-2">
-					<div class="info-box-animated wow fadeInUp">
-						<h3 style="text-align: center; margin-bottom: 30px; color: #1e0a3c;">
-							<i class="fas fa-info-circle" style="color: #7c3aed; margin-right: 10px;"></i>
-							<span data-i18n="landing.pricing.offline.title">ऑफ़लाइन लाइसेंस कैसे काम करते हैं</span>
-						</h3>
-						<div class="info-step">
-							<span class="step-number">1</span>
-							<span data-i18n="landing.pricing.offline.step1">ऑनलाइन लाइसेंस कुंजी खरीदें</span>
-						</div>
-						<div class="info-step">
-							<span class="step-number">2</span>
-							<span data-i18n="landing.pricing.offline.step2">अपनी मशीन पर सक्रिय करें (एक बार इंटरनेट आवश्यक)</span>
-						</div>
-						<div class="info-step">
-							<span class="step-number">3</span>
-							<span data-i18n="landing.pricing.offline.step3">लाइसेंस अवधि के लिए पूरी तरह से ऑफ़लाइन उपयोग करें</span>
-						</div>
-						<div class="info-step">
-							<span class="step-number">4</span>
-							<span data-i18n="landing.pricing.offline.step4">अपडेट और सपोर्ट बढ़ाने के लिए कभी भी नवीनीकृत करें</span>
-						</div>
-						<div style="text-align: center; margin-top: 25px;">
-							<a href="faq.html#offline" style="color: #7c3aed; font-weight: 600; text-decoration: none;" data-i18n="landing.pricing.offline.learnMore">
-								Learn more about offline licensing <i class="fas fa-arrow-right" style="margin-left: 5px;"></i>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- End Offline License Section -->
-
 	<!-- Start FAQ Section -->
 	<section class="section-padding">
 		<div class="container">
@@ -1110,13 +1053,6 @@
 						<div class="faq-answer" data-i18n="landing.pricing.faq.a1">हां, आप कभी भी अपनी क्लाउड योजना अपग्रेड या डाउनग्रेड कर सकते हैं। ऑफ़लाइन लाइसेंस के लिए, आप अंतर का भुगतान करके अपग्रेड कर सकते हैं।</div>
 					</div>
 					<div class="faq-item wow fadeInUp" data-wow-delay="0.2s">
-						<div class="faq-question" tabindex="0" role="button">
-							<span data-i18n="landing.pricing.faq.q2">जब मेरा ऑफ़लाइन लाइसेंस समाप्त होता है तो क्या होता है?</span>
-							<span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
-						</div>
-						<div class="faq-answer" style="display: none;" data-i18n="landing.pricing.faq.a2">आपके वर्कफ़्लो अनिश्चित काल तक काम करते रहते हैं। आप केवल अपडेट और सपोर्ट तक पहुंच खो देते हैं। नवीनतम सुविधाएं प्राप्त करने के लिए कभी भी नवीनीकृत करें।</div>
-					</div>
-					<div class="faq-item wow fadeInUp" data-wow-delay="0.3s">
 						<div class="faq-question" tabindex="0" role="button">
 							<span data-i18n="landing.pricing.faq.q3">क्या आप रिफंड देते हैं?</span>
 							<span class="faq-icon"><i class="fas fa-chevron-down"></i></span>

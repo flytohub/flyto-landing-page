@@ -459,22 +459,6 @@
 			50% { width: 100px; }
 		}
 
-		/* Offline section */
-		.offline-section {
-			background: linear-gradient(180deg, #f8f9ff 0%, #fff 100%);
-			position: relative;
-			overflow: hidden;
-		}
-		.offline-section::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			height: 1px;
-			background: linear-gradient(90deg, transparent, rgba(124, 58, 237, 0.3), transparent);
-		}
-
 		/* Info box animated */
 		.info-box-animated {
 			background: #fff;
@@ -894,7 +878,6 @@
 									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" data-i18n="landing.common.nav.pricing">方案</span>
 									<div class="nav-dropdown-menu">
 										<a href="pricing.html" class="nav-dropdown-item"><i class="bi bi-tag"></i><span data-i18n="landing.common.nav.plansAndPricing">方案與定價</span></a>
-										<a href="buy-offline.html" class="nav-dropdown-item"><i class="bi bi-shield-lock"></i><span data-i18n="landing.common.nav.buyProLicense">購買專業版授權</span></a>
 									</div>
 								</li>
 								<li class="nav-dropdown">
@@ -935,7 +918,7 @@
 										<div class="dropdown-header-label" data-i18n="landing.common.nav.flytoAccount">Flyto2 帳戶</div>
 									</div>
 									<div class="dropdown-menu-items">
-										<a href="buy-offline.html" class="dropdown-menu-item">
+										<a href="pricing.html" class="dropdown-menu-item">
 											<i class="bi bi-key"></i>
 											<span data-i18n="landing.common.nav.myLicenses">我的授權</span>
 										</a>
@@ -974,7 +957,6 @@
 					<ul class="offcanvas_main_menu">
 						<li><a href="index.html" data-i18n="landing.common.nav.home">首頁</a></li>
 						<li class="active"><a href="pricing.html" data-i18n="landing.common.nav.pricing">方案</a></li>
-						<li><a href="buy-offline.html" data-i18n="landing.common.nav.buyProLicense">購買專業版授權</a></li>
 						<li><a href="download.html" data-i18n="landing.common.nav.download">下載</a></li>
 						<li><a href="app.html" data-i18n="landing.common.nav.desktopApp">桌面應用程式</a></li>
 						<li><a href="https://github.com/flytohub/flyto-core" data-i18n="landing.common.nav.documentation" target="_blank" rel="noopener noreferrer">技術文件</a></li>
@@ -1051,45 +1033,6 @@
 	</section>
 	<!-- End Dynamic Pricing Section -->
 
-	<!-- Start Offline License Info Section -->
-	<section class="section-padding offline-section" id="offline-info">
-		<div class="container">
-			<!-- License Info -->
-			<div class="row">
-				<div class="col-lg-8 offset-lg-2">
-					<div class="info-box-animated wow fadeInUp">
-						<h3 style="text-align: center; margin-bottom: 30px; color: #1e0a3c;">
-							<i class="fas fa-info-circle" style="color: #7c3aed; margin-right: 10px;"></i>
-							<span data-i18n="landing.pricing.offline.title">離線授權如何運作</span>
-						</h3>
-						<div class="info-step">
-							<span class="step-number">1</span>
-							<span data-i18n="landing.pricing.offline.step1">線上購買授權金鑰</span>
-						</div>
-						<div class="info-step">
-							<span class="step-number">2</span>
-							<span data-i18n="landing.pricing.offline.step2">在您的機器上啟用（需一次性連網）</span>
-						</div>
-						<div class="info-step">
-							<span class="step-number">3</span>
-							<span data-i18n="landing.pricing.offline.step3">在授權期間內完全離線使用</span>
-						</div>
-						<div class="info-step">
-							<span class="step-number">4</span>
-							<span data-i18n="landing.pricing.offline.step4">隨時續約以延長更新和支援</span>
-						</div>
-						<div style="text-align: center; margin-top: 25px;">
-							<a href="faq.html#offline" style="color: #7c3aed; font-weight: 600; text-decoration: none;" data-i18n="landing.pricing.offline.learnMore">
-								Learn more about offline licensing <i class="fas fa-arrow-right" style="margin-left: 5px;"></i>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- End Offline License Section -->
-
 	<!-- Start FAQ Section -->
 	<section class="section-padding">
 		<div class="container">
@@ -1110,13 +1053,6 @@
 						<div class="faq-answer" data-i18n="landing.pricing.faq.a1">可以，您可以隨時升級或降級雲端方案。對於離線授權，您可以透過支付差額來升級。</div>
 					</div>
 					<div class="faq-item wow fadeInUp" data-wow-delay="0.2s">
-						<div class="faq-question" tabindex="0" role="button">
-							<span data-i18n="landing.pricing.faq.q2">離線授權到期後會發生什麼？</span>
-							<span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
-						</div>
-						<div class="faq-answer" style="display: none;" data-i18n="landing.pricing.faq.a2">您的工作流程會持續運作。您只會失去更新和支援的存取權限。隨時可以續約以獲得最新功能。</div>
-					</div>
-					<div class="faq-item wow fadeInUp" data-wow-delay="0.3s">
 						<div class="faq-question" tabindex="0" role="button">
 							<span data-i18n="landing.pricing.faq.q3">你們提供退款嗎？</span>
 							<span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
