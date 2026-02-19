@@ -87,7 +87,7 @@ def extract_translatable_text(html_content):
                     'Tiếng Việt', 'Bahasa Indonesia', 'Türkçe', 'Polski']:
             continue
         # Skip navigation/brand items that should stay in English
-        if text in ['Flyto CLI', 'Flyto2', 'CLI', 'API', 'GitHub', 'Sign In', 'Sign Up',
+        if text in ['Flyto2 CLI', 'Flyto2', 'CLI', 'API', 'GitHub', 'Sign In', 'Sign Up',
                     'ZH', 'EN', 'JA', 'KO', 'DE', 'ES', 'FR', 'IT', 'PT', 'VI', 'ID', 'TH', 'TR', 'PL', 'HI']:
             continue
         # Skip meta content / title tags that are already handled
