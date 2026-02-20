@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-02-20T16:15:47Z",
+  "counts": {
+    "files": 35,
+    "folders": 3,
+    "symbols": 79,
+    "languages": {
+      "typescript": 7,
+      "python": 1
+    }
+  },
+  "tags": {
+    "dead_code": 0,
+    "dead_code_lines": 0,
+    "tdd_covered": 0,
+    "tdd_uncovered": 68,
+    "tdd_testable": 68
+  },
+  "descriptions": {
+    "total": 8,
+    "fresh": 8,
+    "stale": 0,
+    "missing": 0,
+    "sources": {
+      "indexer": 8,
+      "ai": 0
+    },
+    "hotspot_total": 0,
+    "hotspot_covered": 0
+  },
+  "stalenessHint": {
+    "recommendedReindexAfterHours": 24
+  }
+}
