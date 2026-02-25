@@ -927,7 +927,7 @@
 						</div>
 						<div class="platform-name">macOS</div>
 						<div class="platform-arch">Apple Silicon (M1/M2/M3/M4)</div>
-						<div class="platform-size" id="size-macos-arm">~150 MB</div>
+						<div class="platform-size" id="size-macos-arm">117 MB</div>
 						<span class="coming-soon-tag" data-i18n="landing.app.platforms.comingSoon">Sắp ra mắt</span>
 					</div>
 				</div>
@@ -939,7 +939,7 @@
 						</div>
 						<div class="platform-name">Windows</div>
 						<div class="platform-arch">64-bit (x64)</div>
-						<div class="platform-size" id="size-windows">~120 MB</div>
+						<div class="platform-size" id="size-windows">113 MB</div>
 						<span class="coming-soon-tag" data-i18n="landing.app.platforms.comingSoon">Sắp ra mắt</span>
 					</div>
 				</div>
@@ -951,7 +951,7 @@
 						</div>
 						<div class="platform-name">Linux</div>
 						<div class="platform-arch">x64 (AMD64)</div>
-						<div class="platform-size" id="size-linux">~130 MB</div>
+						<div class="platform-size" id="size-linux">225 MB</div>
 						<span class="coming-soon-tag" data-i18n="landing.app.platforms.comingSoon">Sắp ra mắt</span>
 					</div>
 				</div>
@@ -1113,12 +1113,24 @@
 
 		// App state
 		let appConfig = {
-			available: false,
-			version: null,
+			available: true,
+			version: '0.2.4',
 			downloads: {
-				'macos-arm64': null,
-				'windows-x64': null,
-				'linux-x64': null
+				'macos-arm64': {
+					url: 'https://github.com/flytohub/flyto2/releases/download/v0.2.4/Flyto2_0.2.4_aarch64.dmg',
+					filename: 'Flyto2_0.2.4_aarch64.dmg',
+					size: '117 MB'
+				},
+				'windows-x64': {
+					url: 'https://github.com/flytohub/flyto2/releases/download/v0.2.4/Flyto2_0.2.4_x64-setup.exe',
+					filename: 'Flyto2_0.2.4_x64-setup.exe',
+					size: '113 MB'
+				},
+				'linux-x64': {
+					url: 'https://github.com/flytohub/flyto2/releases/download/v0.2.4/Flyto2_0.2.4_amd64.AppImage',
+					filename: 'Flyto2_0.2.4_amd64.AppImage',
+					size: '225 MB'
+				}
 			}
 		};
 
@@ -1148,7 +1160,8 @@
 			if (appConfig.available) {
 				// App is available - show download UI
 				statusBadge.classList.remove('coming-soon');
-				statusBadge.innerHTML = '<i class="fas fa-microchip"></i><span id="detected-os">Detecting your system...</span>';
+				const versionTag = appConfig.version ? ` <span style="opacity:0.7;font-size:0.85em;">v${appConfig.version}</span>` : '';
+				statusBadge.innerHTML = '<i class="fas fa-microchip"></i><span id="detected-os">Detecting your system...</span>' + versionTag;
 
 				comingSoonContent.style.display = 'none';
 				availableContent.style.display = 'block';
@@ -1218,7 +1231,7 @@
 				downloadText = 'Download for Windows';
 				cardId = 'card-windows';
 				downloadUrl = appConfig.downloads['windows-x64']?.url || '#';
-				fileInfo = '.zip archive';
+				fileInfo = '.exe installer';
 			} else if (userAgent.includes('mac')) {
 				osName = 'macOS (Apple Silicon)';
 				cardId = 'card-macos-arm';
@@ -1230,7 +1243,7 @@
 				cardId = 'card-linux-x64';
 				downloadUrl = appConfig.downloads['linux-x64']?.url || '#';
 				downloadText = 'Download for Linux';
-				fileInfo = '.tar.gz archive';
+				fileInfo = '.AppImage';
 			} else {
 				osName = 'your system';
 				downloadText = 'Select Your Platform';
@@ -1300,7 +1313,8 @@
 		// Initialize
 		document.addEventListener('DOMContentLoaded', function() {
 			new WOW().init();
-			fetchAppConfig();
+			updateUI();        // Render immediately from defaults
+			fetchAppConfig();  // Optional remote override
 		});
 	</script>
 
