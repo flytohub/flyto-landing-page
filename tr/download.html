@@ -413,7 +413,7 @@
 </head>
 <body>
 	<!-- Skip Link for Accessibility -->
-	<a href="#main-content" class="skip-link">Skip to main content</a>
+	<a href="#main-content" class="skip-link" data-i18n="landing.common.nav.skipToContent">Skip to main content</a>
 
 	<!-- Preloader -->
 	<div id="preloader">
@@ -590,14 +590,14 @@
 								<span class="terminal-prompt">$</span>
 								<span class="terminal-command">pip install <span class="highlight">flyto-core</span></span>
 								<button class="copy-btn" data-copy="pip install flyto-core">
-									<i class="fas fa-copy"></i> <span data-i18n="landing.download.common.copy">Copy</span>
+									<i class="fas fa-copy"></i> <span data-i18n="landing.download.common.copy">Kopyala</span>
 								</button>
 							</div>
 							<div class="terminal-line">
 								<span class="terminal-prompt">$</span>
 								<span class="terminal-command">pip install <span class="highlight">flyto-core==<span id="install-version">...</span></span></span>
 								<button class="copy-btn" data-copy-dynamic="install-version" data-copy-prefix="pip install flyto-core==">
-									<i class="fas fa-copy"></i> <span data-i18n="landing.download.common.copy">Copy</span>
+									<i class="fas fa-copy"></i> <span data-i18n="landing.download.common.copy">Kopyala</span>
 								</button>
 							</div>
 						</div>
@@ -674,14 +674,14 @@
 								<span class="terminal-prompt">$</span>
 								<span class="terminal-command">docker pull <span class="highlight">flytohub/flyto-pro:latest</span></span>
 								<button class="copy-btn" data-copy="docker pull flytohub/flyto-pro:latest">
-									<i class="fas fa-copy"></i> <span data-i18n="landing.download.common.copy">Copy</span>
+									<i class="fas fa-copy"></i> <span data-i18n="landing.download.common.copy">Kopyala</span>
 								</button>
 							</div>
 							<div class="terminal-line">
 								<span class="terminal-prompt">$</span>
 								<span class="terminal-command">docker run -d -p 8080:8080 <span class="highlight">flytohub/flyto-pro</span></span>
 								<button class="copy-btn" data-copy="docker run -d -p 8080:8080 flytohub/flyto-pro">
-									<i class="fas fa-copy"></i> <span data-i18n="landing.download.common.copy">Copy</span>
+									<i class="fas fa-copy"></i> <span data-i18n="landing.download.common.copy">Kopyala</span>
 								</button>
 							</div>
 						</div>
@@ -1183,7 +1183,7 @@
 	<div id="langOverlay" class="lang-sheet-overlay" onclick="this.classList.remove('active');document.getElementById('langSheet').classList.remove('active');"></div>
 	<div id="langSheet" class="lang-sheet">
 		<div class="lang-sheet-header">
-			<h3><i class="bi bi-translate"></i> Select Language</h3>
+			<h3><i class="bi bi-translate"></i> <span data-i18n="landing.common.nav.selectLanguage">Select Language</span></h3>
 			<button class="lang-sheet-close" onclick="document.getElementById('langSheet').classList.remove('active');document.getElementById('langOverlay').classList.remove('active');">
 				<i class="bi bi-x-lg"></i>
 			</button>

@@ -638,7 +638,7 @@
 </head>
 <body>
 	<!-- Skip Link for Accessibility -->
-	<a href="#main-content" class="skip-link">Skip to main content</a>
+	<a href="#main-content" class="skip-link" data-i18n="landing.common.nav.skipToContent">Skip to main content</a>
 
 	<!-- Preloader -->
 	<div id="preloader">
@@ -805,8 +805,8 @@
 						</div>
 						<h2 data-i18n="landing.contact.cards.emailUs">Napisz do nas</h2>
 						<p><a href="mailto:info@flyto2.com">info@flyto2.com</a></p>
-						<p><a href="mailto:sales@flyto2.com">sales@flyto2.com</a> <span style="color: #9ca3af;" data-i18n="landing.contact.cards.salesLabel">(Sales)</span></p>
-						<p><a href="mailto:support@flyto2.com">support@flyto2.com</a> <span style="color: #9ca3af;" data-i18n="landing.contact.cards.supportLabel">(Support)</span></p>
+						<p><a href="mailto:sales@flyto2.com">sales@flyto2.com</a> <span style="color: #9ca3af;" data-i18n="landing.contact.cards.salesLabel">(Sprzedaż)</span></p>
+						<p><a href="mailto:support@flyto2.com">support@flyto2.com</a> <span style="color: #9ca3af;" data-i18n="landing.contact.cards.supportLabel">(Wsparcie)</span></p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 mb-30">
@@ -816,7 +816,7 @@
 						</div>
 						<h2 data-i18n="landing.contact.cards.github">GitHub</h2>
 						<p><a href="https://github.com/flytohub" target="_blank" rel="noopener noreferrer">github.com/flytohub</a></p>
-						<p style="color: #6b7280;" data-i18n="landing.contact.cards.githubDesc">Open issues, contribute, or star our repos!</p>
+						<p style="color: #6b7280;" data-i18n="landing.contact.cards.githubDesc">Zgłaszaj problemy, współtwórz lub dodaj gwiazdkę naszym repozytoriom!</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 mb-30">
@@ -825,8 +825,8 @@
 							<i class="bi bi-discord"></i>
 						</div>
 						<h2 data-i18n="landing.contact.cards.community">Spolecznosc</h2>
-						<p><span style="color: #6b7280;" data-i18n="landing.contact.cards.discordText">Join our Discord</span> <span style="color: #9ca3af;" data-i18n="landing.contact.cards.comingSoon">(Coming Soon)</span></p>
-						<p style="color: #6b7280;" data-i18n="landing.contact.cards.communityDesc">Chat with the community and get quick help.</p>
+						<p><span style="color: #6b7280;" data-i18n="landing.contact.cards.discordText">Dołącz do naszego Discorda</span> <span style="color: #9ca3af;" data-i18n="landing.contact.cards.comingSoon">(Wkrótce dostępne)</span></p>
+						<p style="color: #6b7280;" data-i18n="landing.contact.cards.communityDesc">Czat z społecznością i szybka pomoc.</p>
 					</div>
 				</div>
 			</div>
@@ -847,7 +847,7 @@
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<label data-i18n="landing.contact.form.nameLabel">Name *</label>
+										<label data-i18n="landing.contact.form.nameLabel">Imię *</label>
 										<input type="text" class="form-input" name="name" required maxlength="200" placeholder="Your name">
 									</div>
 								</div>
@@ -862,32 +862,32 @@
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<label data-i18n="landing.contact.form.companyLabel">Company</label>
+										<label data-i18n="landing.contact.form.companyLabel">Firma</label>
 										<input type="text" class="form-input" name="company" placeholder="Your company (optional)">
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<label data-i18n="landing.contact.form.subjectLabel">Subject *</label>
+										<label data-i18n="landing.contact.form.subjectLabel">Temat *</label>
 										<select class="form-input" name="subject" required>
-											<option value="" data-i18n="landing.contact.form.selectTopic">Select a topic</option>
-											<option value="sales" data-i18n="landing.contact.form.optionSales">Sales Inquiry</option>
-											<option value="support" data-i18n="landing.contact.form.optionSupport">Technical Support</option>
-											<option value="enterprise" data-i18n="landing.contact.form.optionEnterprise">Enterprise License</option>
-											<option value="partnership" data-i18n="landing.contact.form.optionPartnership">Partnership</option>
-											<option value="other" data-i18n="landing.contact.form.optionOther">Other</option>
+											<option value="" data-i18n="landing.contact.form.selectTopic">Wybierz temat</option>
+											<option value="sales" data-i18n="landing.contact.form.optionSales">Zapytanie o sprzedaż</option>
+											<option value="support" data-i18n="landing.contact.form.optionSupport">Wsparcie techniczne</option>
+											<option value="enterprise" data-i18n="landing.contact.form.optionEnterprise">Licencja dla przedsiębiorstw</option>
+											<option value="partnership" data-i18n="landing.contact.form.optionPartnership">Partnerstwo</option>
+											<option value="other" data-i18n="landing.contact.form.optionOther">Inne</option>
 										</select>
 									</div>
 								</div>
 							</div>
 
 							<div class="form-group">
-								<label data-i18n="landing.contact.form.messageLabel">Message *</label>
+								<label data-i18n="landing.contact.form.messageLabel">Wiadomość *</label>
 								<textarea class="form-input" name="message" required maxlength="2000" placeholder="Tell us how we can help..."></textarea>
 							</div>
 
 							<button type="submit" class="btn-submit">
-								<span><i class="fas fa-paper-plane" style="margin-right: 10px;"></i><span data-i18n="landing.contact.form.sendButton">Send Message</span></span>
+								<span><i class="fas fa-paper-plane" style="margin-right: 10px;"></i><span data-i18n="landing.contact.form.sendButton">Wyślij wiadomość</span></span>
 							</button>
 						</form>
 					</div>
@@ -912,10 +912,10 @@
 						<div class="quick-card-icon">
 							<i class="bi bi-book"></i>
 						</div>
-						<h3 data-i18n="landing.contact.quickLinks.docsTitle">Documentation</h3>
-						<p data-i18n="landing.contact.quickLinks.docsDesc">Learn how to use Flyto2 with our comprehensive guides.</p>
+						<h3 data-i18n="landing.contact.quickLinks.docsTitle">Dokumentacja</h3>
+						<p data-i18n="landing.contact.quickLinks.docsDesc">Dowiedz się, jak korzystać z Flyto2 dzięki naszym szczegółowym przewodnikom.</p>
 						<a href="https://github.com/flytohub/flyto-core" class="quick-card-link" target="_blank" rel="noopener noreferrer">
-							<span data-i18n="landing.contact.quickLinks.docsLink">Read Docs</span> <i class="fas fa-arrow-right"></i>
+							<span data-i18n="landing.contact.quickLinks.docsLink">Przeczytaj dokumentację</span> <i class="fas fa-arrow-right"></i>
 						</a>
 					</div>
 				</div>
@@ -925,9 +925,9 @@
 							<i class="bi bi-question-circle"></i>
 						</div>
 						<h3 data-i18n="landing.contact.quickLinks.faqTitle">FAQ</h3>
-						<p data-i18n="landing.contact.quickLinks.faqDesc">Find answers to commonly asked questions.</p>
+						<p data-i18n="landing.contact.quickLinks.faqDesc">Znajdź odpowiedzi na często zadawane pytania.</p>
 						<a href="faq.html" class="quick-card-link">
-							<span data-i18n="landing.contact.quickLinks.faqLink">View FAQ</span> <i class="fas fa-arrow-right"></i>
+							<span data-i18n="landing.contact.quickLinks.faqLink">Zobacz FAQ</span> <i class="fas fa-arrow-right"></i>
 						</a>
 					</div>
 				</div>
@@ -936,10 +936,10 @@
 						<div class="quick-card-icon">
 							<i class="bi bi-bug"></i>
 						</div>
-						<h3 data-i18n="landing.contact.quickLinks.issuesTitle">Report Issues</h3>
-						<p data-i18n="landing.contact.quickLinks.issuesDesc">Found a bug? Let us know on GitHub.</p>
+						<h3 data-i18n="landing.contact.quickLinks.issuesTitle">Zgłaszanie problemów</h3>
+						<p data-i18n="landing.contact.quickLinks.issuesDesc">Znalazłeś błąd? Daj nam znać na GitHubie.</p>
 						<a href="https://github.com/flytohub/flyto-core/issues" class="quick-card-link" target="_blank" rel="noopener noreferrer">
-							<span data-i18n="landing.contact.quickLinks.issuesLink">Open Issue</span> <i class="fas fa-arrow-right"></i>
+							<span data-i18n="landing.contact.quickLinks.issuesLink">Zgłoś problem</span> <i class="fas fa-arrow-right"></i>
 						</a>
 					</div>
 				</div>
@@ -948,10 +948,10 @@
 						<div class="quick-card-icon">
 							<i class="bi bi-tags"></i>
 						</div>
-						<h3 data-i18n="landing.contact.quickLinks.pricingTitle">Pricing</h3>
-						<p data-i18n="landing.contact.quickLinks.pricingDesc">Compare plans and find the right fit for you.</p>
+						<h3 data-i18n="landing.contact.quickLinks.pricingTitle">Cennik</h3>
+						<p data-i18n="landing.contact.quickLinks.pricingDesc">Porównaj plany i znajdź odpowiedni dla siebie.</p>
 						<a href="pricing.html" class="quick-card-link">
-							<span data-i18n="landing.contact.quickLinks.pricingLink">View Plans</span> <i class="fas fa-arrow-right"></i>
+							<span data-i18n="landing.contact.quickLinks.pricingLink">Zobacz plany</span> <i class="fas fa-arrow-right"></i>
 						</a>
 					</div>
 				</div>
@@ -1176,7 +1176,7 @@
 	<div id="langOverlay" class="lang-sheet-overlay" onclick="this.classList.remove('active');document.getElementById('langSheet').classList.remove('active');"></div>
 	<div id="langSheet" class="lang-sheet">
 		<div class="lang-sheet-header">
-			<h3><i class="bi bi-translate"></i> Select Language</h3>
+			<h3><i class="bi bi-translate"></i> <span data-i18n="landing.common.nav.selectLanguage">Select Language</span></h3>
 			<button class="lang-sheet-close" onclick="document.getElementById('langSheet').classList.remove('active');document.getElementById('langOverlay').classList.remove('active');">
 				<i class="bi bi-x-lg"></i>
 			</button>
