@@ -163,10 +163,11 @@ function resolveLocales(targetLocale) {
 // Replace data-i18n content in HTML
 function translateHtml(html, translations, locale, htmlFile) {
   // Replace content inside elements with data-i18n attribute
-  // Pattern: <tag data-i18n="key">original content</tag>
+  // Pattern: <tag data-i18n="key">content (may include inner HTML)</tag>
+  // Uses backreference to match the correct closing tag
   let translated = html.replace(
-    /(<[^>]+data-i18n="([^"]+)"[^>]*>)([^<]*?)(<\/[^>]+>)/g,
-    (match, openTag, key, content, closeTag) => {
+    /(<([a-z]\w*)\b[^>]*\sdata-i18n="([^"]+)"[^>]*>)([\s\S]*?)(<\/\2>)/gi,
+    (match, openTag, tagName, key, content, closeTag) => {
       const translation = translations[key];
       if (translation && translation.trim() !== '') {
         return `${openTag}${translation}${closeTag}`;
