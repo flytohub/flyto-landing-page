@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<!-- Google Analytics (GA4) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFSSQK3KW"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-8XFSSQK3KW');
+	</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Launch Flyto2 — Choose Your Environment</title>
+	<meta name="description" content="Launch Flyto2 in the cloud, locally, or as a desktop app.">
+	<link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="../assets/img/icon.png" type="image/png" sizes="32x32">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap">
+	<link rel="stylesheet" href="../assets/css/fontawesome.all.min.css">
+	<link rel="stylesheet" href="../assets/css/bootstrap-icons.css">
+	<style>
+		*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+		body {
+			font-family: 'Poppins', -apple-system, sans-serif;
+			background: #0a0a0f;
+			color: #fff;
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+		}
+
+		/* Animated Background */
+		.bg-glow {
+			position: fixed;
+			inset: 0;
+			z-index: 0;
+			overflow: hidden;
+			pointer-events: none;
+		}
+		.bg-glow .orb {
+			position: absolute;
+			border-radius: 50%;
+			filter: blur(100px);
+		}
+		.bg-glow .orb-1 {
+			width: 600px; height: 600px;
+			background: rgba(124, 58, 237, 0.12);
+			top: -15%; left: -10%;
+			animation: drift 25s ease-in-out infinite;
+		}
+		.bg-glow .orb-2 {
+			width: 450px; height: 450px;
+			background: rgba(236, 72, 153, 0.08);
+			bottom: -10%; right: -5%;
+			animation: drift 20s ease-in-out infinite reverse;
+		}
+		.bg-glow .orb-3 {
+			width: 300px; height: 300px;
+			background: rgba(59, 130, 246, 0.06);
+			top: 50%; left: 50%;
+			transform: translate(-50%, -50%);
+			animation: drift 30s ease-in-out infinite;
+			animation-delay: -8s;
+		}
+		@keyframes drift {
+			0%, 100% { transform: translate(0, 0); }
+			25% { transform: translate(40px, -30px); }
+			50% { transform: translate(-20px, 40px); }
+			75% { transform: translate(30px, 20px); }
+		}
+
+		/* Layout */
+		.page { position: relative; z-index: 1; flex: 1; display: flex; flex-direction: column; }
+
+		/* Nav */
+		.nav {
+			padding: 24px 40px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		.nav-logo {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			text-decoration: none;
+		}
+		.nav-logo img { height: 34px; }
+		.nav-back {
+			display: flex;
+			align-items: center;
+			gap: 6px;
+			color: rgba(255,255,255,0.4);
+			text-decoration: none;
+			font-size: 0.85rem;
+			transition: color 0.2s;
+		}
+		.nav-back:hover { color: rgba(255,255,255,0.8); }
+
+		/* Main Content */
+		.main {
+			flex: 1;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 20px 20px 80px;
+		}
+		.content { width: 100%; max-width: 960px; }
+
+		/* Header */
+		.header { text-align: center; margin-bottom: 48px; }
+		.header-icon {
+			width: 64px; height: 64px;
+			margin: 0 auto 20px;
+			background: linear-gradient(135deg, rgba(124,58,237,0.2), rgba(236,72,153,0.1));
+			border-radius: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 1.6rem;
+			color: #a78bfa;
+		}
+		.title {
+			font-size: 2.2rem;
+			font-weight: 700;
+			margin-bottom: 10px;
+			color: #fff;
+		}
+		.subtitle {
+			color: rgba(255,255,255,0.45);
+			font-size: 1.05rem;
+			font-weight: 300;
+		}
+
+		/* Detection Status */
+		.detect-bar {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 10px;
+			margin-bottom: 40px;
+		}
+		.detect-pill {
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+			padding: 8px 18px;
+			background: rgba(255,255,255,0.04);
+			border: 1px solid rgba(255,255,255,0.06);
+			border-radius: 100px;
+			font-size: 0.78rem;
+			color: rgba(255,255,255,0.4);
+			transition: all 0.4s ease;
+		}
+		.detect-pill .indicator {
+			width: 7px; height: 7px;
+			border-radius: 50%;
+			background: rgba(255,255,255,0.2);
+			transition: background 0.3s;
+		}
+		.detect-pill.scanning .indicator {
+			background: #facc15;
+			animation: blink 1.2s ease-in-out infinite;
+		}
+		.detect-pill.found {
+			border-color: rgba(34,197,94,0.2);
+			background: rgba(34,197,94,0.05);
+			color: rgba(34,197,94,0.8);
+		}
+		.detect-pill.found .indicator { background: #22c55e; }
+		.detect-pill.idle { color: rgba(255,255,255,0.3); }
+		@keyframes blink {
+			0%, 100% { opacity: 1; }
+			50% { opacity: 0.3; }
+		}
+
+		/* Cards */
+		.cards {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 20px;
+		}
+
+		.card {
+			background: rgba(255,255,255,0.025);
+			border: 1px solid rgba(255,255,255,0.06);
+			border-radius: 24px;
+			padding: 32px 24px 28px;
+			text-align: center;
+			transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+			position: relative;
+		}
+		.card:hover {
+			border-color: rgba(255,255,255,0.12);
+			transform: translateY(-6px);
+			box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+		}
+
+		/* Card states */
+		.card.detected {
+			border-color: rgba(34,197,94,0.25);
+			background: rgba(34,197,94,0.03);
+		}
+		.card.detected:hover { border-color: rgba(34,197,94,0.4); }
+		.card.primary { border-color: rgba(124,58,237,0.2); }
+		.card.primary:hover { border-color: rgba(124,58,237,0.4); }
+		.card.disabled { opacity: 0.55; pointer-events: none; }
+
+		/* Badge */
+		.badge {
+			position: absolute;
+			top: 16px;
+			right: 16px;
+			padding: 4px 10px;
+			border-radius: 8px;
+			font-size: 0.6rem;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 0.8px;
+		}
+		.badge-purple {
+			background: rgba(124,58,237,0.12);
+			color: #a78bfa;
+		}
+		.badge-green {
+			background: rgba(34,197,94,0.12);
+			color: #4ade80;
+		}
+		.badge-gray {
+			background: rgba(255,255,255,0.05);
+			color: rgba(255,255,255,0.3);
+		}
+
+		/* Card Icon */
+		.card-icon {
+			width: 52px; height: 52px;
+			margin: 0 auto 20px;
+			border-radius: 16px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 1.3rem;
+		}
+		.card-icon.ic-cloud {
+			background: linear-gradient(135deg, rgba(124,58,237,0.15), rgba(139,92,246,0.08));
+			color: #a78bfa;
+		}
+		.card-icon.ic-local {
+			background: linear-gradient(135deg, rgba(34,197,94,0.15), rgba(16,185,129,0.08));
+			color: #4ade80;
+		}
+		.card-icon.ic-desktop {
+			background: linear-gradient(135deg, rgba(59,130,246,0.15), rgba(96,165,250,0.08));
+			color: #60a5fa;
+		}
+
+		.card-title {
+			font-size: 1.1rem;
+			font-weight: 600;
+			margin-bottom: 6px;
+		}
+		.card-desc {
+			font-size: 0.82rem;
+			color: rgba(255,255,255,0.4);
+			line-height: 1.65;
+			margin-bottom: 18px;
+		}
+
+		/* Features */
+		.card-features {
+			list-style: none;
+			margin-bottom: 24px;
+			display: flex;
+			flex-direction: column;
+			gap: 6px;
+		}
+		.card-features li {
+			font-size: 0.78rem;
+			color: rgba(255,255,255,0.4);
+			display: flex;
+			align-items: center;
+			gap: 8px;
+		}
+		.card-features li i {
+			font-size: 0.6rem;
+			color: #22c55e;
+			width: 14px;
+			text-align: center;
+		}
+
+		/* Buttons */
+		.btn {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			gap: 8px;
+			width: 100%;
+			padding: 13px 24px;
+			border-radius: 14px;
+			font-size: 0.88rem;
+			font-weight: 600;
+			font-family: inherit;
+			text-decoration: none;
+			cursor: pointer;
+			border: none;
+			transition: all 0.25s;
+		}
+		.btn-gradient {
+			background: linear-gradient(135deg, #7c3aed, #a855f7);
+			color: #fff;
+			box-shadow: 0 4px 15px rgba(124,58,237,0.2);
+		}
+		.btn-gradient:hover {
+			filter: brightness(1.15);
+			transform: translateY(-1px);
+			box-shadow: 0 6px 20px rgba(124,58,237,0.3);
+		}
+		.btn-outline {
+			background: transparent;
+			color: rgba(255,255,255,0.6);
+			border: 1px solid rgba(255,255,255,0.1);
+		}
+		.btn-outline:hover {
+			background: rgba(255,255,255,0.05);
+			border-color: rgba(255,255,255,0.2);
+			color: #fff;
+		}
+		.btn-green {
+			background: linear-gradient(135deg, #059669, #10b981);
+			color: #fff;
+			box-shadow: 0 4px 15px rgba(16,185,129,0.2);
+		}
+		.btn-green:hover {
+			filter: brightness(1.15);
+			transform: translateY(-1px);
+			box-shadow: 0 6px 20px rgba(16,185,129,0.3);
+		}
+		.btn-disabled {
+			background: rgba(255,255,255,0.03);
+			color: rgba(255,255,255,0.2);
+			cursor: not-allowed;
+		}
+
+		.card-url {
+			margin-top: 10px;
+			font-size: 0.68rem;
+			color: rgba(255,255,255,0.2);
+			font-family: 'SFMono-Regular', 'Consolas', monospace;
+		}
+
+		/* Setup Guide */
+		.guide {
+			margin-top: 48px;
+			padding: 24px 28px;
+			background: rgba(255,255,255,0.02);
+			border: 1px solid rgba(255,255,255,0.05);
+			border-radius: 20px;
+		}
+		.guide summary {
+			cursor: pointer;
+			color: rgba(255,255,255,0.45);
+			font-size: 0.85rem;
+			font-weight: 500;
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			user-select: none;
+		}
+		.guide summary:hover { color: rgba(255,255,255,0.7); }
+		.guide summary i { font-size: 0.9rem; color: rgba(255,255,255,0.3); }
+		.guide[open] summary { margin-bottom: 20px; }
+		.guide-body {
+			color: rgba(255,255,255,0.4);
+			font-size: 0.8rem;
+			line-height: 1.9;
+		}
+		.guide-body strong { color: rgba(255,255,255,0.65); }
+		.guide-body code {
+			background: rgba(124,58,237,0.1);
+			color: #c4b5fd;
+			padding: 2px 8px;
+			border-radius: 5px;
+			font-size: 0.76rem;
+		}
+		.code-block {
+			display: block;
+			background: rgba(0,0,0,0.4);
+			border: 1px solid rgba(255,255,255,0.05);
+			padding: 14px 18px;
+			border-radius: 10px;
+			margin: 10px 0 16px;
+			font-family: 'SFMono-Regular', 'Consolas', monospace;
+			color: #e2e8f0;
+			font-size: 0.76rem;
+			line-height: 1.9;
+			white-space: pre;
+			overflow-x: auto;
+		}
+		.guide-section + .guide-section { margin-top: 20px; }
+
+		/* Responsive */
+		@media (max-width: 768px) {
+			.cards { grid-template-columns: 1fr; max-width: 380px; margin: 0 auto; }
+			.title { font-size: 1.6rem; }
+			.subtitle { font-size: 0.92rem; }
+			.nav { padding: 16px 20px; }
+			.main { padding: 20px 16px 60px; }
+		}
+		@media (min-width: 769px) and (max-width: 1024px) {
+			.cards { grid-template-columns: repeat(2, 1fr); max-width: 640px; margin: 0 auto; }
+		}
+	</style>
+</head>
+<body>
+	<div class="bg-glow">
+		<div class="orb orb-1"></div>
+		<div class="orb orb-2"></div>
+		<div class="orb orb-3"></div>
+	</div>
+
+	<div class="page">
+		<nav class="nav">
+			<a href="index.html" class="nav-logo">
+				<picture>
+					<source srcset="../assets/img/logo.webp" type="image/webp">
+					<img src="../assets/img/logo.png" alt="Flyto2" height="34">
+				</picture>
+			</a>
+			<a href="index.html" class="nav-back">
+				<i class="bi bi-arrow-left"></i> Back to Home
+			</a>
+		</nav>
+
+		<div class="main">
+			<div class="content">
+				<!-- Header -->
+				<div class="header">
+					<div class="header-icon">
+						<i class="fas fa-rocket"></i>
+					</div>
+					<h1 class="title">Launch Flyto</h1>
+					<p class="subtitle">Choose your preferred environment</p>
+				</div>
+
+				<!-- Detection -->
+				<div class="detect-bar">
+					<div class="detect-pill scanning" id="detectPill">
+						<span class="indicator"></span>
+						<span id="detectText">Scanning for local server...</span>
+					</div>
+				</div>
+
+				<!-- Cards -->
+				<div class="cards">
+					<!-- Cloud -->
+					<div class="card primary" id="cardCloud">
+						<span class="badge badge-purple">Recommended</span>
+						<div class="card-icon ic-cloud">
+							<i class="fas fa-cloud"></i>
+						</div>
+						<h3 class="card-title">Cloud</h3>
+						<p class="card-desc">Start instantly in your browser.<br>No installation required.</p>
+						<ul class="card-features">
+							<li><i class="fas fa-check"></i> Zero setup</li>
+							<li><i class="fas fa-check"></i> Always up to date</li>
+							<li><i class="fas fa-check"></i> Access from anywhere</li>
+						</ul>
+						<a href="https://app.flyto2.com" class="btn btn-gradient" id="btnCloud">
+							<i class="fas fa-external-link-alt"></i> Open Cloud
+						</a>
+						<div class="card-url">app.flyto2.com</div>
+					</div>
+
+					<!-- Local -->
+					<div class="card" id="cardLocal">
+						<div class="card-icon ic-local">
+							<i class="fas fa-server"></i>
+						</div>
+						<h3 class="card-title">Local Server</h3>
+						<p class="card-desc">Self-hosted on your machine.<br>Full control over your data.</p>
+						<ul class="card-features">
+							<li><i class="fas fa-check"></i> Data stays on device</li>
+							<li><i class="fas fa-check"></i> No internet required</li>
+							<li><i class="fas fa-check"></i> Custom configuration</li>
+						</ul>
+						<a href="https://local.flyto2.com" class="btn btn-outline" id="btnLocal">
+							<i class="fas fa-arrow-right"></i> Open Local
+						</a>
+						<div class="card-url" id="localUrl">local.flyto2.com</div>
+					</div>
+
+					<!-- Desktop App -->
+					<div class="card disabled" id="cardDesktop">
+						<span class="badge badge-gray">Coming Soon</span>
+						<div class="card-icon ic-desktop">
+							<i class="fas fa-laptop"></i>
+						</div>
+						<h3 class="card-title">Desktop App</h3>
+						<p class="card-desc">Native experience with<br>system integration.</p>
+						<ul class="card-features">
+							<li><i class="fas fa-check"></i> Native performance</li>
+							<li><i class="fas fa-check"></i> System tray integration</li>
+							<li><i class="fas fa-check"></i> Offline mode</li>
+						</ul>
+						<button class="btn btn-disabled" disabled>
+							<i class="far fa-clock"></i> Coming Soon
+						</button>
+					</div>
+				</div>
+
+				<!-- Setup Guide -->
+				<details class="guide">
+					<summary>
+						<i class="fas fa-tools"></i>
+						How to set up local development
+					</summary>
+					<div class="guide-body">
+						<div class="guide-section">
+							<strong>Step 1 — DNS (one-time, works for whole team)</strong>
+							<p>Add a DNS A record in Cloudflare:</p>
+							<code class="code-block">local.flyto2.com  →  A  →  127.0.0.1</code>
+							<p>Now <code>local.flyto2.com</code> resolves to localhost for everyone.</p>
+						</div>
+
+						<div class="guide-section">
+							<strong>Alternative — /etc/hosts (personal only)</strong>
+							<code class="code-block">sudo nano /etc/hosts
+# Add:
+127.0.0.1  local.flyto2.com</code>
+						</div>
+
+						<div class="guide-section">
+							<strong>Optional — HTTPS for auto-detection</strong>
+							<code class="code-block">brew install mkcert
+mkcert -install
+mkcert local.flyto2.com</code>
+							<p>With HTTPS, this page can <strong>automatically detect</strong> your local server and highlight it.</p>
+						</div>
+					</div>
+				</details>
+			</div>
+		</div>
+	</div>
+
+	<script src="../assets/js/app-detect.js"></script>
+	<script>
+		(async function() {
+			var pill = document.getElementById('detectPill');
+			var pillText = document.getElementById('detectText');
+			var cardLocal = document.getElementById('cardLocal');
+			var btnLocal = document.getElementById('btnLocal');
+			var localUrl = document.getElementById('localUrl');
+
+			try {
+				var result = await FlytoDetect.detectLocalServer();
+
+				if (result.available) {
+					// Found!
+					pill.className = 'detect-pill found';
+					pillText.innerHTML = '<i class="fas fa-check-circle" style="margin-right:2px"></i> Local server detected' +
+						(result.version ? ' &middot; v' + result.version : '');
+
+					cardLocal.classList.add('detected');
+
+					// Swap badge
+					var badge = document.createElement('span');
+					badge.className = 'badge badge-green';
+					badge.innerHTML = '<i class="fas fa-wifi" style="font-size:0.5rem;margin-right:3px"></i> Online';
+					cardLocal.insertBefore(badge, cardLocal.firstChild);
+
+					// Update button
+					btnLocal.href = result.url;
+					btnLocal.className = 'btn btn-green';
+					btnLocal.innerHTML = '<i class="fas fa-bolt"></i> Open Local';
+					localUrl.textContent = result.url.replace(/^https?:\/\//, '');
+				} else {
+					pill.className = 'detect-pill idle';
+					pillText.textContent = 'No local server found';
+				}
+			} catch (err) {
+				pill.className = 'detect-pill idle';
+				pillText.textContent = 'Choose your environment below';
+			}
+		})();
+	</script>
+</body>
+</html>

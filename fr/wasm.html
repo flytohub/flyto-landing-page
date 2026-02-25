@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html class="no-js" lang="fr">
+<head>
+	<!-- Google Analytics (GA4) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XFSSQK3KW"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-8XFSSQK3KW');
+	</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Preconnect to critical origins -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+	<link rel="dns-prefetch" href="https://www.gstatic.com">
+	<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
+	<!-- Google Fonts -->
+	<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" media="print" onload="this.media='all'">
+	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"></noscript>
+	<title>Flyto2 WebAssembly - Run Automation in the Browser</title>
+	<meta name="description" content="Flyto2 WebAssembly module. Run workflow automation directly in the browser. No installation required.">
+
+	<!-- Content Security Policy -->
+	<meta http-equiv="Content-Security-Policy" content="
+		default-src 'self';
+		script-src 'self' 'unsafe-inline' https://www.gstatic.com https://cdn.jsdelivr.net https://apis.google.com https://www.googletagmanager.com;
+		style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com;
+		font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net;
+		img-src 'self' data: https:;
+		connect-src 'self' https://www.gstatic.com https://cdn.jsdelivr.net https://*.cloudfunctions.net https://*.firebaseio.com https://www.google-analytics.com https://www.googletagmanager.com;
+		frame-src https://accounts.google.com https://*.firebaseapp.com;
+	">
+
+	<!-- Security Headers -->
+	<meta http-equiv="X-Content-Type-Options" content="nosniff">
+	<meta name="referrer" content="strict-origin-when-cross-origin">
+	<meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+
+	<!-- SEO Meta Tags -->
+	<link rel="canonical" href="https://flyto2.com/fr/wasm.html">
+	<link rel="alternate" hreflang="en" href="https://flyto2.com/wasm.html" />
+	<link rel="alternate" hreflang="de" href="https://flyto2.com/de/wasm.html" />
+	<link rel="alternate" hreflang="es" href="https://flyto2.com/es/wasm.html" />
+	<link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/wasm.html" />
+	<link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/wasm.html" />
+	<link rel="alternate" hreflang="id" href="https://flyto2.com/id/wasm.html" />
+	<link rel="alternate" hreflang="it" href="https://flyto2.com/it/wasm.html" />
+	<link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/wasm.html" />
+	<link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/wasm.html" />
+	<link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/wasm.html" />
+	<link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/wasm.html" />
+	<link rel="alternate" hreflang="th" href="https://flyto2.com/th/wasm.html" />
+	<link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/wasm.html" />
+	<link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/wasm.html" />
+	<link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/wasm.html" />
+	<link rel="alternate" hreflang="x-default" href="https://flyto2.com/wasm.html" />
+	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://flyto2.com/fr/wasm.html">
+	<meta property="og:title" content="Flyto2 WebAssembly - Run Automation in the Browser">
+	<meta property="og:description" content="Flyto2 WebAssembly module. Run workflow automation directly in the browser. No installation required.">
+	<meta property="og:image" content="https://flyto2.com/assets/img/og-image.png">
+	<meta property="og:site_name" content="Flyto2">
+	<meta property="og:locale" content="fr_FR">
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@flyto2">
+	<meta name="twitter:title" content="Flyto2 WebAssembly - Run Automation in the Browser">
+	<meta name="twitter:description" content="Flyto2 WebAssembly module. Run workflow automation directly in the browser. No installation required.">
+	<meta name="twitter:image" content="https://flyto2.com/assets/img/og-image.png">
+
+	<link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="../assets/img/icon.png" type="image/png" sizes="32x32">
+	<link rel="apple-touch-icon" href="../assets/img/icon.png" sizes="180x180">
+
+	<!-- Critical CSS -->
+	<link rel="stylesheet" href="../assets/css/normalize.css">
+	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../assets/css/fontawesome.all.min.css">
+	<link rel="stylesheet" href="../style.css">
+	<link rel="stylesheet" href="../assets/css/responsive.css">
+
+	<!-- Non-critical CSS -->
+	<link rel="stylesheet" href="../assets/css/bootstrap-icons.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/animate.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/auth.css" media="print" onload="this.media='all'">
+	<noscript>
+		<link rel="stylesheet" href="../assets/css/bootstrap-icons.css">
+		<link rel="stylesheet" href="../assets/css/animate.css">
+		<link rel="stylesheet" href="../assets/css/auth.css">
+	</noscript>
+
+	<style>
+		/* Hero */
+		.wasm-hero {
+			background: linear-gradient(135deg, #0f0524 0%, #1e0a3c 20%, #2d1b4e 50%, #4c1d95 80%, #5b21b6 100%);
+			position: relative;
+			overflow: hidden;
+			min-height: 500px;
+			padding: 140px 0 120px;
+		}
+		.wasm-hero::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background:
+				radial-gradient(circle at 20% 80%, rgba(124, 58, 237, 0.5) 0%, transparent 40%),
+				radial-gradient(circle at 80% 20%, rgba(167, 139, 250, 0.4) 0%, transparent 40%),
+				radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.3) 0%, transparent 60%);
+			animation: aurora 6s ease-in-out infinite;
+		}
+		@keyframes aurora {
+			0%, 100% { opacity: 1; transform: scale(1); }
+			50% { opacity: 0.8; transform: scale(1.1); }
+		}
+
+		/* Floating orbs */
+		.orb {
+			position: absolute;
+			border-radius: 50%;
+			filter: blur(40px);
+			animation: orb-float 8s ease-in-out infinite;
+		}
+		.orb-1 { width: 300px; height: 300px; background: rgba(124, 58, 237, 0.3); top: -100px; left: -100px; }
+		.orb-2 { width: 200px; height: 200px; background: rgba(167, 139, 250, 0.25); bottom: -50px; right: -50px; animation-delay: -4s; }
+		.orb-3 { width: 150px; height: 150px; background: rgba(196, 181, 253, 0.2); top: 50%; left: 70%; animation-delay: -2s; }
+		@keyframes orb-float {
+			0%, 100% { transform: translate(0, 0) scale(1); }
+			50% { transform: translate(20px, -20px) scale(1.1); }
+		}
+
+		/* Particles */
+		.particle {
+			position: absolute;
+			border-radius: 50%;
+			pointer-events: none;
+		}
+		.particle-1 { width: 8px; height: 8px; background: rgba(167, 139, 250, 0.8); top: 20%; left: 10%; animation: float-p 5s ease-in-out infinite; box-shadow: 0 0 15px rgba(167, 139, 250, 0.6); }
+		.particle-2 { width: 12px; height: 12px; background: rgba(124, 58, 237, 0.7); top: 60%; left: 85%; animation: float-p 7s ease-in-out infinite reverse; box-shadow: 0 0 20px rgba(124, 58, 237, 0.5); }
+		.particle-3 { width: 6px; height: 6px; background: rgba(196, 181, 253, 0.9); top: 30%; left: 75%; animation: float-p 4s ease-in-out infinite; box-shadow: 0 0 10px rgba(196, 181, 253, 0.7); }
+		.particle-4 { width: 10px; height: 10px; background: rgba(255, 255, 255, 0.6); top: 70%; left: 15%; animation: float-p 6s ease-in-out infinite; box-shadow: 0 0 15px rgba(255, 255, 255, 0.4); }
+		@keyframes float-p {
+			0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+			50% { transform: translate(20px, -30px) scale(1.2); opacity: 1; }
+		}
+
+		/* Hero title */
+		.hero-title {
+			font-size: 56px;
+			font-weight: 800;
+			margin-bottom: 20px;
+			background: linear-gradient(90deg, #fff 0%, #c4b5fd 25%, #a78bfa 50%, #c4b5fd 75%, #fff 100%);
+			background-size: 300% auto;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			animation: shine 4s linear infinite;
+		}
+		@keyframes shine {
+			0% { background-position: 0% center; }
+			100% { background-position: 300% center; }
+		}
+
+		/* Status badge */
+		.status-badge {
+			display: inline-flex;
+			align-items: center;
+			gap: 10px;
+			background: rgba(167, 139, 250, 0.2);
+			border: 1px solid rgba(167, 139, 250, 0.5);
+			color: #c4b5fd;
+			padding: 12px 24px;
+			border-radius: 50px;
+			font-size: 15px;
+			font-weight: 600;
+			margin-bottom: 30px;
+			animation: badge-pulse 2s ease-in-out infinite;
+		}
+		.status-badge.coming-soon {
+			background: rgba(251, 191, 36, 0.15);
+			border-color: rgba(251, 191, 36, 0.5);
+			color: #fcd34d;
+		}
+		@keyframes badge-pulse {
+			0%, 100% { box-shadow: 0 0 20px rgba(124, 58, 237, 0.3); }
+			50% { box-shadow: 0 0 40px rgba(124, 58, 237, 0.5); }
+		}
+
+		/* Notify form */
+		.notify-form {
+			max-width: 500px;
+			margin: 0 auto;
+		}
+		.notify-form .input-group {
+			display: flex;
+			gap: 12px;
+			background: rgba(255, 255, 255, 0.1);
+			border-radius: 16px;
+			padding: 8px;
+			backdrop-filter: blur(10px);
+			border: 1px solid rgba(255, 255, 255, 0.2);
+		}
+		.notify-form input {
+			flex: 1;
+			background: transparent;
+			border: none;
+			padding: 14px 20px;
+			font-size: 16px;
+			color: #fff;
+			outline: none;
+		}
+		.notify-form input::placeholder {
+			color: rgba(255, 255, 255, 0.5);
+		}
+		.notify-form button {
+			background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+			border: none;
+			padding: 14px 30px;
+			border-radius: 12px;
+			color: #fff;
+			font-weight: 600;
+			font-size: 15px;
+			cursor: pointer;
+			transition: all 0.3s;
+			white-space: nowrap;
+		}
+		.notify-form button:hover {
+			transform: scale(1.05);
+			box-shadow: 0 10px 30px rgba(124, 58, 237, 0.4);
+		}
+		.notify-form button:disabled {
+			opacity: 0.7;
+			cursor: not-allowed;
+		}
+		.notify-success {
+			display: none;
+			color: #34d399;
+			font-size: 15px;
+			margin-top: 15px;
+		}
+		.notify-success.show {
+			display: block;
+		}
+
+		/* Wave divider */
+		.wave-divider {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			overflow: hidden;
+			line-height: 0;
+		}
+		.wave-divider svg {
+			position: relative;
+			display: block;
+			width: calc(100% + 1.3px);
+			height: 60px;
+		}
+		.wave-divider .shape-fill {
+			fill: #f8f9ff;
+		}
+
+		/* Features section */
+		.features-preview {
+			background: #fff;
+			padding: 80px 0;
+		}
+		.section-title {
+			font-size: 36px;
+			font-weight: 800;
+			color: #1e0a3c;
+			margin-bottom: 15px;
+		}
+		.section-subtitle {
+			color: #6b7280;
+			font-size: 18px;
+			margin-bottom: 50px;
+		}
+		.feature-preview-card {
+			background: linear-gradient(145deg, #f8f9ff 0%, #fff 100%);
+			border-radius: 20px;
+			padding: 35px;
+			height: 100%;
+			border: 1px solid rgba(124, 58, 237, 0.1);
+			transition: all 0.3s;
+		}
+		.feature-preview-card:hover {
+			border-color: rgba(124, 58, 237, 0.3);
+			box-shadow: 0 10px 30px rgba(124, 58, 237, 0.1);
+		}
+		.feature-preview-card .icon {
+			width: 60px;
+			height: 60px;
+			background: linear-gradient(135deg, rgba(124, 58, 237, 0.1) 0%, rgba(167, 139, 250, 0.1) 100%);
+			border-radius: 16px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 20px;
+		}
+		.feature-preview-card .icon i {
+			font-size: 24px;
+			color: #7c3aed;
+		}
+		.feature-preview-card h4 {
+			font-size: 20px;
+			font-weight: 700;
+			color: #1e0a3c;
+			margin-bottom: 12px;
+		}
+		.feature-preview-card p {
+			color: #6b7280;
+			margin: 0;
+			line-height: 1.6;
+		}
+
+		/* Code preview section */
+		.code-section {
+			background: linear-gradient(180deg, #f8f9ff 0%, #fff 100%);
+			padding: 80px 0;
+		}
+		.terminal-box {
+			background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+			border-radius: 16px;
+			overflow: hidden;
+			box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+		}
+		.terminal-header {
+			background: rgba(0,0,0,0.3);
+			padding: 14px 20px;
+			display: flex;
+			align-items: center;
+			gap: 8px;
+		}
+		.terminal-dot {
+			width: 12px;
+			height: 12px;
+			border-radius: 50%;
+		}
+		.terminal-dot.red { background: #ff5f56; }
+		.terminal-dot.yellow { background: #ffbd2e; }
+		.terminal-dot.green { background: #27c93f; }
+		.terminal-title {
+			color: #888;
+			font-size: 13px;
+			margin-left: 15px;
+			font-family: 'Monaco', 'Consolas', monospace;
+		}
+		.terminal-body {
+			padding: 25px;
+			font-family: 'Monaco', 'Consolas', 'Courier New', monospace;
+			font-size: 14px;
+		}
+		.terminal-body pre {
+			margin: 0;
+			color: #e0e0e0;
+			white-space: pre-wrap;
+		}
+		.terminal-body .keyword { color: #c792ea; }
+		.terminal-body .string { color: #c3e88d; }
+		.terminal-body .function { color: #82aaff; }
+		.terminal-body .comment { color: #676e95; }
+
+		/* Use cases section */
+		.use-cases-section {
+			background: #fff;
+			padding: 80px 0;
+		}
+		.use-case-card {
+			background: linear-gradient(145deg, #f8f9ff 0%, #fff 100%);
+			border-radius: 20px;
+			padding: 35px;
+			height: 100%;
+			border: 1px solid rgba(124, 58, 237, 0.1);
+		}
+		.use-case-card h4 {
+			font-size: 20px;
+			font-weight: 700;
+			color: #1e0a3c;
+			margin-bottom: 12px;
+			display: flex;
+			align-items: center;
+			gap: 12px;
+		}
+		.use-case-card h4 i {
+			color: #7c3aed;
+		}
+		.use-case-card p {
+			color: #6b7280;
+			margin: 0;
+		}
+
+		/* Mobile responsive */
+		@media (max-width: 991px) {
+			.hero-title {
+				font-size: 42px;
+			}
+		}
+		@media (max-width: 768px) {
+			.wasm-hero {
+				padding: 120px 0 100px;
+			}
+			.hero-title {
+				font-size: 32px;
+			}
+			.notify-form .input-group {
+				flex-direction: column;
+			}
+			.notify-form button {
+				width: 100%;
+			}
+		}
+	</style>
+
+	<!-- Structured Data -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "SoftwareApplication",
+		"name": "Flyto2 WebAssembly",
+		"operatingSystem": "Browser",
+		"applicationCategory": "DeveloperApplication",
+		"description": "WebAssembly module for running Flyto2 automation workflows directly in the browser. Zero installation required.",
+		"offers": {
+			"@type": "Offer",
+			"price": "0",
+			"priceCurrency": "USD"
+		},
+		"author": {
+			"@type": "Organization",
+			"name": "Flyto2",
+			"url": "https://flyto2.com"
+		}
+	}
+	</script>
+</head>
+<body>
+	<!-- Skip Link for Accessibility -->
+	<a href="#main-content" class="skip-link" data-i18n="landing.common.nav.skipToContent">Aller au contenu principal</a>
+
+	<!-- Preloader -->
+	<div id="preloader">
+		<div class="preloader">
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+
+	<!-- Header Area -->
+	<header class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 align-self-center">
+					<div class="logo">
+						<a href="index.html">
+							<picture>
+								<source srcset="../assets/img/white-logo.webp" type="image/webp">
+								<img src="../assets/img/white-logo.png" alt="Flyto2" width="90" height="79" fetchpriority="high">
+							</picture>
+						</a>
+					</div>
+					<div class="canvas_open">
+						<a href="javascript:void(0)" aria-label="Open menu" role="button">
+							<span></span>
+							<span></span>
+							<span></span>
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-9">
+					<div class="menu d-flex align-items-center justify-content-end">
+						<nav>
+							<ul>
+								<li><a href="index.html" data-i18n="landing.common.nav.home">Accueil</a></li>
+								<li class="nav-dropdown">
+									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" data-i18n="landing.common.nav.pricing">Tarifs</span>
+									<div class="nav-dropdown-menu">
+										<a href="pricing.html" class="nav-dropdown-item"><i class="bi bi-tag"></i><span data-i18n="landing.common.nav.plansAndPricing">Plans et tarifs</span></a>
+									</div>
+								</li>
+								<li class="nav-dropdown active">
+									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" data-i18n="landing.common.nav.download">Telecharger</span>
+									<div class="nav-dropdown-menu">
+										<a href="download.html" class="nav-dropdown-item"><i class="bi bi-terminal"></i><span data-i18n="landing.common.nav.flytoCli">Flyto2 Core (CLI)</span></a>
+										<a href="app.html" class="nav-dropdown-item"><i class="bi bi-window"></i><span data-i18n="landing.common.nav.desktopApp">Application de bureau</span></a>
+										<a href="wasm.html" class="nav-dropdown-item"><i class="bi bi-globe2"></i><span data-i18n="landing.common.nav.wasmModule">WebAssembly</span></a>
+										<a href="node.html" class="nav-dropdown-item"><i class="bi bi-braces"></i><span data-i18n="landing.common.nav.nodePackage">Node.js</span></a>
+									</div>
+								</li>
+								<li class="nav-dropdown">
+									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" data-i18n="landing.common.nav.resources">Ressources</span>
+									<div class="nav-dropdown-menu">
+										<a href="https://github.com/flytohub/flyto-core" class="nav-dropdown-item" target="_blank" rel="noopener noreferrer"><i class="bi bi-book"></i><span data-i18n="landing.common.nav.documentation">Documentation</span></a>
+										<a href="faq.html" class="nav-dropdown-item"><i class="bi bi-question-circle"></i><span data-i18n="landing.common.nav.faq">FAQ</span></a>
+										<a href="contact.html" class="nav-dropdown-item"><i class="bi bi-envelope"></i><span data-i18n="landing.common.nav.contactUs">Contactez-nous</span></a>
+									</div>
+								</li>
+							</ul>
+						</nav>
+						<div class="header-auth">
+							<button id="headerLoginBtn" class="btn-header-login"><i class="bi bi-person"></i><span data-i18n="landing.common.nav.signIn">Se connecter</span></button>
+							<div id="headerUserDropdown" class="user-dropdown d-none">
+								<div class="user-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">
+									<div class="user-avatar" id="headerUserAvatar">U</div>
+									<span class="user-email" id="headerUserEmail"></span>
+									<i class="bi bi-chevron-down dropdown-arrow"></i>
+								</div>
+								<div class="user-dropdown-menu">
+									<div class="dropdown-header"><div class="dropdown-header-email" id="dropdownUserEmail"></div><div class="dropdown-header-label" data-i18n="landing.common.nav.flytoAccount">Compte Flyto2</div></div>
+									<div class="dropdown-menu-items">
+										<a href="pricing.html" class="dropdown-menu-item"><i class="bi bi-key"></i><span data-i18n="landing.common.nav.myLicenses">Mes licences</span></a>
+										<div class="dropdown-divider"></div>
+										<button class="dropdown-menu-item text-danger" id="btnSignOut"><i class="bi bi-box-arrow-right"></i><span data-i18n="landing.common.nav.signOut">Se deconnecter</span></button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- Start Mobile Menu Area -->
+	<div class="mobile-menu-area">
+		<div class="off_canvars_overlay"></div>
+		<div class="offcanvas_menu">
+			<div class="offcanvas_menu_wrapper">
+				<div class="canvas_close">
+					<a href="javascript:void(0)" aria-label="Close menu" role="button"><i class="fas fa-times"></i></a>
+				</div>
+				<div class="mobile-logo">
+					<a href="index.html">
+						<picture>
+							<source srcset="../assets/img/logo.webp" type="image/webp">
+							<img src="../assets/img/logo.png" alt="Flyto2" width="90" height="79" />
+						</picture>
+					</a>
+				</div>
+				<div id="menu" class="text-left">
+					<ul class="offcanvas_main_menu">
+						<li><a href="index.html" data-i18n="landing.common.nav.home">Accueil</a></li>
+						<li><a href="pricing.html" data-i18n="landing.common.nav.pricing">Tarifs</a></li>
+						<li><a href="download.html" data-i18n="landing.common.nav.download">Telecharger</a></li>
+						<li class="active"><a href="wasm.html" data-i18n="landing.common.nav.wasmModule">WebAssembly</a></li>
+						<li><a href="node.html" data-i18n="landing.common.nav.nodePackage">Node.js</a></li>
+						<li><a href="contact.html" data-i18n="landing.common.nav.contactUs">Contactez-nous</a></li>
+					</ul>
+				</div>
+				<!-- Mobile Language Switcher -->
+				<div class="mobile-lang-switcher">
+					<button class="mobile-lang-trigger" onclick="document.getElementById('langSheet').classList.add('active');document.getElementById('langOverlay').classList.add('active');">
+						<span class="trigger-text"><i class="bi bi-globe"></i> <span class="current-lang-name">Français</span></span>
+						<i class="bi bi-chevron-up"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Mobile Menu Area -->
+	<main id="main-content">
+
+	<!-- Hero Area -->
+	<section class="wasm-hero">
+		<div class="orb orb-1"></div>
+		<div class="orb orb-2"></div>
+		<div class="orb orb-3"></div>
+		<div class="particle particle-1"></div>
+		<div class="particle particle-2"></div>
+		<div class="particle particle-3"></div>
+		<div class="particle particle-4"></div>
+
+		<div class="container" style="position: relative; z-index: 2;">
+			<div class="row">
+				<div class="col-lg-10 offset-lg-1 text-center">
+					<h1 class="hero-title wow fadeInUp" data-i18n="landing.wasm.hero.title">Flyto2 WebAssembly</h1>
+					<p class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 20px; color: #c4b5fd; margin-bottom: 30px;" data-i18n="landing.wasm.hero.subtitle">Run automation workflows directly in your browser. Zero installation required.</p>
+
+					<!-- Status badge -->
+					<div class="wow fadeInUp" data-wow-delay="0.2s">
+						<span class="status-badge coming-soon" id="status-badge">
+							<i class="fas fa-rocket"></i>
+							<span id="status-text" data-i18n="landing.wasm.hero.comingSoon">Coming Soon</span>
+						</span>
+					</div>
+
+					<!-- Coming Soon: Notify Form -->
+					<div id="coming-soon-content" class="wow fadeInUp" data-wow-delay="0.3s">
+						<p style="color: rgba(255,255,255,0.8); font-size: 16px; margin-bottom: 25px;" data-i18n="landing.wasm.hero.notifyDesc">Be the first to know when the WebAssembly module is ready.</p>
+						<form class="notify-form" id="notify-form">
+							<div class="input-group">
+								<input type="email" id="notify-email" placeholder="Enter your email" data-i18n-placeholder="landing.wasm.hero.emailPlaceholder" required>
+								<button type="submit" id="notify-btn">
+									<i class="fas fa-bell"></i> <span data-i18n="landing.wasm.hero.notifyMe">Notify Me</span>
+								</button>
+							</div>
+						</form>
+						<p class="notify-success" id="notify-success">
+							<i class="fas fa-check-circle"></i> <span data-i18n="landing.wasm.hero.notifySuccess">You're on the list! We'll email you when it's ready.</span>
+						</p>
+						<p style="margin-top: 20px; color: rgba(255,255,255,0.5); font-size: 14px;">
+							<i class="fab fa-python" style="margin-right: 8px;"></i>
+							<span data-i18n="landing.wasm.hero.cliAvailable">Need automation now?</span>
+							<a href="download.html" style="color: #a78bfa; text-decoration: underline;" data-i18n="landing.wasm.hero.tryCli">Try Flyto2 Core (CLI)</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="wave-divider">
+			<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+				<path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+			</svg>
+		</div>
+	</section>
+
+	<!-- Features Preview Section -->
+	<section class="features-preview" id="features-preview-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h2 class="section-title wow fadeInUp" data-i18n="landing.wasm.features.title">What's Coming</h2>
+					<p class="section-subtitle wow fadeInUp" data-wow-delay="0.1s" data-i18n="landing.wasm.features.subtitle">Browser-native automation powered by WebAssembly</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="feature-preview-card wow fadeInUp" data-wow-delay="0.1s">
+						<div class="icon">
+							<i class="fas fa-bolt"></i>
+						</div>
+						<h4 data-i18n="landing.wasm.features.nearNative">Near-Native Speed</h4>
+						<p data-i18n="landing.wasm.features.nearNativeDesc">WebAssembly runs at near-native speed. Execute complex workflows without lag.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="feature-preview-card wow fadeInUp" data-wow-delay="0.2s">
+						<div class="icon">
+							<i class="fas fa-download"></i>
+						</div>
+						<h4 data-i18n="landing.wasm.features.zeroInstall">Zero Installation</h4>
+						<p data-i18n="landing.wasm.features.zeroInstallDesc">No downloads, no setup. Just import the module and start automating.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="feature-preview-card wow fadeInUp" data-wow-delay="0.3s">
+						<div class="icon">
+							<i class="fas fa-shield-alt"></i>
+						</div>
+						<h4 data-i18n="landing.wasm.features.sandboxed">Sandboxed Security</h4>
+						<p data-i18n="landing.wasm.features.sandboxedDesc">Runs in browser sandbox. No file system access unless explicitly granted.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="feature-preview-card wow fadeInUp" data-wow-delay="0.4s">
+						<div class="icon">
+							<i class="fas fa-globe"></i>
+						</div>
+						<h4 data-i18n="landing.wasm.features.crossBrowser">Cross-Browser</h4>
+						<p data-i18n="landing.wasm.features.crossBrowserDesc">Works in Chrome, Firefox, Safari, and Edge. One module, all browsers.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="feature-preview-card wow fadeInUp" data-wow-delay="0.5s">
+						<div class="icon">
+							<i class="fas fa-rocket"></i>
+						</div>
+						<h4 data-i18n="landing.wasm.features.instantStartup">Instant Startup</h4>
+						<p data-i18n="landing.wasm.features.instantStartupDesc">No cold start delays. Load and execute workflows instantly in any browser tab.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="feature-preview-card wow fadeInUp" data-wow-delay="0.6s">
+						<div class="icon">
+							<i class="fas fa-cubes"></i>
+						</div>
+						<h4 data-i18n="landing.wasm.features.modules">250+ Modules</h4>
+						<p data-i18n="landing.wasm.features.modulesDesc">Same powerful modules as the CLI. String, array, data, and more.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Code Preview Section -->
+	<section class="code-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center mb-50">
+					<h2 class="section-title wow fadeInUp" data-i18n="landing.wasm.code.title">Simple Integration</h2>
+					<p class="section-subtitle wow fadeInUp" data-wow-delay="0.1s" data-i18n="landing.wasm.code.subtitle">A preview of how easy it will be to use</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2">
+					<div class="terminal-box wow fadeInUp" data-wow-delay="0.2s">
+						<div class="terminal-header">
+							<span class="terminal-dot red"></span>
+							<span class="terminal-dot yellow"></span>
+							<span class="terminal-dot green"></span>
+							<span class="terminal-title">script.js</span>
+						</div>
+						<div class="terminal-body">
+							<pre><span class="comment">// Import the Flyto2 WASM module</span>
+<span class="keyword">import</span> { Flyto } <span class="keyword">from</span> <span class="string">'@flyto/wasm'</span>;
+
+<span class="comment">// Initialize</span>
+<span class="keyword">const</span> flyto = <span class="keyword">await</span> Flyto.<span class="function">init</span>();
+
+<span class="comment">// Execute a workflow</span>
+<span class="keyword">const</span> result = <span class="keyword">await</span> flyto.<span class="function">execute</span>(<span class="string">'string.uppercase'</span>, {
+  <span class="keyword">text</span>: <span class="string">'hello world'</span>
+});
+
+console.<span class="function">log</span>(result.data); <span class="comment">// "HELLO WORLD"</span></pre>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Use Cases Section -->
+	<section class="use-cases-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center mb-50">
+					<h2 class="section-title wow fadeInUp" data-i18n="landing.wasm.useCases.title">Use Cases</h2>
+					<p class="section-subtitle wow fadeInUp" data-wow-delay="0.1s" data-i18n="landing.wasm.useCases.subtitle">Perfect for browser-based applications</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="use-case-card wow fadeInUp" data-wow-delay="0.1s">
+						<h4><i class="fas fa-globe"></i> <span data-i18n="landing.wasm.useCases.webApps">Web Applications</span></h4>
+						<p data-i18n="landing.wasm.useCases.webAppsDesc">Add automation features to your web app without backend dependencies.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="use-case-card wow fadeInUp" data-wow-delay="0.2s">
+						<h4><i class="fas fa-mobile-alt"></i> <span data-i18n="landing.wasm.useCases.pwa">PWAs</span></h4>
+						<p data-i18n="landing.wasm.useCases.pwaDesc">Progressive Web Apps with full offline automation capability.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="use-case-card wow fadeInUp" data-wow-delay="0.3s">
+						<h4><i class="fas fa-puzzle-piece"></i> <span data-i18n="landing.wasm.useCases.extensions">Browser Extensions</span></h4>
+						<p data-i18n="landing.wasm.useCases.extensionsDesc">Build Chrome/Firefox extensions with powerful automation modules.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	</main>
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="footer-top pt-70 pb-40">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4 col-sm-6 mb-30">
+						<div class="f-widgets-item">
+							<div class="f-logo">
+								<a href="index.html">
+									<picture>
+										<source srcset="../assets/img/logo.webp" type="image/webp">
+										<img src="../assets/img/logo.png" alt="Flyto2" width="90" height="79" loading="lazy" />
+									</picture>
+								</a>
+							</div>
+							<p style="color: #666; margin: 20px 0;" data-i18n="landing.common.footer.tagline">L'automatisation qui fonctionne comme vous. Enregistrez une fois, rejouez indefiniment.</p>
+							<div class="f-social">
+								<a href="https://github.com/flytohub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 col-sm-6 mb-30">
+						<div class="f-widgets-item">
+							<h3 data-i18n="landing.common.footer.product">Produit</h3>
+							<ul>
+								<li><a href="download.html" data-i18n="landing.common.nav.download">Telecharger</a></li>
+								<li><a href="app.html" data-i18n="landing.common.nav.desktopApp">Application de bureau</a></li>
+								<li><a href="pricing.html" data-i18n="landing.common.nav.pricing">Tarifs</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6 mb-30">
+						<div class="f-widgets-item">
+							<h3 data-i18n="landing.common.nav.resources">Ressources</h3>
+							<ul>
+								<li><a href="https://github.com/flytohub/flyto-core" data-i18n="landing.common.nav.documentation" target="_blank" rel="noopener noreferrer">Documentation</a></li>
+								<li><a href="faq.html" data-i18n="landing.common.nav.faq">FAQ</a></li>
+								<li><a href="contact.html" data-i18n="landing.common.nav.contactUs">Contactez-nous</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6 mb-30">
+						<div class="f-widgets-item">
+							<h3 data-i18n="landing.common.footer.openSource">Open Source</h3>
+							<ul>
+								<li><a href="https://github.com/flytohub/flyto-core" target="_blank" rel="noopener noreferrer">flyto-core</a></li>
+								<li><a href="https://github.com/flytohub/flyto-core/blob/main/CONTRIBUTING.md" data-i18n="landing.common.footer.contributing" target="_blank" rel="noopener noreferrer">Contribuer</a></li>
+								<li><a href="https://github.com/flytohub/flyto-core/blob/main/LICENSE" data-i18n="landing.common.footer.license" target="_blank" rel="noopener noreferrer">Licence</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom pt-30 pb-30">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 align-self-center">
+						<div class="copy-f-text">
+							<p data-i18n="landing.common.footer.copyright">Copyright 2025 Flyto2. Tous droits reserves</p>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="footer_social">
+							<ul>
+								<li><a href="https://github.com/flytohub" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+								<li><a href="https://www.youtube.com/channel/UCZ9OOqx4RM3Jjy1annWtsRA" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<div class="scroll-area">
+		<i class="fas fa-arrow-up"></i>
+	</div>
+
+	<!-- Scripts -->
+	<script src="../assets/js/modernizr.min.js"></script>
+	<script src="../assets/js/jquery-3.6.0.min.js"></script>
+	<script src="../assets/js/popper.min.js" defer></script>
+	<script src="../assets/js/bootstrap.min.js" defer></script>
+	<script src="../assets/js/wow.min.js" defer></script>
+	<script src="../assets/js/script.js" defer></script>
+	<script src="../assets/js/mobile-menu.js" defer></script>
+
+	<script>
+		// Firebase URL
+		function getFirebaseUrl() {
+			return window.FlytoAuth?.FIREBASE_URL || 'https://us-central1-ticket-helper-dbc0e.cloudfunctions.net';
+		}
+
+		// Notify form submission
+		document.getElementById('notify-form').addEventListener('submit', async (e) => {
+			e.preventDefault();
+			const email = document.getElementById('notify-email').value;
+			const btn = document.getElementById('notify-btn');
+			const successMsg = document.getElementById('notify-success');
+
+			btn.disabled = true;
+			btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+
+			try {
+				const response = await fetch(`${getFirebaseUrl()}/subscribeWasmNotify`, {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify({ email, source: 'wasm_page' })
+				});
+				const data = await response.json();
+
+				if (data.ok) {
+					successMsg.classList.add('show');
+					document.getElementById('notify-email').value = '';
+					btn.innerHTML = '<i class="fas fa-check"></i> Subscribed';
+				} else {
+					throw new Error(data.error || 'Subscription failed');
+				}
+			} catch (err) {
+				btn.innerHTML = '<i class="fas fa-times"></i> Failed';
+				setTimeout(() => {
+					btn.innerHTML = '<i class="fas fa-bell"></i> <span data-i18n="landing.wasm.hero.notifyMe">Notify Me</span>';
+					btn.disabled = false;
+				}, 2000);
+			}
+		});
+
+		// Initialize
+		document.addEventListener('DOMContentLoaded', function() {
+			new WOW().init();
+		});
+	</script>
+
+	<!-- Firebase SDK -->
+	<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js" defer></script>
+	<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js" defer></script>
+	<script src="../assets/js/auth.js" defer></script>
+	<script>
+		window.addEventListener('authStateChanged', (e) => {
+			const user = e.detail.user;
+			if (user) document.getElementById('dropdownUserEmail').textContent = user.email;
+		});
+		document.addEventListener('click', (e) => {
+			const dropdown = document.getElementById('headerUserDropdown');
+			if (dropdown && !dropdown.contains(e.target)) dropdown.classList.remove('show');
+		});
+	</script>
+
+	<!-- Language Bottom Sheet -->
+	<div id="langOverlay" class="lang-sheet-overlay" onclick="this.classList.remove('active');document.getElementById('langSheet').classList.remove('active');"></div>
+	<div id="langSheet" class="lang-sheet">
+		<div class="lang-sheet-header">
+			<h3><i class="bi bi-translate"></i> <span data-i18n="landing.common.nav.selectLanguage">Choisir la langue</span></h3>
+			<button class="lang-sheet-close" onclick="document.getElementById('langSheet').classList.remove('active');document.getElementById('langOverlay').classList.remove('active');">
+				<i class="bi bi-x-lg"></i>
+			</button>
+		</div>
+		<div class="lang-sheet-body">
+			<a href="/" class="lang-sheet-item"><span>English</span></a>
+			<a href="/zh/" class="lang-sheet-item"><span>繁體中文</span></a>
+			<a href="/ja/" class="lang-sheet-item"><span>日本語</span></a>
+			<a href="/ko/" class="lang-sheet-item"><span>한국어</span></a>
+		</div>
+	</div>
+</body>
+</html>
