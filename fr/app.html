@@ -792,7 +792,7 @@
 			<div class="row">
 				<div class="col-lg-10 offset-lg-1 text-center">
 					<h1 class="hero-title wow fadeInUp" data-i18n="landing.app.hero.title">Telecharger Flyto2</h1>
-					<p class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 20px; color: #c4b5fd; margin-bottom: 30px;" data-i18n="landing.app.hero.subtitle">Automatisez vos workflows de navigateur. Fonctionne hors ligne, vos donnees restent privees.</p>
+					<p class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 20px; color: #c4b5fd; margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto;" data-i18n="landing.app.hero.subtitle">Automatisez vos workflows de navigateur. Fonctionne hors ligne, vos donnees restent privees.</p>
 
 					<!-- Status badge - controlled by Firebase -->
 					<div class="wow fadeInUp" data-wow-delay="0.2s">
@@ -892,7 +892,7 @@
 						<div class="icon">
 							<i class="fas fa-cubes"></i>
 						</div>
-						<h4 data-i18n="landing.app.features.modules">250+ Modules</h4>
+						<h4 data-i18n="landing.app.features.modules">250+ modules</h4>
 						<p data-i18n="landing.app.features.modulesDesc">Modules intégrés pour le traitement des données, les opérations sur fichiers, les appels API, et plus.</p>
 					</div>
 				</div>
@@ -1111,41 +1111,49 @@
 			return window.FlytoAuth?.FIREBASE_URL || 'https://us-central1-ticket-helper-dbc0e.cloudfunctions.net';
 		}
 
-		// App state
+		// App state (fallback defaults, overridden by GitHub API)
 		let appConfig = {
-			available: true,
-			version: '0.2.4',
-			downloads: {
-				'macos-arm64': {
-					url: 'https://github.com/flytohub/flyto2/releases/download/v0.2.4/Flyto2_0.2.4_aarch64.dmg',
-					filename: 'Flyto2_0.2.4_aarch64.dmg',
-					size: '117 MB'
-				},
-				'windows-x64': {
-					url: 'https://github.com/flytohub/flyto2/releases/download/v0.2.4/Flyto2_0.2.4_x64-setup.exe',
-					filename: 'Flyto2_0.2.4_x64-setup.exe',
-					size: '113 MB'
-				},
-				'linux-x64': {
-					url: 'https://github.com/flytohub/flyto2/releases/download/v0.2.4/Flyto2_0.2.4_amd64.AppImage',
-					filename: 'Flyto2_0.2.4_amd64.AppImage',
-					size: '225 MB'
-				}
-			}
+			available: false,
+			version: '',
+			downloads: {}
 		};
 
-		// Fetch app config from Firebase
+		function formatBytes(bytes) {
+			if (bytes >= 1073741824) return (bytes / 1073741824).toFixed(1) + ' GB';
+			if (bytes >= 1048576) return Math.round(bytes / 1048576) + ' MB';
+			return Math.round(bytes / 1024) + ' KB';
+		}
+
+		// Fetch latest release from GitHub
 		async function fetchAppConfig() {
 			try {
-				const response = await fetch(`${getFirebaseUrl()}/getDesktopAppConfig`);
-				const data = await response.json();
-				if (data.ok) {
-					appConfig = data.config;
+				const response = await fetch('https://api.github.com/repos/flytohub/flyto2/releases/latest');
+				if (!response.ok) throw new Error('GitHub API error');
+				const release = await response.json();
+
+				const version = (release.tag_name || '').replace(/^v/, '');
+				const downloads = {};
+
+				for (const asset of release.assets || []) {
+					const name = asset.name;
+					const url = asset.browser_download_url;
+					const size = formatBytes(asset.size);
+
+					if (name.endsWith('.dmg')) {
+						downloads['macos-arm64'] = { url, filename: name, size };
+					} else if (name.endsWith('-setup.exe')) {
+						downloads['windows-x64'] = { url, filename: name, size };
+					} else if (name.endsWith('.AppImage')) {
+						downloads['linux-x64'] = { url, filename: name, size };
+					}
+				}
+
+				if (version && Object.keys(downloads).length > 0) {
+					appConfig = { available: true, version, downloads };
 					updateUI();
 				}
 			} catch (err) {
-				// Config fetch failed - show coming soon state (default)
-				console.debug('Desktop app config not available, showing coming soon state');
+				console.debug('GitHub release fetch failed:', err.message);
 			}
 		}
 

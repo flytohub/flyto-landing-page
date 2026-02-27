@@ -792,7 +792,7 @@
 			<div class="row">
 				<div class="col-lg-10 offset-lg-1 text-center">
 					<h1 class="hero-title wow fadeInUp" data-i18n="landing.app.hero.title">Unduh Flyto2</h1>
-					<p class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 20px; color: #c4b5fd; margin-bottom: 30px;" data-i18n="landing.app.hero.subtitle">Otomatisasi workflow browser Anda. Berfungsi offline, data Anda tetap privat.</p>
+					<p class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 20px; color: #c4b5fd; margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto;" data-i18n="landing.app.hero.subtitle">Otomatisasi workflow browser Anda. Berfungsi offline, data Anda tetap privat.</p>
 
 					<!-- Status badge - controlled by Firebase -->
 					<div class="wow fadeInUp" data-wow-delay="0.2s">
@@ -986,7 +986,7 @@
 						<ul class="req-list">
 							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.macosVersion">macOS 11 (Big Sur) atau lebih baru</span></li>
 							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.macosProcessor">Prosesor Apple Silicon atau Intel</span></li>
-							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.ram">4 GB RAM minimum</span></li>
+							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.ram">Minimal 4 GB RAM</span></li>
 							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.disk">500 MB ruang disk</span></li>
 						</ul>
 					</div>
@@ -997,7 +997,7 @@
 						<ul class="req-list">
 							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.windowsVersion">Windows 10 (64-bit) atau lebih baru</span></li>
 							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.windowsProcessor">Prosesor x64</span></li>
-							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.ram">4 GB RAM minimum</span></li>
+							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.ram">Minimal 4 GB RAM</span></li>
 							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.disk">500 MB ruang disk</span></li>
 						</ul>
 					</div>
@@ -1008,7 +1008,7 @@
 						<ul class="req-list">
 							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.linuxVersion">Ubuntu 20.04+ / Debian 11+</span></li>
 							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.linuxProcessor">Prosesor x64 atau ARM64</span></li>
-							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.ram">4 GB RAM minimum</span></li>
+							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.ram">Minimal 4 GB RAM</span></li>
 							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.disk">500 MB ruang disk</span></li>
 						</ul>
 					</div>
@@ -1060,7 +1060,7 @@
 					</div>
 					<div class="col-lg-3 col-sm-6 mb-30">
 						<div class="f-widgets-item">
-							<h3 data-i18n="landing.common.footer.openSource">Open Source</h3>
+							<h3 data-i18n="landing.common.footer.openSource">Sumber Terbuka</h3>
 							<ul>
 								<li><a href="https://github.com/flytohub/flyto-core" target="_blank" rel="noopener noreferrer">flyto-core</a></li>
 								<li><a href="https://github.com/flytohub/flyto-core/blob/main/CONTRIBUTING.md" data-i18n="landing.common.footer.contributing" target="_blank" rel="noopener noreferrer">Berkontribusi</a></li>
@@ -1111,41 +1111,49 @@
 			return window.FlytoAuth?.FIREBASE_URL || 'https://us-central1-ticket-helper-dbc0e.cloudfunctions.net';
 		}
 
-		// App state
+		// App state (fallback defaults, overridden by GitHub API)
 		let appConfig = {
-			available: true,
-			version: '0.2.4',
-			downloads: {
-				'macos-arm64': {
-					url: 'https://github.com/flytohub/flyto2/releases/download/v0.2.4/Flyto2_0.2.4_aarch64.dmg',
-					filename: 'Flyto2_0.2.4_aarch64.dmg',
-					size: '117 MB'
-				},
-				'windows-x64': {
-					url: 'https://github.com/flytohub/flyto2/releases/download/v0.2.4/Flyto2_0.2.4_x64-setup.exe',
-					filename: 'Flyto2_0.2.4_x64-setup.exe',
-					size: '113 MB'
-				},
-				'linux-x64': {
-					url: 'https://github.com/flytohub/flyto2/releases/download/v0.2.4/Flyto2_0.2.4_amd64.AppImage',
-					filename: 'Flyto2_0.2.4_amd64.AppImage',
-					size: '225 MB'
-				}
-			}
+			available: false,
+			version: '',
+			downloads: {}
 		};
 
-		// Fetch app config from Firebase
+		function formatBytes(bytes) {
+			if (bytes >= 1073741824) return (bytes / 1073741824).toFixed(1) + ' GB';
+			if (bytes >= 1048576) return Math.round(bytes / 1048576) + ' MB';
+			return Math.round(bytes / 1024) + ' KB';
+		}
+
+		// Fetch latest release from GitHub
 		async function fetchAppConfig() {
 			try {
-				const response = await fetch(`${getFirebaseUrl()}/getDesktopAppConfig`);
-				const data = await response.json();
-				if (data.ok) {
-					appConfig = data.config;
+				const response = await fetch('https://api.github.com/repos/flytohub/flyto2/releases/latest');
+				if (!response.ok) throw new Error('GitHub API error');
+				const release = await response.json();
+
+				const version = (release.tag_name || '').replace(/^v/, '');
+				const downloads = {};
+
+				for (const asset of release.assets || []) {
+					const name = asset.name;
+					const url = asset.browser_download_url;
+					const size = formatBytes(asset.size);
+
+					if (name.endsWith('.dmg')) {
+						downloads['macos-arm64'] = { url, filename: name, size };
+					} else if (name.endsWith('-setup.exe')) {
+						downloads['windows-x64'] = { url, filename: name, size };
+					} else if (name.endsWith('.AppImage')) {
+						downloads['linux-x64'] = { url, filename: name, size };
+					}
+				}
+
+				if (version && Object.keys(downloads).length > 0) {
+					appConfig = { available: true, version, downloads };
 					updateUI();
 				}
 			} catch (err) {
-				// Config fetch failed - show coming soon state (default)
-				console.debug('Desktop app config not available, showing coming soon state');
+				console.debug('GitHub release fetch failed:', err.message);
 			}
 		}
 
