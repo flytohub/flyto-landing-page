@@ -103,8 +103,7 @@
     "GPTBot",
     "ChatGPT-User",
     "CCBot",
-    "anthropic-ai",
-    "Google-Extended"
+    "anthropic-ai"
   ],
 
   "crawlDelay": 1
