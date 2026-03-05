@@ -329,12 +329,13 @@
 	<header class="header">
 		<div class="container">
 			<div class="row">
+				<!-- Logo -->
 				<div class="col-lg-3 align-self-center">
 					<div class="logo">
 						<a href="index.html">
 							<picture>
 								<source srcset="../assets/img/white-logo.webp" type="image/webp">
-								<img src="../assets/img/white-logo.png" alt="Flyto2" width="90" height="79" fetchpriority="high">
+								<img src="../assets/img/white-logo.png" alt="Flyto2 - No-Code Automation Tool" width="90" height="79" fetchpriority="high">
 							</picture>
 						</a>
 					</div>
@@ -346,12 +347,13 @@
 						</a>
 					</div>
 				</div>
+				<!-- Right -->
 				<div class="col-lg-9">
+					<!-- Menu -->
 					<div class="menu d-flex align-items-center justify-content-end">
 						<nav>
 							<ul>
 								<li><a href="index.html" data-i18n="landing.common.nav.home">Startseite</a></li>
-								<li><a href="product.html" data-i18n="landing.common.nav.platform">Plattform</a></li>
 								<li class="nav-dropdown">
 									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" data-i18n="landing.common.nav.pricing">Preise</span>
 									<div class="nav-dropdown-menu">
@@ -359,22 +361,60 @@
 									</div>
 								</li>
 								<li class="nav-dropdown">
-									<span class="nav-dropdown-toggle active" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" data-i18n="landing.common.nav.resources">Ressourcen</span>
+									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" data-i18n="landing.common.nav.download">Herunterladen</span>
 									<div class="nav-dropdown-menu">
-										<a href="https://docs.flyto2.com" class="nav-dropdown-item" target="_blank" rel="noopener noreferrer"><i class="bi bi-book"></i><span data-i18n="landing.common.nav.docs">Docs</span></a>
-										<a href="use-cases.html" class="nav-dropdown-item"><i class="bi bi-briefcase"></i><span data-i18n="landing.common.nav.useCases">Anwendungsfälle</span></a>
-										<a href="compare.html" class="nav-dropdown-item active"><i class="bi bi-arrow-left-right"></i><span data-i18n="landing.common.nav.compare">Vergleichen</span></a>
+										<a href="download.html" class="nav-dropdown-item"><i class="bi bi-terminal"></i><span data-i18n="landing.common.nav.flytoCli">Flyto2 Core (CLI)</span></a>
+										<a href="app.html" class="nav-dropdown-item"><i class="bi bi-window"></i><span data-i18n="landing.common.nav.desktopApp">Desktop-App</span></a>
+										<a href="wasm.html" class="nav-dropdown-item"><i class="bi bi-globe2"></i><span data-i18n="landing.common.nav.wasmModule">WebAssembly</span></a>
+										<a href="node.html" class="nav-dropdown-item"><i class="bi bi-braces"></i><span data-i18n="landing.common.nav.nodePackage">Node.js</span></a>
+										<a href="language-packs.html" class="nav-dropdown-item"><i class="bi bi-translate"></i><span data-i18n="landing.common.nav.languagePacks">Sprachpakete</span></a>
+									</div>
+								</li>
+								<li><a href="dev.html" data-i18n="landing.common.nav.forDevelopers">Für Entwickler</a></li>
+								<li><a href="https://docs.flyto2.com" target="_blank" rel="noopener noreferrer" data-i18n="landing.common.nav.docs">Docs</a></li>
+								<li class="nav-dropdown">
+									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" data-i18n="landing.common.nav.resources">Ressourcen</span>
+									<div class="nav-dropdown-menu">
+										<a href="https://docs.flyto2.com" class="nav-dropdown-item" target="_blank" rel="noopener noreferrer"><i class="bi bi-book"></i><span data-i18n="landing.common.nav.documentation">Dokumentation</span></a>
 										<a href="faq.html" class="nav-dropdown-item"><i class="bi bi-question-circle"></i><span data-i18n="landing.common.nav.faq">FAQ</span></a>
 										<a href="contact.html" class="nav-dropdown-item"><i class="bi bi-envelope"></i><span data-i18n="landing.common.nav.contactUs">Kontaktieren Sie uns</span></a>
 									</div>
 								</li>
 							</ul>
 						</nav>
+						<!-- Language Switcher -->
+						<div class="lang-switcher">
+							<div class="lang-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">
+								<i class="bi bi-globe"></i>
+								<span class="current-lang">DE</span>
+								<i class="bi bi-chevron-down"></i>
+							</div>
+							<div class="lang-dropdown">
+								<a href="/" class="lang-option">English</a>
+								<a href="/zh/" class="lang-option">繁體中文</a>
+								<a href="/ja/" class="lang-option">日本語</a>
+								<a href="/ko/" class="lang-option">한국어</a>
+								<a href="/de/" class="lang-option active">Deutsch</a>
+								<a href="/es/" class="lang-option">Español</a>
+								<a href="/fr/" class="lang-option">Français</a>
+								<a href="/it/" class="lang-option">Italiano</a>
+								<a href="/pt/" class="lang-option">Português</a>
+								<a href="/vi/" class="lang-option">Tiếng Việt</a>
+								<a href="/th/" class="lang-option">ไทย</a>
+								<a href="/id/" class="lang-option">Indonesia</a>
+								<a href="/tr/" class="lang-option">Türkçe</a>
+								<a href="/pl/" class="lang-option">Polski</a>
+								<a href="/hi/" class="lang-option">हिन्दी</a>
+							</div>
+						</div>
+						<!-- Auth -->
 						<div class="header-auth">
+							<!-- Not logged in -->
 							<button id="headerLoginBtn" class="btn-header-login">
 								<i class="bi bi-person"></i>
-								<span data-i18n="landing.common.auth.signIn">Anmelden</span>
+								<span data-i18n="landing.common.nav.signIn">Anmelden</span>
 							</button>
+							<!-- Logged in (hidden by default) -->
 							<div id="headerUserDropdown" class="user-dropdown d-none">
 								<div class="user-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">
 									<div class="user-avatar" id="headerUserAvatar">U</div>
@@ -384,17 +424,17 @@
 								<div class="user-dropdown-menu">
 									<div class="dropdown-header">
 										<div class="dropdown-header-email" id="dropdownUserEmail"></div>
-										<div class="dropdown-header-label" data-i18n="landing.common.auth.flytoAccount">Flyto2-Konto</div>
+										<div class="dropdown-header-label" data-i18n="landing.common.nav.flytoAccount">Flyto2-Konto</div>
 									</div>
 									<div class="dropdown-menu-items">
 										<a href="pricing.html" class="dropdown-menu-item">
 											<i class="bi bi-key"></i>
-											<span data-i18n="landing.common.auth.myLicenses">Meine Lizenzen</span>
+											<span data-i18n="landing.common.nav.myLicenses">Meine Lizenzen</span>
 										</a>
 										<div class="dropdown-divider"></div>
 										<button class="dropdown-menu-item text-danger" id="btnSignOut">
 											<i class="bi bi-box-arrow-right"></i>
-											<span data-i18n="landing.common.auth.signOut">Abmelden</span>
+											<span data-i18n="landing.common.nav.signOut">Abmelden</span>
 										</button>
 									</div>
 								</div>
@@ -418,18 +458,19 @@
 					<a href="index.html">
 						<picture>
 							<source srcset="../assets/img/logo.webp" type="image/webp">
-							<img src="../assets/img/logo.png" alt="Flyto2" width="90" height="79" />
+							<img src="../assets/img/logo.png" alt="Flyto2 - No-Code Automation Tool" width="90" height="79" />
 						</picture>
 					</a>
 				</div>
 				<div id="menu" class="text-left">
 					<ul class="offcanvas_main_menu">
 						<li><a href="index.html" data-i18n="landing.common.nav.home">Startseite</a></li>
-						<li><a href="product.html" data-i18n="landing.common.nav.platform">Plattform</a></li>
 						<li><a href="pricing.html" data-i18n="landing.common.nav.pricing">Preise</a></li>
-						<li><a href="use-cases.html" data-i18n="landing.common.nav.useCases">Anwendungsfälle</a></li>
-						<li class="active"><a href="compare.html" data-i18n="landing.common.nav.compare">Vergleichen</a></li>
-						<li><a href="contact.html" data-i18n="landing.common.footer.contact">Kontakt</a></li>
+						<li><a href="download.html" data-i18n="landing.common.nav.download">Herunterladen</a></li>
+						<li><a href="app.html" data-i18n="landing.common.nav.desktopApp">Desktop-App</a></li>
+						<li><a href="dev.html" data-i18n="landing.common.nav.forDevelopers">Für Entwickler</a></li>
+						<li><a href="https://docs.flyto2.com" target="_blank" rel="noopener noreferrer" data-i18n="landing.common.nav.documentation">Dokumentation</a></li>
+						<li><a href="contact.html" data-i18n="landing.common.nav.contactUs">Kontaktieren Sie uns</a></li>
 					</ul>
 				</div>
 				<!-- Mobile Language Switcher -->
