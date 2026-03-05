@@ -13,12 +13,24 @@ jobs:
     name: Extract i18n Keys
     runs-on: ubuntu-latest
     steps:
+      - name: Check token availability
+        id: check-token
+        run: |
+          if [ -z "${{ secrets.I18N_REPO_TOKEN }}" ]; then
+            echo "available=false" >> $GITHUB_OUTPUT
+            echo "::warning::I18N_REPO_TOKEN not configured — skipping key extraction"
+          else
+            echo "available=true" >> $GITHUB_OUTPUT
+          fi
+
       - name: Checkout landing-page
+        if: steps.check-token.outputs.available == 'true'
         uses: actions/checkout@v4
         with:
           path: flyto-landing-page
 
       - name: Checkout flyto-i18n
+        if: steps.check-token.outputs.available == 'true'
         uses: actions/checkout@v4
         with:
           repository: flytohub/flyto-i18n
@@ -26,26 +38,31 @@ jobs:
           token: ${{ secrets.I18N_REPO_TOKEN }}
 
       - name: Setup Node.js
+        if: steps.check-token.outputs.available == 'true'
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
       - name: Extract keys and sync to i18n
+        if: steps.check-token.outputs.available == 'true'
         run: |
           cd flyto-landing-page
           node scripts/extract-keys.js
 
       - name: Setup Python
+        if: steps.check-token.outputs.available == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
       - name: Sync all locales with English base
+        if: steps.check-token.outputs.available == 'true'
         run: |
           cd flyto-i18n
           python scripts/sync-locales.py
 
       - name: Check for changes in i18n
+        if: steps.check-token.outputs.available == 'true'
         id: check-changes
         run: |
           cd flyto-i18n
@@ -56,7 +73,7 @@ jobs:
           fi
 
       - name: Commit and push to flyto-i18n
-        if: steps.check-changes.outputs.changes == 'true'
+        if: steps.check-token.outputs.available == 'true' && steps.check-changes.outputs.changes == 'true'
         run: |
           cd flyto-i18n
           git config user.name "github-actions[bot]"
