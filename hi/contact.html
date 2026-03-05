@@ -1137,6 +1137,13 @@
 				clearTimeout(timeoutId);
 
 				if (response.ok) {
+					if (typeof gtag === 'function') {
+						gtag('event', 'generate_lead', {
+							event_category: 'contact',
+							event_label: formData.subject,
+							value: 1
+						});
+					}
 					alert('Thank you! Your message has been sent. We will get back to you soon.');
 					this.reset();
 				} else {

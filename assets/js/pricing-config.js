@@ -608,6 +608,18 @@ document.addEventListener('click', function(e) {
 	if (tab && tab.dataset.tab) {
 		switchPricingTab(tab.dataset.tab);
 	}
+
+	// GA4: Track pricing CTA clicks
+	const pricingBtn = e.target.closest('.btn-pricing');
+	if (pricingBtn && typeof gtag === 'function') {
+		const card = pricingBtn.closest('.pricing-card-3d');
+		const planName = card ? card.querySelector('.pricing-card-title')?.textContent?.trim() : 'unknown';
+		gtag('event', 'begin_checkout', {
+			event_category: 'pricing',
+			event_label: planName,
+			value: 1
+		});
+	}
 });
 
 // Auto-init when DOM is ready
