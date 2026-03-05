@@ -1034,6 +1034,16 @@
 		}
 
 		async function trackDownload(version, fileType) {
+			// GA4 event — shows up as 'file_download' in GA4 reports
+			if (typeof gtag === 'function') {
+				gtag('event', 'file_download', {
+					file_name: 'flyto-' + version + '.' + fileType,
+					file_extension: fileType,
+					link_text: fileType === 'whl' ? '.whl' : '.tar.gz',
+					content_type: 'desktop_app',
+					item_id: version,
+				});
+			}
 			try {
 				await fetch(`${getFirebaseUrl()}/trackDownload`, {
 					method: 'POST',
