@@ -1,6 +1,6 @@
 # Flyto2 Robots.txt
 # Auto-generated from seo-config.json
-# Generated: 2026-03-05
+# Generated: 2026-03-07
 #
 # SEO Strategy: Whitelist-based indexing
 # Edit scripts/seo-config.json to modify
@@ -24,7 +24,6 @@ Allow: /product.html
 Allow: /philosophy.html
 Allow: /use-cases.html
 Allow: /compare.html
-Allow: /blog.html
 
 # Allowed: Language versions
 Allow: /de/$
@@ -40,7 +39,6 @@ Allow: /de/product.html
 Allow: /de/philosophy.html
 Allow: /de/use-cases.html
 Allow: /de/compare.html
-Allow: /de/blog.html
 Allow: /es/$
 Allow: /es/pricing.html
 Allow: /es/download.html
@@ -54,7 +52,6 @@ Allow: /es/product.html
 Allow: /es/philosophy.html
 Allow: /es/use-cases.html
 Allow: /es/compare.html
-Allow: /es/blog.html
 Allow: /fr/$
 Allow: /fr/pricing.html
 Allow: /fr/download.html
@@ -68,7 +65,6 @@ Allow: /fr/product.html
 Allow: /fr/philosophy.html
 Allow: /fr/use-cases.html
 Allow: /fr/compare.html
-Allow: /fr/blog.html
 Allow: /hi/$
 Allow: /hi/pricing.html
 Allow: /hi/download.html
@@ -82,7 +78,6 @@ Allow: /hi/product.html
 Allow: /hi/philosophy.html
 Allow: /hi/use-cases.html
 Allow: /hi/compare.html
-Allow: /hi/blog.html
 Allow: /id/$
 Allow: /id/pricing.html
 Allow: /id/download.html
@@ -96,7 +91,6 @@ Allow: /id/product.html
 Allow: /id/philosophy.html
 Allow: /id/use-cases.html
 Allow: /id/compare.html
-Allow: /id/blog.html
 Allow: /it/$
 Allow: /it/pricing.html
 Allow: /it/download.html
@@ -110,7 +104,6 @@ Allow: /it/product.html
 Allow: /it/philosophy.html
 Allow: /it/use-cases.html
 Allow: /it/compare.html
-Allow: /it/blog.html
 Allow: /ja/$
 Allow: /ja/pricing.html
 Allow: /ja/download.html
@@ -124,7 +117,6 @@ Allow: /ja/product.html
 Allow: /ja/philosophy.html
 Allow: /ja/use-cases.html
 Allow: /ja/compare.html
-Allow: /ja/blog.html
 Allow: /ko/$
 Allow: /ko/pricing.html
 Allow: /ko/download.html
@@ -138,7 +130,6 @@ Allow: /ko/product.html
 Allow: /ko/philosophy.html
 Allow: /ko/use-cases.html
 Allow: /ko/compare.html
-Allow: /ko/blog.html
 Allow: /pl/$
 Allow: /pl/pricing.html
 Allow: /pl/download.html
@@ -152,7 +143,6 @@ Allow: /pl/product.html
 Allow: /pl/philosophy.html
 Allow: /pl/use-cases.html
 Allow: /pl/compare.html
-Allow: /pl/blog.html
 Allow: /pt/$
 Allow: /pt/pricing.html
 Allow: /pt/download.html
@@ -166,7 +156,6 @@ Allow: /pt/product.html
 Allow: /pt/philosophy.html
 Allow: /pt/use-cases.html
 Allow: /pt/compare.html
-Allow: /pt/blog.html
 Allow: /th/$
 Allow: /th/pricing.html
 Allow: /th/download.html
@@ -180,7 +169,6 @@ Allow: /th/product.html
 Allow: /th/philosophy.html
 Allow: /th/use-cases.html
 Allow: /th/compare.html
-Allow: /th/blog.html
 Allow: /tr/$
 Allow: /tr/pricing.html
 Allow: /tr/download.html
@@ -194,7 +182,6 @@ Allow: /tr/product.html
 Allow: /tr/philosophy.html
 Allow: /tr/use-cases.html
 Allow: /tr/compare.html
-Allow: /tr/blog.html
 Allow: /vi/$
 Allow: /vi/pricing.html
 Allow: /vi/download.html
@@ -208,7 +195,6 @@ Allow: /vi/product.html
 Allow: /vi/philosophy.html
 Allow: /vi/use-cases.html
 Allow: /vi/compare.html
-Allow: /vi/blog.html
 Allow: /zh/$
 Allow: /zh/pricing.html
 Allow: /zh/download.html
@@ -222,7 +208,6 @@ Allow: /zh/product.html
 Allow: /zh/philosophy.html
 Allow: /zh/use-cases.html
 Allow: /zh/compare.html
-Allow: /zh/blog.html
 
 # Allowed: Assets for page rendering
 Allow: /assets/css/
