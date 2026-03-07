@@ -52,31 +52,6 @@
       "changefreq": "monthly",
       "priority": "0.6",
       "index": true
-    },
-    "about.html": {
-      "changefreq": "monthly",
-      "priority": "0.6",
-      "index": true
-    },
-    "product.html": {
-      "changefreq": "monthly",
-      "priority": "0.7",
-      "index": true
-    },
-    "philosophy.html": {
-      "changefreq": "monthly",
-      "priority": "0.5",
-      "index": true
-    },
-    "use-cases.html": {
-      "changefreq": "monthly",
-      "priority": "0.6",
-      "index": true
-    },
-    "compare.html": {
-      "changefreq": "monthly",
-      "priority": "0.6",
-      "index": true
     }
   },
 
