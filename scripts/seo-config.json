@@ -77,11 +77,6 @@
       "changefreq": "monthly",
       "priority": "0.6",
       "index": true
-    },
-    "blog.html": {
-      "changefreq": "weekly",
-      "priority": "0.6",
-      "index": true
     }
   },
 

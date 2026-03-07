@@ -42,7 +42,6 @@ HTML_FILES = [
     'about.html',
     'philosophy.html',
     'app.html',
-    'blog.html',
     'buy-offline.html',
     'language-packs.html',
 ]

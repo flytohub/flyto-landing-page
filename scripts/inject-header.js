@@ -21,7 +21,7 @@ const HTML_FILES = [
   'index.html', 'pricing.html', 'download.html', 'app.html',
   'faq.html', 'contact.html', 'language-packs.html', 'product.html',
   'use-cases.html', 'compare.html', 'philosophy.html', 'about.html',
-  'blog.html', 'dev.html', 'node.html', 'wasm.html', 'open.html',
+  'dev.html', 'node.html', 'wasm.html', 'open.html',
   'sponsor.html'
 ];
 
