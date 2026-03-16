@@ -551,6 +551,10 @@
 								<i class="bi bi-chevron-down"></i>
 							</div>
 							<div class="lang-dropdown">
+								<div class="lang-search-wrap">
+									<i class="bi bi-search"></i>
+									<input type="text" class="lang-search" placeholder="Search..." oninput="(function(q,el){q=q.toLowerCase();var f=0;el.closest('.lang-dropdown').querySelectorAll('.lang-option').forEach(function(o){var m=o.getAttribute('data-lang').toLowerCase().indexOf(q)!==-1;o.style.display=m?'':'none';if(m)f++});var nr=el.closest('.lang-dropdown').querySelector('.lang-no-result');if(nr)nr.style.display=f?'none':'block'})(this.value,this)" autocomplete="off">
+								</div>
 								<div class="lang-list">
 									<a href="/" class="lang-option" data-lang="english"><span class="lang-flag">🇺🇸</span><span class="lang-names"><span class="lang-native">English</span></span></a>
 									<a href="/zh/" class="lang-option active" data-lang="繁體中文 traditional chinese"><span class="lang-flag">🇹🇼</span><span class="lang-names"><span class="lang-native">繁體中文</span><span class="lang-en">Traditional Chinese</span></span></a>
@@ -568,6 +572,7 @@
 									<a href="/pl/" class="lang-option" data-lang="polski polish"><span class="lang-flag">🇵🇱</span><span class="lang-names"><span class="lang-native">Polski</span><span class="lang-en">Polish</span></span></a>
 									<a href="/hi/" class="lang-option" data-lang="हिन्दी hindi"><span class="lang-flag">🇮🇳</span><span class="lang-names"><span class="lang-native">हिन्दी</span><span class="lang-en">Hindi</span></span></a>
 								</div>
+								<div class="lang-no-result" style="display:none;padding:16px;text-align:center;color:#999;font-size:13px;">No results</div>
 							</div>
 						</div>
 						<!-- Auth -->
