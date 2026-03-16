@@ -3463,9 +3463,9 @@ h2.accordion-header {
   top: 100%;
   right: 0;
   margin-top: 8px;
-  background: #1e293b;
+  background: #fff;
   border-radius: 14px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
   width: 280px;
   opacity: 0;
   visibility: hidden;
@@ -3482,33 +3482,34 @@ h2.accordion-header {
 }
 .lang-search-wrap {
   position: relative;
-  padding: 12px 14px 8px;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding: 10px 12px;
+  border-bottom: 1px solid #eee;
 }
 .lang-search-wrap i {
   position: absolute;
-  left: 26px;
+  left: 24px;
   top: 50%;
   transform: translateY(-50%);
-  color: #64748b;
+  color: #aaa;
   font-size: 13px;
 }
 .lang-search {
   width: 100%;
-  padding: 9px 12px 9px 34px;
-  background: #0f172a;
-  border: 1px solid rgba(255,255,255,0.1);
+  padding: 8px 12px 8px 32px;
+  background: #f8f9fa;
+  border: 1px solid #e5e7eb;
   border-radius: 8px;
-  color: #fff;
+  color: #333;
   font-size: 13px;
   outline: none;
   transition: border-color 0.2s;
 }
 .lang-search:focus {
-  border-color: #8b5cf6;
+  border-color: #7C3AED;
+  background: #fff;
 }
 .lang-search::placeholder {
-  color: #64748b;
+  color: #aaa;
 }
 .lang-list {
   max-height: 320px;
@@ -3517,7 +3518,7 @@ h2.accordion-header {
 }
 .lang-list::-webkit-scrollbar { width: 4px; }
 .lang-list::-webkit-scrollbar-track { background: transparent; }
-.lang-list::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+.lang-list::-webkit-scrollbar-thumb { background: #ddd; border-radius: 4px; }
 .lang-no-result {
   padding: 20px;
   text-align: center;
@@ -3529,18 +3530,18 @@ h2.accordion-header {
   align-items: center;
   gap: 12px;
   padding: 10px 16px;
-  color: #cbd5e1;
+  color: #333;
   font-size: 14px;
   text-decoration: none;
   transition: all 0.15s ease;
 }
 .lang-option:hover {
-  background: rgba(139, 92, 246, 0.15);
-  color: #e2e8f0;
+  background: #f5f3ff;
+  color: #7C3AED;
 }
 .lang-option.active {
-  background: rgba(139, 92, 246, 0.2);
-  color: #a78bfa;
+  background: #ede9fe;
+  color: #7C3AED;
 }
 .lang-flag {
   font-size: 20px;
@@ -3560,8 +3561,11 @@ h2.accordion-header {
 }
 .lang-en {
   font-size: 11px;
-  color: #64748b;
+  color: #999;
   line-height: 1.2;
+}
+.lang-option:hover .lang-en {
+  color: #a78bfa;
 }
 .lang-option.active .lang-en {
   color: #7c3aed;
