@@ -3454,7 +3454,8 @@ h2.accordion-header {
   font-size: 10px;
   transition: transform 0.2s ease;
 }
-.lang-switcher.open .bi-chevron-down {
+.lang-switcher:hover .bi-chevron-down,
+.lang-switcher:focus-within .bi-chevron-down {
   transform: rotate(180deg);
 }
 .lang-dropdown {
@@ -3473,7 +3474,8 @@ h2.accordion-header {
   z-index: 1000;
   overflow: hidden;
 }
-.lang-switcher.open .lang-dropdown {
+.lang-switcher:hover .lang-dropdown,
+.lang-switcher:focus-within .lang-dropdown {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
