@@ -44,6 +44,9 @@
 	.menu {
 		display: none !important;
 	}
+	.header .col-lg-9 {
+		display: none !important;
+	}
 	.hr_btn {
 		display: none !important;
 	}
