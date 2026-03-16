@@ -52,6 +52,21 @@
       "changefreq": "monthly",
       "priority": "0.6",
       "index": true
+    },
+    "dev.html": {
+      "changefreq": "monthly",
+      "priority": "0.7",
+      "index": true
+    },
+    "node.html": {
+      "changefreq": "monthly",
+      "priority": "0.5",
+      "index": true
+    },
+    "wasm.html": {
+      "changefreq": "monthly",
+      "priority": "0.5",
+      "index": true
     }
   },
 

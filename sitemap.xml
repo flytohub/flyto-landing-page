@@ -177,6 +177,72 @@
 		<priority>0.6</priority>
 	</url>
 	<url>
+		<loc>https://flyto2.com/dev.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/dev.html"/>
+		<lastmod>2026-03-16</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/node.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/node.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/node.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/node.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/node.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/node.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/node.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/node.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/node.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/node.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/node.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/node.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/node.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/node.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/node.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/node.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/node.html"/>
+		<lastmod>2026-03-16</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/wasm.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/wasm.html"/>
+		<lastmod>2026-03-16</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://flyto2.com/de/</loc>
 		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/"/>
 		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/"/>
@@ -216,7 +282,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/pricing.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/pricing.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/pricing.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.9</priority>
 	</url>
@@ -238,7 +304,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/download.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/download.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/download.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
@@ -260,7 +326,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/app.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/app.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/app.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
@@ -282,7 +348,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/faq.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/faq.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/faq.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
@@ -304,7 +370,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/contact.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/contact.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/contact.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.6</priority>
 	</url>
@@ -326,7 +392,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/buy-offline.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/buy-offline.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/buy-offline.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-05</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
@@ -348,9 +414,75 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/language-packs.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/language-packs.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/language-packs.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/de/dev.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/dev.html"/>
+		<lastmod>2026-03-14</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/de/node.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/node.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/node.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/node.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/node.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/node.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/node.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/node.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/node.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/node.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/node.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/node.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/node.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/node.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/node.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/node.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/node.html"/>
+		<lastmod>2026-03-14</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/de/wasm.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/wasm.html"/>
+		<lastmod>2026-03-14</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
 	</url>
 	<url>
 		<loc>https://flyto2.com/es/</loc>
@@ -392,7 +524,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/pricing.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/pricing.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/pricing.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.9</priority>
 	</url>
@@ -414,7 +546,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/download.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/download.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/download.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
@@ -436,7 +568,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/app.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/app.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/app.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
@@ -458,7 +590,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/faq.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/faq.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/faq.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
@@ -480,7 +612,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/contact.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/contact.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/contact.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.6</priority>
 	</url>
@@ -502,7 +634,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/buy-offline.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/buy-offline.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/buy-offline.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-05</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
@@ -524,9 +656,75 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/language-packs.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/language-packs.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/language-packs.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/es/dev.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/dev.html"/>
+		<lastmod>2026-03-14</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/es/node.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/node.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/node.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/node.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/node.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/node.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/node.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/node.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/node.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/node.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/node.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/node.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/node.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/node.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/node.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/node.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/node.html"/>
+		<lastmod>2026-03-14</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/es/wasm.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/wasm.html"/>
+		<lastmod>2026-03-14</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
 	</url>
 	<url>
 		<loc>https://flyto2.com/fr/</loc>
@@ -568,7 +766,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/pricing.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/pricing.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/pricing.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.9</priority>
 	</url>
@@ -590,7 +788,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/download.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/download.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/download.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
@@ -612,7 +810,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/app.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/app.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/app.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
@@ -634,7 +832,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/faq.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/faq.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/faq.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
@@ -656,7 +854,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/contact.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/contact.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/contact.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.6</priority>
 	</url>
@@ -678,7 +876,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/buy-offline.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/buy-offline.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/buy-offline.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-05</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
@@ -700,9 +898,75 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/language-packs.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/language-packs.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/language-packs.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/fr/dev.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/dev.html"/>
+		<lastmod>2026-03-14</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/fr/node.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/node.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/node.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/node.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/node.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/node.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/node.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/node.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/node.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/node.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/node.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/node.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/node.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/node.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/node.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/node.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/node.html"/>
+		<lastmod>2026-03-14</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/fr/wasm.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/wasm.html"/>
+		<lastmod>2026-03-14</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
 	</url>
 	<url>
 		<loc>https://flyto2.com/hi/</loc>
@@ -744,7 +1008,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/pricing.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/pricing.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/pricing.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.9</priority>
 	</url>
@@ -766,7 +1030,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/download.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/download.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/download.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
@@ -788,7 +1052,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/app.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/app.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/app.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
@@ -810,7 +1074,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/faq.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/faq.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/faq.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
@@ -832,7 +1096,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/contact.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/contact.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/contact.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.6</priority>
 	</url>
@@ -854,7 +1118,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/buy-offline.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/buy-offline.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/buy-offline.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-05</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
@@ -876,9 +1140,75 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/language-packs.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/language-packs.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/language-packs.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/hi/dev.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/dev.html"/>
+		<lastmod>2026-03-14</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/hi/node.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/node.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/node.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/node.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/node.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/node.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/node.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/node.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/node.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/node.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/node.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/node.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/node.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/node.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/node.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/node.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/node.html"/>
+		<lastmod>2026-03-14</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/hi/wasm.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/wasm.html"/>
+		<lastmod>2026-03-14</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
 	</url>
 	<url>
 		<loc>https://flyto2.com/id/</loc>
@@ -920,7 +1250,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/pricing.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/pricing.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/pricing.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.9</priority>
 	</url>
@@ -942,7 +1272,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/download.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/download.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/download.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
@@ -964,7 +1294,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/app.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/app.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/app.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
@@ -986,7 +1316,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/faq.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/faq.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/faq.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
@@ -1008,7 +1338,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/contact.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/contact.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/contact.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.6</priority>
 	</url>
@@ -1030,7 +1360,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/buy-offline.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/buy-offline.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/buy-offline.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-05</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
@@ -1052,9 +1382,75 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/language-packs.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/language-packs.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/language-packs.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/id/dev.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/dev.html"/>
+		<lastmod>2026-03-14</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/id/node.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/node.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/node.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/node.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/node.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/node.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/node.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/node.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/node.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/node.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/node.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/node.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/node.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/node.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/node.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/node.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/node.html"/>
+		<lastmod>2026-03-14</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/id/wasm.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/wasm.html"/>
+		<lastmod>2026-03-14</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
 	</url>
 	<url>
 		<loc>https://flyto2.com/it/</loc>
@@ -1096,7 +1492,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/pricing.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/pricing.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/pricing.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.9</priority>
 	</url>
@@ -1118,7 +1514,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/download.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/download.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/download.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
@@ -1140,7 +1536,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/app.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/app.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/app.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
@@ -1162,7 +1558,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/faq.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/faq.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/faq.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
@@ -1184,7 +1580,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/contact.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/contact.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/contact.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.6</priority>
 	</url>
@@ -1206,7 +1602,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/buy-offline.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/buy-offline.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/buy-offline.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-05</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
@@ -1228,9 +1624,75 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/language-packs.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/language-packs.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/language-packs.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/it/dev.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/dev.html"/>
+		<lastmod>2026-03-14</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/it/node.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/node.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/node.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/node.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/node.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/node.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/node.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/node.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/node.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/node.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/node.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/node.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/node.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/node.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/node.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/node.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/node.html"/>
+		<lastmod>2026-03-14</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/it/wasm.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/wasm.html"/>
+		<lastmod>2026-03-14</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
 	</url>
 	<url>
 		<loc>https://flyto2.com/ja/</loc>
@@ -1272,7 +1734,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/pricing.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/pricing.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/pricing.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.9</priority>
 	</url>
@@ -1294,7 +1756,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/download.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/download.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/download.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
@@ -1316,7 +1778,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/app.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/app.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/app.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
@@ -1338,7 +1800,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/faq.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/faq.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/faq.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
@@ -1360,7 +1822,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/contact.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/contact.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/contact.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.6</priority>
 	</url>
@@ -1382,7 +1844,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/buy-offline.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/buy-offline.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/buy-offline.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-05</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
@@ -1404,9 +1866,75 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/language-packs.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/language-packs.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/language-packs.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/ja/dev.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/dev.html"/>
+		<lastmod>2026-03-14</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/ja/node.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/node.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/node.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/node.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/node.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/node.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/node.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/node.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/node.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/node.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/node.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/node.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/node.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/node.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/node.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/node.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/node.html"/>
+		<lastmod>2026-03-14</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/ja/wasm.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/wasm.html"/>
+		<lastmod>2026-03-14</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
 	</url>
 	<url>
 		<loc>https://flyto2.com/ko/</loc>
@@ -1448,7 +1976,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/pricing.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/pricing.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/pricing.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.9</priority>
 	</url>
@@ -1470,7 +1998,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/download.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/download.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/download.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
@@ -1492,7 +2020,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/app.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/app.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/app.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
@@ -1514,7 +2042,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/faq.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/faq.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/faq.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
@@ -1536,7 +2064,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/contact.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/contact.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/contact.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.6</priority>
 	</url>
@@ -1558,7 +2086,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/buy-offline.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/buy-offline.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/buy-offline.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-05</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
@@ -1580,9 +2108,75 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/language-packs.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/language-packs.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/language-packs.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/ko/dev.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/dev.html"/>
+		<lastmod>2026-03-14</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/ko/node.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/node.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/node.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/node.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/node.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/node.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/node.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/node.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/node.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/node.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/node.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/node.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/node.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/node.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/node.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/node.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/node.html"/>
+		<lastmod>2026-03-14</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/ko/wasm.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/wasm.html"/>
+		<lastmod>2026-03-14</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
 	</url>
 	<url>
 		<loc>https://flyto2.com/pl/</loc>
@@ -1624,7 +2218,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/pricing.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/pricing.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/pricing.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.9</priority>
 	</url>
@@ -1646,7 +2240,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/download.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/download.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/download.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
@@ -1668,7 +2262,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/app.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/app.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/app.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
@@ -1690,7 +2284,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/faq.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/faq.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/faq.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
@@ -1712,7 +2306,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/contact.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/contact.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/contact.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.6</priority>
 	</url>
@@ -1734,7 +2328,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/buy-offline.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/buy-offline.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/buy-offline.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-05</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
@@ -1756,9 +2350,75 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/language-packs.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/language-packs.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/language-packs.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/pl/dev.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/dev.html"/>
+		<lastmod>2026-03-14</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/pl/node.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/node.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/node.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/node.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/node.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/node.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/node.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/node.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/node.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/node.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/node.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/node.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/node.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/node.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/node.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/node.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/node.html"/>
+		<lastmod>2026-03-14</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/pl/wasm.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/wasm.html"/>
+		<lastmod>2026-03-14</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
 	</url>
 	<url>
 		<loc>https://flyto2.com/pt/</loc>
@@ -1800,7 +2460,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/pricing.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/pricing.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/pricing.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.9</priority>
 	</url>
@@ -1822,7 +2482,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/download.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/download.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/download.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
@@ -1844,7 +2504,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/app.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/app.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/app.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
@@ -1866,7 +2526,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/faq.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/faq.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/faq.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
@@ -1888,7 +2548,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/contact.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/contact.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/contact.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.6</priority>
 	</url>
@@ -1910,7 +2570,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/buy-offline.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/buy-offline.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/buy-offline.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-05</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
@@ -1932,9 +2592,75 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/language-packs.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/language-packs.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/language-packs.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/pt/dev.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/dev.html"/>
+		<lastmod>2026-03-14</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/pt/node.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/node.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/node.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/node.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/node.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/node.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/node.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/node.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/node.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/node.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/node.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/node.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/node.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/node.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/node.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/node.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/node.html"/>
+		<lastmod>2026-03-14</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/pt/wasm.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/wasm.html"/>
+		<lastmod>2026-03-14</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
 	</url>
 	<url>
 		<loc>https://flyto2.com/th/</loc>
@@ -1976,7 +2702,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/pricing.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/pricing.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/pricing.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.9</priority>
 	</url>
@@ -1998,7 +2724,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/download.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/download.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/download.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
@@ -2020,7 +2746,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/app.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/app.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/app.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
@@ -2042,7 +2768,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/faq.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/faq.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/faq.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
@@ -2064,7 +2790,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/contact.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/contact.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/contact.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.6</priority>
 	</url>
@@ -2086,7 +2812,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/buy-offline.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/buy-offline.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/buy-offline.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-05</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
@@ -2108,9 +2834,75 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/language-packs.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/language-packs.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/language-packs.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/th/dev.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/dev.html"/>
+		<lastmod>2026-03-14</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/th/node.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/node.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/node.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/node.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/node.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/node.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/node.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/node.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/node.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/node.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/node.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/node.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/node.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/node.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/node.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/node.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/node.html"/>
+		<lastmod>2026-03-14</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/th/wasm.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/wasm.html"/>
+		<lastmod>2026-03-14</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
 	</url>
 	<url>
 		<loc>https://flyto2.com/tr/</loc>
@@ -2152,7 +2944,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/pricing.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/pricing.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/pricing.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.9</priority>
 	</url>
@@ -2174,7 +2966,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/download.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/download.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/download.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
@@ -2196,7 +2988,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/app.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/app.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/app.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
@@ -2218,7 +3010,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/faq.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/faq.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/faq.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
@@ -2240,7 +3032,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/contact.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/contact.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/contact.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.6</priority>
 	</url>
@@ -2262,7 +3054,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/buy-offline.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/buy-offline.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/buy-offline.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-05</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
@@ -2284,9 +3076,75 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/language-packs.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/language-packs.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/language-packs.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/tr/dev.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/dev.html"/>
+		<lastmod>2026-03-14</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/tr/node.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/node.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/node.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/node.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/node.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/node.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/node.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/node.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/node.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/node.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/node.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/node.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/node.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/node.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/node.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/node.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/node.html"/>
+		<lastmod>2026-03-14</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/tr/wasm.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/wasm.html"/>
+		<lastmod>2026-03-14</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
 	</url>
 	<url>
 		<loc>https://flyto2.com/vi/</loc>
@@ -2328,7 +3186,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/pricing.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/pricing.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/pricing.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.9</priority>
 	</url>
@@ -2350,7 +3208,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/download.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/download.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/download.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
@@ -2372,7 +3230,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/app.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/app.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/app.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
@@ -2394,7 +3252,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/faq.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/faq.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/faq.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
@@ -2416,7 +3274,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/contact.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/contact.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/contact.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.6</priority>
 	</url>
@@ -2438,7 +3296,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/buy-offline.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/buy-offline.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/buy-offline.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-05</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
@@ -2460,9 +3318,75 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/language-packs.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/language-packs.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/language-packs.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/vi/dev.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/dev.html"/>
+		<lastmod>2026-03-14</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/vi/node.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/node.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/node.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/node.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/node.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/node.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/node.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/node.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/node.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/node.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/node.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/node.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/node.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/node.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/node.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/node.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/node.html"/>
+		<lastmod>2026-03-14</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/vi/wasm.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/wasm.html"/>
+		<lastmod>2026-03-14</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
 	</url>
 	<url>
 		<loc>https://flyto2.com/zh/</loc>
@@ -2504,7 +3428,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/pricing.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/pricing.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/pricing.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.9</priority>
 	</url>
@@ -2526,7 +3450,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/download.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/download.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/download.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
@@ -2592,7 +3516,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/contact.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/contact.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/contact.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.6</priority>
 	</url>
@@ -2614,7 +3538,7 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/buy-offline.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/buy-offline.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/buy-offline.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-05</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.7</priority>
 	</url>
@@ -2636,8 +3560,74 @@
 		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/language-packs.html"/>
 		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/language-packs.html"/>
 		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/language-packs.html"/>
-		<lastmod>2026-03-16</lastmod>
+		<lastmod>2026-03-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/zh/dev.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/dev.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/dev.html"/>
+		<lastmod>2026-03-14</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/zh/node.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/node.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/node.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/node.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/node.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/node.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/node.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/node.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/node.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/node.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/node.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/node.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/node.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/node.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/node.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/node.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/node.html"/>
+		<lastmod>2026-03-14</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://flyto2.com/zh/wasm.html</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://flyto2.com/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="de" href="https://flyto2.com/de/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="es" href="https://flyto2.com/es/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://flyto2.com/fr/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="hi" href="https://flyto2.com/hi/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="id" href="https://flyto2.com/id/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="it" href="https://flyto2.com/it/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="ja" href="https://flyto2.com/ja/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="ko" href="https://flyto2.com/ko/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="pl" href="https://flyto2.com/pl/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="pt-BR" href="https://flyto2.com/pt/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="th" href="https://flyto2.com/th/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="tr" href="https://flyto2.com/tr/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="vi" href="https://flyto2.com/vi/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/wasm.html"/>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://flyto2.com/wasm.html"/>
+		<lastmod>2026-03-14</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
 	</url>
 </urlset>
