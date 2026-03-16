@@ -592,6 +592,55 @@
 			color: #5b21b6;
 		}
 
+		/* FAQ animated */
+		.faq-item {
+			background: #fff;
+			border-radius: 16px;
+			margin-bottom: 16px;
+			overflow: hidden;
+			box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+			border: 1px solid rgba(124, 58, 237, 0.08);
+			transition: all 0.3s;
+		}
+		.faq-item:hover {
+			box-shadow: 0 8px 30px rgba(124, 58, 237, 0.12);
+			transform: translateY(-2px);
+		}
+		.faq-question {
+			padding: 24px 30px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			cursor: pointer;
+			font-weight: 600;
+			transition: all 0.3s;
+		}
+		.faq-question:hover {
+			background: rgba(124, 58, 237, 0.03);
+		}
+		.faq-icon {
+			width: 32px;
+			height: 32px;
+			background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: all 0.3s;
+		}
+		.faq-icon i {
+			color: #fff;
+			transition: transform 0.3s;
+		}
+		.faq-item.active .faq-icon {
+			transform: rotate(180deg);
+		}
+		.faq-answer {
+			padding: 0 30px 24px;
+			color: #6b7280;
+			line-height: 1.7;
+		}
+
 		/* Mobile */
 		@media (max-width: 767px) {
 			.contact-hero { min-height: 280px; }
@@ -955,6 +1004,61 @@
 	</section>
 	<!-- End Contact Section -->
 
+	<!-- Start Common Questions Section -->
+	<section class="section-padding section-bg">
+		<div class="container">
+			<div class="row mb-40">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="section-headding wow fadeInUp">
+						<h2 data-i18n="landing.contact.faq.title">Common Questions</h2>
+						<p data-i18n="landing.contact.faq.subtitle">Quick answers before you reach out</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2">
+					<div class="faq-item active wow fadeInUp" data-wow-delay="0.1s">
+						<div class="faq-question" tabindex="0" role="button">
+							<span data-i18n="landing.contact.faq.q1">How quickly do you respond?</span>
+							<span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+						</div>
+						<div class="faq-answer" data-i18n="landing.contact.faq.a1">
+							We typically respond within 24 hours on business days. For urgent issues, email us directly at info@flyto2.com.
+						</div>
+					</div>
+					<div class="faq-item wow fadeInUp" data-wow-delay="0.2s">
+						<div class="faq-question" tabindex="0" role="button">
+							<span data-i18n="landing.contact.faq.q2">Do you offer custom enterprise solutions?</span>
+							<span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+						</div>
+						<div class="faq-answer" style="display: none;" data-i18n="landing.contact.faq.a2">
+							Yes. We can set up Flyto2 for your team with custom deployment, permission controls, and dedicated support. Contact us to discuss your needs.
+						</div>
+					</div>
+					<div class="faq-item wow fadeInUp" data-wow-delay="0.3s">
+						<div class="faq-question" tabindex="0" role="button">
+							<span data-i18n="landing.contact.faq.q3">Can I request a demo?</span>
+							<span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+						</div>
+						<div class="faq-answer" style="display: none;" data-i18n="landing.contact.faq.a3">
+							Of course. Fill out the contact form above and select 'Sales Inquiry'. We'll schedule a personalized demo for your team.
+						</div>
+					</div>
+					<div class="faq-item wow fadeInUp" data-wow-delay="0.4s">
+						<div class="faq-question" tabindex="0" role="button">
+							<span data-i18n="landing.contact.faq.q4">Where can I report bugs?</span>
+							<span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+						</div>
+						<div class="faq-answer" style="display: none;" data-i18n="landing.contact.faq.a4">
+							You can report bugs on our GitHub repository at github.com/flytohub/flyto-core/issues, or use the contact form above with 'Technical Support' selected.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Common Questions Section -->
+
 	<!-- Start Quick Links Section -->
 	<section class="section-padding quick-links-section">
 		<div class="container">
@@ -1213,6 +1317,40 @@
 			} finally {
 				btn.innerHTML = originalText;
 				btn.disabled = false;
+			}
+		});
+	</script>
+
+	<script>
+		// FAQ Toggle
+		function toggleFAQ(element) {
+			const item = element.closest('.faq-item');
+			const answer = item.querySelector('.faq-answer');
+			const isActive = item.classList.contains('active');
+
+			document.querySelectorAll('.faq-item').forEach(faq => {
+				faq.classList.remove('active');
+				const q = faq.querySelector('.faq-question');
+				if (q) q.setAttribute('aria-expanded', 'false');
+				const a = faq.querySelector('.faq-answer');
+				if (a) a.style.display = 'none';
+			});
+
+			if (!isActive) {
+				item.classList.add('active');
+				element.setAttribute('aria-expanded', 'true');
+				answer.style.display = 'block';
+			}
+		}
+		document.addEventListener('click', function(e) {
+			const question = e.target.closest('.faq-question');
+			if (question) toggleFAQ(question);
+		});
+		document.addEventListener('keydown', function(e) {
+			const question = e.target.closest('.faq-question');
+			if (question && (e.key === 'Enter' || e.key === ' ')) {
+				e.preventDefault();
+				toggleFAQ(question);
 			}
 		});
 	</script>
