@@ -25,8 +25,8 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" media="print" onload="this.media='all'">
 	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"></noscript>
 
-	<title>Flyto2 - Nền tảng Quy trình Doanh nghiệp | Tự động hóa Human-in-the-Loop</title>
-	<meta name="description" content="Flyto2 là nền tảng quy trình doanh nghiệp kết hợp tự động hóa dựa trên UI với giám sát con người. Xây dựng quy trình với bước phê duyệt, điểm kiểm tra xác thực và nhật ký kiểm toán đầy đủ. 100% offline.">
+	<title>Flyto2 - Biến công việc lặp đi lặp lại thành tự động hóa đơn giản</title>
+	<meta name="description" content="Flyto2 giúp bạn tự động hóa công việc lặp lại trên trình duyệt mà không cần lập trình. Ghi lại một lần, chạy lại mãi mãi. Tạm dừng, kiểm tra và tiếp tục bất cứ lúc nào. Chạy không cần mạng.">
 
 	<!-- Content Security Policy -->
 	<meta http-equiv="Content-Security-Policy" content="
@@ -63,7 +63,7 @@
 	<link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/" />
 	<link rel="alternate" hreflang="x-default" href="https://flyto2.com/" />
 	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-	<meta name="keywords" content="nền tảng quy trình doanh nghiệp, tự động hóa dựa trên UI, quy trình phê duyệt con người, thay thế RPA, human-in-the-loop, xác thực quy trình, tự động hóa offline, tự động hóa quy trình kinh doanh">
+	<meta name="keywords" content="tự động hóa trình duyệt, tự động hóa không cần lập trình, tự động hóa công việc lặp lại, ghi và phát lại, tự động hóa quy trình, công cụ tự động hóa offline">
 	<meta name="author" content="Flyto2">
 	<meta name="generator" content="Flyto2">
 	<meta name="rating" content="general">
@@ -73,8 +73,8 @@
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="https://flyto2.com/vi/">
-	<meta property="og:title" content="Flyto2 - Nền tảng Quy trình Doanh nghiệp | Tự động hóa Human-in-the-Loop">
-	<meta property="og:description" content="Flyto2 là nền tảng quy trình doanh nghiệp kết hợp tự động hóa dựa trên UI với giám sát con người. Xây dựng quy trình với bước phê duyệt, điểm kiểm tra xác thực và nhật ký kiểm toán đầy đủ. 100% offline.">
+	<meta property="og:title" content="Flyto2 - Biến công việc lặp đi lặp lại thành tự động hóa đơn giản">
+	<meta property="og:description" content="Flyto2 giúp bạn tự động hóa công việc lặp lại trên trình duyệt mà không cần lập trình. Ghi lại một lần, chạy lại mãi mãi. Tạm dừng, kiểm tra và tiếp tục bất cứ lúc nào. Chạy không cần mạng.">
 	<meta property="og:image" content="https://flyto2.com/assets/img/og-image.png">
 	<meta property="og:site_name" content="Flyto2">
 	<meta property="og:locale" content="vi_VN">
@@ -82,10 +82,10 @@
 	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@flyto2">
-	<meta name="twitter:title" content="Flyto2 - Nền tảng Quy trình Doanh nghiệp | Tự động hóa Human-in-the-Loop">
-	<meta name="twitter:description" content="Flyto2 là nền tảng quy trình doanh nghiệp kết hợp tự động hóa dựa trên UI với giám sát con người. Xây dựng quy trình với bước phê duyệt, điểm kiểm tra xác thực và nhật ký kiểm toán đầy đủ. 100% offlin">
+	<meta name="twitter:title" content="Flyto2 - Biến công việc lặp đi lặp lại thành tự động hóa đơn giản">
+	<meta name="twitter:description" content="Flyto2 giúp bạn tự động hóa công việc lặp lại trên trình duyệt mà không cần lập trình. Ghi lại một lần, chạy lại mãi mãi. Tạm dừng, kiểm tra và tiếp tục bất cứ lúc nào. Chạy không cần mạng.">
 	<meta name="twitter:image" content="https://flyto2.com/assets/img/og-image.png">
-	<meta name="twitter:image:alt" content="Flyto2 - Enterprise Workflow Platform">
+	<meta name="twitter:image:alt" content="Flyto2 - Automate Repetitive Tasks">
 
 	<link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="../assets/img/icon.png" type="image/png" sizes="32x32">
@@ -487,28 +487,35 @@
 							</ul>
 						</nav>
 						<!-- Language Switcher -->
-						<div class="lang-switcher">
-							<div class="lang-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">
+						<div class="lang-switcher" id="langSwitcher">
+							<div class="lang-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" onclick="toggleLangDropdown(event)">
 								<i class="bi bi-globe"></i>
 								<span class="current-lang">VI</span>
 								<i class="bi bi-chevron-down"></i>
 							</div>
-							<div class="lang-dropdown">
-								<a href="/" class="lang-option">English</a>
-								<a href="/zh/" class="lang-option">繁體中文</a>
-								<a href="/ja/" class="lang-option">日本語</a>
-								<a href="/ko/" class="lang-option">한국어</a>
-								<a href="/de/" class="lang-option">Deutsch</a>
-								<a href="/es/" class="lang-option">Español</a>
-								<a href="/fr/" class="lang-option">Français</a>
-								<a href="/it/" class="lang-option">Italiano</a>
-								<a href="/pt/" class="lang-option">Português</a>
-								<a href="/vi/" class="lang-option active">Tiếng Việt</a>
-								<a href="/th/" class="lang-option">ไทย</a>
-								<a href="/id/" class="lang-option">Indonesia</a>
-								<a href="/tr/" class="lang-option">Türkçe</a>
-								<a href="/pl/" class="lang-option">Polski</a>
-								<a href="/hi/" class="lang-option">हिन्दी</a>
+							<div class="lang-dropdown" id="langDropdownDesktop">
+								<div class="lang-search-wrap">
+									<i class="bi bi-search"></i>
+									<input type="text" class="lang-search" placeholder="Search..." oninput="filterLanguages(this.value)" autocomplete="off">
+								</div>
+								<div class="lang-list" id="langListDesktop">
+									<a href="/" class="lang-option" data-lang="english"><span class="lang-flag">🇺🇸</span><span class="lang-names"><span class="lang-native">English</span></span></a>
+									<a href="/zh/" class="lang-option" data-lang="繁體中文 traditional chinese"><span class="lang-flag">🇹🇼</span><span class="lang-names"><span class="lang-native">繁體中文</span><span class="lang-en">Traditional Chinese</span></span></a>
+									<a href="/ja/" class="lang-option" data-lang="日本語 japanese"><span class="lang-flag">🇯🇵</span><span class="lang-names"><span class="lang-native">日本語</span><span class="lang-en">Japanese</span></span></a>
+									<a href="/ko/" class="lang-option" data-lang="한국어 korean"><span class="lang-flag">🇰🇷</span><span class="lang-names"><span class="lang-native">한국어</span><span class="lang-en">Korean</span></span></a>
+									<a href="/de/" class="lang-option" data-lang="deutsch german"><span class="lang-flag">🇩🇪</span><span class="lang-names"><span class="lang-native">Deutsch</span><span class="lang-en">German</span></span></a>
+									<a href="/es/" class="lang-option" data-lang="español spanish"><span class="lang-flag">🇪🇸</span><span class="lang-names"><span class="lang-native">Español</span><span class="lang-en">Spanish</span></span></a>
+									<a href="/fr/" class="lang-option" data-lang="français french"><span class="lang-flag">🇫🇷</span><span class="lang-names"><span class="lang-native">Français</span><span class="lang-en">French</span></span></a>
+									<a href="/it/" class="lang-option" data-lang="italiano italian"><span class="lang-flag">🇮🇹</span><span class="lang-names"><span class="lang-native">Italiano</span><span class="lang-en">Italian</span></span></a>
+									<a href="/pt/" class="lang-option" data-lang="português portuguese"><span class="lang-flag">🇧🇷</span><span class="lang-names"><span class="lang-native">Português</span><span class="lang-en">Portuguese</span></span></a>
+									<a href="/vi/" class="lang-option active" data-lang="tiếng việt vietnamese"><span class="lang-flag">🇻🇳</span><span class="lang-names"><span class="lang-native">Tiếng Việt</span><span class="lang-en">Vietnamese</span></span></a>
+									<a href="/th/" class="lang-option" data-lang="ไทย thai"><span class="lang-flag">🇹🇭</span><span class="lang-names"><span class="lang-native">ไทย</span><span class="lang-en">Thai</span></span></a>
+									<a href="/id/" class="lang-option" data-lang="indonesia indonesian"><span class="lang-flag">🇮🇩</span><span class="lang-names"><span class="lang-native">Indonesia</span><span class="lang-en">Indonesian</span></span></a>
+									<a href="/tr/" class="lang-option" data-lang="türkçe turkish"><span class="lang-flag">🇹🇷</span><span class="lang-names"><span class="lang-native">Türkçe</span><span class="lang-en">Turkish</span></span></a>
+									<a href="/pl/" class="lang-option" data-lang="polski polish"><span class="lang-flag">🇵🇱</span><span class="lang-names"><span class="lang-native">Polski</span><span class="lang-en">Polish</span></span></a>
+									<a href="/hi/" class="lang-option" data-lang="हिन्दी hindi"><span class="lang-flag">🇮🇳</span><span class="lang-names"><span class="lang-native">हिन्दी</span><span class="lang-en">Hindi</span></span></a>
+								</div>
+								<div class="lang-no-result" style="display:none;">No languages found</div>
 							</div>
 						</div>
 						<!-- Auth -->
@@ -609,9 +616,9 @@
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="hero-caption pt-150 pb-200">
 						<h1 class="wow fadeInUp" data-wow-delay="0.1s">
-							<span class="gradient-text-animated" data-i18n="landing.index.hero.titleHighlight">Tự động hóa làm</span><br><span data-i18n="landing.index.hero.titleEnd">những gì bạn cho nó thấy</span>
+							<span class="gradient-text-animated" data-i18n="landing.index.hero.titleHighlight">Tự động hóa làm đúng</span><br><span data-i18n="landing.index.hero.titleEnd">những gì bạn chỉ cho nó</span>
 						</h1>
-						<p class="wow fadeInUp" data-wow-delay="0.2s" data-i18n="landing.index.hero.description">Flyto2 là công cụ tự động hóa vận hành máy tính của bạn như con người. Mở trình duyệt, nhấp nút, điền form, tải tệp lên. Bạn làm một lần, Flyto2 lặp lại mãi mãi.</p>
+						<p class="wow fadeInUp" data-wow-delay="0.2s" data-i18n="landing.index.hero.description">Flyto2 là công cụ tự động hóa, điều khiển máy tính như một người thật. Mở trình duyệt, bấm nút, điền form, tải file lên. Bạn làm một lần, Flyto2 lặp lại mãi mãi.</p>
 						<a class="button-1 btn-glow wow fadeInUp" data-wow-delay="0.3s" href="pricing.html" style="margin-top: 20px;">
 							<i class="fas fa-rocket" style="margin-right: 8px;"></i> <span data-i18n="landing.common.cta.getStartedFree">Bắt đầu miễn phí</span>
 						</a>
@@ -639,8 +646,8 @@
 								<div class="title">
 									<div class="text-gradient" style="font-size: 2rem;"><i class="fas fa-mouse-pointer hero-icon-float"></i></div>
 								</div>
-								<h3 data-i18n="landing.index.counter.recordOnce">Ghi một lần</h3>
-								<p class="text-sm" data-i18n="landing.index.counter.recordOnceDesc">Cho Flyto2 thấy cách bạn làm việc. Nó học bằng cách xem các nhấp chuột và phím gõ của bạn.</p>
+								<h3 data-i18n="landing.index.counter.recordOnce">Ghi lại một lần</h3>
+								<p class="text-sm" data-i18n="landing.index.counter.recordOnceDesc">Cho Flyto2 xem cách bạn làm việc. Nó học bằng cách theo dõi từng cú click và thao tác gõ phím của bạn.</p>
 								<hr class="vertical dark">
 							</div>
 						</div>
@@ -650,8 +657,8 @@
 								<div class="title">
 									<div class="text-gradient" style="font-size: 2rem;"><i class="fas fa-redo icon-spin-slow"></i></div>
 								</div>
-								<h3 data-i18n="landing.index.counter.replayForever">Phát lại mãi mãi</h3>
-								<p class="text-sm" data-i18n="landing.index.counter.replayForeverDesc">Chạy lại với dữ liệu khác. Xử lý hàng loạt hàng trăm mục.</p>
+								<h3 data-i18n="landing.index.counter.replayForever">Chạy lại mãi mãi</h3>
+								<p class="text-sm" data-i18n="landing.index.counter.replayForeverDesc">Chạy lại với dữ liệu khác. Xử lý hàng trăm mục cùng lúc.</p>
 								<hr class="vertical dark">
 							</div>
 						</div>
@@ -661,8 +668,8 @@
 								<div class="title">
 									<div class="text-gradient" style="font-size: 2rem;"><i class="fas fa-shield-alt animate-pulse-glow" style="border-radius: 50%;"></i></div>
 								</div>
-								<h3 data-i18n="landing.index.counter.stayInControl">Giữ quyền kiểm soát</h3>
-								<p class="text-sm" data-i18n="landing.index.counter.stayInControlDesc">Tạm dừng, xác minh và tiếp tục bất kỳ lúc nào. Không bao giờ lo lắng về tự động hóa chạy ngoài tầm kiểm soát.</p>
+								<h3 data-i18n="landing.index.counter.stayInControl">Luôn nắm quyền kiểm soát</h3>
+								<p class="text-sm" data-i18n="landing.index.counter.stayInControlDesc">Tạm dừng, kiểm tra và tiếp tục bất cứ lúc nào. Không lo tự động hóa chạy sai.</p>
 							</div>
 						</div>
 					</div>
@@ -678,8 +685,8 @@
 			<div class="row mb-40">
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="section-headding wow fadeInUp">
-						<h2><span data-i18n="landing.index.video.titleStart">See How</span> <span class="gradient-text-animated" data-i18n="landing.index.video.titleHighlight">Simple</span> <span data-i18n="landing.index.video.titleEnd">It Is</span></h2>
-						<p style="font-size: 18px; margin-top: 15px;" data-i18n="landing.index.video.subtitle">Watch a quick demo — no technical knowledge needed to follow along.</p>
+						<h2><span data-i18n="landing.index.video.titleStart">Xem</span> <span class="gradient-text-animated" data-i18n="landing.index.video.titleHighlight">đơn giản</span> <span data-i18n="landing.index.video.titleEnd">thế nào</span></h2>
+						<p style="font-size: 18px; margin-top: 15px;" data-i18n="landing.index.video.subtitle">Xem demo nhanh — không cần kiến thức kỹ thuật để hiểu.</p>
 					</div>
 				</div>
 			</div>
@@ -699,7 +706,7 @@
 					<p class="text-center" style="margin-top: 20px; color: #6b7280;">
 						<a href="https://www.youtube.com/@Flyto2" target="_blank" rel="noopener" style="color: #7C3AED; text-decoration: none; font-weight: 600;">
 							<i class="fab fa-youtube" style="margin-right: 6px;"></i>
-							<span data-i18n="landing.index.video.moreVideos">Watch more on our YouTube channel</span>
+							<span data-i18n="landing.index.video.moreVideos">Xem thêm trên kênh YouTube của chúng tôi</span>
 						</a>
 					</p>
 				</div>
@@ -715,7 +722,7 @@
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="section-headding wow fadeInUp">
 						<h2><span data-i18n="landing.index.why.title">Tại sao</span> <span class="gradient-text-animated">Flyto2</span>?</h2>
-						<p data-i18n="landing.index.why.subtitle">Nhiều tác vụ không khó, chúng chỉ tẻ nhạt.</p>
+						<p data-i18n="landing.index.why.subtitle">Nhiều công việc không khó, chỉ là chán ngấy.</p>
 					</div>
 				</div>
 			</div>
@@ -727,8 +734,8 @@
 							<i class="fas fa-copy feature-icon-animated" style="font-size: 40px; color: #7C3AED;"></i>
 						</div>
 						<div class="content">
-							<h3 class="text-gradient" data-i18n="landing.index.why.copyPasteTitle">Địa ngục Sao chép-Dán</h3>
-							<p data-i18n="landing.index.why.copyPasteDesc">Đăng nhập vào bảng điều khiển, sao chép dữ liệu từ hệ thống này sang hệ thống khác, ngày qua ngày.</p>
+							<h3 class="text-gradient" data-i18n="landing.index.why.copyPasteTitle">Địa ngục copy-paste</h3>
+							<p data-i18n="landing.index.why.copyPasteDesc">Đăng nhập vào bảng điều khiển, copy dữ liệu từ hệ thống này sang hệ thống kia, ngày này qua ngày khác.</p>
 						</div>
 					</div>
 				</div>
@@ -739,8 +746,8 @@
 							<i class="fas fa-ban feature-icon-animated" style="font-size: 40px; color: #7C3AED;"></i>
 						</div>
 						<div class="content">
-							<h3 class="text-gradient" data-i18n="landing.index.why.noBatchTitle">Không có Tùy chọn Hàng loạt</h3>
-							<p data-i18n="landing.index.why.noBatchDesc">ERP hoặc bảng điều khiển của bạn chỉ cho phép xử lý từng mục một. Không có hành động hàng loạt.</p>
+							<h3 class="text-gradient" data-i18n="landing.index.why.noBatchTitle">Từng cái một</h3>
+							<p data-i18n="landing.index.why.noBatchDesc">Trang quản trị chỉ cho bạn làm từng cái một. Không có cách xử lý hàng loạt.</p>
 						</div>
 					</div>
 				</div>
@@ -751,15 +758,15 @@
 							<i class="fas fa-plug feature-icon-animated" style="font-size: 40px; color: #7C3AED;"></i>
 						</div>
 						<div class="content">
-							<h3 class="text-gradient" data-i18n="landing.index.why.noApiTitle">Không có API</h3>
-							<p data-i18n="landing.index.why.noApiDesc">Hệ thống không có API. Lựa chọn duy nhất của bạn là nhấp qua trình duyệt thủ công.</p>
+							<h3 class="text-gradient" data-i18n="landing.index.why.noApiTitle">Không có lối tắt</h3>
+							<p data-i18n="landing.index.why.noApiDesc">Hệ thống không có lối tắt. Lựa chọn duy nhất là bấm thủ công trên trình duyệt.</p>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="row mt-30">
 				<div class="col-lg-8 offset-lg-2 text-center wow fadeInUp" data-wow-delay="0.4s">
-					<p style="font-size: 18px;" data-i18n="landing.index.why.bottomText">Bạn biết quy trình. Bạn biết nó không nên tốn công sức con người. Flyto2 được xây dựng chính xác cho điều này.</p>
+					<p style="font-size: 18px;" data-i18n="landing.index.why.bottomText">Bạn biết quy trình. Bạn biết không nên tốn công sức con người cho nó. Flyto2 được tạo ra chính vì điều này.</p>
 				</div>
 			</div>
 		</div>
@@ -772,8 +779,8 @@
 			<div class="row mb-50">
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="section-headding wow fadeInUp">
-						<h2><span data-i18n="landing.index.different.titleStart">Điều Gì Làm Flyto2</span> <span class="gradient-text-animated" data-i18n="landing.index.different.titleHighlight">Khác Biệt</span>?</h2>
-						<p style="font-size: 18px; margin-top: 15px;" data-i18n="landing.index.different.subtitle">Hầu hết công cụ tự động hóa chỉ có hai trạng thái: không chạy hoặc đã hoàn thành.</p>
+						<h2><span data-i18n="landing.index.different.titleStart">Điều gì làm Flyto2</span> <span class="gradient-text-animated" data-i18n="landing.index.different.titleHighlight">khác biệt</span>?</h2>
+						<p style="font-size: 18px; margin-top: 15px;" data-i18n="landing.index.different.subtitle">Hầu hết công cụ tự động chỉ có hai trạng thái: chưa chạy hoặc đã xong.</p>
 					</div>
 				</div>
 			</div>
@@ -785,7 +792,7 @@
 						<div style="position: absolute; bottom: -30px; left: -30px; width: 100px; height: 100px; background: rgba(124, 58, 237, 0.15); border-radius: 50%;"></div>
 						<p style="font-size: 24px; color: #fff; font-weight: 600; margin: 0; position: relative; z-index: 2;">
 							<i class="fas fa-quote-left" style="color: #a78bfa; margin-right: 15px; opacity: 0.6;"></i>
-							<span data-i18n="landing.index.different.quoteStart">Trước, trong và khi xảy ra lỗi — bạn luôn có thể</span> <span style="color: #a78bfa;" data-i18n="landing.index.different.quoteHighlight">tạm dừng và kiểm tra</span>.
+							<span data-i18n="landing.index.different.quoteStart">Trước, trong và khi có lỗi — bạn luôn có thể</span> <span style="color: #a78bfa;" data-i18n="landing.index.different.quoteHighlight">tạm dừng và kiểm tra</span>.
 							<i class="fas fa-quote-right" style="color: #a78bfa; margin-left: 15px; opacity: 0.6;"></i>
 						</p>
 					</div>
@@ -798,8 +805,8 @@
 						<div style="width: 60px; height: 60px; background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
 							<i class="fas fa-play" style="color: #fff; font-size: 24px;"></i>
 						</div>
-						<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 15px; color: #1e0a3c;" data-i18n="landing.index.different.step1Title">Chạy 1 Mục Trước</h3>
-						<p style="color: #6b7280; line-height: 1.7; margin: 0;" data-i18n="landing.index.different.step1Desc">Kiểm tra xem có đúng không trước khi xử lý thêm. Kiểm tra an toàn.</p>
+						<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 15px; color: #1e0a3c;" data-i18n="landing.index.different.step1Title">Chạy thử 1 mục trước</h3>
+						<p style="color: #6b7280; line-height: 1.7; margin: 0;" data-i18n="landing.index.different.step1Desc">Kiểm tra xem kết quả có đúng không trước khi xử lý thêm. Thử nghiệm an toàn.</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 mb-30">
@@ -807,8 +814,8 @@
 						<div style="width: 60px; height: 60px; background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
 							<i class="fas fa-layer-group" style="color: #fff; font-size: 24px;"></i>
 						</div>
-						<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 15px; color: #1e0a3c;" data-i18n="landing.index.different.step2Title">Sau Đó Chạy Một Lô</h3>
-						<p style="color: #6b7280; line-height: 1.7; margin: 0;" data-i18n="landing.index.different.step2Desc">Xác nhận với một lô lớn hơn. Bắt lỗi sớm.</p>
+						<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 15px; color: #1e0a3c;" data-i18n="landing.index.different.step2Title">Rồi chạy một loạt</h3>
+						<p style="color: #6b7280; line-height: 1.7; margin: 0;" data-i18n="landing.index.different.step2Desc">Thử với nhóm lớn hơn. Phát hiện vấn đề sớm.</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 mb-30">
@@ -816,8 +823,8 @@
 						<div style="width: 60px; height: 60px; background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
 							<i class="fas fa-rocket" style="color: #fff; font-size: 24px;"></i>
 						</div>
-						<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 15px; color: #1e0a3c;" data-i18n="landing.index.different.step3Title">Chạy Tất Cả</h3>
-						<p style="color: #6b7280; line-height: 1.7; margin: 0;" data-i18n="landing.index.different.step3Desc">Khi đã xác nhận, xử lý toàn bộ lô với sự tự tin.</p>
+						<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 15px; color: #1e0a3c;" data-i18n="landing.index.different.step3Title">Chạy tất cả</h3>
+						<p style="color: #6b7280; line-height: 1.7; margin: 0;" data-i18n="landing.index.different.step3Desc">Khi bạn đã yên tâm, xử lý tất cả.</p>
 					</div>
 				</div>
 			</div>
@@ -825,31 +832,31 @@
 			<div class="row">
 				<div class="col-lg-10 offset-lg-1">
 					<div class="wow fadeInUp" data-wow-delay="0.2s" style="background: linear-gradient(145deg, #fff 0%, #f8f9ff 100%); border-radius: 20px; padding: 40px; border: 1px solid rgba(124, 58, 237, 0.1);">
-						<h3 style="text-align: center; font-size: 22px; font-weight: 700; margin-bottom: 30px; color: #1e0a3c;" data-i18n="landing.index.different.errorTitle">Nếu có gì sai sót:</h3>
+						<h3 style="text-align: center; font-size: 22px; font-weight: 700; margin-bottom: 30px; color: #1e0a3c;" data-i18n="landing.index.different.errorTitle">Nếu có lỗi xảy ra:</h3>
 						<div class="row">
 							<div class="col-md-4 text-center mb-20">
 								<div style="width: 70px; height: 70px; background: linear-gradient(135deg, #ef4444 0%, #f87171 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
 									<i class="fas fa-stop" style="color: #fff; font-size: 28px;"></i>
 								</div>
-								<h4 style="font-weight: 700; color: #1e0a3c;" data-i18n="landing.index.different.errorStop">Dừng Ngay Lập Tức</h4>
-								<p style="color: #6b7280; font-size: 14px;" data-i18n="landing.index.different.errorStopDesc">Dừng thực thi ngay lập tức</p>
+								<h4 style="font-weight: 700; color: #1e0a3c;" data-i18n="landing.index.different.errorStop">Dừng ngay</h4>
+								<p style="color: #6b7280; font-size: 14px;" data-i18n="landing.index.different.errorStopDesc">Ngừng chạy ngay lập tức</p>
 							</div>
 							<div class="col-md-4 text-center mb-20">
 								<div style="width: 70px; height: 70px; background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
 									<i class="fas fa-undo-alt" style="color: #fff; font-size: 28px;"></i>
 								</div>
-								<h4 style="font-weight: 700; color: #1e0a3c;" data-i18n="landing.index.different.errorRollback">Quay Lại</h4>
+								<h4 style="font-weight: 700; color: #1e0a3c;" data-i18n="landing.index.different.errorRollback">Quay lại</h4>
 								<p style="color: #6b7280; font-size: 14px;" data-i18n="landing.index.different.errorRollbackDesc">Hoàn tác nếu cần</p>
 							</div>
 							<div class="col-md-4 text-center mb-20">
 								<div style="width: 70px; height: 70px; background: linear-gradient(135deg, #10b981 0%, #34d399 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
 									<i class="fas fa-play" style="color: #fff; font-size: 28px;"></i>
 								</div>
-								<h4 style="font-weight: 700; color: #1e0a3c;" data-i18n="landing.index.different.errorResume">Tiếp Tục</h4>
-								<p style="color: #6b7280; font-size: 14px;" data-i18n="landing.index.different.errorResumeDesc">Tiếp tục từ nơi đã dừng</p>
+								<h4 style="font-weight: 700; color: #1e0a3c;" data-i18n="landing.index.different.errorResume">Tiếp tục</h4>
+								<p style="color: #6b7280; font-size: 14px;" data-i18n="landing.index.different.errorResumeDesc">Chạy tiếp từ chỗ bị dừng</p>
 							</div>
 						</div>
-						<p style="text-align: center; margin-top: 20px; font-size: 18px; font-weight: 600; color: #7c3aed;" data-i18n="landing.index.different.errorBottom">Tự động hóa không cần phải "tất cả hoặc không có gì."</p>
+						<p style="text-align: center; margin-top: 20px; font-size: 18px; font-weight: 600; color: #7c3aed;" data-i18n="landing.index.different.errorBottom">Tự động hóa không nhất thiết phải "được ăn cả, ngã về không."</p>
 					</div>
 				</div>
 			</div>
@@ -863,8 +870,8 @@
 			<div class="row mb-50">
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="section-headding wow fadeInUp">
-						<h2><span data-i18n="landing.index.noCoding.titleStart">Không</span> <span class="gradient-text-animated" data-i18n="landing.index.noCoding.titleHighlight">Mã Hóa</span> <span data-i18n="landing.index.noCoding.titleEnd">Cần Thiết</span></h2>
-						<p style="font-size: 18px; margin-top: 15px;" data-i18n="landing.index.noCoding.subtitle">Nếu bạn có thể sử dụng trình duyệt, bạn có thể sử dụng Flyto2.</p>
+						<h2><span data-i18n="landing.index.noCoding.titleStart">Không cần biết</span> <span class="gradient-text-animated" data-i18n="landing.index.noCoding.titleHighlight">lập trình</span> <span data-i18n="landing.index.noCoding.titleEnd">Required</span></h2>
+						<p style="font-size: 18px; margin-top: 15px;" data-i18n="landing.index.noCoding.subtitle">Nếu bạn biết dùng trình duyệt, bạn có thể dùng Flyto2.</p>
 					</div>
 				</div>
 			</div>
@@ -879,8 +886,8 @@
 									<i class="fas fa-globe" style="font-size: 40px; color: #fff;"></i>
 									<div style="position: absolute; top: -5px; right: -5px; width: 35px; height: 35px; background: #1e0a3c; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; color: #fff; font-size: 16px; border: 3px solid #fff;">1</div>
 								</div>
-								<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: #1e0a3c;" data-i18n="landing.index.noCoding.step1Title">Mở Trình Duyệt</h3>
-								<p style="color: #6b7280; font-size: 15px; line-height: 1.6;" data-i18n="landing.index.noCoding.step1Desc">Khởi động Flyto2 và bắt đầu ghi lại quy trình làm việc của bạn</p>
+								<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: #1e0a3c;" data-i18n="landing.index.noCoding.step1Title">Mở trình duyệt</h3>
+								<p style="color: #6b7280; font-size: 15px; line-height: 1.6;" data-i18n="landing.index.noCoding.step1Desc">Mở Flyto2 và bắt đầu ghi lại quy trình làm việc</p>
 							</div>
 						</div>
 						<!-- Step 2 -->
@@ -890,8 +897,8 @@
 									<i class="fas fa-mouse-pointer" style="font-size: 40px; color: #fff;"></i>
 									<div style="position: absolute; top: -5px; right: -5px; width: 35px; height: 35px; background: #1e0a3c; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; color: #fff; font-size: 16px; border: 3px solid #fff;">2</div>
 								</div>
-								<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: #1e0a3c;" data-i18n="landing.index.noCoding.step2Title">Làm Nhiệm Vụ Của Bạn</h3>
-								<p style="color: #6b7280; font-size: 15px; line-height: 1.6;" data-i18n="landing.index.noCoding.step2Desc">Làm việc như bình thường - nhấp, gõ, điều hướng</p>
+								<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: #1e0a3c;" data-i18n="landing.index.noCoding.step2Title">Làm công việc của bạn</h3>
+								<p style="color: #6b7280; font-size: 15px; line-height: 1.6;" data-i18n="landing.index.noCoding.step2Desc">Làm việc như bình thường - bấm, gõ, chuyển trang</p>
 							</div>
 						</div>
 						<!-- Step 3 -->
@@ -901,8 +908,8 @@
 									<i class="fas fa-save" style="font-size: 40px; color: #fff;"></i>
 									<div style="position: absolute; top: -5px; right: -5px; width: 35px; height: 35px; background: #1e0a3c; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; color: #fff; font-size: 16px; border: 3px solid #fff;">3</div>
 								</div>
-								<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: #1e0a3c;" data-i18n="landing.index.noCoding.step3Title">Lưu Lại</h3>
-								<p style="color: #6b7280; font-size: 15px; line-height: 1.6;" data-i18n="landing.index.noCoding.step3Desc">Flyto2 ghi lại và nhớ mọi bước</p>
+								<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: #1e0a3c;" data-i18n="landing.index.noCoding.step3Title">Lưu lại</h3>
+								<p style="color: #6b7280; font-size: 15px; line-height: 1.6;" data-i18n="landing.index.noCoding.step3Desc">Flyto2 ghi nhớ từng bước</p>
 							</div>
 						</div>
 						<!-- Step 4 -->
@@ -912,8 +919,8 @@
 									<i class="fas fa-sync-alt" style="font-size: 40px; color: #fff;"></i>
 									<div style="position: absolute; top: -5px; right: -5px; width: 35px; height: 35px; background: #1e0a3c; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; color: #fff; font-size: 16px; border: 3px solid #fff;">4</div>
 								</div>
-								<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: #1e0a3c;" data-i18n="landing.index.noCoding.step4Title">Phát Lại Bất Cứ Lúc Nào</h3>
-								<p style="color: #6b7280; font-size: 15px; line-height: 1.6;" data-i18n="landing.index.noCoding.step4Desc">Chạy lại, xử lý hàng loạt, hoặc lên lịch</p>
+								<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: #1e0a3c;" data-i18n="landing.index.noCoding.step4Title">Chạy lại bất cứ lúc nào</h3>
+								<p style="color: #6b7280; font-size: 15px; line-height: 1.6;" data-i18n="landing.index.noCoding.step4Desc">Chạy lại, xử lý hàng loạt, hoặc đặt lịch chạy</p>
 							</div>
 						</div>
 					</div>
@@ -925,7 +932,7 @@
 					<div class="wow fadeInUp" data-wow-delay="0.5s" style="background: linear-gradient(135deg, #1e0a3c 0%, #4c1d95 100%); border-radius: 20px; padding: 35px 40px; text-align: center;">
 						<p style="font-size: 20px; color: #fff; margin: 0; font-weight: 600;">
 							<i class="fas fa-code" style="margin-right: 12px; opacity: 0.5;"></i>
-							<span data-i18n="landing.index.noCoding.bottomStart">Bạn không cần biết mã. Bạn chỉ cần biết</span> <span style="color: #a78bfa;" data-i18n="landing.index.noCoding.bottomHighlight">công việc của bạn</span>.
+							<span data-i18n="landing.index.noCoding.bottomStart">Bạn không cần biết lập trình. Bạn chỉ cần biết</span> <span style="color: #a78bfa;" data-i18n="landing.index.noCoding.bottomHighlight">công việc của bạn</span>.
 						</p>
 					</div>
 				</div>
@@ -940,8 +947,8 @@
 			<div class="row mb-40">
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="section-headding wow fadeInUp">
-						<h2><span data-i18n="landing.index.safety.titleStart">Dành cho Người</span> <span class="gradient-text-animated" data-i18n="landing.index.safety.titleHighlight">Lo lắng</span> <span data-i18n="landing.index.safety.titleEnd">Về Sai Lầm</span></h2>
-						<p data-i18n="landing.index.safety.subtitle">Flyto2 được thiết kế cho những người cần cẩn thận.</p>
+						<h2><span data-i18n="landing.index.safety.titleStart">Dành cho người hay</span> <span class="gradient-text-animated" data-i18n="landing.index.safety.titleHighlight">lo lắng</span> <span data-i18n="landing.index.safety.titleEnd">sợ mắc lỗi</span></h2>
+						<p data-i18n="landing.index.safety.subtitle">Flyto2 được thiết kế cho những ai cần sự cẩn thận.</p>
 					</div>
 				</div>
 			</div>
@@ -952,7 +959,7 @@
 							<i class="fas fa-eye feature-icon-animated" style="font-size: 30px; color: #7C3AED;"></i>
 						</div>
 						<div class="content">
-							<h3 data-i18n="landing.index.safety.verifyTitle">Xác minh Từng bước</h3>
+							<h3 data-i18n="landing.index.safety.verifyTitle">Kiểm tra từng bước</h3>
 							<p data-i18n="landing.index.safety.verifyDesc">Xem chính xác điều gì xảy ra ở mỗi bước trước khi tiếp tục.</p>
 						</div>
 					</div>
@@ -963,8 +970,8 @@
 							<i class="fas fa-flask feature-icon-animated" style="font-size: 30px; color: #7C3AED;"></i>
 						</div>
 						<div class="content">
-							<h3 data-i18n="landing.index.safety.trialTitle">Chế độ Thử nghiệm</h3>
-							<p data-i18n="landing.index.safety.trialDesc">Thử nghiệm với một vài mục trước khi chạy toàn bộ.</p>
+							<h3 data-i18n="landing.index.safety.trialTitle">Chế độ thử nghiệm</h3>
+							<p data-i18n="landing.index.safety.trialDesc">Thử với vài mục trước rồi mới chạy toàn bộ.</p>
 						</div>
 					</div>
 				</div>
@@ -974,8 +981,8 @@
 							<i class="fas fa-history icon-spin-slow" style="font-size: 30px; color: #7C3AED;"></i>
 						</div>
 						<div class="content">
-							<h3 data-i18n="landing.index.safety.rollbackTitle">Quay Lại & Tiếp Tục</h3>
-							<p data-i18n="landing.index.safety.rollbackDesc">Lỗi không có nghĩa là bắt đầu lại. Quay lại và tiếp tục.</p>
+							<h3 data-i18n="landing.index.safety.rollbackTitle">Quay lại & tiếp tục</h3>
+							<p data-i18n="landing.index.safety.rollbackDesc">Lỗi không có nghĩa là phải làm lại từ đầu. Quay lại và tiếp tục.</p>
 						</div>
 					</div>
 				</div>
@@ -985,8 +992,8 @@
 							<i class="fas fa-camera feature-icon-animated" style="font-size: 30px; color: #7C3AED;"></i>
 						</div>
 						<div class="content">
-							<h3 data-i18n="landing.index.safety.auditTitle">Theo Dõi Đầy Đủ</h3>
-							<p data-i18n="landing.index.safety.auditDesc">Ảnh chụp màn hình và nhật ký cho mọi thứ. Biết điều gì đã xảy ra, khi nào và bởi ai.</p>
+							<h3 data-i18n="landing.index.safety.auditTitle">Ghi lại đầy đủ mọi bước</h3>
+							<p data-i18n="landing.index.safety.auditDesc">Ảnh chụp màn hình và nhật ký cho mọi thứ. Biết chuyện gì đã xảy ra, khi nào, và do ai.</p>
 						</div>
 					</div>
 				</div>
@@ -1000,8 +1007,8 @@
 		<div class="container" style="position: relative; z-index: 2;">
 			<div class="row">
 				<div class="col-lg-6 wow fadeInLeft">
-					<h3 style="color: rgba(255,255,255,0.8); margin-bottom: 10px;" data-i18n="landing.index.cta.notZapier">Không Phải Zapier Khác</h3>
-					<h2 style="color: #fff; font-size: 32px;"><span data-i18n="landing.index.cta.noApiStart">Khi không có API, chỉ có trình duyệt —</span> <span class="gradient-text-animated">Flyto2</span> <span data-i18n="landing.index.cta.noApiEnd">hoạt động.</span></h2>
+					<h3 style="color: rgba(255,255,255,0.8); margin-bottom: 10px;" data-i18n="landing.index.cta.notZapier">Được tạo ra cho trình duyệt</h3>
+					<h2 style="color: #fff; font-size: 32px;"><span data-i18n="landing.index.cta.noApiStart">Khi không có lối tắt, chỉ có trình duyệt — Flyto2</span> <span class="gradient-text-animated">Flyto2</span> <span data-i18n="landing.index.cta.noApiEnd">vẫn chạy được.</span></h2>
 				</div>
 				<div class="col-lg-6 align-self-center text-lg-end wow fadeInRight">
 					<a class="button-2 btn-glow" href="pricing.html" style="margin-top: 20px;" data-i18n="landing.common.cta.viewPricing">Xem bảng giá</a>
@@ -1017,7 +1024,7 @@
 			<div class="row mb-40">
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="section-headding wow fadeInUp">
-						<h2><span data-i18n="landing.index.whoFor.titleStart">Dành cho Ai</span> <span class="gradient-text-animated">Flyto2</span> <span data-i18n="landing.index.whoFor.titleEnd">Dành cho?</span></h2>
+						<h2><span data-i18n="landing.index.whoFor.titleStart">Ai nên dùng</span> <span class="gradient-text-animated">Flyto2</span> <span data-i18n="landing.index.whoFor.titleEnd">?</span></h2>
 					</div>
 				</div>
 			</div>
@@ -1028,8 +1035,8 @@
 							<i class="fas fa-user-tie feature-icon-animated" style="font-size: 40px; color: #7C3AED;"></i>
 						</div>
 						<div class="content">
-							<h3 class="text-gradient" data-i18n="landing.index.whoFor.adminTitle">Nhân viên Hành chính</h3>
-							<p data-i18n="landing.index.whoFor.adminDesc">Nhập liệu, vận hành backend, tạo báo cáo</p>
+							<h3 class="text-gradient" data-i18n="landing.index.whoFor.adminTitle">Nhân viên hành chính</h3>
+							<p data-i18n="landing.index.whoFor.adminDesc">Nhập liệu, vận hành hệ thống, tạo báo cáo</p>
 						</div>
 					</div>
 				</div>
@@ -1039,8 +1046,8 @@
 							<i class="fas fa-cogs icon-spin-slow" style="font-size: 40px; color: #7C3AED;"></i>
 						</div>
 						<div class="content">
-							<h3 class="text-gradient" data-i18n="landing.index.whoFor.opsTitle">Nhóm Vận hành</h3>
-							<p data-i18n="landing.index.whoFor.opsDesc">ERP, đơn hàng, hóa đơn, quản lý tồn kho</p>
+							<h3 class="text-gradient" data-i18n="landing.index.whoFor.opsTitle">Đội vận hành</h3>
+							<p data-i18n="landing.index.whoFor.opsDesc">Đơn hàng, hóa đơn, kho hàng, công việc hàng ngày</p>
 						</div>
 					</div>
 				</div>
@@ -1050,8 +1057,8 @@
 							<i class="fas fa-bug feature-icon-animated" style="font-size: 40px; color: #7C3AED;"></i>
 						</div>
 						<div class="content">
-							<h3 class="text-gradient" data-i18n="landing.index.whoFor.qaTitle">QA & Kiểm thử</h3>
-							<p data-i18n="landing.index.whoFor.qaDesc">Luồng kiểm tra lặp đi lặp lại, kiểm thử hồi quy</p>
+							<h3 class="text-gradient" data-i18n="landing.index.whoFor.qaTitle">Kiểm thử & Chất lượng</h3>
+							<p data-i18n="landing.index.whoFor.qaDesc">Kiểm tra lặp đi lặp lại, check cùng một thứ nhiều lần</p>
 						</div>
 					</div>
 				</div>
@@ -1061,7 +1068,7 @@
 							<i class="fas fa-rocket hero-icon-float" style="font-size: 40px; color: #7C3AED;"></i>
 						</div>
 						<div class="content">
-							<h3 class="text-gradient" data-i18n="landing.index.whoFor.startupTitle">Nhóm nhỏ & Khởi nghiệp</h3>
+							<h3 class="text-gradient" data-i18n="landing.index.whoFor.startupTitle">Đội nhỏ & Startup</h3>
 							<p data-i18n="landing.index.whoFor.startupDesc">Tự động hóa mà không cần thuê kỹ sư</p>
 						</div>
 					</div>
@@ -1073,7 +1080,7 @@
 						</div>
 						<div class="content">
 							<h3 class="text-gradient" data-i18n="landing.index.whoFor.enterpriseTitle">Doanh nghiệp</h3>
-							<p data-i18n="landing.index.whoFor.enterpriseDesc">Triển khai tùy chỉnh, bảo mật cấp doanh nghiệp</p>
+							<p data-i18n="landing.index.whoFor.enterpriseDesc">Triển khai riêng, bảo mật cấp doanh nghiệp</p>
 						</div>
 					</div>
 				</div>
@@ -1083,8 +1090,8 @@
 							<i class="fas fa-lock animate-pulse-glow" style="font-size: 40px; color: #7C3AED; border-radius: 50%;"></i>
 						</div>
 						<div class="content">
-							<h3 class="text-gradient" data-i18n="landing.index.whoFor.regulatedTitle">Ngành Công nghiệp Quy định</h3>
-							<p data-i18n="landing.index.whoFor.regulatedDesc">Tài chính, y tế, chính phủ — cần kiểm soát hoàn toàn</p>
+							<h3 class="text-gradient" data-i18n="landing.index.whoFor.regulatedTitle">Ngành cần ghi chép đầy đủ</h3>
+							<p data-i18n="landing.index.whoFor.regulatedDesc">Tài chính, y tế, chính phủ — nơi mỗi bước đều cần được ghi lại</p>
 						</div>
 					</div>
 				</div>
@@ -1112,11 +1119,11 @@
 					</div>
 				</div>
 				<div class="col-lg-5 offset-lg-1 order-lg-1 wow fadeInLeft">
-					<h2 style="margin-bottom: 20px;"><span data-i18n="landing.index.short.titleStart">One Minute.</span> <span class="gradient-text-animated" data-i18n="landing.index.short.titleHighlight">That's All You Need.</span></h2>
-					<p style="font-size: 18px; color: #6b7280; line-height: 1.8; margin-bottom: 30px;" data-i18n="landing.index.short.description">See how Flyto2 works in under a minute. No setup, no explanation — just watch.</p>
+					<h2 style="margin-bottom: 20px;"><span data-i18n="landing.index.short.titleStart">Một phút.</span> <span class="gradient-text-animated" data-i18n="landing.index.short.titleHighlight">Chỉ cần có vậy.</span></h2>
+					<p style="font-size: 18px; color: #6b7280; line-height: 1.8; margin-bottom: 30px;" data-i18n="landing.index.short.description">Xem Flyto2 hoạt động trong chưa đầy một phút. Không cần cài đặt, không cần giải thích — chỉ cần xem.</p>
 					<a href="https://www.youtube.com/@Flyto2" target="_blank" rel="noopener" style="color: #7C3AED; text-decoration: none; font-weight: 600; font-size: 16px;">
 						<i class="fab fa-youtube" style="margin-right: 6px;"></i>
-						<span data-i18n="landing.index.short.moreShorts">More videos on YouTube</span>
+						<span data-i18n="landing.index.short.moreShorts">Thêm video trên YouTube</span>
 						<i class="fas fa-arrow-right" style="margin-left: 6px; font-size: 12px;"></i>
 					</a>
 				</div>
@@ -1130,11 +1137,11 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 offset-lg-2 text-center">
-					<h2 class="wow fadeInUp" style="margin-bottom: 30px;"><span data-i18n="landing.index.philosophy.titleStart">Flyto2 Không</span> <span class="gradient-text-animated" data-i18n="landing.index.philosophy.titleHighlight">Thay Thế</span> <span data-i18n="landing.index.philosophy.titleEnd">Bạn</span></h2>
-					<p class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 18px; margin-bottom: 20px;" data-i18n="landing.index.philosophy.line1">Flyto2 không phải về "để robot tự do chạy."</p>
+					<h2 class="wow fadeInUp" style="margin-bottom: 30px;"><span data-i18n="landing.index.philosophy.titleStart">Flyto2 không</span> <span class="gradient-text-animated" data-i18n="landing.index.philosophy.titleHighlight">thay thế</span> <span data-i18n="landing.index.philosophy.titleEnd">bạn</span></h2>
+					<p class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 18px; margin-bottom: 20px;" data-i18n="landing.index.philosophy.line1">Flyto2 không phải "thả robot chạy tự do."</p>
 					<p class="wow fadeInUp" data-wow-delay="0.2s" style="font-size: 18px; margin-bottom: 30px;" data-i18n="landing.index.philosophy.line2">Vai trò của nó rất đơn giản:</p>
 					<div class="wow fadeInUp card-float" data-wow-delay="0.3s" style="background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%); padding: 40px; border-radius: 15px; border-left: 4px solid #7C3AED; box-shadow: 0 10px 40px rgba(124,58,237,0.1);">
-						<p style="font-size: 20px; margin: 0;" data-i18n="landing.index.philosophy.quote">Bạn quyết định. Máy tính thực thi. Vấn đề dừng ngay lập tức.</p>
+						<p style="font-size: 20px; margin: 0;" data-i18n="landing.index.philosophy.quote">Bạn quyết định. Máy tính thực hiện. Có vấn đề thì dừng ngay.</p>
 					</div>
 				</div>
 			</div>
@@ -1149,7 +1156,7 @@
 				<div class="col-lg-12">
 					<div class="subscribe-content wow fadeInUp">
 						<h2 data-i18n="landing.index.finalCta.title">Hãy nghĩ về Flyto2 như:</h2>
-						<p style="font-size: 24px; font-style: italic;"><span data-i18n="landing.index.finalCta.quote">"Một công cụ tự động hóa theo dõi hướng dẫn của bạn, nhưng không bao giờ đi lạc."</span><span class="typing-cursor"></span></p>
+						<p style="font-size: 24px; font-style: italic;"><span data-i18n="landing.index.finalCta.quote">"Một công cụ tự động làm theo hướng dẫn của bạn, nhưng không bao giờ tự ý chạy lung tung."</span><span class="typing-cursor"></span></p>
 						<a class="button-1 btn-glow" href="pricing.html" style="margin-top: 30px; display: inline-block;">
 							<i class="fas fa-rocket" style="margin-right: 8px;"></i> <span data-i18n="landing.common.cta.getStartedFree">Bắt đầu miễn phí</span>
 						</a>
@@ -1229,7 +1236,7 @@
 						</div>
 					</div>
 					<div class="col-lg-6">
-						<div class="footer-legal" style="margin-bottom:10px"><a href="privacy.html" style="color:#a0aec0;margin-right:16px;font-size:13px">Privacy Policy</a><a href="terms.html" style="color:#a0aec0;font-size:13px">Terms of Service</a></div><div class="footer_social">
+						<div class="footer-legal" style="margin-bottom:10px"><a href="privacy.html" style="color:#a0aec0;margin-right:16px;font-size:13px"><span data-i18n="landing.common.footer.privacy">Privacy Policy</span></a><a href="terms.html" style="color:#a0aec0;font-size:13px"><span data-i18n="landing.common.footer.terms">Terms of Service</span></a></div><div class="footer_social">
 							<ul>
 								<li><a href="https://github.com/flytohub" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
 										<li><a href="https://www.youtube.com/channel/UCZ9OOqx4RM3Jjy1annWtsRA" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
@@ -1298,23 +1305,60 @@
 				<i class="bi bi-x-lg"></i>
 			</button>
 		</div>
-		<div class="lang-sheet-body">
-			<a href="/" class="lang-sheet-item"><span>English</span></a>
-			<a href="/zh/" class="lang-sheet-item"><span>繁體中文</span></a>
-			<a href="/ja/" class="lang-sheet-item"><span>日本語</span></a>
-			<a href="/ko/" class="lang-sheet-item"><span>한국어</span></a>
-			<a href="/de/" class="lang-sheet-item"><span>Deutsch</span></a>
-			<a href="/es/" class="lang-sheet-item"><span>Español</span></a>
-			<a href="/fr/" class="lang-sheet-item"><span>Français</span></a>
-			<a href="/it/" class="lang-sheet-item"><span>Italiano</span></a>
-			<a href="/pt/" class="lang-sheet-item"><span>Português</span></a>
-			<a href="/vi/" class="lang-sheet-item active"><span>Tiếng Việt</span></a>
-			<a href="/th/" class="lang-sheet-item"><span>ไทย</span></a>
-			<a href="/id/" class="lang-sheet-item"><span>Indonesia</span></a>
-			<a href="/tr/" class="lang-sheet-item"><span>Türkçe</span></a>
-			<a href="/pl/" class="lang-sheet-item"><span>Polski</span></a>
-			<a href="/hi/" class="lang-sheet-item"><span>हिन्दी</span></a>
+		<div class="lang-sheet-search">
+			<i class="bi bi-search"></i>
+			<input type="text" placeholder="Search..." oninput="filterMobileLanguages(this.value)" autocomplete="off">
+		</div>
+		<div class="lang-sheet-body" id="langListMobile">
+			<a href="/" class="lang-sheet-item" data-lang="english"><span class="lang-flag">🇺🇸</span><span class="lang-names"><span class="lang-native">English</span></span></a>
+			<a href="/zh/" class="lang-sheet-item" data-lang="繁體中文 traditional chinese"><span class="lang-flag">🇹🇼</span><span class="lang-names"><span class="lang-native">繁體中文</span><span class="lang-en">Traditional Chinese</span></span></a>
+			<a href="/ja/" class="lang-sheet-item" data-lang="日本語 japanese"><span class="lang-flag">🇯🇵</span><span class="lang-names"><span class="lang-native">日本語</span><span class="lang-en">Japanese</span></span></a>
+			<a href="/ko/" class="lang-sheet-item" data-lang="한국어 korean"><span class="lang-flag">🇰🇷</span><span class="lang-names"><span class="lang-native">한국어</span><span class="lang-en">Korean</span></span></a>
+			<a href="/de/" class="lang-sheet-item" data-lang="deutsch german"><span class="lang-flag">🇩🇪</span><span class="lang-names"><span class="lang-native">Deutsch</span><span class="lang-en">German</span></span></a>
+			<a href="/es/" class="lang-sheet-item" data-lang="español spanish"><span class="lang-flag">🇪🇸</span><span class="lang-names"><span class="lang-native">Español</span><span class="lang-en">Spanish</span></span></a>
+			<a href="/fr/" class="lang-sheet-item" data-lang="français french"><span class="lang-flag">🇫🇷</span><span class="lang-names"><span class="lang-native">Français</span><span class="lang-en">French</span></span></a>
+			<a href="/it/" class="lang-sheet-item" data-lang="italiano italian"><span class="lang-flag">🇮🇹</span><span class="lang-names"><span class="lang-native">Italiano</span><span class="lang-en">Italian</span></span></a>
+			<a href="/pt/" class="lang-sheet-item" data-lang="português portuguese"><span class="lang-flag">🇧🇷</span><span class="lang-names"><span class="lang-native">Português</span><span class="lang-en">Portuguese</span></span></a>
+			<a href="/vi/" class="lang-sheet-item active" data-lang="tiếng việt vietnamese"><span class="lang-flag">🇻🇳</span><span class="lang-names"><span class="lang-native">Tiếng Việt</span><span class="lang-en">Vietnamese</span></span></a>
+			<a href="/th/" class="lang-sheet-item" data-lang="ไทย thai"><span class="lang-flag">🇹🇭</span><span class="lang-names"><span class="lang-native">ไทย</span><span class="lang-en">Thai</span></span></a>
+			<a href="/id/" class="lang-sheet-item" data-lang="indonesia indonesian"><span class="lang-flag">🇮🇩</span><span class="lang-names"><span class="lang-native">Indonesia</span><span class="lang-en">Indonesian</span></span></a>
+			<a href="/tr/" class="lang-sheet-item" data-lang="türkçe turkish"><span class="lang-flag">🇹🇷</span><span class="lang-names"><span class="lang-native">Türkçe</span><span class="lang-en">Turkish</span></span></a>
+			<a href="/pl/" class="lang-sheet-item" data-lang="polski polish"><span class="lang-flag">🇵🇱</span><span class="lang-names"><span class="lang-native">Polski</span><span class="lang-en">Polish</span></span></a>
+			<a href="/hi/" class="lang-sheet-item" data-lang="हिन्दी hindi"><span class="lang-flag">🇮🇳</span><span class="lang-names"><span class="lang-native">हिन्दी</span><span class="lang-en">Hindi</span></span></a>
 		</div>
 	</div>
+	<script>
+	function toggleLangDropdown(e) {
+		e.stopPropagation();
+		var dd = document.getElementById('langDropdownDesktop');
+		var sw = document.getElementById('langSwitcher');
+		var isOpen = sw.classList.contains('open');
+		if (isOpen) { sw.classList.remove('open'); }
+		else { sw.classList.add('open'); dd.querySelector('.lang-search').focus(); }
+	}
+	document.addEventListener('click', function(e) {
+		var sw = document.getElementById('langSwitcher');
+		if (sw && !sw.contains(e.target)) sw.classList.remove('open');
+	});
+	function filterLanguages(q) {
+		q = q.toLowerCase();
+		var items = document.querySelectorAll('#langListDesktop .lang-option');
+		var found = 0;
+		items.forEach(function(el) {
+			var match = el.getAttribute('data-lang').toLowerCase().indexOf(q) !== -1;
+			el.style.display = match ? '' : 'none';
+			if (match) found++;
+		});
+		document.querySelector('.lang-no-result').style.display = found ? 'none' : 'block';
+	}
+	function filterMobileLanguages(q) {
+		q = q.toLowerCase();
+		var items = document.querySelectorAll('#langListMobile .lang-sheet-item');
+		items.forEach(function(el) {
+			var match = el.getAttribute('data-lang').toLowerCase().indexOf(q) !== -1;
+			el.style.display = match ? '' : 'none';
+		});
+	}
+	</script>
 </body>
 </html>

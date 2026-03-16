@@ -25,8 +25,8 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" media="print" onload="this.media='all'">
 	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"></noscript>
 
-	<title>Flyto2 - 엔터프라이즈 워크플로우 플랫폼 | 휴먼인더루프 자동화</title>
-	<meta name="description" content="Flyto2는 UI 기반 자동화와 인간 감독을 결합한 엔터프라이즈 워크플로우 플랫폼입니다. 승인 단계, 검증 체크포인트, 완전한 감사 추적이 포함된 워크플로우를 구축하세요. 100% 오프라인 작동.">
+	<title>Flyto2 - 반복되는 컴퓨터 작업을 간단하게 자동화</title>
+	<meta name="description" content="Flyto2는 프로그래밍 없이 브라우저의 반복 작업을 자동화해요. 한 번만 보여주면 계속 반복해요. 중간에 멈추고 확인도 가능. 인터넷 없이도 써요.">
 
 	<!-- Content Security Policy -->
 	<meta http-equiv="Content-Security-Policy" content="
@@ -63,7 +63,7 @@
 	<link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/" />
 	<link rel="alternate" hreflang="x-default" href="https://flyto2.com/" />
 	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-	<meta name="keywords" content="엔터프라이즈 워크플로우, UI 기반 자동화, 인간 승인 워크플로우, RPA 대안, 휴먼인더루프, 워크플로우 검증, 오프라인 자동화, 비즈니스 프로세스 자동화">
+	<meta name="keywords" content="브라우저 자동화, 코딩 없는 자동화, 반복 작업 자동화, 녹화 재생, 워크플로 자동화, 오프라인 자동화 도구">
 	<meta name="author" content="Flyto2">
 	<meta name="generator" content="Flyto2">
 	<meta name="rating" content="general">
@@ -73,8 +73,8 @@
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="https://flyto2.com/ko/">
-	<meta property="og:title" content="Flyto2 - 엔터프라이즈 워크플로우 플랫폼 | 휴먼인더루프 자동화">
-	<meta property="og:description" content="Flyto2는 UI 기반 자동화와 인간 감독을 결합한 엔터프라이즈 워크플로우 플랫폼입니다. 승인 단계, 검증 체크포인트, 완전한 감사 추적이 포함된 워크플로우를 구축하세요. 100% 오프라인 작동.">
+	<meta property="og:title" content="Flyto2 - 반복되는 컴퓨터 작업을 간단하게 자동화">
+	<meta property="og:description" content="Flyto2는 프로그래밍 없이 브라우저의 반복 작업을 자동화해요. 한 번만 보여주면 계속 반복해요. 중간에 멈추고 확인도 가능. 인터넷 없이도 써요.">
 	<meta property="og:image" content="https://flyto2.com/assets/img/og-image.png">
 	<meta property="og:site_name" content="Flyto2">
 	<meta property="og:locale" content="ko_KR">
@@ -82,10 +82,10 @@
 	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@flyto2">
-	<meta name="twitter:title" content="Flyto2 - 엔터프라이즈 워크플로우 플랫폼 | 휴먼인더루프 자동화">
-	<meta name="twitter:description" content="Flyto2는 UI 기반 자동화와 인간 감독을 결합한 엔터프라이즈 워크플로우 플랫폼입니다. 승인 단계, 검증 체크포인트, 완전한 감사 추적이 포함된 워크플로우를 구축하세요. 100% 오프라인 작동.">
+	<meta name="twitter:title" content="Flyto2 - 반복되는 컴퓨터 작업을 간단하게 자동화">
+	<meta name="twitter:description" content="Flyto2는 프로그래밍 없이 브라우저의 반복 작업을 자동화해요. 한 번만 보여주면 계속 반복해요. 중간에 멈추고 확인도 가능. 인터넷 없이도 써요.">
 	<meta name="twitter:image" content="https://flyto2.com/assets/img/og-image.png">
-	<meta name="twitter:image:alt" content="Flyto2 - Enterprise Workflow Platform">
+	<meta name="twitter:image:alt" content="Flyto2 - Automate Repetitive Tasks">
 
 	<link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="../assets/img/icon.png" type="image/png" sizes="32x32">
@@ -487,28 +487,35 @@
 							</ul>
 						</nav>
 						<!-- Language Switcher -->
-						<div class="lang-switcher">
-							<div class="lang-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">
+						<div class="lang-switcher" id="langSwitcher">
+							<div class="lang-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" onclick="toggleLangDropdown(event)">
 								<i class="bi bi-globe"></i>
 								<span class="current-lang">KO</span>
 								<i class="bi bi-chevron-down"></i>
 							</div>
-							<div class="lang-dropdown">
-								<a href="/" class="lang-option">English</a>
-								<a href="/zh/" class="lang-option">繁體中文</a>
-								<a href="/ja/" class="lang-option">日本語</a>
-								<a href="/ko/" class="lang-option active">한국어</a>
-								<a href="/de/" class="lang-option">Deutsch</a>
-								<a href="/es/" class="lang-option">Español</a>
-								<a href="/fr/" class="lang-option">Français</a>
-								<a href="/it/" class="lang-option">Italiano</a>
-								<a href="/pt/" class="lang-option">Português</a>
-								<a href="/vi/" class="lang-option">Tiếng Việt</a>
-								<a href="/th/" class="lang-option">ไทย</a>
-								<a href="/id/" class="lang-option">Indonesia</a>
-								<a href="/tr/" class="lang-option">Türkçe</a>
-								<a href="/pl/" class="lang-option">Polski</a>
-								<a href="/hi/" class="lang-option">हिन्दी</a>
+							<div class="lang-dropdown" id="langDropdownDesktop">
+								<div class="lang-search-wrap">
+									<i class="bi bi-search"></i>
+									<input type="text" class="lang-search" placeholder="Search..." oninput="filterLanguages(this.value)" autocomplete="off">
+								</div>
+								<div class="lang-list" id="langListDesktop">
+									<a href="/" class="lang-option" data-lang="english"><span class="lang-flag">🇺🇸</span><span class="lang-names"><span class="lang-native">English</span></span></a>
+									<a href="/zh/" class="lang-option" data-lang="繁體中文 traditional chinese"><span class="lang-flag">🇹🇼</span><span class="lang-names"><span class="lang-native">繁體中文</span><span class="lang-en">Traditional Chinese</span></span></a>
+									<a href="/ja/" class="lang-option" data-lang="日本語 japanese"><span class="lang-flag">🇯🇵</span><span class="lang-names"><span class="lang-native">日本語</span><span class="lang-en">Japanese</span></span></a>
+									<a href="/ko/" class="lang-option active" data-lang="한국어 korean"><span class="lang-flag">🇰🇷</span><span class="lang-names"><span class="lang-native">한국어</span><span class="lang-en">Korean</span></span></a>
+									<a href="/de/" class="lang-option" data-lang="deutsch german"><span class="lang-flag">🇩🇪</span><span class="lang-names"><span class="lang-native">Deutsch</span><span class="lang-en">German</span></span></a>
+									<a href="/es/" class="lang-option" data-lang="español spanish"><span class="lang-flag">🇪🇸</span><span class="lang-names"><span class="lang-native">Español</span><span class="lang-en">Spanish</span></span></a>
+									<a href="/fr/" class="lang-option" data-lang="français french"><span class="lang-flag">🇫🇷</span><span class="lang-names"><span class="lang-native">Français</span><span class="lang-en">French</span></span></a>
+									<a href="/it/" class="lang-option" data-lang="italiano italian"><span class="lang-flag">🇮🇹</span><span class="lang-names"><span class="lang-native">Italiano</span><span class="lang-en">Italian</span></span></a>
+									<a href="/pt/" class="lang-option" data-lang="português portuguese"><span class="lang-flag">🇧🇷</span><span class="lang-names"><span class="lang-native">Português</span><span class="lang-en">Portuguese</span></span></a>
+									<a href="/vi/" class="lang-option" data-lang="tiếng việt vietnamese"><span class="lang-flag">🇻🇳</span><span class="lang-names"><span class="lang-native">Tiếng Việt</span><span class="lang-en">Vietnamese</span></span></a>
+									<a href="/th/" class="lang-option" data-lang="ไทย thai"><span class="lang-flag">🇹🇭</span><span class="lang-names"><span class="lang-native">ไทย</span><span class="lang-en">Thai</span></span></a>
+									<a href="/id/" class="lang-option" data-lang="indonesia indonesian"><span class="lang-flag">🇮🇩</span><span class="lang-names"><span class="lang-native">Indonesia</span><span class="lang-en">Indonesian</span></span></a>
+									<a href="/tr/" class="lang-option" data-lang="türkçe turkish"><span class="lang-flag">🇹🇷</span><span class="lang-names"><span class="lang-native">Türkçe</span><span class="lang-en">Turkish</span></span></a>
+									<a href="/pl/" class="lang-option" data-lang="polski polish"><span class="lang-flag">🇵🇱</span><span class="lang-names"><span class="lang-native">Polski</span><span class="lang-en">Polish</span></span></a>
+									<a href="/hi/" class="lang-option" data-lang="हिन्दी hindi"><span class="lang-flag">🇮🇳</span><span class="lang-names"><span class="lang-native">हिन्दी</span><span class="lang-en">Hindi</span></span></a>
+								</div>
+								<div class="lang-no-result" style="display:none;">No languages found</div>
 							</div>
 						</div>
 						<!-- Auth -->
@@ -609,9 +616,9 @@
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="hero-caption pt-150 pb-200">
 						<h1 class="wow fadeInUp" data-wow-delay="0.1s">
-							<span class="gradient-text-animated" data-i18n="landing.index.hero.titleHighlight">자동화</span><br><span data-i18n="landing.index.hero.titleEnd">보여준 것을 수행하는</span>
+							<span class="gradient-text-animated" data-i18n="landing.index.hero.titleHighlight">보여준 대로</span><br><span data-i18n="landing.index.hero.titleEnd">그대로 해요</span>
 						</h1>
-						<p class="wow fadeInUp" data-wow-delay="0.2s" data-i18n="landing.index.hero.description">Flyto2는 사람처럼 컴퓨터를 조작하는 자동화 도구입니다. 브라우저 열기, 버튼 클릭, 폼 작성, 파일 업로드. 한 번만 하면 Flyto2가 영원히 반복합니다.</p>
+						<p class="wow fadeInUp" data-wow-delay="0.2s" data-i18n="landing.index.hero.description">Flyto2는 사람처럼 컴퓨터를 조작하는 자동화 도구예요. 브라우저를 열고, 버튼을 누르고, 양식을 채우고, 파일을 올리고. 한 번만 보여주면 Flyto2가 계속 반복해요.</p>
 						<a class="button-1 btn-glow wow fadeInUp" data-wow-delay="0.3s" href="pricing.html" style="margin-top: 20px;">
 							<i class="fas fa-rocket" style="margin-right: 8px;"></i> <span data-i18n="landing.common.cta.getStartedFree">무료로 시작하기</span>
 						</a>
@@ -639,8 +646,8 @@
 								<div class="title">
 									<div class="text-gradient" style="font-size: 2rem;"><i class="fas fa-mouse-pointer hero-icon-float"></i></div>
 								</div>
-								<h3 data-i18n="landing.index.counter.recordOnce">한 번 녹화</h3>
-								<p class="text-sm" data-i18n="landing.index.counter.recordOnceDesc">Flyto2에게 작업 방식을 보여주세요. 클릭과 키 입력을 관찰하며 학습합니다.</p>
+								<h3 data-i18n="landing.index.counter.recordOnce">한 번만 보여주세요</h3>
+								<p class="text-sm" data-i18n="landing.index.counter.recordOnceDesc">Flyto2에게 작업하는 모습을 보여주세요. 클릭과 입력을 보고 배워요.</p>
 								<hr class="vertical dark">
 							</div>
 						</div>
@@ -650,8 +657,8 @@
 								<div class="title">
 									<div class="text-gradient" style="font-size: 2rem;"><i class="fas fa-redo icon-spin-slow"></i></div>
 								</div>
-								<h3 data-i18n="landing.index.counter.replayForever">영원히 재생</h3>
-								<p class="text-sm" data-i18n="landing.index.counter.replayForeverDesc">다른 데이터로 다시 실행하세요. 수백 개의 항목을 일괄 처리하세요.</p>
+								<h3 data-i18n="landing.index.counter.replayForever">나머지는 알아서 해요</h3>
+								<p class="text-sm" data-i18n="landing.index.counter.replayForeverDesc">다른 데이터로 몇 번이든 반복할 수 있어요. 수백 건도 한꺼번에 처리해요.</p>
 								<hr class="vertical dark">
 							</div>
 						</div>
@@ -661,8 +668,8 @@
 								<div class="title">
 									<div class="text-gradient" style="font-size: 2rem;"><i class="fas fa-shield-alt animate-pulse-glow" style="border-radius: 50%;"></i></div>
 								</div>
-								<h3 data-i18n="landing.index.counter.stayInControl">통제권 유지</h3>
-								<p class="text-sm" data-i18n="landing.index.counter.stayInControlDesc">언제든지 일시 정지하고, 확인하고, 재개하세요. 자동화 폭주를 걱정할 필요가 없습니다.</p>
+								<h3 data-i18n="landing.index.counter.stayInControl">항상 내가 주인공</h3>
+								<p class="text-sm" data-i18n="landing.index.counter.stayInControlDesc">중간에 멈추거나, 확인하거나, 다시 시작할 수 있어요. 혼자 막 돌아가는 걱정은 없어요.</p>
 							</div>
 						</div>
 					</div>
@@ -678,8 +685,8 @@
 			<div class="row mb-40">
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="section-headding wow fadeInUp">
-						<h2><span data-i18n="landing.index.video.titleStart">See How</span> <span class="gradient-text-animated" data-i18n="landing.index.video.titleHighlight">Simple</span> <span data-i18n="landing.index.video.titleEnd">It Is</span></h2>
-						<p style="font-size: 18px; margin-top: 15px;" data-i18n="landing.index.video.subtitle">Watch a quick demo — no technical knowledge needed to follow along.</p>
+						<h2><span data-i18n="landing.index.video.titleStart">이렇게</span> <span class="gradient-text-animated" data-i18n="landing.index.video.titleHighlight">간단</span> <span data-i18n="landing.index.video.titleEnd">해요</span></h2>
+						<p style="font-size: 18px; margin-top: 15px;" data-i18n="landing.index.video.subtitle">데모 영상을 보세요. 전문 지식 없이도 이해할 수 있어요.</p>
 					</div>
 				</div>
 			</div>
@@ -699,7 +706,7 @@
 					<p class="text-center" style="margin-top: 20px; color: #6b7280;">
 						<a href="https://www.youtube.com/@Flyto2" target="_blank" rel="noopener" style="color: #7C3AED; text-decoration: none; font-weight: 600;">
 							<i class="fab fa-youtube" style="margin-right: 6px;"></i>
-							<span data-i18n="landing.index.video.moreVideos">Watch more on our YouTube channel</span>
+							<span data-i18n="landing.index.video.moreVideos">YouTube 채널에서 더 보기</span>
 						</a>
 					</p>
 				</div>
@@ -714,8 +721,8 @@
 			<div class="row mb-40">
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="section-headding wow fadeInUp">
-						<h2><span data-i18n="landing.index.why.title">왜</span> <span class="gradient-text-animated">Flyto2</span>?</h2>
-						<p data-i18n="landing.index.why.subtitle">많은 작업이 어렵지 않습니다. 단지 지루할 뿐입니다.</p>
+						<h2><span data-i18n="landing.index.why.title">왜 필요할까요?</span> <span class="gradient-text-animated">Flyto2</span>?</h2>
+						<p data-i18n="landing.index.why.subtitle">많은 작업은 어렵지 않아요. 그냥 귀찮을 뿐이에요.</p>
 					</div>
 				</div>
 			</div>
@@ -727,8 +734,8 @@
 							<i class="fas fa-copy feature-icon-animated" style="font-size: 40px; color: #7C3AED;"></i>
 						</div>
 						<div class="content">
-							<h3 class="text-gradient" data-i18n="landing.index.why.copyPasteTitle">복사-붙여넣기 지옥</h3>
-							<p data-i18n="landing.index.why.copyPasteDesc">대시보드에 로그인하고, 데이터를 시스템 간에 복사하는 일을 매일 반복합니다.</p>
+							<h3 class="text-gradient" data-i18n="landing.index.why.copyPasteTitle">복사·붙여넣기 지옥</h3>
+							<p data-i18n="landing.index.why.copyPasteDesc">관리 화면에 로그인해서, 이 시스템에서 저 시스템으로 데이터를 복사. 매일매일.</p>
 						</div>
 					</div>
 				</div>
@@ -739,8 +746,8 @@
 							<i class="fas fa-ban feature-icon-animated" style="font-size: 40px; color: #7C3AED;"></i>
 						</div>
 						<div class="content">
-							<h3 class="text-gradient" data-i18n="landing.index.why.noBatchTitle">배치 옵션 없음</h3>
-							<p data-i18n="landing.index.why.noBatchDesc">ERP 또는 관리 패널에서 한 번에 하나의 항목만 처리할 수 있습니다. 대량 작업이 없습니다.</p>
+							<h3 class="text-gradient" data-i18n="landing.index.why.noBatchTitle">하나씩만 가능</h3>
+							<p data-i18n="landing.index.why.noBatchDesc">관리 화면에서 한 번에 하나씩만 처리할 수 있어요. 묶어서 처리하는 방법이 없어요.</p>
 						</div>
 					</div>
 				</div>
@@ -751,15 +758,15 @@
 							<i class="fas fa-plug feature-icon-animated" style="font-size: 40px; color: #7C3AED;"></i>
 						</div>
 						<div class="content">
-							<h3 class="text-gradient" data-i18n="landing.index.why.noApiTitle">사용 가능한 API 없음</h3>
-							<p data-i18n="landing.index.why.noApiDesc">시스템에 API가 없습니다. 수동으로 브라우저를 통해 클릭하는 것이 유일한 옵션입니다.</p>
+							<h3 class="text-gradient" data-i18n="landing.index.why.noApiTitle">지름길이 없을 때</h3>
+							<p data-i18n="landing.index.why.noApiDesc">시스템에 지름길이 없어요. 브라우저에서 직접 클릭하는 수밖에 없어요.</p>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="row mt-30">
 				<div class="col-lg-8 offset-lg-2 text-center wow fadeInUp" data-wow-delay="0.4s">
-					<p style="font-size: 18px;" data-i18n="landing.index.why.bottomText">프로세스를 알고 계십니다. 사람의 노력이 필요하지 않다는 것을 알고 계십니다. Flyto2는 바로 이를 위해 만들어졌습니다.</p>
+					<p style="font-size: 18px;" data-i18n="landing.index.why.bottomText">방법은 알고 있어요. 사람이 굳이 안 해도 되는 일이라는 것도요. Flyto2는 바로 이런 일을 위해 만들어졌어요.</p>
 				</div>
 			</div>
 		</div>
@@ -772,8 +779,8 @@
 			<div class="row mb-50">
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="section-headding wow fadeInUp">
-						<h2><span data-i18n="landing.index.different.titleStart">Flyto2가 특별한 이유</span> <span class="gradient-text-animated" data-i18n="landing.index.different.titleHighlight">다릅니다</span>?</h2>
-						<p style="font-size: 18px; margin-top: 15px;" data-i18n="landing.index.different.subtitle">대부분의 자동화 도구는 실행 중이거나 완료된 두 가지 상태만 있습니다.</p>
+						<h2><span data-i18n="landing.index.different.titleStart">Flyto2가 다른 도구와</span> <span class="gradient-text-animated" data-i18n="landing.index.different.titleHighlight">다른</span>?</h2>
+						<p style="font-size: 18px; margin-top: 15px;" data-i18n="landing.index.different.subtitle">대부분의 자동화 도구는 "안 돌아가는 중"이거나 "다 끝남" 두 가지뿐이에요.</p>
 					</div>
 				</div>
 			</div>
@@ -785,7 +792,7 @@
 						<div style="position: absolute; bottom: -30px; left: -30px; width: 100px; height: 100px; background: rgba(124, 58, 237, 0.15); border-radius: 50%;"></div>
 						<p style="font-size: 24px; color: #fff; font-weight: 600; margin: 0; position: relative; z-index: 2;">
 							<i class="fas fa-quote-left" style="color: #a78bfa; margin-right: 15px; opacity: 0.6;"></i>
-							<span data-i18n="landing.index.different.quoteStart">전, 중, 오류 발생 시 언제든지 — 항상</span> <span style="color: #a78bfa;" data-i18n="landing.index.different.quoteHighlight">일시 중지하고 확인</span>.
+							<span data-i18n="landing.index.different.quoteStart">시작 전에도, 진행 중에도, 오류가 나도 — 언제든</span> <span style="color: #a78bfa;" data-i18n="landing.index.different.quoteHighlight">멈추고 확인</span>.
 							<i class="fas fa-quote-right" style="color: #a78bfa; margin-left: 15px; opacity: 0.6;"></i>
 						</p>
 					</div>
@@ -798,8 +805,8 @@
 						<div style="width: 60px; height: 60px; background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
 							<i class="fas fa-play" style="color: #fff; font-size: 24px;"></i>
 						</div>
-						<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 15px; color: #1e0a3c;" data-i18n="landing.index.different.step1Title">먼저 1개 실행</h3>
-						<p style="color: #6b7280; line-height: 1.7; margin: 0;" data-i18n="landing.index.different.step1Desc">더 처리하기 전에 올바른지 확인하세요. 안전하게 테스트하세요.</p>
+						<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 15px; color: #1e0a3c;" data-i18n="landing.index.different.step1Title">먼저 1건만 해보기</h3>
+						<p style="color: #6b7280; line-height: 1.7; margin: 0;" data-i18n="landing.index.different.step1Desc">먼저 1건만 해보고, 맞는지 확인해요. 안전하게 테스트할 수 있어요.</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 mb-30">
@@ -807,8 +814,8 @@
 						<div style="width: 60px; height: 60px; background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
 							<i class="fas fa-layer-group" style="color: #fff; font-size: 24px;"></i>
 						</div>
-						<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 15px; color: #1e0a3c;" data-i18n="landing.index.different.step2Title">그 다음 배치 실행</h3>
-						<p style="color: #6b7280; line-height: 1.7; margin: 0;" data-i18n="landing.index.different.step2Desc">더 큰 배치로 검증하세요. 엣지 케이스를 조기에 잡아내세요.</p>
+						<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 15px; color: #1e0a3c;" data-i18n="landing.index.different.step2Title">그다음 여러 건 해보기</h3>
+						<p style="color: #6b7280; line-height: 1.7; margin: 0;" data-i18n="landing.index.different.step2Desc">조금 더 많이 해보세요. 문제가 있으면 일찍 발견할 수 있어요.</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 mb-30">
@@ -816,8 +823,8 @@
 						<div style="width: 60px; height: 60px; background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
 							<i class="fas fa-rocket" style="color: #fff; font-size: 24px;"></i>
 						</div>
-						<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 15px; color: #1e0a3c;" data-i18n="landing.index.different.step3Title">모두 실행</h3>
-						<p style="color: #6b7280; line-height: 1.7; margin: 0;" data-i18n="landing.index.different.step3Desc">확인되면 전체 배치를 자신 있게 처리하세요.</p>
+						<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 15px; color: #1e0a3c;" data-i18n="landing.index.different.step3Title">전부 실행하기</h3>
+						<p style="color: #6b7280; line-height: 1.7; margin: 0;" data-i18n="landing.index.different.step3Desc">괜찮다고 확신이 들면, 전부 처리하세요.</p>
 					</div>
 				</div>
 			</div>
@@ -825,31 +832,31 @@
 			<div class="row">
 				<div class="col-lg-10 offset-lg-1">
 					<div class="wow fadeInUp" data-wow-delay="0.2s" style="background: linear-gradient(145deg, #fff 0%, #f8f9ff 100%); border-radius: 20px; padding: 40px; border: 1px solid rgba(124, 58, 237, 0.1);">
-						<h3 style="text-align: center; font-size: 22px; font-weight: 700; margin-bottom: 30px; color: #1e0a3c;" data-i18n="landing.index.different.errorTitle">문제가 발생하면:</h3>
+						<h3 style="text-align: center; font-size: 22px; font-weight: 700; margin-bottom: 30px; color: #1e0a3c;" data-i18n="landing.index.different.errorTitle">문제가 생기면:</h3>
 						<div class="row">
 							<div class="col-md-4 text-center mb-20">
 								<div style="width: 70px; height: 70px; background: linear-gradient(135deg, #ef4444 0%, #f87171 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
 									<i class="fas fa-stop" style="color: #fff; font-size: 28px;"></i>
 								</div>
-								<h4 style="font-weight: 700; color: #1e0a3c;" data-i18n="landing.index.different.errorStop">즉시 중지</h4>
-								<p style="color: #6b7280; font-size: 14px;" data-i18n="landing.index.different.errorStopDesc">즉시 실행 중지</p>
+								<h4 style="font-weight: 700; color: #1e0a3c;" data-i18n="landing.index.different.errorStop">바로 멈추기</h4>
+								<p style="color: #6b7280; font-size: 14px;" data-i18n="landing.index.different.errorStopDesc">즉시 실행을 중단해요</p>
 							</div>
 							<div class="col-md-4 text-center mb-20">
 								<div style="width: 70px; height: 70px; background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
 									<i class="fas fa-undo-alt" style="color: #fff; font-size: 28px;"></i>
 								</div>
 								<h4 style="font-weight: 700; color: #1e0a3c;" data-i18n="landing.index.different.errorRollback">되돌리기</h4>
-								<p style="color: #6b7280; font-size: 14px;" data-i18n="landing.index.different.errorRollbackDesc">필요시 되돌리기</p>
+								<p style="color: #6b7280; font-size: 14px;" data-i18n="landing.index.different.errorRollbackDesc">필요하면 이전 상태로 돌아갈 수 있어요</p>
 							</div>
 							<div class="col-md-4 text-center mb-20">
 								<div style="width: 70px; height: 70px; background: linear-gradient(135deg, #10b981 0%, #34d399 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
 									<i class="fas fa-play" style="color: #fff; font-size: 28px;"></i>
 								</div>
-								<h4 style="font-weight: 700; color: #1e0a3c;" data-i18n="landing.index.different.errorResume">다시 시작</h4>
-								<p style="color: #6b7280; font-size: 14px;" data-i18n="landing.index.different.errorResumeDesc">중단된 곳에서 계속하기</p>
+								<h4 style="font-weight: 700; color: #1e0a3c;" data-i18n="landing.index.different.errorResume">이어서 계속</h4>
+								<p style="color: #6b7280; font-size: 14px;" data-i18n="landing.index.different.errorResumeDesc">멈춘 곳에서 이어서 할 수 있어요</p>
 							</div>
 						</div>
-						<p style="text-align: center; margin-top: 20px; font-size: 18px; font-weight: 600; color: #7c3aed;" data-i18n="landing.index.different.errorBottom">자동화는 "모 아니면 도"가 아닙니다.</p>
+						<p style="text-align: center; margin-top: 20px; font-size: 18px; font-weight: 600; color: #7c3aed;" data-i18n="landing.index.different.errorBottom">자동화가 꼭 "전부 아니면 아무것도 아닌" 것일 필요는 없어요.</p>
 					</div>
 				</div>
 			</div>
@@ -863,8 +870,8 @@
 			<div class="row mb-50">
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="section-headding wow fadeInUp">
-						<h2><span data-i18n="landing.index.noCoding.titleStart">코딩 없음</span> <span class="gradient-text-animated" data-i18n="landing.index.noCoding.titleHighlight">코딩</span> <span data-i18n="landing.index.noCoding.titleEnd">필요</span></h2>
-						<p style="font-size: 18px; margin-top: 15px;" data-i18n="landing.index.noCoding.subtitle">브라우저를 사용할 수 있다면 Flyto2도 사용할 수 있습니다.</p>
+						<h2><span data-i18n="landing.index.noCoding.titleStart">No</span> <span class="gradient-text-animated" data-i18n="landing.index.noCoding.titleHighlight">프로그래밍</span> <span data-i18n="landing.index.noCoding.titleEnd">필요 없어요</span></h2>
+						<p style="font-size: 18px; margin-top: 15px;" data-i18n="landing.index.noCoding.subtitle">브라우저를 쓸 줄 알면 Flyto2도 쓸 수 있어요.</p>
 					</div>
 				</div>
 			</div>
@@ -880,7 +887,7 @@
 									<div style="position: absolute; top: -5px; right: -5px; width: 35px; height: 35px; background: #1e0a3c; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; color: #fff; font-size: 16px; border: 3px solid #fff;">1</div>
 								</div>
 								<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: #1e0a3c;" data-i18n="landing.index.noCoding.step1Title">브라우저 열기</h3>
-								<p style="color: #6b7280; font-size: 15px; line-height: 1.6;" data-i18n="landing.index.noCoding.step1Desc">Flyto2를 시작하고 워크플로를 기록하세요</p>
+								<p style="color: #6b7280; font-size: 15px; line-height: 1.6;" data-i18n="landing.index.noCoding.step1Desc">Flyto2를 켜고 녹화를 시작해요</p>
 							</div>
 						</div>
 						<!-- Step 2 -->
@@ -890,8 +897,8 @@
 									<i class="fas fa-mouse-pointer" style="font-size: 40px; color: #fff;"></i>
 									<div style="position: absolute; top: -5px; right: -5px; width: 35px; height: 35px; background: #1e0a3c; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; color: #fff; font-size: 16px; border: 3px solid #fff;">2</div>
 								</div>
-								<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: #1e0a3c;" data-i18n="landing.index.noCoding.step2Title">작업 수행</h3>
-								<p style="color: #6b7280; font-size: 15px; line-height: 1.6;" data-i18n="landing.index.noCoding.step2Desc">평소처럼 작업하세요 - 클릭, 입력, 탐색</p>
+								<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: #1e0a3c;" data-i18n="landing.index.noCoding.step2Title">평소처럼 작업하기</h3>
+								<p style="color: #6b7280; font-size: 15px; line-height: 1.6;" data-i18n="landing.index.noCoding.step2Desc">평소처럼 일하세요 — 클릭, 입력, 페이지 이동 다 돼요</p>
 							</div>
 						</div>
 						<!-- Step 3 -->
@@ -901,8 +908,8 @@
 									<i class="fas fa-save" style="font-size: 40px; color: #fff;"></i>
 									<div style="position: absolute; top: -5px; right: -5px; width: 35px; height: 35px; background: #1e0a3c; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; color: #fff; font-size: 16px; border: 3px solid #fff;">3</div>
 								</div>
-								<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: #1e0a3c;" data-i18n="landing.index.noCoding.step3Title">저장</h3>
-								<p style="color: #6b7280; font-size: 15px; line-height: 1.6;" data-i18n="landing.index.noCoding.step3Desc">Flyto2가 모든 단계를 캡처하고 기억합니다</p>
+								<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: #1e0a3c;" data-i18n="landing.index.noCoding.step3Title">저장하기</h3>
+								<p style="color: #6b7280; font-size: 15px; line-height: 1.6;" data-i18n="landing.index.noCoding.step3Desc">Flyto2가 모든 단계를 기억해요</p>
 							</div>
 						</div>
 						<!-- Step 4 -->
@@ -912,8 +919,8 @@
 									<i class="fas fa-sync-alt" style="font-size: 40px; color: #fff;"></i>
 									<div style="position: absolute; top: -5px; right: -5px; width: 35px; height: 35px; background: #1e0a3c; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; color: #fff; font-size: 16px; border: 3px solid #fff;">4</div>
 								</div>
-								<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: #1e0a3c;" data-i18n="landing.index.noCoding.step4Title">언제든지 재실행</h3>
-								<p style="color: #6b7280; font-size: 15px; line-height: 1.6;" data-i18n="landing.index.noCoding.step4Desc">다시 실행하거나, 배치 처리하거나, 예약하세요</p>
+								<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: #1e0a3c;" data-i18n="landing.index.noCoding.step4Title">언제든 다시 실행</h3>
+								<p style="color: #6b7280; font-size: 15px; line-height: 1.6;" data-i18n="landing.index.noCoding.step4Desc">다시 실행하거나, 묶어서 처리하거나, 예약 실행도 돼요</p>
 							</div>
 						</div>
 					</div>
@@ -925,7 +932,7 @@
 					<div class="wow fadeInUp" data-wow-delay="0.5s" style="background: linear-gradient(135deg, #1e0a3c 0%, #4c1d95 100%); border-radius: 20px; padding: 35px 40px; text-align: center;">
 						<p style="font-size: 20px; color: #fff; margin: 0; font-weight: 600;">
 							<i class="fas fa-code" style="margin-right: 12px; opacity: 0.5;"></i>
-							<span data-i18n="landing.index.noCoding.bottomStart">코드를 알 필요 없습니다. 당신이 알아야 할 것은</span> <span style="color: #a78bfa;" data-i18n="landing.index.noCoding.bottomHighlight">당신의 일</span>.
+							<span data-i18n="landing.index.noCoding.bottomStart">프로그래밍을 몰라도 돼요. 필요한 건</span> <span style="color: #a78bfa;" data-i18n="landing.index.noCoding.bottomHighlight">내 업무</span>.
 						</p>
 					</div>
 				</div>
@@ -940,8 +947,8 @@
 			<div class="row mb-40">
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="section-headding wow fadeInUp">
-						<h2><span data-i18n="landing.index.safety.titleStart">이런 분들을 위해 만들어졌습니다</span> <span class="gradient-text-animated" data-i18n="landing.index.safety.titleHighlight">걱정</span> <span data-i18n="landing.index.safety.titleEnd">실수에 대해</span></h2>
-						<p data-i18n="landing.index.safety.subtitle">Flyto2는 주의가 필요한 사람들을 위해 설계되었습니다.</p>
+						<h2><span data-i18n="landing.index.safety.titleStart">Built for People Who</span> <span class="gradient-text-animated" data-i18n="landing.index.safety.titleHighlight">실수가 걱정되는</span> <span data-i18n="landing.index.safety.titleEnd">분들을 위해</span></h2>
+						<p data-i18n="landing.index.safety.subtitle">Flyto2는 실수가 걱정되는 분들을 위해 만들었어요.</p>
 					</div>
 				</div>
 			</div>
@@ -953,7 +960,7 @@
 						</div>
 						<div class="content">
 							<h3 data-i18n="landing.index.safety.verifyTitle">단계별 확인</h3>
-							<p data-i18n="landing.index.safety.verifyDesc">진행하기 전에 각 단계에서 정확히 무슨 일이 일어나는지 확인하세요.</p>
+							<p data-i18n="landing.index.safety.verifyDesc">다음 단계로 넘어가기 전에 각 단계에서 무슨 일이 있었는지 확인할 수 있어요.</p>
 						</div>
 					</div>
 				</div>
@@ -963,8 +970,8 @@
 							<i class="fas fa-flask feature-icon-animated" style="font-size: 30px; color: #7C3AED;"></i>
 						</div>
 						<div class="content">
-							<h3 data-i18n="landing.index.safety.trialTitle">시험 모드</h3>
-							<p data-i18n="landing.index.safety.trialDesc">전체 배치를 실행하기 전에 몇 가지 항목으로 먼저 테스트하세요.</p>
+							<h3 data-i18n="landing.index.safety.trialTitle">테스트 모드</h3>
+							<p data-i18n="landing.index.safety.trialDesc">전체를 실행하기 전에 먼저 몇 건만 테스트해볼 수 있어요.</p>
 						</div>
 					</div>
 				</div>
@@ -974,8 +981,8 @@
 							<i class="fas fa-history icon-spin-slow" style="font-size: 30px; color: #7C3AED;"></i>
 						</div>
 						<div class="content">
-							<h3 data-i18n="landing.index.safety.rollbackTitle">되돌리기 및 다시 시작</h3>
-							<p data-i18n="landing.index.safety.rollbackDesc">오류가 발생해도 처음부터 다시 시작할 필요가 없습니다. 되돌아가서 계속하세요.</p>
+							<h3 data-i18n="landing.index.safety.rollbackTitle">돌아가서 이어하기</h3>
+							<p data-i18n="landing.index.safety.rollbackDesc">오류가 나도 처음부터 다시 할 필요 없어요. 돌아가서 이어할 수 있어요.</p>
 						</div>
 					</div>
 				</div>
@@ -985,8 +992,8 @@
 							<i class="fas fa-camera feature-icon-animated" style="font-size: 30px; color: #7C3AED;"></i>
 						</div>
 						<div class="content">
-							<h3 data-i18n="landing.index.safety.auditTitle">전체 감사 추적</h3>
-							<p data-i18n="landing.index.safety.auditDesc">모든 것에 대한 스크린샷과 로그. 언제, 누가 무엇을 했는지 알 수 있습니다.</p>
+							<h3 data-i18n="landing.index.safety.auditTitle">모든 단계 기록</h3>
+							<p data-i18n="landing.index.safety.auditDesc">모든 단계의 화면 캡처와 기록이 남아요. 언제, 무엇이 일어났는지 확인할 수 있어요.</p>
 						</div>
 					</div>
 				</div>
@@ -1000,8 +1007,8 @@
 		<div class="container" style="position: relative; z-index: 2;">
 			<div class="row">
 				<div class="col-lg-6 wow fadeInLeft">
-					<h3 style="color: rgba(255,255,255,0.8); margin-bottom: 10px;" data-i18n="landing.index.cta.notZapier">또 다른 Zapier가 아닙니다</h3>
-					<h2 style="color: #fff; font-size: 32px;"><span data-i18n="landing.index.cta.noApiStart">API가 없고 브라우저만 있을 때 —</span> <span class="gradient-text-animated">Flyto2</span> <span data-i18n="landing.index.cta.noApiEnd">작동합니다.</span></h2>
+					<h3 style="color: rgba(255,255,255,0.8); margin-bottom: 10px;" data-i18n="landing.index.cta.notZapier">브라우저 작업을 위한 자동화</h3>
+					<h2 style="color: #fff; font-size: 32px;"><span data-i18n="landing.index.cta.noApiStart">지름길이 없고 브라우저에서 직접 해야 할 때 —</span> <span class="gradient-text-animated">Flyto2</span> <span data-i18n="landing.index.cta.noApiEnd">Flyto2가 해결해요.</span></h2>
 				</div>
 				<div class="col-lg-6 align-self-center text-lg-end wow fadeInRight">
 					<a class="button-2 btn-glow" href="pricing.html" style="margin-top: 20px;" data-i18n="landing.common.cta.viewPricing">가격 보기</a>
@@ -1017,7 +1024,7 @@
 			<div class="row mb-40">
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="section-headding wow fadeInUp">
-						<h2><span data-i18n="landing.index.whoFor.titleStart">누구를 위한</span> <span class="gradient-text-animated">Flyto2</span> <span data-i18n="landing.index.whoFor.titleEnd">위한?</span></h2>
+						<h2><span data-i18n="landing.index.whoFor.titleStart">누구를</span> <span class="gradient-text-animated">Flyto2</span> <span data-i18n="landing.index.whoFor.titleEnd">위한 건가요?</span></h2>
 					</div>
 				</div>
 			</div>
@@ -1028,8 +1035,8 @@
 							<i class="fas fa-user-tie feature-icon-animated" style="font-size: 40px; color: #7C3AED;"></i>
 						</div>
 						<div class="content">
-							<h3 class="text-gradient" data-i18n="landing.index.whoFor.adminTitle">행정 직원</h3>
-							<p data-i18n="landing.index.whoFor.adminDesc">데이터 입력, 백엔드 운영, 보고서 생성</p>
+							<h3 class="text-gradient" data-i18n="landing.index.whoFor.adminTitle">사무직</h3>
+							<p data-i18n="landing.index.whoFor.adminDesc">데이터 입력, 사무 업무, 보고서 작성</p>
 						</div>
 					</div>
 				</div>
@@ -1039,8 +1046,8 @@
 							<i class="fas fa-cogs icon-spin-slow" style="font-size: 40px; color: #7C3AED;"></i>
 						</div>
 						<div class="content">
-							<h3 class="text-gradient" data-i18n="landing.index.whoFor.opsTitle">운영 팀</h3>
-							<p data-i18n="landing.index.whoFor.opsDesc">ERP, 주문, 송장, 재고 관리</p>
+							<h3 class="text-gradient" data-i18n="landing.index.whoFor.opsTitle">운영팀</h3>
+							<p data-i18n="landing.index.whoFor.opsDesc">주문 처리, 청구서, 재고 관리, 일상 업무</p>
 						</div>
 					</div>
 				</div>
@@ -1050,8 +1057,8 @@
 							<i class="fas fa-bug feature-icon-animated" style="font-size: 40px; color: #7C3AED;"></i>
 						</div>
 						<div class="content">
-							<h3 class="text-gradient" data-i18n="landing.index.whoFor.qaTitle">QA 및 테스트</h3>
-							<p data-i18n="landing.index.whoFor.qaDesc">반복적인 테스트 흐름, 회귀 테스트</p>
+							<h3 class="text-gradient" data-i18n="landing.index.whoFor.qaTitle">품질 관리·테스트</h3>
+							<p data-i18n="landing.index.whoFor.qaDesc">같은 걸 반복해서 확인하는 테스트 작업</p>
 						</div>
 					</div>
 				</div>
@@ -1061,8 +1068,8 @@
 							<i class="fas fa-rocket hero-icon-float" style="font-size: 40px; color: #7C3AED;"></i>
 						</div>
 						<div class="content">
-							<h3 class="text-gradient" data-i18n="landing.index.whoFor.startupTitle">소규모 팀 및 스타트업</h3>
-							<p data-i18n="landing.index.whoFor.startupDesc">엔지니어를 고용하지 않고 자동화</p>
+							<h3 class="text-gradient" data-i18n="landing.index.whoFor.startupTitle">소규모 팀·스타트업</h3>
+							<p data-i18n="landing.index.whoFor.startupDesc">개발자 없이도 자동화할 수 있어요</p>
 						</div>
 					</div>
 				</div>
@@ -1072,8 +1079,8 @@
 							<i class="fas fa-building feature-icon-animated" style="font-size: 40px; color: #7C3AED;"></i>
 						</div>
 						<div class="content">
-							<h3 class="text-gradient" data-i18n="landing.index.whoFor.enterpriseTitle">기업</h3>
-							<p data-i18n="landing.index.whoFor.enterpriseDesc">맞춤형 배포, 기업급 보안</p>
+							<h3 class="text-gradient" data-i18n="landing.index.whoFor.enterpriseTitle">큰 회사</h3>
+							<p data-i18n="landing.index.whoFor.enterpriseDesc">우리 회사 전용 설치, 높은 보안 수준</p>
 						</div>
 					</div>
 				</div>
@@ -1083,8 +1090,8 @@
 							<i class="fas fa-lock animate-pulse-glow" style="font-size: 40px; color: #7C3AED; border-radius: 50%;"></i>
 						</div>
 						<div class="content">
-							<h3 class="text-gradient" data-i18n="landing.index.whoFor.regulatedTitle">규제 산업</h3>
-							<p data-i18n="landing.index.whoFor.regulatedDesc">금융, 의료, 정부 — 완전한 통제가 필요</p>
+							<h3 class="text-gradient" data-i18n="landing.index.whoFor.regulatedTitle">기록이 꼭 필요한 업종</h3>
+							<p data-i18n="landing.index.whoFor.regulatedDesc">금융, 의료, 공공기관 등 모든 작업 기록이 필요한 분야</p>
 						</div>
 					</div>
 				</div>
@@ -1112,11 +1119,11 @@
 					</div>
 				</div>
 				<div class="col-lg-5 offset-lg-1 order-lg-1 wow fadeInLeft">
-					<h2 style="margin-bottom: 20px;"><span data-i18n="landing.index.short.titleStart">One Minute.</span> <span class="gradient-text-animated" data-i18n="landing.index.short.titleHighlight">That's All You Need.</span></h2>
-					<p style="font-size: 18px; color: #6b7280; line-height: 1.8; margin-bottom: 30px;" data-i18n="landing.index.short.description">See how Flyto2 works in under a minute. No setup, no explanation — just watch.</p>
+					<h2 style="margin-bottom: 20px;"><span data-i18n="landing.index.short.titleStart">딱 1분.</span> <span class="gradient-text-animated" data-i18n="landing.index.short.titleHighlight">그걸로 충분해요.</span></h2>
+					<p style="font-size: 18px; color: #6b7280; line-height: 1.8; margin-bottom: 30px;" data-i18n="landing.index.short.description">1분 안에 Flyto2가 어떻게 동작하는지 볼 수 있어요. 설정도, 설명도 없어요. 그냥 보세요.</p>
 					<a href="https://www.youtube.com/@Flyto2" target="_blank" rel="noopener" style="color: #7C3AED; text-decoration: none; font-weight: 600; font-size: 16px;">
 						<i class="fab fa-youtube" style="margin-right: 6px;"></i>
-						<span data-i18n="landing.index.short.moreShorts">More videos on YouTube</span>
+						<span data-i18n="landing.index.short.moreShorts">YouTube에서 더 많은 영상 보기</span>
 						<i class="fas fa-arrow-right" style="margin-left: 6px; font-size: 12px;"></i>
 					</a>
 				</div>
@@ -1130,11 +1137,11 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 offset-lg-2 text-center">
-					<h2 class="wow fadeInUp" style="margin-bottom: 30px;"><span data-i18n="landing.index.philosophy.titleStart">Flyto2는 하지 않습니다</span> <span class="gradient-text-animated" data-i18n="landing.index.philosophy.titleHighlight">대체</span> <span data-i18n="landing.index.philosophy.titleEnd">당신</span></h2>
-					<p class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 18px; margin-bottom: 20px;" data-i18n="landing.index.philosophy.line1">Flyto2는 "로봇이 제멋대로 하도록 내버려 두는 것"이 아닙니다.</p>
-					<p class="wow fadeInUp" data-wow-delay="0.2s" style="font-size: 18px; margin-bottom: 30px;" data-i18n="landing.index.philosophy.line2">그 역할은 간단합니다:</p>
+					<h2 class="wow fadeInUp" style="margin-bottom: 30px;"><span data-i18n="landing.index.philosophy.titleStart">Flyto2는 나를</span> <span class="gradient-text-animated" data-i18n="landing.index.philosophy.titleHighlight">대신하지</span> <span data-i18n="landing.index.philosophy.titleEnd">않아요</span></h2>
+					<p class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 18px; margin-bottom: 20px;" data-i18n="landing.index.philosophy.line1">Flyto2는 "로봇한테 전부 맡기는" 도구가 아니에요.</p>
+					<p class="wow fadeInUp" data-wow-delay="0.2s" style="font-size: 18px; margin-bottom: 30px;" data-i18n="landing.index.philosophy.line2">역할은 단순해요:</p>
 					<div class="wow fadeInUp card-float" data-wow-delay="0.3s" style="background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%); padding: 40px; border-radius: 15px; border-left: 4px solid #7C3AED; box-shadow: 0 10px 40px rgba(124,58,237,0.1);">
-						<p style="font-size: 20px; margin: 0;" data-i18n="landing.index.philosophy.quote">당신이 결정합니다. 컴퓨터가 실행합니다. 문제가 즉시 중지됩니다.</p>
+						<p style="font-size: 20px; margin: 0;" data-i18n="landing.index.philosophy.quote">내가 결정하고, 컴퓨터가 실행하고, 문제가 있으면 바로 멈춰요.</p>
 					</div>
 				</div>
 			</div>
@@ -1148,8 +1155,8 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="subscribe-content wow fadeInUp">
-						<h2 data-i18n="landing.index.finalCta.title">Flyto2를 다음과 같이 생각하세요:</h2>
-						<p style="font-size: 24px; font-style: italic;"><span data-i18n="landing.index.finalCta.quote">"시연을 따르지만 절대 제멋대로 하지 않는 자동화 도구."</span><span class="typing-cursor"></span></p>
+						<h2 data-i18n="landing.index.finalCta.title">Flyto2를 한마디로 하면:</h2>
+						<p style="font-size: 24px; font-style: italic;"><span data-i18n="landing.index.finalCta.quote">"시키는 대로 하지만, 절대 제멋대로 하지 않는 자동화 도구."</span><span class="typing-cursor"></span></p>
 						<a class="button-1 btn-glow" href="pricing.html" style="margin-top: 30px; display: inline-block;">
 							<i class="fas fa-rocket" style="margin-right: 8px;"></i> <span data-i18n="landing.common.cta.getStartedFree">무료로 시작하기</span>
 						</a>
@@ -1229,7 +1236,7 @@
 						</div>
 					</div>
 					<div class="col-lg-6">
-						<div class="footer-legal" style="margin-bottom:10px"><a href="privacy.html" style="color:#a0aec0;margin-right:16px;font-size:13px">Privacy Policy</a><a href="terms.html" style="color:#a0aec0;font-size:13px">Terms of Service</a></div><div class="footer_social">
+						<div class="footer-legal" style="margin-bottom:10px"><a href="privacy.html" style="color:#a0aec0;margin-right:16px;font-size:13px"><span data-i18n="landing.common.footer.privacy">Privacy Policy</span></a><a href="terms.html" style="color:#a0aec0;font-size:13px"><span data-i18n="landing.common.footer.terms">Terms of Service</span></a></div><div class="footer_social">
 							<ul>
 								<li><a href="https://github.com/flytohub" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
 										<li><a href="https://www.youtube.com/channel/UCZ9OOqx4RM3Jjy1annWtsRA" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
@@ -1298,23 +1305,60 @@
 				<i class="bi bi-x-lg"></i>
 			</button>
 		</div>
-		<div class="lang-sheet-body">
-			<a href="/" class="lang-sheet-item"><span>English</span></a>
-			<a href="/zh/" class="lang-sheet-item"><span>繁體中文</span></a>
-			<a href="/ja/" class="lang-sheet-item"><span>日本語</span></a>
-			<a href="/ko/" class="lang-sheet-item active"><span>한국어</span></a>
-			<a href="/de/" class="lang-sheet-item"><span>Deutsch</span></a>
-			<a href="/es/" class="lang-sheet-item"><span>Español</span></a>
-			<a href="/fr/" class="lang-sheet-item"><span>Français</span></a>
-			<a href="/it/" class="lang-sheet-item"><span>Italiano</span></a>
-			<a href="/pt/" class="lang-sheet-item"><span>Português</span></a>
-			<a href="/vi/" class="lang-sheet-item"><span>Tiếng Việt</span></a>
-			<a href="/th/" class="lang-sheet-item"><span>ไทย</span></a>
-			<a href="/id/" class="lang-sheet-item"><span>Indonesia</span></a>
-			<a href="/tr/" class="lang-sheet-item"><span>Türkçe</span></a>
-			<a href="/pl/" class="lang-sheet-item"><span>Polski</span></a>
-			<a href="/hi/" class="lang-sheet-item"><span>हिन्दी</span></a>
+		<div class="lang-sheet-search">
+			<i class="bi bi-search"></i>
+			<input type="text" placeholder="Search..." oninput="filterMobileLanguages(this.value)" autocomplete="off">
+		</div>
+		<div class="lang-sheet-body" id="langListMobile">
+			<a href="/" class="lang-sheet-item" data-lang="english"><span class="lang-flag">🇺🇸</span><span class="lang-names"><span class="lang-native">English</span></span></a>
+			<a href="/zh/" class="lang-sheet-item" data-lang="繁體中文 traditional chinese"><span class="lang-flag">🇹🇼</span><span class="lang-names"><span class="lang-native">繁體中文</span><span class="lang-en">Traditional Chinese</span></span></a>
+			<a href="/ja/" class="lang-sheet-item" data-lang="日本語 japanese"><span class="lang-flag">🇯🇵</span><span class="lang-names"><span class="lang-native">日本語</span><span class="lang-en">Japanese</span></span></a>
+			<a href="/ko/" class="lang-sheet-item active" data-lang="한국어 korean"><span class="lang-flag">🇰🇷</span><span class="lang-names"><span class="lang-native">한국어</span><span class="lang-en">Korean</span></span></a>
+			<a href="/de/" class="lang-sheet-item" data-lang="deutsch german"><span class="lang-flag">🇩🇪</span><span class="lang-names"><span class="lang-native">Deutsch</span><span class="lang-en">German</span></span></a>
+			<a href="/es/" class="lang-sheet-item" data-lang="español spanish"><span class="lang-flag">🇪🇸</span><span class="lang-names"><span class="lang-native">Español</span><span class="lang-en">Spanish</span></span></a>
+			<a href="/fr/" class="lang-sheet-item" data-lang="français french"><span class="lang-flag">🇫🇷</span><span class="lang-names"><span class="lang-native">Français</span><span class="lang-en">French</span></span></a>
+			<a href="/it/" class="lang-sheet-item" data-lang="italiano italian"><span class="lang-flag">🇮🇹</span><span class="lang-names"><span class="lang-native">Italiano</span><span class="lang-en">Italian</span></span></a>
+			<a href="/pt/" class="lang-sheet-item" data-lang="português portuguese"><span class="lang-flag">🇧🇷</span><span class="lang-names"><span class="lang-native">Português</span><span class="lang-en">Portuguese</span></span></a>
+			<a href="/vi/" class="lang-sheet-item" data-lang="tiếng việt vietnamese"><span class="lang-flag">🇻🇳</span><span class="lang-names"><span class="lang-native">Tiếng Việt</span><span class="lang-en">Vietnamese</span></span></a>
+			<a href="/th/" class="lang-sheet-item" data-lang="ไทย thai"><span class="lang-flag">🇹🇭</span><span class="lang-names"><span class="lang-native">ไทย</span><span class="lang-en">Thai</span></span></a>
+			<a href="/id/" class="lang-sheet-item" data-lang="indonesia indonesian"><span class="lang-flag">🇮🇩</span><span class="lang-names"><span class="lang-native">Indonesia</span><span class="lang-en">Indonesian</span></span></a>
+			<a href="/tr/" class="lang-sheet-item" data-lang="türkçe turkish"><span class="lang-flag">🇹🇷</span><span class="lang-names"><span class="lang-native">Türkçe</span><span class="lang-en">Turkish</span></span></a>
+			<a href="/pl/" class="lang-sheet-item" data-lang="polski polish"><span class="lang-flag">🇵🇱</span><span class="lang-names"><span class="lang-native">Polski</span><span class="lang-en">Polish</span></span></a>
+			<a href="/hi/" class="lang-sheet-item" data-lang="हिन्दी hindi"><span class="lang-flag">🇮🇳</span><span class="lang-names"><span class="lang-native">हिन्दी</span><span class="lang-en">Hindi</span></span></a>
 		</div>
 	</div>
+	<script>
+	function toggleLangDropdown(e) {
+		e.stopPropagation();
+		var dd = document.getElementById('langDropdownDesktop');
+		var sw = document.getElementById('langSwitcher');
+		var isOpen = sw.classList.contains('open');
+		if (isOpen) { sw.classList.remove('open'); }
+		else { sw.classList.add('open'); dd.querySelector('.lang-search').focus(); }
+	}
+	document.addEventListener('click', function(e) {
+		var sw = document.getElementById('langSwitcher');
+		if (sw && !sw.contains(e.target)) sw.classList.remove('open');
+	});
+	function filterLanguages(q) {
+		q = q.toLowerCase();
+		var items = document.querySelectorAll('#langListDesktop .lang-option');
+		var found = 0;
+		items.forEach(function(el) {
+			var match = el.getAttribute('data-lang').toLowerCase().indexOf(q) !== -1;
+			el.style.display = match ? '' : 'none';
+			if (match) found++;
+		});
+		document.querySelector('.lang-no-result').style.display = found ? 'none' : 'block';
+	}
+	function filterMobileLanguages(q) {
+		q = q.toLowerCase();
+		var items = document.querySelectorAll('#langListMobile .lang-sheet-item');
+		items.forEach(function(el) {
+			var match = el.getAttribute('data-lang').toLowerCase().indexOf(q) !== -1;
+			el.style.display = match ? '' : 'none';
+		});
+	}
+	</script>
 </body>
 </html>

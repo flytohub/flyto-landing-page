@@ -25,8 +25,8 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" media="print" onload="this.media='all'">
 	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"></noscript>
 
-	<title>Flyto2 - Plateforme de Workflow Entreprise | Automatisation Human-in-the-Loop</title>
-	<meta name="description" content="Flyto2 est une plateforme de workflow entreprise combinant automatisation basée sur l&#39;UI et supervision humaine. Créez des workflows avec étapes d&#39;approbation, points de validation et pistes d&#39;audit complètes. 100% hors ligne.">
+	<title>Flyto2 - Transformez les tâches répétitives en automatisation simple</title>
+	<meta name="description" content="Flyto2 vous aide à automatiser les tâches répétitives du navigateur sans programmer. Enregistrez vos actions une fois, rejouez-les indéfiniment. Mettez en pause, vérifiez et reprenez à tout moment. Fonctionne hors ligne.">
 
 	<!-- Content Security Policy -->
 	<meta http-equiv="Content-Security-Policy" content="
@@ -63,7 +63,7 @@
 	<link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/" />
 	<link rel="alternate" hreflang="x-default" href="https://flyto2.com/" />
 	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-	<meta name="keywords" content="plateforme workflow entreprise, automatisation basée UI, workflow avec approbation humaine, alternative RPA, human-in-the-loop, validation workflow, automatisation hors ligne, automatisation processus métier">
+	<meta name="keywords" content="automatisation du navigateur, automatisation sans code, automatiser tâches répétitives, enregistrer et rejouer, automatisation des processus, outil d&#39;automatisation hors ligne">
 	<meta name="author" content="Flyto2">
 	<meta name="generator" content="Flyto2">
 	<meta name="rating" content="general">
@@ -73,8 +73,8 @@
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="https://flyto2.com/fr/">
-	<meta property="og:title" content="Flyto2 - Plateforme de Workflow Entreprise | Automatisation Human-in-the-Loop">
-	<meta property="og:description" content="Flyto2 est une plateforme de workflow entreprise combinant automatisation basée sur l&#39;UI et supervision humaine. Créez des workflows avec étapes d&#39;approbation, points de validation et pistes d&#39;audit complètes. 100% hors ligne.">
+	<meta property="og:title" content="Flyto2 - Transformez les tâches répétitives en automatisation simple">
+	<meta property="og:description" content="Flyto2 vous aide à automatiser les tâches répétitives du navigateur sans programmer. Enregistrez vos actions une fois, rejouez-les indéfiniment. Mettez en pause, vérifiez et reprenez à tout moment. Fonctionne hors ligne.">
 	<meta property="og:image" content="https://flyto2.com/assets/img/og-image.png">
 	<meta property="og:site_name" content="Flyto2">
 	<meta property="og:locale" content="fr_FR">
@@ -82,10 +82,10 @@
 	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@flyto2">
-	<meta name="twitter:title" content="Flyto2 - Plateforme de Workflow Entreprise | Automatisation Human-in-the-Loop">
-	<meta name="twitter:description" content="Flyto2 est une plateforme de workflow entreprise combinant automatisation basée sur l&#39;UI et supervision humaine. Créez des workflows avec étapes d&#39;approbation, points de validation et pistes d&#39;audit c">
+	<meta name="twitter:title" content="Flyto2 - Transformez les tâches répétitives en automatisation simple">
+	<meta name="twitter:description" content="Flyto2 vous aide à automatiser les tâches répétitives du navigateur sans programmer. Enregistrez vos actions une fois, rejouez-les indéfiniment. Mettez en pause, vérifiez et reprenez à tout moment. Fo">
 	<meta name="twitter:image" content="https://flyto2.com/assets/img/og-image.png">
-	<meta name="twitter:image:alt" content="Flyto2 - Enterprise Workflow Platform">
+	<meta name="twitter:image:alt" content="Flyto2 - Automate Repetitive Tasks">
 
 	<link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="../assets/img/icon.png" type="image/png" sizes="32x32">
@@ -487,28 +487,35 @@
 							</ul>
 						</nav>
 						<!-- Language Switcher -->
-						<div class="lang-switcher">
-							<div class="lang-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">
+						<div class="lang-switcher" id="langSwitcher">
+							<div class="lang-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" onclick="toggleLangDropdown(event)">
 								<i class="bi bi-globe"></i>
 								<span class="current-lang">FR</span>
 								<i class="bi bi-chevron-down"></i>
 							</div>
-							<div class="lang-dropdown">
-								<a href="/" class="lang-option">English</a>
-								<a href="/zh/" class="lang-option">繁體中文</a>
-								<a href="/ja/" class="lang-option">日本語</a>
-								<a href="/ko/" class="lang-option">한국어</a>
-								<a href="/de/" class="lang-option">Deutsch</a>
-								<a href="/es/" class="lang-option">Español</a>
-								<a href="/fr/" class="lang-option active">Français</a>
-								<a href="/it/" class="lang-option">Italiano</a>
-								<a href="/pt/" class="lang-option">Português</a>
-								<a href="/vi/" class="lang-option">Tiếng Việt</a>
-								<a href="/th/" class="lang-option">ไทย</a>
-								<a href="/id/" class="lang-option">Indonesia</a>
-								<a href="/tr/" class="lang-option">Türkçe</a>
-								<a href="/pl/" class="lang-option">Polski</a>
-								<a href="/hi/" class="lang-option">हिन्दी</a>
+							<div class="lang-dropdown" id="langDropdownDesktop">
+								<div class="lang-search-wrap">
+									<i class="bi bi-search"></i>
+									<input type="text" class="lang-search" placeholder="Search..." oninput="filterLanguages(this.value)" autocomplete="off">
+								</div>
+								<div class="lang-list" id="langListDesktop">
+									<a href="/" class="lang-option" data-lang="english"><span class="lang-flag">🇺🇸</span><span class="lang-names"><span class="lang-native">English</span></span></a>
+									<a href="/zh/" class="lang-option" data-lang="繁體中文 traditional chinese"><span class="lang-flag">🇹🇼</span><span class="lang-names"><span class="lang-native">繁體中文</span><span class="lang-en">Traditional Chinese</span></span></a>
+									<a href="/ja/" class="lang-option" data-lang="日本語 japanese"><span class="lang-flag">🇯🇵</span><span class="lang-names"><span class="lang-native">日本語</span><span class="lang-en">Japanese</span></span></a>
+									<a href="/ko/" class="lang-option" data-lang="한국어 korean"><span class="lang-flag">🇰🇷</span><span class="lang-names"><span class="lang-native">한국어</span><span class="lang-en">Korean</span></span></a>
+									<a href="/de/" class="lang-option" data-lang="deutsch german"><span class="lang-flag">🇩🇪</span><span class="lang-names"><span class="lang-native">Deutsch</span><span class="lang-en">German</span></span></a>
+									<a href="/es/" class="lang-option" data-lang="español spanish"><span class="lang-flag">🇪🇸</span><span class="lang-names"><span class="lang-native">Español</span><span class="lang-en">Spanish</span></span></a>
+									<a href="/fr/" class="lang-option active" data-lang="français french"><span class="lang-flag">🇫🇷</span><span class="lang-names"><span class="lang-native">Français</span><span class="lang-en">French</span></span></a>
+									<a href="/it/" class="lang-option" data-lang="italiano italian"><span class="lang-flag">🇮🇹</span><span class="lang-names"><span class="lang-native">Italiano</span><span class="lang-en">Italian</span></span></a>
+									<a href="/pt/" class="lang-option" data-lang="português portuguese"><span class="lang-flag">🇧🇷</span><span class="lang-names"><span class="lang-native">Português</span><span class="lang-en">Portuguese</span></span></a>
+									<a href="/vi/" class="lang-option" data-lang="tiếng việt vietnamese"><span class="lang-flag">🇻🇳</span><span class="lang-names"><span class="lang-native">Tiếng Việt</span><span class="lang-en">Vietnamese</span></span></a>
+									<a href="/th/" class="lang-option" data-lang="ไทย thai"><span class="lang-flag">🇹🇭</span><span class="lang-names"><span class="lang-native">ไทย</span><span class="lang-en">Thai</span></span></a>
+									<a href="/id/" class="lang-option" data-lang="indonesia indonesian"><span class="lang-flag">🇮🇩</span><span class="lang-names"><span class="lang-native">Indonesia</span><span class="lang-en">Indonesian</span></span></a>
+									<a href="/tr/" class="lang-option" data-lang="türkçe turkish"><span class="lang-flag">🇹🇷</span><span class="lang-names"><span class="lang-native">Türkçe</span><span class="lang-en">Turkish</span></span></a>
+									<a href="/pl/" class="lang-option" data-lang="polski polish"><span class="lang-flag">🇵🇱</span><span class="lang-names"><span class="lang-native">Polski</span><span class="lang-en">Polish</span></span></a>
+									<a href="/hi/" class="lang-option" data-lang="हिन्दी hindi"><span class="lang-flag">🇮🇳</span><span class="lang-names"><span class="lang-native">हिन्दी</span><span class="lang-en">Hindi</span></span></a>
+								</div>
+								<div class="lang-no-result" style="display:none;">No languages found</div>
 							</div>
 						</div>
 						<!-- Auth -->
@@ -611,7 +618,7 @@
 						<h1 class="wow fadeInUp" data-wow-delay="0.1s">
 							<span class="gradient-text-animated" data-i18n="landing.index.hero.titleHighlight">L'automatisation qui fait</span><br><span data-i18n="landing.index.hero.titleEnd">ce que vous lui montrez</span>
 						</h1>
-						<p class="wow fadeInUp" data-wow-delay="0.2s" data-i18n="landing.index.hero.description">Flyto2 est un outil d'automatisation qui utilise votre ordinateur comme un humain. Ouvrir des navigateurs, cliquer sur des boutons, remplir des formulaires, telecharger des fichiers. Vous le faites une fois, Flyto2 le repete indefiniment.</p>
+						<p class="wow fadeInUp" data-wow-delay="0.2s" data-i18n="landing.index.hero.description">Flyto2 est un outil d'automatisation qui utilise votre ordinateur comme le ferait une personne. Ouvrir des navigateurs, cliquer sur des boutons, remplir des formulaires, envoyer des fichiers. Vous le faites une fois, Flyto2 le répète indéfiniment.</p>
 						<a class="button-1 btn-glow wow fadeInUp" data-wow-delay="0.3s" href="pricing.html" style="margin-top: 20px;">
 							<i class="fas fa-rocket" style="margin-right: 8px;"></i> <span data-i18n="landing.common.cta.getStartedFree">Commencer gratuitement</span>
 						</a>
@@ -639,8 +646,8 @@
 								<div class="title">
 									<div class="text-gradient" style="font-size: 2rem;"><i class="fas fa-mouse-pointer hero-icon-float"></i></div>
 								</div>
-								<h3 data-i18n="landing.index.counter.recordOnce">Enregistrez une fois</h3>
-								<p class="text-sm" data-i18n="landing.index.counter.recordOnceDesc">Montrez a Flyto2 comment vous travaillez. Il apprend en observant vos clics et frappes.</p>
+								<h3 data-i18n="landing.index.counter.recordOnce">Montrez une fois</h3>
+								<p class="text-sm" data-i18n="landing.index.counter.recordOnceDesc">Montrez à Flyto2 comment vous travaillez. Il apprend en observant vos clics et ce que vous tapez.</p>
 								<hr class="vertical dark">
 							</div>
 						</div>
@@ -650,8 +657,8 @@
 								<div class="title">
 									<div class="text-gradient" style="font-size: 2rem;"><i class="fas fa-redo icon-spin-slow"></i></div>
 								</div>
-								<h3 data-i18n="landing.index.counter.replayForever">Rejouez indefiniment</h3>
-								<p class="text-sm" data-i18n="landing.index.counter.replayForeverDesc">Executez-le a nouveau avec differentes donnees. Traitez des centaines d'elements par lots.</p>
+								<h3 data-i18n="landing.index.counter.replayForever">Rejouez à l'infini</h3>
+								<p class="text-sm" data-i18n="landing.index.counter.replayForeverDesc">Relancez avec d'autres données. Traitez des centaines d'éléments à la fois.</p>
 								<hr class="vertical dark">
 							</div>
 						</div>
@@ -661,8 +668,8 @@
 								<div class="title">
 									<div class="text-gradient" style="font-size: 2rem;"><i class="fas fa-shield-alt animate-pulse-glow" style="border-radius: 50%;"></i></div>
 								</div>
-								<h3 data-i18n="landing.index.counter.stayInControl">Gardez le controle</h3>
-								<p class="text-sm" data-i18n="landing.index.counter.stayInControlDesc">Mettez en pause, verifiez et reprenez a tout moment. Ne vous inquietez jamais d'une automatisation incontrole.</p>
+								<h3 data-i18n="landing.index.counter.stayInControl">Gardez le contrôle</h3>
+								<p class="text-sm" data-i18n="landing.index.counter.stayInControlDesc">Mettez en pause, vérifiez et reprenez à tout moment. Sans risque que quelque chose dérape.</p>
 							</div>
 						</div>
 					</div>
@@ -678,8 +685,8 @@
 			<div class="row mb-40">
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="section-headding wow fadeInUp">
-						<h2><span data-i18n="landing.index.video.titleStart">See How</span> <span class="gradient-text-animated" data-i18n="landing.index.video.titleHighlight">Simple</span> <span data-i18n="landing.index.video.titleEnd">It Is</span></h2>
-						<p style="font-size: 18px; margin-top: 15px;" data-i18n="landing.index.video.subtitle">Watch a quick demo — no technical knowledge needed to follow along.</p>
+						<h2><span data-i18n="landing.index.video.titleStart">Voyez comme c'est</span> <span class="gradient-text-animated" data-i18n="landing.index.video.titleHighlight">simple</span> <span data-i18n="landing.index.video.titleEnd">It Is</span></h2>
+						<p style="font-size: 18px; margin-top: 15px;" data-i18n="landing.index.video.subtitle">Regardez une courte démo — aucune connaissance technique nécessaire.</p>
 					</div>
 				</div>
 			</div>
@@ -699,7 +706,7 @@
 					<p class="text-center" style="margin-top: 20px; color: #6b7280;">
 						<a href="https://www.youtube.com/@Flyto2" target="_blank" rel="noopener" style="color: #7C3AED; text-decoration: none; font-weight: 600;">
 							<i class="fab fa-youtube" style="margin-right: 6px;"></i>
-							<span data-i18n="landing.index.video.moreVideos">Watch more on our YouTube channel</span>
+							<span data-i18n="landing.index.video.moreVideos">Plus de vidéos sur notre chaîne YouTube</span>
 						</a>
 					</p>
 				</div>
@@ -715,7 +722,7 @@
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="section-headding wow fadeInUp">
 						<h2><span data-i18n="landing.index.why.title">Pourquoi</span> <span class="gradient-text-animated">Flyto2</span>?</h2>
-						<p data-i18n="landing.index.why.subtitle">Beaucoup de taches ne sont pas difficiles, elles sont juste fastidieuses.</p>
+						<p data-i18n="landing.index.why.subtitle">Beaucoup de tâches ne sont pas difficiles, elles sont juste fastidieuses.</p>
 					</div>
 				</div>
 			</div>
@@ -728,7 +735,7 @@
 						</div>
 						<div class="content">
 							<h3 class="text-gradient" data-i18n="landing.index.why.copyPasteTitle">L'enfer du copier-coller</h3>
-							<p data-i18n="landing.index.why.copyPasteDesc">Se connecter aux tableaux de bord, copier des données d'un système à un autre, jour après jour.</p>
+							<p data-i18n="landing.index.why.copyPasteDesc">Se connecter à des tableaux de bord, copier des données d'un système à l'autre, jour après jour.</p>
 						</div>
 					</div>
 				</div>
@@ -739,8 +746,8 @@
 							<i class="fas fa-ban feature-icon-animated" style="font-size: 40px; color: #7C3AED;"></i>
 						</div>
 						<div class="content">
-							<h3 class="text-gradient" data-i18n="landing.index.why.noBatchTitle">Pas d'options de lot</h3>
-							<p data-i18n="landing.index.why.noBatchDesc">Votre ERP ou panneau d'administration ne vous permet de traiter qu'un élément à la fois. Pas d'actions en masse.</p>
+							<h3 class="text-gradient" data-i18n="landing.index.why.noBatchTitle">Un par un</h3>
+							<p data-i18n="landing.index.why.noBatchDesc">Votre panneau d'administration ne permet de faire qu'une chose à la fois. Impossible de tout traiter en une fois.</p>
 						</div>
 					</div>
 				</div>
@@ -751,15 +758,15 @@
 							<i class="fas fa-plug feature-icon-animated" style="font-size: 40px; color: #7C3AED;"></i>
 						</div>
 						<div class="content">
-							<h3 class="text-gradient" data-i18n="landing.index.why.noApiTitle">Pas d'API disponible</h3>
-							<p data-i18n="landing.index.why.noApiDesc">Le système n'a pas d'API. Votre seule option est de cliquer manuellement dans le navigateur.</p>
+							<h3 class="text-gradient" data-i18n="landing.index.why.noApiTitle">Aucun raccourci disponible</h3>
+							<p data-i18n="landing.index.why.noApiDesc">Le système n'offre aucun raccourci. La seule option est de tout cliquer manuellement dans le navigateur.</p>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="row mt-30">
 				<div class="col-lg-8 offset-lg-2 text-center wow fadeInUp" data-wow-delay="0.4s">
-					<p style="font-size: 18px;" data-i18n="landing.index.why.bottomText">Vous connaissez le processus. Vous savez qu'il ne devrait pas nécessiter d'effort humain. Flyto2 est conçu exactement pour cela.</p>
+					<p style="font-size: 18px;" data-i18n="landing.index.why.bottomText">Vous connaissez le processus. Vous savez qu'il ne devrait pas demander d'effort humain. Flyto2 est fait exactement pour ça.</p>
 				</div>
 			</div>
 		</div>
@@ -772,8 +779,8 @@
 			<div class="row mb-50">
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="section-headding wow fadeInUp">
-						<h2><span data-i18n="landing.index.different.titleStart">Ce qui rend Flyto2</span> <span class="gradient-text-animated" data-i18n="landing.index.different.titleHighlight">Différent</span>?</h2>
-						<p style="font-size: 18px; margin-top: 15px;" data-i18n="landing.index.different.subtitle">La plupart des outils d'automatisation n'ont que deux états : non exécuté ou terminé.</p>
+						<h2><span data-i18n="landing.index.different.titleStart">Ce qui rend Flyto2</span> <span class="gradient-text-animated" data-i18n="landing.index.different.titleHighlight">différent</span>?</h2>
+						<p style="font-size: 18px; margin-top: 15px;" data-i18n="landing.index.different.subtitle">La plupart des outils d'automatisation n'ont que deux états : à l'arrêt ou terminé.</p>
 					</div>
 				</div>
 			</div>
@@ -785,7 +792,7 @@
 						<div style="position: absolute; bottom: -30px; left: -30px; width: 100px; height: 100px; background: rgba(124, 58, 237, 0.15); border-radius: 50%;"></div>
 						<p style="font-size: 24px; color: #fff; font-weight: 600; margin: 0; position: relative; z-index: 2;">
 							<i class="fas fa-quote-left" style="color: #a78bfa; margin-right: 15px; opacity: 0.6;"></i>
-							<span data-i18n="landing.index.different.quoteStart">Avant, pendant et quand des erreurs surviennent — vous pouvez toujours</span> <span style="color: #a78bfa;" data-i18n="landing.index.different.quoteHighlight">pause et vérifiez</span>.
+							<span data-i18n="landing.index.different.quoteStart">Avant, pendant et en cas d'erreur — vous pouvez toujours</span> <span style="color: #a78bfa;" data-i18n="landing.index.different.quoteHighlight">mettre en pause et vérifier</span>.
 							<i class="fas fa-quote-right" style="color: #a78bfa; margin-left: 15px; opacity: 0.6;"></i>
 						</p>
 					</div>
@@ -798,8 +805,8 @@
 						<div style="width: 60px; height: 60px; background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
 							<i class="fas fa-play" style="color: #fff; font-size: 24px;"></i>
 						</div>
-						<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 15px; color: #1e0a3c;" data-i18n="landing.index.different.step1Title">Exécuter 1 élément d'abord</h3>
-						<p style="color: #6b7280; line-height: 1.7; margin: 0;" data-i18n="landing.index.different.step1Desc">Vérifiez si c'est correct avant de traiter plus. Testez en toute sécurité.</p>
+						<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 15px; color: #1e0a3c;" data-i18n="landing.index.different.step1Title">Testez avec 1 d'abord</h3>
+						<p style="color: #6b7280; line-height: 1.7; margin: 0;" data-i18n="landing.index.different.step1Desc">Vérifiez que c'est correct avant d'en traiter plus. Testez en toute sécurité.</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 mb-30">
@@ -807,8 +814,8 @@
 						<div style="width: 60px; height: 60px; background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
 							<i class="fas fa-layer-group" style="color: #fff; font-size: 24px;"></i>
 						</div>
-						<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 15px; color: #1e0a3c;" data-i18n="landing.index.different.step2Title">Ensuite, exécutez un lot</h3>
-						<p style="color: #6b7280; line-height: 1.7; margin: 0;" data-i18n="landing.index.different.step2Desc">Validez avec un lot plus grand. Détectez les cas limites tôt.</p>
+						<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 15px; color: #1e0a3c;" data-i18n="landing.index.different.step2Title">Puis testez un lot</h3>
+						<p style="color: #6b7280; line-height: 1.7; margin: 0;" data-i18n="landing.index.different.step2Desc">Essayez avec un groupe plus grand. Détectez les problèmes tôt.</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 mb-30">
@@ -816,8 +823,8 @@
 						<div style="width: 60px; height: 60px; background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
 							<i class="fas fa-rocket" style="color: #fff; font-size: 24px;"></i>
 						</div>
-						<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 15px; color: #1e0a3c;" data-i18n="landing.index.different.step3Title">Exécuter tout</h3>
-						<p style="color: #6b7280; line-height: 1.7; margin: 0;" data-i18n="landing.index.different.step3Desc">Une fois confirmé, traitez le lot complet en toute confiance.</p>
+						<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 15px; color: #1e0a3c;" data-i18n="landing.index.different.step3Title">Lancez tout</h3>
+						<p style="color: #6b7280; line-height: 1.7; margin: 0;" data-i18n="landing.index.different.step3Desc">Une fois que vous êtes sûr, traitez tout.</p>
 					</div>
 				</div>
 			</div>
@@ -832,14 +839,14 @@
 									<i class="fas fa-stop" style="color: #fff; font-size: 28px;"></i>
 								</div>
 								<h4 style="font-weight: 700; color: #1e0a3c;" data-i18n="landing.index.different.errorStop">Arrêter immédiatement</h4>
-								<p style="color: #6b7280; font-size: 14px;" data-i18n="landing.index.different.errorStopDesc">Arrêter l'exécution instantanément</p>
+								<p style="color: #6b7280; font-size: 14px;" data-i18n="landing.index.different.errorStopDesc">Stopper l'exécution sur-le-champ</p>
 							</div>
 							<div class="col-md-4 text-center mb-20">
 								<div style="width: 70px; height: 70px; background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
 									<i class="fas fa-undo-alt" style="color: #fff; font-size: 28px;"></i>
 								</div>
-								<h4 style="font-weight: 700; color: #1e0a3c;" data-i18n="landing.index.different.errorRollback">Rétablir</h4>
-								<p style="color: #6b7280; font-size: 14px;" data-i18n="landing.index.different.errorRollbackDesc">Revenir en arrière si nécessaire</p>
+								<h4 style="font-weight: 700; color: #1e0a3c;" data-i18n="landing.index.different.errorRollback">Revenir en arrière</h4>
+								<p style="color: #6b7280; font-size: 14px;" data-i18n="landing.index.different.errorRollbackDesc">Annuler si nécessaire</p>
 							</div>
 							<div class="col-md-4 text-center mb-20">
 								<div style="width: 70px; height: 70px; background: linear-gradient(135deg, #10b981 0%, #34d399 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
@@ -849,7 +856,7 @@
 								<p style="color: #6b7280; font-size: 14px;" data-i18n="landing.index.different.errorResumeDesc">Continuer là où ça s'est arrêté</p>
 							</div>
 						</div>
-						<p style="text-align: center; margin-top: 20px; font-size: 18px; font-weight: 600; color: #7c3aed;" data-i18n="landing.index.different.errorBottom">L'automatisation n'a pas à être "tout ou rien."</p>
+						<p style="text-align: center; margin-top: 20px; font-size: 18px; font-weight: 600; color: #7c3aed;" data-i18n="landing.index.different.errorBottom">L'automatisation n'a pas besoin d'être "tout ou rien".</p>
 					</div>
 				</div>
 			</div>
@@ -863,8 +870,8 @@
 			<div class="row mb-50">
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="section-headding wow fadeInUp">
-						<h2><span data-i18n="landing.index.noCoding.titleStart">Pas de</span> <span class="gradient-text-animated" data-i18n="landing.index.noCoding.titleHighlight">Codage</span> <span data-i18n="landing.index.noCoding.titleEnd">Requis</span></h2>
-						<p style="font-size: 18px; margin-top: 15px;" data-i18n="landing.index.noCoding.subtitle">Si vous pouvez utiliser un navigateur, vous pouvez utiliser Flyto2.</p>
+						<h2><span data-i18n="landing.index.noCoding.titleStart">Aucune</span> <span class="gradient-text-animated" data-i18n="landing.index.noCoding.titleHighlight">Programmation</span> <span data-i18n="landing.index.noCoding.titleEnd">nécessaire</span></h2>
+						<p style="font-size: 18px; margin-top: 15px;" data-i18n="landing.index.noCoding.subtitle">Si vous savez utiliser un navigateur, vous savez utiliser Flyto2.</p>
 					</div>
 				</div>
 			</div>
@@ -880,7 +887,7 @@
 									<div style="position: absolute; top: -5px; right: -5px; width: 35px; height: 35px; background: #1e0a3c; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; color: #fff; font-size: 16px; border: 3px solid #fff;">1</div>
 								</div>
 								<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: #1e0a3c;" data-i18n="landing.index.noCoding.step1Title">Ouvrir le navigateur</h3>
-								<p style="color: #6b7280; font-size: 15px; line-height: 1.6;" data-i18n="landing.index.noCoding.step1Desc">Démarrez Flyto2 et commencez à enregistrer votre flux de travail</p>
+								<p style="color: #6b7280; font-size: 15px; line-height: 1.6;" data-i18n="landing.index.noCoding.step1Desc">Lancez Flyto2 et commencez à enregistrer votre processus</p>
 							</div>
 						</div>
 						<!-- Step 2 -->
@@ -891,7 +898,7 @@
 									<div style="position: absolute; top: -5px; right: -5px; width: 35px; height: 35px; background: #1e0a3c; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; color: #fff; font-size: 16px; border: 3px solid #fff;">2</div>
 								</div>
 								<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: #1e0a3c;" data-i18n="landing.index.noCoding.step2Title">Faites votre tâche</h3>
-								<p style="color: #6b7280; font-size: 15px; line-height: 1.6;" data-i18n="landing.index.noCoding.step2Desc">Travaillez comme d'habitude - cliquez, tapez, naviguez</p>
+								<p style="color: #6b7280; font-size: 15px; line-height: 1.6;" data-i18n="landing.index.noCoding.step2Desc">Travaillez comme d'habitude — cliquez, tapez, naviguez</p>
 							</div>
 						</div>
 						<!-- Step 3 -->
@@ -901,7 +908,7 @@
 									<i class="fas fa-save" style="font-size: 40px; color: #fff;"></i>
 									<div style="position: absolute; top: -5px; right: -5px; width: 35px; height: 35px; background: #1e0a3c; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; color: #fff; font-size: 16px; border: 3px solid #fff;">3</div>
 								</div>
-								<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: #1e0a3c;" data-i18n="landing.index.noCoding.step3Title">Enregistrez-le</h3>
+								<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: #1e0a3c;" data-i18n="landing.index.noCoding.step3Title">Enregistrez</h3>
 								<p style="color: #6b7280; font-size: 15px; line-height: 1.6;" data-i18n="landing.index.noCoding.step3Desc">Flyto2 capture et mémorise chaque étape</p>
 							</div>
 						</div>
@@ -912,8 +919,8 @@
 									<i class="fas fa-sync-alt" style="font-size: 40px; color: #fff;"></i>
 									<div style="position: absolute; top: -5px; right: -5px; width: 35px; height: 35px; background: #1e0a3c; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; color: #fff; font-size: 16px; border: 3px solid #fff;">4</div>
 								</div>
-								<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: #1e0a3c;" data-i18n="landing.index.noCoding.step4Title">Rejouer à tout moment</h3>
-								<p style="color: #6b7280; font-size: 15px; line-height: 1.6;" data-i18n="landing.index.noCoding.step4Desc">Exécutez-le à nouveau, traitez par lots ou planifiez-le</p>
+								<h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: #1e0a3c;" data-i18n="landing.index.noCoding.step4Title">Rejouez quand vous voulez</h3>
+								<p style="color: #6b7280; font-size: 15px; line-height: 1.6;" data-i18n="landing.index.noCoding.step4Desc">Relancez, traitez en lot ou programmez l'exécution</p>
 							</div>
 						</div>
 					</div>
@@ -925,7 +932,7 @@
 					<div class="wow fadeInUp" data-wow-delay="0.5s" style="background: linear-gradient(135deg, #1e0a3c 0%, #4c1d95 100%); border-radius: 20px; padding: 35px 40px; text-align: center;">
 						<p style="font-size: 20px; color: #fff; margin: 0; font-weight: 600;">
 							<i class="fas fa-code" style="margin-right: 12px; opacity: 0.5;"></i>
-							<span data-i18n="landing.index.noCoding.bottomStart">Vous n'avez pas besoin de connaître le code. Vous devez juste connaître</span> <span style="color: #a78bfa;" data-i18n="landing.index.noCoding.bottomHighlight">votre travail</span>.
+							<span data-i18n="landing.index.noCoding.bottomStart">Pas besoin de savoir programmer. Il suffit de connaître</span> <span style="color: #a78bfa;" data-i18n="landing.index.noCoding.bottomHighlight">votre travail</span>.
 						</p>
 					</div>
 				</div>
@@ -940,7 +947,7 @@
 			<div class="row mb-40">
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="section-headding wow fadeInUp">
-						<h2><span data-i18n="landing.index.safety.titleStart">Conçu pour ceux qui</span> <span class="gradient-text-animated" data-i18n="landing.index.safety.titleHighlight">Inquiétude</span> <span data-i18n="landing.index.safety.titleEnd">Sur les erreurs</span></h2>
+						<h2><span data-i18n="landing.index.safety.titleStart">Conçu pour ceux qui se</span> <span class="gradient-text-animated" data-i18n="landing.index.safety.titleHighlight">soucient</span> <span data-i18n="landing.index.safety.titleEnd">des erreurs</span></h2>
 						<p data-i18n="landing.index.safety.subtitle">Flyto2 est conçu pour ceux qui doivent être prudents.</p>
 					</div>
 				</div>
@@ -963,8 +970,8 @@
 							<i class="fas fa-flask feature-icon-animated" style="font-size: 30px; color: #7C3AED;"></i>
 						</div>
 						<div class="content">
-							<h3 data-i18n="landing.index.safety.trialTitle">Mode d'essai</h3>
-							<p data-i18n="landing.index.safety.trialDesc">Testez avec quelques éléments d'abord avant de lancer le lot complet.</p>
+							<h3 data-i18n="landing.index.safety.trialTitle">Mode test</h3>
+							<p data-i18n="landing.index.safety.trialDesc">Testez d'abord avec quelques éléments avant de lancer tout le lot.</p>
 						</div>
 					</div>
 				</div>
@@ -974,8 +981,8 @@
 							<i class="fas fa-history icon-spin-slow" style="font-size: 30px; color: #7C3AED;"></i>
 						</div>
 						<div class="content">
-							<h3 data-i18n="landing.index.safety.rollbackTitle">Rétablir & Reprendre</h3>
-							<p data-i18n="landing.index.safety.rollbackDesc">Les erreurs ne signifient pas tout recommencer. Revenez en arrière et continuez.</p>
+							<h3 data-i18n="landing.index.safety.rollbackTitle">Revenir en arrière et continuer</h3>
+							<p data-i18n="landing.index.safety.rollbackDesc">Les erreurs ne veulent pas dire recommencer à zéro. Revenez en arrière et continuez.</p>
 						</div>
 					</div>
 				</div>
@@ -985,8 +992,8 @@
 							<i class="fas fa-camera feature-icon-animated" style="font-size: 30px; color: #7C3AED;"></i>
 						</div>
 						<div class="content">
-							<h3 data-i18n="landing.index.safety.auditTitle">Traçabilité complète</h3>
-							<p data-i18n="landing.index.safety.auditDesc">Captures d'écran et journaux pour tout. Sachez ce qui s'est passé, quand et par qui.</p>
+							<h3 data-i18n="landing.index.safety.auditTitle">Enregistrement complet de chaque étape</h3>
+							<p data-i18n="landing.index.safety.auditDesc">Captures d'écran et journaux pour tout. Savoir ce qui s'est passé, quand et par qui.</p>
 						</div>
 					</div>
 				</div>
@@ -1000,8 +1007,8 @@
 		<div class="container" style="position: relative; z-index: 2;">
 			<div class="row">
 				<div class="col-lg-6 wow fadeInLeft">
-					<h3 style="color: rgba(255,255,255,0.8); margin-bottom: 10px;" data-i18n="landing.index.cta.notZapier">Pas un autre Zapier</h3>
-					<h2 style="color: #fff; font-size: 32px;"><span data-i18n="landing.index.cta.noApiStart">Quand il n'y a pas d'API, juste un navigateur —</span> <span class="gradient-text-animated">Flyto2</span> <span data-i18n="landing.index.cta.noApiEnd">fonctionne.</span></h2>
+					<h3 style="color: rgba(255,255,255,0.8); margin-bottom: 10px;" data-i18n="landing.index.cta.notZapier">Conçu pour le navigateur</h3>
+					<h2 style="color: #fff; font-size: 32px;"><span data-i18n="landing.index.cta.noApiStart">Quand il n'y a pas de raccourci et qu'il ne reste que le navigateur —</span> <span class="gradient-text-animated">Flyto2</span> <span data-i18n="landing.index.cta.noApiEnd">fonctionne.</span></h2>
 				</div>
 				<div class="col-lg-6 align-self-center text-lg-end wow fadeInRight">
 					<a class="button-2 btn-glow" href="pricing.html" style="margin-top: 20px;" data-i18n="landing.common.cta.viewPricing">Voir les tarifs</a>
@@ -1017,7 +1024,7 @@
 			<div class="row mb-40">
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="section-headding wow fadeInUp">
-						<h2><span data-i18n="landing.index.whoFor.titleStart">Pour qui est-ce</span> <span class="gradient-text-animated">Flyto2</span> <span data-i18n="landing.index.whoFor.titleEnd">Pour qui ?</span></h2>
+						<h2><span data-i18n="landing.index.whoFor.titleStart">À qui est</span> <span class="gradient-text-animated">Flyto2</span> <span data-i18n="landing.index.whoFor.titleEnd">destiné ?</span></h2>
 					</div>
 				</div>
 			</div>
@@ -1029,7 +1036,7 @@
 						</div>
 						<div class="content">
 							<h3 class="text-gradient" data-i18n="landing.index.whoFor.adminTitle">Personnel administratif</h3>
-							<p data-i18n="landing.index.whoFor.adminDesc">Saisie de données, opérations backend, génération de rapports</p>
+							<p data-i18n="landing.index.whoFor.adminDesc">Saisie de données, tâches administratives, création de rapports</p>
 						</div>
 					</div>
 				</div>
@@ -1040,7 +1047,7 @@
 						</div>
 						<div class="content">
 							<h3 class="text-gradient" data-i18n="landing.index.whoFor.opsTitle">Équipes opérationnelles</h3>
-							<p data-i18n="landing.index.whoFor.opsDesc">ERP, commandes, factures, gestion des stocks</p>
+							<p data-i18n="landing.index.whoFor.opsDesc">Commandes, factures, inventaire, opérations quotidiennes</p>
 						</div>
 					</div>
 				</div>
@@ -1050,8 +1057,8 @@
 							<i class="fas fa-bug feature-icon-animated" style="font-size: 40px; color: #7C3AED;"></i>
 						</div>
 						<div class="content">
-							<h3 class="text-gradient" data-i18n="landing.index.whoFor.qaTitle">QA & Tests</h3>
-							<p data-i18n="landing.index.whoFor.qaDesc">Flux de tests répétitifs, tests de régression</p>
+							<h3 class="text-gradient" data-i18n="landing.index.whoFor.qaTitle">Qualité et tests</h3>
+							<p data-i18n="landing.index.whoFor.qaDesc">Tests répétitifs, vérifier les mêmes choses encore et encore</p>
 						</div>
 					</div>
 				</div>
@@ -1061,8 +1068,8 @@
 							<i class="fas fa-rocket hero-icon-float" style="font-size: 40px; color: #7C3AED;"></i>
 						</div>
 						<div class="content">
-							<h3 class="text-gradient" data-i18n="landing.index.whoFor.startupTitle">Petites équipes & Startups</h3>
-							<p data-i18n="landing.index.whoFor.startupDesc">Automatisez sans embaucher d'ingénieurs</p>
+							<h3 class="text-gradient" data-i18n="landing.index.whoFor.startupTitle">Petites équipes et startups</h3>
+							<p data-i18n="landing.index.whoFor.startupDesc">Automatisez sans embaucher de développeurs</p>
 						</div>
 					</div>
 				</div>
@@ -1073,7 +1080,7 @@
 						</div>
 						<div class="content">
 							<h3 class="text-gradient" data-i18n="landing.index.whoFor.enterpriseTitle">Entreprises</h3>
-							<p data-i18n="landing.index.whoFor.enterpriseDesc">Déploiement personnalisé, sécurité de niveau entreprise</p>
+							<p data-i18n="landing.index.whoFor.enterpriseDesc">Installation sur vos serveurs, sécurité de niveau entreprise</p>
 						</div>
 					</div>
 				</div>
@@ -1083,8 +1090,8 @@
 							<i class="fas fa-lock animate-pulse-glow" style="font-size: 40px; color: #7C3AED; border-radius: 50%;"></i>
 						</div>
 						<div class="content">
-							<h3 class="text-gradient" data-i18n="landing.index.whoFor.regulatedTitle">Industries réglementées</h3>
-							<p data-i18n="landing.index.whoFor.regulatedDesc">Finance, santé, gouvernement — contrôle total requis</p>
+							<h3 class="text-gradient" data-i18n="landing.index.whoFor.regulatedTitle">Secteurs qui exigent des registres complets</h3>
+							<p data-i18n="landing.index.whoFor.regulatedDesc">Finance, santé, administration — là où chaque étape doit être documentée</p>
 						</div>
 					</div>
 				</div>
@@ -1112,11 +1119,11 @@
 					</div>
 				</div>
 				<div class="col-lg-5 offset-lg-1 order-lg-1 wow fadeInLeft">
-					<h2 style="margin-bottom: 20px;"><span data-i18n="landing.index.short.titleStart">One Minute.</span> <span class="gradient-text-animated" data-i18n="landing.index.short.titleHighlight">That's All You Need.</span></h2>
-					<p style="font-size: 18px; color: #6b7280; line-height: 1.8; margin-bottom: 30px;" data-i18n="landing.index.short.description">See how Flyto2 works in under a minute. No setup, no explanation — just watch.</p>
+					<h2 style="margin-bottom: 20px;"><span data-i18n="landing.index.short.titleStart">Une minute.</span> <span class="gradient-text-animated" data-i18n="landing.index.short.titleHighlight">C'est tout ce qu'il vous faut.</span></h2>
+					<p style="font-size: 18px; color: #6b7280; line-height: 1.8; margin-bottom: 30px;" data-i18n="landing.index.short.description">Voyez comment Flyto2 fonctionne en moins d'une minute. Pas de configuration, pas d'explication — regardez simplement.</p>
 					<a href="https://www.youtube.com/@Flyto2" target="_blank" rel="noopener" style="color: #7C3AED; text-decoration: none; font-weight: 600; font-size: 16px;">
 						<i class="fab fa-youtube" style="margin-right: 6px;"></i>
-						<span data-i18n="landing.index.short.moreShorts">More videos on YouTube</span>
+						<span data-i18n="landing.index.short.moreShorts">Plus de vidéos sur YouTube</span>
 						<i class="fas fa-arrow-right" style="margin-left: 6px; font-size: 12px;"></i>
 					</a>
 				</div>
@@ -1130,11 +1137,11 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 offset-lg-2 text-center">
-					<h2 class="wow fadeInUp" style="margin-bottom: 30px;"><span data-i18n="landing.index.philosophy.titleStart">Flyto2 ne</span> <span class="gradient-text-animated" data-i18n="landing.index.philosophy.titleHighlight">Remplacer</span> <span data-i18n="landing.index.philosophy.titleEnd">Vous</span></h2>
-					<p class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 18px; margin-bottom: 20px;" data-i18n="landing.index.philosophy.line1">Flyto2 n'est pas question de "laisser le robot se déchaîner."</p>
+					<h2 class="wow fadeInUp" style="margin-bottom: 30px;"><span data-i18n="landing.index.philosophy.titleStart">Flyto2 ne</span> <span class="gradient-text-animated" data-i18n="landing.index.philosophy.titleHighlight">remplace</span> <span data-i18n="landing.index.philosophy.titleEnd">vous</span></h2>
+					<p class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 18px; margin-bottom: 20px;" data-i18n="landing.index.philosophy.line1">Flyto2, ce n'est pas "laisser le robot faire ce qu'il veut".</p>
 					<p class="wow fadeInUp" data-wow-delay="0.2s" style="font-size: 18px; margin-bottom: 30px;" data-i18n="landing.index.philosophy.line2">Son rôle est simple :</p>
 					<div class="wow fadeInUp card-float" data-wow-delay="0.3s" style="background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%); padding: 40px; border-radius: 15px; border-left: 4px solid #7C3AED; box-shadow: 0 10px 40px rgba(124,58,237,0.1);">
-						<p style="font-size: 20px; margin: 0;" data-i18n="landing.index.philosophy.quote">Vous décidez. L'ordinateur exécute. Les problèmes s'arrêtent immédiatement.</p>
+						<p style="font-size: 20px; margin: 0;" data-i18n="landing.index.philosophy.quote">Vous décidez. L'ordinateur exécute. Les problèmes sont arrêtés immédiatement.</p>
 					</div>
 				</div>
 			</div>
@@ -1148,8 +1155,8 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="subscribe-content wow fadeInUp">
-						<h2 data-i18n="landing.index.finalCta.title">Pensez à Flyto2 comme :</h2>
-						<p style="font-size: 24px; font-style: italic;"><span data-i18n="landing.index.finalCta.quote">"Un outil d'automatisation qui suit votre démonstration, mais ne devient jamais incontrôlable."</span><span class="typing-cursor"></span></p>
+						<h2 data-i18n="landing.index.finalCta.title">Voyez Flyto2 comme :</h2>
+						<p style="font-size: 24px; font-style: italic;"><span data-i18n="landing.index.finalCta.quote">"Un outil d'automatisation qui suit vos instructions, mais n'agit jamais de lui-même."</span><span class="typing-cursor"></span></p>
 						<a class="button-1 btn-glow" href="pricing.html" style="margin-top: 30px; display: inline-block;">
 							<i class="fas fa-rocket" style="margin-right: 8px;"></i> <span data-i18n="landing.common.cta.getStartedFree">Commencer gratuitement</span>
 						</a>
@@ -1229,7 +1236,7 @@
 						</div>
 					</div>
 					<div class="col-lg-6">
-						<div class="footer-legal" style="margin-bottom:10px"><a href="privacy.html" style="color:#a0aec0;margin-right:16px;font-size:13px">Privacy Policy</a><a href="terms.html" style="color:#a0aec0;font-size:13px">Terms of Service</a></div><div class="footer_social">
+						<div class="footer-legal" style="margin-bottom:10px"><a href="privacy.html" style="color:#a0aec0;margin-right:16px;font-size:13px"><span data-i18n="landing.common.footer.privacy">Privacy Policy</span></a><a href="terms.html" style="color:#a0aec0;font-size:13px"><span data-i18n="landing.common.footer.terms">Terms of Service</span></a></div><div class="footer_social">
 							<ul>
 								<li><a href="https://github.com/flytohub" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
 										<li><a href="https://www.youtube.com/channel/UCZ9OOqx4RM3Jjy1annWtsRA" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
@@ -1298,23 +1305,60 @@
 				<i class="bi bi-x-lg"></i>
 			</button>
 		</div>
-		<div class="lang-sheet-body">
-			<a href="/" class="lang-sheet-item"><span>English</span></a>
-			<a href="/zh/" class="lang-sheet-item"><span>繁體中文</span></a>
-			<a href="/ja/" class="lang-sheet-item"><span>日本語</span></a>
-			<a href="/ko/" class="lang-sheet-item"><span>한국어</span></a>
-			<a href="/de/" class="lang-sheet-item"><span>Deutsch</span></a>
-			<a href="/es/" class="lang-sheet-item"><span>Español</span></a>
-			<a href="/fr/" class="lang-sheet-item active"><span>Français</span></a>
-			<a href="/it/" class="lang-sheet-item"><span>Italiano</span></a>
-			<a href="/pt/" class="lang-sheet-item"><span>Português</span></a>
-			<a href="/vi/" class="lang-sheet-item"><span>Tiếng Việt</span></a>
-			<a href="/th/" class="lang-sheet-item"><span>ไทย</span></a>
-			<a href="/id/" class="lang-sheet-item"><span>Indonesia</span></a>
-			<a href="/tr/" class="lang-sheet-item"><span>Türkçe</span></a>
-			<a href="/pl/" class="lang-sheet-item"><span>Polski</span></a>
-			<a href="/hi/" class="lang-sheet-item"><span>हिन्दी</span></a>
+		<div class="lang-sheet-search">
+			<i class="bi bi-search"></i>
+			<input type="text" placeholder="Search..." oninput="filterMobileLanguages(this.value)" autocomplete="off">
+		</div>
+		<div class="lang-sheet-body" id="langListMobile">
+			<a href="/" class="lang-sheet-item" data-lang="english"><span class="lang-flag">🇺🇸</span><span class="lang-names"><span class="lang-native">English</span></span></a>
+			<a href="/zh/" class="lang-sheet-item" data-lang="繁體中文 traditional chinese"><span class="lang-flag">🇹🇼</span><span class="lang-names"><span class="lang-native">繁體中文</span><span class="lang-en">Traditional Chinese</span></span></a>
+			<a href="/ja/" class="lang-sheet-item" data-lang="日本語 japanese"><span class="lang-flag">🇯🇵</span><span class="lang-names"><span class="lang-native">日本語</span><span class="lang-en">Japanese</span></span></a>
+			<a href="/ko/" class="lang-sheet-item" data-lang="한국어 korean"><span class="lang-flag">🇰🇷</span><span class="lang-names"><span class="lang-native">한국어</span><span class="lang-en">Korean</span></span></a>
+			<a href="/de/" class="lang-sheet-item" data-lang="deutsch german"><span class="lang-flag">🇩🇪</span><span class="lang-names"><span class="lang-native">Deutsch</span><span class="lang-en">German</span></span></a>
+			<a href="/es/" class="lang-sheet-item" data-lang="español spanish"><span class="lang-flag">🇪🇸</span><span class="lang-names"><span class="lang-native">Español</span><span class="lang-en">Spanish</span></span></a>
+			<a href="/fr/" class="lang-sheet-item active" data-lang="français french"><span class="lang-flag">🇫🇷</span><span class="lang-names"><span class="lang-native">Français</span><span class="lang-en">French</span></span></a>
+			<a href="/it/" class="lang-sheet-item" data-lang="italiano italian"><span class="lang-flag">🇮🇹</span><span class="lang-names"><span class="lang-native">Italiano</span><span class="lang-en">Italian</span></span></a>
+			<a href="/pt/" class="lang-sheet-item" data-lang="português portuguese"><span class="lang-flag">🇧🇷</span><span class="lang-names"><span class="lang-native">Português</span><span class="lang-en">Portuguese</span></span></a>
+			<a href="/vi/" class="lang-sheet-item" data-lang="tiếng việt vietnamese"><span class="lang-flag">🇻🇳</span><span class="lang-names"><span class="lang-native">Tiếng Việt</span><span class="lang-en">Vietnamese</span></span></a>
+			<a href="/th/" class="lang-sheet-item" data-lang="ไทย thai"><span class="lang-flag">🇹🇭</span><span class="lang-names"><span class="lang-native">ไทย</span><span class="lang-en">Thai</span></span></a>
+			<a href="/id/" class="lang-sheet-item" data-lang="indonesia indonesian"><span class="lang-flag">🇮🇩</span><span class="lang-names"><span class="lang-native">Indonesia</span><span class="lang-en">Indonesian</span></span></a>
+			<a href="/tr/" class="lang-sheet-item" data-lang="türkçe turkish"><span class="lang-flag">🇹🇷</span><span class="lang-names"><span class="lang-native">Türkçe</span><span class="lang-en">Turkish</span></span></a>
+			<a href="/pl/" class="lang-sheet-item" data-lang="polski polish"><span class="lang-flag">🇵🇱</span><span class="lang-names"><span class="lang-native">Polski</span><span class="lang-en">Polish</span></span></a>
+			<a href="/hi/" class="lang-sheet-item" data-lang="हिन्दी hindi"><span class="lang-flag">🇮🇳</span><span class="lang-names"><span class="lang-native">हिन्दी</span><span class="lang-en">Hindi</span></span></a>
 		</div>
 	</div>
+	<script>
+	function toggleLangDropdown(e) {
+		e.stopPropagation();
+		var dd = document.getElementById('langDropdownDesktop');
+		var sw = document.getElementById('langSwitcher');
+		var isOpen = sw.classList.contains('open');
+		if (isOpen) { sw.classList.remove('open'); }
+		else { sw.classList.add('open'); dd.querySelector('.lang-search').focus(); }
+	}
+	document.addEventListener('click', function(e) {
+		var sw = document.getElementById('langSwitcher');
+		if (sw && !sw.contains(e.target)) sw.classList.remove('open');
+	});
+	function filterLanguages(q) {
+		q = q.toLowerCase();
+		var items = document.querySelectorAll('#langListDesktop .lang-option');
+		var found = 0;
+		items.forEach(function(el) {
+			var match = el.getAttribute('data-lang').toLowerCase().indexOf(q) !== -1;
+			el.style.display = match ? '' : 'none';
+			if (match) found++;
+		});
+		document.querySelector('.lang-no-result').style.display = found ? 'none' : 'block';
+	}
+	function filterMobileLanguages(q) {
+		q = q.toLowerCase();
+		var items = document.querySelectorAll('#langListMobile .lang-sheet-item');
+		items.forEach(function(el) {
+			var match = el.getAttribute('data-lang').toLowerCase().indexOf(q) !== -1;
+			el.style.display = match ? '' : 'none';
+		});
+	}
+	</script>
 </body>
 </html>

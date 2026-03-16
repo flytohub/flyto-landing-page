@@ -24,8 +24,8 @@
 	<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" media="print" onload="this.media='all'">
 	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"></noscript>
-	<title>Flyto2 Web App - Accedi ai tuoi Workflow Ovunque</title>
-	<meta name="description" content="Accedi all&#39;applicazione web Flyto2. Gestisci i tuoi workflow, visualizza la cronologia di esecuzione e collabora con il tuo team da qualsiasi browser.">
+	<title>Flyto2 App - Automatizza in Secondi, Vedi Ogni Passaggio</title>
+	<meta name="description" content="App desktop Flyto2. Automatizza le attività del browser in pochi secondi con screenshot ad ogni passaggio. Gira in locale, i tuoi dati non escono mai.">
 
 	<!-- Content Security Policy -->
 	<meta http-equiv="Content-Security-Policy" content="
@@ -62,12 +62,13 @@
 	<link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/app.html" />
 	<link rel="alternate" hreflang="x-default" href="https://flyto2.com/app.html" />
 	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+	<meta name="keywords" content="flyto2 app, automazione desktop, automazione browser, strumento offline">
 
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="https://flyto2.com/it/app.html">
-	<meta property="og:title" content="Flyto2 Web App - Accedi ai tuoi Workflow Ovunque">
-	<meta property="og:description" content="Accedi all&#39;applicazione web Flyto2. Gestisci i tuoi workflow, visualizza la cronologia di esecuzione e collabora con il tuo team da qualsiasi browser.">
+	<meta property="og:title" content="Flyto2 App - Automatizza in Secondi, Vedi Ogni Passaggio">
+	<meta property="og:description" content="App desktop Flyto2. Automatizza le attività del browser in pochi secondi con screenshot ad ogni passaggio. Gira in locale, i tuoi dati non escono mai.">
 	<meta property="og:image" content="https://flyto2.com/assets/img/og-image.png">
 	<meta property="og:site_name" content="Flyto2">
 	<meta property="og:locale" content="it_IT">
@@ -75,8 +76,8 @@
 	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@flyto2">
-	<meta name="twitter:title" content="Flyto2 Web App - Accedi ai tuoi Workflow Ovunque">
-	<meta name="twitter:description" content="Accedi all&#39;applicazione web Flyto2. Gestisci i tuoi workflow, visualizza la cronologia di esecuzione e collabora con il tuo team da qualsiasi browser.">
+	<meta name="twitter:title" content="Flyto2 App - Automatizza in Secondi, Vedi Ogni Passaggio">
+	<meta name="twitter:description" content="App desktop Flyto2. Automatizza le attività del browser in pochi secondi con screenshot ad ogni passaggio. Gira in locale, i tuoi dati non escono mai.">
 	<meta name="twitter:image" content="https://flyto2.com/assets/img/og-image.png">
 	<meta name="twitter:image:alt" content="Flyto2 - No-Code Automation Platform">
 
@@ -842,20 +843,20 @@
 		<div class="container" style="position: relative; z-index: 2;">
 			<div class="row">
 				<div class="col-lg-10 offset-lg-1 text-center">
-					<h1 class="hero-title wow fadeInUp" data-i18n="landing.app.hero.title">Scarica Flyto2</h1>
-					<p class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 20px; color: #c4b5fd; margin-bottom: 30px;" data-i18n="landing.app.hero.subtitle">Automatizza i tuoi workflow del browser. Funziona offline, i tuoi dati rimangono privati.</p>
+					<h1 class="hero-title wow fadeInUp" data-i18n="landing.app.hero.title">Automatizza in secondi. Vedi ogni passaggio.</h1>
+					<p class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 20px; color: #c4b5fd; margin-bottom: 30px;" data-i18n="landing.app.hero.subtitle">Automatizza le attività del browser in pochi secondi — con screenshot ad ogni passaggio, tempi e replay con un clic. Gira in locale. I tuoi dati non escono mai.</p>
 
 					<!-- Status badge - controlled by Firebase -->
 					<div class="wow fadeInUp" data-wow-delay="0.2s">
 						<span class="status-badge coming-soon" id="status-badge">
 							<i class="fas fa-rocket"></i>
-							<span id="status-text" data-i18n="landing.app.hero.comingSoon">In arrivo</span>
+							<span id="status-text" data-i18n="landing.app.hero.comingSoon">Prossimamente</span>
 						</span>
 					</div>
 
 					<!-- Coming Soon: Notify Form -->
 					<div id="coming-soon-content" class="wow fadeInUp" data-wow-delay="0.3s">
-						<p style="color: rgba(255,255,255,0.8); font-size: 16px; margin-bottom: 25px;" data-i18n="landing.app.hero.notifyDesc">Sia il primo a sapere quando l'app desktop sarà disponibile.</p>
+						<p style="color: rgba(255,255,255,0.8); font-size: 16px; margin-bottom: 25px;" data-i18n="landing.app.hero.notifyDesc">Sii il primo a sapere quando l'app desktop verrà lanciata.</p>
 						<form class="notify-form" id="notify-form">
 							<div class="input-group">
 								<input type="email" id="notify-email" placeholder="Enter your email" data-i18n-placeholder="landing.app.hero.emailPlaceholder" required>
@@ -865,12 +866,12 @@
 							</div>
 						</form>
 						<p class="notify-success" id="notify-success">
-							<i class="fas fa-check-circle"></i> <span data-i18n="landing.app.hero.notifySuccess">È nella lista! Le invieremo un'email quando sarà pronto.</span>
+							<i class="fas fa-check-circle"></i> <span data-i18n="landing.app.hero.notifySuccess">Sei nella lista! Ti invieremo un'email quando sarà pronto.</span>
 						</p>
 						<p style="margin-top: 20px; color: rgba(255,255,255,0.5); font-size: 14px;">
 							<i class="fas fa-code" style="margin-right: 8px;"></i>
-							<span data-i18n="landing.app.hero.cliAvailable">Vuole iniziare ora?</span>
-							<a href="download.html" style="color: #a78bfa; text-decoration: underline;" data-i18n="landing.app.hero.tryCli">Provi Flyto2 Core (CLI)</a>
+							<span data-i18n="landing.app.hero.cliAvailable">Oppure prova la riga di comando:</span>
+							<a href="download.html" style="color: #a78bfa; text-decoration: underline;" data-i18n="landing.app.hero.tryCli">Prova Flyto2 Core (CLI)</a>
 						</p>
 					</div>
 
@@ -887,7 +888,7 @@
 						</div>
 						<p class="wow fadeInUp" data-wow-delay="0.4s" style="margin-top: 25px; color: rgba(255,255,255,0.6); font-size: 14px;">
 							<i class="fas fa-shield-alt" style="margin-right: 5px;"></i>
-							<span data-i18n="landing.app.hero.proNote">Download gratuito. Licenza Pro richiesta per tutte le funzionalita.</span>
+							<span data-i18n="landing.app.hero.proNote">Gratuito e codice aperto. Licenza Pro per funzionalità avanzate.</span>
 						</p>
 					</div>
 				</div>
@@ -906,8 +907,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 text-center">
-					<h2 class="section-title wow fadeInUp" data-i18n="landing.app.features.title">Cosa sta arrivando</h2>
-					<p class="section-subtitle wow fadeInUp" data-wow-delay="0.1s" data-i18n="landing.app.features.subtitle">Un'esperienza desktop potente per l'automazione del flusso di lavoro</p>
+					<h2 class="section-title wow fadeInUp" data-i18n="landing.app.features.title">Perché Scelgono Flyto2</h2>
+					<p class="section-subtitle wow fadeInUp" data-wow-delay="0.1s" data-i18n="landing.app.features.subtitle">Capacità reali, non promesse di marketing</p>
 				</div>
 			</div>
 			<div class="row">
@@ -916,8 +917,8 @@
 						<div class="icon">
 							<i class="fas fa-desktop"></i>
 						</div>
-						<h4 data-i18n="landing.app.features.visual">Costruttore di flussi di lavoro visivo</h4>
-						<p data-i18n="landing.app.features.visualDesc">Interfaccia drag-and-drop per creare flussi di lavoro automatizzati senza scrivere codice.</p>
+						<h4 data-i18n="landing.app.features.visual">Vedi Ogni Passaggio</h4>
+						<p data-i18n="landing.app.features.visualDesc">Ogni passaggio è registrato con screenshot, tempi e contesto. Quando qualcosa fallisce, vedi esattamente quale passaggio e perché.</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 mb-30">
@@ -925,8 +926,8 @@
 						<div class="icon">
 							<i class="fas fa-robot"></i>
 						</div>
-						<h4 data-i18n="landing.app.features.browser">Automazione del browser</h4>
-						<p data-i18n="landing.app.features.browserDesc">Registra e riproduci azioni del browser. Automatizza compiti web ripetitivi.</p>
+						<h4 data-i18n="landing.app.features.browser">Velocissimo</h4>
+						<p data-i18n="landing.app.features.browserDesc">Apri una pagina, raccogli dati, salva risultati — tutto in secondi. Ogni passaggio cronometrato automaticamente.</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 mb-30">
@@ -934,8 +935,8 @@
 						<div class="icon">
 							<i class="fas fa-rotate"></i>
 						</div>
-						<h4 data-i18n="landing.app.features.schedule">Compiti programmati</h4>
-						<p data-i18n="landing.app.features.scheduleDesc">Esegua flussi di lavoro a orari prestabiliti. Imposti e dimentichi.</p>
+						<h4 data-i18n="landing.app.features.schedule">Replay con Un Clic</h4>
+						<p data-i18n="landing.app.features.scheduleDesc">Riesegui qualsiasi flusso dall'inizio o da qualsiasi passaggio. Cambia impostazioni, metti in pausa in qualsiasi punto, confronta risultati.</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 mb-30">
@@ -943,8 +944,8 @@
 						<div class="icon">
 							<i class="fas fa-cubes"></i>
 						</div>
-						<h4 data-i18n="landing.app.features.modules">Oltre 250 moduli</h4>
-						<p data-i18n="landing.app.features.modulesDesc">Moduli integrati per elaborazione dati, operazioni sui file, chiamate API e altro.</p>
+						<h4 data-i18n="landing.app.features.modules">250+ Azioni Integrate</h4>
+						<p data-i18n="landing.app.features.modulesDesc">Non solo browser — gestione file, immagini, richieste web, database, notifiche e altro. 31 ricette pronte incluse.</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 mb-30">
@@ -952,8 +953,8 @@
 						<div class="icon">
 							<i class="fas fa-lock"></i>
 						</div>
-						<h4 data-i18n="landing.app.features.secure">Sicuro e privato</h4>
-						<p data-i18n="landing.app.features.secureDesc">Nessuna dipendenza dal cloud. I suoi flussi di lavoro e dati restano sul suo computer.</p>
+						<h4 data-i18n="landing.app.features.secure">Privato e Locale</h4>
+						<p data-i18n="landing.app.features.secureDesc">Niente internet necessario. Nessun dato caricato da nessuna parte. I tuoi flussi e dati raccolti restano sulla tua macchina.</p>
 					</div>
 				</div>
 			</div>
@@ -965,7 +966,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 text-center">
-					<h2 class="section-title wow fadeInUp" data-i18n="landing.app.platforms.title">Tutte le Piattaforme</h2>
+					<h2 class="section-title wow fadeInUp" data-i18n="landing.app.platforms.title">Piattaforme Disponibili</h2>
 					<p class="section-subtitle wow fadeInUp" data-wow-delay="0.1s" data-i18n="landing.app.platforms.subtitle">Scegli il tuo sistema operativo e architettura</p>
 				</div>
 			</div>
@@ -979,7 +980,7 @@
 						<div class="platform-name">macOS</div>
 						<div class="platform-arch">Apple Silicon (M1/M2/M3/M4)</div>
 						<div class="platform-size" id="size-macos-arm">117 MB</div>
-						<span class="coming-soon-tag" data-i18n="landing.app.platforms.comingSoon">In arrivo</span>
+						<span class="coming-soon-tag" data-i18n="landing.app.platforms.comingSoon">Disponibile Ora</span>
 					</div>
 				</div>
 				<!-- Windows -->
@@ -991,7 +992,7 @@
 						<div class="platform-name">Windows</div>
 						<div class="platform-arch">64-bit (x64)</div>
 						<div class="platform-size" id="size-windows">113 MB</div>
-						<span class="coming-soon-tag" data-i18n="landing.app.platforms.comingSoon">In arrivo</span>
+						<span class="coming-soon-tag" data-i18n="landing.app.platforms.comingSoon">Disponibile Ora</span>
 					</div>
 				</div>
 				<!-- Linux x64 -->
@@ -1003,7 +1004,7 @@
 						<div class="platform-name">Linux</div>
 						<div class="platform-arch">x64 (AMD64)</div>
 						<div class="platform-size" id="size-linux">225 MB</div>
-						<span class="coming-soon-tag" data-i18n="landing.app.platforms.comingSoon">In arrivo</span>
+						<span class="coming-soon-tag" data-i18n="landing.app.platforms.comingSoon">Disponibile Ora</span>
 					</div>
 				</div>
 			</div>
@@ -1012,10 +1013,10 @@
 				<div class="col-lg-12 text-center">
 					<p style="color: #6b7280; margin-bottom: 20px;">
 						<i class="fas fa-code" style="color: #7c3aed;"></i>
-						<span data-i18n="landing.app.platforms.devNote">Cerca un pacchetto Python o un deployment Docker?</span>
+						<span data-i18n="landing.app.platforms.devNote">Cerchi il pacchetto Python o l'installazione Docker?</span>
 					</p>
 					<a href="download.html" class="btn-platform-download" style="background: linear-gradient(135deg, #1e0a3c 0%, #4c1d95 100%);">
-						<i class="fas fa-terminal"></i> <span data-i18n="landing.app.platforms.devDownloads">Download per sviluppatori</span>
+						<i class="fas fa-terminal"></i> <span data-i18n="landing.app.platforms.devDownloads">Download per Sviluppatori</span>
 					</a>
 				</div>
 			</div>
@@ -1036,8 +1037,8 @@
 						<h4><i class="fab fa-apple"></i> <span data-i18n="landing.app.requirements.macosTitle">macOS</span></h4>
 						<ul class="req-list">
 							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.macosVersion">macOS 11 (Big Sur) o successivo</span></li>
-							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.macosProcessor">Processore Apple Silicon o Intel</span></li>
-							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.ram">Minimo 4 GB di RAM</span></li>
+							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.macosProcessor">Apple Silicon o processore Intel</span></li>
+							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.ram">4 GB di RAM minimo</span></li>
 							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.disk">500 MB di spazio su disco</span></li>
 						</ul>
 					</div>
@@ -1048,7 +1049,7 @@
 						<ul class="req-list">
 							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.windowsVersion">Windows 10 (64-bit) o successivo</span></li>
 							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.windowsProcessor">Processore x64</span></li>
-							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.ram">Minimo 4 GB di RAM</span></li>
+							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.ram">4 GB di RAM minimo</span></li>
 							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.disk">500 MB di spazio su disco</span></li>
 						</ul>
 					</div>
@@ -1059,7 +1060,7 @@
 						<ul class="req-list">
 							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.linuxVersion">Ubuntu 20.04+ / Debian 11+</span></li>
 							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.linuxProcessor">Processore x64 o ARM64</span></li>
-							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.ram">Minimo 4 GB di RAM</span></li>
+							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.ram">4 GB di RAM minimo</span></li>
 							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.disk">500 MB di spazio su disco</span></li>
 						</ul>
 					</div>
@@ -1131,7 +1132,7 @@
 						</div>
 					</div>
 					<div class="col-lg-6">
-						<div class="footer-legal" style="margin-bottom:10px"><a href="privacy.html" style="color:#a0aec0;margin-right:16px;font-size:13px">Privacy Policy</a><a href="terms.html" style="color:#a0aec0;font-size:13px">Terms of Service</a></div><div class="footer_social">
+						<div class="footer-legal" style="margin-bottom:10px"><a href="privacy.html" style="color:#a0aec0;margin-right:16px;font-size:13px"><span data-i18n="landing.common.footer.privacy">Privacy Policy</span></a><a href="terms.html" style="color:#a0aec0;font-size:13px"><span data-i18n="landing.common.footer.terms">Terms of Service</span></a></div><div class="footer_social">
 							<ul>
 								<li><a href="https://github.com/flytohub" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
 								<li><a href="https://www.youtube.com/channel/UCZ9OOqx4RM3Jjy1annWtsRA" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>

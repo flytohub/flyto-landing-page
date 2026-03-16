@@ -24,8 +24,8 @@
 	<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" media="print" onload="this.media='all'">
 	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"></noscript>
-	<title>Flyto2 Web アプリ - どこでもワークフローにアクセス</title>
-	<meta name="description" content="Flyto2 Web アプリにアクセス。ワークフローを管理し、実行履歴を確認し、チームとブラウザからコラボレーション。">
+	<title>Flyto2アプリ - 数秒で自動化、すべてのステップが見える</title>
+	<meta name="description" content="Flyto2デスクトップアプリ。ブラウザの作業を数秒で自動化。すべてのステップをスクリーンショット付きで記録。パソコンだけで動き、データは外に出ません。">
 
 	<!-- Content Security Policy -->
 	<meta http-equiv="Content-Security-Policy" content="
@@ -62,12 +62,13 @@
 	<link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/app.html" />
 	<link rel="alternate" hreflang="x-default" href="https://flyto2.com/app.html" />
 	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+	<meta name="keywords" content="flyto2 アプリ, デスクトップ自動化, ブラウザ自動化, オフラインツール">
 
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="https://flyto2.com/ja/app.html">
-	<meta property="og:title" content="Flyto2 Web アプリ - どこでもワークフローにアクセス">
-	<meta property="og:description" content="Flyto2 Web アプリにアクセス。ワークフローを管理し、実行履歴を確認し、チームとブラウザからコラボレーション。">
+	<meta property="og:title" content="Flyto2アプリ - 数秒で自動化、すべてのステップが見える">
+	<meta property="og:description" content="Flyto2デスクトップアプリ。ブラウザの作業を数秒で自動化。すべてのステップをスクリーンショット付きで記録。パソコンだけで動き、データは外に出ません。">
 	<meta property="og:image" content="https://flyto2.com/assets/img/og-image.png">
 	<meta property="og:site_name" content="Flyto2">
 	<meta property="og:locale" content="ja_JP">
@@ -75,8 +76,8 @@
 	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@flyto2">
-	<meta name="twitter:title" content="Flyto2 Web アプリ - どこでもワークフローにアクセス">
-	<meta name="twitter:description" content="Flyto2 Web アプリにアクセス。ワークフローを管理し、実行履歴を確認し、チームとブラウザからコラボレーション。">
+	<meta name="twitter:title" content="Flyto2アプリ - 数秒で自動化、すべてのステップが見える">
+	<meta name="twitter:description" content="Flyto2デスクトップアプリ。ブラウザの作業を数秒で自動化。すべてのステップをスクリーンショット付きで記録。パソコンだけで動き、データは外に出ません。">
 	<meta name="twitter:image" content="https://flyto2.com/assets/img/og-image.png">
 	<meta name="twitter:image:alt" content="Flyto2 - No-Code Automation Platform">
 
@@ -842,8 +843,8 @@
 		<div class="container" style="position: relative; z-index: 2;">
 			<div class="row">
 				<div class="col-lg-10 offset-lg-1 text-center">
-					<h1 class="hero-title wow fadeInUp" data-i18n="landing.app.hero.title">Flyto2をダウンロード</h1>
-					<p class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 20px; color: #c4b5fd; margin-bottom: 30px;" data-i18n="landing.app.hero.subtitle">ブラウザワークフローを自動化。オフラインで動作し、データはプライベートに保持。</p>
+					<h1 class="hero-title wow fadeInUp" data-i18n="landing.app.hero.title">数秒で自動化。すべてのステップが見える。</h1>
+					<p class="wow fadeInUp" data-wow-delay="0.1s" style="font-size: 20px; color: #c4b5fd; margin-bottom: 30px;" data-i18n="landing.app.hero.subtitle">ブラウザの作業を数秒で自動化。すべてのステップをスクリーンショットと時間付きで記録。ワンクリックで再実行。パソコンだけで動き、データは外に出ません。</p>
 
 					<!-- Status badge - controlled by Firebase -->
 					<div class="wow fadeInUp" data-wow-delay="0.2s">
@@ -855,22 +856,22 @@
 
 					<!-- Coming Soon: Notify Form -->
 					<div id="coming-soon-content" class="wow fadeInUp" data-wow-delay="0.3s">
-						<p style="color: rgba(255,255,255,0.8); font-size: 16px; margin-bottom: 25px;" data-i18n="landing.app.hero.notifyDesc">デスクトップアプリがリリースされたら、いち早くお知らせします。</p>
+						<p style="color: rgba(255,255,255,0.8); font-size: 16px; margin-bottom: 25px;" data-i18n="landing.app.hero.notifyDesc">デスクトップアプリの公開をいち早くお知らせします。</p>
 						<form class="notify-form" id="notify-form">
 							<div class="input-group">
 								<input type="email" id="notify-email" placeholder="Enter your email" data-i18n-placeholder="landing.app.hero.emailPlaceholder" required>
 								<button type="submit" id="notify-btn">
-									<i class="fas fa-bell"></i> <span data-i18n="landing.app.hero.notifyMe">通知する</span>
+									<i class="fas fa-bell"></i> <span data-i18n="landing.app.hero.notifyMe">通知を受け取る</span>
 								</button>
 							</div>
 						</form>
 						<p class="notify-success" id="notify-success">
-							<i class="fas fa-check-circle"></i> <span data-i18n="landing.app.hero.notifySuccess">リストに追加されました！準備ができたらメールでお知らせします。</span>
+							<i class="fas fa-check-circle"></i> <span data-i18n="landing.app.hero.notifySuccess">リストに登録しました！準備ができたらメールでお知らせします。</span>
 						</p>
 						<p style="margin-top: 20px; color: rgba(255,255,255,0.5); font-size: 14px;">
 							<i class="fas fa-code" style="margin-right: 8px;"></i>
-							<span data-i18n="landing.app.hero.cliAvailable">今すぐ始めたい？</span>
-							<a href="download.html" style="color: #a78bfa; text-decoration: underline;" data-i18n="landing.app.hero.tryCli">Flyto2 Core (CLI) を試す</a>
+							<span data-i18n="landing.app.hero.cliAvailable">またはコマンドラインで試す：</span>
+							<a href="download.html" style="color: #a78bfa; text-decoration: underline;" data-i18n="landing.app.hero.tryCli">Flyto2 Core（コマンドライン版）を試す</a>
 						</p>
 					</div>
 
@@ -887,7 +888,7 @@
 						</div>
 						<p class="wow fadeInUp" data-wow-delay="0.4s" style="margin-top: 25px; color: rgba(255,255,255,0.6); font-size: 14px;">
 							<i class="fas fa-shield-alt" style="margin-right: 5px;"></i>
-							<span data-i18n="landing.app.hero.proNote">ダウンロード無料。全機能のご利用にはProライセンスが必要です。</span>
+							<span data-i18n="landing.app.hero.proNote">無料でソースコード公開。上位機能はProライセンスで。</span>
 						</p>
 					</div>
 				</div>
@@ -906,8 +907,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 text-center">
-					<h2 class="section-title wow fadeInUp" data-i18n="landing.app.features.title">今後の予定</h2>
-					<p class="section-subtitle wow fadeInUp" data-wow-delay="0.1s" data-i18n="landing.app.features.subtitle">ワークフロー自動化のための強力なデスクトップ体験</p>
+					<h2 class="section-title wow fadeInUp" data-i18n="landing.app.features.title">みんながFlyto2を選ぶ理由</h2>
+					<p class="section-subtitle wow fadeInUp" data-wow-delay="0.1s" data-i18n="landing.app.features.subtitle">本当の機能です。宣伝文句ではありません</p>
 				</div>
 			</div>
 			<div class="row">
@@ -916,8 +917,8 @@
 						<div class="icon">
 							<i class="fas fa-desktop"></i>
 						</div>
-						<h4 data-i18n="landing.app.features.visual">ビジュアルワークフロービルダー</h4>
-						<p data-i18n="landing.app.features.visualDesc">コードを書かずに自動化ワークフローを作成できるドラッグ＆ドロップインターフェース。</p>
+						<h4 data-i18n="landing.app.features.visual">すべてのステップが見える</h4>
+						<p data-i18n="landing.app.features.visualDesc">すべてのステップがスクリーンショット、時間、状況付きで記録されます。何か失敗したとき、どのステップでなぜ失敗したかがすぐわかります。</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 mb-30">
@@ -925,8 +926,8 @@
 						<div class="icon">
 							<i class="fas fa-robot"></i>
 						</div>
-						<h4 data-i18n="landing.app.features.browser">ブラウザ自動化</h4>
-						<p data-i18n="landing.app.features.browserDesc">ブラウザ操作を記録して再生。繰り返しのウェブ作業を自動化。</p>
+						<h4 data-i18n="landing.app.features.browser">超高速</h4>
+						<p data-i18n="landing.app.features.browserDesc">ページを開いて、データを集めて、結果を保存——すべて数秒で。すべてのステップの時間が自動で計測されます。</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 mb-30">
@@ -934,8 +935,8 @@
 						<div class="icon">
 							<i class="fas fa-rotate"></i>
 						</div>
-						<h4 data-i18n="landing.app.features.schedule">スケジュールタスク</h4>
-						<p data-i18n="landing.app.features.scheduleDesc">スケジュールに基づいてワークフローを実行。設定して忘れるだけ。</p>
+						<h4 data-i18n="landing.app.features.schedule">ワンクリックで再実行</h4>
+						<p data-i18n="landing.app.features.scheduleDesc">どの作業も最初から、または途中のステップから再実行できます。設定を変えたり、好きなところで止めたり、結果を比較したり。</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 mb-30">
@@ -943,8 +944,8 @@
 						<div class="icon">
 							<i class="fas fa-cubes"></i>
 						</div>
-						<h4 data-i18n="landing.app.features.modules">250以上のモジュール</h4>
-						<p data-i18n="landing.app.features.modulesDesc">データ処理、ファイル操作、API呼び出しなどの組み込みモジュール。</p>
+						<h4 data-i18n="landing.app.features.modules">250以上の組み込みアクション</h4>
+						<p data-i18n="landing.app.features.modulesDesc">ブラウザだけじゃありません。ファイル操作、画像処理、ウェブリクエスト、データベース、通知など。すぐ使えるレシピも31個付き。</p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 mb-30">
@@ -952,8 +953,8 @@
 						<div class="icon">
 							<i class="fas fa-lock"></i>
 						</div>
-						<h4 data-i18n="landing.app.features.secure">安全でプライベート</h4>
-						<p data-i18n="landing.app.features.secureDesc">クラウド依存なし。ワークフローとデータはマシンに留まります。</p>
+						<h4 data-i18n="landing.app.features.secure">プライベート＆ローカル</h4>
+						<p data-i18n="landing.app.features.secureDesc">ネット接続不要。データのアップロードなし。作業内容も集めたデータも、すべてあなたのパソコンに残ります。</p>
 					</div>
 				</div>
 			</div>
@@ -965,8 +966,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 text-center">
-					<h2 class="section-title wow fadeInUp" data-i18n="landing.app.platforms.title">すべてのプラットフォーム</h2>
-					<p class="section-subtitle wow fadeInUp" data-wow-delay="0.1s" data-i18n="landing.app.platforms.subtitle">お使いのOSとアーキテクチャを選択</p>
+					<h2 class="section-title wow fadeInUp" data-i18n="landing.app.platforms.title">対応プラットフォーム</h2>
+					<p class="section-subtitle wow fadeInUp" data-wow-delay="0.1s" data-i18n="landing.app.platforms.subtitle">お使いのOSとプロセッサーを選んでください</p>
 				</div>
 			</div>
 			<div class="row" id="platform-cards">
@@ -979,7 +980,7 @@
 						<div class="platform-name">macOS</div>
 						<div class="platform-arch">Apple Silicon (M1/M2/M3/M4)</div>
 						<div class="platform-size" id="size-macos-arm">117 MB</div>
-						<span class="coming-soon-tag" data-i18n="landing.app.platforms.comingSoon">近日公開</span>
+						<span class="coming-soon-tag" data-i18n="landing.app.platforms.comingSoon">公開中</span>
 					</div>
 				</div>
 				<!-- Windows -->
@@ -991,7 +992,7 @@
 						<div class="platform-name">Windows</div>
 						<div class="platform-arch">64-bit (x64)</div>
 						<div class="platform-size" id="size-windows">113 MB</div>
-						<span class="coming-soon-tag" data-i18n="landing.app.platforms.comingSoon">近日公開</span>
+						<span class="coming-soon-tag" data-i18n="landing.app.platforms.comingSoon">公開中</span>
 					</div>
 				</div>
 				<!-- Linux x64 -->
@@ -1003,7 +1004,7 @@
 						<div class="platform-name">Linux</div>
 						<div class="platform-arch">x64 (AMD64)</div>
 						<div class="platform-size" id="size-linux">225 MB</div>
-						<span class="coming-soon-tag" data-i18n="landing.app.platforms.comingSoon">近日公開</span>
+						<span class="coming-soon-tag" data-i18n="landing.app.platforms.comingSoon">公開中</span>
 					</div>
 				</div>
 			</div>
@@ -1012,7 +1013,7 @@
 				<div class="col-lg-12 text-center">
 					<p style="color: #6b7280; margin-bottom: 20px;">
 						<i class="fas fa-code" style="color: #7c3aed;"></i>
-						<span data-i18n="landing.app.platforms.devNote">PythonパッケージやDockerデプロイメントをお探しですか？</span>
+						<span data-i18n="landing.app.platforms.devNote">パッケージやサーバー用のインストールをお探しですか？</span>
 					</p>
 					<a href="download.html" class="btn-platform-download" style="background: linear-gradient(135deg, #1e0a3c 0%, #4c1d95 100%);">
 						<i class="fas fa-terminal"></i> <span data-i18n="landing.app.platforms.devDownloads">開発者向けダウンロード</span>
@@ -1027,7 +1028,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 text-center mb-50">
-					<h2 class="section-title wow fadeInUp" data-i18n="landing.app.requirements.title">システム要件</h2>
+					<h2 class="section-title wow fadeInUp" data-i18n="landing.app.requirements.title">必要な環境</h2>
 				</div>
 			</div>
 			<div class="row">
@@ -1035,10 +1036,10 @@
 					<div class="req-card wow fadeInUp" data-wow-delay="0.1s">
 						<h4><i class="fab fa-apple"></i> <span data-i18n="landing.app.requirements.macosTitle">macOS</span></h4>
 						<ul class="req-list">
-							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.macosVersion">macOS 11 (Big Sur) 以降</span></li>
-							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.macosProcessor">Apple SiliconまたはIntelプロセッサ</span></li>
-							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.ram">最低4 GBのRAM</span></li>
-							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.disk">500 MBのディスク空き容量</span></li>
+							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.macosVersion">macOS 11（Big Sur）以降</span></li>
+							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.macosProcessor">Apple SiliconまたはIntelプロセッサー</span></li>
+							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.ram">メモリ 4 GB以上</span></li>
+							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.disk">ディスク空き容量 500 MB</span></li>
 						</ul>
 					</div>
 				</div>
@@ -1046,10 +1047,10 @@
 					<div class="req-card wow fadeInUp" data-wow-delay="0.2s">
 						<h4><i class="fab fa-windows"></i> <span data-i18n="landing.app.requirements.windowsTitle">Windows</span></h4>
 						<ul class="req-list">
-							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.windowsVersion">Windows 10 (64-bit) 以降</span></li>
-							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.windowsProcessor">x64プロセッサ</span></li>
-							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.ram">最低4 GBのRAM</span></li>
-							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.disk">500 MBのディスク空き容量</span></li>
+							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.windowsVersion">Windows 10（64ビット）以降</span></li>
+							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.windowsProcessor">x64プロセッサー</span></li>
+							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.ram">メモリ 4 GB以上</span></li>
+							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.disk">ディスク空き容量 500 MB</span></li>
 						</ul>
 					</div>
 				</div>
@@ -1057,10 +1058,10 @@
 					<div class="req-card wow fadeInUp" data-wow-delay="0.3s">
 						<h4><i class="fab fa-linux"></i> <span data-i18n="landing.app.requirements.linuxTitle">Linux</span></h4>
 						<ul class="req-list">
-							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.linuxVersion">Ubuntu 20.04+ / Debian 11+</span></li>
-							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.linuxProcessor">x64またはARM64プロセッサ</span></li>
-							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.ram">最低4 GBのRAM</span></li>
-							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.disk">500 MBのディスク空き容量</span></li>
+							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.linuxVersion">Ubuntu 20.04以降 / Debian 11以降</span></li>
+							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.linuxProcessor">x64またはARM64プロセッサー</span></li>
+							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.ram">メモリ 4 GB以上</span></li>
+							<li><i class="fas fa-check-circle"></i> <span data-i18n="landing.app.requirements.disk">ディスク空き容量 500 MB</span></li>
 						</ul>
 					</div>
 				</div>
@@ -1131,7 +1132,7 @@
 						</div>
 					</div>
 					<div class="col-lg-6">
-						<div class="footer-legal" style="margin-bottom:10px"><a href="privacy.html" style="color:#a0aec0;margin-right:16px;font-size:13px">Privacy Policy</a><a href="terms.html" style="color:#a0aec0;font-size:13px">Terms of Service</a></div><div class="footer_social">
+						<div class="footer-legal" style="margin-bottom:10px"><a href="privacy.html" style="color:#a0aec0;margin-right:16px;font-size:13px"><span data-i18n="landing.common.footer.privacy">Privacy Policy</span></a><a href="terms.html" style="color:#a0aec0;font-size:13px"><span data-i18n="landing.common.footer.terms">Terms of Service</span></a></div><div class="footer_social">
 							<ul>
 								<li><a href="https://github.com/flytohub" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
 								<li><a href="https://www.youtube.com/channel/UCZ9OOqx4RM3Jjy1annWtsRA" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
@@ -1363,7 +1364,7 @@
 			} catch (err) {
 				btn.innerHTML = '<i class="fas fa-times"></i> Failed';
 				setTimeout(() => {
-					btn.innerHTML = '<i class="fas fa-bell"></i> <span data-i18n="landing.app.hero.notifyMe">通知する</span>';
+					btn.innerHTML = '<i class="fas fa-bell"></i> <span data-i18n="landing.app.hero.notifyMe">通知を受け取る</span>';
 					btn.disabled = false;
 				}, 2000);
 			}

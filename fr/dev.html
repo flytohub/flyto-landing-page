@@ -104,6 +104,27 @@
 		]
 	}
 	</script>
+	<!-- Structured Data - BreadcrumbList -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		"itemListElement": [
+			{
+				"@type": "ListItem",
+				"position": 1,
+				"name": "Home",
+				"item": "https://flyto2.com/"
+			},
+			{
+				"@type": "ListItem",
+				"position": 2,
+				"name": "For Developers",
+				"item": "https://flyto2.com/dev.html"
+			}
+		]
+	}
+	</script>
 
 	<link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="../assets/img/icon.png" type="image/png" sizes="32x32">
@@ -576,7 +597,7 @@
 							<li><i class="fas fa-check"></i> Hunk-by-hunk approval workflow</li>
 							<li><i class="fas fa-check"></i> Automated test & lint checks</li>
 							<li><i class="fas fa-check"></i> Evidence-based compliance report</li>
-							<li><i class="fas fa-check"></i> One-click PR creation with full audit trail</li>
+							<li><i class="fas fa-check"></i> One-click PR creation with full record of changes</li>
 							<li><i class="fas fa-check"></i> Instant rollback on any failure</li>
 						</ul>
 						<div style="margin-top: 24px;">
@@ -918,7 +939,7 @@
 						</div>
 					</div>
 					<div class="col-lg-6">
-						<div class="footer-legal" style="margin-bottom:10px"><a href="privacy.html" style="color:#a0aec0;margin-right:16px;font-size:13px">Privacy Policy</a><a href="terms.html" style="color:#a0aec0;font-size:13px">Terms of Service</a></div><div class="footer_social">
+						<div class="footer-legal" style="margin-bottom:10px"><a href="privacy.html" style="color:#a0aec0;margin-right:16px;font-size:13px"><span data-i18n="landing.common.footer.privacy">Privacy Policy</span></a><a href="terms.html" style="color:#a0aec0;font-size:13px"><span data-i18n="landing.common.footer.terms">Terms of Service</span></a></div><div class="footer_social">
 							<ul>
 								<li><a href="https://github.com/flytohub" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
 										<li><a href="https://www.youtube.com/channel/UCZ9OOqx4RM3Jjy1annWtsRA" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
