@@ -188,6 +188,7 @@ Allow: /style.css
 # Blocked: Specific pages
 Disallow: /404.html
 Disallow: /license-purchase.html
+Disallow: /marketplace/
 
 # Blocked: Paths
 Disallow: /assets/js/

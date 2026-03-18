@@ -72,7 +72,8 @@
 
   "blockedPages": [
     "404.html",
-    "license-purchase.html"
+    "license-purchase.html",
+    "marketplace/"
   ],
 
   "blockedPaths": [
