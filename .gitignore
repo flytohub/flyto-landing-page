@@ -32,6 +32,7 @@ build/
 # Generated language directories (auto-built by scripts/build-i18n.js)
 # Do NOT commit - these are generated during CI/CD deployment
 /zh/
+/cn/
 /ja/
 /ko/
 /de/
