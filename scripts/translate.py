@@ -14,6 +14,7 @@ from openai import OpenAI
 # Language configurations
 LANGUAGES = {
     'zh': {'name': '繁體中文', 'code': 'zh-TW'},
+    'cn': {'name': '简体中文', 'code': 'zh-CN'},
     'ja': {'name': '日本語', 'code': 'ja'},
     'ko': {'name': '한국어', 'code': 'ko'},
     'de': {'name': 'Deutsch', 'code': 'de'},

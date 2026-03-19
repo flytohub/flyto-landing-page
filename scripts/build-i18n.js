@@ -109,6 +109,7 @@ function getLocalesFromI18n() {
 function localeToDir(locale) {
   const normalized = locale.replace('_', '-');
   const lower = normalized.toLowerCase();
+  if (lower === 'zh-cn') return 'cn';
   if (lower.startsWith('zh')) {
     return 'zh';
   }
@@ -213,6 +214,7 @@ function updateLangSwitcher(html, currentLocale) {
   // Update current-lang display (header)
   const langCodes = {
     'zh': 'ZH',
+    'cn': 'CN',
     'ja': 'JA',
     'ko': 'KO',
     'de': 'DE',
@@ -236,6 +238,7 @@ function updateLangSwitcher(html, currentLocale) {
   // Update current-lang-name display (mobile trigger button)
   const langNames = {
     'zh': '繁體中文',
+    'cn': '简体中文',
     'ja': '日本語',
     'ko': '한국어',
     'de': 'Deutsch',
@@ -378,6 +381,8 @@ function getOgLocale(locale) {
     'ja': 'ja_JP',
     'zh-TW': 'zh_TW',
     'zh_TW': 'zh_TW',
+    'zh-CN': 'zh_CN',
+    'zh_CN': 'zh_CN',
     'ko': 'ko_KR',
     'de': 'de_DE',
     'es': 'es_ES',

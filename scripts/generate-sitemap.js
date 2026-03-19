@@ -41,6 +41,7 @@ function getLocalesFromI18n() {
 function localeToDir(locale) {
   const normalized = locale.replace('_', '-');
   const lower = normalized.toLowerCase();
+  if (lower === 'zh-cn') return 'cn';
   if (lower.startsWith('zh')) return 'zh';
   if (lower.startsWith('pt-')) return 'pt';
   return normalized.split('-')[0].toLowerCase();
