@@ -24,6 +24,17 @@ Allow: /node.html
 Allow: /wasm.html
 
 # Allowed: Language versions
+Allow: /cn/$
+Allow: /cn/pricing.html
+Allow: /cn/download.html
+Allow: /cn/app.html
+Allow: /cn/faq.html
+Allow: /cn/contact.html
+Allow: /cn/buy-offline.html
+Allow: /cn/language-packs.html
+Allow: /cn/dev.html
+Allow: /cn/node.html
+Allow: /cn/wasm.html
 Allow: /de/$
 Allow: /de/pricing.html
 Allow: /de/download.html
