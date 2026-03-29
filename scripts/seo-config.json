@@ -67,13 +67,19 @@
       "changefreq": "monthly",
       "priority": "0.5",
       "index": true
+    },
+    "templates.html": {
+      "changefreq": "weekly",
+      "priority": "0.9",
+      "index": true
     }
   },
 
+  "templatePages": true,
+
   "blockedPages": [
     "404.html",
-    "license-purchase.html",
-    "marketplace/"
+    "license-purchase.html"
   ],
 
   "blockedPaths": [

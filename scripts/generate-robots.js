@@ -15,10 +15,13 @@ const path = require('path');
 const CONFIG_PATH = path.join(__dirname, 'seo-config.json');
 const seoConfig = JSON.parse(fs.readFileSync(CONFIG_PATH, 'utf8'));
 
+const TEMPLATE_DATA_PATH = path.join(__dirname, 'template-data.json');
+
 const CONFIG = {
   baseUrl: seoConfig.baseUrl,
   outputPath: path.join(__dirname, '..', 'robots.txt'),
   pages: seoConfig.pages,
+  templatePages: seoConfig.templatePages || false,
   blockedPages: seoConfig.blockedPages || [],
   blockedPaths: seoConfig.blockedPaths || [],
   blockedBots: seoConfig.blockedBots || [],
@@ -77,6 +80,24 @@ function generateRobotsTxt() {
     for (const page of allowedPages) {
       if (page !== 'index.html') {
         lines.push(`Allow: /${lang}/${page}`);
+      }
+    }
+  }
+
+  // Allow template pages
+  if (CONFIG.templatePages && fs.existsSync(TEMPLATE_DATA_PATH)) {
+    const templateData = JSON.parse(fs.readFileSync(TEMPLATE_DATA_PATH, 'utf8'));
+    lines.push('');
+    lines.push('# Allowed: Template pages');
+    lines.push('Allow: /templates.html');
+    for (const t of templateData.templates) {
+      lines.push(`Allow: /templates/${t.slug}.html`);
+    }
+    // Allow for language directories
+    for (const lang of langDirs) {
+      lines.push(`Allow: /${lang}/templates.html`);
+      for (const t of templateData.templates) {
+        lines.push(`Allow: /${lang}/templates/${t.slug}.html`);
       }
     }
   }

@@ -1,0 +1,420 @@
+{
+  "categories": {
+    "scraping": { "label": "Web Scraping", "icon": "bi-globe", "color": "#3B82F6", "description": "Extract data from websites automatically" },
+    "automation": { "label": "Automation", "icon": "bi-gear", "color": "#8B5CF6", "description": "Automate repetitive browser tasks" },
+    "monitoring": { "label": "Monitoring", "icon": "bi-activity", "color": "#10B981", "description": "Track changes and get alerts" },
+    "testing": { "label": "Testing & QA", "icon": "bi-bug", "color": "#F59E0B", "description": "Test websites and check quality" },
+    "data": { "label": "Data Conversion", "icon": "bi-arrow-left-right", "color": "#EC4899", "description": "Convert between data formats" },
+    "api": { "label": "API & Integration", "icon": "bi-plug", "color": "#06B6D4", "description": "Connect services via APIs" },
+    "productivity": { "label": "Productivity", "icon": "bi-lightning", "color": "#F97316", "description": "Save time on daily tasks" },
+    "notification": { "label": "Notifications", "icon": "bi-bell", "color": "#EF4444", "description": "Send alerts and messages" }
+  },
+  "templates": [
+    {
+      "slug": "amazon-product-price-tracker",
+      "name": "Amazon Product Price Tracker",
+      "description": "Navigate to an Amazon product page and extract the current price. Save results as JSON.",
+      "category": "scraping",
+      "tags": ["scraping", "ecommerce", "price", "amazon"],
+      "difficulty": "beginner",
+      "estimatedTime": "1 min",
+      "seo": {
+        "title": "Amazon Price Tracker - Automate Product Price Monitoring | Flyto2",
+        "description": "Track Amazon product prices automatically without coding. Monitor price changes, save history as JSON, and set up scheduled price checks with Flyto2's free automation template.",
+        "keywords": "amazon price tracker, track amazon prices automatically, monitor product prices no code, amazon price history tool, automate price checking"
+      }
+    },
+    {
+      "slug": "auto-login-template",
+      "name": "Auto Login Template",
+      "description": "Log into a website with username and password automatically.",
+      "category": "automation",
+      "tags": ["login", "automation", "browser", "auth"],
+      "difficulty": "beginner",
+      "estimatedTime": "30 sec",
+      "seo": {
+        "title": "Auto Login Template - Automate Website Sign-In | Flyto2",
+        "description": "Automatically log into any website with saved credentials. Skip repetitive login forms with Flyto2's no-code auto-login automation template.",
+        "keywords": "auto login automation, automate website login, automatic sign in tool, no code login automation, browser auto login"
+      }
+    },
+    {
+      "slug": "broken-link-checker",
+      "name": "Website Broken Link Checker",
+      "description": "Crawl a webpage, extract all links, and check each for broken responses.",
+      "category": "testing",
+      "tags": ["testing", "seo", "links", "qa"],
+      "difficulty": "beginner",
+      "estimatedTime": "2-5 min",
+      "seo": {
+        "title": "Broken Link Checker - Find Dead Links on Any Website | Flyto2",
+        "description": "Automatically find broken links on any website. Crawl pages, check every link, and get a report of dead URLs. Free no-code broken link checker by Flyto2.",
+        "keywords": "broken link checker, find dead links, check website links, automated link checker, website link validator no code"
+      }
+    },
+    {
+      "slug": "bulk-form-submission",
+      "name": "Bulk Form Submission",
+      "description": "Submit forms in bulk from CSV data. Loops through each row and fills the form.",
+      "category": "automation",
+      "tags": ["automation", "forms", "bulk", "csv"],
+      "difficulty": "intermediate",
+      "estimatedTime": "varies",
+      "seo": {
+        "title": "Bulk Form Submission - Auto-Fill Forms from CSV Data | Flyto2",
+        "description": "Automatically submit web forms in bulk using CSV data. Fill and submit hundreds of forms without manual entry. No coding required with Flyto2.",
+        "keywords": "bulk form submission, auto fill forms from csv, automated form filling, submit multiple forms, no code form automation"
+      }
+    },
+    {
+      "slug": "bulk-url-shortener",
+      "name": "Bulk URL Shortener",
+      "description": "Shorten multiple URLs using is.gd API. Free, no API key required.",
+      "category": "productivity",
+      "tags": ["productivity", "url", "bulk", "free-api"],
+      "difficulty": "beginner",
+      "estimatedTime": "1 min",
+      "seo": {
+        "title": "Bulk URL Shortener - Shorten Multiple Links at Once | Flyto2",
+        "description": "Shorten hundreds of URLs in one go using a free API. No API key needed. Automate bulk link shortening with Flyto2's no-code template.",
+        "keywords": "bulk url shortener, shorten multiple links, batch url shortener, free link shortener tool, automate url shortening"
+      }
+    },
+    {
+      "slug": "coupon-code-checker",
+      "name": "Coupon Code Checker",
+      "description": "Test multiple coupon codes on a shopping cart to find working discounts.",
+      "category": "automation",
+      "tags": ["automation", "ecommerce", "coupon", "testing"],
+      "difficulty": "intermediate",
+      "estimatedTime": "2-5 min",
+      "seo": {
+        "title": "Coupon Code Checker - Find Working Discount Codes | Flyto2",
+        "description": "Automatically test multiple coupon codes on any shopping cart. Find working discounts fast without manual trial and error. Free Flyto2 automation template.",
+        "keywords": "coupon code checker, find working coupons, test discount codes, automated coupon tester, check promo codes automatically"
+      }
+    },
+    {
+      "slug": "cross-browser-screenshot",
+      "name": "Cross-Browser Screenshot",
+      "description": "Take screenshots across different viewport sizes for responsive testing.",
+      "category": "testing",
+      "tags": ["testing", "browser", "screenshot", "responsive"],
+      "difficulty": "beginner",
+      "estimatedTime": "1-2 min",
+      "seo": {
+        "title": "Cross-Browser Screenshot Tool - Responsive Design Testing | Flyto2",
+        "description": "Take screenshots across different viewport sizes and browsers. Test responsive design automatically with Flyto2's visual regression template.",
+        "keywords": "cross browser screenshot, responsive design testing, screenshot multiple viewports, visual regression testing, browser screenshot automation"
+      }
+    },
+    {
+      "slug": "csv-to-json-converter",
+      "name": "CSV to JSON Converter",
+      "description": "Read a CSV file and convert it to JSON format.",
+      "category": "data",
+      "tags": ["data", "csv", "json", "conversion"],
+      "difficulty": "beginner",
+      "estimatedTime": "10 sec",
+      "seo": {
+        "title": "CSV to JSON Converter - Transform Data Formats Easily | Flyto2",
+        "description": "Convert CSV files to JSON format instantly. No coding needed. Automate data format conversion with Flyto2's free template.",
+        "keywords": "csv to json converter, convert csv to json, data format conversion, csv json transform, no code data converter"
+      }
+    },
+    {
+      "slug": "domain-availability-checker",
+      "name": "Domain Availability Checker",
+      "description": "Check if a domain is active by testing HTTP response. Free, no API key required.",
+      "category": "monitoring",
+      "tags": ["monitoring", "domain", "network"],
+      "difficulty": "beginner",
+      "estimatedTime": "30 sec",
+      "seo": {
+        "title": "Domain Availability Checker - Check Domain Status | Flyto2",
+        "description": "Check if a domain name is active or available. Test HTTP responses for multiple domains. Free no-code domain checker by Flyto2.",
+        "keywords": "domain availability checker, check domain status, domain name checker, is domain available, batch domain checker"
+      }
+    },
+    {
+      "slug": "flight-price-monitor",
+      "name": "Flight Price Monitor",
+      "description": "Monitor flight prices on Google Flights. Extract airline, price, duration, and stops.",
+      "category": "scraping",
+      "tags": ["scraping", "travel", "monitoring", "flights"],
+      "difficulty": "intermediate",
+      "estimatedTime": "2-3 min",
+      "seo": {
+        "title": "Flight Price Monitor - Track Cheap Flights Automatically | Flyto2",
+        "description": "Monitor flight prices on Google Flights automatically. Track airline, price, duration and stops. Get notified when prices drop with Flyto2.",
+        "keywords": "flight price monitor, track flight prices, cheap flight tracker, google flights scraper, automate flight price checking"
+      }
+    },
+    {
+      "slug": "github-repo-stats-dashboard",
+      "name": "GitHub Repo Stats Dashboard",
+      "description": "Fetch GitHub repository statistics using the API and save as JSON.",
+      "category": "api",
+      "tags": ["api", "github", "dashboard", "stats"],
+      "difficulty": "beginner",
+      "estimatedTime": "30 sec",
+      "seo": {
+        "title": "GitHub Repo Stats Dashboard - Track Repository Metrics | Flyto2",
+        "description": "Fetch and track GitHub repository statistics automatically. Monitor stars, forks, issues and more. Save as JSON with Flyto2's free template.",
+        "keywords": "github repo stats, github repository dashboard, track github metrics, github api stats, automate github monitoring"
+      }
+    },
+    {
+      "slug": "google-search-results-scraper",
+      "name": "Google Search Results Scraper",
+      "description": "Search Google and extract the top results with titles, URLs, and descriptions.",
+      "category": "scraping",
+      "tags": ["scraping", "seo", "google", "search"],
+      "difficulty": "intermediate",
+      "estimatedTime": "1-2 min",
+      "seo": {
+        "title": "Google Search Scraper - Extract Search Results Automatically | Flyto2",
+        "description": "Scrape Google search results automatically. Extract titles, URLs, and descriptions from search pages. No coding needed with Flyto2.",
+        "keywords": "google search scraper, extract search results, scrape google results, serp scraper no code, automate google search extraction"
+      }
+    },
+    {
+      "slug": "invoice-pdf-downloader",
+      "name": "Invoice PDF Downloader",
+      "description": "Log into a billing portal and download invoice PDFs automatically.",
+      "category": "automation",
+      "tags": ["automation", "finance", "download", "pdf"],
+      "difficulty": "intermediate",
+      "estimatedTime": "2-3 min",
+      "seo": {
+        "title": "Invoice PDF Downloader - Auto-Download Billing Documents | Flyto2",
+        "description": "Automatically download invoice PDFs from billing portals. Log in, navigate, and save all invoices without manual clicks. Free Flyto2 automation.",
+        "keywords": "invoice pdf downloader, auto download invoices, billing portal automation, download invoices automatically, automate invoice collection"
+      }
+    },
+    {
+      "slug": "ip-geolocation-lookup",
+      "name": "IP Geolocation Lookup",
+      "description": "Look up geolocation data for any IP address. Free, no API key required.",
+      "category": "api",
+      "tags": ["api", "network", "geolocation", "free-api"],
+      "difficulty": "beginner",
+      "estimatedTime": "10 sec",
+      "seo": {
+        "title": "IP Geolocation Lookup - Find Location by IP Address | Flyto2",
+        "description": "Look up the geographic location of any IP address. Free API, no key required. Automate IP geolocation checks with Flyto2.",
+        "keywords": "ip geolocation lookup, find ip location, ip address location, free ip geolocation, automate ip lookup"
+      }
+    },
+    {
+      "slug": "linkedin-job-listings-scraper",
+      "name": "LinkedIn Job Listings Scraper",
+      "description": "Scrape job listings from LinkedIn search results. Extracts title, company, location, and link.",
+      "category": "scraping",
+      "tags": ["scraping", "jobs", "linkedin", "career"],
+      "difficulty": "intermediate",
+      "estimatedTime": "2-5 min",
+      "seo": {
+        "title": "LinkedIn Job Scraper - Extract Job Listings Automatically | Flyto2",
+        "description": "Scrape LinkedIn job listings automatically. Extract job titles, companies, locations and links. Automate your job search with Flyto2.",
+        "keywords": "linkedin job scraper, scrape linkedin jobs, extract job listings, automate job search, linkedin jobs automation"
+      }
+    },
+    {
+      "slug": "news-headlines-aggregator",
+      "name": "News Headlines Aggregator",
+      "description": "Scrape headlines from a news website and compile a digest.",
+      "category": "scraping",
+      "tags": ["scraping", "news", "aggregation", "media"],
+      "difficulty": "beginner",
+      "estimatedTime": "1 min",
+      "seo": {
+        "title": "News Headlines Aggregator - Compile News Digests Automatically | Flyto2",
+        "description": "Scrape and aggregate news headlines from any website. Build automated news digests without coding. Free Flyto2 news scraping template.",
+        "keywords": "news headlines aggregator, scrape news headlines, automated news digest, news scraper no code, aggregate news automatically"
+      }
+    },
+    {
+      "slug": "page-load-speed-tester",
+      "name": "Page Load Speed Tester",
+      "description": "Measure page load time for a URL using browser navigation timing API.",
+      "category": "testing",
+      "tags": ["testing", "performance", "speed", "browser"],
+      "difficulty": "beginner",
+      "estimatedTime": "30 sec",
+      "seo": {
+        "title": "Page Load Speed Tester - Measure Website Performance | Flyto2",
+        "description": "Measure website page load speed automatically. Use real browser timing to test performance. Free no-code speed testing template by Flyto2.",
+        "keywords": "page load speed tester, measure website speed, website performance test, page load time checker, browser speed test automation"
+      }
+    },
+    {
+      "slug": "price-drop-alert",
+      "name": "Price Drop Alert",
+      "description": "Monitor any product page for price changes. Alert when price drops below threshold.",
+      "category": "monitoring",
+      "tags": ["monitoring", "price", "alert", "ecommerce"],
+      "difficulty": "beginner",
+      "estimatedTime": "1 min",
+      "seo": {
+        "title": "Price Drop Alert - Get Notified When Prices Fall | Flyto2",
+        "description": "Monitor any product page and get alerts when prices drop below your threshold. Automate price watching with Flyto2's free no-code template.",
+        "keywords": "price drop alert, price monitoring automation, get notified price drop, price tracker alert, automate price watching"
+      }
+    },
+    {
+      "slug": "real-estate-listings-monitor",
+      "name": "Real Estate Listings Monitor",
+      "description": "Monitor real estate listings on any property site. Extract title, price, and location.",
+      "category": "scraping",
+      "tags": ["scraping", "real-estate", "monitoring", "property"],
+      "difficulty": "intermediate",
+      "estimatedTime": "2-5 min",
+      "seo": {
+        "title": "Real Estate Listings Monitor - Track Property Listings | Flyto2",
+        "description": "Monitor real estate listings automatically. Track new properties, price changes, and listings across sites. No coding needed with Flyto2.",
+        "keywords": "real estate listings monitor, track property listings, automate property search, real estate scraper, monitor house prices"
+      }
+    },
+    {
+      "slug": "restaurant-menu-scraper",
+      "name": "Restaurant Menu Scraper",
+      "description": "Scrape menu items and prices from restaurant websites.",
+      "category": "scraping",
+      "tags": ["scraping", "food", "data-collection", "restaurant"],
+      "difficulty": "beginner",
+      "estimatedTime": "1-2 min",
+      "seo": {
+        "title": "Restaurant Menu Scraper - Extract Menu Data Automatically | Flyto2",
+        "description": "Scrape restaurant menus and prices automatically. Extract menu items from any restaurant website without coding. Free Flyto2 template.",
+        "keywords": "restaurant menu scraper, scrape restaurant menu, extract menu prices, food data scraper, automate menu collection"
+      }
+    },
+    {
+      "slug": "send-telegram-alert",
+      "name": "Send Telegram Alert",
+      "description": "Send a custom message to a Telegram chat via Bot API.",
+      "category": "notification",
+      "tags": ["notification", "telegram", "alert", "messaging"],
+      "difficulty": "beginner",
+      "estimatedTime": "10 sec",
+      "seo": {
+        "title": "Send Telegram Alert - Automate Telegram Notifications | Flyto2",
+        "description": "Send automated messages to Telegram chats via Bot API. Set up custom alerts and notifications without coding. Free Flyto2 template.",
+        "keywords": "send telegram alert, telegram bot automation, automate telegram messages, telegram notification template, telegram bot no code"
+      }
+    },
+    {
+      "slug": "social-media-profile-scraper",
+      "name": "Social Media Profile Scraper",
+      "description": "Scrape public profile information from social media pages.",
+      "category": "scraping",
+      "tags": ["scraping", "social-media", "research", "data"],
+      "difficulty": "intermediate",
+      "estimatedTime": "1-2 min",
+      "seo": {
+        "title": "Social Media Profile Scraper - Extract Public Profile Data | Flyto2",
+        "description": "Scrape public social media profile information automatically. Extract bio, followers, posts and more. No coding needed with Flyto2.",
+        "keywords": "social media scraper, scrape social profiles, extract social media data, profile scraper automation, social media data extraction"
+      }
+    },
+    {
+      "slug": "stock-price-dashboard-scraper",
+      "name": "Stock Price Dashboard Scraper",
+      "description": "Scrape real-time stock price from Yahoo Finance.",
+      "category": "scraping",
+      "tags": ["scraping", "finance", "stock", "monitoring"],
+      "difficulty": "beginner",
+      "estimatedTime": "30 sec",
+      "seo": {
+        "title": "Stock Price Scraper - Track Stock Prices Automatically | Flyto2",
+        "description": "Scrape real-time stock prices from Yahoo Finance. Build automated stock dashboards without coding. Free Flyto2 scraping template.",
+        "keywords": "stock price scraper, track stock prices, yahoo finance scraper, automate stock monitoring, stock dashboard automation"
+      }
+    },
+    {
+      "slug": "weather-forecast-to-slack",
+      "name": "Weather Forecast to Slack",
+      "description": "Fetch weather forecast from Open-Meteo API and send as notification. Free, no API key required.",
+      "category": "api",
+      "tags": ["api", "weather", "notification", "slack"],
+      "difficulty": "beginner",
+      "estimatedTime": "30 sec",
+      "seo": {
+        "title": "Weather to Slack - Daily Weather Forecasts in Slack | Flyto2",
+        "description": "Send daily weather forecasts to your Slack channel automatically. Free API, no key required. Set up in minutes with Flyto2.",
+        "keywords": "weather forecast slack, daily weather slack bot, automate weather notification, slack weather integration, weather api automation"
+      }
+    },
+    {
+      "slug": "webpage-to-pdf-converter",
+      "name": "Webpage to PDF Converter",
+      "description": "Convert any webpage to a PDF file.",
+      "category": "productivity",
+      "tags": ["pdf", "conversion", "browser", "document"],
+      "difficulty": "beginner",
+      "estimatedTime": "30 sec",
+      "seo": {
+        "title": "Webpage to PDF Converter - Save Any Page as PDF | Flyto2",
+        "description": "Convert any webpage to a high-quality PDF file automatically. Batch convert multiple pages. No coding needed with Flyto2's free template.",
+        "keywords": "webpage to pdf converter, save page as pdf, website to pdf, automate pdf conversion, batch webpage to pdf"
+      }
+    },
+    {
+      "slug": "website-screenshot-gallery",
+      "name": "Website Screenshot Gallery",
+      "description": "Take screenshots of multiple URLs and save them as PNG files.",
+      "category": "automation",
+      "tags": ["screenshot", "gallery", "browser", "batch"],
+      "difficulty": "beginner",
+      "estimatedTime": "1-2 min",
+      "seo": {
+        "title": "Website Screenshot Gallery - Batch Screenshot Multiple Sites | Flyto2",
+        "description": "Take screenshots of multiple websites in one go. Save full-page screenshots as PNG. Automate visual documentation with Flyto2.",
+        "keywords": "website screenshot gallery, batch screenshots, multiple site screenshots, automated screenshot tool, full page screenshot batch"
+      }
+    },
+    {
+      "slug": "website-uptime-monitor",
+      "name": "Website Uptime Monitor",
+      "description": "Check if a website is up by sending an HTTP GET request. Alert via Slack if down.",
+      "category": "monitoring",
+      "tags": ["monitoring", "uptime", "alert", "slack"],
+      "difficulty": "beginner",
+      "estimatedTime": "10 sec",
+      "seo": {
+        "title": "Website Uptime Monitor - Get Downtime Alerts via Slack | Flyto2",
+        "description": "Monitor website uptime automatically. Get instant Slack alerts when your site goes down. Free no-code uptime monitoring with Flyto2.",
+        "keywords": "website uptime monitor, downtime alert slack, monitor website status, uptime checker automation, website monitoring free"
+      }
+    },
+    {
+      "slug": "xml-to-json-converter",
+      "name": "XML to JSON Converter",
+      "description": "Parse an XML file or string and convert it to JSON format.",
+      "category": "data",
+      "tags": ["data", "conversion", "xml", "json"],
+      "difficulty": "beginner",
+      "estimatedTime": "10 sec",
+      "seo": {
+        "title": "XML to JSON Converter - Transform XML Data Easily | Flyto2",
+        "description": "Convert XML files to JSON format automatically. No coding needed. Fast and reliable data transformation with Flyto2's free template.",
+        "keywords": "xml to json converter, convert xml to json, xml json transform, data conversion tool, no code xml converter"
+      }
+    },
+    {
+      "slug": "youtube-channel-stats-tracker",
+      "name": "YouTube Channel Stats Tracker",
+      "description": "Track YouTube channel subscriber count and video stats via browser scraping.",
+      "category": "scraping",
+      "tags": ["scraping", "youtube", "analytics", "social-media"],
+      "difficulty": "beginner",
+      "estimatedTime": "30 sec",
+      "seo": {
+        "title": "YouTube Channel Stats Tracker - Monitor Subscriber Count | Flyto2",
+        "description": "Track YouTube channel statistics automatically. Monitor subscribers, views, and video metrics. No API key needed with Flyto2's browser scraping.",
+        "keywords": "youtube channel stats tracker, monitor youtube subscribers, youtube analytics scraper, track youtube channel growth, youtube stats automation"
+      }
+    }
+  ]
+}

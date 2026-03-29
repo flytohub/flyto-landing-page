@@ -15,11 +15,14 @@ const path = require('path');
 const CONFIG_PATH = path.join(__dirname, 'seo-config.json');
 const seoConfig = JSON.parse(fs.readFileSync(CONFIG_PATH, 'utf8'));
 
+const TEMPLATE_DATA_PATH = path.join(__dirname, 'template-data.json');
+
 const CONFIG = {
   htmlDir: path.join(__dirname, '..'),
   i18nDir: path.join(__dirname, '..', '..', 'flyto-i18n', 'locales'),
   baseUrl: seoConfig.baseUrl,
   pages: seoConfig.pages,
+  templatePages: seoConfig.templatePages || false,
   localeEntries: []
 };
 
@@ -164,15 +167,33 @@ function generateSitemap() {
     }
   }
 
+  // Template detail pages
+  let templateCount = 0;
+  if (CONFIG.templatePages && fs.existsSync(TEMPLATE_DATA_PATH)) {
+    const templateData = JSON.parse(fs.readFileSync(TEMPLATE_DATA_PATH, 'utf8'));
+    for (const t of templateData.templates) {
+      const templatePath = `templates/${t.slug}.html`;
+      body.push(buildUrlEntry('en', templatePath));
+      for (const entry of CONFIG.localeEntries) {
+        body.push(buildUrlEntry(entry.dir, templatePath));
+      }
+      templateCount++;
+    }
+  }
+
   const footer = ['</urlset>', ''];
   const xml = [...header, ...body, ...footer].join('\n');
 
   const outputPath = path.join(CONFIG.htmlDir, 'sitemap.xml');
   fs.writeFileSync(outputPath, xml, 'utf8');
 
-  const totalUrls = indexablePages.length * (CONFIG.localeEntries.length + 1);
+  const totalUrls = (indexablePages.length + templateCount) * (CONFIG.localeEntries.length + 1);
   console.log(`✅ sitemap.xml generated`);
-  console.log(`   - ${indexablePages.length} pages × ${CONFIG.localeEntries.length + 1} locales = ${totalUrls} URLs`);
+  console.log(`   - ${indexablePages.length} pages × ${CONFIG.localeEntries.length + 1} locales`);
+  if (templateCount > 0) {
+    console.log(`   - ${templateCount} template pages × ${CONFIG.localeEntries.length + 1} locales`);
+  }
+  console.log(`   - ${totalUrls} total URLs`);
 }
 
 generateSitemap();
