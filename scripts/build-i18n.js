@@ -56,7 +56,7 @@ function getSeoMeta(htmlFile, locale, field, translations) {
 const CONFIG = {
   htmlDir: path.join(__dirname, '..'),
   i18nDir: path.join(__dirname, '..', '..', 'flyto-i18n', 'locales'),
-  htmlFiles: ['index.html', 'pricing.html', 'download.html', 'app.html', 'faq.html', 'contact.html', 'language-packs.html', 'dev.html', 'node.html', 'wasm.html'],
+  htmlFiles: ['index.html', 'pricing.html', 'download.html', 'app.html', 'faq.html', 'contact.html', 'language-packs.html', 'dev.html', 'node.html', 'wasm.html', 'templates.html'],
   locales: [],
   localeMapping: {},
   localeEntries: []
