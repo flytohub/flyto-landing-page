@@ -24,8 +24,8 @@
 	<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" media="print" onload="this.media='all'">
 	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"></noscript>
-	<title>Cross-Browser Screenshot Tool - Responsive Design Testing | Flyto2</title>
-	<meta name="description" content="Take screenshots across different viewport sizes and browsers. Test responsive design automatically with Flyto2's visual regression template.">
+	<title>Cross-Browser Screenshot - Automation Template | Flyto2</title>
+	<meta name="description" content="Take screenshots across Desktop, Tablet, and Mobile viewports.">
 
 	<!-- Content Security Policy -->
 	<meta http-equiv="Content-Security-Policy" content="
@@ -63,20 +63,20 @@
 	<link rel="alternate" hreflang="zh-Hant" href="https://flyto2.com/zh/templates/cross-browser-screenshot.html" />
 	<link rel="alternate" hreflang="x-default" href="https://flyto2.com/templates/cross-browser-screenshot.html" />
 	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-	<meta name="keywords" content="cross browser screenshot, responsive design testing, screenshot multiple viewports, visual regression testing, browser screenshot automation">
+	<meta name="keywords" content="testing, browser, screenshot, responsive, qa">
 
 	<!-- Open Graph -->
 	<meta property="og:type" content="article">
 	<meta property="og:url" content="https://flyto2.com/templates/cross-browser-screenshot.html">
-	<meta property="og:title" content="Cross-Browser Screenshot Tool - Responsive Design Testing | Flyto2">
-	<meta property="og:description" content="Take screenshots across different viewport sizes and browsers. Test responsive design automatically with Flyto2's visual regression template.">
+	<meta property="og:title" content="Cross-Browser Screenshot - Automation Template | Flyto2">
+	<meta property="og:description" content="Take screenshots across Desktop, Tablet, and Mobile viewports.">
 	<meta property="og:image" content="https://flyto2.com/assets/img/og-image.png">
 	<meta property="og:site_name" content="Flyto2">
 
 	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:title" content="Cross-Browser Screenshot Tool - Responsive Design Testing | Flyto2">
-	<meta name="twitter:description" content="Take screenshots across different viewport sizes and browsers. Test responsive design automatically with Flyto2's visual regression template.">
+	<meta name="twitter:title" content="Cross-Browser Screenshot - Automation Template | Flyto2">
+	<meta name="twitter:description" content="Take screenshots across Desktop, Tablet, and Mobile viewports.">
 	<meta name="twitter:image" content="https://flyto2.com/assets/img/og-image.png">
 
 	<link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
@@ -91,6 +91,7 @@
 	<link rel="stylesheet" href="../assets/css/responsive.css">
 	<link rel="stylesheet" href="../assets/css/bootstrap-icons.css" media="print" onload="this.media='all'">
 	<link rel="stylesheet" href="../assets/css/animate.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="../assets/css/auth.css">
 	<noscript>
 		<link rel="stylesheet" href="../assets/css/bootstrap-icons.css">
 		<link rel="stylesheet" href="../assets/css/animate.css">
@@ -120,6 +121,21 @@
 .difficulty-intermediate { background: #fef3c7; color: #92400e; }
 .template-time { font-size: 12px; color: #6c757d; }
 .template-time i { margin-right: 4px; }
+.template-card-icon img { width: 32px; height: 32px; object-fit: contain; border-radius: 4px; }
+.template-pricing { font-size: 12px; padding: 3px 10px; border-radius: 12px; font-weight: 500; }
+.pricing-free { background: #d1fae5; color: #065f46; }
+.pricing-paid { background: #fef3c7; color: #92400e; }
+.template-creator { font-size: 12px; color: #6c757d; }
+.template-creator i { margin-right: 4px; }
+
+/* Pagination */
+.tmpl-pagination { display: flex; justify-content: center; align-items: center; gap: 6px; list-style: none; padding: 0; margin: 0; flex-wrap: wrap; }
+.tmpl-pagination li { display: inline-block; }
+.tmpl-pagination .page-btn { display: inline-flex; align-items: center; justify-content: center; min-width: 40px; height: 40px; padding: 0 12px; border-radius: 10px; border: 1px solid #e5e7eb; background: #fff; color: #374151; font-size: 14px; font-weight: 500; cursor: pointer; transition: all 0.2s; text-decoration: none; }
+.tmpl-pagination .page-btn:hover { background: #f3f4f6; border-color: #667eea; color: #667eea; }
+.tmpl-pagination .page-btn.active { background: #667eea; color: #fff; border-color: #667eea; pointer-events: none; }
+.tmpl-pagination .page-btn.disabled { opacity: 0.4; pointer-events: none; }
+.tmpl-pagination .page-ellipsis { color: #9ca3af; padding: 0 4px; font-size: 14px; }
 
 /* ── Template Detail Dialog ─────────────────────────────────────────────── */
 #templateModal .modal-dialog { max-width: 960px; margin: 30px auto; }
@@ -135,9 +151,8 @@
 .dlg-hero-badges { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
 .dlg-hero-badges .badge { padding: 5px 14px; border-radius: 20px; font-size: 12px; font-weight: 500; }
 .dlg-badge-cat { background: rgba(255,255,255,0.2); backdrop-filter: blur(4px); }
-.dlg-badge-diff { background: rgba(255,255,255,0.15); }
-.dlg-badge-time { background: rgba(255,255,255,0.1); font-weight: 400; }
 .dlg-badge-free { background: #10B981; }
+.dlg-badge-paid { background: #F59E0B; color: #1a1a2e; }
 .dlg-close { position: absolute; top: 16px; right: 16px; background: rgba(255,255,255,0.15); border: none; color: #fff; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; cursor: pointer; transition: background 0.2s; backdrop-filter: blur(4px); }
 .dlg-close:hover { background: rgba(255,255,255,0.3); }
 
@@ -232,7 +247,7 @@
 	"@context": "https://schema.org",
 	"@type": "SoftwareApplication",
 	"name": "Cross-Browser Screenshot",
-	"description": "Take screenshots across different viewport sizes for responsive testing.",
+	"description": "Take screenshots across Desktop, Tablet, and Mobile viewports.",
 	"applicationCategory": "BrowserApplication",
 	"operatingSystem": "Windows, macOS, Linux",
 	"offers": {
@@ -252,7 +267,7 @@
 	"@context": "https://schema.org",
 	"@type": "HowTo",
 	"name": "How to use Cross-Browser Screenshot",
-	"description": "Take screenshots across different viewport sizes and browsers. Test responsive design automatically with Flyto2's visual regression template.",
+	"description": "Take screenshots across Desktop, Tablet, and Mobile viewports.",
 	"totalTime": "PT5M",
 	"tool": {
 		"@type": "SoftwareApplication",
@@ -326,7 +341,7 @@
 										<a href="../language-packs.html" class="nav-dropdown-item"><i class="bi bi-translate"></i><span data-i18n="landing.common.nav.languagePacks">Language Packs</span></a>
 									</div>
 								</li>
-								<li><a href="../templates.html" data-i18n="landing.common.nav.templates">Templates</a></li>
+								<li><a href="../templates.html" data-i18n="landing.common.nav.marketplace">Marketplace</a></li>
 								<li class="nav-dropdown">
 									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" data-i18n="landing.common.nav.learn">Learn</span>
 									<div class="nav-dropdown-menu">
@@ -415,7 +430,46 @@
 		</div>
 	</header>
 
+	<div class="mobile-menu-area">
+		<div class="off_canvars_overlay"></div>
+		<div class="offcanvas_menu">
+			<div class="offcanvas_menu_wrapper">
+				<div class="canvas_close">
+					<a href="javascript:void(0)" aria-label="Close menu" role="button"><i class="fas fa-times"></i></a>
+				</div>
+				<div class="mobile-logo">
+					<a href="../">
+						<picture>
+							<source srcset="../assets/img/logo.webp" type="image/webp">
+							<img src="../assets/img/logo.png" alt="Flyto2 - No-Code Automation Tool" width="90" height="79" />
+						</picture>
+					</a>
+				</div>
+				<div id="menu" class="text-left">
+					<ul class="offcanvas_main_menu">
+						<li><a href="../" data-i18n="landing.common.nav.home">Home</a></li>
+						<li><a href="../pricing.html" data-i18n="landing.common.nav.pricing">Pricing</a></li>
+						<li><a href="../download.html" data-i18n="landing.common.nav.download">Download</a></li>
+						<li><a href="../app.html" data-i18n="landing.common.nav.desktopApp">Get App</a></li>
+						<li><a href="https://docs.flyto2.com" target="_blank" rel="noopener noreferrer" data-i18n="landing.common.nav.documentation">Docs</a></li>
+						<li><a href="https://blog.flyto2.com" target="_blank" rel="noopener noreferrer" data-i18n="landing.common.nav.blog">Blog</a></li>
+						<li><a href="../faq.html" data-i18n="landing.common.nav.faq">FAQ</a></li>
+						<li><a href="../contact.html" data-i18n="landing.common.nav.contactUs">Contact</a></li>
+					</ul>
+				</div>
+				<!-- Mobile Language Switcher -->
+				<div class="mobile-lang-switcher">
+					<button class="mobile-lang-trigger" onclick="document.getElementById('langSheet').classList.add('active');document.getElementById('langOverlay').classList.add('active');">
+						<span class="trigger-text"><i class="bi bi-globe"></i> <span class="current-lang-name">English</span></span>
+						<i class="bi bi-chevron-up"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<!-- Hero -->
+	<main>
 	<section class="detail-hero">
 		<div class="container">
 			<div class="breadcrumb">
@@ -424,11 +478,11 @@
 				Cross-Browser Screenshot
 			</div>
 			<h1>Cross-Browser Screenshot</h1>
-			<p>Take screenshots across different viewport sizes for responsive testing.</p>
+			<p>Take screenshots across Desktop, Tablet, and Mobile viewports.</p>
 			<div class="meta" style="margin-top:16px">
 				<span class="badge" style="background:#F59E0B">Testing & QA</span>
-				<span class="template-difficulty difficulty-beginner">Beginner</span>
-				<span style="font-size:14px;opacity:0.8"><i class="bi bi-clock"></i> 1-2 min</span>
+				<span class="badge" style="background:rgba(255,255,255,0.2)">Free</span>
+				<span style="font-size:14px;opacity:0.8"><i class="bi bi-person"></i> Administrator</span>
 			</div>
 		</div>
 	</section>
@@ -465,14 +519,14 @@
 						<div class="sidebar-card" style="margin-top:20px">
 							<h4>Template Info</h4>
 							<div class="info-row"><span class="info-label">Category</span><span class="info-value">Testing & QA</span></div>
-							<div class="info-row"><span class="info-label">Difficulty</span><span class="info-value" style="text-transform:capitalize">beginner</span></div>
-							<div class="info-row"><span class="info-label">Est. Time</span><span class="info-value">1-2 min</span></div>
+							<div class="info-row"><span class="info-label">Creator</span><span class="info-value">Administrator</span></div>
+							<div class="info-row"><span class="info-label">Downloads</span><span class="info-value">0</span></div>
 							<div class="info-row"><span class="info-label">Price</span><span class="info-value" style="color:#10B981">Free</span></div>
 						</div>
 
 						<div class="sidebar-card">
 							<h4>Tags</h4>
-							<div style="display:flex;flex-wrap:wrap;gap:6px"><span class="template-tag">testing</span> <span class="template-tag">browser</span> <span class="template-tag">screenshot</span> <span class="template-tag">responsive</span></div>
+							<div style="display:flex;flex-wrap:wrap;gap:6px"><span class="template-tag">testing</span> <span class="template-tag">browser</span> <span class="template-tag">screenshot</span> <span class="template-tag">responsive</span> <span class="template-tag">qa</span></div>
 						</div>
 					</div>
 				</div>
@@ -488,22 +542,33 @@
 				<div class="col-lg-4 col-md-6 mb-4">
 					<div class="template-card">
 						<div class="template-card-icon" style="background:#F59E0B"><i class="bi-bug"></i></div>
-						<h3><a href="broken-link-checker.html">Website Broken Link Checker</a></h3>
-						<p>Crawl a webpage, extract all links, and check each for broken responses.</p>
+						<h3><a href="broken-link-checker.html">Broken Link Checker</a></h3>
+						<p>Crawl a webpage and check all links for broken responses.</p>
 						<div class="template-card-meta">
-							<span class="template-difficulty difficulty-beginner">Beginner</span>
-							<span class="template-time"><i class="bi bi-clock"></i>2-5 min</span>
+							<span class="template-difficulty difficulty-intermediate">Intermediate</span>
+							<span class="template-time"><i class="bi bi-clock"></i>undefined</span>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 mb-4">
 					<div class="template-card">
 						<div class="template-card-icon" style="background:#F59E0B"><i class="bi-bug"></i></div>
-						<h3><a href="page-load-speed-tester.html">Page Load Speed Tester</a></h3>
-						<p>Measure page load time for a URL using browser navigation timing API.</p>
+						<h3><a href="http-security-headers-check.html">HTTP Security Headers Check</a></h3>
+						<p>Audit HTTP security headers of any website.</p>
 						<div class="template-card-meta">
-							<span class="template-difficulty difficulty-beginner">Beginner</span>
-							<span class="template-time"><i class="bi bi-clock"></i>30 sec</span>
+							<span class="template-difficulty difficulty-intermediate">Intermediate</span>
+							<span class="template-time"><i class="bi bi-clock"></i>undefined</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-4">
+					<div class="template-card">
+						<div class="template-card-icon" style="background:#F59E0B"><i class="bi-bug"></i></div>
+						<h3><a href="cross-browser-screenshot-2.html">Cross-Browser Screenshot</a></h3>
+						<p>Take screenshots across Desktop, Tablet, and Mobile viewports.</p>
+						<div class="template-card-meta">
+							<span class="template-difficulty difficulty-intermediate">Intermediate</span>
+							<span class="template-time"><i class="bi bi-clock"></i>undefined</span>
 						</div>
 					</div>
 				</div>
@@ -513,6 +578,7 @@
 			</div>
 		</div>
 	</section>
+	</main>
 
 	<footer class="footer">
 		<div class="footer-top pt-70 pb-20">

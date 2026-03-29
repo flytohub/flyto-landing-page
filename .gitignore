@@ -14,6 +14,9 @@ Thumbs.db
 # Dependencies
 node_modules/
 
+# Fetched data (regenerated at build time)
+scripts/cloud-templates.json
+
 # Environment / Secrets (never commit)
 .env
 .env.*

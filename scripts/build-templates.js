@@ -106,6 +106,7 @@ function cssIncludes(relRoot) {
 \t<link rel="stylesheet" href="${relRoot}assets/css/responsive.css">
 \t<link rel="stylesheet" href="${relRoot}assets/css/bootstrap-icons.css" media="print" onload="this.media='all'">
 \t<link rel="stylesheet" href="${relRoot}assets/css/animate.css" media="print" onload="this.media='all'">
+\t<link rel="stylesheet" href="${relRoot}assets/css/auth.css">
 \t<noscript>
 \t\t<link rel="stylesheet" href="${relRoot}assets/css/bootstrap-icons.css">
 \t\t<link rel="stylesheet" href="${relRoot}assets/css/animate.css">
@@ -120,12 +121,40 @@ function jsIncludes(relRoot) {
 }
 
 // ── Load data ───────────────────────────────────────────────────────────────
-const data = JSON.parse(fs.readFileSync(DATA_PATH, 'utf8'));
-const { categories, templates } = data;
+// Prefer cloud-templates.json (fetched from API), fallback to static template-data.json
+const CLOUD_DATA_PATH = path.join(__dirname, 'cloud-templates.json');
+let categories, templates;
 
-// ── Read header/footer ──────────────────────────────────────────────────────
+if (fs.existsSync(CLOUD_DATA_PATH)) {
+  console.log('  Using cloud-templates.json (live marketplace data)');
+  const cloud = JSON.parse(fs.readFileSync(CLOUD_DATA_PATH, 'utf8'));
+  categories = cloud.categories;
+  templates = cloud.templates;
+} else {
+  console.log('  Using template-data.json (static fallback)');
+  const data = JSON.parse(fs.readFileSync(DATA_PATH, 'utf8'));
+  categories = data.categories;
+  // Normalize static templates to match cloud format
+  templates = data.templates.map(t => {
+    const cat = categories[t.category] || {};
+    return {
+      ...t,
+      categoryLabel: cat.label || t.category,
+      categoryColor: cat.color || '#6B7280',
+      categoryIcon: cat.icon || 'bi-box',
+      iconUrl: '',
+      pricing: 'free',
+      price: 0,
+      downloads: 0,
+      creatorName: 'Flyto2',
+    };
+  });
+}
+
+// ── Read header/footer/mobile-menu ──────────────────────────────────────────
 const headerHtml = fs.readFileSync(path.join(ROOT, '_header.html'), 'utf8');
 const footerHtml = fs.readFileSync(path.join(ROOT, '_footer.html'), 'utf8');
+const mobileMenuHtml = fs.readFileSync(path.join(ROOT, '_mobile-menu.html'), 'utf8');
 
 // Fix relative paths in header/footer for templates/ subdirectory
 function fixPaths(html, relRoot) {
@@ -162,6 +191,21 @@ const TEMPLATE_CSS = `
 .difficulty-intermediate { background: #fef3c7; color: #92400e; }
 .template-time { font-size: 12px; color: #6c757d; }
 .template-time i { margin-right: 4px; }
+.template-card-icon img { width: 32px; height: 32px; object-fit: contain; border-radius: 4px; }
+.template-pricing { font-size: 12px; padding: 3px 10px; border-radius: 12px; font-weight: 500; }
+.pricing-free { background: #d1fae5; color: #065f46; }
+.pricing-paid { background: #fef3c7; color: #92400e; }
+.template-creator { font-size: 12px; color: #6c757d; }
+.template-creator i { margin-right: 4px; }
+
+/* Pagination */
+.tmpl-pagination { display: flex; justify-content: center; align-items: center; gap: 6px; list-style: none; padding: 0; margin: 0; flex-wrap: wrap; }
+.tmpl-pagination li { display: inline-block; }
+.tmpl-pagination .page-btn { display: inline-flex; align-items: center; justify-content: center; min-width: 40px; height: 40px; padding: 0 12px; border-radius: 10px; border: 1px solid #e5e7eb; background: #fff; color: #374151; font-size: 14px; font-weight: 500; cursor: pointer; transition: all 0.2s; text-decoration: none; }
+.tmpl-pagination .page-btn:hover { background: #f3f4f6; border-color: #667eea; color: #667eea; }
+.tmpl-pagination .page-btn.active { background: #667eea; color: #fff; border-color: #667eea; pointer-events: none; }
+.tmpl-pagination .page-btn.disabled { opacity: 0.4; pointer-events: none; }
+.tmpl-pagination .page-ellipsis { color: #9ca3af; padding: 0 4px; font-size: 14px; }
 
 /* ── Template Detail Dialog ─────────────────────────────────────────────── */
 #templateModal .modal-dialog { max-width: 960px; margin: 30px auto; }
@@ -177,9 +221,8 @@ const TEMPLATE_CSS = `
 .dlg-hero-badges { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
 .dlg-hero-badges .badge { padding: 5px 14px; border-radius: 20px; font-size: 12px; font-weight: 500; }
 .dlg-badge-cat { background: rgba(255,255,255,0.2); backdrop-filter: blur(4px); }
-.dlg-badge-diff { background: rgba(255,255,255,0.15); }
-.dlg-badge-time { background: rgba(255,255,255,0.1); font-weight: 400; }
 .dlg-badge-free { background: #10B981; }
+.dlg-badge-paid { background: #F59E0B; color: #1a1a2e; }
 .dlg-close { position: absolute; top: 16px; right: 16px; background: rgba(255,255,255,0.15); border: none; color: #fff; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; cursor: pointer; transition: background 0.2s; backdrop-filter: blur(4px); }
 .dlg-close:hover { background: rgba(255,255,255,0.3); }
 
@@ -327,18 +370,28 @@ function buildGalleryPage() {
     }
   }
 
-  // Template cards — click opens dialog, link preserved for SEO crawlers (noscript fallback)
+  // Template cards — click opens dialog
   const cards = templates.map(t => {
-    const cat = categories[t.category];
+    const catColor = t.categoryColor || '#6B7280';
+    const catIcon = t.categoryIcon || 'bi-box';
     const tags = t.tags.slice(0, 3).map(tag => `<span class="template-tag">${tag}</span>`).join('');
+    const pricingBadge = t.pricing === 'free'
+      ? '<span class="template-pricing pricing-free">Free</span>'
+      : `<span class="template-pricing pricing-paid">$${t.price}</span>`;
+
+    // Icon: custom image or fallback to category icon
+    const iconHtml = t.iconUrl
+      ? `<div class="template-card-icon" style="background:${catColor}"><img src="${t.iconUrl}" alt="${t.name}" width="32" height="32" loading="lazy" onerror="this.parentElement.innerHTML='<i class=\\'${catIcon}\\'></i>'"></div>`
+      : `<div class="template-card-icon" style="background:${catColor}"><i class="${catIcon}"></i></div>`;
+
     return `\t\t\t\t<div class="col-lg-4 col-md-6 mb-4 template-item" data-category="${t.category}">
 \t\t\t\t\t<div class="template-card" data-slug="${t.slug}" onclick="openTemplate('${t.slug}')">
-\t\t\t\t\t\t<div class="template-card-icon" style="background:${cat.color}"><i class="${cat.icon}"></i></div>
+\t\t\t\t\t\t${iconHtml}
 \t\t\t\t\t\t<h3><a href="templates/${t.slug}.html" onclick="event.preventDefault()">${t.name}</a></h3>
 \t\t\t\t\t\t<p>${t.description}</p>
 \t\t\t\t\t\t<div class="template-card-meta">
-\t\t\t\t\t\t\t${difficultyBadge(t.difficulty)}
-\t\t\t\t\t\t\t<span class="template-time"><i class="bi bi-clock"></i>${t.estimatedTime}</span>
+\t\t\t\t\t\t\t${pricingBadge}
+\t\t\t\t\t\t\t<span class="template-creator"><i class="bi bi-person"></i>${t.creatorName || 'Flyto2'}</span>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class="template-card-meta" style="margin-top:8px">${tags}</div>
 \t\t\t\t\t</div>
@@ -348,31 +401,41 @@ function buildGalleryPage() {
   // ── Build template data for dialog (embed pre-rendered HTML) ──────────
   const templateDialogData = {};
   for (const t of templates) {
-    const cat = categories[t.category];
+    // Try to load markdown content if available
     const mdPath = path.join(CONTENT_DIR, `${t.slug}.md`);
     let contentHtml = '';
     if (fs.existsSync(mdPath)) {
       contentHtml = mdToHtml(fs.readFileSync(mdPath, 'utf8'));
     } else {
-      contentHtml = `<h2>How It Works</h2><p>${t.description}</p>`;
+      contentHtml = `<h2>About</h2><p>${t.description}</p>`;
     }
 
     // Related templates (same category, max 3)
     const related = templates
       .filter(r => r.category === t.category && r.slug !== t.slug)
       .slice(0, 3)
-      .map(r => ({ slug: r.slug, name: r.name, description: r.description }));
+      .map(r => ({
+        slug: r.slug,
+        name: r.name,
+        description: r.description,
+        iconUrl: r.iconUrl || '',
+        categoryColor: r.categoryColor || '#6B7280',
+        categoryIcon: r.categoryIcon || 'bi-box',
+      }));
 
     templateDialogData[t.slug] = {
       name: t.name,
       description: t.description,
       category: t.category,
-      categoryLabel: cat.label,
-      categoryColor: cat.color,
-      categoryIcon: cat.icon,
-      difficulty: t.difficulty,
-      estimatedTime: t.estimatedTime,
+      categoryLabel: t.categoryLabel || t.category,
+      categoryColor: t.categoryColor || '#6B7280',
+      categoryIcon: t.categoryIcon || 'bi-box',
+      iconUrl: t.iconUrl || '',
+      pricing: t.pricing || 'free',
+      price: t.price || 0,
       tags: t.tags,
+      downloads: t.downloads || 0,
+      creatorName: t.creatorName || 'Flyto2',
       content: contentHtml,
       related: related
     };
@@ -435,7 +498,10 @@ ${JSON.stringify(structuredData, null, '\t')}
 <body>
 ${headerHtml}
 
+${mobileMenuHtml}
+
 \t<!-- Hero -->
+\t<main>
 \t<section class="template-hero">
 \t\t<div class="container">
 \t\t\t<h1 data-i18n="landing.templates.hero.title">Automation Templates</h1>
@@ -453,9 +519,13 @@ ${headerHtml}
 \t<!-- Grid -->
 \t<section class="template-grid">
 \t\t<div class="container">
-\t\t\t<div class="row">
+\t\t\t<div class="row" id="templateGrid">
 ${cards}
 \t\t\t</div>
+\t\t\t<!-- Pagination -->
+\t\t\t<nav id="pagination" aria-label="Template pages" style="margin-top:30px">
+\t\t\t\t<ul class="tmpl-pagination" id="paginationList"></ul>
+\t\t\t</nav>
 \t\t</div>
 \t</section>
 
@@ -473,9 +543,7 @@ ${cards}
 \t\t\t\t\t\t\t<p id="dlgDesc"></p>
 \t\t\t\t\t\t\t<div class="dlg-hero-badges">
 \t\t\t\t\t\t\t\t<span class="badge dlg-badge-cat" id="dlgCatBadge"></span>
-\t\t\t\t\t\t\t\t<span class="badge dlg-badge-diff" id="dlgDiffBadge"></span>
-\t\t\t\t\t\t\t\t<span class="badge dlg-badge-time" id="dlgTimeBadge"></span>
-\t\t\t\t\t\t\t\t<span class="badge dlg-badge-free">Free</span>
+\t\t\t\t\t\t\t\t<span class="badge dlg-badge-free" id="dlgPriceBadge">Free</span>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
@@ -494,9 +562,9 @@ ${cards}
 \t\t\t\t\t\t\t<div class="dlg-info-card">
 \t\t\t\t\t\t\t\t<h4>Template Info</h4>
 \t\t\t\t\t\t\t\t<div class="dlg-info-row"><span class="dlg-info-label">Category</span><span class="dlg-info-value" id="dlgInfoCat"></span></div>
-\t\t\t\t\t\t\t\t<div class="dlg-info-row"><span class="dlg-info-label">Difficulty</span><span class="dlg-info-value" id="dlgInfoDiff"></span></div>
-\t\t\t\t\t\t\t\t<div class="dlg-info-row"><span class="dlg-info-label">Est. Time</span><span class="dlg-info-value" id="dlgInfoTime"></span></div>
-\t\t\t\t\t\t\t\t<div class="dlg-info-row"><span class="dlg-info-label">Price</span><span class="dlg-info-value" style="color:#10B981">Free</span></div>
+\t\t\t\t\t\t\t\t<div class="dlg-info-row"><span class="dlg-info-label">Creator</span><span class="dlg-info-value" id="dlgInfoCreator"></span></div>
+\t\t\t\t\t\t\t\t<div class="dlg-info-row"><span class="dlg-info-label">Downloads</span><span class="dlg-info-value" id="dlgInfoDownloads"></span></div>
+\t\t\t\t\t\t\t\t<div class="dlg-info-row"><span class="dlg-info-label">Price</span><span class="dlg-info-value" id="dlgInfoPrice" style="color:#10B981">Free</span></div>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t<div class="dlg-tags" id="dlgTags"></div>
 \t\t\t\t\t\t</div>
@@ -510,6 +578,7 @@ ${cards}
 \t\t\t</div>
 \t\t</div>
 \t</div>
+\t</main>
 
 ${footerHtml}
 
@@ -521,23 +590,38 @@ ${jsIncludes('./')}
 \t// ── Open template dialog ────────────────────────────────────────────────
 \tfunction openTemplate(slug) {
 \t\tvar t = TEMPLATES[slug];
-\t\tif (!t) { window.location.href = 'templates/' + slug + '.html'; return; }
+\t\tif (!t) return;
 
-\t\t// Hero
-\t\tdocument.getElementById('dlgIcon').innerHTML = '<i class="' + t.categoryIcon + '"></i>';
+\t\t// Hero icon
+\t\tvar iconEl = document.getElementById('dlgIcon');
+\t\tif (t.iconUrl) {
+\t\t\ticonEl.innerHTML = '<img src="' + t.iconUrl + '" alt="' + t.name + '" width="40" height="40" style="object-fit:contain;border-radius:6px" onerror="this.parentElement.innerHTML=\\'<i class=' + t.categoryIcon + '></i>\\'">';
+\t\t} else {
+\t\t\ticonEl.innerHTML = '<i class="' + t.categoryIcon + '"></i>';
+\t\t}
 \t\tdocument.getElementById('dlgTitle').textContent = t.name;
 \t\tdocument.getElementById('dlgDesc').textContent = t.description;
 \t\tdocument.getElementById('dlgCatBadge').innerHTML = '<i class="' + t.categoryIcon + '"></i> ' + t.categoryLabel;
-\t\tdocument.getElementById('dlgDiffBadge').textContent = t.difficulty.charAt(0).toUpperCase() + t.difficulty.slice(1);
-\t\tdocument.getElementById('dlgTimeBadge').innerHTML = '<i class="bi bi-clock"></i> ' + t.estimatedTime;
+\t\t// Pricing badge
+\t\tvar priceBadge = document.getElementById('dlgPriceBadge');
+\t\tif (t.pricing === 'free') {
+\t\t\tpriceBadge.textContent = 'Free';
+\t\t\tpriceBadge.className = 'badge dlg-badge-free';
+\t\t} else {
+\t\t\tpriceBadge.textContent = '$' + t.price;
+\t\t\tpriceBadge.className = 'badge dlg-badge-paid';
+\t\t}
 
 \t\t// Content
 \t\tdocument.getElementById('dlgContent').innerHTML = t.content;
 
 \t\t// Sidebar info
 \t\tdocument.getElementById('dlgInfoCat').textContent = t.categoryLabel;
-\t\tdocument.getElementById('dlgInfoDiff').textContent = t.difficulty.charAt(0).toUpperCase() + t.difficulty.slice(1);
-\t\tdocument.getElementById('dlgInfoTime').textContent = t.estimatedTime;
+\t\tdocument.getElementById('dlgInfoCreator').textContent = t.creatorName || 'Flyto2';
+\t\tdocument.getElementById('dlgInfoDownloads').textContent = (t.downloads || 0).toLocaleString();
+\t\tvar priceEl = document.getElementById('dlgInfoPrice');
+\t\tpriceEl.textContent = t.pricing === 'free' ? 'Free' : '$' + t.price;
+\t\tpriceEl.style.color = t.pricing === 'free' ? '#10B981' : '#92400e';
 
 \t\t// Tags
 \t\tvar tagsHtml = t.tags.map(function(tag) { return '<span class="template-tag">' + tag + '</span>'; }).join('');
@@ -549,8 +633,11 @@ ${jsIncludes('./')}
 \t\tif (t.related && t.related.length > 0) {
 \t\t\trelEl.style.display = '';
 \t\t\trelGrid.innerHTML = t.related.map(function(r) {
+\t\t\t\tvar rIcon = r.iconUrl
+\t\t\t\t\t? '<img src="' + r.iconUrl + '" width="24" height="24" style="object-fit:contain;border-radius:4px;margin-right:8px;vertical-align:middle">'
+\t\t\t\t\t: '<i class="' + r.categoryIcon + '" style="color:' + r.categoryColor + ';margin-right:8px"></i>';
 \t\t\t\treturn '<div class="dlg-related-card" onclick="openTemplate(\\'' + r.slug + '\\')">' +
-\t\t\t\t\t'<h4>' + r.name + '</h4>' +
+\t\t\t\t\t'<h4>' + rIcon + r.name + '</h4>' +
 \t\t\t\t\t'<p>' + r.description + '</p>' +
 \t\t\t\t'</div>';
 \t\t\t}).join('');
@@ -570,37 +657,111 @@ ${jsIncludes('./')}
 \t\tmodal.show();
 \t}
 
-\t// ── Restore on hash change / page load ────────────────────────────────
+\t// ── Pagination + Filter ─────────────────────────────────────────────
 \t(function() {
+\t\tvar PER_PAGE = 12;
+\t\tvar currentPage = 1;
+\t\tvar currentCat = 'all';
+\t\tvar allItems = Array.from(document.querySelectorAll('.template-item'));
+\t\tvar btns = document.querySelectorAll('.filter-btn');
+\t\tvar pagList = document.getElementById('paginationList');
+
+\t\tfunction getFiltered() {
+\t\t\treturn allItems.filter(function(item) {
+\t\t\t\treturn currentCat === 'all' || item.getAttribute('data-category') === currentCat;
+\t\t\t});
+\t\t}
+
+\t\tfunction render() {
+\t\t\tvar filtered = getFiltered();
+\t\t\tvar totalPages = Math.ceil(filtered.length / PER_PAGE);
+\t\t\tif (currentPage > totalPages) currentPage = totalPages || 1;
+
+\t\t\tvar start = (currentPage - 1) * PER_PAGE;
+\t\t\tvar end = start + PER_PAGE;
+\t\t\tvar visible = new Set(filtered.slice(start, end));
+
+\t\t\tallItems.forEach(function(item) {
+\t\t\t\titem.style.display = visible.has(item) ? '' : 'none';
+\t\t\t});
+
+\t\t\trenderPagination(totalPages);
+\t\t}
+
+\t\tfunction renderPagination(totalPages) {
+\t\t\tif (totalPages <= 1) { pagList.innerHTML = ''; return; }
+
+\t\t\tvar html = '';
+\t\t\t// Prev
+\t\t\thtml += '<li><button class="page-btn' + (currentPage === 1 ? ' disabled' : '') + '" data-page="' + (currentPage - 1) + '"><i class="bi bi-chevron-left"></i></button></li>';
+
+\t\t\t// Page numbers with ellipsis
+\t\t\tvar pages = buildPageNumbers(currentPage, totalPages);
+\t\t\tfor (var i = 0; i < pages.length; i++) {
+\t\t\t\tif (pages[i] === '...') {
+\t\t\t\t\thtml += '<li><span class="page-ellipsis">...</span></li>';
+\t\t\t\t} else {
+\t\t\t\t\thtml += '<li><button class="page-btn' + (pages[i] === currentPage ? ' active' : '') + '" data-page="' + pages[i] + '">' + pages[i] + '</button></li>';
+\t\t\t\t}
+\t\t\t}
+
+\t\t\t// Next
+\t\t\thtml += '<li><button class="page-btn' + (currentPage === totalPages ? ' disabled' : '') + '" data-page="' + (currentPage + 1) + '"><i class="bi bi-chevron-right"></i></button></li>';
+
+\t\t\tpagList.innerHTML = html;
+
+\t\t\t// Bind clicks
+\t\t\tpagList.querySelectorAll('.page-btn').forEach(function(btn) {
+\t\t\t\tbtn.addEventListener('click', function() {
+\t\t\t\t\tvar p = parseInt(this.getAttribute('data-page'));
+\t\t\t\t\tif (p >= 1 && p <= totalPages) {
+\t\t\t\t\t\tcurrentPage = p;
+\t\t\t\t\t\trender();
+\t\t\t\t\t\tdocument.querySelector('.template-grid').scrollIntoView({ behavior: 'smooth', block: 'start' });
+\t\t\t\t\t}
+\t\t\t\t});
+\t\t\t});
+\t\t}
+
+\t\tfunction buildPageNumbers(current, total) {
+\t\t\tif (total <= 7) {
+\t\t\t\tvar arr = [];
+\t\t\t\tfor (var i = 1; i <= total; i++) arr.push(i);
+\t\t\t\treturn arr;
+\t\t\t}
+\t\t\tvar pages = [1];
+\t\t\tif (current > 3) pages.push('...');
+\t\t\tfor (var j = Math.max(2, current - 1); j <= Math.min(total - 1, current + 1); j++) {
+\t\t\t\tpages.push(j);
+\t\t\t}
+\t\t\tif (current < total - 2) pages.push('...');
+\t\t\tpages.push(total);
+\t\t\treturn pages;
+\t\t}
+
+\t\t// Category filter
+\t\tbtns.forEach(function(btn) {
+\t\t\tbtn.addEventListener('click', function() {
+\t\t\t\tbtns.forEach(function(b) { b.classList.remove('active'); });
+\t\t\t\tbtn.classList.add('active');
+\t\t\t\tcurrentCat = btn.getAttribute('data-category');
+\t\t\t\tcurrentPage = 1;
+\t\t\t\trender();
+\t\t\t});
+\t\t});
+
+\t\t// Initial render
+\t\trender();
+
+\t\t// Hash restore
 \t\tvar hash = window.location.hash.replace('#', '');
 \t\tif (hash && TEMPLATES[hash]) {
-\t\t\t// Small delay so Bootstrap JS is ready
 \t\t\tsetTimeout(function() { openTemplate(hash); }, 300);
 \t\t}
 
 \t\t// Clear hash when modal closes
 \t\tdocument.getElementById('templateModal').addEventListener('hidden.bs.modal', function() {
 \t\t\thistory.replaceState(null, '', window.location.pathname + window.location.search);
-\t\t});
-\t})();
-
-\t// ── Template category filter ───────────────────────────────────────────
-\t(function() {
-\t\tvar btns = document.querySelectorAll('.filter-btn');
-\t\tvar items = document.querySelectorAll('.template-item');
-\t\tbtns.forEach(function(btn) {
-\t\t\tbtn.addEventListener('click', function() {
-\t\t\t\tbtns.forEach(function(b) { b.classList.remove('active'); });
-\t\t\t\tbtn.classList.add('active');
-\t\t\t\tvar cat = btn.getAttribute('data-category');
-\t\t\t\titems.forEach(function(item) {
-\t\t\t\t\tif (cat === 'all' || item.getAttribute('data-category') === cat) {
-\t\t\t\t\t\titem.style.display = '';
-\t\t\t\t\t} else {
-\t\t\t\t\t\titem.style.display = 'none';
-\t\t\t\t\t}
-\t\t\t\t});
-\t\t\t});
 \t\t});
 \t})();
 \t</script>
@@ -615,8 +776,15 @@ ${jsIncludes('./')}
 // DETAIL PAGES
 // ═══════════════════════════════════════════════════════════════════════════
 function buildDetailPage(t) {
-  const cat = categories[t.category];
+  const cat = categories[t.category] || { label: t.categoryLabel || t.category, color: t.categoryColor || '#6B7280', icon: t.categoryIcon || 'bi-box' };
   const relRoot = '../';
+
+  // Generate SEO fields from template data if not present
+  const seo = t.seo || {
+    title: `${t.name} - Automation Template | Flyto2`,
+    description: t.description || `Use ${t.name} automation template on Flyto2. No coding required.`,
+    keywords: (t.tags || []).join(', '),
+  };
 
   // Read MD content
   const mdPath = path.join(CONTENT_DIR, `${t.slug}.md`);
@@ -667,7 +835,7 @@ function buildDetailPage(t) {
       '@context': 'https://schema.org',
       '@type': 'HowTo',
       name: `How to use ${t.name}`,
-      description: t.seo.description,
+      description: seo.description,
       totalTime: 'PT5M',
       tool: { '@type': 'SoftwareApplication', name: 'Flyto2' },
       step: [
@@ -680,14 +848,15 @@ function buildDetailPage(t) {
 
   const fixedHeader = fixPaths(headerHtml, relRoot);
   const fixedFooter = fixPaths(footerHtml, relRoot);
+  const fixedMobileMenu = fixPaths(mobileMenuHtml, relRoot);
 
   const html = `<!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
 ${ANALYTICS}
 ${headCommon(relRoot)}
-\t<title>${t.seo.title}</title>
-\t<meta name="description" content="${t.seo.description}">
+\t<title>${seo.title}</title>
+\t<meta name="description" content="${seo.description}">
 
 ${csp()}
 
@@ -695,20 +864,20 @@ ${csp()}
 \t<link rel="canonical" href="${BASE_URL}/templates/${t.slug}.html">
 ${hreflangLinks(`templates/${t.slug}.html`)}
 \t<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-\t<meta name="keywords" content="${t.seo.keywords}">
+\t<meta name="keywords" content="${seo.keywords}">
 
 \t<!-- Open Graph -->
 \t<meta property="og:type" content="article">
 \t<meta property="og:url" content="${BASE_URL}/templates/${t.slug}.html">
-\t<meta property="og:title" content="${t.seo.title}">
-\t<meta property="og:description" content="${t.seo.description}">
+\t<meta property="og:title" content="${seo.title}">
+\t<meta property="og:description" content="${seo.description}">
 \t<meta property="og:image" content="${BASE_URL}/assets/img/og-image.png">
 \t<meta property="og:site_name" content="Flyto2">
 
 \t<!-- Twitter Card -->
 \t<meta name="twitter:card" content="summary_large_image">
-\t<meta name="twitter:title" content="${t.seo.title}">
-\t<meta name="twitter:description" content="${t.seo.description}">
+\t<meta name="twitter:title" content="${seo.title}">
+\t<meta name="twitter:description" content="${seo.description}">
 \t<meta name="twitter:image" content="${BASE_URL}/assets/img/og-image.png">
 
 ${cssIncludes(relRoot)}
@@ -725,7 +894,10 @@ ${JSON.stringify(structuredData[1], null, '\t')}
 <body>
 ${fixedHeader}
 
+${fixedMobileMenu}
+
 \t<!-- Hero -->
+\t<main>
 \t<section class="detail-hero">
 \t\t<div class="container">
 \t\t\t<div class="breadcrumb">
@@ -737,8 +909,8 @@ ${fixedHeader}
 \t\t\t<p>${t.description}</p>
 \t\t\t<div class="meta" style="margin-top:16px">
 \t\t\t\t${categoryBadge(t.category)}
-\t\t\t\t${difficultyBadge(t.difficulty)}
-\t\t\t\t<span style="font-size:14px;opacity:0.8"><i class="bi bi-clock"></i> ${t.estimatedTime}</span>
+\t\t\t\t<span class="badge" style="background:rgba(255,255,255,0.2)">${t.pricing === 'free' ? 'Free' : '$' + t.price}</span>
+\t\t\t\t<span style="font-size:14px;opacity:0.8"><i class="bi bi-person"></i> ${t.creatorName || 'Flyto2'}</span>
 \t\t\t</div>
 \t\t</div>
 \t</section>
@@ -762,8 +934,8 @@ ${contentHtml}
 \t\t\t\t\t\t<div class="sidebar-card" style="margin-top:20px">
 \t\t\t\t\t\t\t<h4>Template Info</h4>
 \t\t\t\t\t\t\t<div class="info-row"><span class="info-label">Category</span><span class="info-value">${cat.label}</span></div>
-\t\t\t\t\t\t\t<div class="info-row"><span class="info-label">Difficulty</span><span class="info-value" style="text-transform:capitalize">${t.difficulty}</span></div>
-\t\t\t\t\t\t\t<div class="info-row"><span class="info-label">Est. Time</span><span class="info-value">${t.estimatedTime}</span></div>
+\t\t\t\t\t\t\t<div class="info-row"><span class="info-label">Creator</span><span class="info-value">${t.creatorName || 'Flyto2'}</span></div>
+\t\t\t\t\t\t\t<div class="info-row"><span class="info-label">Downloads</span><span class="info-value">${t.downloads || 0}</span></div>
 \t\t\t\t\t\t\t<div class="info-row"><span class="info-label">Price</span><span class="info-value" style="color:#10B981">Free</span></div>
 \t\t\t\t\t\t</div>
 
@@ -789,6 +961,7 @@ ${relatedCards}
 \t\t\t</div>
 \t\t</div>
 \t</section>` : ''}
+\t</main>
 
 ${fixedFooter}
 
