@@ -379,7 +379,7 @@ function buildGalleryPage() {
 
     // Icon: custom image or fallback to category icon
     const iconHtml = t.iconUrl
-      ? `<div class="template-card-icon has-img"><img src="${t.iconUrl}" alt="${t.name}" loading="lazy" onerror="this.parentElement.className='template-card-icon';this.parentElement.style.background='${catColor}';this.parentElement.innerHTML='<i class=\\'${catIcon}\\'></i>'"></div>`
+      ? `<div class="template-card-icon has-img"><img src="${t.iconUrl}" alt="${t.name}" loading="lazy" onerror="this.parentElement.className=&quot;template-card-icon&quot;;this.parentElement.style.background=&quot;${catColor}&quot;;this.outerHTML=&quot;<i class=${catIcon}></i>&quot;"></div>`
       : `<div class="template-card-icon" style="background:${catColor}"><i class="${catIcon}"></i></div>`;
 
     return `\t\t\t\t<div class="col-lg-4 col-md-6 mb-4 template-item" data-category="${t.category}">
@@ -609,7 +609,14 @@ ${jsIncludes('./')}
 \t\t// Hero icon
 \t\tvar iconEl = document.getElementById('dlgIcon');
 \t\tif (t.iconUrl) {
-\t\t\ticonEl.innerHTML = '<img src="' + t.iconUrl + '" alt="' + t.name + '" width="40" height="40" style="object-fit:contain;border-radius:6px" onerror="this.parentElement.innerHTML=\\'<i class=' + t.categoryIcon + '></i>\\'">';
+\t\t\tvar img = document.createElement('img');
+\t\t\timg.src = t.iconUrl;
+\t\t\timg.alt = t.name;
+\t\t\timg.width = 40; img.height = 40;
+\t\t\timg.style.cssText = 'object-fit:contain;border-radius:6px';
+\t\t\timg.onerror = function() { iconEl.innerHTML = '<i class="' + t.categoryIcon + '"></i>'; };
+\t\t\ticonEl.innerHTML = '';
+\t\t\ticonEl.appendChild(img);
 \t\t} else {
 \t\t\ticonEl.innerHTML = '<i class="' + t.categoryIcon + '"></i>';
 \t\t}
