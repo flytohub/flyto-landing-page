@@ -169,9 +169,6 @@ function fixPaths(html, relRoot) {
 const TEMPLATE_CSS = `
 <style>
 /* Template Gallery */
-.template-hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 100px 0 60px; color: #fff; }
-.template-hero h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 16px; }
-.template-hero p { font-size: 1.15rem; opacity: 0.9; max-width: 600px; }
 .template-filters { padding: 30px 0; background: #f8f9fa; border-bottom: 1px solid #e9ecef; position: sticky; top: 0; z-index: 10; }
 .filter-btn { display: inline-block; padding: 8px 20px; margin: 4px; border-radius: 24px; border: 1px solid #dee2e6; background: #fff; color: #495057; font-size: 14px; cursor: pointer; transition: all 0.2s; text-decoration: none; }
 .filter-btn:hover, .filter-btn.active { background: #667eea; color: #fff; border-color: #667eea; }
@@ -179,7 +176,8 @@ const TEMPLATE_CSS = `
 .template-grid { padding: 50px 0 80px; }
 .template-card { background: #fff; border-radius: 12px; padding: 28px; border: 1px solid #e9ecef; transition: all 0.3s; height: 100%; display: flex; flex-direction: column; cursor: pointer; }
 .template-card:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.08); transform: translateY(-2px); border-color: #667eea; }
-.template-card-icon { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px; color: #fff; margin-bottom: 16px; }
+.template-card-icon { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px; color: #fff; margin-bottom: 16px; flex-shrink: 0; }
+.template-card-icon.has-img { width: 56px; height: 56px; background: none !important; border-radius: 14px; overflow: hidden; }
 .template-card h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; }
 .template-card h3 a { color: #1a1a2e; text-decoration: none; }
 .template-card h3 a:hover { color: #667eea; }
@@ -191,7 +189,7 @@ const TEMPLATE_CSS = `
 .difficulty-intermediate { background: #fef3c7; color: #92400e; }
 .template-time { font-size: 12px; color: #6c757d; }
 .template-time i { margin-right: 4px; }
-.template-card-icon img { width: 32px; height: 32px; object-fit: contain; border-radius: 4px; }
+.template-card-icon.has-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .template-pricing { font-size: 12px; padding: 3px 10px; border-radius: 12px; font-weight: 500; }
 .pricing-free { background: #d1fae5; color: #065f46; }
 .pricing-paid { background: #fef3c7; color: #92400e; }
@@ -381,7 +379,7 @@ function buildGalleryPage() {
 
     // Icon: custom image or fallback to category icon
     const iconHtml = t.iconUrl
-      ? `<div class="template-card-icon" style="background:${catColor}"><img src="${t.iconUrl}" alt="${t.name}" width="32" height="32" loading="lazy" onerror="this.parentElement.innerHTML='<i class=\\'${catIcon}\\'></i>'"></div>`
+      ? `<div class="template-card-icon has-img"><img src="${t.iconUrl}" alt="${t.name}" loading="lazy" onerror="this.parentElement.className='template-card-icon';this.parentElement.style.background='${catColor}';this.parentElement.innerHTML='<i class=\\'${catIcon}\\'></i>'"></div>`
       : `<div class="template-card-icon" style="background:${catColor}"><i class="${catIcon}"></i></div>`;
 
     return `\t\t\t\t<div class="col-lg-4 col-md-6 mb-4 template-item" data-category="${t.category}">
@@ -500,14 +498,30 @@ ${headerHtml}
 
 ${mobileMenuHtml}
 
-\t<!-- Hero -->
+\t<!-- Start Breadcrumb Area -->
 \t<main>
-\t<section class="template-hero">
+\t<section id="main-content" class="breadcrumb-area hero-wave-bg">
 \t\t<div class="container">
-\t\t\t<h1 data-i18n="landing.templates.hero.title">Automation Templates</h1>
-\t\t\t<p data-i18n="landing.templates.hero.subtitle">Browse ${templates.length}+ ready-to-use templates. Import, customize, and run — no coding required.</p>
+\t\t\t<div class="row">
+\t\t\t\t<div class="col-lg-12">
+\t\t\t\t\t<div class="breadcrumb-content">
+\t\t\t\t\t\t<h1 data-i18n="landing.templates.hero.title">Marketplace</h1>
+\t\t\t\t\t\t<p style="color:rgba(255,255,255,0.8);font-size:18px;margin-top:12px" data-i18n="landing.templates.hero.subtitle">Browse ${templates.length}+ ready-to-use templates. Import, customize, and run — no coding required.</p>
+\t\t\t\t\t\t<ul>
+\t\t\t\t\t\t\t<li><a href="./" data-i18n="landing.common.nav.home">Home</a></li>
+\t\t\t\t\t\t\t<li data-i18n="landing.common.nav.marketplace">Marketplace</li>
+\t\t\t\t\t\t</ul>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t</div>
+\t\t<div class="wave-divider">
+\t\t\t<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+\t\t\t\t<path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+\t\t\t</svg>
 \t\t</div>
 \t</section>
+\t<!-- End Breadcrumb Area -->
 
 \t<!-- Filters -->
 \t<section class="template-filters">
