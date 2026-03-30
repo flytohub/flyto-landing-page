@@ -23,6 +23,7 @@ const CONTENT_DIR = path.join(ROOT, 'templates', 'content');
 const OUTPUT_DIR = path.join(ROOT, 'templates');
 const BASE_URL = 'https://flyto2.com';
 const APP_URL = 'https://cloud.flyto2.com';
+const API_BASE = 'https://api.flyto2.com';
 
 // ── Simple Markdown → HTML ──────────────────────────────────────────────────
 function mdToHtml(md) {
@@ -601,190 +602,277 @@ ${footerHtml}
 
 ${jsIncludes('./')}
 \t<script>
-\t// ── Template data (pre-rendered) ────────────────────────────────────────
+\t// ── Static template data (SEO baseline) ────────────────────────────────
 \tvar TEMPLATES = ${JSON.stringify(templateDialogData)};
+\tvar API_BASE = '${API_BASE}';
+\tvar APP_URL = '${APP_URL}';
 
-\t// ── Open template dialog ────────────────────────────────────────────────
+\t// ── Category config ────────────────────────────────────────────────────
+\tvar CATEGORIES = ${JSON.stringify(categories)};
+
+\t// ── Slug helper ────────────────────────────────────────────────────────
+\tfunction slugify(name) {
+\t\treturn name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+\t}
+
+\t// ── Open template dialog ───────────────────────────────────────────────
 \tfunction openTemplate(slug) {
 \t\tvar t = TEMPLATES[slug];
 \t\tif (!t) return;
 
-\t\t// Hero icon
 \t\tvar iconEl = document.getElementById('dlgIcon');
 \t\tif (t.iconUrl) {
 \t\t\tvar img = document.createElement('img');
-\t\t\timg.src = t.iconUrl;
-\t\t\timg.alt = t.name;
-\t\t\timg.width = 40; img.height = 40;
-\t\t\timg.style.cssText = 'object-fit:contain;border-radius:6px';
-\t\t\timg.onerror = function() { iconEl.innerHTML = '<i class="' + t.categoryIcon + '"></i>'; };
-\t\t\ticonEl.innerHTML = '';
-\t\t\ticonEl.appendChild(img);
+\t\t\timg.src = t.iconUrl; img.alt = t.name;
+\t\t\timg.style.cssText = 'width:100%;height:100%;object-fit:cover;border-radius:6px';
+\t\t\timg.onerror = function() { iconEl.innerHTML = '<i class="' + (t.categoryIcon||'bi-box') + '"></i>'; };
+\t\t\ticonEl.innerHTML = ''; iconEl.appendChild(img);
 \t\t} else {
-\t\t\ticonEl.innerHTML = '<i class="' + t.categoryIcon + '"></i>';
+\t\t\ticonEl.innerHTML = '<i class="' + (t.categoryIcon||'bi-box') + '"></i>';
 \t\t}
 \t\tdocument.getElementById('dlgTitle').textContent = t.name;
 \t\tdocument.getElementById('dlgDesc').textContent = t.description;
-\t\tdocument.getElementById('dlgCatBadge').innerHTML = '<i class="' + t.categoryIcon + '"></i> ' + t.categoryLabel;
-\t\t// Pricing badge
-\t\tvar priceBadge = document.getElementById('dlgPriceBadge');
-\t\tif (t.pricing === 'free') {
-\t\t\tpriceBadge.textContent = 'Free';
-\t\t\tpriceBadge.className = 'badge dlg-badge-free';
-\t\t} else {
-\t\t\tpriceBadge.textContent = '$' + t.price;
-\t\t\tpriceBadge.className = 'badge dlg-badge-paid';
-\t\t}
+\t\tdocument.getElementById('dlgCatBadge').innerHTML = '<i class="' + (t.categoryIcon||'bi-box') + '"></i> ' + (t.categoryLabel||t.category);
+\t\tvar pb = document.getElementById('dlgPriceBadge');
+\t\tpb.textContent = t.pricing === 'free' ? 'Free' : '$' + t.price;
+\t\tpb.className = 'badge ' + (t.pricing === 'free' ? 'dlg-badge-free' : 'dlg-badge-paid');
 
-\t\t// Content
-\t\tdocument.getElementById('dlgContent').innerHTML = t.content;
-
-\t\t// Sidebar info
-\t\tdocument.getElementById('dlgInfoCat').textContent = t.categoryLabel;
+\t\tdocument.getElementById('dlgContent').innerHTML = t.content || '<p>' + t.description + '</p>';
+\t\tdocument.getElementById('dlgInfoCat').textContent = t.categoryLabel || t.category;
 \t\tdocument.getElementById('dlgInfoCreator').textContent = t.creatorName || 'Flyto2';
 \t\tdocument.getElementById('dlgInfoDownloads').textContent = (t.downloads || 0).toLocaleString();
-\t\tvar priceEl = document.getElementById('dlgInfoPrice');
-\t\tpriceEl.textContent = t.pricing === 'free' ? 'Free' : '$' + t.price;
-\t\tpriceEl.style.color = t.pricing === 'free' ? '#10B981' : '#92400e';
+\t\tvar pe = document.getElementById('dlgInfoPrice');
+\t\tpe.textContent = t.pricing === 'free' ? 'Free' : '$' + t.price;
+\t\tpe.style.color = t.pricing === 'free' ? '#10B981' : '#92400e';
 
-\t\t// Tags
-\t\tvar tagsHtml = t.tags.map(function(tag) { return '<span class="template-tag">' + tag + '</span>'; }).join('');
-\t\tdocument.getElementById('dlgTags').innerHTML = tagsHtml;
+\t\tdocument.getElementById('dlgTags').innerHTML = (t.tags||[]).map(function(tag) { return '<span class="template-tag">' + tag + '</span>'; }).join('');
 
-\t\t// Related templates
 \t\tvar relEl = document.getElementById('dlgRelated');
 \t\tvar relGrid = document.getElementById('dlgRelatedGrid');
 \t\tif (t.related && t.related.length > 0) {
 \t\t\trelEl.style.display = '';
 \t\t\trelGrid.innerHTML = t.related.map(function(r) {
-\t\t\t\tvar rIcon = r.iconUrl
+\t\t\t\tvar ri = r.iconUrl
 \t\t\t\t\t? '<img src="' + r.iconUrl + '" width="24" height="24" style="object-fit:contain;border-radius:4px;margin-right:8px;vertical-align:middle">'
-\t\t\t\t\t: '<i class="' + r.categoryIcon + '" style="color:' + r.categoryColor + ';margin-right:8px"></i>';
+\t\t\t\t\t: '<i class="' + (r.categoryIcon||'bi-box') + '" style="color:' + (r.categoryColor||'#6B7280') + ';margin-right:8px"></i>';
 \t\t\t\treturn '<div class="dlg-related-card" onclick="openTemplate(\\'' + r.slug + '\\')">' +
-\t\t\t\t\t'<h4>' + rIcon + r.name + '</h4>' +
-\t\t\t\t\t'<p>' + r.description + '</p>' +
-\t\t\t\t'</div>';
+\t\t\t\t\t'<h4>' + ri + r.name + '</h4><p>' + (r.description||'') + '</p></div>';
 \t\t\t}).join('');
-\t\t} else {
-\t\t\trelEl.style.display = 'none';
-\t\t}
+\t\t} else { relEl.style.display = 'none'; }
 
-\t\t// Update URL hash
 \t\thistory.replaceState(null, '', '#' + slug);
-
-\t\t// Scroll dialog content to top
-\t\tvar dlgMain = document.querySelector('.dlg-main');
-\t\tif (dlgMain) dlgMain.scrollTop = 0;
-
-\t\t// Show modal
-\t\tvar modalEl = document.getElementById('templateModal');
-\t\tvar modal = bootstrap.Modal.getInstance(modalEl) || new bootstrap.Modal(modalEl);
-\t\tmodal.show();
+\t\tvar dm = document.querySelector('.dlg-body'); if (dm) dm.scrollTop = 0;
+\t\tvar me = document.getElementById('templateModal');
+\t\t(bootstrap.Modal.getInstance(me) || new bootstrap.Modal(me)).show();
 \t}
 
-\t// ── Pagination + Filter ─────────────────────────────────────────────
+\t// ── Pagination + Filter + Dynamic Fetch ────────────────────────────────
 \t(function() {
 \t\tvar PER_PAGE = 12;
 \t\tvar currentPage = 1;
 \t\tvar currentCat = 'all';
-\t\tvar allItems = Array.from(document.querySelectorAll('.template-item'));
-\t\tvar btns = document.querySelectorAll('.filter-btn');
+\t\tvar grid = document.getElementById('templateGrid');
+\t\tvar filterBar = document.querySelector('.template-filters .container');
 \t\tvar pagList = document.getElementById('paginationList');
+\t\tvar allItems = Array.from(document.querySelectorAll('.template-item'));
 
+\t\t// ── Card builder ─────────────────────────────────────────────────
+\t\tfunction buildCard(t) {
+\t\t\tvar cat = CATEGORIES[t.category] || { label: t.category, icon: 'bi-box', color: '#6B7280' };
+\t\t\tvar iconHtml = t.iconUrl
+\t\t\t\t? '<div class="template-card-icon has-img"><img src="' + t.iconUrl + '" alt="' + t.name + '" loading="lazy" onerror="this.onerror=null;this.style.display=\\'none\\'"></div>'
+\t\t\t\t: '<div class="template-card-icon" style="background:' + (t.categoryColor||cat.color) + '"><i class="' + (t.categoryIcon||cat.icon) + '"></i></div>';
+\t\t\tvar priceBadge = t.pricing === 'free'
+\t\t\t\t? '<span class="template-pricing pricing-free">Free</span>'
+\t\t\t\t: '<span class="template-pricing pricing-paid">$' + (t.price||0) + '</span>';
+\t\t\tvar tags = (t.tags||[]).slice(0,3).map(function(tag) { return '<span class="template-tag">' + tag + '</span>'; }).join('');
+\t\t\tvar div = document.createElement('div');
+\t\t\tdiv.className = 'col-lg-4 col-md-6 mb-4 template-item';
+\t\t\tdiv.setAttribute('data-category', t.category||'other');
+\t\t\tdiv.innerHTML = '<div class="template-card" data-slug="' + t.slug + '">' +
+\t\t\t\ticonHtml +
+\t\t\t\t'<h3>' + t.name + '</h3>' +
+\t\t\t\t'<p>' + (t.description||'') + '</p>' +
+\t\t\t\t'<div class="template-card-meta">' + priceBadge +
+\t\t\t\t'<span class="template-creator"><i class="bi bi-person"></i>' + (t.creatorName||'Flyto2') + '</span></div>' +
+\t\t\t\t'<div class="template-card-meta" style="margin-top:8px">' + tags + '</div></div>';
+\t\t\tdiv.querySelector('.template-card').addEventListener('click', function() { openTemplate(t.slug); });
+\t\t\treturn div;
+\t\t}
+
+\t\t// ── Filter buttons builder ────────────────────────────────────────
+\t\tfunction rebuildFilters(catCounts, total) {
+\t\t\tvar html = '<button class="filter-btn active" data-category="all">All<span class="filter-count">(' + total + ')</span></button>';
+\t\t\tfor (var key in CATEGORIES) {
+\t\t\t\tif (catCounts[key]) {
+\t\t\t\t\tvar c = CATEGORIES[key];
+\t\t\t\t\thtml += '<button class="filter-btn" data-category="' + key + '"><i class="' + (c.icon||'bi-box') + '"></i> ' + (c.label||key) + '<span class="filter-count">(' + catCounts[key] + ')</span></button>';
+\t\t\t\t}
+\t\t\t}
+\t\t\t// Include categories from API not in static config
+\t\t\tfor (var k in catCounts) {
+\t\t\t\tif (!CATEGORIES[k]) {
+\t\t\t\t\thtml += '<button class="filter-btn" data-category="' + k + '">' + k + '<span class="filter-count">(' + catCounts[k] + ')</span></button>';
+\t\t\t\t}
+\t\t\t}
+\t\t\tfilterBar.innerHTML = html;
+\t\t\tbindFilterButtons();
+\t\t}
+
+\t\t// ── Pagination ───────────────────────────────────────────────────
 \t\tfunction getFiltered() {
 \t\t\treturn allItems.filter(function(item) {
 \t\t\t\treturn currentCat === 'all' || item.getAttribute('data-category') === currentCat;
 \t\t\t});
 \t\t}
 
-\t\tfunction render() {
+\t\tfunction renderPage() {
 \t\t\tvar filtered = getFiltered();
 \t\t\tvar totalPages = Math.ceil(filtered.length / PER_PAGE);
 \t\t\tif (currentPage > totalPages) currentPage = totalPages || 1;
-
 \t\t\tvar start = (currentPage - 1) * PER_PAGE;
-\t\t\tvar end = start + PER_PAGE;
-\t\t\tvar visible = new Set(filtered.slice(start, end));
-
-\t\t\tallItems.forEach(function(item) {
-\t\t\t\titem.style.display = visible.has(item) ? '' : 'none';
-\t\t\t});
-
+\t\t\tvar visible = new Set(filtered.slice(start, start + PER_PAGE));
+\t\t\tallItems.forEach(function(item) { item.style.display = visible.has(item) ? '' : 'none'; });
 \t\t\trenderPagination(totalPages);
 \t\t}
 
 \t\tfunction renderPagination(totalPages) {
 \t\t\tif (totalPages <= 1) { pagList.innerHTML = ''; return; }
-
-\t\t\tvar html = '';
-\t\t\t// Prev
-\t\t\thtml += '<li><button class="page-btn' + (currentPage === 1 ? ' disabled' : '') + '" data-page="' + (currentPage - 1) + '"><i class="bi bi-chevron-left"></i></button></li>';
-
-\t\t\t// Page numbers with ellipsis
-\t\t\tvar pages = buildPageNumbers(currentPage, totalPages);
-\t\t\tfor (var i = 0; i < pages.length; i++) {
-\t\t\t\tif (pages[i] === '...') {
-\t\t\t\t\thtml += '<li><span class="page-ellipsis">...</span></li>';
-\t\t\t\t} else {
-\t\t\t\t\thtml += '<li><button class="page-btn' + (pages[i] === currentPage ? ' active' : '') + '" data-page="' + pages[i] + '">' + pages[i] + '</button></li>';
-\t\t\t\t}
+\t\t\tvar html = '<li><button class="page-btn' + (currentPage===1?' disabled':'') + '" data-page="' + (currentPage-1) + '"><i class="bi bi-chevron-left"></i></button></li>';
+\t\t\tvar pgs = buildPageNumbers(currentPage, totalPages);
+\t\t\tfor (var i=0;i<pgs.length;i++) {
+\t\t\t\thtml += pgs[i]==='...' ? '<li><span class="page-ellipsis">...</span></li>'
+\t\t\t\t\t: '<li><button class="page-btn' + (pgs[i]===currentPage?' active':'') + '" data-page="' + pgs[i] + '">' + pgs[i] + '</button></li>';
 \t\t\t}
-
-\t\t\t// Next
-\t\t\thtml += '<li><button class="page-btn' + (currentPage === totalPages ? ' disabled' : '') + '" data-page="' + (currentPage + 1) + '"><i class="bi bi-chevron-right"></i></button></li>';
-
+\t\t\thtml += '<li><button class="page-btn' + (currentPage===totalPages?' disabled':'') + '" data-page="' + (currentPage+1) + '"><i class="bi bi-chevron-right"></i></button></li>';
 \t\t\tpagList.innerHTML = html;
-
-\t\t\t// Bind clicks
 \t\t\tpagList.querySelectorAll('.page-btn').forEach(function(btn) {
 \t\t\t\tbtn.addEventListener('click', function() {
 \t\t\t\t\tvar p = parseInt(this.getAttribute('data-page'));
-\t\t\t\t\tif (p >= 1 && p <= totalPages) {
-\t\t\t\t\t\tcurrentPage = p;
-\t\t\t\t\t\trender();
-\t\t\t\t\t\tdocument.querySelector('.template-grid').scrollIntoView({ behavior: 'smooth', block: 'start' });
-\t\t\t\t\t}
+\t\t\t\t\tif (p>=1 && p<=totalPages) { currentPage=p; renderPage(); document.querySelector('.template-grid').scrollIntoView({behavior:'smooth',block:'start'}); }
 \t\t\t\t});
 \t\t\t});
 \t\t}
 
-\t\tfunction buildPageNumbers(current, total) {
-\t\t\tif (total <= 7) {
-\t\t\t\tvar arr = [];
-\t\t\t\tfor (var i = 1; i <= total; i++) arr.push(i);
-\t\t\t\treturn arr;
-\t\t\t}
-\t\t\tvar pages = [1];
-\t\t\tif (current > 3) pages.push('...');
-\t\t\tfor (var j = Math.max(2, current - 1); j <= Math.min(total - 1, current + 1); j++) {
-\t\t\t\tpages.push(j);
-\t\t\t}
-\t\t\tif (current < total - 2) pages.push('...');
-\t\t\tpages.push(total);
-\t\t\treturn pages;
+\t\tfunction buildPageNumbers(cur, tot) {
+\t\t\tif (tot<=7) { var a=[]; for(var i=1;i<=tot;i++) a.push(i); return a; }
+\t\t\tvar p=[1]; if(cur>3) p.push('...');
+\t\t\tfor(var j=Math.max(2,cur-1);j<=Math.min(tot-1,cur+1);j++) p.push(j);
+\t\t\tif(cur<tot-2) p.push('...'); p.push(tot); return p;
 \t\t}
 
-\t\t// Category filter
-\t\tbtns.forEach(function(btn) {
-\t\t\tbtn.addEventListener('click', function() {
-\t\t\t\tbtns.forEach(function(b) { b.classList.remove('active'); });
-\t\t\t\tbtn.classList.add('active');
-\t\t\t\tcurrentCat = btn.getAttribute('data-category');
-\t\t\t\tcurrentPage = 1;
-\t\t\t\trender();
+\t\t// ── Filter button binding ────────────────────────────────────────
+\t\tfunction bindFilterButtons() {
+\t\t\tvar btns = document.querySelectorAll('.filter-btn');
+\t\t\tbtns.forEach(function(btn) {
+\t\t\t\tbtn.addEventListener('click', function() {
+\t\t\t\t\tbtns.forEach(function(b) { b.classList.remove('active'); });
+\t\t\t\t\tbtn.classList.add('active');
+\t\t\t\t\tcurrentCat = btn.getAttribute('data-category');
+\t\t\t\t\tcurrentPage = 1;
+\t\t\t\t\trenderPage();
+\t\t\t\t});
 \t\t\t});
-\t\t});
+\t\t}
 
-\t\t// Initial render
-\t\trender();
+\t\t// ── Initial render (static data) ─────────────────────────────────
+\t\tbindFilterButtons();
+\t\trenderPage();
 
-\t\t// Hash restore
+\t\t// ── Dynamic fetch from API ───────────────────────────────────────
+\t\tfunction fetchAndReplace() {
+\t\t\tvar allTemplates = [];
+\t\t\tvar page = 1;
+
+\t\t\tfunction fetchPage() {
+\t\t\t\tfetch(API_BASE + '/api/templates/search?page=' + page + '&page_size=50&sort_by=downloads')
+\t\t\t\t\t.then(function(r) { return r.json(); })
+\t\t\t\t\t.then(function(data) {
+\t\t\t\t\t\tif (!data.ok) return;
+\t\t\t\t\t\tallTemplates = allTemplates.concat(data.templates);
+\t\t\t\t\t\tif (allTemplates.length < data.total) { page++; fetchPage(); }
+\t\t\t\t\t\telse { applyLiveData(allTemplates); }
+\t\t\t\t\t})
+\t\t\t\t\t.catch(function() { /* silently keep static data */ });
+\t\t\t}
+\t\t\tfetchPage();
+\t\t}
+
+\t\tfunction applyLiveData(raw) {
+\t\t\t// Transform API data
+\t\t\tvar slugCounts = {};
+\t\t\tvar liveTemplates = [];
+\t\t\tvar catCounts = {};
+\t\t\tvar newTEMPLATES = {};
+
+\t\t\tfor (var i = 0; i < raw.length; i++) {
+\t\t\t\tvar r = raw[i];
+\t\t\t\tvar s = slugify(r.name);
+\t\t\t\tif (slugCounts[s]) { slugCounts[s]++; s = s + '-' + slugCounts[s]; } else { slugCounts[s] = 1; }
+
+\t\t\t\tvar cat = CATEGORIES[r.category] || { label: r.category||'Other', icon: 'bi-box', color: '#6B7280' };
+\t\t\t\tvar t = {
+\t\t\t\t\tslug: s, name: r.name, description: r.description||'',
+\t\t\t\t\tcategory: r.category||'other', categoryLabel: cat.label, categoryColor: cat.color, categoryIcon: cat.icon,
+\t\t\t\t\ttags: r.tags||[], pricing: r.pricing||'free', price: r.price||0,
+\t\t\t\t\ticonUrl: r.icon_url||'', downloads: r.download_count||r.downloads||0,
+\t\t\t\t\tcreatorName: r.creator_name||r.author_name||'Unknown'
+\t\t\t\t};
+\t\t\t\tliveTemplates.push(t);
+\t\t\t\tcatCounts[t.category] = (catCounts[t.category] || 0) + 1;
+
+\t\t\t\t// Update CATEGORIES if new category from API
+\t\t\t\tif (!CATEGORIES[t.category]) { CATEGORIES[t.category] = cat; }
+\t\t\t}
+
+\t\t\t// Build related for dialog
+\t\t\tfor (var j = 0; j < liveTemplates.length; j++) {
+\t\t\t\tvar lt = liveTemplates[j];
+\t\t\t\tvar rel = liveTemplates.filter(function(x) { return x.category === lt.category && x.slug !== lt.slug; }).slice(0,3);
+\t\t\t\tnewTEMPLATES[lt.slug] = {
+\t\t\t\t\tname: lt.name, description: lt.description, category: lt.category,
+\t\t\t\t\tcategoryLabel: lt.categoryLabel, categoryColor: lt.categoryColor, categoryIcon: lt.categoryIcon,
+\t\t\t\t\ticonUrl: lt.iconUrl, pricing: lt.pricing, price: lt.price, tags: lt.tags,
+\t\t\t\t\tdownloads: lt.downloads, creatorName: lt.creatorName,
+\t\t\t\t\tcontent: '<h2>About</h2><p>' + lt.description + '</p>',
+\t\t\t\t\trelated: rel.map(function(x) { return { slug:x.slug, name:x.name, description:x.description, iconUrl:x.iconUrl, categoryColor:x.categoryColor, categoryIcon:x.categoryIcon }; })
+\t\t\t\t};
+\t\t\t}
+
+\t\t\t// Replace TEMPLATES
+\t\t\tTEMPLATES = newTEMPLATES;
+
+\t\t\t// Rebuild grid
+\t\t\tgrid.innerHTML = '';
+\t\t\tallItems = [];
+\t\t\tfor (var k = 0; k < liveTemplates.length; k++) {
+\t\t\t\tvar card = buildCard(liveTemplates[k]);
+\t\t\t\tgrid.appendChild(card);
+\t\t\t\tallItems.push(card);
+\t\t\t}
+
+\t\t\t// Rebuild filter buttons
+\t\t\trebuildFilters(catCounts, liveTemplates.length);
+
+\t\t\t// Update hero count
+\t\t\tvar heroP = document.querySelector('.breadcrumb-content p');
+\t\t\tif (heroP) heroP.textContent = 'Browse ' + liveTemplates.length + '+ ready-to-use templates. Import, customize, and run \\u2014 no coding required.';
+
+\t\t\t// Re-render page
+\t\t\tcurrentPage = 1;
+\t\t\tcurrentCat = 'all';
+\t\t\trenderPage();
+\t\t}
+
+\t\t// Fetch after initial static render
+\t\tsetTimeout(fetchAndReplace, 100);
+
+\t\t// ── Hash restore ─────────────────────────────────────────────────
 \t\tvar hash = window.location.hash.replace('#', '');
 \t\tif (hash && TEMPLATES[hash]) {
-\t\t\tsetTimeout(function() { openTemplate(hash); }, 300);
+\t\t\tsetTimeout(function() { openTemplate(hash); }, 400);
 \t\t}
 
-\t\t// Clear hash when modal closes
 \t\tdocument.getElementById('templateModal').addEventListener('hidden.bs.modal', function() {
 \t\t\thistory.replaceState(null, '', window.location.pathname + window.location.search);
 \t\t});
