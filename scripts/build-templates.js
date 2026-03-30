@@ -674,7 +674,8 @@ ${jsIncludes('./')}
 \t\tif (dlgMain) dlgMain.scrollTop = 0;
 
 \t\t// Show modal
-\t\tvar modal = bootstrap.Modal.getOrCreateInstance(document.getElementById('templateModal'));
+\t\tvar modalEl = document.getElementById('templateModal');
+\t\tvar modal = bootstrap.Modal.getInstance(modalEl) || new bootstrap.Modal(modalEl);
 \t\tmodal.show();
 \t}
 
