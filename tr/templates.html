@@ -2601,7 +2601,8 @@
 		if (dlgMain) dlgMain.scrollTop = 0;
 
 		// Show modal
-		var modal = bootstrap.Modal.getOrCreateInstance(document.getElementById('templateModal'));
+		var modalEl = document.getElementById('templateModal');
+		var modal = bootstrap.Modal.getInstance(modalEl) || new bootstrap.Modal(modalEl);
 		modal.show();
 	}
 
