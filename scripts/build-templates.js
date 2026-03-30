@@ -379,7 +379,7 @@ function buildGalleryPage() {
 
     // Icon: custom image or fallback to category icon
     const iconHtml = t.iconUrl
-      ? `<div class="template-card-icon has-img"><img src="${t.iconUrl}" alt="${t.name}" loading="lazy" onerror="this.parentElement.className=&quot;template-card-icon&quot;;this.parentElement.style.background=&quot;${catColor}&quot;;this.outerHTML=&quot;<i class=${catIcon}></i>&quot;"></div>`
+      ? `<div class="template-card-icon has-img"><img src="${t.iconUrl}" alt="${t.name}" loading="lazy" onerror="this.onerror=null;this.style.display='none'"></div>`
       : `<div class="template-card-icon" style="background:${catColor}"><i class="${catIcon}"></i></div>`;
 
     return `\t\t\t\t<div class="col-lg-4 col-md-6 mb-4 template-item" data-category="${t.category}">
