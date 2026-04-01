@@ -2,14 +2,14 @@
 
 The Webpage to PDF Converter template captures any web page and saves it as a high-fidelity PDF document. It renders the full page in a real browser — including images, fonts, and CSS styling — then exports a pixel-perfect PDF that looks exactly like the original page.
 
-Archiving web content, saving articles for offline reading, or creating PDF reports from web dashboards are common tasks that usually require browser extensions or paid tools. This template does it natively in Flyto2.
+Archiving web content, saving articles for later reading, or creating PDF reports from web dashboards are common tasks that usually require browser extensions or paid tools. This template does it natively in Flyto2.
 
 ### Use Cases
 
 - **Content archiving** — Save important web pages, articles, or legal documents as permanent PDF records before they change or disappear
 - **Report generation** — Convert web-based dashboards and analytics pages into shareable PDF reports for stakeholders
 - **Research documentation** — Capture online sources as PDFs with full formatting for academic papers or business research
-- **Offline reading** — Download long-form articles, tutorials, or documentation as PDFs to read without internet access
+- **Portable reading** — Download long-form articles, tutorials, or documentation as PDFs to read anywhere
 
 ## Getting Started
 
