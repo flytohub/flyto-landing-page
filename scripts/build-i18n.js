@@ -161,6 +161,59 @@ function resolveLocales(targetLocale) {
   return { locales: localeEntries.map(entry => entry.locale), localeMapping, localeEntries };
 }
 
+// FAQ Schema i18n key mappings for index.html and faq.html
+const FAQ_SCHEMA_KEYS = {
+  'index.html': [
+    { q: 'landing.faq.general.q1', a: 'landing.faq.general.a1' },
+    { q: 'landing.faq.general.q2', a: 'landing.faq.general.a2' },
+    { q: 'landing.faq.general.q3', a: 'landing.faq.general.a3' },
+    { q: 'landing.faq.general.q4', a: 'landing.faq.general.a4' },
+    { q: 'landing.faq.gettingStarted.q1', a: 'landing.faq.gettingStarted.a1' },
+  ],
+  'faq.html': [
+    { q: 'landing.faq.general.q1', a: 'landing.faq.general.a1' },
+    { q: 'landing.faq.general.q2', a: 'landing.faq.general.a2' },
+    { q: 'landing.faq.general.q3', a: 'landing.faq.general.a3' },
+    { q: 'landing.faq.general.q4', a: 'landing.faq.general.a4' },
+    { q: 'landing.faq.gettingStarted.q1', a: 'landing.faq.gettingStarted.a1' },
+    { q: 'landing.faq.gettingStarted.q2', a: 'landing.faq.gettingStarted.a2' },
+    { q: 'landing.faq.gettingStarted.q3', a: 'landing.faq.gettingStarted.a3' },
+    { q: 'landing.faq.gettingStarted.q4', a: 'landing.faq.gettingStarted.a4' },
+    { q: 'landing.faq.licensing.q1', a: 'landing.faq.licensing.a1' },
+    { q: 'landing.faq.licensing.q2', a: 'landing.faq.licensing.a2' },
+    { q: 'landing.faq.licensing.q3', a: 'landing.faq.licensing.a3' },
+  ]
+};
+
+// Translate FAQPage JSON-LD schema using i18n translations
+function translateFaqSchema(html, translations, htmlFile) {
+  const keys = FAQ_SCHEMA_KEYS[htmlFile];
+  if (!keys) return html;
+
+  return html.replace(
+    /(<script type="application\/ld\+json">\s*\{[^}]*"@type"\s*:\s*"FAQPage"[\s\S]*?<\/script>)/,
+    (match) => {
+      try {
+        const jsonStr = match.replace(/<\/?script[^>]*>/g, '').trim();
+        const schema = JSON.parse(jsonStr);
+
+        schema.mainEntity = keys.map((keyPair) => ({
+          '@type': 'Question',
+          'name': translations[keyPair.q] || keyPair.q,
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': translations[keyPair.a] || keyPair.a
+          }
+        }));
+
+        return `<script type="application/ld+json">\n\t${JSON.stringify(schema, null, '\t')}\n\t</script>`;
+      } catch (e) {
+        return match; // Keep original if parsing fails
+      }
+    }
+  );
+}
+
 // Replace data-i18n content in HTML
 function translateHtml(html, translations, locale, htmlFile) {
   // Replace content inside elements with data-i18n attribute
@@ -176,6 +229,9 @@ function translateHtml(html, translations, locale, htmlFile) {
       return match; // Keep original if no translation
     }
   );
+
+  // Translate FAQPage JSON-LD schema
+  translated = translateFaqSchema(translated, translations, htmlFile);
 
   // Update canonical, hreflang tags, og:url, og:locale, and meta descriptions
   translated = updateSeoLinks(translated, locale, htmlFile, translations);
