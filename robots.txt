@@ -1,6 +1,6 @@
 # Flyto2 Robots.txt
 # Auto-generated from seo-config.json
-# Generated: 2026-03-30
+# Generated: 2026-04-04
 #
 # SEO Strategy: Whitelist-based indexing
 # Edit scripts/seo-config.json to modify
@@ -709,23 +709,18 @@ Disallow: /.idea/
 # Crawl settings
 Crawl-delay: 1
 
+# Allowed: LLMs.txt
+Allow: /llms.txt
+
 # ===========================================
-# Sitemap
+# Sitemap & LLMs.txt
 # ===========================================
 Sitemap: https://flyto2.com/sitemap.xml
+LLMs-Txt: https://flyto2.com/llms.txt
 
 # ===========================================
 # Blocked Bots (AI crawlers, etc.)
 # ===========================================
-
-User-agent: GPTBot
-Disallow: /
-
-User-agent: ChatGPT-User
-Disallow: /
-
-User-agent: CCBot
-Disallow: /
 
 User-agent: anthropic-ai
 Disallow: /

@@ -129,12 +129,18 @@ function generateRobotsTxt() {
   lines.push('# Crawl settings');
   lines.push(`Crawl-delay: ${CONFIG.crawlDelay}`);
 
-  // Sitemap
+  // Allowed: llms.txt
+  lines.push('');
+  lines.push('# Allowed: LLMs.txt');
+  lines.push('Allow: /llms.txt');
+
+  // Sitemap & LLMs.txt
   lines.push('');
   lines.push('# ===========================================');
-  lines.push('# Sitemap');
+  lines.push('# Sitemap & LLMs.txt');
   lines.push('# ===========================================');
   lines.push(`Sitemap: ${CONFIG.baseUrl}/sitemap.xml`);
+  lines.push(`LLMs-Txt: ${CONFIG.baseUrl}/llms.txt`);
 
   // Blocked bots
   if (CONFIG.blockedBots.length > 0) {

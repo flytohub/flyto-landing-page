@@ -1,0 +1,24 @@
+# Flyto2
+
+> Browser automation at machine speed. Record once, replay instantly. No API needed — works on any website. Batch operations, page monitoring, time-sensitive tasks.
+
+Flyto2 is an automation tool that lets you record browser actions and replay them without coding. It works on Mac, Windows, and Linux. You can pause, verify, and resume at any step — always staying in control.
+
+## Main Pages
+
+- [Home](https://flyto2.com/): Overview of Flyto2 browser automation platform
+- [Pricing](https://flyto2.com/pricing.html): Plans and pricing — free, pro, and enterprise
+- [Download](https://flyto2.com/download.html): Download Flyto2 for Mac, Windows, or Linux
+- [Templates](https://flyto2.com/templates.html): Pre-built automation templates for common tasks
+- [FAQ](https://flyto2.com/faq.html): Frequently asked questions
+- [Developer](https://flyto2.com/dev.html): Developer documentation and API
+- [Contact](https://flyto2.com/contact.html): Contact and support
+
+## Key Features
+
+- Record & replay browser actions — no coding required
+- Pause, check, and resume at any step
+- Schedule tasks to run automatically
+- Works with websites, desktop apps, and file operations
+- Batch operations and page monitoring
+- Available on Mac, Windows, and Linux
