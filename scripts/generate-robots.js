@@ -129,10 +129,13 @@ function generateRobotsTxt() {
   lines.push('# Crawl settings');
   lines.push(`Crawl-delay: ${CONFIG.crawlDelay}`);
 
-  // Allowed: llms.txt
+  // Allowed: llms.txt (root + language directories)
   lines.push('');
   lines.push('# Allowed: LLMs.txt');
   lines.push('Allow: /llms.txt');
+  for (const lang of langDirs) {
+    lines.push(`Allow: /${lang}/llms.txt`);
+  }
 
   // Sitemap & LLMs.txt
   lines.push('');

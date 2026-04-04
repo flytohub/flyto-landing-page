@@ -565,6 +565,7 @@ function main() {
   }
 
   updateEnglishSeo();
+  generateAllLlmsTxt();
   console.log('\n✅ Build complete!');
 }
 
@@ -581,9 +582,93 @@ function updateEnglishSeo() {
     }
 
     let html = fs.readFileSync(sourcePath, 'utf8');
+    html = translateFaqSchema(html, translations, htmlFile);
     html = updateSeoLinks(html, 'en', htmlFile, translations);
     fs.writeFileSync(sourcePath, html);
     console.log(`   ✅ ${htmlFile}`);
+  }
+}
+
+// Generate llms.txt from flyto-i18n translations
+function generateLlmsTxt(translations, localeDir) {
+  const t = (key) => translations[key] || '';
+  const baseUrl = 'https://flyto2.com';
+  const prefix = localeDir && localeDir !== 'en' ? `${baseUrl}/${localeDir}` : baseUrl;
+
+  const title = t('landing.llms.title') || 'Flyto2';
+  const summary = t('landing.llms.summary');
+  const description = t('landing.llms.description');
+
+  // If no translations available, skip
+  if (!summary && !description) return null;
+
+  const pages = [
+    { key: 'home', label: 'Home', file: '' },
+    { key: 'pricing', label: 'Pricing', file: 'pricing.html' },
+    { key: 'download', label: 'Download', file: 'download.html' },
+    { key: 'templates', label: 'Templates', file: 'templates.html' },
+    { key: 'faq', label: 'FAQ', file: 'faq.html' },
+    { key: 'dev', label: 'Developer', file: 'dev.html' },
+    { key: 'contact', label: 'Contact', file: 'contact.html' },
+  ];
+
+  const featureKeys = ['record', 'pause', 'schedule', 'apps', 'batch', 'platforms'];
+
+  const lines = [`# ${title}`, ''];
+  if (summary) lines.push(`> ${summary}`, '');
+  if (description) lines.push(description, '');
+
+  // Pages section
+  const pageLines = pages
+    .map(p => {
+      const desc = t(`landing.llms.pages.${p.key}`);
+      if (!desc) return null;
+      const url = p.file ? `${prefix}/${p.file}` : `${prefix}/`;
+      return `- [${p.label}](${url}): ${desc}`;
+    })
+    .filter(Boolean);
+
+  if (pageLines.length > 0) {
+    lines.push('## Main Pages', '', ...pageLines, '');
+  }
+
+  // Features section
+  const featureLines = featureKeys
+    .map(k => t(`landing.llms.features.${k}`))
+    .filter(Boolean)
+    .map(f => `- ${f}`);
+
+  if (featureLines.length > 0) {
+    lines.push('## Key Features', '', ...featureLines, '');
+  }
+
+  return lines.join('\n');
+}
+
+function generateAllLlmsTxt() {
+  console.log('\n📄 Generating llms.txt...');
+
+  // English (root)
+  const enTranslations = loadTranslations('en');
+  const enContent = generateLlmsTxt(enTranslations, 'en');
+  if (enContent) {
+    const rootPath = path.join(CONFIG.htmlDir, 'llms.txt');
+    fs.writeFileSync(rootPath, enContent, 'utf8');
+    console.log('   ✅ llms.txt (en)');
+  }
+
+  // Each locale
+  for (const locale of CONFIG.locales) {
+    const translations = loadTranslations(locale);
+    const localeDir = CONFIG.localeMapping[locale] || locale.toLowerCase();
+    const content = generateLlmsTxt(translations, localeDir);
+    if (content) {
+      const outputDir = path.join(CONFIG.htmlDir, localeDir);
+      if (fs.existsSync(outputDir)) {
+        fs.writeFileSync(path.join(outputDir, 'llms.txt'), content, 'utf8');
+        console.log(`   ✅ ${localeDir}/llms.txt`);
+      }
+    }
   }
 }
 

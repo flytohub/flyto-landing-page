@@ -711,6 +711,21 @@ Crawl-delay: 1
 
 # Allowed: LLMs.txt
 Allow: /llms.txt
+Allow: /cn/llms.txt
+Allow: /de/llms.txt
+Allow: /es/llms.txt
+Allow: /fr/llms.txt
+Allow: /hi/llms.txt
+Allow: /id/llms.txt
+Allow: /it/llms.txt
+Allow: /ja/llms.txt
+Allow: /ko/llms.txt
+Allow: /pl/llms.txt
+Allow: /pt/llms.txt
+Allow: /th/llms.txt
+Allow: /tr/llms.txt
+Allow: /vi/llms.txt
+Allow: /zh/llms.txt
 
 # ===========================================
 # Sitemap & LLMs.txt
