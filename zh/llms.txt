@@ -1,0 +1,24 @@
+# Flyto2
+
+> 機器速度的瀏覽器自動化。錄製一次，永遠重播。不需要 API — 適用於任何網站。批次操作、頁面監控、時效性任務。
+
+Flyto2 是一個自動化工具，讓你錄製瀏覽器操作並重複執行，不需要寫程式。支援 Mac、Windows 和 Linux。你可以在任何步驟暫停、確認、再繼續 — 完全掌控流程。
+
+## Main Pages
+
+- [Home](https://flyto2.com/zh/): Flyto2 瀏覽器自動化平台概覽
+- [Pricing](https://flyto2.com/zh/pricing.html): 方案與價格 — 免費版、專業版、企業版
+- [Download](https://flyto2.com/zh/download.html): 下載 Flyto2（Mac、Windows、Linux）
+- [Templates](https://flyto2.com/zh/templates.html): 常見任務的預建自動化範本
+- [FAQ](https://flyto2.com/zh/faq.html): 常見問題
+- [Developer](https://flyto2.com/zh/dev.html): 開發者文件與 API
+- [Contact](https://flyto2.com/zh/contact.html): 聯絡與支援
+
+## Key Features
+
+- 錄製與重播瀏覽器操作 — 不需要寫程式
+- 在任何步驟暫停、確認、繼續
+- 排程自動執行任務
+- 適用於網站、桌面程式和檔案操作
+- 批次操作與頁面監控
+- 支援 Mac、Windows 和 Linux

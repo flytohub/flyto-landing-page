@@ -1,0 +1,24 @@
+# Flyto2
+
+> マシン速度のブラウザ自動化。一度記録すれば、いつでも再生。APIは不要 — どんなウェブサイトでも動作。バッチ操作、ページ監視、タイムリーなタスク。
+
+Flyto2はブラウザの操作を記録し、コードなしで再生できる自動化ツールです。Mac、Windows、Linuxに対応。任意のステップで一時停止、確認、再開でき、常にコントロールを保てます。
+
+## Main Pages
+
+- [Home](https://flyto2.com/ja/): Flyto2 ブラウザ自動化プラットフォームの概要
+- [Pricing](https://flyto2.com/ja/pricing.html): プランと料金 — 無料、プロ、エンタープライズ
+- [Download](https://flyto2.com/ja/download.html): Flyto2をダウンロード（Mac、Windows、Linux）
+- [Templates](https://flyto2.com/ja/templates.html): よくあるタスク向けのテンプレート
+- [FAQ](https://flyto2.com/ja/faq.html): よくある質問
+- [Developer](https://flyto2.com/ja/dev.html): 開発者ドキュメントとAPI
+- [Contact](https://flyto2.com/ja/contact.html): お問い合わせとサポート
+
+## Key Features
+
+- ブラウザ操作を記録・再生 — コード不要
+- 任意のステップで一時停止、確認、再開
+- タスクを自動スケジュール実行
+- ウェブサイト、デスクトップアプリ、ファイル操作に対応
+- バッチ操作とページ監視
+- Mac、Windows、Linuxに対応
