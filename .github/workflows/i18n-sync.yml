@@ -153,3 +153,8 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./flyto-landing-page
           publish_branch: gh-pages
+
+      - name: Submit to IndexNow (Bing, Yandex, DuckDuckGo)
+        run: |
+          cd flyto-landing-page
+          node scripts/submit-indexnow.js
