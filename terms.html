@@ -57,6 +57,22 @@
 		]
 	}
 	</script>
+	<!-- Content Security Policy -->
+	<meta http-equiv="Content-Security-Policy" content="
+		default-src 'self';
+		script-src 'self' 'unsafe-inline' https://www.gstatic.com https://www.googletagmanager.com;
+		style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+		font-src 'self' https://fonts.gstatic.com;
+		img-src 'self' data: https:;
+		connect-src 'self' https://www.gstatic.com https://*.firebaseio.com https://*.googleapis.com https://www.google-analytics.com https://www.googletagmanager.com;
+		frame-src https://accounts.google.com https://*.firebaseapp.com;
+	">
+
+	<!-- Security Headers -->
+	<meta http-equiv="X-Content-Type-Options" content="nosniff">
+	<meta name="referrer" content="strict-origin-when-cross-origin">
+	<meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+
 	<link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="assets/img/icon.png" type="image/png" sizes="32x32">
 	<link rel="apple-touch-icon" href="assets/img/icon.png" sizes="180x180">
