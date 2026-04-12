@@ -734,32 +734,8 @@ Sitemap: https://flyto2.com/sitemap.xml
 LLMs-Txt: https://flyto2.com/llms.txt
 
 # ===========================================
-# AI Crawlers — allowed (same rules as default)
+# Blocked Bots (AI crawlers, etc.)
 # ===========================================
-# Flyto2 is a public product. AI discovery helps users find us.
 
-User-agent: GPTBot
-User-agent: ChatGPT-User
 User-agent: anthropic-ai
-User-agent: ClaudeBot
-User-agent: PerplexityBot
-User-agent: Google-Extended
-User-agent: Applebot-Extended
-Allow: /llms.txt
-Allow: /$
-Allow: /pricing.html
-Allow: /download.html
-Allow: /app.html
-Allow: /faq.html
-Allow: /contact.html
-Allow: /templates.html
-Allow: /dev.html
-Allow: /node.html
-Allow: /wasm.html
-Allow: /language-packs.html
-Allow: /buy-offline.html
-Disallow: /assets/js/
-Disallow: /auth/
-Disallow: /scripts/
-Disallow: /*.json
-Crawl-delay: 2
+Disallow: /
