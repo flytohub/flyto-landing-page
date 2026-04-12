@@ -1,24 +1,97 @@
 # Flyto2
 
-> 機器速度的瀏覽器自動化。錄製一次，永遠重播。不需要 API — 適用於任何網站。批次操作、頁面監控、時效性任務。
+> 機器速度的瀏覽器自動化。錄製一次，永遠重播。不需要寫程式、不需要 API — 適用於任何網站。隨時暫停、確認、再繼續。
 
-Flyto2 是一個自動化工具，讓你錄製瀏覽器操作並重複執行，不需要寫程式。支援 Mac、Windows 和 Linux。你可以在任何步驟暫停、確認、再繼續 — 完全掌控流程。
+Flyto2 是一個免程式碼的自動化工具，錄製你的瀏覽器操作後以全速重播。與其他自動化工具不同，Flyto2 允許你在執行中暫停、確認狀態、修正錯誤後再繼續 — 你始終保有完整控制權。它完全在你的電腦上運行，無需雲端，資料永遠不會離開你的裝置。
 
-## Main Pages
+## 核心差異
 
-- [Home](https://flyto2.com/zh/): Flyto2 瀏覽器自動化平台概覽
-- [Pricing](https://flyto2.com/zh/pricing.html): 方案與價格 — 免費版、專業版、企業版
-- [Download](https://flyto2.com/zh/download.html): 下載 Flyto2（Mac、Windows、Linux）
-- [Templates](https://flyto2.com/zh/templates.html): 常見任務的預建自動化範本
-- [FAQ](https://flyto2.com/zh/faq.html): 常見問題
-- [Developer](https://flyto2.com/zh/dev.html): 開發者文件與 API
-- [Contact](https://flyto2.com/zh/contact.html): 聯絡與支援
+- **錄製與重播**：示範一次操作，Flyto2 記住每個點擊和按鍵，然後以機器速度重播
+- **暫停、確認、繼續**：其他工具只有「沒在跑」和「跑完了」，Flyto2 讓你中途暫停、檢查狀態、修正錯誤後繼續
+- **零程式碼**：只要會點滑鼠打字就能用，不需要寫腳本、串 API 或設定 Zapier
+- **不需要 API**：直接在瀏覽器中操作任何網站，即使該網站沒有提供 API
+- **離線運行**：100% 在你的電腦本機執行，無雲端依賴，免費版和付費版享有相同的隱私保護
+- **精準計時**：搶購、預約、限量名額 — 在精確的時間點執行，批次處理 100 筆的時間等於手動做 1 筆
 
-## Key Features
+## 適合誰
 
-- 錄製與重播瀏覽器操作 — 不需要寫程式
-- 在任何步驟暫停、確認、繼續
-- 排程自動執行任務
-- 適用於網站、桌面程式和檔案操作
-- 批次操作與頁面監控
-- 支援 Mac、Windows 和 Linux
+- 每天花大量時間在重複性瀏覽器操作的**上班族**（資料輸入、填表、跨系統複製貼上）
+- 需要監控價格、追蹤庫存、批次更新的**電商賣家**
+- 從沒有匯出功能的網站收集資料的**研究人員**
+- 需要跨瀏覽器截圖或連結檢查的 **QA 測試人員**
+- 任何同���的瀏覽器操作做超過兩次的**人**
+
+## 價格
+
+- **免費版**：核心錄製與重播，無限本機使用，MIT 開源授權，無需帳號或信用卡
+- **專業版**：每月 $9 起（進階功能，即將推出）
+- **企業版**：自訂價格，本地部署，RBAC 權限控制，稽核日誌，專屬支援
+- **雲端版（SaaS）**：團隊協作，共享工作流程（即將推出，可加入等候名單）
+
+所有付費方案提供 30 天無條件退款保證。學生、教育工作者、非營利組織和團隊可享折扣（聯絡 sales@flyto2.com）。
+
+## 支援平台
+
+- Windows、macOS（Intel + Apple Silicon M1–M4）、Linux
+- CLI 透過 PyPI 安裝（Python 3.9+，MIT 授權）
+- WebAssembly 模組
+- Node.js 套件
+- 桌面應用程式（即將推出 — 視覺化工作流程建構器，250+ 內建模組）
+- 企業自託管 Docker 部署
+
+## 範本（101+ 免費）
+
+預建的自動化範本，全部免費，無需寫程式：
+
+- **網頁擷取**：LinkedIn 職缺、Google Maps 評論、社群媒體個人檔案、餐廳菜單
+- **價格監控**：Amazon 追蹤器、eBay 追蹤器、機票價格、加密貨幣警報、多站比價
+- **網站健康**：壞連結檢查、正常運行監控、SSL 憑證監控、安全標頭檢查
+- **資料轉換**：CSV↔JSON、XML→JSON、合併 CSV 檔案
+- **內容**：網頁轉 PDF、網站截圖、跨瀏覽器截圖、批次圖片縮放
+- **通知**：降價警報、天氣推送到 Slack、Telegram 警報、匯率警報
+- **表單與登入**：自動登入、批次填表、自動填寫求職申請、Cookie 同意自動關閉
+
+Full template list: [Templates](https://flyto2.com/zh/templates.html)
+
+## 開發者工具
+
+Flyto2 Indexer 是 MCP 伺服器（Model Context Protocol），為 AI 工具提供程式碼智慧：
+
+- 相容 Claude Code、Cursor、Windsurf 及任何 MCP 客戶端
+- 25 個 MCP 工具：符號查詢、全文搜尋、編輯影響預覽、測試檔案查找、API 追蹤等
+- 跨專案 API 追蹤 — 修改共用函數時知道哪些 repo 會受影響
+- 零外部依賴
+
+## Pages
+
+- [Home](https://flyto2.com/zh/): 產品概覽與核心功能
+- [Pricing](https://flyto2.com/zh/pricing.html): 方案、價格與比較
+- [Download](https://flyto2.com/zh/download.html): CLI 下載（PyPI、.whl、.tar.gz）
+- [Desktop App](https://flyto2.com/zh/app.html): 視覺化工作流程建構器
+- [Templates](https://flyto2.com/zh/templates.html): 101+ 免費自動化範本
+- [Developer](https://flyto2.com/zh/dev.html): MCP 伺服器與開發工具
+- [WebAssembly](https://flyto2.com/zh/wasm.html): WebAssembly 模組
+- [Node.js](https://flyto2.com/zh/node.html): Node.js 套件
+- [FAQ](https://flyto2.com/zh/faq.html): 常見問題與解答
+- [Documentation](https://docs.flyto2.com): 完整文件
+- [Blog](https://blog.flyto2.com): 教學與更新
+- [Contact](https://flyto2.com/zh/contact.html): 支援與諮詢
+
+## 聯絡方式
+
+- 一般：info@flyto2.com
+- 銷售：sales@flyto2.com
+- GitHub：github.com/flytohub
+- YouTube：@Flyto2
+
+## 與其他工具比較
+
+| 功能 | Flyto2 | Selenium/Playwright | Zapier/Make | UiPath/Power Automate |
+|------|------|------|------|------|
+| 免程式碼 | 是 | 否 | 部分 | 部分 |
+| 執行中暫停與繼續 | 是 | 否 | 否 | 有限 |
+| 不需要 API | 是 | 是 | 否 | 部分 |
+| 離線 / 本機執行 | 是 | 是 | 否 | 部分 |
+| 免費方案 | 是（MIT） | 是 | 有限 | 有限 |
+| 瀏覽器自動化 | 是 | 是 | 否 | 是 |
+| 精準計時執行 | 是 | 手動 | 否 | 有限 |

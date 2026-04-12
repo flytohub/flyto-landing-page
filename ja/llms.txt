@@ -1,24 +1,97 @@
 # Flyto2
 
-> マシン速度のブラウザ自動化。一度記録すれば、いつでも再生。APIは不要 — どんなウェブサイトでも動作。バッチ操作、ページ監視、タイムリーなタスク。
+> マシン速度のブラウザ自動化。一度記録すれば、いつでも再生。コード不要、API不要 — どんなウェブサイトでも動作。一時停止、確認、再開がいつでも可能。
 
-Flyto2はブラウザの操作を記録し、コードなしで再生できる自動化ツールです。Mac、Windows、Linuxに対応。任意のステップで一時停止、確認、再開でき、常にコントロールを保てます。
+Flyto2はノーコードの自動化ツールで、ブラウザ操作を記録してフルスピードで再生します。他の自動化ツールと異なり、Flyto2は実行中に一時停止し、状態を確認し、ミスを修正してから再開できます — 常に完全なコントロールを維持できます。完全にローカルで動作し、クラウド依存なし、データがデバイスから出ることはありません。
 
-## Main Pages
+## 核心的な違い
 
-- [Home](https://flyto2.com/ja/): Flyto2 ブラウザ自動化プラットフォームの概要
-- [Pricing](https://flyto2.com/ja/pricing.html): プランと料金 — 無料、プロ、エンタープライズ
-- [Download](https://flyto2.com/ja/download.html): Flyto2をダウンロード（Mac、Windows、Linux）
-- [Templates](https://flyto2.com/ja/templates.html): よくあるタスク向けのテンプレート
-- [FAQ](https://flyto2.com/ja/faq.html): よくある質問
-- [Developer](https://flyto2.com/ja/dev.html): 開発者ドキュメントとAPI
-- [Contact](https://flyto2.com/ja/contact.html): お問い合わせとサポート
+- **記録＆再生**：操作を一度見せるだけ。Flyto2がすべてのクリックとキー入力を記憶し、マシン速度で再生
+- **一時停止、確認、再開**：他のツールは「停止中」か「完了」だけ。Flyto2はタスク途中で一時停止、状態確認、エラー修正後に再開可能
+- **ゼロコード**：クリックとタイプができれば使える。スクリプト、API連携、Zapierの設定は不要
+- **API不要**：ブラウザで直接どんなウェブサイトでも操作可能 — APIがないサイトでも動作
+- **オフライン動作**：100%ローカル実行、クラウド依存なし。無料版と有料版で同じプライバシー保護
+- **精密タイミング**：フラッシュセール、予約、限定枠 — 正確なタイミングで実行。100件のバッチ処理を1件分の時間で
 
-## Key Features
+## 対象ユーザー
 
-- ブラウザ操作を記録・再生 — コード不要
-- 任意のステップで一時停止、確認、再開
-- タスクを自動スケジュール実行
-- ウェブサイト、デスクトップアプリ、ファイル操作に対応
-- バッチ操作とページ監視
-- Mac、Windows、Linuxに対応
+- 繰り返しのブラウザ操作に毎日時間を費やす**ビジネスユーザー**（データ入力、フォーム記入、システム間のコピペ）
+- 価格監視、在庫追跡、一括更新が必要な**ECセラー**
+- エクスポート機能のないサイトからデータを収集する**研究者**
+- クロスブラウザスクリーンショットやリンクチェックが必要な**QAテスター**
+- 同じブラウザ操作を2回以上する**すべての人**
+
+## 料金
+
+- **無料**：コア記録＆再生、無制限ローカル使用、MITオープンソース、アカウントもクレジットカードも不要
+- **Pro**：月額$9から（高度な機能、近日公開）
+- **Enterprise**：カスタム価格、オンプレミスデプロイ、RBAC、監査ログ、専用サポート
+- **Cloud（SaaS）**：チームコラボレーション、共有ワークフロー（近日公開、ウェイトリスト受付中）
+
+全有料プランに30日間返金保証。学生、教育者、非営利団体、チーム向け割引あり（sales@flyto2.comまで）。
+
+## 対応プラットフォーム
+
+- Windows、macOS（Intel + Apple Silicon M1–M4）、Linux
+- CLI（PyPI経由、Python 3.9+、MITライセンス）
+- WebAssemblyモジュール
+- Node.jsパッケージ
+- デスクトップアプリ（近日公開 — ビジュアルワークフロービルダー、250+内蔵モジュール）
+- エンタープライズ向けセルフホストDockerデプロイ
+
+## テンプレート（101+無料）
+
+すぐに使える自動化テンプレート、すべて無料、コード不要：
+
+- **Webスクレイピング**：LinkedIn求人、Google Mapsレビュー、SNSプロフィール、レストランメニュー
+- **価格監視**：Amazonトラッカー、eBayトラッカー、航空券価格、暗号資産アラート、マルチサイト比較
+- **サイトヘルス**：リンク切れチェック、稼働監視、SSL証明書監視、セキュリティヘッダーチェック
+- **データ変換**：CSV↔JSON、XML→JSON、CSVファイルのマージ
+- **コンテンツ**：WebページをPDFに、サイトスクリーンショット、クロスブラウザスクリーンショット、一括画像リサイズ
+- **通知**：値下げアラート、天気予報をSlackに、Telegramアラート、為替レートアラート
+- **フォーム＆ログイン**：自動ログイン、一括フォーム送信、求人応募自動入力、Cookie同意の自動非表示
+
+Full template list: [Templates](https://flyto2.com/ja/templates.html)
+
+## 開発者ツール
+
+Flyto2 IndexerはMCPサーバー（Model Context Protocol）で、AIツールにコードインテリジェンスを提供：
+
+- Claude Code、Cursor、Windsurf、およびすべてのMCPクライアントと互換
+- 25のMCPツール：シンボル検索、全文検索、編集影響プレビュー、テストファイル検出、API追跡など
+- クロスプロジェクトAPI追跡 — 共有関数を変更したとき、どのリポジトリに影響するか把握
+- 外部依存ゼロ
+
+## Pages
+
+- [Home](https://flyto2.com/ja/): 製品概要とコア機能
+- [Pricing](https://flyto2.com/ja/pricing.html): プラン、料金、比較
+- [Download](https://flyto2.com/ja/download.html): CLIダウンロード（PyPI、.whl、.tar.gz）
+- [Desktop App](https://flyto2.com/ja/app.html): ビジュアルワークフロービルダー
+- [Templates](https://flyto2.com/ja/templates.html): 101+無料自動化テンプレート
+- [Developer](https://flyto2.com/ja/dev.html): MCPサーバーと開発ツール
+- [WebAssembly](https://flyto2.com/ja/wasm.html): WebAssemblyモジュール
+- [Node.js](https://flyto2.com/ja/node.html): Node.jsパッケージ
+- [FAQ](https://flyto2.com/ja/faq.html): よくある質問と回答
+- [Documentation](https://docs.flyto2.com): 完全なドキュメント
+- [Blog](https://blog.flyto2.com): チュートリアルとアップデート
+- [Contact](https://flyto2.com/ja/contact.html): サポートとお問い合わせ
+
+## お問い合わせ
+
+- 一般：info@flyto2.com
+- 営業：sales@flyto2.com
+- GitHub：github.com/flytohub
+- YouTube：@Flyto2
+
+## 他ツールとの比較
+
+| 機能 | Flyto2 | Selenium/Playwright | Zapier/Make | UiPath/Power Automate |
+|------|------|------|------|------|
+| ノーコード | はい | いいえ | 部分的 | 部分的 |
+| 実行中の一時停止＆再開 | はい | いいえ | いいえ | 限定的 |
+| API不要 | はい | はい | いいえ | 部分的 |
+| オフライン/ローカル実行 | はい | はい | いいえ | 部分的 |
+| 無料プラン | はい（MIT） | はい | 限定的 | 限定的 |
+| ブラウザ自動化 | はい | はい | いいえ | はい |
+| 精密タイミング実行 | はい | 手動 | いいえ | 限定的 |

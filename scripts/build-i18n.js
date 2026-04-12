@@ -602,44 +602,116 @@ function generateLlmsTxt(translations, localeDir) {
   // If no translations available, skip
   if (!summary && !description) return null;
 
-  const pages = [
-    { key: 'home', label: 'Home', file: '' },
-    { key: 'pricing', label: 'Pricing', file: 'pricing.html' },
-    { key: 'download', label: 'Download', file: 'download.html' },
-    { key: 'templates', label: 'Templates', file: 'templates.html' },
-    { key: 'faq', label: 'FAQ', file: 'faq.html' },
-    { key: 'dev', label: 'Developer', file: 'dev.html' },
-    { key: 'contact', label: 'Contact', file: 'contact.html' },
-  ];
-
-  const featureKeys = ['record', 'pause', 'schedule', 'apps', 'batch', 'platforms'];
-
   const lines = [`# ${title}`, ''];
   if (summary) lines.push(`> ${summary}`, '');
   if (description) lines.push(description, '');
 
-  // Pages section
+  // Helper: render a bullet list section from keys
+  const renderBulletSection = (titleKey, keys) => {
+    const sectionTitle = t(titleKey);
+    const items = keys.map(k => t(k)).filter(Boolean);
+    if (sectionTitle && items.length > 0) {
+      lines.push(`## ${sectionTitle}`, '', ...items.map(i => `- ${i}`), '');
+    }
+  };
+
+  // Differentiators
+  renderBulletSection('landing.llms.diff.title', [
+    'landing.llms.diff.record', 'landing.llms.diff.pause', 'landing.llms.diff.nocode',
+    'landing.llms.diff.noapi', 'landing.llms.diff.offline', 'landing.llms.diff.timing',
+  ]);
+
+  // Audience
+  renderBulletSection('landing.llms.audience.title', [
+    'landing.llms.audience.business', 'landing.llms.audience.ecommerce',
+    'landing.llms.audience.researchers', 'landing.llms.audience.qa', 'landing.llms.audience.anyone',
+  ]);
+
+  // Pricing
+  const pricingTitle = t('landing.llms.pricing.title');
+  const pricingItems = ['free', 'pro', 'enterprise', 'cloud']
+    .map(k => t(`landing.llms.pricing.${k}`)).filter(Boolean);
+  const pricingNote = t('landing.llms.pricing.note');
+  if (pricingTitle && pricingItems.length > 0) {
+    lines.push(`## ${pricingTitle}`, '', ...pricingItems.map(i => `- ${i}`), '');
+    if (pricingNote) lines.push(pricingNote, '');
+  }
+
+  // Platforms
+  renderBulletSection('landing.llms.platforms.title', [
+    'landing.llms.platforms.os', 'landing.llms.platforms.cli', 'landing.llms.platforms.wasm',
+    'landing.llms.platforms.node', 'landing.llms.platforms.desktop', 'landing.llms.platforms.docker',
+  ]);
+
+  // Templates
+  const templatesTitle = t('landing.llms.templates.title');
+  const templatesIntro = t('landing.llms.templates.intro');
+  const templateCategories = ['scraping', 'monitoring', 'health', 'conversion', 'content', 'notifications', 'forms']
+    .map(k => t(`landing.llms.templates.${k}`)).filter(Boolean);
+  if (templatesTitle && templateCategories.length > 0) {
+    lines.push(`## ${templatesTitle}`, '');
+    if (templatesIntro) lines.push(templatesIntro, '');
+    lines.push(...templateCategories.map(i => `- ${i}`), '');
+    lines.push(`Full template list: [Templates](${prefix}/templates.html)`, '');
+  }
+
+  // Developer tools
+  const devTitle = t('landing.llms.devtools.title');
+  const devIntro = t('landing.llms.devtools.intro');
+  const devItems = ['compat', 'tools', 'tracking', 'deps']
+    .map(k => t(`landing.llms.devtools.${k}`)).filter(Boolean);
+  if (devTitle && devItems.length > 0) {
+    lines.push(`## ${devTitle}`, '');
+    if (devIntro) lines.push(devIntro, '');
+    lines.push(...devItems.map(i => `- ${i}`), '');
+  }
+
+  // Pages
+  const pages = [
+    { key: 'home', label: 'Home', file: '' },
+    { key: 'pricing', label: 'Pricing', file: 'pricing.html' },
+    { key: 'download', label: 'Download', file: 'download.html' },
+    { key: 'app', label: 'Desktop App', file: 'app.html' },
+    { key: 'templates', label: 'Templates', file: 'templates.html' },
+    { key: 'dev', label: 'Developer', file: 'dev.html' },
+    { key: 'wasm', label: 'WebAssembly', file: 'wasm.html' },
+    { key: 'node', label: 'Node.js', file: 'node.html' },
+    { key: 'faq', label: 'FAQ', file: 'faq.html' },
+    { key: 'docs', label: 'Documentation', url: 'https://docs.flyto2.com' },
+    { key: 'blog', label: 'Blog', url: 'https://blog.flyto2.com' },
+    { key: 'contact', label: 'Contact', file: 'contact.html' },
+  ];
+
   const pageLines = pages
     .map(p => {
       const desc = t(`landing.llms.pages.${p.key}`);
       if (!desc) return null;
-      const url = p.file ? `${prefix}/${p.file}` : `${prefix}/`;
+      const url = p.url || (p.file ? `${prefix}/${p.file}` : `${prefix}/`);
       return `- [${p.label}](${url}): ${desc}`;
     })
     .filter(Boolean);
 
   if (pageLines.length > 0) {
-    lines.push('## Main Pages', '', ...pageLines, '');
+    lines.push('## Pages', '', ...pageLines, '');
   }
 
-  // Features section
-  const featureLines = featureKeys
-    .map(k => t(`landing.llms.features.${k}`))
-    .filter(Boolean)
-    .map(f => `- ${f}`);
+  // Contact
+  const contactTitle = t('landing.llms.contact.title');
+  const contactItems = ['general', 'sales', 'github', 'youtube']
+    .map(k => t(`landing.llms.contact.${k}`)).filter(Boolean);
+  if (contactTitle && contactItems.length > 0) {
+    lines.push(`## ${contactTitle}`, '', ...contactItems.map(i => `- ${i}`), '');
+  }
 
-  if (featureLines.length > 0) {
-    lines.push('## Key Features', '', ...featureLines, '');
+  // Comparison table
+  const compTitle = t('landing.llms.comparison.title');
+  const compHeader = t('landing.llms.comparison.header');
+  const compRows = ['nocode', 'pause', 'noapi', 'offline', 'free', 'browser', 'timing']
+    .map(k => t(`landing.llms.comparison.${k}`)).filter(Boolean);
+  if (compTitle && compHeader && compRows.length > 0) {
+    const cols = compHeader.split('|').filter(s => s.trim());
+    const separator = '|' + cols.map(() => '------').join('|') + '|';
+    lines.push(`## ${compTitle}`, '', compHeader, separator, ...compRows, '');
   }
 
   return lines.join('\n');
