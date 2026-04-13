@@ -1,0 +1,8 @@
+# Security Policy for flyto2.com
+# https://securitytxt.org/
+
+Contact: mailto:security@flyto.dev
+Expires: 2027-04-13T00:00:00.000Z
+Preferred-Languages: en, zh-TW
+Canonical: https://flyto2.com/.well-known/security.txt
+Policy: https://github.com/flytohub/flyto-core/blob/main/SECURITY.md
