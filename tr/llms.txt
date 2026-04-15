@@ -1,0 +1,97 @@
+# Flyto2
+
+> Makine hızında tarayıcı otomasyonu. Bir kez kaydet, sonsuza kadar tekrarla. Kodlama yok, API gerekmez — herhangi bir web sitesinde çalışır. Herhangi bir adımda duraklat, doğrula ve devam et.
+
+Flyto2, tarayıcı eylemlerinizi kaydeden ve tam hızda tekrarlayan kodsuz bir otomasyon aracıdır. Diğer otomasyon araçlarından farklı olarak Flyto2, çalışma sırasında duraklamanıza, ne yapacağını kontrol etmenize ve devam etmenize olanak tanır — kontrol her zaman sizdedir. Tamamen bilgisayarınızda çalışır, bulut bağımlılığı yoktur, bu nedenle verileriniz asla cihazınızdan çıkmaz.
+
+## Flyto2'yi farklı kılan nedir
+
+- **Kaydet ve Tekrarla**: Flyto2'ye ne yapması gerektiğini bir kez gösterin. Her tıklama ve tuş vuruşunu hatırlar, ardından makine hızında tekrarlar.
+- **Duraklat, Doğrula, Devam Et**: Diğer araçlarda yalnızca "çalışmıyor" ve "tamamlandı" vardır. Flyto2, görev sırasında duraklamanıza, durumu kontrol etmenize, hataları düzeltmenize ve tam kaldığınız yerden devam etmenize olanak tanır.
+- **Kodlama gerekmez**: Tıklayıp yazabiliyorsanız, Flyto2'yi kullanabilirsiniz. Script yok, API yok, Zapier yok.
+- **API gerekmez**: Herhangi bir web sitesinde doğrudan tarayıcıda çalışır — API'si olmayan veya yalnızca tek tek işlem yapılabilen siteler dahil.
+- **Çevrimdışı çalışır**: Bilgisayarınızda %100 yerel olarak çalışır. Bulut bağımlılığı yoktur. Ücretsiz ve ücretli planlarda aynı gizlilik ve güvenlik.
+- **Anlık zamanlama**: Tam gerekli anda çalıştırın — flaş satışlar, rezervasyonlar, sınırlı kontenjanlar. 1 öğe için gereken sürede 100 öğeyi toplu işleyin.
+
+## Flyto2 kimler için
+
+- **İş kullanıcıları**: Tekrarlayan tarayıcı görevleriyle saatler harcayanlar (veri girişi, form doldurma, sistemler arası kopyala-yapıştır)
+- **E-ticaret satıcıları**: Fiyatları izlemesi, stok takibi yapması veya toplu liste güncellemesi gerekenler
+- **Araştırmacılar**: Dışa aktarma sunmayan web sitelerinden veri toplayanlar
+- **QA testçileri**: Tarayıcılar arası ekran görüntüsü veya bağlantı kontrolüne ihtiyaç duyanlar
+- **Herkes**: Aynı tarayıcı görevini ikiden fazla kez yapan herkes
+
+## Fiyatlandırma
+
+- **Ücretsiz**: Temel kayıt ve tekrarlama, sınırsız yerel kullanım, MIT lisanslı açık kaynak, hesap veya kredi kartı gerekmez
+- **Pro**: Aylık $9'dan başlayan fiyatlarla (gelişmiş özellikler, yakında)
+- **Enterprise**: Özel fiyatlandırma, şirket içi kurulum, RBAC, denetim günlükleri, özel destek
+- **Cloud (SaaS)**: Ekip iş birliği, paylaşılan iş akışları (yakında, bekleme listesi mevcut)
+
+Tüm ücretli planlar 30 gün para iade garantisi içerir. Öğrenciler, eğitimciler, kar amacı gütmeyen kuruluşlar ve ekipler için indirimler mevcuttur (sales@flyto2.com ile iletişime geçin).
+
+## Platformlar
+
+- Windows, macOS (Intel + Apple Silicon M1–M4), Linux
+- PyPI üzerinden CLI (Python 3.9+, MIT lisansı)
+- WebAssembly modülü
+- Node.js paketi
+- Masaüstü uygulaması (yakında — görsel iş akışı oluşturucu, 250+ yerleşik modül)
+- Kurumsal kullanım için self-hosted Docker kurulumu
+
+## Şablonlar (101+ ücretsiz)
+
+Hazır otomasyon şablonları, tümü ücretsiz, kodlama gerekmez:
+
+- **Web scraping**: LinkedIn iş ilanları, Google Maps yorumları, sosyal medya profilleri, restoran menüleri
+- **Fiyat izleme**: Amazon takipçisi, eBay takipçisi, uçuş fiyatları, kripto uyarıları, çoklu site karşılaştırması
+- **Web sitesi sağlığı**: Kırık bağlantı denetleyicisi, çalışma süresi izleyicisi, SSL sertifika izleyicisi, güvenlik başlıkları kontrolü
+- **Veri dönüştürme**: CSV↔JSON, XML→JSON, CSV dosyalarını birleştirme
+- **İçerik**: Web sayfasını PDF'e dönüştürme, web sitesi ekran görüntüleri, tarayıcılar arası ekran görüntüleri, toplu görsel boyutlandırma
+- **Bildirimler**: Fiyat düşüşü uyarıları, hava durumu Slack'e gönderme, Telegram uyarıları, döviz kuru uyarıları
+- **Formlar ve giriş**: Otomatik giriş, toplu form gönderimi, iş başvurusu otomatik doldurma, çerez onayı kapatma
+
+Full template list: [Templates](https://flyto2.com/tr/templates.html)
+
+## Geliştirici araçları
+
+Flyto2 Indexer, AI araçları için kod zekası sağlayan bir MCP sunucusudur (Model Context Protocol):
+
+- Claude Code, Cursor, Windsurf ve herhangi bir MCP istemcisiyle uyumlu
+- 25 MCP aracı: sembol arama, tam metin arama, düzenleme etki önizlemesi, test dosyası bulucu, API takibi ve daha fazlası
+- Projeler arası API takibi — paylaşılan bir fonksiyonu değiştirdiğinizde hangi depoların etkileneceğini bilin
+- Sıfır harici bağımlılık
+
+## Pages
+
+- [Home](https://flyto2.com/tr/): Ürün genel bakışı ve temel özellikler
+- [Pricing](https://flyto2.com/tr/pricing.html): Planlar, fiyatlandırma ve karşılaştırma
+- [Download](https://flyto2.com/tr/download.html): CLI indirme (PyPI, .whl, .tar.gz)
+- [Desktop App](https://flyto2.com/tr/app.html): Görsel iş akışı oluşturuculu masaüstü uygulaması
+- [Templates](https://flyto2.com/tr/templates.html): 101+ ücretsiz otomasyon şablonu
+- [Developer](https://flyto2.com/tr/dev.html): MCP sunucusu ve geliştirici araçları
+- [WebAssembly](https://flyto2.com/tr/wasm.html): WebAssembly modülü
+- [Node.js](https://flyto2.com/tr/node.html): Node.js paketi
+- [FAQ](https://flyto2.com/tr/faq.html): Sık sorulan sorular ve cevaplar
+- [Documentation](https://docs.flyto2.com): Tam dokümantasyon
+- [Blog](https://blog.flyto2.com): Eğitimler ve güncellemeler
+- [Contact](https://flyto2.com/tr/contact.html): Destek ve sorular
+
+## İletişim
+
+- Genel: info@flyto2.com
+- Satış: sales@flyto2.com
+- GitHub: github.com/flytohub
+- YouTube: @Flyto2
+
+## Alternatiflerle karşılaştırma
+
+| Özellik | Flyto2 | Selenium/Playwright | Zapier/Make | UiPath/Power Automate |
+|------|------|------|------|------|
+| Kodlama gerekmez | Evet | Hayır | Kısmen | Kısmen |
+| Görev sırasında duraklat ve devam et | Evet | Hayır | Hayır | Sınırlı |
+| API olmadan çalışır | Evet | Evet | Hayır | Kısmen |
+| Çevrimdışı / yerel çalışır | Evet | Evet | Hayır | Kısmen |
+| Ücretsiz katman | Evet (MIT) | Evet | Sınırlı | Sınırlı |
+| Tarayıcı otomasyonu | Evet | Evet | Hayır | Evet |
+| Zamana duyarlı çalıştırma | Evet | Manuel | Hayır | Sınırlı |

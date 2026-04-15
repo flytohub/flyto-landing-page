@@ -1,0 +1,97 @@
+# Flyto2
+
+> Otomatisasi browser secepat mesin. Rekam sekali, putar ulang selamanya. Tanpa coding, tanpa API — berfungsi di website mana pun. Jeda, verifikasi, dan lanjutkan di setiap langkah.
+
+Flyto2 adalah alat otomatisasi tanpa kode yang merekam tindakan browser Anda dan memutarnya ulang dengan kecepatan penuh. Berbeda dari alat otomatisasi lain, Flyto2 memungkinkan Anda menjeda di tengah eksekusi, memverifikasi apa yang akan dilakukan, dan melanjutkan — Anda selalu memegang kendali. Semua berjalan sepenuhnya di komputer Anda tanpa ketergantungan cloud, sehingga data Anda tidak pernah keluar dari perangkat.
+
+## Apa yang membedakan Flyto2
+
+- **Rekam & Putar Ulang**: Tunjukkan kepada Flyto2 apa yang harus dilakukan sekali saja. Ia mengingat setiap klik dan ketukan, lalu memutar ulang secepat mesin.
+- **Jeda, Verifikasi, Lanjutkan**: Alat lain hanya punya "tidak berjalan" dan "selesai." Flyto2 memungkinkan Anda menjeda di tengah tugas, memeriksa status, memperbaiki kesalahan, dan melanjutkan tepat di mana Anda berhenti.
+- **Tanpa coding**: Jika Anda bisa klik dan mengetik, Anda bisa menggunakan Flyto2. Tanpa skrip, tanpa API, tanpa Zapier.
+- **Tanpa API**: Bekerja langsung di browser dengan website apa pun — bahkan situs yang tidak memiliki API atau hanya mengizinkan operasi satu per satu.
+- **Berfungsi offline**: Berjalan 100% lokal di komputer Anda. Tanpa ketergantungan cloud. Privasi dan keamanan yang sama di paket gratis maupun berbayar.
+- **Presisi sepersekian detik**: Eksekusi di momen yang tepat — flash sale, reservasi, slot terbatas. Proses batch 100 item dalam waktu yang dibutuhkan untuk mengerjakan 1.
+
+## Untuk siapa Flyto2
+
+- **Pengguna bisnis** yang menghabiskan berjam-jam untuk tugas browser berulang (entri data, pengisian formulir, salin-tempel antar sistem)
+- **Penjual e-commerce** yang perlu memantau harga, melacak inventaris, atau memperbarui listing secara massal
+- **Peneliti** yang mengumpulkan data dari website yang tidak menyediakan fitur ekspor
+- **QA tester** yang membutuhkan screenshot lintas browser atau pengecekan tautan
+- **Siapa pun** yang melakukan tugas browser yang sama lebih dari dua kali
+
+## Harga
+
+- **Gratis**: Perekaman dan pemutaran inti, penggunaan lokal tanpa batas, open source berlisensi MIT, tidak perlu akun atau kartu kredit
+- **Pro**: Mulai dari $9/bulan (fitur lanjutan, segera hadir)
+- **Enterprise**: Harga khusus, deployment on-premises, RBAC, audit logging, dukungan khusus
+- **Cloud (SaaS)**: Kolaborasi tim, workflow bersama (segera hadir, daftar tunggu tersedia)
+
+Semua paket berbayar termasuk garansi uang kembali 30 hari. Diskon tersedia untuk pelajar, pendidik, organisasi nirlaba, dan tim (hubungi sales@flyto2.com).
+
+## Platform
+
+- Windows, macOS (Intel + Apple Silicon M1–M4), Linux
+- CLI melalui PyPI (Python 3.9+, lisensi MIT)
+- Modul WebAssembly
+- Paket Node.js
+- Aplikasi desktop (segera hadir — visual workflow builder, 250+ modul bawaan)
+- Deployment Docker self-hosted untuk enterprise
+
+## Template (101+ gratis)
+
+Template otomatisasi siap pakai, semua gratis, tanpa coding:
+
+- **Web scraping**: Lowongan LinkedIn, ulasan Google Maps, profil media sosial, menu restoran
+- **Pemantauan harga**: Pelacak Amazon, pelacak eBay, harga penerbangan, peringatan kripto, perbandingan multi-situs
+- **Kesehatan website**: Pemeriksa tautan rusak, pemantau uptime, pemantau sertifikat SSL, pemeriksaan header keamanan
+- **Konversi data**: CSV↔JSON, XML→JSON, gabungkan file CSV
+- **Konten**: Halaman web ke PDF, screenshot website, screenshot lintas browser, resize gambar massal
+- **Notifikasi**: Peringatan penurunan harga, cuaca ke Slack, peringatan Telegram, peringatan kurs mata uang
+- **Formulir & login**: Login otomatis, pengiriman formulir massal, pengisian otomatis lamaran kerja, dismiss cookie consent
+
+Full template list: [Templates](https://flyto2.com/id/templates.html)
+
+## Alat developer
+
+Flyto2 Indexer adalah server MCP (Model Context Protocol) yang menyediakan kecerdasan kode untuk alat AI:
+
+- Kompatibel dengan Claude Code, Cursor, Windsurf, dan klien MCP mana pun
+- 25 alat MCP: pencarian simbol, pencarian teks penuh, pratinjau dampak edit, pencari file tes, pelacakan API, dan lainnya
+- Pelacakan API lintas proyek — ketahui repo mana yang terdampak saat Anda mengubah fungsi bersama
+- Tanpa dependensi eksternal
+
+## Pages
+
+- [Home](https://flyto2.com/id/): Gambaran produk dan fitur utama
+- [Pricing](https://flyto2.com/id/pricing.html): Paket, harga, dan perbandingan
+- [Download](https://flyto2.com/id/download.html): Unduh CLI (PyPI, .whl, .tar.gz)
+- [Desktop App](https://flyto2.com/id/app.html): Aplikasi desktop dengan visual workflow builder
+- [Templates](https://flyto2.com/id/templates.html): 101+ template otomatisasi gratis
+- [Developer](https://flyto2.com/id/dev.html): Server MCP dan alat developer
+- [WebAssembly](https://flyto2.com/id/wasm.html): Modul WebAssembly
+- [Node.js](https://flyto2.com/id/node.html): Paket Node.js
+- [FAQ](https://flyto2.com/id/faq.html): Pertanyaan dan jawaban umum
+- [Documentation](https://docs.flyto2.com): Dokumentasi lengkap
+- [Blog](https://blog.flyto2.com): Tutorial dan pembaruan
+- [Contact](https://flyto2.com/id/contact.html): Dukungan dan pertanyaan
+
+## Kontak
+
+- Umum: info@flyto2.com
+- Penjualan: sales@flyto2.com
+- GitHub: github.com/flytohub
+- YouTube: @Flyto2
+
+## Perbandingan dengan alternatif
+
+| Fitur | Flyto2 | Selenium/Playwright | Zapier/Make | UiPath/Power Automate |
+|------|------|------|------|------|
+| Tanpa coding | Ya | Tidak | Sebagian | Sebagian |
+| Jeda & lanjutkan di tengah tugas | Ya | Tidak | Tidak | Terbatas |
+| Berfungsi tanpa API | Ya | Ya | Tidak | Sebagian |
+| Berjalan offline / lokal | Ya | Ya | Tidak | Sebagian |
+| Paket gratis | Ya (MIT) | Ya | Terbatas | Terbatas |
+| Otomatisasi browser | Ya | Ya | Tidak | Ya |
+| Eksekusi sensitif waktu | Ya | Manual | Tidak | Terbatas |

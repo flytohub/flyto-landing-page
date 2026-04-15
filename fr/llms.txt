@@ -1,0 +1,97 @@
+# Flyto2
+
+> Automatisation du navigateur à la vitesse machine. Enregistrez une fois, rejouez indéfiniment. Aucun code, aucune API nécessaire — fonctionne sur n'importe quel site web. Mettez en pause, vérifiez et reprenez à chaque étape.
+
+Flyto2 est un outil d'automatisation sans code qui enregistre vos actions dans le navigateur et les rejoue à pleine vitesse. Contrairement à d'autres outils, Flyto2 vous permet de mettre en pause en pleine exécution, de vérifier ce qu'il va faire et de reprendre — vous gardez toujours le contrôle. Il fonctionne entièrement sur votre ordinateur sans dépendance au cloud, vos données ne quittent donc jamais votre machine.
+
+## Ce qui rend Flyto2 différent
+
+- **Enregistrer et rejouer** : Montrez à Flyto2 quoi faire une fois. Il mémorise chaque clic et frappe, puis rejoue à la vitesse machine.
+- **Pause, vérification, reprise** : Les autres outils n'ont que « arrêté » et « terminé ». Flyto2 vous permet de mettre en pause en pleine tâche, vérifier l'état, corriger les erreurs et reprendre exactement là où vous vous êtes arrêté.
+- **Aucun code nécessaire** : Si vous savez cliquer et taper, vous pouvez utiliser Flyto2. Pas de scripts, pas d'APIs, pas de Zapier.
+- **Aucune API nécessaire** : Fonctionne directement dans le navigateur avec n'importe quel site web — même les sites sans API ou qui ne permettent qu'une opération à la fois.
+- **Fonctionne hors ligne** : S'exécute à 100 % localement sur votre ordinateur. Aucune dépendance au cloud. Même confidentialité et sécurité sur les plans gratuits et payants.
+- **Timing à la fraction de seconde** : Exécutez au moment exact — ventes flash, réservations, places limitées. Traitez 100 éléments dans le temps qu'il faut pour en faire 1.
+
+## À qui s'adresse Flyto2
+
+- **Professionnels** qui passent des heures sur des tâches répétitives dans le navigateur (saisie de données, remplissage de formulaires, copier-coller entre systèmes)
+- **Vendeurs e-commerce** qui doivent surveiller les prix, suivre les stocks ou mettre à jour les annonces en masse
+- **Chercheurs** qui collectent des données sur des sites web n'offrant pas d'export
+- **Testeurs QA** qui ont besoin de captures d'écran multi-navigateurs ou de vérification de liens
+- **Toute personne** qui effectue la même tâche dans le navigateur plus de deux fois
+
+## Tarifs
+
+- **Gratuit** : Enregistrement et lecture de base, utilisation locale illimitée, open source sous licence MIT, aucun compte ni carte bancaire requis
+- **Pro** : À partir de 9 $/mois (fonctionnalités avancées, bientôt disponible)
+- **Enterprise** : Tarif personnalisé, déploiement sur site, RBAC, journalisation d'audit, support dédié
+- **Cloud (SaaS)** : Collaboration en équipe, workflows partagés (bientôt disponible, liste d'attente ouverte)
+
+Tous les plans payants incluent une garantie satisfait ou remboursé de 30 jours. Réductions disponibles pour les étudiants, enseignants, associations à but non lucratif et équipes (contactez sales@flyto2.com).
+
+## Plateformes
+
+- Windows, macOS (Intel + Apple Silicon M1–M4), Linux
+- CLI via PyPI (Python 3.9+, licence MIT)
+- Module WebAssembly
+- Package Node.js
+- Application de bureau (bientôt — constructeur visuel de workflows, 250+ modules intégrés)
+- Déploiement Docker auto-hébergé pour entreprises
+
+## Modèles (101+ gratuits)
+
+Modèles d'automatisation prêts à l'emploi, tous gratuits, aucun code nécessaire :
+
+- **Web scraping** : Offres d'emploi LinkedIn, avis Google Maps, profils de réseaux sociaux, menus de restaurants
+- **Surveillance des prix** : Traqueur Amazon, traqueur eBay, prix des vols, alertes crypto, comparaison multi-sites
+- **Santé du site web** : Vérificateur de liens cassés, moniteur de disponibilité, moniteur de certificats SSL, vérification des en-têtes de sécurité
+- **Conversion de données** : CSV↔JSON, XML→JSON, fusion de fichiers CSV
+- **Contenu** : Page web en PDF, captures de sites web, captures multi-navigateurs, redimensionnement d'images en lot
+- **Notifications** : Alertes de baisse de prix, météo vers Slack, alertes Telegram, alertes de taux de change
+- **Formulaires et connexion** : Connexion automatique, envoi de formulaires en masse, remplissage automatique de candidatures, fermeture du consentement aux cookies
+
+Full template list: [Templates](https://flyto2.com/fr/templates.html)
+
+## Outils pour développeurs
+
+Flyto2 Indexer est un serveur MCP (Model Context Protocol) fournissant de l'intelligence de code pour les outils d'IA :
+
+- Compatible avec Claude Code, Cursor, Windsurf et tout client MCP
+- 25 outils MCP : recherche de symboles, recherche en texte intégral, aperçu de l'impact des modifications, recherche de fichiers de test, suivi d'API et plus
+- Suivi d'API entre projets — sachez quels dépôts cassent lorsque vous modifiez une fonction partagée
+- Aucune dépendance externe
+
+## Pages
+
+- [Home](https://flyto2.com/fr/): Présentation du produit et fonctionnalités clés
+- [Pricing](https://flyto2.com/fr/pricing.html): Plans, tarifs et comparaison
+- [Download](https://flyto2.com/fr/download.html): Téléchargement du CLI (PyPI, .whl, .tar.gz)
+- [Desktop App](https://flyto2.com/fr/app.html): Application de bureau avec constructeur visuel de workflows
+- [Templates](https://flyto2.com/fr/templates.html): 101+ modèles d'automatisation gratuits
+- [Developer](https://flyto2.com/fr/dev.html): Serveur MCP et outils pour développeurs
+- [WebAssembly](https://flyto2.com/fr/wasm.html): Module WebAssembly
+- [Node.js](https://flyto2.com/fr/node.html): Package Node.js
+- [FAQ](https://flyto2.com/fr/faq.html): Questions fréquentes et réponses
+- [Documentation](https://docs.flyto2.com): Documentation complète
+- [Blog](https://blog.flyto2.com): Tutoriels et actualités
+- [Contact](https://flyto2.com/fr/contact.html): Support et demandes
+
+## Contact
+
+- Général : info@flyto2.com
+- Ventes : sales@flyto2.com
+- GitHub : github.com/flytohub
+- YouTube : @Flyto2
+
+## Comparaison avec les alternatives
+
+| Fonctionnalité | Flyto2 | Selenium/Playwright | Zapier/Make | UiPath/Power Automate |
+|------|------|------|------|------|
+| Aucun code nécessaire | Oui | Non | Partiel | Partiel |
+| Pause et reprise en cours de tâche | Oui | Non | Non | Limité |
+| Fonctionne sans API | Oui | Oui | Non | Partiel |
+| Fonctionne hors ligne / localement | Oui | Oui | Non | Partiel |
+| Offre gratuite | Oui (MIT) | Oui | Limité | Limité |
+| Automatisation du navigateur | Oui | Oui | Non | Oui |
+| Exécution sensible au temps | Oui | Manuel | Non | Limité |

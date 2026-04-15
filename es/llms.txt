@@ -1,0 +1,97 @@
+# Flyto2
+
+> Automatización del navegador a velocidad de máquina. Graba una vez, reproduce para siempre. Sin programación, sin API — funciona en cualquier sitio web. Pausa, verifica y reanuda en cada paso.
+
+Flyto2 es una herramienta de automatización sin código que graba tus acciones en el navegador y las reproduce a toda velocidad. A diferencia de otras herramientas, Flyto2 te permite pausar a mitad de ejecución, verificar lo que va a hacer y reanudar — siempre mantienes el control. Se ejecuta completamente en tu ordenador sin depender de la nube, así que tus datos nunca salen de tu máquina.
+
+## Qué hace diferente a Flyto2
+
+- **Grabar y reproducir**: Muéstrale a Flyto2 qué hacer una vez. Memoriza cada clic y pulsación, luego reproduce a velocidad de máquina.
+- **Pausar, verificar, reanudar**: Otras herramientas solo tienen "no ejecutando" y "terminado." Flyto2 te permite pausar a mitad de tarea, comprobar el estado, corregir errores y continuar justo donde paraste.
+- **Sin programación**: Si puedes hacer clic y escribir, puedes usar Flyto2. Sin scripts, sin APIs, sin Zapier.
+- **Sin necesidad de API**: Funciona directamente en el navegador con cualquier sitio web — incluso sitios que no tienen API o solo permiten operaciones de una en una.
+- **Funciona sin conexión**: Se ejecuta 100 % localmente en tu ordenador. Sin dependencia de la nube. Misma privacidad y seguridad en planes gratuitos y de pago.
+- **Timing en fracciones de segundo**: Ejecuta en el momento exacto — ventas flash, reservas, plazas limitadas. Procesa 100 elementos en el tiempo que lleva hacer 1.
+
+## Para quién es Flyto2
+
+- **Usuarios de negocio** que pasan horas en tareas repetitivas del navegador (entrada de datos, rellenado de formularios, copiar y pegar entre sistemas)
+- **Vendedores de e-commerce** que necesitan monitorizar precios, rastrear inventario o actualizar listados en masa
+- **Investigadores** que recopilan datos de sitios web que no ofrecen exportación
+- **Testers de QA** que necesitan capturas de pantalla entre navegadores o comprobación de enlaces
+- **Cualquier persona** que realiza la misma tarea en el navegador más de dos veces
+
+## Precios
+
+- **Gratuito**: Grabación y reproducción básica, uso local ilimitado, código abierto con licencia MIT, sin necesidad de cuenta ni tarjeta de crédito
+- **Pro**: Desde 9 $/mes (funciones avanzadas, próximamente)
+- **Enterprise**: Precio personalizado, despliegue en instalaciones propias, RBAC, registro de auditoría, soporte dedicado
+- **Cloud (SaaS)**: Colaboración en equipo, flujos de trabajo compartidos (próximamente, lista de espera disponible)
+
+Todos los planes de pago incluyen garantía de devolución de 30 días. Descuentos disponibles para estudiantes, educadores, organizaciones sin ánimo de lucro y equipos (contactar con sales@flyto2.com).
+
+## Plataformas
+
+- Windows, macOS (Intel + Apple Silicon M1–M4), Linux
+- CLI vía PyPI (Python 3.9+, licencia MIT)
+- Módulo WebAssembly
+- Paquete Node.js
+- App de escritorio (próximamente — constructor visual de flujos, 250+ módulos integrados)
+- Despliegue Docker autoalojado para empresas
+
+## Plantillas (101+ gratuitas)
+
+Plantillas de automatización predefinidas, todas gratuitas, sin programación:
+
+- **Web scraping**: Ofertas de empleo de LinkedIn, reseñas de Google Maps, perfiles de redes sociales, menús de restaurantes
+- **Monitorización de precios**: Rastreador de Amazon, rastreador de eBay, precios de vuelos, alertas de criptomonedas, comparación entre múltiples sitios
+- **Salud del sitio web**: Comprobador de enlaces rotos, monitor de disponibilidad, monitor de certificados SSL, verificación de cabeceras de seguridad
+- **Conversión de datos**: CSV↔JSON, XML→JSON, fusionar archivos CSV
+- **Contenido**: Página web a PDF, capturas de sitios web, capturas entre navegadores, redimensión masiva de imágenes
+- **Notificaciones**: Alertas de bajada de precio, clima a Slack, alertas de Telegram, alertas de tipo de cambio
+- **Formularios e inicio de sesión**: Auto-login, envío masivo de formularios, autorellenar solicitudes de empleo, cerrar consentimiento de cookies
+
+Full template list: [Templates](https://flyto2.com/es/templates.html)
+
+## Herramientas para desarrolladores
+
+Flyto2 Indexer es un servidor MCP (Model Context Protocol) que proporciona inteligencia de código para herramientas de IA:
+
+- Compatible con Claude Code, Cursor, Windsurf y cualquier cliente MCP
+- 25 herramientas MCP: búsqueda de símbolos, búsqueda de texto completo, vista previa del impacto de cambios, buscador de archivos de test, rastreo de API y más
+- Rastreo de API entre proyectos — sabe qué repositorios se rompen cuando cambias una función compartida
+- Sin dependencias externas
+
+## Pages
+
+- [Home](https://flyto2.com/es/): Descripción del producto y funciones principales
+- [Pricing](https://flyto2.com/es/pricing.html): Planes, precios y comparación
+- [Download](https://flyto2.com/es/download.html): Descarga del CLI (PyPI, .whl, .tar.gz)
+- [Desktop App](https://flyto2.com/es/app.html): App de escritorio con constructor visual de flujos
+- [Templates](https://flyto2.com/es/templates.html): 101+ plantillas de automatización gratuitas
+- [Developer](https://flyto2.com/es/dev.html): Servidor MCP y herramientas para desarrolladores
+- [WebAssembly](https://flyto2.com/es/wasm.html): Módulo WebAssembly
+- [Node.js](https://flyto2.com/es/node.html): Paquete Node.js
+- [FAQ](https://flyto2.com/es/faq.html): Preguntas frecuentes y respuestas
+- [Documentation](https://docs.flyto2.com): Documentación completa
+- [Blog](https://blog.flyto2.com): Tutoriales y novedades
+- [Contact](https://flyto2.com/es/contact.html): Soporte y consultas
+
+## Contacto
+
+- General: info@flyto2.com
+- Ventas: sales@flyto2.com
+- GitHub: github.com/flytohub
+- YouTube: @Flyto2
+
+## Comparación con alternativas
+
+| Función | Flyto2 | Selenium/Playwright | Zapier/Make | UiPath/Power Automate |
+|------|------|------|------|------|
+| Sin programación | Sí | No | Parcial | Parcial |
+| Pausar y reanudar a mitad de tarea | Sí | No | No | Limitado |
+| Funciona sin API | Sí | Sí | No | Parcial |
+| Se ejecuta offline / local | Sí | Sí | No | Parcial |
+| Nivel gratuito | Sí (MIT) | Sí | Limitado | Limitado |
+| Automatización del navegador | Sí | Sí | No | Sí |
+| Ejecución sensible al tiempo | Sí | Manual | No | Limitado |

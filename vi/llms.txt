@@ -1,0 +1,97 @@
+# Flyto2
+
+> Tự động hóa trình duyệt với tốc độ máy. Ghi một lần, phát lại mãi mãi. Không cần lập trình, không cần API — hoạt động trên mọi trang web. Tạm dừng, kiểm tra và tiếp tục tại bất kỳ bước nào.
+
+Flyto2 là công cụ tự động hóa không cần lập trình, ghi lại thao tác trình duyệt của bạn và phát lại ở tốc độ tối đa. Khác với các công cụ khác, Flyto2 cho phép bạn tạm dừng giữa chừng, kiểm tra hành động tiếp theo và tiếp tục — bạn luôn nắm quyền kiểm soát. Chạy hoàn toàn trên máy tính của bạn mà không phụ thuộc vào đám mây, nên dữ liệu không bao giờ rời khỏi máy.
+
+## Điều gì khiến Flyto2 khác biệt
+
+- **Ghi & Phát lại**: Chỉ cần chỉ cho Flyto2 một lần. Nó ghi nhớ mọi thao tác nhấp chuột và phím bấm, rồi phát lại với tốc độ máy.
+- **Tạm dừng, Kiểm tra, Tiếp tục**: Các công cụ khác chỉ có "chưa chạy" và "đã xong". Flyto2 cho phép bạn tạm dừng giữa tác vụ, kiểm tra trạng thái, sửa lỗi và tiếp tục chính xác từ nơi bạn dừng lại.
+- **Không cần lập trình**: Nếu bạn biết nhấp chuột và gõ phím, bạn có thể dùng Flyto2. Không script, không API, không Zapier.
+- **Không cần API**: Hoạt động trực tiếp trong trình duyệt với mọi trang web — kể cả những trang không có API hoặc chỉ cho phép thao tác từng cái một.
+- **Hoạt động offline**: Chạy 100% cục bộ trên máy tính của bạn. Không phụ thuộc đám mây. Quyền riêng tư và bảo mật như nhau ở gói miễn phí và trả phí.
+- **Thời gian chính xác tuyệt đối**: Thực thi đúng thời điểm cần thiết — flash sale, đặt chỗ, suất có hạn. Xử lý 100 mục trong thời gian chỉ làm được 1.
+
+## Flyto2 dành cho ai
+
+- **Người dùng doanh nghiệp** dành hàng giờ cho các tác vụ trình duyệt lặp đi lặp lại (nhập dữ liệu, điền biểu mẫu, sao chép-dán giữa các hệ thống)
+- **Người bán thương mại điện tử** cần theo dõi giá, kiểm tra tồn kho hoặc cập nhật hàng loạt sản phẩm
+- **Nhà nghiên cứu** thu thập dữ liệu từ các trang web không hỗ trợ xuất dữ liệu
+- **Tester QA** cần chụp màn hình đa trình duyệt hoặc kiểm tra liên kết
+- **Bất kỳ ai** thực hiện cùng một tác vụ trình duyệt hơn hai lần
+
+## Bảng giá
+
+- **Miễn phí**: Ghi và phát lại cơ bản, sử dụng cục bộ không giới hạn, mã nguồn mở MIT, không cần tài khoản hay thẻ tín dụng
+- **Pro**: Từ $9/tháng (tính năng nâng cao, sắp ra mắt)
+- **Enterprise**: Giá tùy chỉnh, triển khai on-premises, RBAC, nhật ký kiểm toán, hỗ trợ chuyên biệt
+- **Cloud (SaaS)**: Cộng tác nhóm, quy trình làm việc chia sẻ (sắp ra mắt, đăng ký danh sách chờ)
+
+Tất cả gói trả phí đều có bảo đảm hoàn tiền trong 30 ngày. Ưu đãi cho sinh viên, giáo viên, tổ chức phi lợi nhuận và nhóm (liên hệ sales@flyto2.com).
+
+## Nền tảng
+
+- Windows, macOS (Intel + Apple Silicon M1–M4), Linux
+- CLI qua PyPI (Python 3.9+, giấy phép MIT)
+- Module WebAssembly
+- Gói Node.js
+- Ứng dụng desktop (sắp ra mắt — trình tạo quy trình trực quan, 250+ module tích hợp sẵn)
+- Triển khai Docker tự lưu trữ cho doanh nghiệp
+
+## Mẫu (101+ miễn phí)
+
+Các mẫu tự động hóa sẵn có, tất cả miễn phí, không cần lập trình:
+
+- **Thu thập dữ liệu web**: Việc làm LinkedIn, đánh giá Google Maps, hồ sơ mạng xã hội, thực đơn nhà hàng
+- **Theo dõi giá**: Trình theo dõi Amazon, trình theo dõi eBay, giá vé máy bay, cảnh báo tiền mã hóa, so sánh đa trang
+- **Sức khỏe website**: Kiểm tra liên kết hỏng, giám sát thời gian hoạt động, giám sát chứng chỉ SSL, kiểm tra header bảo mật
+- **Chuyển đổi dữ liệu**: CSV↔JSON, XML→JSON, gộp tệp CSV
+- **Nội dung**: Trang web sang PDF, chụp màn hình website, chụp đa trình duyệt, thay đổi kích thước ảnh hàng loạt
+- **Thông báo**: Cảnh báo giảm giá, thời tiết qua Slack, cảnh báo Telegram, cảnh báo tỷ giá
+- **Biểu mẫu & đăng nhập**: Tự động đăng nhập, gửi biểu mẫu hàng loạt, tự động điền đơn xin việc, tự động đóng thông báo cookie
+
+Full template list: [Templates](https://flyto2.com/vi/templates.html)
+
+## Công cụ dành cho nhà phát triển
+
+Flyto2 Indexer là máy chủ MCP (Model Context Protocol) cung cấp trí tuệ mã nguồn cho các công cụ AI:
+
+- Tương thích với Claude Code, Cursor, Windsurf và mọi MCP client
+- 25 công cụ MCP: tra cứu ký hiệu, tìm kiếm toàn văn, xem trước tác động chỉnh sửa, tìm tệp kiểm thử, theo dõi API và nhiều hơn nữa
+- Theo dõi API liên dự án — biết được kho lưu trữ nào bị ảnh hưởng khi bạn thay đổi hàm dùng chung
+- Không có phụ thuộc bên ngoài
+
+## Pages
+
+- [Home](https://flyto2.com/vi/): Tổng quan sản phẩm và tính năng chính
+- [Pricing](https://flyto2.com/vi/pricing.html): Gói dịch vụ, giá và so sánh
+- [Download](https://flyto2.com/vi/download.html): Tải CLI (PyPI, .whl, .tar.gz)
+- [Desktop App](https://flyto2.com/vi/app.html): Ứng dụng desktop với trình tạo quy trình trực quan
+- [Templates](https://flyto2.com/vi/templates.html): 101+ mẫu tự động hóa miễn phí
+- [Developer](https://flyto2.com/vi/dev.html): Máy chủ MCP và công cụ nhà phát triển
+- [WebAssembly](https://flyto2.com/vi/wasm.html): Module WebAssembly
+- [Node.js](https://flyto2.com/vi/node.html): Gói Node.js
+- [FAQ](https://flyto2.com/vi/faq.html): Câu hỏi thường gặp và giải đáp
+- [Documentation](https://docs.flyto2.com): Tài liệu đầy đủ
+- [Blog](https://blog.flyto2.com): Hướng dẫn và cập nhật
+- [Contact](https://flyto2.com/vi/contact.html): Hỗ trợ và liên hệ
+
+## Liên hệ
+
+- Chung: info@flyto2.com
+- Kinh doanh: sales@flyto2.com
+- GitHub: github.com/flytohub
+- YouTube: @Flyto2
+
+## So sánh với các giải pháp khác
+
+| Tính năng | Flyto2 | Selenium/Playwright | Zapier/Make | UiPath/Power Automate |
+|------|------|------|------|------|
+| Không cần lập trình | Có | Không | Một phần | Một phần |
+| Tạm dừng & tiếp tục giữa chừng | Có | Không | Không | Hạn chế |
+| Hoạt động không cần API | Có | Có | Không | Một phần |
+| Chạy offline / cục bộ | Có | Có | Không | Một phần |
+| Gói miễn phí | Có (MIT) | Có | Hạn chế | Hạn chế |
+| Tự động hóa trình duyệt | Có | Có | Không | Có |
+| Thực thi nhạy thời gian | Có | Thủ công | Không | Hạn chế |
