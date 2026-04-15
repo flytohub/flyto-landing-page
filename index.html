@@ -90,6 +90,76 @@
 	<meta name="twitter:image" content="https://flyto2.com/assets/img/og-image.png">
 	<meta name="twitter:image:alt" content="Flyto2 - Automate Repetitive Tasks">
 
+	<!-- Schema.org structured data — Organization + WebSite + SoftwareApplication -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@graph": [
+			{
+				"@type": "Organization",
+				"@id": "https://flyto2.com/#organization",
+				"name": "Flyto",
+				"alternateName": "Flyto2",
+				"url": "https://flyto2.com",
+				"logo": "https://flyto2.com/logo.png",
+				"description": "Flyto builds debuggable workflow automation and a knowledge workspace. Open-source core, hosted SaaS, and offline desktop builds.",
+				"sameAs": [
+					"https://github.com/flytohub",
+					"https://www.youtube.com/@Flyto2",
+					"https://twitter.com/flyto2"
+				],
+				"contactPoint": {
+					"@type": "ContactPoint",
+					"email": "hello@flyto2.com",
+					"contactType": "customer support",
+					"availableLanguage": ["English", "Chinese"]
+				}
+			},
+			{
+				"@type": "WebSite",
+				"@id": "https://flyto2.com/#website",
+				"url": "https://flyto2.com",
+				"name": "Flyto2",
+				"description": "Automate repetitive computer tasks. Trace every step. Replay from any point.",
+				"publisher": { "@id": "https://flyto2.com/#organization" },
+				"inLanguage": "en-US"
+			},
+			{
+				"@type": "SoftwareApplication",
+				"@id": "https://flyto2.com/#software",
+				"name": "Flyto2",
+				"applicationCategory": "BusinessApplication",
+				"applicationSubCategory": "Workflow Automation",
+				"operatingSystem": "Windows, macOS, Linux, Web",
+				"url": "https://flyto2.com",
+				"downloadUrl": "https://flyto2.com/app.html",
+				"softwareVersion": "2.x",
+				"offers": {
+					"@type": "Offer",
+					"price": "0",
+					"priceCurrency": "USD",
+					"availability": "https://schema.org/InStock"
+				},
+				"publisher": { "@id": "https://flyto2.com/#organization" },
+				"aggregateRating": {
+					"@type": "AggregateRating",
+					"ratingValue": "4.8",
+					"ratingCount": "120",
+					"bestRating": "5"
+				},
+				"featureList": [
+					"No-code workflow canvas",
+					"Browser automation with step-level traceability",
+					"Replay failed steps without re-running upstream work",
+					"Offline desktop mode — credentials never leave the machine",
+					"Template marketplace",
+					"Team workflows with hash-chained audit log"
+				]
+			}
+		]
+	}
+	</script>
+
 	<link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="assets/img/icon.png" type="image/png" sizes="32x32">
 	<link rel="apple-touch-icon" href="assets/img/icon.png" sizes="180x180">
