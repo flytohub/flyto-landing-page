@@ -1,83 +1,126 @@
 /**
  * Flyto2 Dynamic Pricing Configuration
- * Reads pricing settings from Firestore and renders dynamically
+ * Reads pricing settings from Firestore and renders dynamically.
+ * Supports Stripe Checkout for subscription purchases.
  */
 
+// Cloud API base URL (subscription checkout endpoint)
+const CLOUD_API_URL = 'https://flyto-cloud-api-673906368352.asia-east1.run.app';
+
 /**
- * IMPORTANT: Keep this fallback in sync with Firestore settings.pricing_v1
- * Last updated: 2024-12-29
- *
- * To update:
- * 1. Update Firestore first via admin panel
- * 2. Then update this fallback
- * 3. Update the date above
+ * Fallback pricing — used when Firebase/Cloud Function is unreachable.
+ * Keep in sync with backend plan_config.py
  */
 const FALLBACK_PRICING = {
-	_lastUpdated: '2024-12-29',
-	version: 1,
+	_lastUpdated: '2026-04-17',
+	version: 2,
+	billing_cycle: 'monthly', // default view
 	sections: [
 		{
 			key: "cloud_saas",
-			title: "Cloud (SaaS)",
-			enabled: false,
-			comingSoon: true,
-			badge: "Coming Soon",
-			description: "Cloud version is in development. Join the waitlist to get early access.",
-			cta: { type: "waitlist", label: "Join Waitlist" },
-			plans: []
-		},
-		{
-			key: "pro",
-			title: "Pro",
-			enabled: false,
-			comingSoon: true,
-			badge: "Coming Soon",
-			description: "Pro features are coming soon. Stay tuned!",
-			cta: { type: "waitlist", label: "Get Notified" },
-			plans: []
+			title: "Cloud Plans",
+			enabled: true,
+			comingSoon: false,
+			plans: [
+				{
+					id: "free",
+					name: "Free",
+					price: 0,
+					price_yearly: 0,
+					currency: "USD",
+					billing: "monthly",
+					features: [
+						"1,000 monthly points",
+						"5 workflows",
+						"5 collaboration hours/month",
+						"Community support",
+						"7-day Pro trial included",
+					],
+					enabled: true,
+					popular: false,
+					cta: { type: "signup", label: "Get Started Free" },
+				},
+				{
+					id: "pro",
+					name: "Pro",
+					price: 9,
+					price_yearly: 86.40,
+					currency: "USD",
+					billing: "monthly",
+					features: [
+						"50,000 monthly points",
+						"Unlimited workflows",
+						"Unlimited collaboration hours",
+						"All pro modules",
+						"Cloud execution",
+						"Priority support",
+					],
+					enabled: true,
+					popular: true,
+					cta: { type: "checkout", label: "Subscribe" },
+				},
+				{
+					id: "team",
+					name: "Team",
+					price: 19,
+					price_yearly: 182.40,
+					currency: "USD",
+					billing: "monthly",
+					features: [
+						"200,000 monthly points",
+						"Unlimited workflows",
+						"Unlimited collaboration hours",
+						"All pro modules",
+						"Team management & RBAC",
+						"Shared template library",
+						"Priority support",
+					],
+					enabled: true,
+					popular: false,
+					cta: { type: "checkout", label: "Subscribe" },
+				},
+			],
 		},
 		{
 			key: "enterprise",
 			title: "Enterprise",
 			enabled: true,
 			comingSoon: false,
-			badge: "Contact Us",
-			description: "Enterprise deployment with RBAC, audit logs, and dedicated support.",
-			cta: { type: "contact", label: "Contact Sales", url: "contact.html" },
 			plans: [
 				{
-					id: "enterprise_onprem",
-					name: "Enterprise On-Prem",
-					pricing_type: "contact",
+					id: "enterprise",
+					name: "Enterprise",
 					price: null,
 					currency: "USD",
+					pricing_type: "contact",
 					features: [
-						"Unlimited users",
-						"RBAC permissions",
-						"Audit logging",
-						"Private template library",
-						"Dedicated support",
-						"Custom integrations"
+						"Unlimited everything",
+						"Dedicated support & SLA",
+						"On-premise deployment",
+						"RBAC & audit logging",
+						"Custom integrations",
+						"SSO / SCIM provisioning",
 					],
 					enabled: true,
-					popular: false
-				}
-			]
-		}
-	]
+					popular: false,
+					cta: { type: "contact", label: "Contact Sales", url: "contact.html" },
+				},
+			],
+		},
+	],
 };
 
-// UI Timing Constants (in milliseconds)
+// Current billing cycle (toggled by user)
+let _currentBillingCycle = 'monthly';
+
+// UI Timing Constants
 const UI_TIMING = {
-	BUTTON_RESET_SHORT: 2000,  // Time before button resets after duplicate submission
-	BUTTON_RESET_LONG: 3000,   // Time before button resets after successful submission
-	WAITLIST_EXPIRY_DAYS: 30   // Days before waitlist localStorage entries expire
+	BUTTON_RESET_SHORT: 2000,
+	BUTTON_RESET_LONG: 3000,
 };
 
 /**
- * HTML escape function to prevent XSS attacks
- * @param {string} text - Text to escape
- * @returns {string} - Escaped HTML-safe text
+ * HTML escape to prevent XSS
  */
 function escapeHtml(text) {
 	if (text === null || text === undefined) return '';
@@ -87,96 +130,11 @@ function escapeHtml(text) {
 }
 
 /**
- * Clean up expired waitlist entries from localStorage
- * Entries older than 30 days are removed to prevent localStorage bloat
- */
-function cleanupWaitlistStorage() {
-	const EXPIRY_MS = UI_TIMING.WAITLIST_EXPIRY_DAYS * 24 * 60 * 60 * 1000;
-	const now = Date.now();
-	const keysToRemove = [];
-
-	for (let i = 0; i < localStorage.length; i++) {
-		const key = localStorage.key(i);
-		if (key && key.startsWith('waitlist_')) {
-			try {
-				const timestamp = parseInt(localStorage.getItem(key), 10);
-				if (isNaN(timestamp) || (now - timestamp) > EXPIRY_MS) {
-					keysToRemove.push(key);
-				}
-			} catch (e) {
-				// Remove malformed entries
-				keysToRemove.push(key);
-			}
-		}
-	}
-
-	keysToRemove.forEach(key => localStorage.removeItem(key));
-}
-
-/**
  * Convert API pricing response to config format
- * 2.1 Logic fix: Unified pricing source via Cloud Function
  */
 function convertApiPricingToConfig(apiPricing) {
-	// If API returns full pricing_v1 format, use it directly
-	if (apiPricing.sections) {
-		return apiPricing;
-	}
-
-	// Otherwise, convert from legacy API format
-	return {
-		version: 1,
-		sections: [
-			{
-				key: "cloud_saas",
-				title: "Cloud (SaaS)",
-				enabled: false,
-				comingSoon: true,
-				badge: "Coming Soon",
-				description: "Cloud version is in development. Join the waitlist to get early access.",
-				cta: { type: "waitlist", label: "Join Waitlist" },
-				plans: []
-			},
-			{
-				key: "pro",
-				title: "Pro",
-				enabled: false,
-				comingSoon: true,
-				badge: "Coming Soon",
-				description: "Pro features are coming soon. Stay tuned!",
-				cta: { type: "waitlist", label: "Get Notified" },
-				plans: []
-			},
-			{
-				key: "enterprise",
-				title: "Enterprise",
-				enabled: true,
-				comingSoon: false,
-				badge: "Contact Us",
-				description: "Enterprise deployment with RBAC, audit logs, and dedicated support.",
-				cta: { type: "contact", label: "Contact Sales", url: "contact.html" },
-				plans: [
-					{
-						id: "enterprise_onprem",
-						name: "Enterprise On-Prem",
-						pricing_type: "contact",
-						price: null,
-						currency: "USD",
-						features: [
-							"Unlimited users",
-							"RBAC permissions",
-							"Audit logging",
-							"Private template library",
-							"Dedicated support",
-							"Custom integrations"
-						],
-						enabled: true,
-						popular: false
-					}
-				]
-			}
-		]
-	};
+	if (apiPricing.sections) return apiPricing;
+	return FALLBACK_PRICING;
 }
 
 /**
@@ -193,193 +151,150 @@ async function fetchPricingConfig() {
 					return convertApiPricingToConfig(data.pricing);
 				}
 			} catch (apiError) {
-				console.warn('Cloud Function API failed, falling back to Firestore:', apiError);
+				console.warn('Cloud Function API failed, falling back:', apiError);
 			}
 		}
 
-		// Fallback: Check if Firebase Firestore is available
-		if (typeof firebase === 'undefined' || !firebase.firestore) {
-			console.warn('Firebase not available, using fallback pricing');
-			return FALLBACK_PRICING;
+		// Fallback: Firestore direct read
+		if (typeof firebase !== 'undefined' && firebase.firestore) {
+			const db = firebase.firestore();
+			const v1Doc = await db.collection('settings').doc('pricing_v1').get();
+			if (v1Doc.exists) {
+				const data = v1Doc.data();
+				if (data.sections && data.sections.some(s => s.enabled && s.plans && s.plans.length > 0)) {
+					return data;
+				}
+			}
 		}
 
-		const db = firebase.firestore();
-
-		// Try new pricing_v1 format first
-		const v1Doc = await db.collection('settings').doc('pricing_v1').get();
-		if (v1Doc.exists) {
-			const data = v1Doc.data();
-			return data;
-		}
-
-		// Try legacy offline_pricing format (from AdminPricing.vue)
-		const legacyDoc = await db.collection('settings').doc('offline_pricing').get();
-		if (legacyDoc.exists) {
-			const legacyData = legacyDoc.data();
-			return convertLegacyPricing(legacyData);
-		}
-
-		// No pricing config found - use fallback silently
 		return FALLBACK_PRICING;
 	} catch (error) {
-		// Fetch error - use fallback silently
 		return FALLBACK_PRICING;
 	}
 }
 
 /**
- * Convert legacy offline_pricing format to new pricing_v1 format
+ * Get display price based on current billing cycle
  */
-function convertLegacyPricing(legacy) {
-	// Build new format
-	const config = {
-		version: 1,
-		sections: [
-			// Cloud SaaS - Coming Soon
-			{
-				key: "cloud_saas",
-				title: "Cloud (SaaS)",
-				enabled: false,
-				comingSoon: true,
-				badge: "Coming Soon",
-				description: "Cloud version is in development. Join the waitlist to get early access.",
-				cta: { type: "waitlist", label: "Join Waitlist" },
-				plans: []
-			},
-			// Pro - Coming Soon
-			{
-				key: "pro",
-				title: "Pro",
-				enabled: false,
-				comingSoon: true,
-				badge: "Coming Soon",
-				description: "Pro features are coming soon. Stay tuned!",
-				cta: { type: "waitlist", label: "Get Notified" },
-				plans: []
-			},
-			// Enterprise
-			{
-				key: "enterprise",
-				title: "Enterprise",
-				enabled: true,
-				comingSoon: false,
-				badge: "Contact Us",
-				description: "Enterprise deployment with RBAC, audit logs, and dedicated support.",
-				cta: { type: "contact", label: "Contact Sales", url: "contact.html" },
-				plans: [
-					{
-						id: "enterprise_onprem",
-						name: "Enterprise On-Prem",
-						pricing_type: "contact",
-						price: null,
-						currency: "USD",
-						features: [
-							"Unlimited users",
-							"RBAC permissions",
-							"Audit logging",
-							"Private template library",
-							"Dedicated support",
-							"Custom integrations"
-						],
-						enabled: true,
-						popular: false
-					}
-				]
+function getDisplayPrice(plan) {
+	if (plan.price === null || plan.price === undefined) return null;
+	if (_currentBillingCycle === 'yearly' && plan.price_yearly) {
+		return { amount: (plan.price_yearly / 12).toFixed(2), symbol: '$', period: '/mo', billed: 'billed yearly' };
+	}
+	return { amount: plan.price, symbol: '$', period: '/mo', billed: '' };
+}
+
+/**
+ * Handle subscription checkout via Cloud API
+ */
+async function handleCheckout(planId, billingCycle) {
+	// Must be logged in
+	if (typeof window.FlytoAuth === 'undefined' || !window.FlytoAuth.isLoggedIn()) {
+		window.FlytoAuth.showAuthModal();
+		// Wait for auth, then retry
+		window.addEventListener('authStateChanged', function handler(e) {
+			if (e.detail.user) {
+				window.removeEventListener('authStateChanged', handler);
+				handleCheckout(planId, billingCycle);
 			}
-		]
-	};
+		});
+		return;
+	}
 
-	return config;
+	// Get button and show loading
+	const btn = document.querySelector(`[data-plan-id="${planId}"]`);
+	if (btn) {
+		btn.disabled = true;
+		btn.innerHTML = '<span class="spinner-border spinner-border-sm"></span> Redirecting...';
+	}
+
+	try {
+		const token = await window.FlytoAuth.getIdToken();
+		const response = await fetch(`${CLOUD_API_URL}/subscriptions/subscribe`, {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+				'Authorization': `Bearer ${token}`,
+			},
+			body: JSON.stringify({
+				plan_id: planId,
+				billing_cycle: billingCycle || _currentBillingCycle,
+				success_url: window.location.origin + '/pricing.html?success=true',
+				cancel_url: window.location.origin + '/pricing.html?cancelled=true',
+			}),
+		});
+
+		const data = await response.json();
+
+		if (data.ok && data.session_url) {
+			window.location.href = data.session_url;
+			return;
+		}
+
+		// Handle errors
+		const errorMsg = data.detail || data.error || 'Failed to create checkout session';
+		alert(errorMsg);
+	} catch (error) {
+		console.error('Checkout error:', error);
+		alert('Unable to connect to payment service. Please try again.');
+	}
+
+	// Reset button
+	if (btn) {
+		btn.disabled = false;
+		btn.innerHTML = 'Subscribe';
+	}
 }
 
 /**
- * Format price for display
+ * Handle free plan signup
  */
-function formatPrice(price, currency = 'USD') {
-	if (price === null || price === undefined) {
-		return null;
+function handleFreeSignup() {
+	if (typeof window.FlytoAuth !== 'undefined' && window.FlytoAuth.isLoggedIn()) {
+		window.location.href = 'https://cloud.flyto2.com';
+	} else {
+		window.FlytoAuth.showAuthModal();
+		window.addEventListener('authStateChanged', function handler(e) {
+			if (e.detail.user) {
+				window.removeEventListener('authStateChanged', handler);
+				window.location.href = 'https://cloud.flyto2.com';
+			}
+		});
 	}
-	const symbols = { USD: '$', TWD: 'NT$', EUR: '€', GBP: '£' };
-	const symbol = symbols[currency] || '$';
-	return { symbol, amount: price.toLocaleString() };
-}
-
-/**
- * Get billing period text
- */
-function getBillingText(billing, period) {
-	const texts = {
-		'one_time': period === 'lifetime' ? 'lifetime license' : 'one-time',
-		'monthly': '/month',
-		'yearly': '/year',
-		'custom': 'custom pricing'
-	};
-	return texts[billing] || '';
-}
-
-/**
- * Format enterprise pricing display
- */
-function formatEnterprisePricing(plan) {
-	const pricingType = plan.pricing_type || 'contact';
-	const currency = plan.currency || 'USD';
-	const symbols = { USD: '$', TWD: 'NT$', EUR: '€', GBP: '£' };
-	const symbol = symbols[currency] || '$';
-
-	if (pricingType === 'contact') {
-		return {
-			main: 'Contact Us',
-			sub: 'Custom pricing for your organization'
-		};
-	}
-
-	if (pricingType === 'per_seat') {
-		const basePrice = plan.base_price || 0;
-		const perSeat = plan.per_seat_price || 0;
-		const included = plan.included_seats || 5;
-		return {
-			main: `Starting at ${symbol}${basePrice.toLocaleString()}`,
-			sub: `${included} users included, +${symbol}${perSeat}/user`
-		};
-	}
-
-	if (pricingType === 'tiered' && plan.tiers?.length) {
-		const firstTier = plan.tiers[0];
-		return {
-			main: `From ${symbol}${firstTier.price?.toLocaleString() || '0'}`,
-			sub: `Up to ${firstTier.max_users} users`
-		};
-	}
-
-	return { main: 'Contact Us', sub: '' };
 }
 
 /**
  * Render a single plan card
  */
-function renderPlanCard(plan, sectionCta, sectionKey) {
-	const isEnterprise = sectionKey === 'enterprise';
-	const priceInfo = isEnterprise ? null : formatPrice(plan.price, plan.currency);
-	const billingText = isEnterprise ? '' : getBillingText(plan.billing, plan.period);
+function renderPlanCard(plan) {
 	const isPopular = plan.popular;
-	const isContact = plan.price === null || plan.billing === 'custom' || plan.pricing_type === 'contact';
+	const isContact = plan.price === null || plan.pricing_type === 'contact';
+	const priceInfo = getDisplayPrice(plan);
+	const escapedName = escapeHtml(plan.name || '');
 
-	let priceDisplay = '';
-	let periodDisplay = '';
-
-	if (isEnterprise) {
-		const enterprisePrice = formatEnterprisePricing(plan);
-		priceDisplay = `<span style="font-size: 28px;">${enterprisePrice.main}</span>`;
-		periodDisplay = enterprisePrice.sub;
-	} else if (isContact) {
-		priceDisplay = '<span style="font-size: 32px;">Contact Us</span>';
-		periodDisplay = 'custom pricing';
+	// Price display
+	let priceHtml = '';
+	if (isContact) {
+		priceHtml = '<span style="font-size: 32px; font-weight: 700;">Custom</span>';
+	} else if (priceInfo.amount == 0) {
+		priceHtml = '<span class="price-currency">$</span>0';
 	} else {
-		priceDisplay = `<span class="price-currency">${priceInfo.symbol}</span>${priceInfo.amount}`;
-		periodDisplay = billingText;
+		priceHtml = `<span class="price-currency">${priceInfo.symbol}</span>${priceInfo.amount}`;
 	}
 
-	// XSS protection: escape all user-controlled content
+	let periodHtml = '';
+	if (isContact) {
+		periodHtml = 'Contact us for pricing';
+	} else if (priceInfo && priceInfo.amount > 0) {
+		periodHtml = priceInfo.period;
+		if (priceInfo.billed) {
+			periodHtml += ` <span style="font-size:12px;opacity:0.7">(${priceInfo.billed})</span>`;
+		}
+	} else {
+		periodHtml = 'free forever';
+	}
+
+	// Features
 	const featuresHtml = (plan.features || []).map(f => `
 		<li class="pricing-feature-item">
 			<i class="bi bi-check-circle-fill feature-icon"></i>
@@ -387,81 +302,51 @@ function renderPlanCard(plan, sectionCta, sectionKey) {
 		</li>
 	`).join('');
 
-	const ctaUrl = escapeHtml(sectionCta.url || '#');
-	const ctaLabel = escapeHtml(isContact ? (sectionCta.label || 'Contact Sales') : sectionCta.label);
-	const escapedPlanName = escapeHtml(plan.name || '');
+	// CTA button
+	let ctaHtml = '';
+	const cta = plan.cta || {};
+	if (cta.type === 'checkout') {
+		ctaHtml = `<button class="btn-pricing" data-plan-id="${escapeHtml(plan.id)}" onclick="handleCheckout('${escapeHtml(plan.id)}', '${_currentBillingCycle}')">${escapeHtml(cta.label || 'Subscribe')}</button>`;
+	} else if (cta.type === 'signup') {
+		ctaHtml = `<button class="btn-pricing ${isPopular ? '' : 'btn-pricing-outline'}" onclick="handleFreeSignup()">${escapeHtml(cta.label || 'Get Started')}</button>`;
+	} else if (cta.type === 'contact') {
+		ctaHtml = `<a href="${escapeHtml(cta.url || 'contact.html')}" class="btn-pricing btn-pricing-outline">${escapeHtml(cta.label || 'Contact Sales')}</a>`;
+	}
 
 	return `
-		<div class="col-lg-4 col-md-6 mb-4">
+		<div class="col-lg-3 col-md-6 mb-40">
 			<div class="pricing-card-3d ${isPopular ? 'pricing-card-popular' : ''} wow fadeInUp">
 				${isPopular ? '<div class="popular-badge"><i class="bi bi-star-fill"></i> Most Popular</div>' : ''}
-				<div class="pricing-card-title">${escapedPlanName.toUpperCase()}</div>
+				<div style="font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:2px;margin-bottom:20px;${isPopular ? 'color:#c4b5fd' : 'color:#7c3aed'}">${escapedName}</div>
 				<div class="price-animated">
-					${priceDisplay}
+					${priceHtml}
 				</div>
-				<div class="price-period">${escapeHtml(periodDisplay)}</div>
+				<div class="price-period">${periodHtml}</div>
 				<ul class="pricing-feature-list">
 					${featuresHtml}
 				</ul>
-				<a href="${ctaUrl}" class="btn-pricing">${ctaLabel}</a>
+				${ctaHtml}
 			</div>
 		</div>
 	`;
 }
 
 /**
- * Render Coming Soon card with XSS protection
+ * Render billing cycle toggle
  */
-function renderComingSoonCard(section) {
-	const badge = escapeHtml(section.badge);
-	const title = escapeHtml(section.title);
-	const description = escapeHtml(section.description);
-	const sectionKey = escapeHtml(section.key);
-	const ctaLabel = escapeHtml(section.cta.label);
-	const ctaUrl = escapeHtml(section.cta.url || '#');
-
+function renderBillingToggle() {
 	return `
-		<div class="col-lg-6 col-md-8 mx-auto mb-4">
-			<div class="pricing-card-3d coming-soon-card wow fadeInUp">
-				<div class="coming-soon-badge">${badge}</div>
-				<h3 class="coming-soon-title">${title}</h3>
-				<p class="coming-soon-desc">${description}</p>
-				${section.cta.type === 'waitlist' ? `
-					<form class="waitlist-form" onsubmit="handleWaitlist(event, '${sectionKey}')">
-						<div class="input-group">
-							<input type="email" class="form-control" placeholder="Enter your email" required>
-							<button type="submit" class="btn-waitlist">${ctaLabel}</button>
-						</div>
-					</form>
-				` : `
-					<a href="${ctaUrl}" class="btn-pricing">${ctaLabel}</a>
-				`}
+		<div class="pricing-tabs-wrapper">
+			<div class="pricing-tab-buttons">
+				<button class="pricing-tab ${_currentBillingCycle === 'monthly' ? 'active' : ''}" data-billing="monthly">
+					<i class="bi bi-calendar3"></i> Monthly
+				</button>
+				<button class="pricing-tab ${_currentBillingCycle === 'yearly' ? 'active' : ''}" data-billing="yearly">
+					<i class="bi bi-calendar-check"></i> Yearly <span class="save-badge">Save 20%</span>
+				</button>
 			</div>
 		</div>
 	`;
-}
-
-/**
- * Render a full section
- */
-function renderSection(section) {
-	// Hidden section
-	if (!section.enabled && !section.comingSoon) {
-		return '';
-	}
-
-	// Coming Soon section
-	if (!section.enabled && section.comingSoon) {
-		return renderComingSoonCard(section);
-	}
-
-	// Enabled section with plans
-	const plansHtml = (section.plans || [])
-		.filter(p => p.enabled !== false)
-		.map(p => renderPlanCard(p, section.cta, section.key))
-		.join('');
-
-	return plansHtml;
 }
 
 /**
@@ -471,124 +356,75 @@ function renderPricingTabs(config) {
 	const container = document.getElementById('pricingContainer');
 	if (!container) return;
 
-	const sections = (config.sections || []).filter(s => s.key !== 'offline');
+	const sections = (config.sections || []).filter(s => s.enabled);
 
-	// Render all enabled sections directly (no tabs)
-	let sectionsContent = '';
+	let html = renderBillingToggle();
+	html += '<div class="row justify-content-center">';
+
 	sections.forEach(section => {
-		sectionsContent += renderSection(section);
+		if (section.comingSoon) {
+			html += renderComingSoonCard(section);
+		} else {
+			(section.plans || []).filter(p => p.enabled !== false).forEach(plan => {
+				html += renderPlanCard(plan);
+			});
+		}
 	});
 
-	const html = `
-		<div class="row justify-content-center">
-			${sectionsContent || '<div class="col-12 text-center text-muted">No plans available</div>'}
-		</div>
-	`;
+	html += '</div>';
+
+	// Success/cancel message
+	const params = new URLSearchParams(window.location.search);
+	if (params.get('success') === 'true') {
+		html = `<div class="alert" style="background:#10b981;color:#fff;padding:20px;border-radius:12px;text-align:center;margin-bottom:30px;font-weight:600">
+			<i class="bi bi-check-circle-fill" style="font-size:24px;margin-right:8px"></i>
+			Subscription activated! Welcome to Pro. <a href="https://cloud.flyto2.com" style="color:#fff;text-decoration:underline">Go to Dashboard →</a>
+		</div>` + html;
+	} else if (params.get('cancelled') === 'true') {
+		html = `<div class="alert" style="background:#f59e0b;color:#fff;padding:16px;border-radius:12px;text-align:center;margin-bottom:30px">
+			Checkout cancelled. You can try again anytime.
+		</div>` + html;
+	}
 
 	container.innerHTML = html;
 }
 
 /**
- * Switch between pricing tabs (kept for API compatibility)
+ * Render Coming Soon card
  */
-function switchPricingTab(tab) {
-	// Update tab buttons
-	document.querySelectorAll('.pricing-tab').forEach(btn => {
-		btn.classList.remove('active');
-		btn.setAttribute('aria-selected', 'false');
-		if (btn.dataset.tab === tab) {
-			btn.classList.add('active');
-			btn.setAttribute('aria-selected', 'true');
-		}
-	});
-
-	// Update tab content
-	document.querySelectorAll('.pricing-tab-content').forEach(content => {
-		content.style.display = 'none';
-	});
-
-	const targetTab = document.getElementById('tab' + tab.charAt(0).toUpperCase() + tab.slice(1));
-	if (targetTab) {
-		targetTab.style.display = 'block';
-	}
+function renderComingSoonCard(section) {
+	return `
+		<div class="col-lg-6 col-md-8 mx-auto mb-4">
+			<div class="pricing-card-3d coming-soon-card wow fadeInUp">
+				<div class="coming-soon-badge">${escapeHtml(section.badge || 'Coming Soon')}</div>
+				<h3 class="coming-soon-title">${escapeHtml(section.title)}</h3>
+				<p class="coming-soon-desc">${escapeHtml(section.description || '')}</p>
+			</div>
+		</div>
+	`;
 }
 
 /**
- * Handle waitlist form submission with validation and duplicate prevention
+ * Switch billing cycle and re-render
  */
-async function handleWaitlist(event, sectionKey) {
-	event.preventDefault();
-	const form = event.target;
-	const emailInput = form.querySelector('input[type="email"]');
-	const email = emailInput.value.trim();
-	const btn = form.querySelector('button');
-
-	// Email validation
-	const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-	if (!email || !emailRegex.test(email)) {
-		alert('Please enter a valid email address');
-		return;
-	}
-
-	// Duplicate submission prevention (check localStorage)
-	const waitlistKey = `waitlist_${sectionKey}_${email}`;
-	if (localStorage.getItem(waitlistKey)) {
-		btn.innerHTML = '<i class="bi bi-check"></i> Already Joined!';
-		btn.classList.add('btn-success');
-		setTimeout(() => {
-			btn.innerHTML = 'Join Waitlist';
-			btn.classList.remove('btn-success');
-		}, UI_TIMING.BUTTON_RESET_SHORT);
-		return;
-	}
-
-	btn.disabled = true;
-	btn.innerHTML = '<span class="spinner-border spinner-border-sm"></span>';
-
-	try {
-		// Save to Firestore waitlist collection
-		if (typeof firebase !== 'undefined' && firebase.firestore) {
-			const db = firebase.firestore();
-			await db.collection('waitlist').add({
-				email: email,
-				section: sectionKey,
-				createdAt: firebase.firestore.FieldValue.serverTimestamp()
-			});
-		}
-
-		// Mark as submitted in localStorage
-		localStorage.setItem(waitlistKey, Date.now().toString());
-
-		btn.innerHTML = '<i class="bi bi-check"></i> Added!';
-		btn.classList.add('btn-success');
-		emailInput.value = '';
-
-		setTimeout(() => {
-			btn.innerHTML = 'Join Waitlist';
-			btn.classList.remove('btn-success');
-			btn.disabled = false;
-		}, UI_TIMING.BUTTON_RESET_LONG);
-
-	} catch (error) {
-		btn.innerHTML = 'Try Again';
-		btn.disabled = false;
-	}
+function switchBillingCycle(cycle) {
+	_currentBillingCycle = cycle;
+	initPricing(); // re-render
 }
 
 /**
- * 3.1 Enhancement: Initialize pricing page with loading state
+ * Initialize pricing page
  */
 async function initPricing() {
 	const container = document.getElementById('pricingContainer');
 
-	// Show loading state
-	if (container) {
+	if (container && !container.dataset.loaded) {
 		container.innerHTML = `
 			<div class="text-center py-5">
 				<div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
 					<span class="visually-hidden">Loading...</span>
 				</div>
-				<p class="mt-3 text-muted">Loading pricing information...</p>
+				<p class="mt-3 text-muted">Loading pricing...</p>
 			</div>
 		`;
 	}
@@ -596,45 +432,46 @@ async function initPricing() {
 	const config = await fetchPricingConfig();
 	renderPricingTabs(config);
 
-	// Re-init WOW animations if available
+	if (container) container.dataset.loaded = 'true';
+
+	// Re-init WOW animations
 	if (typeof WOW !== 'undefined') {
 		new WOW().init();
 	}
 }
 
-// Event delegation for pricing tabs (no inline onclick)
+// Event delegation
 document.addEventListener('click', function(e) {
-	const tab = e.target.closest('.pricing-tab');
-	if (tab && tab.dataset.tab) {
-		switchPricingTab(tab.dataset.tab);
+	// Billing cycle toggle
+	const billingTab = e.target.closest('.pricing-tab[data-billing]');
+	if (billingTab) {
+		switchBillingCycle(billingTab.dataset.billing);
+		return;
 	}
 
-	// GA4: Track pricing CTA clicks
+	// GA4 tracking for CTA clicks
 	const pricingBtn = e.target.closest('.btn-pricing');
 	if (pricingBtn && typeof gtag === 'function') {
-		const card = pricingBtn.closest('.pricing-card-3d');
-		const planName = card ? card.querySelector('.pricing-card-title')?.textContent?.trim() : 'unknown';
+		const planId = pricingBtn.dataset.planId || 'unknown';
 		gtag('event', 'begin_checkout', {
 			event_category: 'pricing',
-			event_label: planName,
-			value: 1
+			event_label: planId,
+			value: 1,
 		});
 	}
 });
 
-// Auto-init when DOM is ready
+// Auto-init
 document.addEventListener('DOMContentLoaded', function() {
-	// Clean up expired waitlist entries
-	cleanupWaitlistStorage();
-	// Initialize pricing
 	initPricing();
 });
 
-// Export for global access
+// Export
 window.FlytoPrice = {
 	fetchPricingConfig,
 	renderPricingTabs,
-	switchPricingTab,
-	handleWaitlist,
-	FALLBACK_PRICING
+	switchBillingCycle,
+	handleCheckout,
+	handleFreeSignup,
+	FALLBACK_PRICING,
 };
