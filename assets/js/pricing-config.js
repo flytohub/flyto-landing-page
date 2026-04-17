@@ -130,19 +130,82 @@ function escapeHtml(text) {
 }
 
 /**
- * Convert API pricing response to config format
+ * Convert API pricing response to config format.
+ * Handles both section-based (Firestore pricing_v1) and flat plans array (/billing/plans).
  */
 function convertApiPricingToConfig(apiPricing) {
 	if (apiPricing.sections) return apiPricing;
+
+	// Convert /billing/plans flat array → sections format
+	if (Array.isArray(apiPricing)) {
+		const cloudPlans = [];
+		const enterprisePlans = [];
+
+		apiPricing.forEach(p => {
+			const plan = {
+				id: p.id,
+				name: p.name || (p.id ? p.id.charAt(0).toUpperCase() + p.id.slice(1) : ''),
+				price: p.price_monthly_cents ? p.price_monthly_cents / 100 : 0,
+				price_yearly: p.price_yearly_cents ? p.price_yearly_cents / 100 : 0,
+				currency: 'USD',
+				billing: 'monthly',
+				features: p.features || [],
+				enabled: true,
+				popular: p.id === 'pro',
+			};
+
+			if (p.is_custom_pricing || p.id === 'enterprise') {
+				plan.price = null;
+				plan.pricing_type = 'contact';
+				plan.cta = { type: 'contact', label: 'Contact Sales', url: 'contact.html' };
+				enterprisePlans.push(plan);
+			} else if (p.id === 'free' || plan.price === 0) {
+				plan.cta = { type: 'signup', label: 'Get Started Free' };
+				cloudPlans.push(plan);
+			} else {
+				plan.cta = { type: 'checkout', label: 'Subscribe' };
+				cloudPlans.push(plan);
+			}
+		});
+
+		return {
+			version: 2,
+			billing_cycle: 'monthly',
+			sections: [
+				{ key: 'cloud_saas', title: 'Cloud Plans', enabled: cloudPlans.length > 0, comingSoon: false, plans: cloudPlans },
+				{ key: 'enterprise', title: 'Enterprise', enabled: enterprisePlans.length > 0, comingSoon: false, plans: enterprisePlans },
+			],
+		};
+	}
+
 	return FALLBACK_PRICING;
 }
 
 /**
- * Fetch pricing config from Cloud Function or Firestore
+ * Fetch pricing config.
+ *
+ * Priority order:
+ *   1. Cloud API /billing/plans (public, reads from admin-managed plan_config)
+ *   2. Cloud Function getPricing (legacy)
+ *   3. Firestore settings/pricing_v1 (legacy)
+ *   4. Hardcoded FALLBACK_PRICING
  */
 async function fetchPricingConfig() {
 	try {
-		// Try Cloud Function API first
+		// 1. Cloud API — single source of truth (synced with admin/pricing)
+		try {
+			const response = await fetch(`${CLOUD_API_URL}/billing/plans`);
+			if (response.ok) {
+				const data = await response.json();
+				if (data.ok && Array.isArray(data.plans) && data.plans.length > 0) {
+					return convertApiPricingToConfig(data.plans);
+				}
+			}
+		} catch (apiError) {
+			console.warn('Cloud API /billing/plans failed, falling back:', apiError);
+		}
+
+		// 2. Legacy: Cloud Function
 		if (typeof window.FlytoAuth !== 'undefined' && window.FlytoAuth.FIREBASE_URL) {
 			try {
 				const response = await fetch(`${window.FlytoAuth.FIREBASE_URL}/getPricing`);
@@ -155,7 +218,7 @@ async function fetchPricingConfig() {
 			}
 		}
 
-		// Fallback: Firestore direct read
+		// 3. Legacy: Firestore direct read
 		if (typeof firebase !== 'undefined' && firebase.firestore) {
 			const db = firebase.firestore();
 			const v1Doc = await db.collection('settings').doc('pricing_v1').get();
