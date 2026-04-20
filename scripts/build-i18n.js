@@ -55,7 +55,7 @@ function getSeoMeta(htmlFile, locale, field, translations) {
 // Configuration
 const CONFIG = {
   htmlDir: path.join(__dirname, '..'),
-  i18nDir: path.join(__dirname, '..', '..', 'flyto-i18n', 'locales'),
+  i18nDir: path.join(__dirname, '..', '..', 'flyto-i18n', 'locales', 'landing'),
   htmlFiles: ['index.html', 'pricing.html', 'download.html', 'app.html', 'faq.html', 'contact.html', 'language-packs.html', 'dev.html', 'node.html', 'wasm.html', 'templates.html'],
   locales: [],
   localeMapping: {},
@@ -75,7 +75,7 @@ function loadTranslations(locale) {
     return translations;
   }
 
-  const files = fs.readdirSync(localeDir).filter(f => f.startsWith('landing.') && f.endsWith('.json'));
+  const files = fs.readdirSync(localeDir).filter(f => f.endsWith('.json'));
 
   for (const file of files) {
     const filePath = path.join(localeDir, file);

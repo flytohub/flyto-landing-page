@@ -19,7 +19,7 @@ const TEMPLATE_DATA_PATH = path.join(__dirname, 'template-data.json');
 
 const CONFIG = {
   htmlDir: path.join(__dirname, '..'),
-  i18nDir: path.join(__dirname, '..', '..', 'flyto-i18n', 'locales'),
+  i18nDir: path.join(__dirname, '..', '..', 'flyto-i18n', 'locales', 'landing'),
   baseUrl: seoConfig.baseUrl,
   pages: seoConfig.pages,
   templatePages: seoConfig.templatePages || false,
