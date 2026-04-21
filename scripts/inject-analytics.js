@@ -152,6 +152,9 @@ function injectIntoFile(filePath) {
  */
 function getAllHtmlFiles() {
   const files = [];
+  const PRODUCTS_PATH = path.join(__dirname, 'products.json');
+  const productsConfig = JSON.parse(fs.readFileSync(PRODUCTS_PATH, 'utf8'));
+  const productSlugs = productsConfig.products.map(p => p.slug);
 
   // Root HTML files
   const rootFiles = fs.readdirSync(HTML_DIR)
@@ -159,6 +162,17 @@ function getAllHtmlFiles() {
 
   for (const file of rootFiles) {
     files.push(path.join(HTML_DIR, file));
+  }
+
+  // Product directories (claude/, code/)
+  for (const slug of productSlugs) {
+    const productDir = path.join(HTML_DIR, slug);
+    if (fs.existsSync(productDir) && fs.statSync(productDir).isDirectory()) {
+      const productFiles = fs.readdirSync(productDir).filter(f => f.endsWith('.html'));
+      for (const file of productFiles) {
+        files.push(path.join(productDir, file));
+      }
+    }
   }
 
   // Language directories
@@ -177,6 +191,17 @@ function getAllHtmlFiles() {
 
     for (const file of langFiles) {
       files.push(path.join(langDir, file));
+    }
+
+    // Language + product directories (e.g., /zh/code/)
+    for (const slug of productSlugs) {
+      const langProductDir = path.join(langDir, slug);
+      if (fs.existsSync(langProductDir) && fs.statSync(langProductDir).isDirectory()) {
+        const lpFiles = fs.readdirSync(langProductDir).filter(f => f.endsWith('.html'));
+        for (const file of lpFiles) {
+          files.push(path.join(langProductDir, file));
+        }
+      }
     }
   }
 

@@ -84,7 +84,10 @@ function resolveLocales() {
 }
 
 function pagePath(htmlFile) {
-  return htmlFile === 'index.html' ? '' : htmlFile;
+  if (htmlFile === 'index.html') return '';
+  // Product index pages: 'code/index.html' -> 'code/'
+  if (htmlFile.endsWith('/index.html')) return htmlFile.replace('index.html', '');
+  return htmlFile;
 }
 
 function buildUrl(localeDir, pagePathValue) {

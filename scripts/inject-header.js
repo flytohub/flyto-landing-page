@@ -2,7 +2,8 @@
 /**
  * inject-header.js
  *
- * Injects the canonical header and mobile menu into all HTML files.
+ * Injects the canonical header (product switcher + header + mobile menu)
+ * into all HTML files, including product subdirectories.
  * Run BEFORE build-i18n.js so translations apply to the unified header.
  *
  * Usage:
@@ -16,14 +17,29 @@ const path = require('path');
 const ROOT_DIR = path.join(__dirname, '..');
 const HEADER_PATH = path.join(ROOT_DIR, '_header.html');
 const MOBILE_MENU_PATH = path.join(ROOT_DIR, '_mobile-menu.html');
-
-const HTML_FILES = [
-  'index.html', 'pricing.html', 'download.html', 'app.html',
-  'faq.html', 'contact.html', 'language-packs.html', 'product.html',
-  'dev.html', 'node.html', 'wasm.html'
-];
+const PRODUCTS_PATH = path.join(__dirname, 'products.json');
 
 const dryRun = process.argv.includes('--dry-run');
+
+function getHtmlFiles() {
+  const files = [];
+  const products = JSON.parse(fs.readFileSync(PRODUCTS_PATH, 'utf8'));
+
+  // Root-level pages: index.html + shared pages
+  files.push('index.html');
+  for (const page of products.sharedPages) {
+    files.push(page);
+  }
+
+  // Product pages
+  for (const product of products.products) {
+    for (const page of product.pages) {
+      files.push(path.join(product.slug, page));
+    }
+  }
+
+  return files;
+}
 
 function main() {
   if (!fs.existsSync(HEADER_PATH)) {
@@ -37,13 +53,14 @@ function main() {
 
   const headerHtml = fs.readFileSync(HEADER_PATH, 'utf8');
   const mobileMenuHtml = fs.readFileSync(MOBILE_MENU_PATH, 'utf8');
+  const htmlFiles = getHtmlFiles();
 
   console.log('Injecting canonical header into HTML files...\n');
 
   let updatedCount = 0;
   let skippedCount = 0;
 
-  for (const htmlFile of HTML_FILES) {
+  for (const htmlFile of htmlFiles) {
     const filePath = path.join(ROOT_DIR, htmlFile);
     if (!fs.existsSync(filePath)) {
       continue;
@@ -52,18 +69,28 @@ function main() {
     let html = fs.readFileSync(filePath, 'utf8');
     let changed = false;
 
-    // Replace <header class="header">...</header>
-    const headerPattern = /\t<header class="header">[\s\S]*?<\/header>/;
+    // Replace product switcher + header block
+    const headerPattern = /\t<!-- Product Switcher Bar -->[\s\S]*?<\/header>\s*<!-- Product Nav \+ Lang Switcher Detection Script -->\s*<script>[\s\S]*?<\/script>/;
     if (headerPattern.test(html)) {
       const newHtml = html.replace(headerPattern, headerHtml.trimEnd());
       if (newHtml !== html) {
         html = newHtml;
         changed = true;
       }
+    } else {
+      // Fallback: old-style header without product switcher
+      const oldHeaderPattern = /\t<header class="header">[\s\S]*?<\/header>/;
+      if (oldHeaderPattern.test(html)) {
+        const newHtml = html.replace(oldHeaderPattern, headerHtml.trimEnd());
+        if (newHtml !== html) {
+          html = newHtml;
+          changed = true;
+        }
+      }
     }
 
-    // Replace mobile menu area (4 nested closing divs: lang-switcher, wrapper, menu, area)
-    const mobilePattern = /\t<div class="mobile-menu-area">[\s\S]*?<\/div>\s*<\/div>\s*<\/div>\s*<\/div>/;
+    // Replace mobile menu area
+    const mobilePattern = /\t<div class="mobile-menu-area">[\s\S]*?<\/div>\s*<\/div>\s*<\/div>\s*<\/div>(?:\s*<!-- Mobile Product Nav Detection -->\s*<script>[\s\S]*?<\/script>)?/;
     if (mobilePattern.test(html)) {
       const newHtml = html.replace(mobilePattern, mobileMenuHtml.trimEnd());
       if (newHtml !== html) {

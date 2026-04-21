@@ -18,59 +18,84 @@
       "priority": "1.0",
       "index": true
     },
-    "pricing.html": {
+    "claude/index.html": {
       "changefreq": "weekly",
       "priority": "0.9",
       "index": true
     },
-    "download.html": {
-      "changefreq": "monthly",
+    "claude/pricing.html": {
+      "changefreq": "weekly",
       "priority": "0.8",
       "index": true
     },
-    "app.html": {
-      "changefreq": "monthly",
-      "priority": "0.8",
-      "index": true
-    },
-    "faq.html": {
+    "claude/download.html": {
       "changefreq": "monthly",
       "priority": "0.7",
+      "index": true
+    },
+    "claude/faq.html": {
+      "changefreq": "monthly",
+      "priority": "0.6",
+      "index": true
+    },
+    "code/index.html": {
+      "changefreq": "weekly",
+      "priority": "0.9",
+      "index": true
+    },
+    "code/pricing.html": {
+      "changefreq": "weekly",
+      "priority": "0.8",
+      "index": true
+    },
+    "code/download.html": {
+      "changefreq": "monthly",
+      "priority": "0.8",
+      "index": true
+    },
+    "code/app.html": {
+      "changefreq": "monthly",
+      "priority": "0.7",
+      "index": true
+    },
+    "code/faq.html": {
+      "changefreq": "monthly",
+      "priority": "0.6",
+      "index": true
+    },
+    "code/dev.html": {
+      "changefreq": "monthly",
+      "priority": "0.6",
+      "index": true
+    },
+    "code/node.html": {
+      "changefreq": "monthly",
+      "priority": "0.5",
+      "index": true
+    },
+    "code/wasm.html": {
+      "changefreq": "monthly",
+      "priority": "0.5",
+      "index": true
+    },
+    "code/language-packs.html": {
+      "changefreq": "monthly",
+      "priority": "0.5",
+      "index": true
+    },
+    "code/templates.html": {
+      "changefreq": "weekly",
+      "priority": "0.8",
       "index": true
     },
     "contact.html": {
       "changefreq": "monthly",
-      "priority": "0.6",
+      "priority": "0.5",
       "index": true
     },
     "buy-offline.html": {
       "changefreq": "monthly",
-      "priority": "0.7",
-      "index": true
-    },
-    "language-packs.html": {
-      "changefreq": "monthly",
-      "priority": "0.6",
-      "index": true
-    },
-    "dev.html": {
-      "changefreq": "monthly",
-      "priority": "0.7",
-      "index": true
-    },
-    "node.html": {
-      "changefreq": "monthly",
       "priority": "0.5",
-      "index": true
-    },
-    "wasm.html": {
-      "changefreq": "monthly",
-      "priority": "0.5",
-      "index": true
-    },
-    "templates.html": {
-      "changefreq": "weekly",
-      "priority": "0.9",
       "index": true
     }
   },
@@ -79,7 +104,16 @@
 
   "blockedPages": [
     "404.html",
-    "license-purchase.html"
+    "license-purchase.html",
+    "pricing.html",
+    "download.html",
+    "app.html",
+    "faq.html",
+    "dev.html",
+    "node.html",
+    "wasm.html",
+    "language-packs.html",
+    "templates.html"
   ],
 
   "blockedPaths": [

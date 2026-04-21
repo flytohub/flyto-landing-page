@@ -6,24 +6,55 @@
 					<a href="javascript:void(0)" aria-label="Close menu" role="button"><i class="fas fa-times"></i></a>
 				</div>
 				<div class="mobile-logo">
-					<a href="./">
+					<a href="/">
 						<picture>
-							<source srcset="assets/img/logo.webp" type="image/webp">
-							<img src="assets/img/logo.png" alt="Flyto2 - No-Code Automation Tool" width="90" height="79" />
+							<source srcset="/assets/img/logo.webp" type="image/webp">
+							<img src="/assets/img/logo.png" alt="Flyto Platform" width="90" height="79" />
 						</picture>
 					</a>
 				</div>
-				<div id="menu" class="text-left">
+				<!-- Mobile Product Switcher -->
+				<div class="mobile-product-switcher">
+					<a href="/claude/" class="mobile-product-btn" data-product="claude">
+						<i class="bi bi-robot"></i> Claude
+					</a>
+					<a href="/code/" class="mobile-product-btn" data-product="code">
+						<i class="bi bi-code-slash"></i> Code
+					</a>
+				</div>
+				<!-- Claude Mobile Nav -->
+				<div id="menu-claude" class="text-left product-mobile-nav" data-product="claude" style="display:none">
 					<ul class="offcanvas_main_menu">
-						<li><a href="./" data-i18n="landing.common.nav.home">Home</a></li>
-						<li><a href="pricing.html" data-i18n="landing.common.nav.pricing">Pricing</a></li>
-						<li><a href="download.html" data-i18n="landing.common.nav.download">Download</a></li>
-						<li><a href="app.html" data-i18n="landing.common.nav.desktopApp">Get App</a></li>
-						<li><a href="templates.html" data-i18n="landing.common.nav.marketplace">Marketplace</a></li>
+						<li><a href="/claude/" data-i18n="landing.common.nav.home">Home</a></li>
+						<li><a href="/claude/pricing.html" data-i18n="landing.common.nav.pricing">Pricing</a></li>
+						<li><a href="/claude/download.html" data-i18n="landing.common.nav.download">Download</a></li>
+						<li><a href="/claude/faq.html" data-i18n="landing.common.nav.faq">FAQ</a></li>
+						<li><a href="https://docs.flyto2.com" target="_blank" rel="noopener noreferrer" data-i18n="landing.common.nav.documentation">Docs</a></li>
+						<li><a href="/contact.html" data-i18n="landing.common.nav.contactUs">Contact</a></li>
+					</ul>
+				</div>
+				<!-- Code Mobile Nav -->
+				<div id="menu-code" class="text-left product-mobile-nav" data-product="code" style="display:none">
+					<ul class="offcanvas_main_menu">
+						<li><a href="/code/" data-i18n="landing.common.nav.home">Home</a></li>
+						<li><a href="/code/pricing.html" data-i18n="landing.common.nav.pricing">Pricing</a></li>
+						<li><a href="/code/download.html" data-i18n="landing.common.nav.download">Download</a></li>
+						<li><a href="/code/app.html" data-i18n="landing.common.nav.desktopApp">Get App</a></li>
+						<li><a href="/code/templates.html" data-i18n="landing.common.nav.marketplace">Marketplace</a></li>
+						<li><a href="https://docs.flyto2.com" target="_blank" rel="noopener noreferrer" data-i18n="landing.common.nav.documentation">Docs</a></li>
+						<li><a href="/code/faq.html" data-i18n="landing.common.nav.faq">FAQ</a></li>
+						<li><a href="/contact.html" data-i18n="landing.common.nav.contactUs">Contact</a></li>
+					</ul>
+				</div>
+				<!-- Default Mobile Nav (root/shared pages) -->
+				<div id="menu-default" class="text-left product-mobile-nav product-mobile-nav-default">
+					<ul class="offcanvas_main_menu">
+						<li><a href="/" data-i18n="landing.common.nav.home">Home</a></li>
+						<li><a href="/claude/">Flyto Claude</a></li>
+						<li><a href="/code/">Flyto Code</a></li>
 						<li><a href="https://docs.flyto2.com" target="_blank" rel="noopener noreferrer" data-i18n="landing.common.nav.documentation">Docs</a></li>
 						<li><a href="https://blog.flyto2.com" target="_blank" rel="noopener noreferrer" data-i18n="landing.common.nav.blog">Blog</a></li>
-						<li><a href="faq.html" data-i18n="landing.common.nav.faq">FAQ</a></li>
-						<li><a href="contact.html" data-i18n="landing.common.nav.contactUs">Contact</a></li>
+						<li><a href="/contact.html" data-i18n="landing.common.nav.contactUs">Contact</a></li>
 					</ul>
 				</div>
 				<!-- Mobile Language Switcher -->
@@ -36,3 +67,29 @@
 			</div>
 		</div>
 	</div>
+	<!-- Mobile Product Nav Detection -->
+	<script>
+	(function(){
+		var p=location.pathname;
+		var m=p.match(/(?:^|\/)(?:[a-z]{2}\/)?(claude|code)(?:\/|$)/);
+		var product=m?m[1]:'';
+		// Highlight active mobile product button
+		document.querySelectorAll('.mobile-product-btn').forEach(function(el){
+			if(el.dataset.product===product)el.classList.add('active');
+		});
+		// Show correct mobile nav
+		if(product){
+			document.querySelectorAll('.product-mobile-nav').forEach(function(el){
+				el.style.display=el.dataset.product===product?'':'none';
+			});
+			var def=document.querySelector('.product-mobile-nav-default');
+			if(def)def.style.display='none';
+		}else{
+			document.querySelectorAll('.product-mobile-nav[data-product]').forEach(function(el){
+				el.style.display='none';
+			});
+			var def=document.querySelector('.product-mobile-nav-default');
+			if(def)def.style.display='';
+		}
+	})();
+	</script>

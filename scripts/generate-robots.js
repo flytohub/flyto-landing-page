@@ -49,7 +49,7 @@ function generateRobotsTxt() {
     .map(([page, _]) => page);
 
   const lines = [
-    '# Flyto2 Robots.txt',
+    '# Flyto Robots.txt',
     '# Auto-generated from seo-config.json',
     `# Generated: ${new Date().toISOString().slice(0, 10)}`,
     '#',
@@ -89,15 +89,15 @@ function generateRobotsTxt() {
     const templateData = JSON.parse(fs.readFileSync(TEMPLATE_DATA_PATH, 'utf8'));
     lines.push('');
     lines.push('# Allowed: Template pages');
-    lines.push('Allow: /templates.html');
+    lines.push('Allow: /code/templates.html');
     for (const t of templateData.templates) {
-      lines.push(`Allow: /templates/${t.slug}.html`);
+      lines.push(`Allow: /code/templates/${t.slug}.html`);
     }
     // Allow for language directories
     for (const lang of langDirs) {
-      lines.push(`Allow: /${lang}/templates.html`);
+      lines.push(`Allow: /${lang}/code/templates.html`);
       for (const t of templateData.templates) {
-        lines.push(`Allow: /${lang}/templates/${t.slug}.html`);
+        lines.push(`Allow: /${lang}/code/templates/${t.slug}.html`);
       }
     }
   }

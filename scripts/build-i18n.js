@@ -52,11 +52,32 @@ function getSeoMeta(htmlFile, locale, field, translations) {
   return translations[translationKey] || null;
 }
 
+// Load products config
+const PRODUCTS_PATH = path.join(__dirname, 'products.json');
+const productsConfig = JSON.parse(fs.readFileSync(PRODUCTS_PATH, 'utf8'));
+
+function getHtmlFiles() {
+  const files = [];
+  // Root index (product overview)
+  files.push('index.html');
+  // Shared pages
+  for (const page of productsConfig.sharedPages) {
+    files.push(page);
+  }
+  // Product pages
+  for (const product of productsConfig.products) {
+    for (const page of product.pages) {
+      files.push(`${product.slug}/${page}`);
+    }
+  }
+  return files;
+}
+
 // Configuration
 const CONFIG = {
   htmlDir: path.join(__dirname, '..'),
   i18nDir: path.join(__dirname, '..', '..', 'flyto-i18n', 'locales', 'landing'),
-  htmlFiles: ['index.html', 'pricing.html', 'download.html', 'app.html', 'faq.html', 'contact.html', 'language-packs.html', 'dev.html', 'node.html', 'wasm.html', 'templates.html'],
+  htmlFiles: getHtmlFiles(),
   locales: [],
   localeMapping: {},
   localeEntries: []
@@ -161,16 +182,16 @@ function resolveLocales(targetLocale) {
   return { locales: localeEntries.map(entry => entry.locale), localeMapping, localeEntries };
 }
 
-// FAQ Schema i18n key mappings for index.html and faq.html
+// FAQ Schema i18n key mappings (product-prefixed paths)
 const FAQ_SCHEMA_KEYS = {
-  'index.html': [
+  'code/index.html': [
     { q: 'landing.faq.general.q1', a: 'landing.faq.general.a1' },
     { q: 'landing.faq.general.q2', a: 'landing.faq.general.a2' },
     { q: 'landing.faq.general.q3', a: 'landing.faq.general.a3' },
     { q: 'landing.faq.general.q4', a: 'landing.faq.general.a4' },
     { q: 'landing.faq.gettingStarted.q1', a: 'landing.faq.gettingStarted.a1' },
   ],
-  'faq.html': [
+  'code/faq.html': [
     { q: 'landing.faq.general.q1', a: 'landing.faq.general.a1' },
     { q: 'landing.faq.general.q2', a: 'landing.faq.general.a2' },
     { q: 'landing.faq.general.q3', a: 'landing.faq.general.a3' },
@@ -322,7 +343,17 @@ function updateLangSwitcher(html, currentLocale) {
 // Priority: Firebase pageMeta > flyto-i18n translations
 function updateSeoLinks(html, locale, htmlFile, translations) {
   const localeDir = CONFIG.localeMapping[locale] || locale.toLowerCase();
-  const pagePath = htmlFile === 'index.html' ? '' : htmlFile;
+  // For product pages like 'code/index.html', pagePath becomes 'code/'
+  // For product subpages like 'code/pricing.html', pagePath becomes 'code/pricing.html'
+  // For root index.html, pagePath is empty
+  let pagePath;
+  if (htmlFile === 'index.html') {
+    pagePath = '';
+  } else if (htmlFile.endsWith('/index.html')) {
+    pagePath = htmlFile.replace('index.html', '');
+  } else {
+    pagePath = htmlFile;
+  }
   const localizedUrl = buildPageUrl(localeDir, pagePath);
 
   // Update canonical link
@@ -345,6 +376,7 @@ function updateSeoLinks(html, locale, htmlFile, translations) {
   );
 
   // Get SEO meta (Firebase first, fallback to translations)
+  // For product pages, try both 'code/pricing.html' and 'pricing.html' keys in pageMeta
   const metaDesc = getSeoMeta(htmlFile, locale, 'description', translations);
   const ogDesc = getSeoMeta(htmlFile, locale, 'ogDescription', translations) || metaDesc;
   const title = getSeoMeta(htmlFile, locale, 'title', translations);
@@ -484,9 +516,16 @@ function buildHreflangTags(pagePath) {
   return `\n${tags.join('\n')}`;
 }
 
-// Fix relative paths for subdirectory
-function fixRelativePaths(html) {
-  // Fix asset paths: assets/ -> ../assets/
+// Fix relative paths for i18n subdirectory
+// Product pages already use absolute paths (/assets/..., /style.css)
+// Only shared root pages with relative paths need adjustment
+function fixRelativePaths(html, htmlFile) {
+  // Pages in product subdirectories already use absolute paths - skip them
+  if (htmlFile.includes('/')) {
+    return html;
+  }
+
+  // Root-level shared pages: fix relative asset paths for i18n subdirectory
   html = html.replace(/href="assets\//g, 'href="../assets/');
   html = html.replace(/src="assets\//g, 'src="../assets/');
   html = html.replace(/srcset="assets\//g, 'srcset="../assets/');
@@ -496,9 +535,6 @@ function fixRelativePaths(html) {
 
   // Fix root-level JS files
   html = html.replace(/src="scripts\//g, 'src="../scripts/');
-
-  // Fix page links for same directory
-  html = html.replace(/href="([a-z-]+\.html)"/g, 'href="$1"');
 
   return html;
 }
@@ -554,10 +590,11 @@ function main() {
       html = translateHtml(html, translations, locale, htmlFile);
 
       // Fix relative paths
-      html = fixRelativePaths(html);
+      html = fixRelativePaths(html, htmlFile);
 
-      // Write output
+      // Write output (create nested dirs for product pages)
       const outputPath = path.join(outputDir, htmlFile);
+      fs.mkdirSync(path.dirname(outputPath), { recursive: true });
       fs.writeFileSync(outputPath, html);
 
       console.log(`   ✅ ${htmlFile}`);
@@ -669,14 +706,16 @@ function generateLlmsTxt(translations, localeDir) {
   // Pages
   const pages = [
     { key: 'home', label: 'Home', file: '' },
-    { key: 'pricing', label: 'Pricing', file: 'pricing.html' },
-    { key: 'download', label: 'Download', file: 'download.html' },
-    { key: 'app', label: 'Desktop App', file: 'app.html' },
-    { key: 'templates', label: 'Templates', file: 'templates.html' },
-    { key: 'dev', label: 'Developer', file: 'dev.html' },
-    { key: 'wasm', label: 'WebAssembly', file: 'wasm.html' },
-    { key: 'node', label: 'Node.js', file: 'node.html' },
-    { key: 'faq', label: 'FAQ', file: 'faq.html' },
+    { key: 'claude', label: 'Flyto Claude', file: 'claude/' },
+    { key: 'code', label: 'Flyto Code', file: 'code/' },
+    { key: 'pricing', label: 'Code - Pricing', file: 'code/pricing.html' },
+    { key: 'download', label: 'Code - Download', file: 'code/download.html' },
+    { key: 'app', label: 'Code - Desktop App', file: 'code/app.html' },
+    { key: 'templates', label: 'Code - Templates', file: 'code/templates.html' },
+    { key: 'dev', label: 'Code - Developer', file: 'code/dev.html' },
+    { key: 'wasm', label: 'Code - WebAssembly', file: 'code/wasm.html' },
+    { key: 'node', label: 'Code - Node.js', file: 'code/node.html' },
+    { key: 'faq', label: 'Code - FAQ', file: 'code/faq.html' },
     { key: 'docs', label: 'Documentation', url: 'https://docs.flyto2.com' },
     { key: 'blog', label: 'Blog', url: 'https://blog.flyto2.com' },
     { key: 'contact', label: 'Contact', file: 'contact.html' },
