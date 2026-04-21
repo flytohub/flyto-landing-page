@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html class="no-js" lang="zh-TW">
 <head>
+	<!-- Google Analytics (GA4) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-7V4D315CBD"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-7V4D315CBD');
+	</script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!-- Content Security Policy -->
 	<meta http-equiv="Content-Security-Policy" content="
 		default-src 'self';
-		script-src 'self';
+		script-src 'self' https://www.googletagmanager.com;
 		style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com;
 		font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net;
 		img-src 'self' data:;
-		connect-src 'self';
+		connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com;
 	">
 
 	<!-- Security Headers -->
