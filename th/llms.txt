@@ -81,8 +81,8 @@ Flyto2 Indexer เป็นเซิร์ฟเวอร์ MCP (Model Context 
 
 - ทั่วไป: info@flyto2.com
 - ฝ่ายขาย: sales@flyto2.com
-- GitHub: github.com/flytohub
-- YouTube: @Flyto2
+- GitHub:github.com/flytohub
+- YouTube:@Flyto2
 
 ## เปรียบเทียบกับทางเลือกอื่น
 

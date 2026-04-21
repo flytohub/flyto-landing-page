@@ -79,7 +79,7 @@ Flyto2 Indexer es un servidor MCP (Model Context Protocol) que proporciona intel
 
 ## Contacto
 
-- General: info@flyto2.com
+- General info@flyto2.com
 - Ventas: sales@flyto2.com
 - GitHub: github.com/flytohub
 - YouTube: @Flyto2
