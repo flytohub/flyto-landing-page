@@ -65,14 +65,14 @@ Flyto2 Indexer is an MCP server (Model Context Protocol) providing code intellig
 ## Pages
 
 - [Home](https://flyto2.com/): Product overview and key features
-- [Pricing](https://flyto2.com/pricing.html): Plans, pricing, and comparison
-- [Download](https://flyto2.com/download.html): CLI download (PyPI, .whl, .tar.gz)
-- [Desktop App](https://flyto2.com/app.html): Desktop app with visual workflow builder
-- [Templates](https://flyto2.com/templates.html): 101+ free automation templates
-- [Developer](https://flyto2.com/dev.html): MCP server and developer tools
-- [WebAssembly](https://flyto2.com/wasm.html): WebAssembly module
-- [Node.js](https://flyto2.com/node.html): Node.js package
-- [FAQ](https://flyto2.com/faq.html): Common questions and answers
+- [Code - Pricing](https://flyto2.com/code/pricing.html): Plans, pricing, and comparison
+- [Code - Download](https://flyto2.com/code/download.html): CLI download (PyPI, .whl, .tar.gz)
+- [Code - Desktop App](https://flyto2.com/code/app.html): Desktop app with visual workflow builder
+- [Code - Templates](https://flyto2.com/code/templates.html): 101+ free automation templates
+- [Code - Developer](https://flyto2.com/code/dev.html): MCP server and developer tools
+- [Code - WebAssembly](https://flyto2.com/code/wasm.html): WebAssembly module
+- [Code - Node.js](https://flyto2.com/code/node.html): Node.js package
+- [Code - FAQ](https://flyto2.com/code/faq.html): Common questions and answers
 - [Documentation](https://docs.flyto2.com): Full documentation
 - [Blog](https://blog.flyto2.com): Tutorials and updates
 - [Contact](https://flyto2.com/contact.html): Support and inquiries

@@ -18,74 +18,59 @@
       "priority": "1.0",
       "index": true
     },
-    "claude/index.html": {
+    "cloud/index.html": {
       "changefreq": "weekly",
       "priority": "0.9",
       "index": true
     },
-    "claude/pricing.html": {
+    "cloud/pricing.html": {
       "changefreq": "weekly",
       "priority": "0.8",
       "index": true
     },
-    "claude/download.html": {
+    "cloud/download.html": {
+      "changefreq": "monthly",
+      "priority": "0.8",
+      "index": true
+    },
+    "cloud/app.html": {
       "changefreq": "monthly",
       "priority": "0.7",
       "index": true
     },
-    "claude/faq.html": {
+    "cloud/faq.html": {
       "changefreq": "monthly",
       "priority": "0.6",
+      "index": true
+    },
+    "cloud/dev.html": {
+      "changefreq": "monthly",
+      "priority": "0.6",
+      "index": true
+    },
+    "cloud/node.html": {
+      "changefreq": "monthly",
+      "priority": "0.5",
+      "index": true
+    },
+    "cloud/wasm.html": {
+      "changefreq": "monthly",
+      "priority": "0.5",
+      "index": true
+    },
+    "cloud/language-packs.html": {
+      "changefreq": "monthly",
+      "priority": "0.5",
+      "index": true
+    },
+    "cloud/templates.html": {
+      "changefreq": "weekly",
+      "priority": "0.8",
       "index": true
     },
     "code/index.html": {
       "changefreq": "weekly",
-      "priority": "0.9",
-      "index": true
-    },
-    "code/pricing.html": {
-      "changefreq": "weekly",
-      "priority": "0.8",
-      "index": true
-    },
-    "code/download.html": {
-      "changefreq": "monthly",
-      "priority": "0.8",
-      "index": true
-    },
-    "code/app.html": {
-      "changefreq": "monthly",
       "priority": "0.7",
-      "index": true
-    },
-    "code/faq.html": {
-      "changefreq": "monthly",
-      "priority": "0.6",
-      "index": true
-    },
-    "code/dev.html": {
-      "changefreq": "monthly",
-      "priority": "0.6",
-      "index": true
-    },
-    "code/node.html": {
-      "changefreq": "monthly",
-      "priority": "0.5",
-      "index": true
-    },
-    "code/wasm.html": {
-      "changefreq": "monthly",
-      "priority": "0.5",
-      "index": true
-    },
-    "code/language-packs.html": {
-      "changefreq": "monthly",
-      "priority": "0.5",
-      "index": true
-    },
-    "code/templates.html": {
-      "changefreq": "weekly",
-      "priority": "0.8",
       "index": true
     },
     "contact.html": {

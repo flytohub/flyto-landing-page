@@ -1,31 +1,11 @@
 {
   "products": [
     {
-      "id": "claude",
-      "name": "Flyto Claude",
-      "slug": "claude",
-      "tagline": "AI-powered automation assistant",
-      "icon": "bi-robot",
-      "accentColor": "#7c3aed",
-      "pages": [
-        "index.html",
-        "pricing.html",
-        "download.html",
-        "faq.html"
-      ],
-      "nav": [
-        { "label": "Features", "href": "index.html", "icon": "bi-stars", "i18nKey": "landing.common.nav.features" },
-        { "label": "Pricing", "href": "pricing.html", "icon": "bi-tag", "i18nKey": "landing.common.nav.pricing" },
-        { "label": "Download", "href": "download.html", "icon": "bi-download", "i18nKey": "landing.common.nav.download" },
-        { "label": "FAQ", "href": "faq.html", "icon": "bi-question-circle", "i18nKey": "landing.common.nav.faq" }
-      ]
-    },
-    {
-      "id": "code",
-      "name": "Flyto Code",
-      "slug": "code",
+      "id": "cloud",
+      "name": "Flyto Cloud",
+      "slug": "cloud",
       "tagline": "No-code browser automation. Record once, replay forever.",
-      "icon": "bi-code-slash",
+      "icon": "bi-cloud",
       "accentColor": "#6366f1",
       "pages": [
         "index.html",
@@ -46,6 +26,21 @@
         { "label": "Marketplace", "href": "templates.html", "icon": "bi-shop", "i18nKey": "landing.common.nav.marketplace" },
         { "label": "FAQ", "href": "faq.html", "icon": "bi-question-circle", "i18nKey": "landing.common.nav.faq" }
       ]
+    },
+    {
+      "id": "code",
+      "name": "Flyto Code",
+      "slug": "code",
+      "tagline": "Application security war room. Coming soon.",
+      "icon": "bi-shield-check",
+      "accentColor": "#a78bfa",
+      "comingSoon": true,
+      "pages": [
+        "index.html"
+      ],
+      "nav": [
+        { "label": "Overview", "href": "index.html", "icon": "bi-stars", "i18nKey": "landing.common.nav.overview" }
+      ]
     }
   ],
   "sharedPages": [
@@ -56,5 +51,5 @@
     "blog.html",
     "buy-offline.html"
   ],
-  "defaultProduct": "code"
+  "defaultProduct": "cloud"
 }

@@ -4298,54 +4298,109 @@ html[lang="nl"] * {
 }
 
 /* ===========================================
-   Product Switcher Bar
+   Product Switcher Bar (glass, dark)
    =========================================== */
 .product-switcher {
-	background: rgba(15, 5, 36, 0.95);
-	border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+	background: rgba(10, 5, 24, 0.85);
+	-webkit-backdrop-filter: saturate(180%) blur(14px);
+	backdrop-filter: saturate(180%) blur(14px);
+	border-bottom: 1px solid rgba(167, 139, 250, 0.12);
 	padding: 0;
-	position: relative;
-	z-index: 1001;
+	position: sticky;
+	top: 0;
+	z-index: 1002;
 }
 .product-switcher-tabs {
 	display: flex;
-	gap: 0;
+	gap: 4px;
+	padding: 6px 0;
 }
 .product-tab {
 	display: inline-flex;
 	align-items: center;
-	gap: 6px;
-	padding: 10px 20px;
-	color: rgba(255, 255, 255, 0.6);
+	gap: 7px;
+	padding: 7px 14px;
+	color: rgba(233, 230, 255, 0.6);
 	font-size: 13px;
 	font-weight: 500;
+	letter-spacing: 0.01em;
 	text-decoration: none;
-	transition: color 0.2s, background 0.2s;
-	border-bottom: 2px solid transparent;
+	border-radius: 8px;
+	transition: color 0.18s, background 0.18s;
+	position: relative;
 }
 .product-tab:hover {
-	color: rgba(255, 255, 255, 0.9);
-	background: rgba(255, 255, 255, 0.05);
+	color: #fff;
+	background: rgba(167, 139, 250, 0.08);
 	text-decoration: none;
 }
 .product-tab.active {
 	color: #fff;
-	border-bottom-color: #7c3aed;
-	background: rgba(124, 58, 237, 0.1);
+	background: rgba(167, 139, 250, 0.14);
+	box-shadow: inset 0 0 0 1px rgba(167, 139, 250, 0.22);
 }
 .product-tab i {
 	font-size: 14px;
+	color: #a78bfa;
+}
+.product-tab .tab-badge {
+	display: inline-block;
+	margin-left: 4px;
+	padding: 1px 6px;
+	font-size: 9px;
+	font-weight: 700;
+	font-style: normal;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: #fbbf24;
+	background: rgba(251, 191, 36, 0.12);
+	border: 1px solid rgba(251, 191, 36, 0.28);
+	border-radius: 4px;
+	line-height: 1.4;
 }
 .product-switcher-home {
-	color: rgba(255, 255, 255, 0.5);
+	color: rgba(233, 230, 255, 0.45);
 	font-size: 16px;
-	padding: 8px;
-	transition: color 0.2s;
+	padding: 6px 8px;
+	border-radius: 6px;
+	transition: color 0.18s, background 0.18s;
 	text-decoration: none;
 }
 .product-switcher-home:hover {
 	color: #fff;
+	background: rgba(167, 139, 250, 0.08);
 	text-decoration: none;
+}
+
+/* Glass header — sits on top of dark page surfaces */
+.header-glass {
+	background: rgba(10, 5, 24, 0.72);
+	-webkit-backdrop-filter: saturate(180%) blur(18px);
+	backdrop-filter: saturate(180%) blur(18px);
+	border-bottom: 1px solid rgba(167, 139, 250, 0.08);
+	position: sticky;
+	top: 41px;
+	z-index: 1001;
+}
+.header-glass .menu nav ul li > a,
+.header-glass .menu nav ul li > .nav-dropdown-toggle {
+	color: rgba(233, 230, 255, 0.78);
+}
+.header-glass .menu nav ul li > a:hover,
+.header-glass .menu nav ul li > .nav-dropdown-toggle:hover {
+	color: #fff;
+}
+.header-glass .lang-toggle {
+	color: rgba(233, 230, 255, 0.78);
+}
+.header-glass .btn-header-login {
+	background: rgba(167, 139, 250, 0.12);
+	border: 1px solid rgba(167, 139, 250, 0.28);
+	color: #fff;
+}
+.header-glass .btn-header-login:hover {
+	background: rgba(167, 139, 250, 0.2);
+	border-color: rgba(167, 139, 250, 0.5);
 }
 
 /* Mobile Product Switcher */
@@ -4379,6 +4434,27 @@ html[lang="nl"] * {
 .mobile-product-btn.active {
 	background: linear-gradient(135deg, #7c3aed, #6366f1);
 	color: #fff;
+}
+.mobile-tab-badge {
+	display: inline-block;
+	margin-left: 4px;
+	padding: 1px 6px;
+	font-size: 9px;
+	font-weight: 700;
+	font-style: normal;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: #b45309;
+	background: #fef3c7;
+	border: 1px solid #fde68a;
+	border-radius: 4px;
+	vertical-align: middle;
+	line-height: 1.4;
+}
+.mobile-product-btn.active .mobile-tab-badge {
+	color: #fbbf24;
+	background: rgba(251, 191, 36, 0.18);
+	border-color: rgba(251, 191, 36, 0.4);
 }
 
 /* ===========================================
@@ -4417,6 +4493,31 @@ html[lang="nl"] * {
 	font-weight: 700;
 	color: #191919;
 	margin-bottom: 8px;
+}
+.product-overview-card .card-badge-soon {
+	display: inline-block;
+	margin-left: 8px;
+	padding: 3px 9px;
+	font-size: 10px;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: #b45309;
+	background: #fef3c7;
+	border: 1px solid #fde68a;
+	border-radius: 5px;
+	vertical-align: middle;
+	transform: translateY(-2px);
+}
+.product-overview-card--soon {
+	position: relative;
+}
+.product-overview-card--soon::after {
+	content: '';
+	position: absolute; inset: 0;
+	border-radius: 16px;
+	pointer-events: none;
+	background: linear-gradient(135deg, rgba(167, 139, 250, 0.06), transparent 60%);
 }
 .product-overview-tagline {
 	color: #67748e;

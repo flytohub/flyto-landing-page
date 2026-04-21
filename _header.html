@@ -2,13 +2,14 @@
 	<div class="product-switcher">
 		<div class="container d-flex align-items-center justify-content-between">
 			<div class="product-switcher-tabs">
-				<a href="/claude/" class="product-tab" data-product="claude">
-					<i class="bi bi-robot"></i>
-					<span>Flyto Claude</span>
+				<a href="/cloud/" class="product-tab" data-product="cloud">
+					<i class="bi bi-cloud"></i>
+					<span>Flyto Cloud</span>
 				</a>
 				<a href="/code/" class="product-tab" data-product="code">
-					<i class="bi bi-code-slash"></i>
+					<i class="bi bi-shield-check"></i>
 					<span>Flyto Code</span>
+					<em class="tab-badge" data-i18n="landing.common.nav.soonBadge">Soon</em>
 				</a>
 			</div>
 			<a href="/" class="product-switcher-home" title="All Products">
@@ -16,7 +17,7 @@
 			</a>
 		</div>
 	</div>
-	<header class="header">
+	<header class="header header-glass">
 		<div class="container">
 			<div class="row">
 				<!-- Logo -->
@@ -41,13 +42,13 @@
 				<div class="col-lg-9">
 					<!-- Menu -->
 					<div class="menu d-flex align-items-center justify-content-end">
-						<!-- Claude Nav -->
-						<nav class="product-nav" data-product="claude" style="display:none">
+						<!-- Cloud Nav -->
+						<nav class="product-nav" data-product="cloud" style="display:none">
 							<ul>
-								<li><a href="/claude/" data-i18n="landing.common.nav.home">Home</a></li>
-								<li><a href="/claude/pricing.html" data-i18n="landing.common.nav.pricing">Pricing</a></li>
-								<li><a href="/claude/download.html" data-i18n="landing.common.nav.download">Download</a></li>
-								<li><a href="/claude/faq.html" data-i18n="landing.common.nav.faq">FAQ</a></li>
+								<li><a href="/cloud/" data-i18n="landing.common.nav.home">Home</a></li>
+								<li><a href="/cloud/pricing.html" data-i18n="landing.common.nav.pricing">Pricing</a></li>
+								<li><a href="/cloud/download.html" data-i18n="landing.common.nav.download">Download</a></li>
+								<li><a href="/cloud/faq.html" data-i18n="landing.common.nav.faq">FAQ</a></li>
 								<li class="nav-dropdown">
 									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" data-i18n="landing.common.nav.learn">Learn</span>
 									<div class="nav-dropdown-menu">
@@ -63,38 +64,16 @@
 								</li>
 							</ul>
 						</nav>
-						<!-- Code Nav -->
+						<!-- Code Nav (coming soon — minimal) -->
 						<nav class="product-nav" data-product="code" style="display:none">
 							<ul>
-								<li><a href="/code/" data-i18n="landing.common.nav.home">Home</a></li>
-								<li class="nav-dropdown">
-									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" data-i18n="landing.common.nav.pricing">Pricing</span>
-									<div class="nav-dropdown-menu">
-										<a href="/code/pricing.html" class="nav-dropdown-item"><i class="bi bi-tag"></i><span data-i18n="landing.common.nav.plansAndPricing">Plans & Pricing</span></a>
-									</div>
-								</li>
-								<li class="nav-dropdown">
-									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" data-i18n="landing.common.nav.download">Download</span>
-									<div class="nav-dropdown-menu">
-										<a href="/code/download.html" class="nav-dropdown-item"><i class="bi bi-terminal"></i><span data-i18n="landing.common.nav.flytoCli">Flyto2 Core (CLI)</span></a>
-										<a href="/code/app.html" class="nav-dropdown-item"><i class="bi bi-window"></i><span data-i18n="landing.common.nav.desktopApp">Desktop App</span></a>
-										<a href="/code/wasm.html" class="nav-dropdown-item"><i class="bi bi-globe2"></i><span data-i18n="landing.common.nav.wasmModule">WebAssembly</span></a>
-										<a href="/code/node.html" class="nav-dropdown-item"><i class="bi bi-braces"></i><span data-i18n="landing.common.nav.nodePackage">Node.js</span></a>
-										<a href="/code/language-packs.html" class="nav-dropdown-item"><i class="bi bi-translate"></i><span data-i18n="landing.common.nav.languagePacks">Language Packs</span></a>
-									</div>
-								</li>
-								<li><a href="/code/templates.html" data-i18n="landing.common.nav.marketplace">Marketplace</a></li>
-								<li class="nav-dropdown">
-									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" data-i18n="landing.common.nav.learn">Learn</span>
-									<div class="nav-dropdown-menu">
-										<a href="https://docs.flyto2.com" class="nav-dropdown-item" target="_blank" rel="noopener noreferrer"><i class="bi bi-book"></i><span data-i18n="landing.common.nav.documentation">Documentation</span></a>
-										<a href="https://blog.flyto2.com" class="nav-dropdown-item" target="_blank" rel="noopener noreferrer"><i class="bi bi-pencil-square"></i><span data-i18n="landing.common.nav.blog">Blog</span></a>
-									</div>
-								</li>
+								<li><a href="/code/" data-i18n="landing.common.nav.overview">Overview</a></li>
+								<li><a href="/code/#oss" data-i18n="landing.common.nav.oss">Open Source CLI</a></li>
+								<li><a href="/code/#waitlist" data-i18n="landing.common.nav.waitlist">Waitlist</a></li>
 								<li class="nav-dropdown">
 									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" data-i18n="landing.common.nav.resources">Resources</span>
 									<div class="nav-dropdown-menu">
-										<a href="/code/faq.html" class="nav-dropdown-item"><i class="bi bi-question-circle"></i><span data-i18n="landing.common.nav.faq">FAQ</span></a>
+										<a href="https://docs.flyto2.com" class="nav-dropdown-item" target="_blank" rel="noopener noreferrer"><i class="bi bi-book"></i><span data-i18n="landing.common.nav.documentation">Documentation</span></a>
 										<a href="/contact.html" class="nav-dropdown-item"><i class="bi bi-envelope"></i><span data-i18n="landing.common.nav.contactUs">Contact Us</span></a>
 									</div>
 								</li>
@@ -104,7 +83,7 @@
 						<nav class="product-nav product-nav-default">
 							<ul>
 								<li><a href="/" data-i18n="landing.common.nav.home">Home</a></li>
-								<li><a href="/claude/" data-i18n="landing.common.nav.flytoClaude">Flyto Claude</a></li>
+								<li><a href="/cloud/" data-i18n="landing.common.nav.flytoCloud">Flyto Cloud</a></li>
 								<li><a href="/code/" data-i18n="landing.common.nav.flytoCode">Flyto Code</a></li>
 								<li class="nav-dropdown">
 									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" data-i18n="landing.common.nav.learn">Learn</span>
@@ -174,7 +153,7 @@
 										<div class="dropdown-header-label" data-i18n="landing.common.nav.flytoAccount">Flyto Account</div>
 									</div>
 									<div class="dropdown-menu-items">
-										<a href="/code/pricing.html" class="dropdown-menu-item">
+										<a href="/cloud/pricing.html" class="dropdown-menu-item">
 											<i class="bi bi-key"></i>
 											<span data-i18n="landing.common.nav.myLicenses">My Licenses</span>
 										</a>
@@ -196,8 +175,8 @@
 	<script>
 	(function(){
 		var p=location.pathname;
-		// Detect product from URL (handle i18n prefixes like /zh/claude/)
-		var m=p.match(/(?:^|\/)(?:[a-z]{2}\/)?(claude|code)(?:\/|$)/);
+		// Detect product from URL (handle i18n prefixes like /zh/cloud/)
+		var m=p.match(/(?:^|\/)(?:[a-z]{2}\/)?(cloud|code)(?:\/|$)/);
 		var product=m?m[1]:'';
 		// Highlight active product tab
 		document.querySelectorAll('.product-tab').forEach(function(el){
@@ -217,8 +196,6 @@
 		}
 		// Fix language switcher hrefs to include product path
 		if(product){
-			var pagePath=p.replace(/^.*?\/(claude|code)\//,'/'+product+'/');
-			if(pagePath==='/'+product+'/')pagePath='/'+product+'/';
 			document.querySelectorAll('.lang-option').forEach(function(a){
 				var href=a.getAttribute('href');
 				if(href==='/'){

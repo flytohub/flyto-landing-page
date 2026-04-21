@@ -15,34 +15,33 @@
 				</div>
 				<!-- Mobile Product Switcher -->
 				<div class="mobile-product-switcher">
-					<a href="/claude/" class="mobile-product-btn" data-product="claude">
-						<i class="bi bi-robot"></i> Claude
+					<a href="/cloud/" class="mobile-product-btn" data-product="cloud">
+						<i class="bi bi-cloud"></i> Cloud
 					</a>
 					<a href="/code/" class="mobile-product-btn" data-product="code">
-						<i class="bi bi-code-slash"></i> Code
+						<i class="bi bi-shield-check"></i> Code <em class="mobile-tab-badge" data-i18n="landing.common.nav.soonBadge">Soon</em>
 					</a>
 				</div>
-				<!-- Claude Mobile Nav -->
-				<div id="menu-claude" class="text-left product-mobile-nav" data-product="claude" style="display:none">
+				<!-- Cloud Mobile Nav -->
+				<div id="menu-cloud" class="text-left product-mobile-nav" data-product="cloud" style="display:none">
 					<ul class="offcanvas_main_menu">
-						<li><a href="/claude/" data-i18n="landing.common.nav.home">Home</a></li>
-						<li><a href="/claude/pricing.html" data-i18n="landing.common.nav.pricing">Pricing</a></li>
-						<li><a href="/claude/download.html" data-i18n="landing.common.nav.download">Download</a></li>
-						<li><a href="/claude/faq.html" data-i18n="landing.common.nav.faq">FAQ</a></li>
+						<li><a href="/cloud/" data-i18n="landing.common.nav.home">Home</a></li>
+						<li><a href="/cloud/pricing.html" data-i18n="landing.common.nav.pricing">Pricing</a></li>
+						<li><a href="/cloud/download.html" data-i18n="landing.common.nav.download">Download</a></li>
+						<li><a href="/cloud/app.html" data-i18n="landing.common.nav.desktopApp">Get App</a></li>
+						<li><a href="/cloud/templates.html" data-i18n="landing.common.nav.marketplace">Marketplace</a></li>
 						<li><a href="https://docs.flyto2.com" target="_blank" rel="noopener noreferrer" data-i18n="landing.common.nav.documentation">Docs</a></li>
+						<li><a href="/cloud/faq.html" data-i18n="landing.common.nav.faq">FAQ</a></li>
 						<li><a href="/contact.html" data-i18n="landing.common.nav.contactUs">Contact</a></li>
 					</ul>
 				</div>
-				<!-- Code Mobile Nav -->
+				<!-- Code Mobile Nav (coming soon — minimal) -->
 				<div id="menu-code" class="text-left product-mobile-nav" data-product="code" style="display:none">
 					<ul class="offcanvas_main_menu">
-						<li><a href="/code/" data-i18n="landing.common.nav.home">Home</a></li>
-						<li><a href="/code/pricing.html" data-i18n="landing.common.nav.pricing">Pricing</a></li>
-						<li><a href="/code/download.html" data-i18n="landing.common.nav.download">Download</a></li>
-						<li><a href="/code/app.html" data-i18n="landing.common.nav.desktopApp">Get App</a></li>
-						<li><a href="/code/templates.html" data-i18n="landing.common.nav.marketplace">Marketplace</a></li>
+						<li><a href="/code/" data-i18n="landing.common.nav.overview">Overview</a></li>
+						<li><a href="/code/#oss" data-i18n="landing.common.nav.oss">Open Source CLI</a></li>
+						<li><a href="/code/#waitlist" data-i18n="landing.common.nav.waitlist">Waitlist</a></li>
 						<li><a href="https://docs.flyto2.com" target="_blank" rel="noopener noreferrer" data-i18n="landing.common.nav.documentation">Docs</a></li>
-						<li><a href="/code/faq.html" data-i18n="landing.common.nav.faq">FAQ</a></li>
 						<li><a href="/contact.html" data-i18n="landing.common.nav.contactUs">Contact</a></li>
 					</ul>
 				</div>
@@ -50,7 +49,7 @@
 				<div id="menu-default" class="text-left product-mobile-nav product-mobile-nav-default">
 					<ul class="offcanvas_main_menu">
 						<li><a href="/" data-i18n="landing.common.nav.home">Home</a></li>
-						<li><a href="/claude/">Flyto Claude</a></li>
+						<li><a href="/cloud/">Flyto Cloud</a></li>
 						<li><a href="/code/">Flyto Code</a></li>
 						<li><a href="https://docs.flyto2.com" target="_blank" rel="noopener noreferrer" data-i18n="landing.common.nav.documentation">Docs</a></li>
 						<li><a href="https://blog.flyto2.com" target="_blank" rel="noopener noreferrer" data-i18n="landing.common.nav.blog">Blog</a></li>
@@ -71,7 +70,7 @@
 	<script>
 	(function(){
 		var p=location.pathname;
-		var m=p.match(/(?:^|\/)(?:[a-z]{2}\/)?(claude|code)(?:\/|$)/);
+		var m=p.match(/(?:^|\/)(?:[a-z]{2}\/)?(cloud|code)(?:\/|$)/);
 		var product=m?m[1]:'';
 		// Highlight active mobile product button
 		document.querySelectorAll('.mobile-product-btn').forEach(function(el){

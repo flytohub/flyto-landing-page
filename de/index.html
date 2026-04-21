@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js" lang="de">
 <head>
-	<!-- Google Analytics (GA4) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-7V4D315CBD"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', 'G-7V4D315CBD');
-	</script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -101,13 +93,14 @@
 	<div class="product-switcher">
 		<div class="container d-flex align-items-center justify-content-between">
 			<div class="product-switcher-tabs">
-				<a href="/claude/" class="product-tab" data-product="claude">
-					<i class="bi bi-robot"></i>
-					<span>Flyto Claude</span>
+				<a href="/cloud/" class="product-tab" data-product="cloud">
+					<i class="bi bi-cloud"></i>
+					<span>Flyto Cloud</span>
 				</a>
 				<a href="/code/" class="product-tab" data-product="code">
-					<i class="bi bi-code-slash"></i>
+					<i class="bi bi-shield-check"></i>
 					<span>Flyto Code</span>
+					<em class="tab-badge" data-i18n="landing.common.nav.soonBadge">Soon</em>
 				</a>
 			</div>
 			<a href="/" class="product-switcher-home" title="All Products">
@@ -115,15 +108,16 @@
 			</a>
 		</div>
 	</div>
-	<header class="header">
+	<header class="header header-glass">
 		<div class="container">
 			<div class="row">
+				<!-- Logo -->
 				<div class="col-lg-3 align-self-center">
 					<div class="logo">
 						<a href="/">
 							<picture>
-								<source srcset="../assets/img/white-logo.webp" type="image/webp">
-								<img src="../assets/img/white-logo.png" alt="Flyto Platform" width="90" height="79" fetchpriority="high">
+								<source srcset="/assets/img/white-logo.webp" type="image/webp">
+								<img src="/assets/img/white-logo.png" alt="Flyto Platform" width="90" height="79" fetchpriority="high">
 							</picture>
 						</a>
 					</div>
@@ -135,12 +129,52 @@
 						</a>
 					</div>
 				</div>
+				<!-- Right -->
 				<div class="col-lg-9">
+					<!-- Menu -->
 					<div class="menu d-flex align-items-center justify-content-end">
+						<!-- Cloud Nav -->
+						<nav class="product-nav" data-product="cloud" style="display:none">
+							<ul>
+								<li><a href="/cloud/" data-i18n="landing.common.nav.home">Home</a></li>
+								<li><a href="/cloud/pricing.html" data-i18n="landing.common.nav.pricing">Pricing</a></li>
+								<li><a href="/cloud/download.html" data-i18n="landing.common.nav.download">Download</a></li>
+								<li><a href="/cloud/faq.html" data-i18n="landing.common.nav.faq">FAQ</a></li>
+								<li class="nav-dropdown">
+									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" data-i18n="landing.common.nav.learn">Learn</span>
+									<div class="nav-dropdown-menu">
+										<a href="https://docs.flyto2.com" class="nav-dropdown-item" target="_blank" rel="noopener noreferrer"><i class="bi bi-book"></i><span data-i18n="landing.common.nav.documentation">Documentation</span></a>
+										<a href="https://blog.flyto2.com" class="nav-dropdown-item" target="_blank" rel="noopener noreferrer"><i class="bi bi-pencil-square"></i><span data-i18n="landing.common.nav.blog">Blog</span></a>
+									</div>
+								</li>
+								<li class="nav-dropdown">
+									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" data-i18n="landing.common.nav.resources">Resources</span>
+									<div class="nav-dropdown-menu">
+										<a href="/contact.html" class="nav-dropdown-item"><i class="bi bi-envelope"></i><span data-i18n="landing.common.nav.contactUs">Contact Us</span></a>
+									</div>
+								</li>
+							</ul>
+						</nav>
+						<!-- Code Nav (coming soon — minimal) -->
+						<nav class="product-nav" data-product="code" style="display:none">
+							<ul>
+								<li><a href="/code/" data-i18n="landing.common.nav.overview">Overview</a></li>
+								<li><a href="/code/#oss" data-i18n="landing.common.nav.oss">Open Source CLI</a></li>
+								<li><a href="/code/#waitlist" data-i18n="landing.common.nav.waitlist">Waitlist</a></li>
+								<li class="nav-dropdown">
+									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" data-i18n="landing.common.nav.resources">Resources</span>
+									<div class="nav-dropdown-menu">
+										<a href="https://docs.flyto2.com" class="nav-dropdown-item" target="_blank" rel="noopener noreferrer"><i class="bi bi-book"></i><span data-i18n="landing.common.nav.documentation">Documentation</span></a>
+										<a href="/contact.html" class="nav-dropdown-item"><i class="bi bi-envelope"></i><span data-i18n="landing.common.nav.contactUs">Contact Us</span></a>
+									</div>
+								</li>
+							</ul>
+						</nav>
+						<!-- Default Nav (root/shared pages) -->
 						<nav class="product-nav product-nav-default">
 							<ul>
 								<li><a href="/" data-i18n="landing.common.nav.home">Home</a></li>
-								<li><a href="/claude/" data-i18n="landing.common.nav.flytoClaude">Flyto Claude</a></li>
+								<li><a href="/cloud/" data-i18n="landing.common.nav.flytoCloud">Flyto Cloud</a></li>
 								<li><a href="/code/" data-i18n="landing.common.nav.flytoCode">Flyto Code</a></li>
 								<li class="nav-dropdown">
 									<span class="nav-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" data-i18n="landing.common.nav.learn">Learn</span>
@@ -157,6 +191,7 @@
 								</li>
 							</ul>
 						</nav>
+						<!-- Language Switcher -->
 						<div class="lang-switcher">
 							<div class="lang-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">
 								<i class="bi bi-globe"></i>
@@ -189,11 +224,14 @@
 								<div class="lang-no-result" style="display:none;padding:16px;text-align:center;color:#999;font-size:13px;">No results</div>
 							</div>
 						</div>
+						<!-- Auth -->
 						<div class="header-auth">
+							<!-- Not logged in -->
 							<button id="headerLoginBtn" class="btn-header-login">
 								<i class="bi bi-person"></i>
 								<span data-i18n="landing.common.nav.signIn">Sign In</span>
 							</button>
+							<!-- Logged in (hidden by default) -->
 							<div id="headerUserDropdown" class="user-dropdown d-none">
 								<div class="user-dropdown-toggle" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">
 									<div class="user-avatar" id="headerUserAvatar">U</div>
@@ -206,7 +244,7 @@
 										<div class="dropdown-header-label" data-i18n="landing.common.nav.flytoAccount">Flyto Account</div>
 									</div>
 									<div class="dropdown-menu-items">
-										<a href="/code/pricing.html" class="dropdown-menu-item">
+										<a href="/cloud/pricing.html" class="dropdown-menu-item">
 											<i class="bi bi-key"></i>
 											<span data-i18n="landing.common.nav.myLicenses">My Licenses</span>
 										</a>
@@ -224,6 +262,42 @@
 			</div>
 		</div>
 	</header>
+	<!-- Product Nav + Lang Switcher Detection Script -->
+	<script>
+	(function(){
+		var p=location.pathname;
+		// Detect product from URL (handle i18n prefixes like /zh/cloud/)
+		var m=p.match(/(?:^|\/)(?:[a-z]{2}\/)?(cloud|code)(?:\/|$)/);
+		var product=m?m[1]:'';
+		// Highlight active product tab
+		document.querySelectorAll('.product-tab').forEach(function(el){
+			if(el.dataset.product===product)el.classList.add('active');
+		});
+		// Show correct nav
+		if(product){
+			document.querySelectorAll('.product-nav').forEach(function(el){
+				el.style.display=el.dataset.product===product?'':'none';
+			});
+			document.querySelector('.product-nav-default').style.display='none';
+		}else{
+			document.querySelectorAll('.product-nav[data-product]').forEach(function(el){
+				el.style.display='none';
+			});
+			document.querySelector('.product-nav-default').style.display='';
+		}
+		// Fix language switcher hrefs to include product path
+		if(product){
+			document.querySelectorAll('.lang-option').forEach(function(a){
+				var href=a.getAttribute('href');
+				if(href==='/'){
+					a.setAttribute('href','/'+product+'/');
+				}else if(href.match(/^\/[a-z]{2}\/$/)){
+					a.setAttribute('href',href+product+'/');
+				}
+			});
+		}
+	})();
+	</script>
 
 	<!-- Mobile Menu -->
 	<div class="mobile-menu-area">
@@ -236,29 +310,55 @@
 				<div class="mobile-logo">
 					<a href="/">
 						<picture>
-							<source srcset="../assets/img/logo.webp" type="image/webp">
-							<img src="../assets/img/logo.png" alt="Flyto Platform" width="90" height="79" />
+							<source srcset="/assets/img/logo.webp" type="image/webp">
+							<img src="/assets/img/logo.png" alt="Flyto Platform" width="90" height="79" />
 						</picture>
 					</a>
 				</div>
+				<!-- Mobile Product Switcher -->
 				<div class="mobile-product-switcher">
-					<a href="/claude/" class="mobile-product-btn" data-product="claude">
-						<i class="bi bi-robot"></i> Claude
+					<a href="/cloud/" class="mobile-product-btn" data-product="cloud">
+						<i class="bi bi-cloud"></i> Cloud
 					</a>
 					<a href="/code/" class="mobile-product-btn" data-product="code">
-						<i class="bi bi-code-slash"></i> Code
+						<i class="bi bi-shield-check"></i> Code <em class="mobile-tab-badge" data-i18n="landing.common.nav.soonBadge">Soon</em>
 					</a>
 				</div>
-				<div id="menu" class="text-left">
+				<!-- Cloud Mobile Nav -->
+				<div id="menu-cloud" class="text-left product-mobile-nav" data-product="cloud" style="display:none">
+					<ul class="offcanvas_main_menu">
+						<li><a href="/cloud/" data-i18n="landing.common.nav.home">Home</a></li>
+						<li><a href="/cloud/pricing.html" data-i18n="landing.common.nav.pricing">Pricing</a></li>
+						<li><a href="/cloud/download.html" data-i18n="landing.common.nav.download">Download</a></li>
+						<li><a href="/cloud/app.html" data-i18n="landing.common.nav.desktopApp">Get App</a></li>
+						<li><a href="/cloud/templates.html" data-i18n="landing.common.nav.marketplace">Marketplace</a></li>
+						<li><a href="https://docs.flyto2.com" target="_blank" rel="noopener noreferrer" data-i18n="landing.common.nav.documentation">Docs</a></li>
+						<li><a href="/cloud/faq.html" data-i18n="landing.common.nav.faq">FAQ</a></li>
+						<li><a href="/contact.html" data-i18n="landing.common.nav.contactUs">Contact</a></li>
+					</ul>
+				</div>
+				<!-- Code Mobile Nav (coming soon — minimal) -->
+				<div id="menu-code" class="text-left product-mobile-nav" data-product="code" style="display:none">
+					<ul class="offcanvas_main_menu">
+						<li><a href="/code/" data-i18n="landing.common.nav.overview">Overview</a></li>
+						<li><a href="/code/#oss" data-i18n="landing.common.nav.oss">Open Source CLI</a></li>
+						<li><a href="/code/#waitlist" data-i18n="landing.common.nav.waitlist">Waitlist</a></li>
+						<li><a href="https://docs.flyto2.com" target="_blank" rel="noopener noreferrer" data-i18n="landing.common.nav.documentation">Docs</a></li>
+						<li><a href="/contact.html" data-i18n="landing.common.nav.contactUs">Contact</a></li>
+					</ul>
+				</div>
+				<!-- Default Mobile Nav (root/shared pages) -->
+				<div id="menu-default" class="text-left product-mobile-nav product-mobile-nav-default">
 					<ul class="offcanvas_main_menu">
 						<li><a href="/" data-i18n="landing.common.nav.home">Home</a></li>
-						<li><a href="/claude/">Flyto Claude</a></li>
+						<li><a href="/cloud/">Flyto Cloud</a></li>
 						<li><a href="/code/">Flyto Code</a></li>
 						<li><a href="https://docs.flyto2.com" target="_blank" rel="noopener noreferrer" data-i18n="landing.common.nav.documentation">Docs</a></li>
 						<li><a href="https://blog.flyto2.com" target="_blank" rel="noopener noreferrer" data-i18n="landing.common.nav.blog">Blog</a></li>
 						<li><a href="/contact.html" data-i18n="landing.common.nav.contactUs">Contact</a></li>
 					</ul>
 				</div>
+				<!-- Mobile Language Switcher -->
 				<div class="mobile-lang-switcher">
 					<button class="mobile-lang-trigger" onclick="document.getElementById('langSheet').classList.add('active');document.getElementById('langOverlay').classList.add('active');">
 						<span class="trigger-text"><i class="bi bi-globe"></i> <span class="current-lang-name">Deutsch</span></span>
@@ -268,6 +368,32 @@
 			</div>
 		</div>
 	</div>
+	<!-- Mobile Product Nav Detection -->
+	<script>
+	(function(){
+		var p=location.pathname;
+		var m=p.match(/(?:^|\/)(?:[a-z]{2}\/)?(cloud|code)(?:\/|$)/);
+		var product=m?m[1]:'';
+		// Highlight active mobile product button
+		document.querySelectorAll('.mobile-product-btn').forEach(function(el){
+			if(el.dataset.product===product)el.classList.add('active');
+		});
+		// Show correct mobile nav
+		if(product){
+			document.querySelectorAll('.product-mobile-nav').forEach(function(el){
+				el.style.display=el.dataset.product===product?'':'none';
+			});
+			var def=document.querySelector('.product-mobile-nav-default');
+			if(def)def.style.display='none';
+		}else{
+			document.querySelectorAll('.product-mobile-nav[data-product]').forEach(function(el){
+				el.style.display='none';
+			});
+			var def=document.querySelector('.product-mobile-nav-default');
+			if(def)def.style.display='';
+		}
+	})();
+	</script>
 
 	<!-- Hero Section -->
 	<section class="hero-area hero-overview" style="background: linear-gradient(135deg, #0f0524 0%, #1a0a3e 30%, #2d1b69 60%, #5b21b6 100%); min-height: 60vh; display: flex; align-items: center; padding: 120px 0 80px;">
@@ -290,42 +416,42 @@
 		<div class="container">
 			<div class="row justify-content-center" style="gap: 30px;">
 
-				<!-- Flyto Claude Card -->
+				<!-- Flyto Cloud Card (existing automation product) -->
 				<div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay=".2s">
-					<div class="product-overview-card" style="--product-accent: #7c3aed;">
+					<div class="product-overview-card" style="--product-accent: #6366f1;">
 						<div class="product-overview-icon">
-							<i class="bi bi-robot"></i>
+							<i class="bi bi-cloud"></i>
 						</div>
-						<h2 data-i18n="landing.overview.claude.title">Flyto Claude</h2>
-						<p class="product-overview-tagline" data-i18n="landing.overview.claude.tagline">AI-powered automation assistant</p>
+						<h2 data-i18n="landing.overview.cloud.title">Flyto Cloud</h2>
+						<p class="product-overview-tagline" data-i18n="landing.overview.cloud.tagline">No-code browser automation. Record once, replay forever.</p>
 						<ul class="product-overview-features">
-							<li data-i18n="landing.overview.claude.feature1">Intelligent task automation</li>
-							<li data-i18n="landing.overview.claude.feature2">Natural language workflows</li>
-							<li data-i18n="landing.overview.claude.feature3">Smart data processing</li>
-							<li data-i18n="landing.overview.claude.feature4">Seamless integrations</li>
+							<li data-i18n="landing.overview.cloud.feature1">Record & replay browser actions</li>
+							<li data-i18n="landing.overview.cloud.feature2">Pause, inspect, and resume</li>
+							<li data-i18n="landing.overview.cloud.feature3">Works offline, no cloud required</li>
+							<li data-i18n="landing.overview.cloud.feature4">250+ automation modules</li>
 						</ul>
-						<a href="/claude/" class="button-1 product-overview-cta" data-i18n="landing.overview.claude.cta">
-							Explore Flyto Claude
+						<a href="/cloud/" class="button-1 product-overview-cta" data-i18n="landing.overview.cloud.cta">
+							Explore Flyto Cloud
 						</a>
 					</div>
 				</div>
 
-				<!-- Flyto Code Card -->
+				<!-- Flyto Code Card (coming soon — security platform) -->
 				<div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay=".4s">
-					<div class="product-overview-card" style="--product-accent: #6366f1;">
+					<div class="product-overview-card product-overview-card--soon" style="--product-accent: #a78bfa;">
 						<div class="product-overview-icon">
-							<i class="bi bi-code-slash"></i>
+							<i class="bi bi-shield-check"></i>
 						</div>
-						<h2 data-i18n="landing.overview.code.title">Flyto Code</h2>
-						<p class="product-overview-tagline" data-i18n="landing.overview.code.tagline">No-code browser automation. Record once, replay forever.</p>
+						<h2 data-i18n="landing.overview.code.title">Flyto Code <span class="card-badge-soon" data-i18n="landing.overview.code.badge">Soon</span></h2>
+						<p class="product-overview-tagline" data-i18n="landing.overview.code.tagline">Application security war room — SCA, SAST, secrets, license, CVE, pentest, runtime.</p>
 						<ul class="product-overview-features">
-							<li data-i18n="landing.overview.code.feature1">Record & replay browser actions</li>
-							<li data-i18n="landing.overview.code.feature2">Pause, inspect, and resume</li>
-							<li data-i18n="landing.overview.code.feature3">Works offline, no cloud required</li>
-							<li data-i18n="landing.overview.code.feature4">250+ automation modules</li>
+							<li data-i18n="landing.overview.code.feature1">A–F health score per project</li>
+							<li data-i18n="landing.overview.code.feature2">Open-source scanner you can install today</li>
+							<li data-i18n="landing.overview.code.feature3">AI-native via Model Context Protocol</li>
+							<li data-i18n="landing.overview.code.feature4">Pentest-as-code workflows</li>
 						</ul>
 						<a href="/code/" class="button-1 product-overview-cta" data-i18n="landing.overview.code.cta">
-							Explore Flyto Code
+							See what's coming
 						</a>
 					</div>
 				</div>
@@ -364,8 +490,8 @@
 							<div class="f-logo">
 								<a href="/">
 									<picture>
-										<source srcset="../assets/img/logo.webp" type="image/webp">
-										<img src="../assets/img/logo.png" alt="Flyto" width="90" height="79" loading="lazy">
+										<source srcset="/assets/img/logo.webp" type="image/webp">
+										<img src="/assets/img/logo.png" alt="Flyto" width="90" height="79" loading="lazy">
 									</picture>
 								</a>
 							</div>
@@ -381,10 +507,10 @@
 						<div class="f-widgets-item">
 							<h3 data-i18n="landing.common.footer.products">Products</h3>
 							<ul>
-								<li><a href="/claude/">Flyto Claude</a></li>
+								<li><a href="/cloud/">Flyto Cloud</a></li>
 								<li><a href="/code/">Flyto Code</a></li>
-								<li><a href="/code/pricing.html" data-i18n="landing.common.nav.pricing">Pricing</a></li>
-								<li><a href="/code/download.html" data-i18n="landing.common.nav.download">Download</a></li>
+								<li><a href="/cloud/pricing.html" data-i18n="landing.common.nav.pricing">Pricing</a></li>
+								<li><a href="/cloud/download.html" data-i18n="landing.common.nav.download">Download</a></li>
 							</ul>
 						</div>
 					</div>
@@ -392,7 +518,7 @@
 						<div class="f-widgets-item">
 							<h3 data-i18n="landing.common.nav.resources">Resources</h3>
 							<ul>
-								<li><a href="/code/faq.html" data-i18n="landing.common.nav.faq">FAQ</a></li>
+								<li><a href="/cloud/faq.html" data-i18n="landing.common.nav.faq">FAQ</a></li>
 								<li><a href="/contact.html" data-i18n="landing.common.footer.contact">Contact</a></li>
 								<li><a href="https://github.com/flytohub/flyto-core" data-i18n="landing.common.nav.documentation" target="_blank" rel="noopener noreferrer">Docs</a></li>
 							</ul>
@@ -403,6 +529,7 @@
 							<h3 data-i18n="landing.common.footer.openSource">Open Source</h3>
 							<ul>
 								<li><a href="https://github.com/flytohub/flyto-core" target="_blank" rel="noopener noreferrer">flyto-core</a></li>
+								<li><a href="https://pypi.org/project/flyto-indexer/" target="_blank" rel="noopener noreferrer">flyto-indexer</a></li>
 								<li><a href="https://github.com/flytohub/flyto-core/blob/main/LICENSE" data-i18n="landing.common.footer.license" target="_blank" rel="noopener noreferrer">License</a></li>
 							</ul>
 						</div>
