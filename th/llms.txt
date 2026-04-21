@@ -65,14 +65,14 @@ Flyto2 Indexer เป็นเซิร์ฟเวอร์ MCP (Model Context 
 ## Pages
 
 - [Home](https://flyto2.com/th/): ภาพรวมผลิตภัณฑ์และฟีเจอร์หลัก
-- [Pricing](https://flyto2.com/th/pricing.html): แผน ราคา และการเปรียบเทียบ
-- [Download](https://flyto2.com/th/download.html): ดาวน์โหลด CLI (PyPI, .whl, .tar.gz)
-- [Desktop App](https://flyto2.com/th/app.html): แอปเดสก์ท็อปพร้อมตัวสร้างเวิร์กโฟลว์แบบภาพ
-- [Templates](https://flyto2.com/th/templates.html): เทมเพลตอัตโนมัติฟรี 101+
-- [Developer](https://flyto2.com/th/dev.html): เซิร์ฟเวอร์ MCP และเครื่องมือสำหรับนักพัฒนา
-- [WebAssembly](https://flyto2.com/th/wasm.html): โมดูล WebAssembly
-- [Node.js](https://flyto2.com/th/node.html): แพ็กเกจ Node.js
-- [FAQ](https://flyto2.com/th/faq.html): คำถามและคำตอบที่พบบ่อย
+- [Code - Pricing](https://flyto2.com/th/code/pricing.html): แผน ราคา และการเปรียบเทียบ
+- [Code - Download](https://flyto2.com/th/code/download.html): ดาวน์โหลด CLI (PyPI, .whl, .tar.gz)
+- [Code - Desktop App](https://flyto2.com/th/code/app.html): แอปเดสก์ท็อปพร้อมตัวสร้างเวิร์กโฟลว์แบบภาพ
+- [Code - Templates](https://flyto2.com/th/code/templates.html): เทมเพลตอัตโนมัติฟรี 101+
+- [Code - Developer](https://flyto2.com/th/code/dev.html): เซิร์ฟเวอร์ MCP และเครื่องมือสำหรับนักพัฒนา
+- [Code - WebAssembly](https://flyto2.com/th/code/wasm.html): โมดูล WebAssembly
+- [Code - Node.js](https://flyto2.com/th/code/node.html): แพ็กเกจ Node.js
+- [Code - FAQ](https://flyto2.com/th/code/faq.html): คำถามและคำตอบที่พบบ่อย
 - [Documentation](https://docs.flyto2.com): เอกสารประกอบฉบับสมบูรณ์
 - [Blog](https://blog.flyto2.com): บทเรียนและอัปเดต
 - [Contact](https://flyto2.com/th/contact.html): การสนับสนุนและสอบถาม

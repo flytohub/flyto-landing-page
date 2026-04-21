@@ -65,14 +65,14 @@ Flyto2 Indexer adalah server MCP (Model Context Protocol) yang menyediakan kecer
 ## Pages
 
 - [Home](https://flyto2.com/id/): Gambaran produk dan fitur utama
-- [Pricing](https://flyto2.com/id/pricing.html): Paket, harga, dan perbandingan
-- [Download](https://flyto2.com/id/download.html): Unduh CLI (PyPI, .whl, .tar.gz)
-- [Desktop App](https://flyto2.com/id/app.html): Aplikasi desktop dengan visual workflow builder
-- [Templates](https://flyto2.com/id/templates.html): 101+ template otomatisasi gratis
-- [Developer](https://flyto2.com/id/dev.html): Server MCP dan alat developer
-- [WebAssembly](https://flyto2.com/id/wasm.html): Modul WebAssembly
-- [Node.js](https://flyto2.com/id/node.html): Paket Node.js
-- [FAQ](https://flyto2.com/id/faq.html): Pertanyaan dan jawaban umum
+- [Code - Pricing](https://flyto2.com/id/code/pricing.html): Paket, harga, dan perbandingan
+- [Code - Download](https://flyto2.com/id/code/download.html): Unduh CLI (PyPI, .whl, .tar.gz)
+- [Code - Desktop App](https://flyto2.com/id/code/app.html): Aplikasi desktop dengan visual workflow builder
+- [Code - Templates](https://flyto2.com/id/code/templates.html): 101+ template otomatisasi gratis
+- [Code - Developer](https://flyto2.com/id/code/dev.html): Server MCP dan alat developer
+- [Code - WebAssembly](https://flyto2.com/id/code/wasm.html): Modul WebAssembly
+- [Code - Node.js](https://flyto2.com/id/code/node.html): Paket Node.js
+- [Code - FAQ](https://flyto2.com/id/code/faq.html): Pertanyaan dan jawaban umum
 - [Documentation](https://docs.flyto2.com): Dokumentasi lengkap
 - [Blog](https://blog.flyto2.com): Tutorial dan pembaruan
 - [Contact](https://flyto2.com/id/contact.html): Dukungan dan pertanyaan

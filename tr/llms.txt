@@ -65,14 +65,14 @@ Flyto2 Indexer, AI araçları için kod zekası sağlayan bir MCP sunucusudur (M
 ## Pages
 
 - [Home](https://flyto2.com/tr/): Ürün genel bakışı ve temel özellikler
-- [Pricing](https://flyto2.com/tr/pricing.html): Planlar, fiyatlandırma ve karşılaştırma
-- [Download](https://flyto2.com/tr/download.html): CLI indirme (PyPI, .whl, .tar.gz)
-- [Desktop App](https://flyto2.com/tr/app.html): Görsel iş akışı oluşturuculu masaüstü uygulaması
-- [Templates](https://flyto2.com/tr/templates.html): 101+ ücretsiz otomasyon şablonu
-- [Developer](https://flyto2.com/tr/dev.html): MCP sunucusu ve geliştirici araçları
-- [WebAssembly](https://flyto2.com/tr/wasm.html): WebAssembly modülü
-- [Node.js](https://flyto2.com/tr/node.html): Node.js paketi
-- [FAQ](https://flyto2.com/tr/faq.html): Sık sorulan sorular ve cevaplar
+- [Code - Pricing](https://flyto2.com/tr/code/pricing.html): Planlar, fiyatlandırma ve karşılaştırma
+- [Code - Download](https://flyto2.com/tr/code/download.html): CLI indirme (PyPI, .whl, .tar.gz)
+- [Code - Desktop App](https://flyto2.com/tr/code/app.html): Görsel iş akışı oluşturuculu masaüstü uygulaması
+- [Code - Templates](https://flyto2.com/tr/code/templates.html): 101+ ücretsiz otomasyon şablonu
+- [Code - Developer](https://flyto2.com/tr/code/dev.html): MCP sunucusu ve geliştirici araçları
+- [Code - WebAssembly](https://flyto2.com/tr/code/wasm.html): WebAssembly modülü
+- [Code - Node.js](https://flyto2.com/tr/code/node.html): Node.js paketi
+- [Code - FAQ](https://flyto2.com/tr/code/faq.html): Sık sorulan sorular ve cevaplar
 - [Documentation](https://docs.flyto2.com): Tam dokümantasyon
 - [Blog](https://blog.flyto2.com): Eğitimler ve güncellemeler
 - [Contact](https://flyto2.com/tr/contact.html): Destek ve sorular

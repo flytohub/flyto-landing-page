@@ -65,14 +65,14 @@ Flyto2 Indexer एक MCP सर्वर (Model Context Protocol) है जो
 ## Pages
 
 - [Home](https://flyto2.com/hi/): प्रोडक्ट ओवरव्यू और मुख्य फ़ीचर्स
-- [Pricing](https://flyto2.com/hi/pricing.html): प्लान, प्राइसिंग और तुलना
-- [Download](https://flyto2.com/hi/download.html): CLI डाउनलोड (PyPI, .whl, .tar.gz)
-- [Desktop App](https://flyto2.com/hi/app.html): विज़ुअल वर्कफ़्लो बिल्डर के साथ डेस्कटॉप ऐप
-- [Templates](https://flyto2.com/hi/templates.html): 101+ मुफ़्त ऑटोमेशन टेम्प्लेट
-- [Developer](https://flyto2.com/hi/dev.html): MCP सर्वर और डेवलपर टूल्स
-- [WebAssembly](https://flyto2.com/hi/wasm.html): WebAssembly मॉड्यूल
-- [Node.js](https://flyto2.com/hi/node.html): Node.js पैकेज
-- [FAQ](https://flyto2.com/hi/faq.html): अक्सर पूछे जाने वाले प्रश्न और उत्तर
+- [Code - Pricing](https://flyto2.com/hi/code/pricing.html): प्लान, प्राइसिंग और तुलना
+- [Code - Download](https://flyto2.com/hi/code/download.html): CLI डाउनलोड (PyPI, .whl, .tar.gz)
+- [Code - Desktop App](https://flyto2.com/hi/code/app.html): विज़ुअल वर्कफ़्लो बिल्डर के साथ डेस्कटॉप ऐप
+- [Code - Templates](https://flyto2.com/hi/code/templates.html): 101+ मुफ़्त ऑटोमेशन टेम्प्लेट
+- [Code - Developer](https://flyto2.com/hi/code/dev.html): MCP सर्वर और डेवलपर टूल्स
+- [Code - WebAssembly](https://flyto2.com/hi/code/wasm.html): WebAssembly मॉड्यूल
+- [Code - Node.js](https://flyto2.com/hi/code/node.html): Node.js पैकेज
+- [Code - FAQ](https://flyto2.com/hi/code/faq.html): अक्सर पूछे जाने वाले प्रश्न और उत्तर
 - [Documentation](https://docs.flyto2.com): संपूर्ण डॉक्यूमेंटेशन
 - [Blog](https://blog.flyto2.com): ट्यूटोरियल और अपडेट
 - [Contact](https://flyto2.com/hi/contact.html): सपोर्ट और पूछताछ

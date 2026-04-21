@@ -65,14 +65,14 @@ Flyto2 Indexer là máy chủ MCP (Model Context Protocol) cung cấp trí tuệ
 ## Pages
 
 - [Home](https://flyto2.com/vi/): Tổng quan sản phẩm và tính năng chính
-- [Pricing](https://flyto2.com/vi/pricing.html): Gói dịch vụ, giá và so sánh
-- [Download](https://flyto2.com/vi/download.html): Tải CLI (PyPI, .whl, .tar.gz)
-- [Desktop App](https://flyto2.com/vi/app.html): Ứng dụng desktop với trình tạo quy trình trực quan
-- [Templates](https://flyto2.com/vi/templates.html): 101+ mẫu tự động hóa miễn phí
-- [Developer](https://flyto2.com/vi/dev.html): Máy chủ MCP và công cụ nhà phát triển
-- [WebAssembly](https://flyto2.com/vi/wasm.html): Module WebAssembly
-- [Node.js](https://flyto2.com/vi/node.html): Gói Node.js
-- [FAQ](https://flyto2.com/vi/faq.html): Câu hỏi thường gặp và giải đáp
+- [Code - Pricing](https://flyto2.com/vi/code/pricing.html): Gói dịch vụ, giá và so sánh
+- [Code - Download](https://flyto2.com/vi/code/download.html): Tải CLI (PyPI, .whl, .tar.gz)
+- [Code - Desktop App](https://flyto2.com/vi/code/app.html): Ứng dụng desktop với trình tạo quy trình trực quan
+- [Code - Templates](https://flyto2.com/vi/code/templates.html): 101+ mẫu tự động hóa miễn phí
+- [Code - Developer](https://flyto2.com/vi/code/dev.html): Máy chủ MCP và công cụ nhà phát triển
+- [Code - WebAssembly](https://flyto2.com/vi/code/wasm.html): Module WebAssembly
+- [Code - Node.js](https://flyto2.com/vi/code/node.html): Gói Node.js
+- [Code - FAQ](https://flyto2.com/vi/code/faq.html): Câu hỏi thường gặp và giải đáp
 - [Documentation](https://docs.flyto2.com): Tài liệu đầy đủ
 - [Blog](https://blog.flyto2.com): Hướng dẫn và cập nhật
 - [Contact](https://flyto2.com/vi/contact.html): Hỗ trợ và liên hệ

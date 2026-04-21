@@ -65,14 +65,14 @@ Flyto2 Indexer ist ein MCP-Server (Model Context Protocol), der Code-Intelligenz
 ## Pages
 
 - [Home](https://flyto2.com/de/): Produktübersicht und Hauptfunktionen
-- [Pricing](https://flyto2.com/de/pricing.html): Pläne, Preise und Vergleich
-- [Download](https://flyto2.com/de/download.html): CLI-Download (PyPI, .whl, .tar.gz)
-- [Desktop App](https://flyto2.com/de/app.html): Desktop-App mit visuellem Workflow-Builder
-- [Templates](https://flyto2.com/de/templates.html): 101+ kostenlose Automatisierungsvorlagen
-- [Developer](https://flyto2.com/de/dev.html): MCP-Server und Entwicklertools
-- [WebAssembly](https://flyto2.com/de/wasm.html): WebAssembly-Modul
-- [Node.js](https://flyto2.com/de/node.html): Node.js-Paket
-- [FAQ](https://flyto2.com/de/faq.html): Häufige Fragen und Antworten
+- [Code - Pricing](https://flyto2.com/de/code/pricing.html): Pläne, Preise und Vergleich
+- [Code - Download](https://flyto2.com/de/code/download.html): CLI-Download (PyPI, .whl, .tar.gz)
+- [Code - Desktop App](https://flyto2.com/de/code/app.html): Desktop-App mit visuellem Workflow-Builder
+- [Code - Templates](https://flyto2.com/de/code/templates.html): 101+ kostenlose Automatisierungsvorlagen
+- [Code - Developer](https://flyto2.com/de/code/dev.html): MCP-Server und Entwicklertools
+- [Code - WebAssembly](https://flyto2.com/de/code/wasm.html): WebAssembly-Modul
+- [Code - Node.js](https://flyto2.com/de/code/node.html): Node.js-Paket
+- [Code - FAQ](https://flyto2.com/de/code/faq.html): Häufige Fragen und Antworten
 - [Documentation](https://docs.flyto2.com): Vollständige Dokumentation
 - [Blog](https://blog.flyto2.com): Anleitungen und Neuigkeiten
 - [Contact](https://flyto2.com/de/contact.html): Support und Anfragen

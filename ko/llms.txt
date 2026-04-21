@@ -65,14 +65,14 @@ Flyto2 Indexer는 AI 도구에 코드 인텔리전스를 제공하는 MCP 서버
 ## Pages
 
 - [Home](https://flyto2.com/ko/): 제품 개요 및 주요 기능
-- [Pricing](https://flyto2.com/ko/pricing.html): 플랜, 가격 및 비교
-- [Download](https://flyto2.com/ko/download.html): CLI 다운로드 (PyPI, .whl, .tar.gz)
-- [Desktop App](https://flyto2.com/ko/app.html): 비주얼 워크플로 빌더가 포함된 데스크톱 앱
-- [Templates](https://flyto2.com/ko/templates.html): 101개 이상의 무료 자동화 템플릿
-- [Developer](https://flyto2.com/ko/dev.html): MCP 서버 및 개발자 도구
-- [WebAssembly](https://flyto2.com/ko/wasm.html): WebAssembly 모듈
-- [Node.js](https://flyto2.com/ko/node.html): Node.js 패키지
-- [FAQ](https://flyto2.com/ko/faq.html): 자주 묻는 질문과 답변
+- [Code - Pricing](https://flyto2.com/ko/code/pricing.html): 플랜, 가격 및 비교
+- [Code - Download](https://flyto2.com/ko/code/download.html): CLI 다운로드 (PyPI, .whl, .tar.gz)
+- [Code - Desktop App](https://flyto2.com/ko/code/app.html): 비주얼 워크플로 빌더가 포함된 데스크톱 앱
+- [Code - Templates](https://flyto2.com/ko/code/templates.html): 101개 이상의 무료 자동화 템플릿
+- [Code - Developer](https://flyto2.com/ko/code/dev.html): MCP 서버 및 개발자 도구
+- [Code - WebAssembly](https://flyto2.com/ko/code/wasm.html): WebAssembly 모듈
+- [Code - Node.js](https://flyto2.com/ko/code/node.html): Node.js 패키지
+- [Code - FAQ](https://flyto2.com/ko/code/faq.html): 자주 묻는 질문과 답변
 - [Documentation](https://docs.flyto2.com): 전체 문서
 - [Blog](https://blog.flyto2.com): 튜토리얼 및 업데이트
 - [Contact](https://flyto2.com/ko/contact.html): 지원 및 문의

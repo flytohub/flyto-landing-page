@@ -65,14 +65,14 @@ Flyto2 Indexer 是 MCP 服务器（Model Context Protocol），为 AI 工具提�
 ## Pages
 
 - [Home](https://flyto2.com/cn/): 产品概览与核心功能
-- [Pricing](https://flyto2.com/cn/pricing.html): 方案、价格与比较
-- [Download](https://flyto2.com/cn/download.html): CLI 下载（PyPI、.whl、.tar.gz）
-- [Desktop App](https://flyto2.com/cn/app.html): 可视化工作流程构建器
-- [Templates](https://flyto2.com/cn/templates.html): 101+ 免费自动化模板
-- [Developer](https://flyto2.com/cn/dev.html): MCP 服务器与开发工具
-- [WebAssembly](https://flyto2.com/cn/wasm.html): WebAssembly 模块
-- [Node.js](https://flyto2.com/cn/node.html): Node.js 包
-- [FAQ](https://flyto2.com/cn/faq.html): 常见问题与解答
+- [Code - Pricing](https://flyto2.com/cn/code/pricing.html): 方案、价格与比较
+- [Code - Download](https://flyto2.com/cn/code/download.html): CLI 下载（PyPI、.whl、.tar.gz）
+- [Code - Desktop App](https://flyto2.com/cn/code/app.html): 可视化工作流程构建器
+- [Code - Templates](https://flyto2.com/cn/code/templates.html): 101+ 免费自动化模板
+- [Code - Developer](https://flyto2.com/cn/code/dev.html): MCP 服务器与开发工具
+- [Code - WebAssembly](https://flyto2.com/cn/code/wasm.html): WebAssembly 模块
+- [Code - Node.js](https://flyto2.com/cn/code/node.html): Node.js 包
+- [Code - FAQ](https://flyto2.com/cn/code/faq.html): 常见问题与解答
 - [Documentation](https://docs.flyto2.com): 完整文档
 - [Blog](https://blog.flyto2.com): 教程与更新
 - [Contact](https://flyto2.com/cn/contact.html): 支持与咨询
