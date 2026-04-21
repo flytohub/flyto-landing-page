@@ -147,7 +147,7 @@ img{
 */
 .header {
 	position: absolute;
-	top: 0;
+	top: 41px; /* push below the product-switcher bar */
 	left: 0;
 	right: 0;
 	z-index: 99;

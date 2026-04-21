@@ -127,12 +127,12 @@
 		/* === HERO === */
 		.code-hero {
 			position: relative;
-			padding: 160px 0 120px;
+			padding: 180px 0 160px;
 			overflow: hidden;
 			background:
 				radial-gradient(1200px 600px at 20% 0%, rgba(139, 92, 246, 0.35), transparent 60%),
 				radial-gradient(900px 500px at 85% 30%, rgba(167, 139, 250, 0.18), transparent 65%),
-				linear-gradient(180deg, #0a0518 0%, #160a30 100%);
+				linear-gradient(180deg, #1e0a3c 0%, #2d1b4e 40%, #4c1d95 100%);
 		}
 		.code-hero::before {
 			content: '';
@@ -233,8 +233,25 @@
 		}
 
 		/* === SECTION FRAMING === */
-		.code-section { padding: 100px 0; position: relative; }
+		.code-section { padding: 110px 0 130px; position: relative; }
+		.code-section.bg-deep { background: #0a0518; }
+		.code-section.bg-rise { background: #140832; }
 		.code-section .section-head { margin-bottom: 56px; max-width: 720px; }
+		.code-wave {
+			position: absolute;
+			left: 0; right: 0;
+			width: 100%;
+			line-height: 0;
+			pointer-events: none;
+			z-index: 2;
+			overflow: hidden;
+		}
+		.code-wave.bottom { bottom: -1px; }
+		.code-wave.top    { top: -1px; transform: scaleY(-1); }
+		.code-wave svg { display: block; width: calc(100% + 1.3px); height: 70px; }
+		.code-wave .wf { fill: #0a0518; }
+		.code-wave .wf-rise { fill: #140832; }
+		.code-wave .wf-deep { fill: #0a0518; }
 		.code-section .kicker {
 			font-family: var(--code-mono);
 			font-size: 0.78rem;
@@ -309,7 +326,7 @@
 		}
 
 		/* === DIFFERENTIATORS === */
-		.diff-row { padding: 80px 0; background: linear-gradient(180deg, transparent, rgba(139, 92, 246, 0.04)); }
+		.diff-row { padding: 110px 0 130px; background: #140832; position: relative; }
 		.diff-card {
 			background: var(--code-surface);
 			border: 1px solid var(--code-border);
@@ -402,10 +419,12 @@
 
 		/* === WAITLIST === */
 		.waitlist {
-			padding: 100px 0;
+			padding: 130px 0 110px;
 			text-align: center;
+			position: relative;
 			background:
-				radial-gradient(800px 400px at 50% 50%, rgba(139, 92, 246, 0.12), transparent 70%);
+				radial-gradient(800px 400px at 50% 50%, rgba(139, 92, 246, 0.22), transparent 70%),
+				linear-gradient(180deg, #0a0518 0%, #1e0a3c 100%);
 		}
 		.waitlist h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 700; color: #fff; margin-bottom: 14px; letter-spacing: -0.015em; }
 		.waitlist .lede { color: var(--code-text-dim); font-size: 1.05rem; margin-bottom: 32px; max-width: 520px; margin-left: auto; margin-right: auto; }
@@ -782,10 +801,15 @@
 				</div>
 			</div>
 		</div>
+		<div class="code-wave bottom">
+			<svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+				<path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="wf-deep"></path>
+			</svg>
+		</div>
 	</section>
 
 	<!-- AVAILABLE NOW -->
-	<section class="code-section">
+	<section class="code-section bg-deep">
 		<div class="container">
 			<div class="section-head">
 				<span class="kicker" data-i18n="landing.code.now.kicker">Available now</span>
@@ -855,10 +879,13 @@
 				</div>
 			</div>
 		</div>
+		<div class="code-wave bottom">
+			<svg viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="wf-rise"></path></svg>
+		</div>
 	</section>
 
 	<!-- COMING SOON -->
-	<section class="code-section" style="background: linear-gradient(180deg, transparent, rgba(167, 139, 250, 0.03));">
+	<section class="code-section bg-rise">
 		<div class="container">
 			<div class="section-head">
 				<span class="kicker" data-i18n="landing.code.soon.kicker">On the roadmap</span>
@@ -897,6 +924,9 @@
 					<p data-i18n="landing.code.soon.cap.guardDesc">CLI shim for npm and pip that blocks known-malicious packages before they hit your machine or CI runner.</p>
 				</div>
 			</div>
+		</div>
+		<div class="code-wave bottom">
+			<svg viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="wf-deep"></path></svg>
 		</div>
 	</section>
 
@@ -938,10 +968,13 @@
 				</div>
 			</div>
 		</div>
+		<div class="code-wave bottom">
+			<svg viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="wf-deep"></path></svg>
+		</div>
 	</section>
 
 	<!-- OSS -->
-	<section class="code-section" id="oss">
+	<section class="code-section bg-deep" id="oss">
 		<div class="container">
 			<div class="oss-block">
 				<span class="oss-tag"><i class="bi bi-unlock"></i> <span data-i18n="landing.code.oss.tag">Open source · Available now</span></span>
@@ -954,6 +987,9 @@
 				</div>
 				<a href="https://pypi.org/project/flyto-indexer/" target="_blank" rel="noopener noreferrer" class="btn-code-secondary"><i class="bi bi-box-arrow-up-right"></i> <span data-i18n="landing.code.oss.ctaPypi">View on PyPI</span></a>
 			</div>
+		</div>
+		<div class="code-wave bottom">
+			<svg viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="wf-deep"></path></svg>
 		</div>
 	</section>
 
