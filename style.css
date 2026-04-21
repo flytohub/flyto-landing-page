@@ -4298,29 +4298,26 @@ html[lang="nl"] * {
 }
 
 /* ===========================================
-   Product Switcher Bar (glass, dark)
+   Product Switcher Bar (dark)
    =========================================== */
 .product-switcher {
-	background: rgba(10, 5, 24, 0.85);
-	-webkit-backdrop-filter: saturate(180%) blur(14px);
-	backdrop-filter: saturate(180%) blur(14px);
+	background: rgba(15, 5, 36, 0.95);
 	border-bottom: 1px solid rgba(167, 139, 250, 0.12);
 	padding: 0;
-	position: sticky;
-	top: 0;
-	z-index: 1002;
+	position: relative;
+	z-index: 1001;
 }
 .product-switcher-tabs {
 	display: flex;
 	gap: 4px;
-	padding: 6px 0;
+	padding: 4px 0;
 }
 .product-tab {
 	display: inline-flex;
 	align-items: center;
 	gap: 7px;
 	padding: 7px 14px;
-	color: rgba(233, 230, 255, 0.6);
+	color: rgba(233, 230, 255, 0.62);
 	font-size: 13px;
 	font-weight: 500;
 	letter-spacing: 0.01em;
@@ -4370,37 +4367,6 @@ html[lang="nl"] * {
 	color: #fff;
 	background: rgba(167, 139, 250, 0.08);
 	text-decoration: none;
-}
-
-/* Glass header — sits on top of dark page surfaces */
-.header-glass {
-	background: rgba(10, 5, 24, 0.72);
-	-webkit-backdrop-filter: saturate(180%) blur(18px);
-	backdrop-filter: saturate(180%) blur(18px);
-	border-bottom: 1px solid rgba(167, 139, 250, 0.08);
-	position: sticky;
-	top: 41px;
-	z-index: 1001;
-}
-.header-glass .menu nav ul li > a,
-.header-glass .menu nav ul li > .nav-dropdown-toggle {
-	color: rgba(233, 230, 255, 0.78);
-}
-.header-glass .menu nav ul li > a:hover,
-.header-glass .menu nav ul li > .nav-dropdown-toggle:hover {
-	color: #fff;
-}
-.header-glass .lang-toggle {
-	color: rgba(233, 230, 255, 0.78);
-}
-.header-glass .btn-header-login {
-	background: rgba(167, 139, 250, 0.12);
-	border: 1px solid rgba(167, 139, 250, 0.28);
-	color: #fff;
-}
-.header-glass .btn-header-login:hover {
-	background: rgba(167, 139, 250, 0.2);
-	border-color: rgba(167, 139, 250, 0.5);
 }
 
 /* Mobile Product Switcher */
