@@ -1080,8 +1080,88 @@
 		</div>
 	</section>
 
+	<!-- FEATURE SHOWCASE — real product screenshots -->
+	<section class="code-section bg-rise" id="showcase">
+		<div class="container">
+			<div class="section-head" style="text-align:center; max-width:800px; margin:0 auto 56px;">
+				<span class="kicker">See it in action</span>
+				<h2>Every dimension. One screen.</h2>
+				<p class="lede" style="text-align:center;">Architecture, security, dependencies, taint flows, API surface, IaC — all integrated in the war room.</p>
+			</div>
+
+			<!-- Row 1: Pulse + Architecture -->
+			<div class="row g-4 mb-4">
+				<div class="col-lg-7">
+					<div style="border-radius:16px; overflow:hidden; border:1px solid var(--code-border); background:var(--code-surface); transition: transform 200ms ease, box-shadow 200ms ease;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(0,0,0,0.4)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
+						<img src="/assets/img/screenshots/pulse.png" alt="Pulse view — findings ranked by blast radius with open PRs, taint flows, and AutoFix status" style="width:100%; display:block;" loading="lazy">
+						<div style="padding:16px 20px; border-top:1px solid var(--code-border);">
+							<h3 style="font-size:0.95rem; font-weight:600; color:#fff; margin:0 0 4px;">Pulse — What to act on right now</h3>
+							<p style="font-size:0.82rem; color:var(--code-text-dim); margin:0;">Findings ranked by composite blast radius across every dimension. Open PRs, taint adjacency, AutoFix readiness — all in one feed.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-5">
+					<div style="border-radius:16px; overflow:hidden; border:1px solid var(--code-border); background:var(--code-surface); transition: transform 200ms ease, box-shadow 200ms ease;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(0,0,0,0.4)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
+						<img src="/assets/img/screenshots/architecture.png" alt="Architecture overview with AI analysis, health grades, and cross-repo stats" style="width:100%; display:block;" loading="lazy">
+						<div style="padding:16px 20px; border-top:1px solid var(--code-border);">
+							<h3 style="font-size:0.95rem; font-weight:600; color:#fff; margin:0 0 4px;">Architecture Overview</h3>
+							<p style="font-size:0.82rem; color:var(--code-text-dim); margin:0;">AI-powered analysis across all repos. Dead code, complexity, secrets, taint flows — one glance.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Row 2: API List + Dependencies -->
+			<div class="row g-4 mb-4">
+				<div class="col-lg-5">
+					<div style="border-radius:16px; overflow:hidden; border:1px solid var(--code-border); background:var(--code-surface); transition: transform 200ms ease, box-shadow 200ms ease;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(0,0,0,0.4)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
+						<img src="/assets/img/screenshots/dependencies.png" alt="Cross-repo dependency analysis showing 1,928 packages across repos" style="width:100%; display:block;" loading="lazy">
+						<div style="padding:16px 20px; border-top:1px solid var(--code-border);">
+							<h3 style="font-size:0.95rem; font-weight:600; color:#fff; margin:0 0 4px;">Cross-Repo Dependencies</h3>
+							<p style="font-size:0.82rem; color:var(--code-text-dim); margin:0;">Every package, every version, every repo. Spot shared dependencies and concentration risk instantly.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-7">
+					<div style="border-radius:16px; overflow:hidden; border:1px solid var(--code-border); background:var(--code-surface); transition: transform 200ms ease, box-shadow 200ms ease;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(0,0,0,0.4)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
+						<img src="/assets/img/screenshots/api-list.png" alt="API route tree with HTTP method distribution bars and expandable route hierarchy" style="width:100%; display:block;" loading="lazy">
+						<div style="padding:16px 20px; border-top:1px solid var(--code-border);">
+							<h3 style="font-size:0.95rem; font-weight:600; color:#fff; margin:0 0 4px;">API Route Tree</h3>
+							<p style="font-size:0.82rem; color:var(--code-text-dim); margin:0;">1,272 routes across 5 repos. Method distribution, per-repo breakdown, searchable route hierarchy.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Row 3: IaC + Reachability -->
+			<div class="row g-4">
+				<div class="col-lg-6">
+					<div style="border-radius:16px; overflow:hidden; border:1px solid var(--code-border); background:var(--code-surface); transition: transform 200ms ease, box-shadow 200ms ease;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(0,0,0,0.4)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
+						<img src="/assets/img/screenshots/iac.png" alt="IaC scanning results showing Docker Compose misconfigurations" style="width:100%; display:block;" loading="lazy">
+						<div style="padding:16px 20px; border-top:1px solid var(--code-border);">
+							<h3 style="font-size:0.95rem; font-weight:600; color:#fff; margin:0 0 4px;">IaC Scanning</h3>
+							<p style="font-size:0.82rem; color:var(--code-text-dim); margin:0;">Terraform, Kubernetes, Docker Compose — misconfiguration checks with severity and framework context.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div style="border-radius:16px; overflow:hidden; border:1px solid var(--code-border); background:var(--code-surface); transition: transform 200ms ease, box-shadow 200ms ease;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(0,0,0,0.4)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
+						<img src="/assets/img/screenshots/reachability.png" alt="Taint analysis showing sources, sinks, unsanitized flows and SQL injection findings" style="width:100%; display:block;" loading="lazy">
+						<div style="padding:16px 20px; border-top:1px solid var(--code-border);">
+							<h3 style="font-size:0.95rem; font-weight:600; color:#fff; margin:0 0 4px;">Taint Analysis &amp; Reachability</h3>
+							<p style="font-size:0.82rem; color:var(--code-text-dim); margin:0;">Source-to-sink flow tracking. 1,157 sources, 6,857 sinks — per-flow SQL injection detail with file:line precision.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="code-wave bottom">
+			<svg viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="wf-accent"></path></svg>
+		</div>
+	</section>
+
 	<!-- COMING SOON -->
-	<section class="code-section bg-rise">
+	<section class="code-section bg-accent">
 		<div class="container">
 			<div class="section-head">
 				<span class="kicker" data-i18n="landing.code.soon.kicker">On the roadmap</span>
@@ -1122,7 +1202,7 @@
 			</div>
 		</div>
 		<div class="code-wave bottom">
-			<svg viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="wf-deep"></path></svg>
+			<svg viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="wf-rise"></path></svg>
 		</div>
 	</section>
 
