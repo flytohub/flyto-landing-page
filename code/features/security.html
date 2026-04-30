@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Scanning — Warroom</title>
+    <meta name="description" content="Find, verify, and prioritize vulnerabilities. Taint analysis, IaC scanning, and blast-radius ranking across your entire codebase.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Analytics -->
+    <script src="https://analytics.ahrefs.com/analytics.js" data-key="VjSn0F6gLqCAraYRhCXQZQ" async></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <!-- CSP -->
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/normalize.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap-icons.css">
+    <link rel="stylesheet" href="/assets/css/animate.css">
+    <link rel="stylesheet" href="/assets/css/auth.css">
+
+    <style>
+        :root {
+            --code-bg: #06080f;
+            --code-surface: #0d1220;
+            --code-surface-2: #151d30;
+            --code-border: rgba(167, 139, 250, 0.16);
+            --code-violet: #a78bfa;
+            --code-violet-strong: #8b5cf6;
+            --code-text: #e9e6ff;
+            --code-text-dim: #9b95c4;
+            --code-success: #34d399;
+            --code-warn: #fbbf24;
+            --code-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+        }
+
+        body.code-page {
+            background: var(--code-bg);
+            color: var(--code-text);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Hero */
+        .security-hero {
+            background: linear-gradient(180deg, #1e0a3c 0%, #06080f 100%);
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+        .security-hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        .security-hero h1 span {
+            background: linear-gradient(135deg, var(--code-violet), var(--code-violet-strong));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .security-hero p {
+            font-size: 1.2rem;
+            color: var(--code-text-dim);
+            max-width: 680px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* Sections */
+        .feature-section {
+            padding: 80px 0;
+        }
+        .feature-section.alt-bg {
+            background: #0f1629;
+        }
+        .feature-section .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 12px;
+        }
+        .feature-section .section-title span {
+            color: var(--code-violet);
+        }
+        .feature-section .section-subtitle {
+            font-size: 1rem;
+            color: var(--code-text-dim);
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+
+        /* Screenshot styling */
+        .screenshot-wrap {
+            position: relative;
+        }
+        .screenshot-wrap img {
+            width: 100%;
+            border-radius: 16px;
+            border: 1px solid var(--code-border);
+            box-shadow: 0 0 60px rgba(139, 92, 246, 0.15), 0 8px 32px rgba(0, 0, 0, 0.4);
+        }
+        .screenshot-wrap.glow img {
+            box-shadow: 0 0 80px rgba(139, 92, 246, 0.25), 0 0 120px rgba(139, 92, 246, 0.1), 0 8px 32px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Feature bullets */
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .feature-list li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 14px;
+            color: var(--code-text-dim);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .feature-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--code-violet);
+        }
+
+        /* Mono highlights */
+        .mono {
+            font-family: var(--code-mono);
+            font-size: 0.85em;
+            color: var(--code-violet);
+            background: rgba(167, 139, 250, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        /* CTA */
+        .cta-section {
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(180deg, #06080f 0%, #1e0a3c 50%, #06080f 100%);
+        }
+        .cta-section h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 16px;
+        }
+        .cta-section p {
+            color: var(--code-text-dim);
+            margin-bottom: 32px;
+            font-size: 1.05rem;
+        }
+        .btn-cta {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--code-violet-strong), var(--code-violet));
+            color: #fff;
+            padding: 14px 40px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(139, 92, 246, 0.4);
+            color: #fff;
+        }
+
+        /* Badge pills */
+        .badge-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 16px;
+        }
+        .badge-pill {
+            font-family: var(--code-mono);
+            font-size: 0.75rem;
+            padding: 4px 12px;
+            border-radius: 999px;
+            border: 1px solid var(--code-border);
+            background: var(--code-surface);
+            color: var(--code-text-dim);
+        }
+        .badge-pill.violet { color: var(--code-violet); border-color: rgba(167,139,250,0.3); }
+        .badge-pill.green { color: var(--code-success); border-color: rgba(52,211,153,0.3); }
+        .badge-pill.yellow { color: var(--code-warn); border-color: rgba(251,191,36,0.3); }
+
+        /* Responsive */
+        @media (max-width: 991px) {
+            .security-hero h1 { font-size: 2.2rem; }
+            .feature-section { padding: 60px 0; }
+            .screenshot-wrap { margin-top: 32px; }
+        }
+    </style>
+</head>
+<body class="code-page">
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 align-self-center">
+                    <div class="logo">
+                        <a href="/"><img src="/assets/img/white-logo.png" alt="Flyto Platform" width="90" height="79"></a>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="menu d-flex align-items-center justify-content-end">
+                        <nav class="product-nav" data-product="code">
+                            <ul>
+                                <li><a href="/code/">Overview</a></li>
+                                <li><a href="/code/#features">Features</a></li>
+                                <li><a href="/code/pricing.html">Pricing</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="security-hero">
+        <div class="container">
+            <h1><span>Security Scanning</span> &amp; Analysis</h1>
+            <p>Find, verify, and prioritize vulnerabilities across every dimension. From taint-flow reachability to IaC misconfigurations, Warroom ranks what matters so you act on the right thing first.</p>
+        </div>
+    </section>
+
+    <!-- Section 1: Pulse -->
+    <section class="feature-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title"><span>Pulse</span> — What to act on right now</h2>
+                <p class="section-subtitle" style="max-width:760px;margin:0 auto;">
+                    Every finding ranked by composite blast radius. Pulse joins open PRs, taint flows,
+                    pentest verdicts, and AutoFix readiness into a single prioritized feed so your team
+                    stops triaging and starts fixing.
+                </p>
+            </div>
+            <div class="screenshot-wrap glow">
+                <img src="/assets/img/screenshots/pulse.png" alt="Pulse view showing findings ranked by blast radius with SAST and Container tabs, aggregate tiles for blast score, open PRs, draft PRs, taint flow count, and AutoFix readiness badges" loading="lazy">
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-4">
+                    <h5 style="color:#fff;font-weight:600;margin-bottom:8px;">Blast-radius ranking</h5>
+                    <p style="color:var(--code-text-dim);font-size:0.92rem;line-height:1.7;">Findings with blast score &ge;60 surface first. The score folds in reachability, exposure, and fix complexity so you see the highest-impact issues at the top.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 style="color:#fff;font-weight:600;margin-bottom:8px;">Cross-dim correlation</h5>
+                    <p style="color:var(--code-text-dim);font-size:0.92rem;line-height:1.7;">Each card shows context strips: open PRs touching the same file, taint adjacency, pentest critical verdicts, and AutoFix tier readiness &mdash; all joined by the correlate engine.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 style="color:#fff;font-weight:600;margin-bottom:8px;">Source-type tabs</h5>
+                    <p style="color:var(--code-text-dim);font-size:0.92rem;line-height:1.7;">Filter by SAST, Container, Dependency, or Secret source types. Five aggregate tiles at the top give you the macro picture before you drill into individual cards.</p>
+                </div>
+            </div>
+            <div class="badge-row justify-content-center mt-4">
+                <span class="badge-pill violet">SAST</span>
+                <span class="badge-pill violet">Container</span>
+                <span class="badge-pill yellow">blast &ge; 60</span>
+                <span class="badge-pill green">AutoFix ready</span>
+                <span class="badge-pill">open PRs</span>
+                <span class="badge-pill">draft PRs</span>
+                <span class="badge-pill">taint flows</span>
+                <span class="badge-pill">pentest critical</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Taint Analysis -->
+    <section class="feature-section alt-bg">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <h2 class="section-title">Taint &amp; <span>Reachability</span> Analysis</h2>
+                    <p class="section-subtitle">
+                        Know which vulnerabilities are actually reachable in your running code. The taint engine
+                        traces data from sources to sinks across your entire codebase, flagging unsanitized flows
+                        with file-and-line precision.
+                    </p>
+                    <ul class="feature-list">
+                        <li>Source-to-sink tracking across function boundaries and modules</li>
+                        <li>Identifies unsanitized flows with <span class="mono">SQL_INJECTION</span>, XSS, and path-traversal categories</li>
+                        <li>Per-flow detail: exact <span class="mono">file:line</span> for source, sink, and every intermediate hop</li>
+                        <li>Aggregate dashboard: 1,157 sources, 6,857 sinks, 7 unsanitized flows, 0% sanitization rate</li>
+                        <li>Feeds into Pulse blast-radius scoring &mdash; reachable CVEs rank higher</li>
+                    </ul>
+                </div>
+                <div class="col-lg-7">
+                    <div class="screenshot-wrap">
+                        <img src="/assets/img/screenshots/reachability.png" alt="Taint analysis view showing 1,157 sources, 6,857 sinks, 7 unsanitized flows with 0% sanitization rate and per-flow SQL_INJECTION detail with file and line numbers" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: IaC Scanning -->
+    <section class="feature-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <div class="screenshot-wrap">
+                        <img src="/assets/img/screenshots/iac.png" alt="IaC scanning view showing docker-compose misconfigurations table with CHECK, FILE, RESOURCE, SEVERITY, and FRAMEWORK columns displaying low and medium severity findings" loading="lazy">
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <h2 class="section-title"><span>IaC</span> Scanning</h2>
+                    <p class="section-subtitle">
+                        Catch infrastructure misconfigurations before they reach production. Warroom scans
+                        Terraform, Kubernetes manifests, Docker Compose files, and Helm charts against
+                        industry benchmarks and custom policies.
+                    </p>
+                    <ul class="feature-list">
+                        <li>Covers Terraform, Kubernetes, Docker Compose, CloudFormation, and Helm</li>
+                        <li>Structured results: CHECK, FILE, RESOURCE, SEVERITY, and FRAMEWORK columns</li>
+                        <li>Severity classification from LOW to CRITICAL with framework-specific context</li>
+                        <li>Auto-detects framework from file patterns &mdash; no manual configuration needed</li>
+                        <li>Misconfigurations feed into the war room&rsquo;s cross-dimension correlation layer</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Start scanning now</h2>
+            <p>Connect your repos and get your first security scan results in under a minute.</p>
+            <a href="/code/app.html" class="btn-cta">Open Warroom</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-bottom pt-30 pb-30">
+            <div class="container text-center">
+                <p class="copy-text">Copyright &copy;2025 Flyto. All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="/assets/js/modernizr.min.js"></script>
+    <script src="/assets/js/jquery-3.6.0.min.js"></script>
+    <script src="/assets/js/popper.min.js" defer></script>
+    <script src="/assets/js/bootstrap.min.js" defer></script>
+    <script src="/assets/js/wow.min.js" defer></script>
+    <script src="/assets/js/script.js" defer></script>
+    <script src="/assets/js/mobile-menu.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js" defer></script>
+    <script src="/assets/js/auth.js" defer></script>
+</body>
+</html>

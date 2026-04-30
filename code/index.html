@@ -973,8 +973,11 @@
 	<!-- PRODUCT SCREENSHOT — full-width dashboard preview -->
 	<section style="padding:60px 0 80px; background:#06080f; text-align:center;">
 		<div class="container">
-			<div class="screenshot-glow" style="max-width:960px; margin:0 auto; border-radius:16px; overflow:hidden; border:1px solid var(--code-border);">
-				<img src="/assets/img/screenshots/dashboard-full.png" alt="Warroom dashboard showing security score, priority actions, and risk vectors" style="width:100%; display:block;" onerror="this.parentElement.innerHTML='<div style=\'padding:80px 24px;text-align:center;background:var(--code-surface);\'><div style=\'font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:8px;\'>War Room Dashboard</div><div style=\'color:var(--code-text-dim);font-size:0.9rem;\'>Security score · Priority actions · Risk vectors · Real-time updates</div><div style=\'margin-top:24px;color:var(--code-violet);font-size:0.85rem;\'>Add screenshot: assets/img/screenshots/dashboard-full.png</div></div>'">
+			<a href="/code/features/dashboard.html" class="screenshot-glow" style="display:block; max-width:960px; margin:0 auto; border-radius:16px; overflow:hidden; border:1px solid var(--code-border); transition: transform 200ms ease, box-shadow 200ms ease;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 24px 80px rgba(0,0,0,0.6), 0 0 160px rgba(139,92,246,0.25)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
+				<img src="/assets/img/screenshots/dashboard-full.png" alt="Warroom dashboard showing security score, priority actions, and risk vectors" style="width:100%; display:block;">
+			</a>
+			<div style="text-align:center; margin-top:16px;">
+				<a href="/code/features/dashboard.html" style="color:var(--code-violet); font-size:0.9rem; text-decoration:none; font-weight:500;">Learn more about the CTO Dashboard &rarr;</a>
 			</div>
 		</div>
 	</section>
@@ -1092,66 +1095,66 @@
 			<!-- Row 1: Pulse + Architecture -->
 			<div class="row g-4 mb-4">
 				<div class="col-lg-7">
-					<div style="border-radius:16px; overflow:hidden; border:1px solid var(--code-border); background:var(--code-surface); transition: transform 200ms ease, box-shadow 200ms ease;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(0,0,0,0.4)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
+					<a href="/code/features/security.html" style="display:block; text-decoration:none; border-radius:16px; overflow:hidden; border:1px solid var(--code-border); background:var(--code-surface); transition: transform 200ms ease, box-shadow 200ms ease;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(0,0,0,0.4)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
 						<img src="/assets/img/screenshots/pulse.png" alt="Pulse view — findings ranked by blast radius with open PRs, taint flows, and AutoFix status" style="width:100%; display:block;" loading="lazy">
 						<div style="padding:16px 20px; border-top:1px solid var(--code-border);">
 							<h3 style="font-size:0.95rem; font-weight:600; color:#fff; margin:0 0 4px;">Pulse — What to act on right now</h3>
 							<p style="font-size:0.82rem; color:var(--code-text-dim); margin:0;">Findings ranked by composite blast radius across every dimension. Open PRs, taint adjacency, AutoFix readiness — all in one feed.</p>
 						</div>
-					</div>
+					</a>
 				</div>
 				<div class="col-lg-5">
-					<div style="border-radius:16px; overflow:hidden; border:1px solid var(--code-border); background:var(--code-surface); transition: transform 200ms ease, box-shadow 200ms ease;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(0,0,0,0.4)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
+					<a href="/code/features/architecture.html" style="display:block; text-decoration:none; border-radius:16px; overflow:hidden; border:1px solid var(--code-border); background:var(--code-surface); transition: transform 200ms ease, box-shadow 200ms ease;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(0,0,0,0.4)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
 						<img src="/assets/img/screenshots/architecture.png" alt="Architecture overview with AI analysis, health grades, and cross-repo stats" style="width:100%; display:block;" loading="lazy">
 						<div style="padding:16px 20px; border-top:1px solid var(--code-border);">
 							<h3 style="font-size:0.95rem; font-weight:600; color:#fff; margin:0 0 4px;">Architecture Overview</h3>
 							<p style="font-size:0.82rem; color:var(--code-text-dim); margin:0;">AI-powered analysis across all repos. Dead code, complexity, secrets, taint flows — one glance.</p>
 						</div>
-					</div>
+					</a>
 				</div>
 			</div>
 
-			<!-- Row 2: API List + Dependencies -->
+			<!-- Row 2: Dependencies + API List -->
 			<div class="row g-4 mb-4">
 				<div class="col-lg-5">
-					<div style="border-radius:16px; overflow:hidden; border:1px solid var(--code-border); background:var(--code-surface); transition: transform 200ms ease, box-shadow 200ms ease;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(0,0,0,0.4)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
+					<a href="/code/features/architecture.html" style="display:block; text-decoration:none; border-radius:16px; overflow:hidden; border:1px solid var(--code-border); background:var(--code-surface); transition: transform 200ms ease, box-shadow 200ms ease;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(0,0,0,0.4)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
 						<img src="/assets/img/screenshots/dependencies.png" alt="Cross-repo dependency analysis showing 1,928 packages across repos" style="width:100%; display:block;" loading="lazy">
 						<div style="padding:16px 20px; border-top:1px solid var(--code-border);">
 							<h3 style="font-size:0.95rem; font-weight:600; color:#fff; margin:0 0 4px;">Cross-Repo Dependencies</h3>
 							<p style="font-size:0.82rem; color:var(--code-text-dim); margin:0;">Every package, every version, every repo. Spot shared dependencies and concentration risk instantly.</p>
 						</div>
-					</div>
+					</a>
 				</div>
 				<div class="col-lg-7">
-					<div style="border-radius:16px; overflow:hidden; border:1px solid var(--code-border); background:var(--code-surface); transition: transform 200ms ease, box-shadow 200ms ease;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(0,0,0,0.4)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
+					<a href="/code/features/architecture.html" style="display:block; text-decoration:none; border-radius:16px; overflow:hidden; border:1px solid var(--code-border); background:var(--code-surface); transition: transform 200ms ease, box-shadow 200ms ease;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(0,0,0,0.4)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
 						<img src="/assets/img/screenshots/api-list.png" alt="API route tree with HTTP method distribution bars and expandable route hierarchy" style="width:100%; display:block;" loading="lazy">
 						<div style="padding:16px 20px; border-top:1px solid var(--code-border);">
 							<h3 style="font-size:0.95rem; font-weight:600; color:#fff; margin:0 0 4px;">API Route Tree</h3>
 							<p style="font-size:0.82rem; color:var(--code-text-dim); margin:0;">1,272 routes across 5 repos. Method distribution, per-repo breakdown, searchable route hierarchy.</p>
 						</div>
-					</div>
+					</a>
 				</div>
 			</div>
 
 			<!-- Row 3: IaC + Reachability -->
 			<div class="row g-4">
 				<div class="col-lg-6">
-					<div style="border-radius:16px; overflow:hidden; border:1px solid var(--code-border); background:var(--code-surface); transition: transform 200ms ease, box-shadow 200ms ease;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(0,0,0,0.4)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
+					<a href="/code/features/security.html" style="display:block; text-decoration:none; border-radius:16px; overflow:hidden; border:1px solid var(--code-border); background:var(--code-surface); transition: transform 200ms ease, box-shadow 200ms ease;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(0,0,0,0.4)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
 						<img src="/assets/img/screenshots/iac.png" alt="IaC scanning results showing Docker Compose misconfigurations" style="width:100%; display:block;" loading="lazy">
 						<div style="padding:16px 20px; border-top:1px solid var(--code-border);">
 							<h3 style="font-size:0.95rem; font-weight:600; color:#fff; margin:0 0 4px;">IaC Scanning</h3>
 							<p style="font-size:0.82rem; color:var(--code-text-dim); margin:0;">Terraform, Kubernetes, Docker Compose — misconfiguration checks with severity and framework context.</p>
 						</div>
-					</div>
+					</a>
 				</div>
 				<div class="col-lg-6">
-					<div style="border-radius:16px; overflow:hidden; border:1px solid var(--code-border); background:var(--code-surface); transition: transform 200ms ease, box-shadow 200ms ease;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(0,0,0,0.4)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
+					<a href="/code/features/security.html" style="display:block; text-decoration:none; border-radius:16px; overflow:hidden; border:1px solid var(--code-border); background:var(--code-surface); transition: transform 200ms ease, box-shadow 200ms ease;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(0,0,0,0.4)'" onmouseleave="this.style.transform='';this.style.boxShadow=''">
 						<img src="/assets/img/screenshots/reachability.png" alt="Taint analysis showing sources, sinks, unsanitized flows and SQL injection findings" style="width:100%; display:block;" loading="lazy">
 						<div style="padding:16px 20px; border-top:1px solid var(--code-border);">
 							<h3 style="font-size:0.95rem; font-weight:600; color:#fff; margin:0 0 4px;">Taint Analysis &amp; Reachability</h3>
 							<p style="font-size:0.82rem; color:var(--code-text-dim); margin:0;">Source-to-sink flow tracking. 1,157 sources, 6,857 sinks — per-flow SQL injection detail with file:line precision.</p>
 						</div>
-					</div>
+					</a>
 				</div>
 			</div>
 		</div>
