@@ -105,9 +105,9 @@
 
 	<style>
 		:root {
-			--code-bg: #0a0518;
-			--code-surface: #120826;
-			--code-surface-2: #1a0f33;
+			--code-bg: #06080f;
+			--code-surface: #0d1220;
+			--code-surface-2: #151d30;
 			--code-border: rgba(167, 139, 250, 0.16);
 			--code-violet: #a78bfa;
 			--code-violet-strong: #8b5cf6;
@@ -200,19 +200,20 @@
 		.code-hero .cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
 		.btn-code-primary {
 			display: inline-flex; align-items: center; gap: 8px;
-			padding: 14px 24px;
-			background: linear-gradient(135deg, #8b5cf6, #6366f1);
+			padding: 14px 32px;
+			font-size: 1rem;
+			font-weight: 700;
+			border-radius: 12px;
+			background: linear-gradient(135deg, #8b5cf6, #6d28d9);
 			color: #fff;
-			font-weight: 600;
-			border-radius: 10px;
-			text-decoration: none;
-			transition: transform 0.15s, box-shadow 0.15s;
-			box-shadow: 0 8px 24px rgba(139, 92, 246, 0.32);
 			border: none;
+			text-decoration: none;
+			box-shadow: 0 4px 20px rgba(139, 92, 246, 0.4);
+			transition: transform 150ms ease, box-shadow 150ms ease;
 		}
 		.btn-code-primary:hover {
-			transform: translateY(-1px);
-			box-shadow: 0 12px 32px rgba(139, 92, 246, 0.44);
+			transform: translateY(-2px);
+			box-shadow: 0 8px 32px rgba(139, 92, 246, 0.5);
 			color: #fff;
 		}
 		.btn-code-secondary {
@@ -234,9 +235,25 @@
 
 		/* === SECTION FRAMING === */
 		.code-section { padding: 110px 0 130px; position: relative; }
-		.code-section.bg-deep { background: #0a0518; }
-		.code-section.bg-rise { background: #140832; }
+		.code-section.bg-deep { background: #06080f; }
+		.code-section.bg-rise { background: #0f1629; }
+		.code-section.bg-accent { background: #1a1040; }
 		.code-section .section-head { margin-bottom: 56px; max-width: 720px; }
+
+		/* Section dividers */
+		.code-section + .code-section::before {
+			content: '';
+			display: block;
+			height: 1px;
+			background: linear-gradient(90deg, transparent, rgba(167,139,250,0.3), transparent);
+			margin: 0 auto;
+			max-width: 800px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+		}
+
 		.code-wave {
 			position: absolute;
 			left: 0; right: 0;
@@ -249,24 +266,32 @@
 		.code-wave.bottom { bottom: -1px; }
 		.code-wave.top    { top: -1px; transform: scaleY(-1); }
 		.code-wave svg { display: block; width: calc(100% + 1.3px); height: 70px; }
-		.code-wave .wf { fill: #0a0518; }
-		.code-wave .wf-rise { fill: #140832; }
-		.code-wave .wf-deep { fill: #0a0518; }
+		.code-wave .wf { fill: #06080f; }
+		.code-wave .wf-rise { fill: #0f1629; }
+		.code-wave .wf-deep { fill: #06080f; }
+		.code-wave .wf-accent { fill: #1a1040; }
 		.code-section .kicker {
-			font-family: var(--code-mono);
-			font-size: 0.78rem;
-			letter-spacing: 0.12em;
+			display: inline-flex;
+			align-items: center;
+			gap: 6px;
+			font-size: 0.75rem;
+			font-weight: 700;
+			letter-spacing: 0.08em;
 			text-transform: uppercase;
 			color: var(--code-violet);
-			margin-bottom: 12px;
-			display: inline-block;
+			padding: 4px 14px;
+			background: rgba(167, 139, 250, 0.08);
+			border: 1px solid rgba(167, 139, 250, 0.2);
+			border-radius: 999px;
+			margin-bottom: 16px;
 		}
 		.code-section h2 {
-			font-size: clamp(1.8rem, 3vw, 2.4rem);
-			font-weight: 700;
-			letter-spacing: -0.015em;
+			font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+			font-weight: 800;
+			letter-spacing: -0.02em;
+			line-height: 1.1;
 			color: #fff;
-			margin-bottom: 12px;
+			margin-bottom: 16px;
 		}
 		.code-section .lede {
 			color: var(--code-text-dim);
@@ -278,26 +303,30 @@
 		.cap-grid {
 			display: grid;
 			grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-			gap: 1px;
-			background: var(--code-border);
-			border: 1px solid var(--code-border);
+			gap: 16px;
 			border-radius: 16px;
-			overflow: hidden;
 		}
 		.cap-cell {
-			padding: 28px 26px;
-			background: var(--code-surface);
-			transition: background 0.2s;
+			background: rgba(255,255,255,0.04);
+			border: 1px solid rgba(255,255,255,0.08);
+			border-radius: 16px;
+			padding: 28px 24px;
+			transition: transform 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
 		}
-		.cap-cell:hover { background: var(--code-surface-2); }
+		.cap-cell:hover {
+			transform: translateY(-4px);
+			border-color: rgba(167,139,250,0.3);
+			box-shadow: 0 12px 32px rgba(0,0,0,0.3);
+		}
 		.cap-cell .ico {
-			width: 38px; height: 38px;
-			border-radius: 10px;
-			background: rgba(167, 139, 250, 0.12);
-			color: var(--code-violet);
-			display: inline-flex; align-items: center; justify-content: center;
-			font-size: 1.1rem;
+			width: 56px; height: 56px;
+			border-radius: 14px;
+			display: flex; align-items: center; justify-content: center;
 			margin-bottom: 16px;
+			background: linear-gradient(135deg, rgba(139,92,246,0.15), rgba(139,92,246,0.05));
+			border: 1px solid rgba(139,92,246,0.2);
+			color: var(--code-violet);
+			font-size: 1.2rem;
 		}
 		.cap-cell h3 {
 			font-size: 1rem;
@@ -311,28 +340,58 @@
 			line-height: 1.55;
 			margin: 0;
 		}
-		.cap-cell .badge-soon {
+		.cap-cell .badge-soon,
+		.badge-soon {
 			display: inline-block;
 			margin-left: 8px;
-			padding: 2px 8px;
-			font-size: 0.65rem;
-			font-weight: 600;
+			padding: 2px 10px;
+			font-size: 0.7rem;
+			font-weight: 700;
 			letter-spacing: 0.05em;
-			color: var(--code-warn);
-			background: rgba(251, 191, 36, 0.12);
-			border: 1px solid rgba(251, 191, 36, 0.25);
-			border-radius: 4px;
+			color: #fbbf24;
+			background: rgba(251,191,36,0.15);
+			border: 1px solid rgba(251,191,36,0.3);
+			border-radius: 6px;
 			vertical-align: middle;
 		}
 
 		/* === DIFFERENTIATORS === */
-		.diff-row { padding: 110px 0 130px; background: #140832; position: relative; }
+		.diff-row { padding: 110px 0 130px; background: #0f1629; position: relative; }
+		.diff-row .kicker {
+			display: inline-flex;
+			align-items: center;
+			gap: 6px;
+			font-size: 0.75rem;
+			font-weight: 700;
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+			color: var(--code-violet);
+			padding: 4px 14px;
+			background: rgba(167, 139, 250, 0.08);
+			border: 1px solid rgba(167, 139, 250, 0.2);
+			border-radius: 999px;
+			margin-bottom: 16px;
+		}
+		.diff-row h2 {
+			font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+			font-weight: 800;
+			letter-spacing: -0.02em;
+			line-height: 1.1;
+			color: #fff;
+			margin-bottom: 16px;
+		}
 		.diff-card {
-			background: var(--code-surface);
-			border: 1px solid var(--code-border);
-			border-radius: 14px;
+			background: rgba(255,255,255,0.04);
+			border: 1px solid rgba(255,255,255,0.08);
+			border-radius: 16px;
 			padding: 28px 26px;
 			height: 100%;
+			transition: transform 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
+		}
+		.diff-card:hover {
+			transform: translateY(-4px);
+			border-color: rgba(167,139,250,0.3);
+			box-shadow: 0 12px 32px rgba(0,0,0,0.3);
 		}
 		.diff-card .num {
 			font-family: var(--code-mono);
@@ -395,24 +454,25 @@
 			max-width: 580px;
 		}
 		.terminal {
-			background: #06030f;
-			border: 1px solid var(--code-border);
-			border-radius: 10px;
-			padding: 18px 20px;
+			background: #0d1117;
+			border: 1px solid rgba(255,255,255,0.1);
+			border-radius: 12px;
+			padding: 24px 28px;
 			font-family: var(--code-mono);
-			font-size: 0.92rem;
+			font-size: 0.88rem;
+			line-height: 1.7;
 			color: var(--code-text);
 			margin-bottom: 20px;
+			box-shadow: 0 8px 32px rgba(0,0,0,0.4);
 			position: relative;
 		}
 		.terminal::before {
-			content: '';
-			position: absolute;
-			top: 14px; right: 16px;
-			width: 12px; height: 12px;
-			background: rgba(167, 139, 250, 0.3);
-			border-radius: 50%;
-			box-shadow: -16px 0 0 rgba(167, 139, 250, 0.18), -32px 0 0 rgba(167, 139, 250, 0.1);
+			content: '\25CF  \25CF  \25CF';
+			display: block;
+			font-size: 10px;
+			color: rgba(255,255,255,0.15);
+			margin-bottom: 16px;
+			letter-spacing: 4px;
 		}
 		.terminal .prompt { color: var(--code-violet); user-select: none; }
 		.terminal .out { color: var(--code-text-dim); display: block; margin-top: 4px; padding-left: 14px; }
@@ -422,11 +482,11 @@
 			padding: 130px 0 110px;
 			text-align: center;
 			position: relative;
-			background:
-				radial-gradient(800px 400px at 50% 50%, rgba(139, 92, 246, 0.22), transparent 70%),
-				linear-gradient(180deg, #0a0518 0%, #1e0a3c 100%);
+			background: linear-gradient(135deg, #1a0a3a 0%, #2d1b69 50%, #1a0a3a 100%);
+			border-top: 1px solid rgba(167,139,250,0.2);
+			border-bottom: 1px solid rgba(167,139,250,0.2);
 		}
-		.waitlist h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 700; color: #fff; margin-bottom: 14px; letter-spacing: -0.015em; }
+		.waitlist h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 800; color: #fff; margin-bottom: 14px; letter-spacing: -0.02em; }
 		.waitlist .lede { color: var(--code-text-dim); font-size: 1.05rem; margin-bottom: 32px; max-width: 520px; margin-left: auto; margin-right: auto; }
 		.waitlist-form {
 			display: flex; gap: 8px;
@@ -458,6 +518,18 @@
 			border-radius: 10px;
 			color: var(--code-success);
 			font-size: 0.95rem;
+		}
+
+		/* === SCREENSHOT SECTION GLOW === */
+		.screenshot-glow {
+			box-shadow: 0 24px 64px rgba(0,0,0,0.5), 0 0 120px rgba(139,92,246,0.15) !important;
+		}
+
+		/* === STAT BAR NUMBERS === */
+		.stat-number {
+			font-size: 2.8rem !important;
+			font-weight: 900 !important;
+			letter-spacing: -0.02em;
 		}
 
 		@media (max-width: 575px) {
@@ -811,7 +883,7 @@
 	</section>
 
 	<!-- HOW IT WORKS — 30 SECOND FLOW -->
-	<section class="code-section bg-rise" id="how-it-works">
+	<section class="code-section bg-accent" id="how-it-works">
 		<div class="container">
 			<div class="section-head" style="text-align:center; max-width:800px; margin:0 auto 64px;">
 				<span class="kicker" data-i18n="landing.code.flow.kicker">How it works</span>
@@ -876,19 +948,19 @@
 			<!-- Bottom stat bar -->
 			<div style="display:flex; justify-content:center; gap:48px; margin-top:56px; flex-wrap:wrap;">
 				<div style="text-align:center;">
-					<div style="font-size:2rem; font-weight:800; color:var(--code-violet);" data-i18n="landing.code.flow.stat1Num">12</div>
+					<div style="font-size:2.8rem; font-weight:900; letter-spacing:-0.02em; color:var(--code-violet);" data-i18n="landing.code.flow.stat1Num">12</div>
 					<div style="font-size:0.85rem; color:var(--code-text-dim);" data-i18n="landing.code.flow.stat1Label">Ecosystems supported</div>
 				</div>
 				<div style="text-align:center;">
-					<div style="font-size:2rem; font-weight:800; color:#22d3ee;" data-i18n="landing.code.flow.stat2Num">0</div>
+					<div style="font-size:2.8rem; font-weight:900; letter-spacing:-0.02em; color:#22d3ee;" data-i18n="landing.code.flow.stat2Num">0</div>
 					<div style="font-size:0.85rem; color:var(--code-text-dim);" data-i18n="landing.code.flow.stat2Label">Lines of code uploaded</div>
 				</div>
 				<div style="text-align:center;">
-					<div style="font-size:2rem; font-weight:800; color:#22c55e;" data-i18n="landing.code.flow.stat3Num">30s</div>
+					<div style="font-size:2.8rem; font-weight:900; letter-spacing:-0.02em; color:#22c55e;" data-i18n="landing.code.flow.stat3Num">30s</div>
 					<div style="font-size:0.85rem; color:var(--code-text-dim);" data-i18n="landing.code.flow.stat3Label">Scan to fix</div>
 				</div>
 				<div style="text-align:center;">
-					<div style="font-size:2rem; font-weight:800; color:var(--code-warn);" data-i18n="landing.code.flow.stat4Num">A–F</div>
+					<div style="font-size:2.8rem; font-weight:900; letter-spacing:-0.02em; color:var(--code-warn);" data-i18n="landing.code.flow.stat4Num">A–F</div>
 					<div style="font-size:0.85rem; color:var(--code-text-dim);" data-i18n="landing.code.flow.stat4Label">Security grading</div>
 				</div>
 			</div>
@@ -899,9 +971,9 @@
 	</section>
 
 	<!-- PRODUCT SCREENSHOT — full-width dashboard preview -->
-	<section style="padding:60px 0 80px; background:#0a0518; text-align:center;">
+	<section style="padding:60px 0 80px; background:#06080f; text-align:center;">
 		<div class="container">
-			<div style="max-width:960px; margin:0 auto; border-radius:16px; overflow:hidden; border:1px solid var(--code-border); box-shadow:0 24px 64px rgba(0,0,0,0.5);">
+			<div class="screenshot-glow" style="max-width:960px; margin:0 auto; border-radius:16px; overflow:hidden; border:1px solid var(--code-border);">
 				<img src="/assets/img/screenshots/dashboard-full.png" alt="Warroom dashboard showing security score, priority actions, and risk vectors" style="width:100%; display:block;" onerror="this.parentElement.innerHTML='<div style=\'padding:80px 24px;text-align:center;background:var(--code-surface);\'><div style=\'font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:8px;\'>War Room Dashboard</div><div style=\'color:var(--code-text-dim);font-size:0.9rem;\'>Security score · Priority actions · Risk vectors · Real-time updates</div><div style=\'margin-top:24px;color:var(--code-violet);font-size:0.85rem;\'>Add screenshot: assets/img/screenshots/dashboard-full.png</div></div>'">
 			</div>
 		</div>
