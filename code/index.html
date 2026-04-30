@@ -1010,7 +1010,10 @@
 				<div class="terminal">
 					<div><span class="prompt">$</span> pip install flyto-indexer</div>
 					<div><span class="prompt">$</span> flyto-index scan .</div>
-					<div><span class="prompt">$</span> flyto-index export . --full | curl -X POST https://warroom.flyto2.com/api/v1/scan-upload</div>
+					<div><span class="prompt">$</span> flyto-index export . --full | curl -X POST \</div>
+					<div>  -H "X-API-Key: wk_your_key_here" \</div>
+					<div>  -H "Content-Type: application/json" \</div>
+					<div>  -d @- https://warroom.flyto2.com/api/v1/code/repos/REPO_ID/scan-upload</div>
 					<span class="out" data-i18n="landing.code.oss.out">Scanned 1,247 files · 0 secrets · 3 outdated deps · score 720 (B) · uploaded to war room</span>
 				</div>
 				<a href="https://pypi.org/project/flyto-indexer/" target="_blank" rel="noopener noreferrer" class="btn-code-secondary"><i class="bi bi-box-arrow-up-right"></i> <span data-i18n="landing.code.oss.ctaPypi">View on PyPI</span></a>
