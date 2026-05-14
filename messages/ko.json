@@ -17,7 +17,8 @@
     "contact": "문의",
     "signIn": "로그인",
     "soon": "출시 예정",
-    "allProducts": "전체 제품"
+    "allProducts": "전체 제품",
+    "beta": "베타"
   },
   "footer": {
     "tagline": "오프라인 우선의 자동화 도구. 작업이 당신의 기기에 머무릅니다.",
@@ -45,8 +46,16 @@
         "cta": "Cloud 보기"
       },
       "warroom": {
-        "cta": "Warroom 보기"
+        "cta": "Warroom 보기",
+        "statusLabel": "베타"
       }
+    }
+  },
+  "code": {
+    "hero": {
+      "ctaBetaBadge": "Beta",
+      "ctaBeta": "베타 열기",
+      "status": "베타"
     }
   }
 }

@@ -17,7 +17,8 @@
     "contact": "联系",
     "signIn": "登录",
     "soon": "即将推出",
-    "allProducts": "全部产品"
+    "allProducts": "全部产品",
+    "beta": "公测"
   },
   "footer": {
     "tagline": "离线优先的自动化工具，让工作留在你的电脑上。",
@@ -45,8 +46,16 @@
         "cta": "前往 Cloud"
       },
       "warroom": {
-        "cta": "前往 Warroom"
+        "cta": "前往 Warroom",
+        "statusLabel": "公测中"
       }
+    }
+  },
+  "code": {
+    "hero": {
+      "ctaBetaBadge": "Beta",
+      "ctaBeta": "前往 Beta",
+      "status": "公测中"
     }
   }
 }

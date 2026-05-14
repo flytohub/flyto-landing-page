@@ -17,7 +17,8 @@
     "contact": "Kontakt",
     "signIn": "Zaloguj się",
     "soon": "Wkrótce",
-    "allProducts": "Wszystkie produkty"
+    "allProducts": "Wszystkie produkty",
+    "beta": "Beta"
   },
   "footer": {
     "tagline": "Narzędzia automatyzacji offline-first. Twoja praca zostaje na twojej maszynie.",
@@ -45,8 +46,16 @@
         "cta": "Przejdź do Cloud"
       },
       "warroom": {
-        "cta": "Przejdź do Warroom"
+        "cta": "Przejdź do Warroom",
+        "statusLabel": "BETA"
       }
+    }
+  },
+  "code": {
+    "hero": {
+      "ctaBetaBadge": "Beta",
+      "ctaBeta": "Otwórz betę",
+      "status": "BETA"
     }
   }
 }

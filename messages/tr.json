@@ -17,7 +17,8 @@
     "contact": "İletişim",
     "signIn": "Giriş yap",
     "soon": "Yakında",
-    "allProducts": "Tüm ürünler"
+    "allProducts": "Tüm ürünler",
+    "beta": "Beta"
   },
   "footer": {
     "tagline": "Çevrimdışı öncelikli otomasyon araçları. Çalışmanız makinenizde kalır.",
@@ -45,8 +46,16 @@
         "cta": "Cloud'a git"
       },
       "warroom": {
-        "cta": "Warroom'a git"
+        "cta": "Warroom'a git",
+        "statusLabel": "BETA"
       }
+    }
+  },
+  "code": {
+    "hero": {
+      "ctaBetaBadge": "Beta",
+      "ctaBeta": "Beta'yı aç",
+      "status": "BETA"
     }
   }
 }

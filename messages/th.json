@@ -17,7 +17,8 @@
     "contact": "ติดต่อ",
     "signIn": "เข้าสู่ระบบ",
     "soon": "เร็วๆ นี้",
-    "allProducts": "ผลิตภัณฑ์ทั้งหมด"
+    "allProducts": "ผลิตภัณฑ์ทั้งหมด",
+    "beta": "เบต้า"
   },
   "footer": {
     "tagline": "เครื่องมืออัตโนมัติแบบ offline-first งานของคุณอยู่ในเครื่องของคุณ",
@@ -45,8 +46,16 @@
         "cta": "เปิด Cloud"
       },
       "warroom": {
-        "cta": "เปิด Warroom"
+        "cta": "เปิด Warroom",
+        "statusLabel": "เบต้า"
       }
+    }
+  },
+  "code": {
+    "hero": {
+      "ctaBetaBadge": "Beta",
+      "ctaBeta": "เปิดเบต้า",
+      "status": "เบต้า"
     }
   }
 }

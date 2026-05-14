@@ -17,7 +17,8 @@
     "contact": "Kontak",
     "signIn": "Masuk",
     "soon": "Segera hadir",
-    "allProducts": "Semua produk"
+    "allProducts": "Semua produk",
+    "beta": "Beta"
   },
   "footer": {
     "tagline": "Alat otomasi offline-first. Pekerjaan Anda tetap di mesin Anda.",
@@ -45,8 +46,16 @@
         "cta": "Buka Cloud"
       },
       "warroom": {
-        "cta": "Buka Warroom"
+        "cta": "Buka Warroom",
+        "statusLabel": "BETA"
       }
+    }
+  },
+  "code": {
+    "hero": {
+      "ctaBetaBadge": "Beta",
+      "ctaBeta": "Buka beta",
+      "status": "BETA"
     }
   }
 }

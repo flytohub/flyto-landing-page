@@ -17,7 +17,8 @@
     "contact": "Kontakt",
     "signIn": "Anmelden",
     "soon": "Bald",
-    "allProducts": "Alle Produkte"
+    "allProducts": "Alle Produkte",
+    "beta": "Beta"
   },
   "footer": {
     "tagline": "Offline-first Automatisierung. Ihre Arbeit bleibt auf Ihrer Maschine.",
@@ -45,8 +46,16 @@
         "cta": "Zu Cloud"
       },
       "warroom": {
-        "cta": "Zu Warroom"
+        "cta": "Zu Warroom",
+        "statusLabel": "BETA"
       }
+    }
+  },
+  "code": {
+    "hero": {
+      "ctaBetaBadge": "Beta",
+      "ctaBeta": "Zur Beta",
+      "status": "BETA"
     }
   }
 }

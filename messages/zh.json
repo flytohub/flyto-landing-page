@@ -17,7 +17,8 @@
     "contact": "聯絡我們",
     "signIn": "登入",
     "soon": "即將推出",
-    "allProducts": "全部產品"
+    "allProducts": "全部產品",
+    "beta": "公測"
   },
   "footer": {
     "tagline": "離線優先的自動化工具,讓你的工作留在自己機器上。",
@@ -166,7 +167,7 @@
       },
       "warroom": {
         "name": "Warroom",
-        "statusLabel": "預上線",
+        "statusLabel": "公測中",
         "tagline": "應用程式安全戰情室。SCA、SAST、密鑰、授權、CVE — 一張作戰圖。",
         "point1": "A–F 健康分數,把所有訊號收斂成一個成績",
         "point2": "可達性分析 — 修真的會跑到的 CVE",
@@ -524,12 +525,14 @@
     "metaDescription": "SCA、SAST、密鑰、授權、CVE、滲透、執行期 — 為你的程式碼提供一張完整作戰圖。預上線中。",
     "hero": {
       "eyebrow": "02 / CODE",
-      "status": "預上線",
+      "status": "公測中",
       "title": "一個戰情室。",
       "titleAccent": "所有攻擊面。",
       "lede": "SCA、SAST、密鑰偵測、授權稽核、CVE 處置、滲透工作流、執行期遙測。Warroom 為你出貨的每一行程式碼提供一張安全作戰圖。",
       "ctaPrimary": "加入等候名單",
-      "ctaSecondary": "試用開源 CLI"
+      "ctaSecondary": "試用開源 CLI",
+      "ctaBetaBadge": "Beta",
+      "ctaBeta": "前往 Beta"
     },
     "showcase": {
       "label": "戰情室內部",

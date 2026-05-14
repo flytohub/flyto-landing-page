@@ -17,7 +17,8 @@
     "contact": "Contact",
     "signIn": "Sign in",
     "soon": "Soon",
-    "allProducts": "All products"
+    "allProducts": "All products",
+    "beta": "Beta"
   },
   "footer": {
     "tagline": "Offline-first automation tools, built so your work stays on your machine.",
@@ -57,7 +58,7 @@
       },
       "warroom": {
         "name": "Warroom",
-        "statusLabel": "PRE-LAUNCH",
+        "statusLabel": "BETA",
         "tagline": "Application security war room. SCA, SAST, secrets, license, CVE — one operating picture.",
         "point1": "A–F health score that rolls every signal up",
         "point2": "Reachability analysis — fix CVEs that actually run",
@@ -777,12 +778,14 @@
     "metaDescription": "SCA, SAST, secrets, license, CVE, pentest, runtime — one operating picture for your codebase. Pre-launch.",
     "hero": {
       "eyebrow": "02 / CODE",
-      "status": "PRE-LAUNCH",
+      "status": "BETA",
       "title": "One war room.",
       "titleAccent": "Every angle of attack.",
       "lede": "SCA, SAST, secret detection, license audit, CVE triage, pentest workflows, runtime telemetry. Warroom is the operating picture for the security of every line of code you ship.",
       "ctaPrimary": "Join the waitlist",
-      "ctaSecondary": "Try the open-source CLI"
+      "ctaSecondary": "Try the open-source CLI",
+      "ctaBetaBadge": "Beta",
+      "ctaBeta": "Open the beta"
     },
     "closedLoop": {
       "label": "WHAT MAKES IT DIFFERENT",

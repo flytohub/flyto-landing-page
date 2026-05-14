@@ -1,6 +1,6 @@
 import { cn } from '@/lib/cn';
 
-type Variant = 'default' | 'live' | 'soon';
+type Variant = 'default' | 'live' | 'beta' | 'soon';
 
 export function Tag({
   children,
@@ -14,6 +14,7 @@ export function Tag({
   const styles: Record<Variant, string> = {
     default: 'border-[var(--color-line-strong)] text-bone-100/70',
     live: 'border-emerald-500/40 text-emerald-300',
+    beta: 'border-cyan-400/45 bg-cyan-400/[0.04] text-cyan-200',
     soon: 'border-amber-400/40 text-amber-300',
   };
 
@@ -25,7 +26,9 @@ export function Tag({
         className,
       )}
     >
-      {variant === 'live' && <span className="pulse-dot" aria-hidden />}
+      {(variant === 'live' || variant === 'beta') && (
+        <span className="pulse-dot" aria-hidden />
+      )}
       {children}
     </span>
   );

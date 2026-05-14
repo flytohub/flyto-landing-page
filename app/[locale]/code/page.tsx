@@ -81,7 +81,7 @@ function CodeHero() {
       <div className="relative mx-auto max-w-6xl px-5 pb-12 pt-12 sm:px-8 sm:pb-16 sm:pt-16">
         <div className="flex flex-wrap items-center gap-3">
           <span className="label-mono">{t('eyebrow')}</span>
-          <Tag variant="soon">{t('status')}</Tag>
+          <Tag variant="beta">{t('status')}</Tag>
         </div>
 
         <h1 className="h-display mt-8 max-w-5xl text-[clamp(48px,10vw,128px)]">
@@ -100,6 +100,18 @@ function CodeHero() {
           <Button href="https://pypi.org/project/flyto-indexer/" variant="secondary">
             {t('ctaSecondary')}
           </Button>
+          <a
+            href="https://warroom.flyto2.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-2 rounded-full border border-cyan-400/40 bg-cyan-400/[0.04] px-4 py-2 text-[13px] tracking-wide text-bone-100 transition-all hover:-translate-y-px hover:border-cyan-300/70 hover:bg-cyan-400/10"
+          >
+            <span className="rounded-sm border border-cyan-300/50 px-1.5 py-px font-mono text-[9.5px] tracking-[0.18em] text-cyan-200 uppercase">
+              {t('ctaBetaBadge')}
+            </span>
+            <span>{t('ctaBeta')}</span>
+            <span className="text-cyan-300 transition-transform group-hover:translate-x-0.5">→</span>
+          </a>
         </div>
       </div>
 

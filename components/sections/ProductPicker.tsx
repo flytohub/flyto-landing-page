@@ -34,7 +34,7 @@ interface ProductCardData {
   productKey: 'cloud' | 'warroom';
   href: string;
   IconMark: LucideIcon;
-  status: 'live' | 'soon';
+  status: 'live' | 'beta' | 'soon';
   paint: ProductPaint;
 }
 
@@ -55,7 +55,7 @@ const CARDS: ProductCardData[] = [
     productKey: 'warroom',
     href: '/code',
     IconMark: ShieldCheck,
-    status: 'soon',
+    status: 'beta',
     paint: {
       panel:    'linear-gradient(180deg, rgba(34, 211, 238, 0.18), rgba(34, 211, 238, 0.04) 70%)',
       border:   'rgba(34, 211, 238, 0.32)',

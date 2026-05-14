@@ -8,7 +8,7 @@ export interface NavItem {
 
 export const products = [
   { id: 'cloud' as const, name: 'Cloud', href: '/cloud', icon: 'Cloud',       status: 'live' as const },
-  { id: 'code'  as const, name: 'Warroom',  href: '/code',  icon: 'ShieldCheck', status: 'soon' as const },
+  { id: 'code'  as const, name: 'Warroom',  href: '/code',  icon: 'ShieldCheck', status: 'beta' as const },
 ];
 
 // Row-2 navigation per product context.

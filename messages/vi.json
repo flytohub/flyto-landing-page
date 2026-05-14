@@ -17,7 +17,8 @@
     "contact": "Liên hệ",
     "signIn": "Đăng nhập",
     "soon": "Sắp ra mắt",
-    "allProducts": "Tất cả sản phẩm"
+    "allProducts": "Tất cả sản phẩm",
+    "beta": "Beta"
   },
   "footer": {
     "tagline": "Công cụ tự động hoá ưu tiên offline. Công việc của bạn ở lại trên máy của bạn.",
@@ -45,8 +46,16 @@
         "cta": "Vào Cloud"
       },
       "warroom": {
-        "cta": "Vào Warroom"
+        "cta": "Vào Warroom",
+        "statusLabel": "BETA"
       }
+    }
+  },
+  "code": {
+    "hero": {
+      "ctaBetaBadge": "Beta",
+      "ctaBeta": "Mở bản beta",
+      "status": "BETA"
     }
   }
 }

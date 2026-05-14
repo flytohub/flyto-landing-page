@@ -86,9 +86,9 @@ export function Header() {
                       strokeWidth={1.75}
                     />
                     <span>{p.name}</span>
-                    {p.status === 'soon' && (
-                      <span className="rounded-sm border border-amber-400/40 px-1 text-[8.5px] tracking-[0.18em] text-amber-300">
-                        {t('soon')}
+                    {p.status === 'beta' && (
+                      <span className="rounded-sm border border-cyan-400/50 px-1 text-[8.5px] tracking-[0.18em] text-cyan-200">
+                        {t('beta')}
                       </span>
                     )}
                   </Link>

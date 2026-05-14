@@ -17,7 +17,8 @@
     "contact": "お問い合わせ",
     "signIn": "サインイン",
     "soon": "近日公開",
-    "allProducts": "すべての製品"
+    "allProducts": "すべての製品",
+    "beta": "ベータ"
   },
   "footer": {
     "tagline": "あなたの作業をマシンに残す、オフラインファーストの自動化ツール。",
@@ -152,6 +153,11 @@
       "body": "Flyto2 をダウンロードして、ワークフローを一つ記録すれば、一週間がまるごと空くのを感じます。",
       "primary": "無料ダウンロード",
       "secondary": "ドキュメントを読む"
+    },
+    "products": {
+      "warroom": {
+        "statusLabel": "ベータ版"
+      }
     }
   },
   "cloud": {
@@ -361,12 +367,14 @@
     "metaDescription": "SCA、SAST、シークレット、ライセンス、CVE、ペンテスト、ランタイム — あなたのコードベースの作戦地図。プレローンチ。",
     "hero": {
       "eyebrow": "02 / CODE",
-      "status": "PRE-LAUNCH",
+      "status": "ベータ版",
       "title": "一つの作戦本部。",
       "titleAccent": "全ての攻撃面。",
       "lede": "SCA、SAST、シークレット検出、ライセンス監査、CVE トリアージ、ペンテストワークフロー、ランタイムテレメトリ。Warroom は、あなたが出荷するすべての行のセキュリティ作戦地図です。",
       "ctaPrimary": "ウェイトリストに参加",
-      "ctaSecondary": "オープンソース CLI を試す"
+      "ctaSecondary": "オープンソース CLI を試す",
+      "ctaBetaBadge": "Beta",
+      "ctaBeta": "ベータ版を開く"
     },
     "showcase": {
       "label": "INSIDE THE WAR ROOM",
