@@ -24,6 +24,18 @@ const ENTRIES: Omit<WhitepaperMeta, 'readingMinutes'>[] = [
     blurb:
       'Coverage the main audit left out: 8 MCP tools, 37 pre-built recipes, the expression engine, plugin SDK, and the bits the headline doc skipped.',
   },
+  {
+    slug: 'code',
+    title: 'Flyto Code — Application-Security War Room',
+    blurb:
+      'A full-spectrum application-security platform with a code-intelligence layer and a closed-loop verification engine. SCA, SAST, DAST, secrets, IaC, license, container, CSPM — one console, generated pentest workflows, verified verdicts back into the war room.',
+  },
+  {
+    slug: 'engine',
+    title: 'Engineering Intelligence — 19-Dimension Analysis',
+    blurb:
+      'How flyto-engine receives structured analysis from flyto-indexer and stores each dimension as an independent query surface. Taint, SAST, secrets, IaC, complexity, dead code, API drift, bus factor, perf patterns — every dimension addressable without parsing the full profile blob.',
+  },
 ];
 
 function countMinutes(md: string): number {

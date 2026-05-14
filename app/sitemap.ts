@@ -17,6 +17,8 @@ const routes = [
   'whitepaper',
   'whitepaper/audit',
   'whitepaper/supplement',
+  'whitepaper/code',
+  'whitepaper/engine',
   'privacy',
   'terms',
 ];
