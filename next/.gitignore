@@ -1,9 +1,0 @@
-node_modules/
-.next/
-out/
-.env*.local
-.firebase-sa.json
-*-firebase-adminsdk-*.json
-*.tsbuildinfo
-next-env.d.ts
-.DS_Store

@@ -14,37 +14,33 @@ Thumbs.db
 # Dependencies
 node_modules/
 
-# (Legacy build-time fetched data lived under scripts/cloud-templates.json.)
-
 # Environment / Secrets (never commit)
 .env
 .env.*
 *.env
-config.local.json
-secrets.json
 *.pem
 *.key
 *.p12
 
-# Build artifacts
-dist/
-build/
-*.min.js.map
+# Allow the example, block the real one
+!.env.local.example
 
-# Legacy locale-directory rules removed — old static site no longer exists,
-# next-intl emits locale-prefixed routes inside next/out/ which is itself
-# already gitignored above.
+# Firebase service-account credentials (only needed for one-shot scripts)
+.firebase-sa.json
+*-firebase-adminsdk-*.json
+
+# One-shot moderation / seed script output
+moderation-dryrun.json
+moderation-applied.json
+scripts/forum-bulk.json
+
+# Next.js build artifacts (workflow rebuilds these on every deploy)
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
 
 # Backup files
 *.bak
 *.backup
 *~
-
-# Next.js build artifacts (Workflow rebuilds these on every deploy)
-next/.next/
-next/out/
-next/tsconfig.tsbuildinfo
-next/node_modules/
-
-# Allow .env.local.example, block real .env.local
-!next/.env.local.example
