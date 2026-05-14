@@ -18,7 +18,12 @@
     "signIn": "Masuk",
     "soon": "Segera hadir",
     "allProducts": "Semua produk",
-    "beta": "Beta"
+    "beta": "Beta",
+    "integrations": "Integrasi",
+    "recipes": "Resep",
+    "useCases": "Kasus pakai",
+    "changelog": "Riwayat",
+    "security": "Keamanan"
   },
   "footer": {
     "tagline": "Alat otomasi offline-first. Pekerjaan Anda tetap di mesin Anda.",

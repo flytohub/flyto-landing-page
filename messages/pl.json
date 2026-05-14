@@ -18,7 +18,12 @@
     "signIn": "Zaloguj się",
     "soon": "Wkrótce",
     "allProducts": "Wszystkie produkty",
-    "beta": "Beta"
+    "beta": "Beta",
+    "integrations": "Integracje",
+    "recipes": "Przepisy",
+    "useCases": "Zastosowania",
+    "changelog": "Zmiany",
+    "security": "Bezpieczeństwo"
   },
   "footer": {
     "tagline": "Narzędzia automatyzacji offline-first. Twoja praca zostaje na twojej maszynie.",

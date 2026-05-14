@@ -18,7 +18,12 @@
     "signIn": "Iniciar sesión",
     "soon": "Próximamente",
     "allProducts": "Todos los productos",
-    "beta": "Beta"
+    "beta": "Beta",
+    "integrations": "Integraciones",
+    "recipes": "Recetas",
+    "useCases": "Casos de uso",
+    "changelog": "Cambios",
+    "security": "Seguridad"
   },
   "footer": {
     "tagline": "Herramientas de automatización offline-first. Tu trabajo se queda en tu máquina.",

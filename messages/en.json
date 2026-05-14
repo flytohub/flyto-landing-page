@@ -18,7 +18,12 @@
     "signIn": "Sign in",
     "soon": "Soon",
     "allProducts": "All products",
-    "beta": "Beta"
+    "beta": "Beta",
+    "integrations": "Integrations",
+    "recipes": "Recipes",
+    "useCases": "Use cases",
+    "changelog": "Changelog",
+    "security": "Security"
   },
   "footer": {
     "tagline": "Offline-first automation tools, built so your work stays on your machine.",

@@ -18,7 +18,12 @@
     "signIn": "Anmelden",
     "soon": "Bald",
     "allProducts": "Alle Produkte",
-    "beta": "Beta"
+    "beta": "Beta",
+    "integrations": "Integrationen",
+    "recipes": "Rezepte",
+    "useCases": "Anwendungsfälle",
+    "changelog": "Changelog",
+    "security": "Sicherheit"
   },
   "footer": {
     "tagline": "Offline-first Automatisierung. Ihre Arbeit bleibt auf Ihrer Maschine.",

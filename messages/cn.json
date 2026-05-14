@@ -18,7 +18,12 @@
     "signIn": "登录",
     "soon": "即将推出",
     "allProducts": "全部产品",
-    "beta": "公测"
+    "beta": "公测",
+    "integrations": "集成",
+    "recipes": "预建食谱",
+    "useCases": "使用场景",
+    "changelog": "更新日志",
+    "security": "安全扫描"
   },
   "footer": {
     "tagline": "离线优先的自动化工具，让工作留在你的电脑上。",

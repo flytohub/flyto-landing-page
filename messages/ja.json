@@ -18,7 +18,12 @@
     "signIn": "サインイン",
     "soon": "近日公開",
     "allProducts": "すべての製品",
-    "beta": "ベータ"
+    "beta": "ベータ",
+    "integrations": "統合",
+    "recipes": "レシピ",
+    "useCases": "ユースケース",
+    "changelog": "更新履歴",
+    "security": "セキュリティ"
   },
   "footer": {
     "tagline": "あなたの作業をマシンに残す、オフラインファーストの自動化ツール。",

@@ -18,7 +18,12 @@
     "signIn": "로그인",
     "soon": "출시 예정",
     "allProducts": "전체 제품",
-    "beta": "베타"
+    "beta": "베타",
+    "integrations": "통합",
+    "recipes": "레시피",
+    "useCases": "사용 사례",
+    "changelog": "변경 로그",
+    "security": "보안"
   },
   "footer": {
     "tagline": "오프라인 우선의 자동화 도구. 작업이 당신의 기기에 머무릅니다.",

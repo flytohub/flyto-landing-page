@@ -18,7 +18,12 @@
     "signIn": "Entrar",
     "soon": "Em breve",
     "allProducts": "Todos os produtos",
-    "beta": "Beta"
+    "beta": "Beta",
+    "integrations": "Integrações",
+    "recipes": "Receitas",
+    "useCases": "Casos de uso",
+    "changelog": "Histórico",
+    "security": "Segurança"
   },
   "footer": {
     "tagline": "Ferramentas de automação offline-first. Seu trabalho fica na sua máquina.",

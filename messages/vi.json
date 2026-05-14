@@ -18,7 +18,12 @@
     "signIn": "Đăng nhập",
     "soon": "Sắp ra mắt",
     "allProducts": "Tất cả sản phẩm",
-    "beta": "Beta"
+    "beta": "Beta",
+    "integrations": "Tích hợp",
+    "recipes": "Công thức",
+    "useCases": "Trường hợp",
+    "changelog": "Cập nhật",
+    "security": "Bảo mật"
   },
   "footer": {
     "tagline": "Công cụ tự động hoá ưu tiên offline. Công việc của bạn ở lại trên máy của bạn.",

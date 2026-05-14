@@ -18,7 +18,12 @@
     "signIn": "Giriş yap",
     "soon": "Yakında",
     "allProducts": "Tüm ürünler",
-    "beta": "Beta"
+    "beta": "Beta",
+    "integrations": "Entegrasyon",
+    "recipes": "Tarifler",
+    "useCases": "Kullanım",
+    "changelog": "Değişiklik",
+    "security": "Güvenlik"
   },
   "footer": {
     "tagline": "Çevrimdışı öncelikli otomasyon araçları. Çalışmanız makinenizde kalır.",

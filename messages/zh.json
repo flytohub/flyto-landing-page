@@ -18,7 +18,12 @@
     "signIn": "登入",
     "soon": "即將推出",
     "allProducts": "全部產品",
-    "beta": "公測"
+    "beta": "公測",
+    "integrations": "整合",
+    "recipes": "預建食譜",
+    "useCases": "使用情境",
+    "changelog": "更新日誌",
+    "security": "安全掃描"
   },
   "footer": {
     "tagline": "離線優先的自動化工具,讓你的工作留在自己機器上。",

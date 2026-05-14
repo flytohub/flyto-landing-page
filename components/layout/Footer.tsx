@@ -58,9 +58,14 @@ export function Footer() {
 
         <Column title={t('products')} className="md:col-span-2">
           <FooterLink href={localized('/cloud')}>{nav('cloud')}</FooterLink>
-          <FooterLink href={localized('/code')}>{nav('code')}</FooterLink>
+          <FooterLink href={localized('/cloud/integrations')}>{nav('integrations')}</FooterLink>
+          <FooterLink href={localized('/cloud/recipes')}>{nav('recipes')}</FooterLink>
           <FooterLink href={localized('/cloud/pricing')}>{nav('pricing')}</FooterLink>
           <FooterLink href={localized('/cloud/download')}>{nav('download')}</FooterLink>
+          <FooterLink href={localized('/cloud/changelog')}>{nav('changelog')}</FooterLink>
+          <FooterLink href={localized('/code')}>{nav('code')}</FooterLink>
+          <FooterLink href={localized('/code/security')}>{nav('security')}</FooterLink>
+          <FooterLink href={localized('/code/pricing')}>{nav('pricing')}</FooterLink>
         </Column>
 
         <Column title={t('community')} className="md:col-span-2">
