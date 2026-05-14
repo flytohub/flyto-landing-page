@@ -14,6 +14,9 @@ const routes = [
   'cloud/discussions',
   'code',
   'code/discussions',
+  'whitepaper',
+  'whitepaper/audit',
+  'whitepaper/supplement',
   'privacy',
   'terms',
 ];

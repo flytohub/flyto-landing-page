@@ -14,6 +14,11 @@ const nextConfig = {
   reactStrictMode: true,
   // Hide the floating Next.js dev-tools button in the corner (dev only).
   devIndicators: false,
+  // Bundle whitepaper markdown into the build artifact so static export can
+  // read them at prerender time.
+  outputFileTracingIncludes: {
+    '/[locale]/whitepaper/**/*': ['./content/whitepaper/**/*'],
+  },
 };
 
 export default withNextIntl(nextConfig);

@@ -65,6 +65,7 @@ export function Footer() {
 
         <Column title={t('community')} className="md:col-span-2">
           <FooterLink href={localized('/cloud/discussions')}>{nav('discussions')}</FooterLink>
+          <FooterLink href={localized('/whitepaper')}>Whitepapers</FooterLink>
           <FooterLink href="https://docs.flyto2.com" external>{nav('docs')}</FooterLink>
           <FooterLink href="https://blog.flyto2.com"  external>{nav('blog')}</FooterLink>
           <FooterLink href={localized('/contact')}>{nav('contact')}</FooterLink>
