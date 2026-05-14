@@ -1,4 +1,4 @@
-# Flyto Whitepaper Audit -- Supplement
+# Flyto2 Whitepaper Audit -- Supplement
 
 > 補充 `whitepaper-audit.md` 遺漏的功能
 
@@ -21,7 +21,7 @@
 
 - STDIO transport（CLI 整合） + HTTP transport（API 整合）
 - Browser session 跨 MCP 呼叫持久化
-- AI agent 可以直接透過 MCP 操控 Flyto 引擎
+- AI agent 可以直接透過 MCP 操控 Flyto2 引擎
 
 ---
 

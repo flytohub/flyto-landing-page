@@ -14,7 +14,7 @@ export interface WhitepaperMeta {
 const ENTRIES: Omit<WhitepaperMeta, 'readingMinutes'>[] = [
   {
     slug: 'audit',
-    title: 'Flyto Platform Audit',
+    title: 'Flyto2 Platform Audit',
     blurb:
       '8 projects · 579 modules · 946 API endpoints. The full technical inventory of what ships across the Flyto2 stack — architecture, engine internals, browser modules, enterprise features, runtime plugin model.',
   },
@@ -26,7 +26,7 @@ const ENTRIES: Omit<WhitepaperMeta, 'readingMinutes'>[] = [
   },
   {
     slug: 'code',
-    title: 'Flyto Code — Application-Security War Room',
+    title: 'Flyto2 Code — Application-Security War Room',
     blurb:
       'A full-spectrum application-security platform with a code-intelligence layer and a closed-loop verification engine. SCA, SAST, DAST, secrets, IaC, license, container, CSPM — one console, generated pentest workflows, verified verdicts back into the war room.',
   },

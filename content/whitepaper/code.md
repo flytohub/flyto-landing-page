@@ -1,4 +1,4 @@
-# Flyto Code — White Paper
+# Flyto2 Code — White Paper
 
 **Version 0.1 · April 2026**
 
@@ -16,7 +16,7 @@ with their own console, pricing, and signal-to-noise profile. Tools that
 understand code typically ignore risk; tools that report risk typically
 don't verify, test, or fix what they surface.
 
-**Flyto Code** is the single surface that does both, anchored by three
+**Flyto2 Code** is the single surface that does both, anchored by three
 differentiators:
 
 1. **Full coverage** — SCA, SAST, DAST, secrets, IaC, license, container,
@@ -67,7 +67,7 @@ The most important gap is between *finding* and *proof*. A SAST tool says
 Every step is manual. On busy teams it doesn't happen; findings accumulate
 in a backlog that correlates with neither real risk nor remediation speed.
 
-Flyto Code automates all five steps. That is the product's moat.
+Flyto2 Code automates all five steps. That is the product's moat.
 
 ### 2.3 The data-processing gap
 
@@ -83,15 +83,15 @@ As a consequence:
 - Exec-facing roll-ups (grade distribution, top-5 at-risk, critical count)
   are recomputed on every render.
 
-Flyto Code's architecture forbids this. All aggregation lives in the
+Flyto2 Code's architecture forbids this. All aggregation lives in the
 engine; the frontend is a pure renderer. Scores and grades are unified by
 a single Bitsight-style mapping shared across services.
 
 ---
 
-## 3. The Flyto Code Solution
+## 3. The Flyto2 Code Solution
 
-Flyto Code is the frontend of a closed-loop security platform. It consumes
+Flyto2 Code is the frontend of a closed-loop security platform. It consumes
 four backend services and surfaces them as a single war room.
 
 ### 3.1 The war room
@@ -469,7 +469,7 @@ The full feature matrix is tracked in
 
 ## 9. Cloud Integration
 
-Flyto Code pushes generated pentest workflows into Flyto Automation
+Flyto2 Code pushes generated pentest workflows into Flyto2 Automation
 (the `flyto-cloud` service) for scheduled execution. The sync is
 flyto-code-authoritative: every scan regenerates the desired set of
 `(folder, template)` rows and diffs them against the cloud state.
@@ -500,7 +500,7 @@ Seven phases. Phase 1 is current. Detailed tracker in
 
 ## 12. Trust Model & Scan Upload
 
-Flyto Code is designed around **progressive trust**: users start with
+Flyto2 Code is designed around **progressive trust**: users start with
 zero trust (offline local scanning) and gradually share more data as
 they gain confidence in the platform. At no level does the server see
 source code — only analysis summaries, function names, and dependency
@@ -511,7 +511,7 @@ graph), L3 (CI automation). Full specification in
 [`flyto-engine/docs/trust-model.md`](../../flyto-engine/docs/trust-model.md).
 
 Most application-security platforms require a GitHub OAuth token (read
-access to all repos) on day one. Flyto asks for nothing — users
+access to all repos) on day one. Flyto2 asks for nothing — users
 `pip install flyto-indexer`, scan locally, and decide what to share.
 
 ---
@@ -534,10 +534,10 @@ access to all repos) on day one. Flyto asks for nothing — users
 
 ## 13. Glossary
 
-- **War room** — the three-column workspace that is Flyto Code's
+- **War room** — the three-column workspace that is Flyto2 Code's
   primary UX.
 - **Closed-loop verification** — the scan → generate-test → execute →
-  verdict → display cycle that distinguishes Flyto Code from listing
+  verdict → display cycle that distinguishes Flyto2 Code from listing
   tools.
 - **Bitsight-style scoring** — 250-900 display score with A-F grade
   bands, floored to 10 to avoid false precision.

@@ -1,4 +1,4 @@
-<h1 align="center">Flyto Landing Page</h1>
+<h1 align="center">Flyto2 Landing Page</h1>
 
 <p align="center">
   <b>The marketing site served at <a href="https://flyto2.com">flyto2.com</a>.</b>

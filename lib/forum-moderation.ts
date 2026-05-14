@@ -55,7 +55,7 @@ const BLOCKED_PATTERNS: RegExp[] = [
   /\b(account\s?farm|bot\s?army|fake\s?reviews?|view\s?bot|engagement\s?farm)\b/i,
   /(刷單|刷評|養號|機器人粉絲|假帳號買賣)/,
 
-  // --- Scalping / reseller bots — Flyto's grey-area users; keep off the public board ---
+  // --- Scalping / reseller bots — Flyto2's grey-area users; keep off the public board ---
   /\b(scalp(er|ing)|sneaker\s?bot|ticket\s?bot|reseller\s?bot)\b/i,
   /(黃牛|搶票機器人|搶鞋機器人|代搶)/,
   /(転売|転バイヤー|チケット転売)/,

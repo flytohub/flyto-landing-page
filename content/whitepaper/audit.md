@@ -1,4 +1,4 @@
-# Flyto Platform -- Whitepaper Audit
+# Flyto2 Platform -- Whitepaper Audit
 
 > 全平台技術審計。涵蓋 8 個專案、411+ 模組、300+ API endpoints。
 
@@ -6,7 +6,7 @@
 
 ## 1. Platform Overview
 
-Flyto 是一個 **全棧工作流自動化平台**，由 8 個專案組成：
+Flyto2 是一個 **全棧工作流自動化平台**，由 8 個專案組成：
 
 | 專案 | 技術 | 定位 |
 |------|------|------|
@@ -25,7 +25,7 @@ Flyto 是一個 **全棧工作流自動化平台**，由 8 個專案組成：
 
 ### 2.1 用戶自主整合，不受平台限制
 
-**vs Zapier/n8n 的根本差異：** 用戶不需要等 Flyto 官方開發整合，可以立即串接任何服務。
+**用戶自主整合機制：** 不需要等官方開發新整合，使用者可立即串接任何外部服務。
 
 **10 種自主整合機制：**
 
@@ -103,7 +103,7 @@ Flyto 是一個 **全棧工作流自動化平台**，由 8 個專案組成：
 
 ### 3.2 執行引擎
 
-**Item Pipeline（相容 n8n 的 pairedItem 概念）：**
+**Item Pipeline（pairedItem 模型，業界相容）：**
 - 2D 結果陣列: `[output_port][item_index]`
 - 每個 Item 可獨立失敗（partial batch execution）
 - Edge 類型: CONTROL, DATA, ITERATE, DONE
@@ -457,55 +457,6 @@ builderStore (facade: metadata + uiState + workflow + execution), collaborationS
 
 **Schema 驅動 i18n：** 從模組 params_schema 自動生成翻譯 key
 
----
-
-## 11. Competitive Differentiators -- 競爭優勢總結
-
-### vs Zapier
-
-| 維度 | Zapier | Flyto |
-|------|--------|-------|
-| 新整合 | 等官方開發（數月） | 10 種機制立即串接 |
-| 開放性 | 封閉平台 | 開源核心 + Plugin 系統 |
-| 執行追蹤 | 基本日誌 | 三層追蹤 + 回放 + 證據 |
-| 部署模式 | 僅 SaaS | SaaS + 企業 + 離線 + 桌面 |
-| 定價 | 按 task 計費 | 按 points 計費（更細粒度） |
-| 協作 | 無 | Git-like fork/PR/merge |
-
-### vs n8n
-
-| 維度 | n8n | Flyto |
-|------|-----|-------|
-| Item Pipeline | pairedItem | 相容 + 2D array + merge 策略 |
-| 回放 | 無 | 從任意步驟回放 + 修改 context |
-| 自癒 | 無 | AI StepHealer + EvolutionMemory |
-| 企業功能 | 基本 | RPA + IDP + Process Mining + State Machine |
-| 瀏覽器 | 需外部 | 內建 50+ 模組 + HumanBehavior + CAPTCHA |
-| 市場模型 | 基本 | Git-like PR/Issue/Fork/Versioning |
-
-### vs UiPath
-
-| 維度 | UiPath | Flyto |
-|------|--------|-------|
-| 授權 | 封閉商業 | Apache-2.0 開源核心 |
-| 價格 | $420/user/month 起 | Free + Pro + Enterprise |
-| 部署 | 繁重安裝 | Tauri 桌面 + Cloud |
-| 現代化 | .NET 為主 | Python + Vue 3 + 雲原生 |
-| API 自動化 | 不擅長 | 原生 HTTP/GraphQL/Webhook |
-
-### Flyto 獨有功能
-
-1. **4 層模組分級** -- FEATURED/STANDARD/TOOLKIT/INTERNAL 減少 UI 雜亂
-2. **連線規則系統** -- 設計時防止語義錯誤
-3. **Evolution Memory** -- 儲存修復並套用到未來執行
-4. **Streaming Execution** -- 逐步派發保護 locked template 的工作流邏輯
-5. **CRDT 即時協作** -- 離線優先、自動衝突解決
-6. **Composite Complexity Scoring** -- 6 維健康評分
-7. **Execution Guard** -- 伺服器端 gate 強制
-8. **Dual-AI Architecture** -- LLM 必須被 Runtime 驗證
-
----
-
 ## 12. Collaboration & Organization -- 協作與組織
 
 ### 12.1 即時協作模式
@@ -744,7 +695,7 @@ git tag v0.x.x -> build-release.yml -> macOS/Windows/Linux -> GitHub Release (fl
 | 每次啟動 Sidecar Secret | 隨機 token 防止本地未授權存取 |
 | Hot-updated flyto-core | 零停機核心更新（~/.flyto/core/） |
 | SQLite 本地可觀測性 | 離線部署也有完整 metrics/alerts/traces |
-| Item Pipeline | 相容 n8n 概念，支援 partial batch failure |
+| Item Pipeline | pairedItem 模型 + partial batch failure |
 | Hook-Driven 擴展 | Lifecycle hooks 讓計量/日誌/自癒模組化掛載 |
 
 ---

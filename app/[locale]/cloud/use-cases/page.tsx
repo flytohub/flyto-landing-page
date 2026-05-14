@@ -74,7 +74,7 @@ const PERSONAS: Persona[] = [
   {
     icon: Code2,
     who: 'Engineering teams',
-    headline: 'The team that already automates with code — and uses Flyto for the bits code is bad at.',
+    headline: 'The team that already automates with code — and uses Flyto2 for the bits code is bad at.',
     pain:
       'You write scripts. You\'ve got Python, you\'ve got Playwright, you can shell anything. But half the things ops needs you to automate touch UIs you don\'t own, change weekly, and aren\'t worth a brittle Selenium script you\'ll maintain.',
     flows: [
