@@ -44,16 +44,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = discoverStaticRoutes(PAGES_ROOT);
   const dynamicRoutes = whitepaperSlugs().map((slug) => `whitepaper/${slug}`);
   const routes = [...staticRoutes, ...dynamicRoutes].sort();
+  const now = new Date();
 
-  return routes.map((route) => ({
-    url: localePath(defaultLocale, route),
-    lastModified: new Date(),
-    changeFrequency: 'weekly',
-    priority: route === '' ? 1.0 : route.includes('/') ? 0.6 : 0.7,
-    alternates: {
-      languages: Object.fromEntries(
-        locales.map((locale) => [locale, localePath(locale, route)]),
-      ),
-    },
-  }));
+  // Emit one <url> entry per (locale × route) combo. Each entry carries
+  // the full hreflang cluster (+ x-default) so Google sees the full
+  // alternates regardless of which entry it crawled first.
+  return routes.flatMap((route) =>
+    locales.map((locale) => ({
+      url: localePath(locale, route),
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: route === '' ? 1.0 : route.includes('/') ? 0.6 : 0.7,
+      alternates: {
+        languages: {
+          ...Object.fromEntries(
+            locales.map((loc) => [loc, localePath(loc, route)]),
+          ),
+          'x-default': localePath(defaultLocale, route),
+        },
+      },
+    })),
+  );
 }

@@ -1,5 +1,13 @@
-# Flyto Robots.txt
-# Next.js URL structure (no .html, trailing-slash dirs)
+# Flyto2 — robots.txt
+#
+# Policy:
+#   - Search engines (Google, Bing, DuckDuckGo etc) — fully allowed
+#   - AI search / citation crawlers (ChatGPT-User, OAI-SearchBot,
+#     PerplexityBot, etc) — allowed, so users can find Flyto2 via
+#     conversational search
+#   - AI training crawlers (GPTBot, ClaudeBot, Google-Extended,
+#     CCBot, Bytespider, ...) — disallowed, content stays out of
+#     training corpora
 
 User-agent: *
 Allow: /
@@ -7,6 +15,139 @@ Allow: /
 Sitemap: https://flyto2.com/sitemap.xml
 LLMs-Txt: https://flyto2.com/llms.txt
 
-# Block Anthropic's training crawler (mirrors prior policy)
+# ============================================================
+# Blocked — AI training crawlers
+# ============================================================
+
+# OpenAI — used to scrape pages for model training.
+# (OAI-SearchBot + ChatGPT-User are NOT this — those are user-driven
+# search retrieval and stay allowed below.)
+User-agent: GPTBot
+Disallow: /
+
+# Anthropic — model training crawler.
 User-agent: anthropic-ai
 Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+# Common Crawl — feeds many AI training pipelines, including past LLM
+# training datasets. Block both casing variants for safety.
+User-agent: CCBot
+Disallow: /
+
+# Google's separate AI training crawler (distinct from Googlebot which
+# powers Search). Disallow only affects Bard / Gemini / Vertex training;
+# regular search indexing is unaffected.
+User-agent: Google-Extended
+Disallow: /
+
+# ByteDance — Bytespider has historically ignored robots.txt; we declare
+# the policy anyway.
+User-agent: Bytespider
+Disallow: /
+
+# Meta — both their AI training and "external agent" crawlers.
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+# Amazon
+User-agent: Amazonbot
+Disallow: /
+
+# Apple
+User-agent: Applebot-Extended
+Disallow: /
+
+# Cohere
+User-agent: cohere-ai
+Disallow: /
+
+User-agent: cohere-training-data-crawler
+Disallow: /
+
+# Mistral
+User-agent: MistralAI-User
+Disallow: /
+
+# Diffbot — used by many AI products to gather web data.
+User-agent: Diffbot
+Disallow: /
+
+# DataForSeo
+User-agent: DataForSeoBot
+Disallow: /
+
+# Omgili / WebzIO — selling web archives, often resold to AI labs.
+User-agent: Omgilibot
+Disallow: /
+
+User-agent: OmgiliBot
+Disallow: /
+
+# ImagesiftBot — used by some image-training datasets.
+User-agent: ImagesiftBot
+Disallow: /
+
+# AI2 (Allen Institute) ARC crawler — research, but explicit policy.
+User-agent: AI2Bot
+Disallow: /
+
+# Timpibot — Timpi search index, sells to AI vendors.
+User-agent: Timpibot
+Disallow: /
+
+# Velen Crawler
+User-agent: Velen Crawler
+Disallow: /
+
+# YouBot
+User-agent: YouBot
+Disallow: /
+
+# Scrapy / generic scraper UAs that don't identify a real product.
+User-agent: Scrapy
+Disallow: /
+
+# ============================================================
+# Explicitly allowed — AI search / citation (user-driven)
+# ============================================================
+# These crawlers fetch on behalf of an end user asking a question.
+# They cite back to the source, which is good for our SEO.
+
+# OpenAI search index (powers ChatGPT search / web browsing for users).
+User-agent: OAI-SearchBot
+Allow: /
+
+# OpenAI ChatGPT browsing on behalf of a logged-in user.
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic — Claude citation crawler (separate from ClaudeBot training).
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google's normal search crawler (kept explicit so changes to the
+# generic-* block above can't accidentally affect it).
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
