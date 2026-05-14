@@ -1,0 +1,88 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ============================================================
+    // Forum — public read, authenticated write, admin moderation
+    // ============================================================
+
+    match /forum_posts/{postId} {
+      // Anyone can read posts (forum is public-readable)
+      allow read: if true;
+
+      // Authenticated users can create their own post
+      allow create: if request.auth != null
+                    && request.resource.data.user_id == request.auth.uid
+                    && request.resource.data.product in ['cloud', 'code']
+                    && request.resource.data.category in ['question', 'bug', 'feature', 'discussion']
+                    && request.resource.data.title is string
+                    && request.resource.data.title.size() >= 5
+                    && request.resource.data.title.size() <= 200
+                    && request.resource.data.body is string
+                    && request.resource.data.body.size() >= 10
+                    && request.resource.data.body.size() <= 10000;
+
+      // Author can update their own post (limited fields); admins can update anything
+      allow update: if request.auth != null
+                    && (
+                      // Author edit — must keep ownership and product/created_at
+                      (resource.data.user_id == request.auth.uid
+                        && request.resource.data.user_id == resource.data.user_id
+                        && request.resource.data.product == resource.data.product
+                        && request.resource.data.created_at == resource.data.created_at)
+                      // Admin override
+                      || isAdmin()
+                      // Reaction-sum / view / reply counters can be incremented atomically
+                      // by anyone authenticated (Firestore increment via FieldValue)
+                      || onlyTouches(['view_count', 'reply_count', 'reaction_sum', 'updated_at'])
+                    );
+
+      // Author can delete their own post; admin can delete any
+      allow delete: if request.auth != null
+                    && (resource.data.user_id == request.auth.uid || isAdmin());
+
+      match /comments/{commentId} {
+        allow read: if true;
+
+        allow create: if request.auth != null
+                      && request.resource.data.user_id == request.auth.uid
+                      && request.resource.data.body is string
+                      && request.resource.data.body.size() >= 1
+                      && request.resource.data.body.size() <= 5000;
+
+        allow update: if request.auth != null
+                      && (resource.data.user_id == request.auth.uid || isAdmin());
+
+        allow delete: if request.auth != null
+                      && (resource.data.user_id == request.auth.uid || isAdmin());
+      }
+
+      match /reactions/{userEmojiId} {
+        allow read: if true;
+
+        // userEmojiId encodes "{uid}_{emoji}" so each user can only set one
+        // record per emoji per target — enforced via document ID uniqueness.
+        allow create, delete: if request.auth != null
+                              && request.auth.uid == userEmojiId.split('_')[0];
+      }
+    }
+
+    // Helpers
+    function isAdmin() {
+      return request.auth != null
+             && (
+               request.auth.token.admin == true
+               || request.auth.token.email == 'admin@flyto2.com'
+             );
+    }
+
+    // Returns true if the update only mutates fields in `allowed`. Used to
+    // permit any authenticated user to bump counters without rewriting the
+    // post body or reassigning ownership.
+    function onlyTouches(allowed) {
+      let changed = request.resource.data.diff(resource.data).affectedKeys();
+      return changed.hasOnly(allowed);
+    }
+  }
+}

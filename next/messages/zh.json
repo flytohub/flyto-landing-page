@@ -1,0 +1,1092 @@
+{
+  "nav": {
+    "home": "首頁",
+    "cloud": "Cloud",
+    "code": "Warroom",
+    "overview": "概覽",
+    "pricing": "定價",
+    "download": "下載",
+    "templates": "範本",
+    "faq": "常見問題",
+    "roadmap": "路線圖",
+    "oss": "開放原始碼",
+    "discussions": "討論區",
+    "waitlist": "加入等候名單",
+    "docs": "文件",
+    "blog": "部落格",
+    "contact": "聯絡我們",
+    "signIn": "登入",
+    "soon": "即將推出",
+    "allProducts": "全部產品"
+  },
+  "footer": {
+    "tagline":        "離線優先的自動化工具,讓你的工作留在自己機器上。",
+    "cloudTagline":   "瀏覽器自動化。一次錄製,永遠重播。",
+    "warroomTagline": "應用程式安全戰情室。閉環驗證。",
+    "products":       "產品",
+    "community":      "社群",
+    "resources":      "資源",
+    "openSource":     "開放原始碼",
+    "privacy":        "隱私權",
+    "terms":          "服務條款",
+    "license":        "授權",
+    "copyright":      "© 2026 FLYTO2 · BUILT IN TAIPEI"
+  },
+  "home": {
+    "metaTitle": "Flyto2 — 一次錄製,永遠重播",
+    "metaDescription": "離線運行的無程式碼瀏覽器自動化。錄一次,重播一輩子。250+ 模組、16 種語言、MIT 授權的引擎。",
+    "hero": {
+      "eyebrow": "FLYTO2 · 離線優先的自動化",
+      "title": "把工作留在",
+      "titleAccent": "你自己的機器上。",
+      "lede": "Flyto2 用同一套離線優先引擎,做兩款產品。一個自動化你在瀏覽器裡的重複工作,一個審你出貨的每一行程式碼的安全姿態。",
+      "reassure": "開源 · 無遙測 · 屬於你"
+    },
+    "video": {
+      "label": "示範影片",
+      "title": "看瀏覽器自動化",
+      "titleAccent": "實際運作。",
+      "subtitle": "不需要技術背景。長版完整走過一個真實流程,短版六十秒看完精華。",
+      "longLabel": "完整示範",
+      "longTitle": "Flyto2 — 完整示範",
+      "longBody": "完整走過:錄一個結帳流程、改一步、重播。兩分鐘,沒有剪接花招。",
+      "shortLabel": "60 秒短片",
+      "shortTitle": "Flyto2 — 60 秒短片",
+      "shortBody": "表單自動填寫。直式、快、適合手機分享。",
+      "moreOnYoutube": "更多影片在 @Flyto2 YouTube 頻道"
+    },
+    "features": {
+      "label": "為什麼選 FLYTO2",
+      "title": "為了你重複在做的工作而打造。",
+      "items": [
+        {
+          "icon": "Video",
+          "title": "錄製任何流程",
+          "body": "點下錄製,做一次任務,按停止。Flyto2 把每次點擊、捲動、輸入、等待都擷取下來。"
+        },
+        {
+          "icon": "Pause",
+          "title": "暫停與檢查",
+          "body": "工作流不是黑盒子。可以單步執行、執行中改值、繼續 — 像是日常工作的除錯器。"
+        },
+        {
+          "icon": "ShieldOff",
+          "title": "離線設計",
+          "body": "在你的機器上跑。憑證、抓的資料、執行紀錄 — 不會送給任何人,包括我們。"
+        },
+        {
+          "icon": "Boxes",
+          "title": "250+ 模組",
+          "body": "CSV、Excel、Stripe、Notion、Postgres、Slack、OpenAI — 接好線,你只要把它們拼起來。"
+        },
+        {
+          "icon": "GitBranch",
+          "title": "分支與合併",
+          "body": "if/else、迴圈、重試、錯誤處理 — 你會寫在程式碼裡的東西,只是變成五秒就讀懂的視覺節點。"
+        },
+        {
+          "icon": "Languages",
+          "title": "16 種語言",
+          "body": "錄製器、執行環境、文件、錯誤訊息 — 全部翻譯。讓你的營運團隊用他們的語言用 Flyto2。"
+        }
+      ]
+    },
+    "stats": {
+      "items": [
+        {
+          "value": "250+",
+          "label": "模組數",
+          "body": "預先接好的節點:CSV、Excel、Stripe、Notion、Slack、AI、SQL — 你本來要自己寫一堆膠水的東西。"
+        },
+        {
+          "value": "16",
+          "label": "語言",
+          "body": "介面、錄製器、執行環境、文件、錯誤訊息 — 翻譯,不是只貼標籤。"
+        },
+        {
+          "value": "100%",
+          "label": "在你的機器",
+          "body": "你的錄製、憑證、執行紀錄。除非主動同意,否則不上雲。從來沒有遙測。"
+        }
+      ]
+    },
+    "codeTeaser": {
+      "label": "另一條產線",
+      "status": "預上線",
+      "title": "Warroom — 應用程式安全戰情室。",
+      "body": "把出貨軟體的安全面收進另一個產品。SCA、SAST、密鑰、授權、CVE、滲透 — 收斂成一個 A–F 健康分數。",
+      "cta": "前往 Warroom"
+    },
+    "faq": {
+      "label": "常見問題",
+      "title": "先答好你會問的問題。",
+      "subtitle": "如果你正在替團隊評估 Flyto2,這些是大家最常先問的。",
+      "items": [
+        {
+          "q": "Flyto2 真的是免費而且開源嗎?",
+          "a": "是。執行引擎 `flyto-core` 是 MIT 授權,放在 GitHub 上。你今天就可以從 PyPI 安裝、不開帳號就跑。雲端版是疊在上面的付費選項 — 從來不是必需。"
+        },
+        {
+          "q": "和 Zapier 或 Make 有什麼不同?",
+          "a": "Zapier 和 Make 是在雲端連 SaaS API。Flyto2 是錄製和重播實際的瀏覽器 — 包括沒有公開 API 的網站 — 而且在你自己的機器上跑。如果你的銀行、ERP、廠商系統不在 Zapier 的目錄裡,那就是 Flyto2 在補的洞。"
+        },
+        {
+          "q": "我自動化的網站改版了會怎樣?",
+          "a": "Flyto2 錄的是語意動作(「按登入」),不是脆弱的 CSS 選擇器。網站重新換皮,大多數流程會繼續跑。真的有步驟壞了,你暫停、改那一步、繼續 — 不用整個流程重寫。"
+        },
+        {
+          "q": "團隊可以分享工作流嗎?",
+          "a": "可以。工作流是純文字檔,可以提交到 git、透過內建市集分享、或丟到 Slack 給同事。執行紀錄留在本機,只有工作流定義會旅行。"
+        },
+        {
+          "q": "費用怎麼算?",
+          "a": "桌面版和開源引擎個人使用免費。Pro 和 Team 版加上代管排程、共用市集、優先支援 — 詳細定價在 Cloud 頁。"
+        }
+      ]
+    },
+    "cta": {
+      "label": "探索平台",
+      "title": "兩款產品。同一個哲學。",
+      "body": "Cloud 已出貨,Warroom 在路上。底層共用同一套離線優先引擎 — 挑今天能解決你問題的那個。",
+      "primary": "前往 Cloud",
+      "secondary": "前往 Warroom"
+    },
+    "products": {
+      "label": "兩款產品",
+      "title": "挑能解決今天問題的那個。",
+      "subtitle": "同一套引擎、同一種哲學。每款產品有自己的目標族群、自己的頁、自己的定價。",
+      "cloud": {
+        "name": "Cloud",
+        "statusLabel": "出貨中",
+        "tagline": "無程式碼瀏覽器自動化。一次錄製,永遠重播。",
+        "point1": "錄製任何瀏覽器流程,不用寫選擇器",
+        "point2": "執行中可暫停、檢查、改值、繼續",
+        "point3": "250+ 預先接好的模組 — CSV、Stripe、Notion、Slack、OpenAI",
+        "cta": "前往 Cloud"
+      },
+      "warroom": {
+        "name": "Warroom",
+        "statusLabel": "預上線",
+        "tagline": "應用程式安全戰情室。SCA、SAST、密鑰、授權、CVE — 一張作戰圖。",
+        "point1": "A–F 健康分數,把所有訊號收斂成一個成績",
+        "point2": "可達性分析 — 修真的會跑到的 CVE",
+        "point3": "今天可裝的開源 CLI,代管戰情室緊接著上",
+        "cta": "前往 Warroom"
+      }
+    },
+    "benefits": {
+      "items": [
+        {
+          "iconName": "Zap",
+          "metric": "1.2 秒",
+          "title": "中位執行時間",
+          "body": "大多數工作流兩秒內結束。跑得跟你動作一樣快。"
+        },
+        {
+          "iconName": "ShieldOff",
+          "metric": "0",
+          "title": "送出去的 byte",
+          "body": "憑證、執行紀錄全在你機器上。沒有遙測,沒有偷偷回家。"
+        },
+        {
+          "iconName": "Code2",
+          "metric": "MIT",
+          "title": "開源核心",
+          "body": "讀程式碼、Fork、出貨。執行引擎在 GitHub + PyPI 上。"
+        },
+        {
+          "iconName": "Globe2",
+          "metric": "16",
+          "title": "語言",
+          "body": "錄製器、執行環境、文件、錯誤訊息 — 全部翻譯,不只貼標籤。"
+        }
+      ]
+    },
+    "examples": {
+      "label": "真實工作流",
+      "title": "別人實際做出來的東西。",
+      "subtitle": "每張卡都是 Flyto2 端到端跑過的工作流 — 錄一次、按時程重播、產出歸檔到你想要的地方。",
+      "viewWorkflow": "檢視這個工作流",
+      "items": [
+        {
+          "category": "每日摘要",
+          "title": "Hacker News 早報",
+          "body": "每天 7 點抓 Top 30、用 OpenAI 摘要、開站立會議前推到私 Slack。",
+          "metric": "執行 · 每日 06:55"
+        },
+        {
+          "category": "開發情報",
+          "title": "GitHub trending 追蹤",
+          "body": "盯一個 tag 的 trending,新 repo 寫進 Sheets 帶 stars、licence、語言。",
+          "metric": "執行 · 每小時"
+        },
+        {
+          "category": "效能",
+          "title": "Pagespeed 批次稽核",
+          "body": "吃一份 URL CSV,回一張 Sheet 含 mobile/desktop 分數、Core Web Vitals 變化、退步 Slack 通知。",
+          "metric": "執行 · 每週"
+        },
+        {
+          "category": "安全",
+          "title": "Security headers 巡邏",
+          "body": "探測一群 domain,給 header 評分,按 owner 歸檔。取代沒人有空維護的季度稽核腳本。",
+          "metric": "執行 · 每月"
+        }
+      ]
+    },
+    "integrations": {
+      "label": "整合",
+      "title": "開箱即用 250+ 模組。",
+      "subtitle": "配線都接好了。拖拉、設定、跑 — 不用再寫一次「把 Sheet A 的這列複製到 API B」這種腳本。",
+      "andMore": "+ 230 個更多 · 也可以自己用 Python / JS 寫"
+    }
+  },
+  "cloud": {
+    "metaTitle": "Cloud — 無程式碼瀏覽器自動化",
+    "metaDescription": "一次錄製,永遠重播。離線運行的無程式碼瀏覽器自動化。250+ 模組,16 種語言,MIT 授權的引擎。",
+    "hero": {
+      "eyebrow": "01 / CLOUD",
+      "status": "出貨中",
+      "title": "瀏覽器工作,",
+      "titleAccent": "自動駕駛。",
+      "lede": "打開錄製器,做一次任務,按停止。Cloud 把它變成可以編輯、版本控管、排程、分享的結構化工作流 — 一行程式碼都不用寫。",
+      "ctaPrimary": "下載桌面版",
+      "ctaSecondary": "瀏覽 250+ 模組"
+    },
+    "how": {
+      "label": "運作方式",
+      "title": "從手動到自動,只要三步。",
+      "items": [
+        {
+          "step": "01",
+          "icon": "Video",
+          "title": "錄製",
+          "body": "按下錄製鈕,做一次任務。Flyto2 把點擊、捲動、輸入、等待 — 每一步,按順序,在本機擷取下來。"
+        },
+        {
+          "step": "02",
+          "icon": "GitBranch",
+          "title": "編輯",
+          "body": "把 if/else、迴圈、重試、憑證做成視覺節點。執行中可以暫停看一個值、改它、繼續。"
+        },
+        {
+          "step": "03",
+          "icon": "Repeat",
+          "title": "重播",
+          "body": "按需求跑、按時程跑、從 CLI 跑。Flyto2 在你的機器上完整重現每一步,留下完整稽核軌跡。"
+        }
+      ]
+    },
+    "features": {
+      "label": "能力",
+      "title": "為了你重複在做的工作而打造。",
+      "items": [
+        {
+          "icon": "Video",
+          "title": "錄製任何流程",
+          "body": "打開錄製器,做一次任務,按停止。Flyto2 把步驟擷取成結構化的工作流,可以編輯、分享。"
+        },
+        {
+          "icon": "Pause",
+          "title": "暫停與檢查",
+          "body": "工作流不是黑盒子。可以單步執行、執行中改值、繼續 — 像是日常工作的除錯器。"
+        },
+        {
+          "icon": "ShieldOff",
+          "title": "離線設計",
+          "body": "在你的機器上跑。憑證、抓的資料、執行紀錄 — 不會送給任何人,包括我們。"
+        },
+        {
+          "icon": "Boxes",
+          "title": "250+ 模組",
+          "body": "CSV、Excel、Stripe、Notion、Sheets、Postgres、Slack、OpenAI — 接好線,你只要把它們拼起來。"
+        },
+        {
+          "icon": "GitBranch",
+          "title": "分支與合併",
+          "body": "if/else、迴圈、重試、錯誤處理 — 你會寫在程式碼裡的東西,只是變成五秒就讀懂的視覺節點。"
+        },
+        {
+          "icon": "Languages",
+          "title": "16 種語言",
+          "body": "錄製器、執行環境、文件、錯誤訊息 — 全部翻譯。"
+        }
+      ]
+    },
+    "useCases": {
+      "label": "使用場景",
+      "title": "大家最常先自動化什麼。",
+      "items": [
+        {
+          "icon": "FileText",
+          "title": "發票與收據抓取",
+          "body": "每週一登入廠商系統、下載 PDF、按客戶歸檔、把總額推到 Sheets — 不用碰鍵盤。"
+        },
+        {
+          "icon": "Database",
+          "title": "跨系統資料同步",
+          "body": "你常用的 SaaS 不和財務的 SaaS 講話時,Flyto2 錄下橋樑、每晚跑一次。"
+        },
+        {
+          "icon": "Search",
+          "title": "價格與競品監控",
+          "body": "拜訪一份 URL、抓價格、寫到 CSV、有變化就通知 Slack。兩週的實習生工作,一個下午自動化掉。"
+        },
+        {
+          "icon": "Mail",
+          "title": "Lead 路由與富化",
+          "body": "從 CRM 拉、走公開網路富化、加標籤再丟回去。沒有 Zapier 中間人,沒有月任務上限。"
+        }
+      ]
+    },
+    "faq": {
+      "label": "常見問題",
+      "title": "Cloud — 大家最常問的。",
+      "subtitle": "錄製、重播、安全、定價 — 營運和 IT 主管在批核工具前會先問的問題。",
+      "items": [
+        {
+          "q": "沒有公開 API 的網站,Cloud 跑得動嗎?",
+          "a": "這就是它的工作。只要你能在瀏覽器裡做的事,Flyto2 就能錄製和重播 — 內部入口、政府網站、舊 ERP、哪都行。"
+        },
+        {
+          "q": "真的是在我自己的機器上跑嗎?",
+          "a": "是。桌面版內建 Chromium 引擎和工作流執行環境。你的憑證、錄製步驟、執行歷史都在你的硬碟裡。雲端是排程、分享、團隊功能的選配。"
+        },
+        {
+          "q": "網站改版會怎樣?",
+          "a": "Flyto2 錄的是語意意圖(「按登入」、「填 email 欄位」),不是脆弱的 XPath。網站換皮,大多數流程繼續跑。某一步壞了,你只在視覺編輯器裡修那一步。"
+        },
+        {
+          "q": "可以從 CI 或腳本觸發工作流嗎?",
+          "a": "可以。每個工作流都有 CLI 指令和 webhook URL。從 cron、GitHub Actions、你自己的後端、或 Flyto2 代管排程跑都行 — 同一份工作流檔,同樣的結果。"
+        },
+        {
+          "q": "二階段驗證和 CAPTCHA 怎麼處理?",
+          "a": "Flyto2 可以暫停、提示你(或團隊裡某個人)完成 2FA,然後繼續。CAPTCHA 我們刻意不繞過 — 在禁止自動化的網站上用 Flyto2,責任在你不在我們。"
+        },
+        {
+          "q": "怎麼定價?",
+          "a": "桌面版和開源引擎個人使用免費。Pro 加上代管排程和雲端無限執行;Team 加上共用市集和 SSO。詳細定價在 Cloud 頁。"
+        }
+      ]
+    },
+    "cta": {
+      "label": "開始使用",
+      "title": "一次錄製,每個禮拜一自動跑。",
+      "body": "下載桌面版,五分鐘錄好你的第一個工作流,看它永遠重播。",
+      "primary": "免費下載",
+      "secondary": "閱讀文件"
+    },
+    "codeSample": {
+      "label": "幕後",
+      "title": "它就是一個你看得懂的檔案。",
+      "subtitle": "錄好的工作流是一個 JSON 檔。提交到 git、code review 看 diff、從 CI 跑、從任何地方觸發。",
+      "point1": "純 JSON — 不是私有二進位格式",
+      "point2": "從 CLI、webhook、cron、自家後端觸發都行",
+      "point3": "一行指令 export 成 GitHub Actions、GitLab CI 或 Jenkins"
+    },
+    "comparison": {
+      "label": "對比其他選項",
+      "title": "為什麼有人從別家換到 Flyto2。",
+      "subtitle": "Zapier、Make、Selenium 各補一塊。需要瀏覽器真實行為、跑在自己機器上、不按工作量計費時 — 你會用 Flyto2。",
+      "featureHeader": "你需要的能力",
+      "data": {
+        "rows": [
+          {
+            "feature": "錄製真實瀏覽器動作",
+            "values": [
+              "yes",
+              "no",
+              "no",
+              "yes"
+            ]
+          },
+          {
+            "feature": "離線跑 / 在自己機器上",
+            "values": [
+              "yes",
+              "no",
+              "no",
+              "yes"
+            ]
+          },
+          {
+            "feature": "個人使用免費",
+            "values": [
+              "yes",
+              "partial",
+              "partial",
+              "yes"
+            ]
+          },
+          {
+            "feature": "視覺編輯器(免寫程式)",
+            "values": [
+              "yes",
+              "yes",
+              "yes",
+              "no"
+            ]
+          },
+          {
+            "feature": "執行中可暫停、檢查、繼續",
+            "values": [
+              "yes",
+              "no",
+              "no",
+              "partial"
+            ]
+          },
+          {
+            "feature": "按 points 計價,不是按 task",
+            "values": [
+              "yes",
+              "no",
+              "no",
+              "yes"
+            ]
+          },
+          {
+            "feature": "工作流是純 JSON",
+            "values": [
+              "yes",
+              "no",
+              "no",
+              "no"
+            ]
+          },
+          {
+            "feature": "開源引擎",
+            "values": [
+              "yes",
+              "no",
+              "no",
+              "yes"
+            ]
+          }
+        ]
+      }
+    },
+    "recipes": {
+      "label": "預錄方",
+      "title": "一行指令,真實結果。",
+      "subtitle": "Recipe 是已經接好線、跑過的工作流。裝 Cloud、`flyto recipe [name]`,直接拿到報表。基本款不需要設定也不需要 API key。",
+      "items": [
+        {
+          "iconName": "Search",
+          "name": "competitor-intel",
+          "command": "flyto recipe competitor-intel --url https://competitor.com/pricing",
+          "body": "抓定價方案、桌機 + 手機截圖、Web Vitals、SEO meta,回一份結構化 JSON 報表。",
+          "outputs": [
+            "pricing.json",
+            "intel-desktop.png",
+            "intel-mobile.png",
+            "vitals",
+            "seo"
+          ]
+        },
+        {
+          "iconName": "Activity",
+          "name": "full-audit",
+          "command": "flyto recipe full-audit --url https://example.com",
+          "body": "Web Vitals + SEO + 無障礙(alt 標籤、label)+ console 錯誤 + 行動/桌機截圖 + 可印 PDF。",
+          "outputs": [
+            "audit.json",
+            "audit-desktop.png",
+            "audit-mobile.png",
+            "audit-page.pdf"
+          ]
+        },
+        {
+          "iconName": "Globe",
+          "name": "site-audit",
+          "command": "flyto recipe site-audit --url https://github.com",
+          "body": "SEO + 效能稽核 — meta、heading、缺 alt、Web Vitals、整頁截圖。比 full-audit 輕,幾秒就跑完。",
+          "outputs": [
+            "report.json",
+            "page.png"
+          ]
+        },
+        {
+          "iconName": "Camera",
+          "name": "screenshot",
+          "command": "flyto recipe screenshot --url https://flyto2.com --device mobile",
+          "body": "任意 viewport 像素級精準截圖。QA、設計 review、每日變化偵測 diff 都用得上。",
+          "outputs": [
+            "screenshot.png"
+          ]
+        }
+      ]
+    }
+  },
+  "code": {
+    "metaTitle": "Warroom — 應用程式安全戰情室",
+    "metaDescription": "SCA、SAST、密鑰、授權、CVE、滲透、執行期 — 為你的程式碼提供一張完整作戰圖。預上線中。",
+    "hero": {
+      "eyebrow": "02 / CODE",
+      "status": "預上線",
+      "title": "一個戰情室。",
+      "titleAccent": "所有攻擊面。",
+      "lede": "SCA、SAST、密鑰偵測、授權稽核、CVE 處置、滲透工作流、執行期遙測。Warroom 為你出貨的每一行程式碼提供一張安全作戰圖。",
+      "ctaPrimary": "加入等候名單",
+      "ctaSecondary": "試用開源 CLI"
+    },
+    "showcase": {
+      "label": "戰情室內部",
+      "title": "你實際會看到的畫面。",
+      "subtitle": "私有測試版的截圖。點縮圖切換主畫面。"
+    },
+    "scans": {
+      "label": "掃描什麼",
+      "title": "八個訊號,一個健康分數。",
+      "subtitle": "每個專案都會收斂成一個 A–F 分數,把攻擊者真正會用的東西收進來。可以鑽進任何訊號看細節、修法建議、和 AI 自動產的修補 PR。",
+      "items": [
+        {
+          "icon": "Boxes",
+          "title": "SCA",
+          "body": "lockfile 中的弱點依賴,以可達性加權 — 不只是「有 CVE」。"
+        },
+        {
+          "icon": "Code2",
+          "title": "SAST",
+          "body": "從不可信輸入到危險落點的 source-level taint flow,AST-aware。"
+        },
+        {
+          "icon": "KeyRound",
+          "title": "密鑰",
+          "body": "硬寫的 API 金鑰、token、憑證 — 掃整個 git 歷史,不只 HEAD。"
+        },
+        {
+          "icon": "ScrollText",
+          "title": "授權",
+          "body": "GPL 污染、商用不相容授權、缺失的 attribution。"
+        },
+        {
+          "icon": "Bug",
+          "title": "CVE",
+          "body": "新 CVE 對你的依賴樹做 live triage,附上重放 POC。"
+        },
+        {
+          "icon": "Crosshair",
+          "title": "滲透",
+          "body": "Pentest-as-code:錄一次攻擊鏈,對每次發版重播。"
+        },
+        {
+          "icon": "Activity",
+          "title": "執行期",
+          "body": "生產環境遙測、漂移偵測、kill-switch — Phase IV。"
+        },
+        {
+          "icon": "FileCheck2",
+          "title": "合規",
+          "body": "SOC 2、ISO 27001、區域資料駐留姿態 — Phase V。"
+        }
+      ]
+    },
+    "phases": {
+      "label": "路線圖",
+      "title": "六階段,一個平台。",
+      "items": [
+        {
+          "n": "I",
+          "title": "基礎建設",
+          "status": "出貨中",
+          "body": "索引器、搜尋、依賴圖、A–F 健康分數。"
+        },
+        {
+          "n": "II",
+          "title": "靜態分析",
+          "status": "出貨中",
+          "body": "SCA、SAST、密鑰掃描、授權稽核 — 開源 CLI。"
+        },
+        {
+          "n": "III",
+          "title": "動態分析",
+          "status": "下一步",
+          "body": "Pentest-as-code、執行期探針、CVE 重放。"
+        },
+        {
+          "n": "IV",
+          "title": "執行期",
+          "status": "規劃中",
+          "body": "生產環境遙測、漂移偵測、Kill-switch。"
+        },
+        {
+          "n": "V",
+          "title": "合規",
+          "status": "規劃中",
+          "body": "SOC 2、ISO 27001、區域資料駐留姿態。"
+        },
+        {
+          "n": "VI",
+          "title": "聯邦",
+          "status": "規劃中",
+          "body": "為安全團隊打造的多組織戰情室。"
+        }
+      ]
+    },
+    "faq": {
+      "label": "常見問題",
+      "title": "Warroom — 加等候名單前先問清楚。",
+      "subtitle": "什麼時候上、和別人差在哪、現在能玩什麼。",
+      "items": [
+        {
+          "q": "Warroom 什麼時候上?",
+          "a": "Phase I 和 Phase II(基礎建設 + 靜態分析)已經在私有測試。Phase III(動態分析)是下一個公開里程碑 — 2026 年中早期存取。加等候名單拿 OSS CLI 和邀請碼。"
+        },
+        {
+          "q": "和 Snyk、Aikido、GitHub Advanced Security 差在哪?",
+          "a": "兩個差別。(1) 一個分數涵蓋 SCA、SAST、密鑰、授權、CVE、滲透、執行期 — 不是八個工具要你自己關聯。(2) Pentest-as-code:錄一次攻擊鏈,對每次發版重播 — 跟 Cloud 重播瀏覽器流程一樣。"
+        },
+        {
+          "q": "現在能玩什麼?",
+          "a": "可以。`pip install flyto-indexer` 給你 OSS 掃描器 — 搜尋、引用、影響分析、死碼偵測、AST taint analysis。Phase III 上線後,代管戰情室疊在上面。"
+        },
+        {
+          "q": "我的原始碼會上雲嗎?",
+          "a": "預設不會。CLI 在本地跑,產出本地索引。代管戰情室可以接收 findings(不是原始碼)做跨專案彙整;原始碼上傳是每個專案 opt-in。Self-hosted 是 Phase V 的選項。"
+        },
+        {
+          "q": "支援私有 repo 嗎?",
+          "a": "OSS CLI 不在乎你的程式碼放哪。代管戰情室預設支援 GitHub、GitLab、Bitbucket、自架 Git。"
+        },
+        {
+          "q": "戰情室可以 self-host 嗎?",
+          "a": "Self-hosted 在路線圖上(Phase V,跟合規一起)。OSS 掃描器今天就可以 self-host;代管 UI/orchestrator 接著上。"
+        }
+      ]
+    },
+    "closedLoop": {
+      "label": "差異化",
+      "title": "閉環驗證。",
+      "subtitle": "其他安全工具報完警告就停了。Warroom 把每個 finding 變成 YAML pentest、用真實瀏覽器對你的 staging 跑、回一個判決 — 可重現、被擋下、不可達。",
+      "find": {
+        "title": "發現",
+        "body": "SCA、SAST、密鑰、授權、IaC。同一次掃描順便把你的程式碼解析成 call graph 與架構圖。",
+        "signal": "scan"
+      },
+      "craft": {
+        "title": "生成",
+        "body": "對每個跟安全有關的 finding,產出一個範圍鎖在受影響路由上的 YAML pentest 工作流。",
+        "signal": "yaml"
+      },
+      "run": {
+        "title": "執行",
+        "body": "在真實 Chrome session 裡對 staging 跑工作流。今天就有 12 支官方 OWASP / LLM / 業務邏輯 playbook。",
+        "signal": "live"
+      },
+      "verdictStep": {
+        "title": "判決",
+        "body": "採集 HMAC 簽章證據、回報 exploitable / sanitized / unreachable、把工作流入 regression vault 每晚重跑。",
+        "signal": "ledger"
+      },
+      "verdict": {
+        "exploitable": {
+          "title": "可重現",
+          "body": "弱點端到端跑通。證據包附上。提到處理佇列最前面。"
+        },
+        "sanitized": {
+          "title": "被擋下",
+          "body": "被下游控制(auth、WAF、framework)擋住。記下來、降優先。"
+        },
+        "unreachable": {
+          "title": "不可達",
+          "body": "弱點程式碼存在,但沒有 user input 路徑能走到。承認、低優先。"
+        }
+      }
+    },
+    "proof": {
+      "label": "實證",
+      "title": "我們對 OWASP Juice Shop 跑過。",
+      "subtitle": "不是合成沙箱。經典的故意做漏洞的電商 app,端到端走過閉環。一次 campaign 跑出這些。",
+      "caption": "每個 finding 都附 HMAC 簽章證據包。攻擊鏈每晚透過 regression vault 重跑 — 修了就會驗證它有沒有壞回去。",
+      "data": {
+        "metric": [
+          {
+            "value": "5",
+            "label": "BREACH 級攻擊鏈"
+          },
+          {
+            "value": "11",
+            "label": "Critical findings"
+          },
+          {
+            "value": "12",
+            "label": "Pentest playbook"
+          },
+          {
+            "value": "100%",
+            "label": "每晚可重跑"
+          }
+        ],
+        "chain": [
+          {
+            "vector": "SQLi · login",
+            "finding": "POST /rest/user/login 的 `email` 欄套套邏輯繞過驗證 — 跳過 auth、發出 session token。"
+          },
+          {
+            "vector": "Token theft",
+            "finding": "從 response 抽出 JWT、解碼 — 沒有 admin claim,但簽章金鑰跨 user 共用。"
+          },
+          {
+            "vector": "Chained IDOR",
+            "finding": "GET /api/Users/{id} 接受任意 id;server 回完整紀錄含密碼 hash。"
+          },
+          {
+            "vector": "Privilege escalation",
+            "finding": "用洩漏的金鑰偽造 JWT、設 role=admin、重送請求 — admin 端點回 200。"
+          },
+          {
+            "vector": "Data exfiltration",
+            "finding": "GET /api/Orders 列舉每個客戶的購買紀錄。證據包大小 2.4 MB。"
+          }
+        ]
+      }
+    },
+    "features": {
+      "label": "戰情室裡",
+      "title": "七個視角,一個事實源。",
+      "subtitle": "Warroom 的每個面板都對應安全團隊已經在問的問題。這些就是你進戰情室實際看到的東西。",
+      "items": [
+        {
+          "label": "儀表板",
+          "title": "一個 A–F 分數,管所有專案。",
+          "body": "把每個訊號 — SCA、SAST、密鑰、授權、CVE、執行期 — 收斂成一個成績。CISO 看標題,工程師鑽進在流血的那塊。",
+          "imageAlt": "Warroom 健康儀表板含 A–F 評分",
+          "bullets": [
+            "每個類別的趨勢線",
+            "依團隊與服務的彙整",
+            "自動產生的週報"
+          ]
+        },
+        {
+          "label": "可達性",
+          "title": "哪些 CVE 真的會被跑到。",
+          "body": "大多數 CVE 警告是雜訊 — 弱點函式根本沒被你的程式碼呼叫到。可達性分析追真實 call path,讓你修真正會被打的 5%,不是 95% 不會被打的。",
+          "imageAlt": "可達性分析顯示可被利用的呼叫路徑",
+          "bullets": [
+            "靜態 + 動態 call graph",
+            "跨 package 的 taint 傳播",
+            "誤報率用測的,不是宣稱的"
+          ]
+        },
+        {
+          "label": "依賴關係",
+          "title": "把你的供應鏈畫出來。",
+          "body": "所有直接與遞移依賴,按風險加權,疊上 CVE。點任一節點看誰把它拉進來、它接下來拉誰、你哪個服務依賴它。",
+          "imageAlt": "帶弱點疊加的依賴圖",
+          "bullets": [
+            "授權 + 維護者風險疊圖",
+            "抓出多版本鎖在不同地方的重複",
+            "monorepo 設定自動帶出 ownership 標籤"
+          ]
+        },
+        {
+          "label": "架構",
+          "title": "你 codebase 的整體形狀。",
+          "body": "模組、服務、資料流、ownership 邊界 — 直接從原始碼推導出來,不是六個月沒更新的 wiki。完全不靠註解就能讀,出貨越多越精確。",
+          "imageAlt": "服務與模組的架構圖",
+          "bullets": [
+            "從 build file 自動發現服務",
+            "標出跨邊界呼叫",
+            "diff 上一版抓漂移"
+          ]
+        },
+        {
+          "label": "API 表面",
+          "title": "每個端點都列冊。",
+          "body": "REST、gRPC、GraphQL — Warroom 從你的 handler 找出來,列出收什麼、回什麼、誰呼叫。Auth 缺口和未驗證端點自動浮上來。",
+          "imageAlt": "API 端點清單含 auth metadata",
+          "bullets": [
+            "每條路由的 auth 策略欄",
+            "對外 vs 對內分類",
+            "任何框架都能 export OpenAPI"
+          ]
+        },
+        {
+          "label": "基礎設施",
+          "title": "同一輪掃 IaC。",
+          "body": "Terraform、Kubernetes manifest、Dockerfile — Warroom 跟應用程式碼一起讀,安全姿態與執行期拓樸一次跑出來。",
+          "imageAlt": "基礎設施即代碼掃描畫面",
+          "bullets": [
+            "Terraform、Helm、K8s、Dockerfile",
+            "錯誤設定目錄跟著 CIS 同步",
+            "漂移偵測:部署的 vs 簽進去的"
+          ]
+        },
+        {
+          "label": "脈動",
+          "title": "安全姿態隨時間漂移。",
+          "body": "一個團隊級的即時跑馬燈,顯示什麼變了、何時變的、影響分數多少。不是用來瀏覽的儀表板,是用來「察覺」的儀表板。",
+          "imageAlt": "顯示安全姿態漂移時間線的脈動視圖",
+          "bullets": [
+            "每個工程師對風險變動的貢獻",
+            "分數突降的升級規則",
+            "可重播歷史 — 看哪個 commit 動了指針"
+          ]
+        }
+      ]
+    },
+    "cta": {
+      "label": "搶先體驗",
+      "title": "第一個進戰情室。",
+      "body": "代管戰情室是瀏覽器版 — 不用裝 app。加等候名單拿 Phase III 開放邀請,今天就先抓開源掃描器。",
+      "primary": "加入等候名單",
+      "secondary": "安裝開源掃描器"
+    }
+  },
+  "download": {
+    "metaTitle": "下載 Flyto2",
+    "metaDescription": "下載 Flyto2 — macOS、Windows、Linux 桌面版免費。離線運行的瀏覽器自動化,不需開帳號。",
+    "downloadFor": "下載 {os} 版",
+    "allReleases": "在 GitHub 上看所有版本",
+    "hero": {
+      "eyebrow": "桌面版 · 免費",
+      "title": "下載",
+      "titleAccent": "Flyto2。",
+      "lede": "個人使用永久免費。macOS、Windows、Linux,內建開源引擎。不開帳號、不發遙測、離線跑。"
+    },
+    "docker": {
+      "title": "用 Docker 自架",
+      "body": "在容器裡跑同一套引擎 — 適合無頭伺服器、CI agent 或氣隙企業環境部署。",
+      "cta": "Docker Hub"
+    },
+    "oss": {
+      "title": "或就要引擎,直接 PyPI",
+      "body": "執行核心是 MIT 授權的 Python。當函式庫裝、用 CLI、嵌進你自己的 pipeline。",
+      "cta": "在 GitHub 看原始碼"
+    },
+    "cta": {
+      "label": "其他資源",
+      "title": "需要更具體的東西?",
+      "body": "想找舊版、不同架構、或要進入受規範環境部署?到 GitHub releases 或文件看看。",
+      "primary": "前往 releases",
+      "secondary": "閱讀文件"
+    }
+  },
+  "pricing": {
+    "metaTitle": "定價 — Flyto2",
+    "metaDescription": "個人使用永久免費。Pro 每月 $9、Team 每月 $19。離線運行的瀏覽器自動化,定價透明。",
+    "perMonth": "/ 每月",
+    "mostPopular": "最熱門",
+    "priceFootnote": "USD · 隨時取消 · 開始不需信用卡",
+    "hero": {
+      "eyebrow": "定價",
+      "title": "個人永久免費。",
+      "titleAccent": "需要時再升級。",
+      "lede": "桌面版和開源引擎個人用免費。需要代管排程、團隊管理或更高月運算量時再升級。"
+    },
+    "plans": {
+      "free": {
+        "label": "免費",
+        "name": "Free",
+        "tagline": "個人探索自動化。",
+        "feature1": "每月 1,000 運算點數",
+        "feature2": "最多 5 個工作流",
+        "feature3": "全部 250+ 模組",
+        "feature4": "社群支援",
+        "cta": "免費下載"
+      },
+      "pro": {
+        "label": "PRO",
+        "name": "Pro",
+        "tagline": "每天跑自動化的進階使用者。",
+        "feature1": "每月 50,000 運算點數",
+        "feature2": "無限工作流",
+        "feature3": "代管排程 — cron、webhook、retry",
+        "feature4": "優先支援,24 小時 SLA",
+        "feature5": "可發布到市集",
+        "cta": "從 Pro 開始"
+      },
+      "team": {
+        "label": "TEAM",
+        "name": "Team",
+        "tagline": "營運團隊跨公司共用工作流。",
+        "feature1": "每月 200,000 運算點數",
+        "feature2": "最多 10 席",
+        "feature3": "RBAC 與共用市集",
+        "feature4": "SSO(Google、Microsoft)",
+        "feature5": "專屬導入",
+        "cta": "從 Team 開始"
+      }
+    },
+    "faq": {
+      "label": "常見問題",
+      "title": "定價問題,先答清楚。",
+      "subtitle": "運算點數、席次上限、計費 — 買家刷卡前會問的問題。",
+      "items": [
+        {
+          "q": "什麼是「運算點數」?",
+          "a": "一個 point 大致等於一個工作流步驟(一次點擊、一個 CSV 列、一次 API 呼叫)。50,000 點數約等於每月 100 小時的典型瀏覽器自動化。"
+        },
+        {
+          "q": "免費方案真的永久免費?",
+          "a": "是。桌面版和開源引擎個人使用永久免費。免費版唯一沒有的就是代管排程和團隊功能。"
+        },
+        {
+          "q": "超過月點數會怎樣?",
+          "a": "工作流暫停到下一週期,或加購 $0.20 / 1,000 點數。我們不會偷偷超收 — 加購前會請你確認。"
+        },
+        {
+          "q": "有年付折扣嗎?",
+          "a": "年付 Pro 和 Team 省 20%。教育和非營利有折扣 — 寫信到 info@flyto2.com。"
+        },
+        {
+          "q": "可以 self-host 嗎?",
+          "a": "可以。PyPI 上的開源引擎除了代管排程之外什麼都跑得了。企業版含 SSO、氣隙部署在路線圖上。"
+        }
+      ]
+    },
+    "cta": {
+      "label": "還在猶豫",
+      "title": "先試,再付。",
+      "body": "下載免費桌面版,錄一個工作流,看 Flyto2 適不適合你正在解的問題。決定值得了再升級。",
+      "primary": "免費下載",
+      "secondary": "閱讀文件"
+    }
+  },
+  "forum": {
+    "titleCloud":    "Cloud — 討論區",
+    "subtitleCloud": "問問題、回報 bug、分享工作流。所有人都看得到,免費 Flyto2 帳號就能發文。",
+    "titleCode":     "Warroom — 討論區",
+    "subtitleCode":  "安全、掃描、閉環驗證。公開閱讀,免費帳號發文。",
+    "auth": {
+      "loading":        "檢查登入狀態中…",
+      "title":          "登入後繼續",
+      "subtitle":       "貼文會綁你的帳號,這樣我們才能標你的名字在回覆中、有人回你時通知你。Email 不會公開。",
+      "continueGoogle": "用 Google 繼續",
+      "or":             "或",
+      "email":          "Email",
+      "password":       "密碼",
+      "signIn":         "登入",
+      "signUp":         "建立帳號",
+      "switchToSignUp": "還沒帳號?建立一個",
+      "switchToSignIn": "已經有帳號了?登入",
+      "signOut":        "登出",
+      "error":          "出了點問題,再試一次。",
+      "reason": {
+        "post":    "登入才能發文",
+        "comment": "登入才能回覆",
+        "react":   "登入才能按反應"
+      }
+    },
+    "list": {
+      "compose":       "發新文",
+      "composeSignIn": "登入發文",
+      "loadMore":      "載入更多",
+      "empty":         "還沒有貼文 — 第一個來問吧。",
+      "error":         "貼文載入失敗,重新整理再試。",
+      "indexBuilding": "Firestore 還在為這個 query 建索引。每 30 秒會自動重試,不用手動刷新。",
+      "prev":          "上一頁",
+      "next":          "下一頁",
+      "first":         "第一頁",
+      "pageIndicator": "第 {page} 頁"
+    },
+    "categories": {
+      "all":        "全部",
+      "question":   "Q&A",
+      "bug":        "Bug 回報",
+      "feature":    "功能建議",
+      "discussion": "一般討論"
+    },
+    "sort": {
+      "new": "最新",
+      "hot": "熱門",
+      "top": "Top"
+    },
+    "composer": {
+      "title":            "發起討論",
+      "subtitle":         "支援 Markdown。標題一句話講重點,內文附 repro / 情境。",
+      "titlePlaceholder": "你的問題或回報是什麼?",
+      "bodyPlaceholder":  "細節寫這裡 — 支援 Markdown,程式碼用三個反引號包起來。",
+      "tagsPlaceholder":  "標籤(逗號分隔,最多 5 個)",
+      "markdownHint":     "Markdown · 程式碼區塊 · @ 提及之後支援",
+      "submit":           "發文",
+      "error":            "發文失敗,檢查連線後重試。"
+    },
+    "comments": {
+      "heading":     "{count, plural, =0 {還沒有回覆} =1 {1 則回覆} other {# 則回覆}}",
+      "empty":       "搶第一個回覆吧。",
+      "placeholder": "寫一則回覆…支援 Markdown。",
+      "submit":      "回覆",
+      "error":       "回覆送出失敗。"
+    },
+    "detail": {
+      "back":     "回討論區",
+      "notFound": "這篇文章已刪除或不存在。",
+      "error":    "貼文載入失敗。"
+    }
+  },
+
+  "templates": {
+    "metaTitle": "範本 — Flyto2 市集",
+    "metaDescription": "預先做好的工作流範本:抓發票、爬資料、富化 lead 等等。一鍵安裝。",
+    "gridLabel": "最多人裝",
+    "gridTitle": "人們真的在跑的工作流。",
+    "gridSubtitle": "這些是真實客戶帳號裡會看到的食譜。每張都是起點 — clone、改、跑。",
+    "contributeOnGithub": "在 GitHub 貢獻一個範本",
+    "hero": {
+      "eyebrow": "市集 · 持續成長",
+      "title": "一鍵就能裝起來的",
+      "titleAccent": "工作流範本。",
+      "lede": "錄好、貼好標籤、可直接跑。從 app 內看市集,或先掃下面最熱門的 — 每個都附原始工作流檔可改。"
+    },
+    "items": [
+      {
+        "iconName": "Receipt",
+        "category": "財務",
+        "title": "發票抓取",
+        "body": "登入廠商系統、下載 PDF、按客戶歸檔、把總額推到 Sheets。"
+      },
+      {
+        "iconName": "ShoppingCart",
+        "category": "電商",
+        "title": "訂單對帳",
+        "body": "從 Stripe 拉訂單、跟 Shopify 對應、把差異浮上 Slack。"
+      },
+      {
+        "iconName": "Search",
+        "category": "研究",
+        "title": "競品監控",
+        "body": "訪問 URL 清單、抓定價、有變化就通知 Slack。"
+      },
+      {
+        "iconName": "Mail",
+        "category": "成長",
+        "title": "Lead 富化",
+        "body": "從 CRM 拉、走公開網路富化、加標籤再寫回去。"
+      },
+      {
+        "iconName": "Database",
+        "category": "同步",
+        "title": "跨 SaaS 同步",
+        "body": "橋兩個原生不會講話的 SaaS,每晚跑一次。"
+      },
+      {
+        "iconName": "Calendar",
+        "category": "營運",
+        "title": "行事曆批次處理",
+        "body": "讀預約 CSV、建行事曆事件、發提醒。"
+      },
+      {
+        "iconName": "FileText",
+        "category": "合規",
+        "title": "文件抓取",
+        "body": "季度下載對帳單、合約、證書 — 自動歸檔。"
+      },
+      {
+        "iconName": "Bell",
+        "category": "監控",
+        "title": "網站可用性檢查",
+        "body": "掃一份 URL、檢查狀態、變紅就警示。"
+      }
+    ],
+    "cta": {
+      "label": "找不到嗎",
+      "title": "告訴我們你最想自動化什麼。",
+      "body": "想要某個工作流範本?到 GitHub Discussions 留言或自己寫 — 執行環境是開源的。",
+      "primary": "到 Discussions",
+      "secondary": "閱讀文件"
+    }
+  }
+}

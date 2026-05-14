@@ -54,3 +54,12 @@ build/
 *.bak
 *.backup
 *~
+
+# Next.js build artifacts (Workflow rebuilds these on every deploy)
+next/.next/
+next/out/
+next/tsconfig.tsbuildinfo
+next/node_modules/
+
+# Allow .env.local.example, block real .env.local
+!next/.env.local.example

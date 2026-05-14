@@ -1,0 +1,907 @@
+{
+  "nav": {
+    "home": "Home",
+    "cloud": "Cloud",
+    "code": "Warroom",
+    "overview": "Overview",
+    "pricing": "Pricing",
+    "download": "Download",
+    "templates": "Templates",
+    "faq": "FAQ",
+    "roadmap": "Roadmap",
+    "oss": "Open Source",
+    "discussions": "Discussions",
+    "waitlist": "Join waitlist",
+    "docs": "Documentation",
+    "blog": "Blog",
+    "contact": "Contact",
+    "signIn": "Sign in",
+    "soon": "Soon",
+    "allProducts": "All products"
+  },
+  "footer": {
+    "tagline":         "Offline-first automation tools, built so your work stays on your machine.",
+    "cloudTagline":    "Browser automation. Record once, replay forever.",
+    "warroomTagline":  "Application security war room. Closed-loop verification.",
+    "products":        "Products",
+    "community":       "Community",
+    "resources":       "Resources",
+    "openSource":      "Open Source",
+    "privacy":         "Privacy",
+    "terms":           "Terms",
+    "license":         "License",
+    "copyright":       "© 2026 FLYTO2 · BUILT IN TAIPEI"
+  },
+  "home": {
+    "metaTitle": "Flyto2 — Offline-first automation tools",
+    "metaDescription": "Flyto2 builds offline-first automation tools. Cloud is no-code browser automation, shipping today. Warroom is the application security war room, pre-launch.",
+    "hero": {
+      "eyebrow": "FLYTO2 · OFFLINE-FIRST AUTOMATION",
+      "title": "Automation that",
+      "titleAccent": "stays on your machine.",
+      "lede": "Flyto2 builds two products on the same offline-first engine. One automates the work you do in a browser. The other audits the security of every line of code you ship.",
+      "reassure": "OPEN SOURCE · NO TELEMETRY · YOURS"
+    },
+    "products": {
+      "label": "TWO PRODUCTS",
+      "title": "Pick the one that solves today's problem.",
+      "subtitle": "Same engine, same philosophy. Each product is built around its own audience, its own page, its own pricing.",
+      "cloud": {
+        "name": "Cloud",
+        "statusLabel": "SHIPPING",
+        "tagline": "No-code browser automation. Record once, replay forever.",
+        "point1": "Record any browser flow without writing selectors",
+        "point2": "Pause, inspect, edit values mid-run, resume",
+        "point3": "250+ pre-wired modules — CSV, Stripe, Notion, Slack, OpenAI",
+        "cta": "Visit Cloud"
+      },
+      "warroom": {
+        "name": "Warroom",
+        "statusLabel": "PRE-LAUNCH",
+        "tagline": "Application security war room. SCA, SAST, secrets, license, CVE — one operating picture.",
+        "point1": "A–F health score that rolls every signal up",
+        "point2": "Reachability analysis — fix CVEs that actually run",
+        "point3": "Open-source CLI you can install today, hosted war room next",
+        "cta": "Visit Warroom"
+      }
+    },
+    "benefits": {
+      "items": [
+        { "iconName": "Zap",       "metric": "1.2s",  "title": "Median run time",  "body": "Most workflows finish in under two seconds. Yours runs as fast as you do." },
+        { "iconName": "ShieldOff", "metric": "0",     "title": "Bytes sent home",  "body": "Credentials and run history live on your machine. No telemetry, no callbacks." },
+        { "iconName": "Code2",     "metric": "MIT",   "title": "Open source core", "body": "Read the engine, fork it, ship it. The runtime is on GitHub and PyPI." },
+        { "iconName": "Globe2",    "metric": "16",    "title": "Languages",        "body": "Recorder, runtime, docs and errors — all translated, not just labelled." }
+      ]
+    },
+    "video": {
+      "label": "DEMO",
+      "title": "See browser automation",
+      "titleAccent": "in action.",
+      "subtitle": "No technical background needed. The long cut walks through a real flow end-to-end; the short shows the gist in 60 seconds.",
+      "longLabel": "FULL DEMO",
+      "longTitle": "Flyto2 — full demo",
+      "longBody": "A complete walkthrough: record a checkout flow, edit one step, replay it. Two minutes, no narration tricks.",
+      "shortLabel": "60-SEC SHORT",
+      "shortTitle": "Flyto2 — 60-second short",
+      "shortBody": "Form filling, automated. Vertical, fast, made for sharing on phone.",
+      "moreOnYoutube": "More videos on @Flyto2 on YouTube"
+    },
+    "features": {
+      "label": "WHY FLYTO2",
+      "title": "Built for the work you keep redoing.",
+      "items": [
+        {
+          "icon": "Video",
+          "title": "Record any flow",
+          "body": "Click the recorder, do the task once, hit stop. Flyto2 captures every click, scroll, type and wait."
+        },
+        {
+          "icon": "Pause",
+          "title": "Pause and inspect",
+          "body": "Workflows are not black boxes. Step through, change a value mid-run, resume — like a debugger for daily work."
+        },
+        {
+          "icon": "ShieldOff",
+          "title": "Offline by design",
+          "body": "Runs on your machine. Credentials, scraped data, run history — never sent anywhere, including to us."
+        },
+        {
+          "icon": "Boxes",
+          "title": "250+ modules",
+          "body": "CSV, Excel, Stripe, Notion, Postgres, Slack, OpenAI — pre-wired so you snap them together instead of writing API plumbing."
+        },
+        {
+          "icon": "GitBranch",
+          "title": "Branch and merge",
+          "body": "if/else, loops, retries, error handlers — the things you'd write in code, only as visual nodes you can read in five seconds."
+        },
+        {
+          "icon": "Languages",
+          "title": "16 languages",
+          "body": "Recorder, runtime, docs, error messages — all translated. Your operations team uses Flyto2 in their language."
+        }
+      ]
+    },
+    "examples": {
+      "label": "REAL WORKFLOWS",
+      "title": "Things people actually built.",
+      "subtitle": "Each card is a workflow Flyto2 ran end-to-end — recorded once, reproduced on a schedule, output filed wherever you wanted it.",
+      "viewWorkflow": "Inspect this workflow",
+      "items": [
+        {
+          "category": "DAILY DIGEST",
+          "title": "Hacker News morning brief",
+          "body": "Scrape the top 30 stories every morning at 7am, summarise via OpenAI, push the digest to a private Slack channel before standup.",
+          "metric": "RUNS · 06:55 daily"
+        },
+        {
+          "category": "DEV INTEL",
+          "title": "GitHub trending tracker",
+          "body": "Watch the trending page for a tag, persist new repos to Sheets with stars, license, language. Catch the next hot tool before everyone else.",
+          "metric": "RUNS · hourly"
+        },
+        {
+          "category": "PERFORMANCE",
+          "title": "Pagespeed audit, batched",
+          "body": "Feed it a CSV of URLs, get a Sheet back with mobile + desktop scores, Core Web Vitals deltas, and a Slack ping when anything regresses.",
+          "metric": "RUNS · weekly"
+        },
+        {
+          "category": "SECURITY",
+          "title": "Security-headers sweep",
+          "body": "Probe a fleet of domains, grade their headers, file the report by team owner. Replaces a quarterly audit script no one had time to maintain.",
+          "metric": "RUNS · monthly"
+        }
+      ]
+    },
+    "integrations": {
+      "label": "INTEGRATIONS",
+      "title": "250+ modules out of the box.",
+      "subtitle": "The plumbing is already wired. Drag, drop, configure — never write another \"copy this row from Sheet A to API B\" script.",
+      "andMore": "+ 230 MORE · BUILD YOUR OWN IN PYTHON OR JS"
+    },
+    "stats": {
+      "items": [
+        {
+          "value": "250+",
+          "label": "MODULES",
+          "body": "Pre-built nodes for CSV, Excel, Stripe, Notion, Slack, AI, SQL — the things you'd otherwise glue together yourself."
+        },
+        {
+          "value": "16",
+          "label": "LANGUAGES",
+          "body": "UI, recorder, runtime, docs and error messages — translated, not just labelled."
+        },
+        {
+          "value": "100%",
+          "label": "ON YOUR MACHINE",
+          "body": "Your recordings, credentials, run history. No cloud unless you opt in. No telemetry, ever."
+        }
+      ]
+    },
+    "codeTeaser": {
+      "label": "ALSO BUILDING",
+      "status": "Pre-launch",
+      "title": "Warroom — application security war room.",
+      "body": "A separate product for the security side of shipping software. SCA, SAST, secrets, license, CVE, pentest — under one A–F health score.",
+      "cta": "Visit Warroom"
+    },
+    "faq": {
+      "label": "FAQ",
+      "title": "Common questions, answered up front.",
+      "subtitle": "If you're evaluating Flyto2 for the team, these are the things people ask first.",
+      "items": [
+        {
+          "q": "Is Flyto2 really free and open source?",
+          "a": "Yes. The execution engine (`flyto-core`) is MIT-licensed on GitHub. You can install it from PyPI today and run flows without ever creating an account. The hosted cloud is a paid option layered on top — never a requirement."
+        },
+        {
+          "q": "How is this different from Zapier or Make?",
+          "a": "Zapier and Make connect SaaS APIs in the cloud. Flyto2 records and replays the actual browser — including sites without a public API — and runs it on your own machine. If your bank, ERP or vendor portal isn't on Zapier's catalog, that's exactly the gap Flyto2 fills."
+        },
+        {
+          "q": "What happens when the website I'm automating changes?",
+          "a": "Flyto2 records semantic actions (\"click the Login button\") rather than fragile CSS selectors. When a site re-skins itself, most flows keep running. When something does break, you pause, fix the one step, and resume — you don't rewrite the whole flow."
+        },
+        {
+          "q": "Can my team share workflows?",
+          "a": "Yes. Workflows are plain files you can commit to git, share via the in-app Marketplace, or hand to a colleague over Slack. Run history stays local; only the workflow definition travels."
+        },
+        {
+          "q": "What does it cost?",
+          "a": "The desktop app and the open-source engine are free for individual use. Pro and Team tiers add hosted scheduling, shared marketplaces and priority support — pricing is on the Cloud page."
+        }
+      ]
+    },
+    "cta": {
+      "label": "EXPLORE THE PLATFORM",
+      "title": "Two products. One philosophy.",
+      "body": "Cloud is shipping today. Warroom is on the way. Both share the offline-first engine — pick the one that fits today's problem.",
+      "primary": "Visit Cloud",
+      "secondary": "Visit Warroom"
+    }
+  },
+  "cloud": {
+    "metaTitle": "Cloud — No-code browser automation",
+    "metaDescription": "Record once, replay forever. Browser automation that runs offline. 250+ modules, 16 languages, MIT-licensed engine.",
+    "hero": {
+      "eyebrow": "01 / CLOUD",
+      "status": "SHIPPING",
+      "title": "Browser work,",
+      "titleAccent": "on autopilot.",
+      "lede": "Open the recorder, do the task once, hit stop. Flyto2 turns it into a structured workflow you can edit, version, schedule and share — without writing a line of code.",
+      "ctaPrimary": "Download desktop app",
+      "ctaSecondary": "Browse 250+ modules"
+    },
+    "how": {
+      "label": "HOW IT WORKS",
+      "title": "Three steps from manual to automated.",
+      "items": [
+        {
+          "step": "01",
+          "icon": "Video",
+          "title": "Record",
+          "body": "Click the record button and do the task once. Flyto2 captures the click, scroll, type and wait — every step, in order, locally."
+        },
+        {
+          "step": "02",
+          "icon": "GitBranch",
+          "title": "Edit",
+          "body": "Add if/else, loops, retries and credentials as visual nodes. Pause mid-run to inspect a value, change it, and continue."
+        },
+        {
+          "step": "03",
+          "icon": "Repeat",
+          "title": "Replay",
+          "body": "Run on demand, on a schedule, or from the CLI. Flyto2 reproduces every step exactly, on your machine, with full audit trail."
+        }
+      ]
+    },
+    "features": {
+      "label": "CAPABILITIES",
+      "title": "Built for the work you keep redoing.",
+      "items": [
+        {
+          "icon": "Video",
+          "title": "Record any flow",
+          "body": "Open the recorder, do the task once, hit stop. Flyto2 captures it as a structured workflow you can edit and share."
+        },
+        {
+          "icon": "Pause",
+          "title": "Pause and inspect",
+          "body": "Workflows are not black boxes. Step through, change a value mid-run, resume — like a debugger for daily work."
+        },
+        {
+          "icon": "ShieldOff",
+          "title": "Offline by design",
+          "body": "Runs on your machine. Credentials, scraped data, run history — never sent anywhere, including to us."
+        },
+        {
+          "icon": "Boxes",
+          "title": "250+ modules",
+          "body": "CSV, Excel, Stripe, Notion, Sheets, Postgres, Slack, OpenAI — wired up so you snap them together instead of writing API plumbing."
+        },
+        {
+          "icon": "GitBranch",
+          "title": "Branch and merge",
+          "body": "if/else, loops, retries, error handlers — the things you'd write in code, only as visual nodes you can read in five seconds."
+        },
+        {
+          "icon": "Languages",
+          "title": "16 languages",
+          "body": "Recorder, runtime, docs, error messages — all translated. Your operations team uses Flyto2 in their language, not yours."
+        }
+      ]
+    },
+    "codeSample": {
+      "label": "UNDER THE HOOD",
+      "title": "It's a file you can read.",
+      "subtitle": "Every recorded workflow is a JSON file. Commit it to git, diff it on review, run it from CI, trigger it from anywhere.",
+      "point1": "Plain JSON — no proprietary binary format",
+      "point2": "Trigger from CLI, webhook, cron, or your own backend",
+      "point3": "Export to GitHub Actions, GitLab CI, or Jenkins in one command"
+    },
+    "comparison": {
+      "label": "VS THE ALTERNATIVES",
+      "title": "Why teams switch to Flyto2.",
+      "subtitle": "Zapier, Make, Selenium — each fills a slice of the problem. Flyto2 is what you reach for when you need browser-true behavior, locally, without renting compute by the task.",
+      "featureHeader": "What you need",
+      "data": {
+        "rows": [
+          { "feature": "Records actual browser actions", "values": ["yes", "no",      "no",      "yes"] },
+          { "feature": "Runs offline / on your machine",  "values": ["yes", "no",      "no",      "yes"] },
+          { "feature": "Free for individual use",          "values": ["yes", "partial", "partial", "yes"] },
+          { "feature": "Visual editor (no code required)", "values": ["yes", "yes",     "yes",     "no"]  },
+          { "feature": "Pause, inspect, resume mid-run",   "values": ["yes", "no",      "no",      "partial"] },
+          { "feature": "Pricing by points, not by task",   "values": ["yes", "no",      "no",      "yes"] },
+          { "feature": "Workflow file is plain JSON",      "values": ["yes", "no",      "no",      "no"]  },
+          { "feature": "Open-source engine",               "values": ["yes", "no",      "no",      "yes"] }
+        ]
+      }
+    },
+    "recipes": {
+      "label": "PRE-BUILT RECIPES",
+      "title": "One command, real results.",
+      "subtitle": "Recipes are workflows already wired and tested. Install Cloud, run `flyto recipe [name]`, get the report. No setup, no API keys for the basics.",
+      "items": [
+        {
+          "iconName": "Search",
+          "name": "competitor-intel",
+          "command": "flyto recipe competitor-intel --url https://competitor.com/pricing",
+          "body": "Pull pricing tiers, take desktop + mobile screenshots, capture Web Vitals, parse SEO meta, return one structured JSON report.",
+          "outputs": ["pricing.json", "intel-desktop.png", "intel-mobile.png", "vitals", "seo"]
+        },
+        {
+          "iconName": "Activity",
+          "name": "full-audit",
+          "command": "flyto recipe full-audit --url https://example.com",
+          "body": "Web Vitals + SEO + accessibility (alt tags, labels) + console errors + mobile/desktop screenshots + a printable PDF.",
+          "outputs": ["audit.json", "audit-desktop.png", "audit-mobile.png", "audit-page.pdf"]
+        },
+        {
+          "iconName": "Globe",
+          "name": "site-audit",
+          "command": "flyto recipe site-audit --url https://github.com",
+          "body": "SEO + performance audit — meta, headings, missing alt, Web Vitals, full-page screenshot. Lighter than full-audit, runs in seconds.",
+          "outputs": ["report.json", "page.png"]
+        },
+        {
+          "iconName": "Camera",
+          "name": "screenshot",
+          "command": "flyto recipe screenshot --url https://flyto2.com --device mobile",
+          "body": "Pixel-perfect screenshots at any device viewport. Useful for QA, design review, or stitching daily change-detection diffs.",
+          "outputs": ["screenshot.png"]
+        }
+      ]
+    },
+    "useCases": {
+      "label": "USE CASES",
+      "title": "What people automate first.",
+      "items": [
+        {
+          "icon": "FileText",
+          "title": "Invoice & receipt extraction",
+          "body": "Log into vendor portals every Monday, download PDFs, file them by client, push totals to Sheets — without touching the keyboard."
+        },
+        {
+          "icon": "Database",
+          "title": "Cross-system data sync",
+          "body": "When the SaaS you live in doesn't talk to the SaaS your finance team lives in, Flyto2 records the bridge and runs it nightly."
+        },
+        {
+          "icon": "Search",
+          "title": "Pricing & competitor watch",
+          "body": "Visit a list of URLs, scrape the price, write to CSV, alert Slack on changes. Two weeks of intern work, automated in an afternoon."
+        },
+        {
+          "icon": "Mail",
+          "title": "Lead routing & enrichment",
+          "body": "Pull from your CRM, enrich via the public web, push back tagged. No Zapier middleman, no monthly task cap."
+        }
+      ]
+    },
+    "faq": {
+      "label": "FAQ",
+      "title": "Cloud — questions we hear most.",
+      "subtitle": "Recording, replay, security, pricing — the answers ops and IT leads ask for before approving a tool.",
+      "items": [
+        {
+          "q": "Does Cloud work on sites without a public API?",
+          "a": "That's exactly its job. If you can do the task in a browser, Flyto2 can record and replay it — internal portals, government sites, legacy ERPs, anywhere."
+        },
+        {
+          "q": "Is it really running on my machine?",
+          "a": "Yes. The desktop app bundles a Chromium engine and the workflow runtime. Your credentials, recorded steps and execution history live on your disk. The cloud is opt-in for scheduling, sharing and team features."
+        },
+        {
+          "q": "What happens when a website redesigns?",
+          "a": "Flyto2 records semantic intent (\"click Sign in\", \"fill the email field\") rather than brittle XPath. When a site re-skins itself, most flows keep working. When one step breaks, you fix only that step in the visual editor."
+        },
+        {
+          "q": "Can I trigger flows from CI / a script?",
+          "a": "Yes. Every workflow has a CLI invocation and a webhook URL. Run them from cron, GitHub Actions, your own backend, or Flyto2's hosted scheduler — same workflow file, same result."
+        },
+        {
+          "q": "How do you handle 2FA and CAPTCHAs?",
+          "a": "Flyto2 can pause and prompt you (or a human in your team) to complete a 2FA challenge, then continue. CAPTCHAs are deliberately not bypassed — using Flyto2 on sites that ban automation is your call, not ours."
+        },
+        {
+          "q": "What's the pricing?",
+          "a": "Free for individual use of the desktop app and OSS engine. Pro adds hosted scheduling and unlimited cloud runs; Team adds shared marketplace and SSO. Detailed pricing on the Cloud page."
+        }
+      ]
+    },
+    "cta": {
+      "label": "GET STARTED",
+      "title": "One recording, every Monday automated.",
+      "body": "Download the desktop app, record your first workflow in five minutes, and watch it run forever.",
+      "primary": "Download for free",
+      "secondary": "Read the docs"
+    }
+  },
+  "download": {
+    "metaTitle": "Download Flyto2",
+    "metaDescription": "Download Flyto2 — free desktop app for macOS, Windows and Linux. Browser automation that runs offline, no account required.",
+    "downloadFor": "Download for {os}",
+    "allReleases": "All releases on GitHub",
+    "hero": {
+      "eyebrow": "DESKTOP APP · FREE",
+      "title": "Download",
+      "titleAccent": "Flyto2.",
+      "lede": "Free for personal use, forever. macOS, Windows, Linux — bundled with the open-source engine. No account, no telemetry, runs offline."
+    },
+    "docker": {
+      "title": "Self-host with Docker",
+      "body": "Run the same engine in a container — perfect for headless servers, CI agents, or air-gapped enterprise deployments.",
+      "cta": "Docker Hub"
+    },
+    "oss": {
+      "title": "Or just the engine, on PyPI",
+      "body": "The execution core is MIT-licensed Python. Install it as a library, use the CLI, embed it in your own pipelines.",
+      "cta": "View source on GitHub"
+    },
+    "cta": {
+      "label": "ALSO HELPFUL",
+      "title": "Need something specific?",
+      "body": "Looking for an older release, a different architecture, or shipping into a regulated environment? Pop into the GitHub releases or the docs.",
+      "primary": "Open releases",
+      "secondary": "Read the docs"
+    }
+  },
+
+  "pricing": {
+    "metaTitle": "Pricing — Flyto2",
+    "metaDescription": "Free for personal use, forever. Pro at $9/mo and Team at $19/mo. Transparent pricing for browser automation that runs offline.",
+    "perMonth": "/ month",
+    "mostPopular": "Most popular",
+    "priceFootnote": "USD · Cancel any time · No credit card to start",
+    "hero": {
+      "eyebrow": "PRICING",
+      "title": "Free forever.",
+      "titleAccent": "Pro when you scale.",
+      "lede": "Personal use is free, on the desktop and the OSS engine. Upgrade only when you need hosted scheduling, team management, or higher monthly compute."
+    },
+    "plans": {
+      "free": {
+        "label": "FREE",
+        "name": "Free",
+        "tagline": "For individuals exploring automation.",
+        "feature1": "1,000 compute points / month",
+        "feature2": "Up to 5 saved workflows",
+        "feature3": "All 250+ modules",
+        "feature4": "Community support",
+        "cta": "Download free"
+      },
+      "pro": {
+        "label": "PRO",
+        "name": "Pro",
+        "tagline": "For power users running automation daily.",
+        "feature1": "50,000 compute points / month",
+        "feature2": "Unlimited workflows",
+        "feature3": "Hosted scheduling — cron, webhook, retry",
+        "feature4": "Priority support, 24-hour SLA",
+        "feature5": "Marketplace publishing",
+        "cta": "Start with Pro"
+      },
+      "team": {
+        "label": "TEAM",
+        "name": "Team",
+        "tagline": "For ops teams sharing workflows across the company.",
+        "feature1": "200,000 compute points / month",
+        "feature2": "Up to 10 seats",
+        "feature3": "RBAC and shared marketplace",
+        "feature4": "SSO (Google, Microsoft)",
+        "feature5": "Dedicated onboarding",
+        "cta": "Start with Team"
+      }
+    },
+    "faq": {
+      "label": "FAQ",
+      "title": "Pricing questions, answered.",
+      "subtitle": "Compute points, seat limits, billing — the questions buyers ask before they pull out the card.",
+      "items": [
+        {
+          "q": "What's a \"compute point\"?",
+          "a": "A point is a unit of work — roughly one workflow step (a click, a CSV row, an API call). 50,000 points covers about 100 hours of typical browser automation per month."
+        },
+        {
+          "q": "Is the free plan really free forever?",
+          "a": "Yes. The desktop app and the open-source engine are free for personal use forever. The only thing the free tier doesn't include is hosted scheduling and team features."
+        },
+        {
+          "q": "What happens if I exceed monthly points?",
+          "a": "Workflows pause until the next cycle, or you can buy a top-up at $0.20 per 1,000 points. We never silently overcharge — you confirm the top-up before it runs."
+        },
+        {
+          "q": "Do you offer annual billing or discounts?",
+          "a": "Annual billing saves 20% on Pro and Team. Education and non-profit discounts available — email info@flyto2.com."
+        },
+        {
+          "q": "Can I self-host instead?",
+          "a": "Yes. The OSS engine on PyPI runs everything except hosted scheduling. Enterprise self-host with SSO and air-gapped deploy is on the roadmap."
+        }
+      ]
+    },
+    "cta": {
+      "label": "STILL DECIDING",
+      "title": "Try it before you pay.",
+      "body": "Download the free desktop app, record a workflow, see if Flyto2 fits the problem you're trying to solve. Upgrade only when you've decided it's worth it.",
+      "primary": "Download for free",
+      "secondary": "Read the docs"
+    }
+  },
+
+  "forum": {
+    "titleCloud":    "Cloud — Discussions",
+    "subtitleCloud": "Ask questions, report bugs, share workflows. Read by everyone, post with a free Flyto2 account.",
+    "titleCode":     "Warroom — Discussions",
+    "subtitleCode":  "Security, scanning, closed-loop verification. Public to read, free account to post.",
+    "auth": {
+      "loading":         "Checking sign-in…",
+      "title":           "Sign in to continue",
+      "subtitle":        "Posts are tied to your account so we can show your name on replies and notify you. We do not share your email.",
+      "continueGoogle":  "Continue with Google",
+      "or":              "OR",
+      "email":           "Email",
+      "password":        "Password",
+      "signIn":          "Sign in",
+      "signUp":          "Create account",
+      "switchToSignUp":  "No account? Create one",
+      "switchToSignIn":  "Already have an account? Sign in",
+      "signOut":         "Sign out",
+      "error":           "Something went wrong. Try again.",
+      "reason": {
+        "post":    "SIGN IN TO POST",
+        "comment": "SIGN IN TO REPLY",
+        "react":   "SIGN IN TO REACT"
+      }
+    },
+    "list": {
+      "compose":       "New post",
+      "composeSignIn": "Sign in to post",
+      "loadMore":      "Load more",
+      "empty":         "No posts yet — be the first to ask.",
+      "error":         "Couldn't load posts. Refresh to try again.",
+      "indexBuilding": "Firestore is still building the index for this query. We'll retry automatically every 30 seconds — no need to refresh.",
+      "prev":          "Prev",
+      "next":          "Next",
+      "first":         "First",
+      "pageIndicator": "Page {page}"
+    },
+    "categories": {
+      "all":        "All",
+      "question":   "Q&A",
+      "bug":        "Bugs",
+      "feature":    "Feature requests",
+      "discussion": "Discussion"
+    },
+    "sort": {
+      "new": "New",
+      "hot": "Hot",
+      "top": "Top"
+    },
+    "composer": {
+      "title":            "Start a discussion",
+      "subtitle":         "Markdown is supported. Be specific — title in one line, repro / context in the body.",
+      "titlePlaceholder": "What's your question or report?",
+      "bodyPlaceholder":  "Add detail — Markdown supported. Code blocks with three backticks.",
+      "tagsPlaceholder":  "Tags (comma-separated, max 5)",
+      "markdownHint":     "Markdown · code blocks · @mentions later",
+      "submit":           "Post",
+      "error":            "Couldn't post. Check your connection and try again."
+    },
+    "comments": {
+      "heading":     "{count, plural, =0 {No replies yet} =1 {1 reply} other {# replies}}",
+      "empty":       "Be the first to reply.",
+      "placeholder": "Write a reply… Markdown supported.",
+      "submit":      "Reply",
+      "error":       "Couldn't post reply."
+    },
+    "detail": {
+      "back":     "Back to discussions",
+      "notFound": "This post was deleted or never existed.",
+      "error":    "Couldn't load this post."
+    }
+  },
+
+  "templates": {
+    "metaTitle": "Templates — Flyto2 Marketplace",
+    "metaDescription": "Pre-built workflow templates for invoicing, scraping, lead enrichment, and more. Install in one click.",
+    "gridLabel": "MOST INSTALLED",
+    "gridTitle": "Workflows people actually run.",
+    "gridSubtitle": "These are the recipes that show up in real customer accounts. Each is a starting point — clone, adapt, run.",
+    "contributeOnGithub": "Contribute a template on GitHub",
+    "hero": {
+      "eyebrow": "MARKETPLACE · GROWING",
+      "title": "Workflows you can",
+      "titleAccent": "install in one click.",
+      "lede": "Recorded, tagged and ready to run. Browse the marketplace from inside the app, or peek at what's most popular below — every entry comes with the source workflow file you can edit."
+    },
+    "items": [
+      { "iconName": "Receipt",      "category": "FINANCE",  "title": "Invoice extraction",  "body": "Log into vendor portal, download PDFs, file by client, push totals to Sheets." },
+      { "iconName": "ShoppingCart", "category": "ECOMMERCE", "title": "Order reconciliation","body": "Pull orders from Stripe, match to Shopify, surface discrepancies in Slack." },
+      { "iconName": "Search",       "category": "RESEARCH", "title": "Competitor watch",    "body": "Visit a list of URLs, scrape pricing, alert Slack when anything changes." },
+      { "iconName": "Mail",         "category": "GROWTH",   "title": "Lead enrichment",    "body": "Pull from CRM, enrich via public web, write back tagged contacts." },
+      { "iconName": "Database",     "category": "SYNC",     "title": "Cross-SaaS sync",     "body": "Bridge two SaaS tools that don't talk to each other natively, every night." },
+      { "iconName": "Calendar",     "category": "OPS",      "title": "Calendar batching",   "body": "Read a CSV of bookings, create calendar events, send reminders." },
+      { "iconName": "FileText",     "category": "COMPLIANCE", "title": "Document fetching", "body": "Quarterly download of statements, contracts, certificates — filed automatically." },
+      { "iconName": "Bell",         "category": "MONITORING", "title": "Site uptime check","body": "Probe a list of URLs, check status, alert when anything goes red." }
+    ],
+    "cta": {
+      "label": "CAN'T FIND ONE?",
+      "title": "Tell us what you'd automate first.",
+      "body": "If there's a workflow you'd love a template for, ping us in GitHub Discussions or build it yourself — the runtime is open source.",
+      "primary": "Open Discussions",
+      "secondary": "Read the docs"
+    }
+  },
+
+  "code": {
+    "metaTitle": "Warroom — Application security war room",
+    "metaDescription": "SCA, SAST, secrets, license, CVE, pentest, runtime — one operating picture for your codebase. Pre-launch.",
+    "hero": {
+      "eyebrow": "02 / CODE",
+      "status": "PRE-LAUNCH",
+      "title": "One war room.",
+      "titleAccent": "Every angle of attack.",
+      "lede": "SCA, SAST, secret detection, license audit, CVE triage, pentest workflows, runtime telemetry. Warroom is the operating picture for the security of every line of code you ship.",
+      "ctaPrimary": "Join the waitlist",
+      "ctaSecondary": "Try the open-source CLI"
+    },
+    "closedLoop": {
+      "label": "WHAT MAKES IT DIFFERENT",
+      "title": "Closed-loop verification.",
+      "subtitle": "Every other security tool stops at the alert. Warroom turns each finding into a YAML pentest, runs it against your staging in a real browser, and reports a verdict — exploit, sanitised, or unreachable.",
+      "find":    { "title": "Find",    "body": "SCA, SAST, secrets, license, IaC. Same scan parses your code into call graphs and architecture maps.",                                       "signal": "scan" },
+      "craft":   { "title": "Craft",   "body": "For each security-relevant finding, generate a YAML pentest workflow scoped to the affected route.",                                          "signal": "yaml" },
+      "run":     { "title": "Run",     "body": "Execute the workflow against staging in a real Chrome session. 12 official OWASP / LLM / business-logic playbooks ship today.",               "signal": "live" },
+      "verdictStep": { "title": "Verdict", "body": "Capture HMAC-signed evidence, report exploitable / sanitized / unreachable, store the workflow in the regression vault for nightly re-runs.", "signal": "ledger" },
+      "verdict": {
+        "exploitable": {
+          "title": "Exploitable",
+          "body":  "The vulnerability runs end-to-end. Evidence pack attached. Triage to top of the queue."
+        },
+        "sanitized": {
+          "title": "Sanitized",
+          "body":  "Mitigated by a downstream control (auth, WAF, framework). Logged, deprioritised."
+        },
+        "unreachable": {
+          "title": "Unreachable",
+          "body":  "The vulnerable code exists but no path of user input reaches it. Acknowledged, low priority."
+        }
+      }
+    },
+    "proof": {
+      "label": "REAL PROOF",
+      "title": "We tested it on OWASP Juice Shop.",
+      "subtitle": "Not a synthetic sandbox. The classic intentionally-vulnerable e-commerce app, run end-to-end through the closed loop. Here's one campaign output.",
+      "caption": "Every finding ships with an HMAC-signed evidence pack. The chain replays nightly via the regression vault — when a fix lands, Warroom verifies it stays fixed.",
+      "data": {
+        "metric": [
+          { "value": "5",    "label": "BREACH-level chains" },
+          { "value": "11",   "label": "Critical findings"   },
+          { "value": "12",   "label": "Pentest playbooks"   },
+          { "value": "100%", "label": "Replayable nightly"  }
+        ],
+        "chain": [
+          { "vector": "SQLi · login",         "finding": "Tautology bypass in `email` field of POST /rest/user/login — authentication skipped, session token issued." },
+          { "vector": "Token theft",          "finding": "JWT pulled from response, decoded — admin claim absent but signing key reused across users." },
+          { "vector": "Chained IDOR",         "finding": "GET /api/Users/{id} accepts arbitrary id; server returns full record including password hash." },
+          { "vector": "Privilege escalation", "finding": "Forge JWT with leaked key, set role=admin, replay request — admin-only endpoints respond 200." },
+          { "vector": "Data exfiltration",    "finding": "GET /api/Orders enumerates every customer's purchase history. Evidence pack: 2.4 MB." }
+        ]
+      }
+    },
+    "features": {
+      "label": "INSIDE THE WAR ROOM",
+      "title": "Seven views, one source of truth.",
+      "subtitle": "Each panel of Warroom is built around a question security teams already ask. Here's what you actually see in the war room.",
+      "items": [
+        {
+          "label": "DASHBOARD",
+          "title": "One A–F score per project.",
+          "body": "Roll every signal — SCA, SAST, secrets, license, CVE, runtime — into a single grade. Your CISO sees the headline. Your engineers drill into the panel that's bleeding.",
+          "imageAlt": "Warroom health dashboard with A–F scoring",
+          "bullets": [
+            "Trend lines for every category",
+            "Per-team and per-service rollups",
+            "Auto-generated weekly briefing"
+          ]
+        },
+        {
+          "label": "REACHABILITY",
+          "title": "Which CVEs actually run.",
+          "body": "Most CVE alerts are noise — the vulnerable function never gets called from your code. Reachability analysis traces real call paths so you fix the 5% that matter, not the 95% that don't.",
+          "imageAlt": "Reachability analysis showing exploitable call paths",
+          "bullets": [
+            "Static + dynamic call graph",
+            "Cross-package taint propagation",
+            "False-positive rate measured, not claimed"
+          ]
+        },
+        {
+          "label": "DEPENDENCIES",
+          "title": "Your supply chain, drawn.",
+          "body": "Every direct and transitive dependency, weighted by risk and overlaid with CVEs. Click any node to see who pulled it in, what it pulls in next, and which of your services depend on it.",
+          "imageAlt": "Dependency graph with vulnerability overlay",
+          "bullets": [
+            "License + maintainer-risk overlays",
+            "Find duplicates pinned at different versions",
+            "Ownership labels propagate from monorepo configs"
+          ]
+        },
+        {
+          "label": "ARCHITECTURE",
+          "title": "The whole shape of your codebase.",
+          "body": "Modules, services, data flows, ownership boundaries — derived directly from the source, not from a wiki that's six months out of date. Reads with no annotation, refines as you ship.",
+          "imageAlt": "Architecture map of services and modules",
+          "bullets": [
+            "Auto-discovers services from build files",
+            "Highlights cross-boundary calls",
+            "Diff against last release to catch drift"
+          ]
+        },
+        {
+          "label": "API SURFACE",
+          "title": "Every endpoint, inventoried.",
+          "body": "REST, gRPC, GraphQL — Warroom finds them in your handlers and lists what they accept, what they return, who calls them. Auth gaps and unauthenticated endpoints surface automatically.",
+          "imageAlt": "API endpoint inventory with auth metadata",
+          "bullets": [
+            "Auth-strategy column per route",
+            "Public vs internal classification",
+            "OpenAPI export for any framework"
+          ]
+        },
+        {
+          "label": "INFRASTRUCTURE",
+          "title": "IaC scanned in the same run.",
+          "body": "Terraform, Kubernetes manifests, Dockerfiles — Warroom reads your infra alongside your application code, so security posture and runtime topology come from the same pass.",
+          "imageAlt": "Infrastructure-as-code scanning view",
+          "bullets": [
+            "Terraform, Helm, K8s, Dockerfile",
+            "Misconfiguration catalog kept in step with CIS",
+            "Drift detection: what's deployed vs what's checked in"
+          ]
+        },
+        {
+          "label": "PULSE",
+          "title": "Security drift, over time.",
+          "body": "A team-wide live ticker of what changed, when, and how it moved the score. Not a dashboard for browsing — a dashboard for noticing.",
+          "imageAlt": "Pulse view showing security drift timeline",
+          "bullets": [
+            "Per-engineer contribution to risk delta",
+            "Escalation rules for sudden score drops",
+            "Replayable history — see the exact commit that moved the needle"
+          ]
+        }
+      ]
+    },
+    "scans": {
+      "label": "WHAT IT SCANS",
+      "title": "Eight signals, one health score.",
+      "subtitle": "Every project gets an A–F score that rolls up the things attackers actually use against you. Drill into any signal for the underlying findings, suggested fixes and AI-generated remediation PRs.",
+      "items": [
+        {
+          "icon": "Boxes",
+          "title": "SCA",
+          "body": "Vulnerable dependencies in your lockfile, weighted by reachability — not just \"CVE present\"."
+        },
+        {
+          "icon": "Code2",
+          "title": "SAST",
+          "body": "Source-level taint flow from untrusted input to dangerous sinks, AST-aware."
+        },
+        {
+          "icon": "KeyRound",
+          "title": "Secrets",
+          "body": "Hard-coded API keys, tokens and credentials — across history, not just HEAD."
+        },
+        {
+          "icon": "ScrollText",
+          "title": "License",
+          "body": "GPL contamination, commercial-incompatible licenses, missing attributions."
+        },
+        {
+          "icon": "Bug",
+          "title": "CVE",
+          "body": "Live triage of new CVEs against your dependency tree, with replay POCs."
+        },
+        {
+          "icon": "Crosshair",
+          "title": "Pentest",
+          "body": "Pentest-as-code: record an exploit chain once, replay it against every release."
+        },
+        {
+          "icon": "Activity",
+          "title": "Runtime",
+          "body": "Production telemetry, drift detection, kill-switch — Phase IV."
+        },
+        {
+          "icon": "FileCheck2",
+          "title": "Compliance",
+          "body": "SOC 2, ISO 27001, regional data-residency posture — Phase V."
+        }
+      ]
+    },
+    "phases": {
+      "label": "ROADMAP",
+      "title": "Six phases, one platform.",
+      "items": [
+        {
+          "n": "I",
+          "title": "Foundation",
+          "status": "shipping",
+          "body": "Indexer, search, dependency graph, A–F health score."
+        },
+        {
+          "n": "II",
+          "title": "Static",
+          "status": "shipping",
+          "body": "SCA, SAST, secret scan, license audit — open-source CLI."
+        },
+        {
+          "n": "III",
+          "title": "Dynamic",
+          "status": "next",
+          "body": "Pentest-as-code, runtime probes, CVE replay."
+        },
+        {
+          "n": "IV",
+          "title": "Runtime",
+          "status": "planned",
+          "body": "Production telemetry, drift detection, kill-switch."
+        },
+        {
+          "n": "V",
+          "title": "Compliance",
+          "status": "planned",
+          "body": "SOC 2, ISO 27001, regional data-residency posture."
+        },
+        {
+          "n": "VI",
+          "title": "Federation",
+          "status": "planned",
+          "body": "Multi-org war rooms for security teams."
+        }
+      ]
+    },
+    "faq": {
+      "label": "FAQ",
+      "title": "Warroom — questions before you wait-list.",
+      "subtitle": "When it ships, how it differs, what you can do today.",
+      "items": [
+        {
+          "q": "When is Warroom shipping?",
+          "a": "Phases I and II (Foundation + Static) are already in private beta. Phase III (Dynamic) is the next public milestone — early access mid-2026. Join the waitlist to get the OSS CLI and an invite."
+        },
+        {
+          "q": "How is this different from Snyk, Aikido, GitHub Advanced Security?",
+          "a": "Two differences. (1) One score across SCA, SAST, secrets, license, CVE, pentest and runtime — not eight tools you have to correlate. (2) Pentest-as-code: you record an exploit chain once and replay it against every release, the same way Cloud replays a browser flow."
+        },
+        {
+          "q": "Can I try anything today?",
+          "a": "Yes. `pip install flyto-indexer` gives you the OSS scanner — search, references, impact analysis, dead-code detection, AST-based taint analysis. The hosted war room layers on top when Phase III lands."
+        },
+        {
+          "q": "Is my source code uploaded to the cloud?",
+          "a": "By default, no. The CLI runs locally and produces a local index. The hosted war room can ingest findings (not source) for cross-project rollup; full source upload is opt-in per project. Self-hosted is a Phase V option."
+        },
+        {
+          "q": "Does it work with private repos?",
+          "a": "Yes — the OSS CLI doesn't care where your code is. The hosted war room supports GitHub, GitLab, Bitbucket and self-hosted Git out of the box."
+        },
+        {
+          "q": "Can I self-host the war room?",
+          "a": "Self-hosted is on the roadmap (Phase V, alongside compliance). The OSS scanner can be self-hosted today; the hosted UI/orchestrator follows."
+        }
+      ]
+    },
+    "cta": {
+      "label": "EARLY ACCESS",
+      "title": "Be first in the war room.",
+      "body": "The hosted war room is browser-based — no app to install. Join the waitlist to get an invite when Phase III opens, and grab the open-source scanner today.",
+      "primary": "Join the waitlist",
+      "secondary": "Install the OSS scanner"
+    }
+  }
+}

@@ -1,0 +1,186 @@
+@import 'tailwindcss';
+
+/* ============================================================
+   Flyto2 Landing — design tokens
+   Calm, restrained palette. No "casino glow" effects.
+   ============================================================ */
+
+@theme {
+  /* Surfaces — Raycast-style desaturated base (near-black with the faintest
+     violet cast) so violet reads as "accent" not "everything". Cards step up
+     in luminance, not in chroma. */
+  --color-ink-900: #0d0d12;  /* page base */
+  --color-ink-800: #15151c;  /* section bg */
+  --color-ink-700: #1d1d27;  /* card bg */
+  --color-ink-600: #262633;  /* hover / raised */
+  --color-ink-500: #313140;
+  --color-ink-400: #3d3d4f;
+
+  --color-line:        rgba(255, 255, 255, 0.08);
+  --color-line-strong: rgba(255, 255, 255, 0.16);
+
+  /* Text */
+  --color-bone-100: #f5f5f4;
+  --color-bone-200: #b8b8b1;
+  --color-bone-300: #75756f;
+
+  /* Brand — single accent. We do NOT mix multiple accents in one section. */
+  --color-violet-300: #c4b5fd;
+  --color-violet-400: #a78bfa;
+  --color-violet-500: #8b5cf6;
+  --color-violet-600: #7c3aed;
+  --color-violet-700: #6d28d9;
+
+  --color-cyan-300: #67e8f9;
+  --color-cyan-400: #22d3ee;
+  --color-cyan-500: #06b6d4;
+
+  --color-success: #10b981;
+  --color-amber:   #f5b041;
+  --color-error:   #ef4444;
+
+  --font-display: 'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
+  --font-sans:    'Geist', ui-sans-serif, system-ui, sans-serif;
+  --font-mono:    'Geist Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+@layer base {
+  :root { color-scheme: dark; }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background: #0d0d12;
+    color: var(--color-bone-100);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+
+  /* Single quiet violet glow at the top — purple presence without making
+     the whole canvas feel like a brand demo. */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      radial-gradient(ellipse 70% 30% at 50% 0%, rgba(139, 92, 246, 0.10), transparent 70%);
+  }
+
+  ::selection { background: var(--color-violet-500); color: white; }
+
+  hr { border: 0; border-top: 1px solid var(--color-line); }
+}
+
+@layer components {
+  .h-display {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 1;
+  }
+
+  .label-mono {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgb(255 255 255 / 0.5);
+  }
+
+  .num-mono {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.02em;
+  }
+
+  /* Static brand-tinted accent — replaces aurora-text. Calm, single direction. */
+  .brand-accent {
+    color: var(--color-violet-300);
+  }
+
+  /* Subtle dotted backdrop — adds texture to hero without screaming */
+  .hero-dots {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+    background-size: 28px 28px;
+    background-position: -1px -1px;
+    mask-image: radial-gradient(ellipse 60% 50% at 50% 35%, #000 30%, transparent 80%);
+  }
+
+  /* Single quiet hero glow — used sparingly, not stacked. */
+  .hero-glow {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+  }
+  .hero-glow::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 600px;
+    height: 600px;
+    transform: translate(-50%, -40%);
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.18), transparent 60%);
+    filter: blur(40px);
+  }
+
+  /* Live status dot — only used in 1-2 places, never decoratively */
+  .pulse-dot {
+    position: relative;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--color-success);
+    flex-shrink: 0;
+  }
+  .pulse-dot::after {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: 50%;
+    background: var(--color-success);
+    opacity: 0.35;
+    animation: pulse 2.4s ease-out infinite;
+  }
+  @keyframes pulse {
+    0%   { transform: scale(0.7); opacity: 0.4; }
+    100% { transform: scale(1.8); opacity: 0;   }
+  }
+
+  /* Card hover — subtle lift only, no glow */
+  .lift {
+    transition:
+      transform 0.3s ease,
+      border-color 0.3s ease,
+      background 0.3s ease;
+  }
+  .lift:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.16);
+  }
+}
+
+/* ============================================================
+   Reduced motion
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
