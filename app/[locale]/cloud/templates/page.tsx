@@ -29,7 +29,7 @@ export async function generateMetadata({
   return {
     title: t('metaTitle'),
     description: t('metaDescription'),
-    alternates: pageAlternates('cloud/templates'),
+    alternates: pageAlternates('cloud/templates', locale),
   };
 }
 

@@ -16,13 +16,13 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = await params;
+  const { locale, slug } = await params;
   const paper = readWhitepaper(slug);
   if (!paper) return {};
   return {
     title: paper.meta.title,
     description: paper.meta.blurb,
-    alternates: pageAlternates(`whitepaper/${slug}`),
+    alternates: pageAlternates(`whitepaper/${slug}`, locale),
   };
 }
 

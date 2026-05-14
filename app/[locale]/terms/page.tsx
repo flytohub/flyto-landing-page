@@ -7,11 +7,11 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-  await params;
+  const { locale } = await params;
   return {
     title: 'Terms',
     description: 'The terms that govern your use of Flyto2.',
-    alternates: pageAlternates('terms'),
+    alternates: pageAlternates('terms', locale),
   };
 }
 

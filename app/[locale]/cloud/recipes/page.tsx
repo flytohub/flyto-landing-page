@@ -11,12 +11,12 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-  await params;
+  const { locale } = await params;
   return {
     title: 'Recipes — pre-built workflows',
     description:
       '37 ready-to-run YAML workflows for scraping, analytics, monitoring, data processing, image work, devops and form filling.',
-    alternates: pageAlternates('cloud/recipes'),
+    alternates: pageAlternates('cloud/recipes', locale),
   };
 }
 

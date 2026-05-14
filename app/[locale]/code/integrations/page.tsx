@@ -8,12 +8,12 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-  await params;
+  const { locale } = await params;
   return {
     title: 'Integrations — Warroom plugs into the tools you already use',
     description:
       'Git providers, CI/CD systems, IDEs, alerting channels and MCP-capable AI clients — Warroom slots into the existing developer workflow.',
-    alternates: pageAlternates('code/integrations'),
+    alternates: pageAlternates('code/integrations', locale),
   };
 }
 

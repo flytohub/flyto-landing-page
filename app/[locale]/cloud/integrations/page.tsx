@@ -13,12 +13,12 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-  await params;
+  const { locale } = await params;
   return {
     title: 'Integrations — 250+ modules',
     description:
       '250+ pre-wired modules across CSV, spreadsheets, Stripe, Notion, Slack, AI, databases, browsers and more. Drag, drop, configure.',
-    alternates: pageAlternates('cloud/integrations'),
+    alternates: pageAlternates('cloud/integrations', locale),
   };
 }
 

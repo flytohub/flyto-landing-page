@@ -8,12 +8,12 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-  await params;
+  const { locale } = await params;
   return {
     title: 'Use cases — who Warroom is built for',
     description:
       'Three buyer archetypes — CTO, Security Lead, Engineering Manager — and the specific questions Warroom answers for each.',
-    alternates: pageAlternates('code/use-cases'),
+    alternates: pageAlternates('code/use-cases', locale),
   };
 }
 

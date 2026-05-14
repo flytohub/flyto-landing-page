@@ -9,12 +9,12 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-  await params;
+  const { locale } = await params;
   return {
     title: 'Pricing — Warroom early access',
     description:
       'Beta pricing for Warroom: free for solo developers, early-access team plan, enterprise on request.',
-    alternates: pageAlternates('code/pricing'),
+    alternates: pageAlternates('code/pricing', locale),
   };
 }
 

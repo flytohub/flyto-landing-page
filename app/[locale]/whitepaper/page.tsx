@@ -11,12 +11,12 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-  await params;
+  const { locale } = await params;
   return {
     title: 'Whitepapers',
     description:
       'Technical audits of the Flyto2 platform — architecture, modules, runtime, integrations.',
-    alternates: pageAlternates('whitepaper'),
+    alternates: pageAlternates('whitepaper', locale),
   };
 }
 

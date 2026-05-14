@@ -11,12 +11,12 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-  await params;
+  const { locale } = await params;
   return {
     title: 'Security — what Warroom scans',
     description:
       'Nine independent security signals — SCA, SAST, secrets, license, CVE, IaC, container, runtime, pentest — rolled into one A–F health score.',
-    alternates: pageAlternates('code/security'),
+    alternates: pageAlternates('code/security', locale),
   };
 }
 

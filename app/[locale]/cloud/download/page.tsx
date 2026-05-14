@@ -48,7 +48,7 @@ export async function generateMetadata({
   return {
     title: t('metaTitle'),
     description: t('metaDescription'),
-    alternates: pageAlternates('cloud/download'),
+    alternates: pageAlternates('cloud/download', locale),
   };
 }
 

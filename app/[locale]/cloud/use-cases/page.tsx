@@ -8,12 +8,12 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-  await params;
+  const { locale } = await params;
   return {
     title: 'Use cases — who actually uses Flyto2 Cloud',
     description:
       'Four user archetypes — ops teams, ecommerce sellers, engineering teams, researchers — and the workflows they actually ship.',
-    alternates: pageAlternates('cloud/use-cases'),
+    alternates: pageAlternates('cloud/use-cases', locale),
   };
 }
 

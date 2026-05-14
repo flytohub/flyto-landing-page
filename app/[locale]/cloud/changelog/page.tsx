@@ -8,12 +8,12 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-  await params;
+  const { locale } = await params;
   return {
     title: 'Changelog — what shipped recently',
     description:
       'Recent releases of Flyto2 Cloud — features, fixes, security, performance. Roughly weekly cadence.',
-    alternates: pageAlternates('cloud/changelog'),
+    alternates: pageAlternates('cloud/changelog', locale),
   };
 }
 

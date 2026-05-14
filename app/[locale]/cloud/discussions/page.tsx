@@ -14,7 +14,7 @@ export async function generateMetadata({
   return {
     title: t('titleCloud'),
     description: t('subtitleCloud'),
-    alternates: pageAlternates('cloud/discussions'),
+    alternates: pageAlternates('cloud/discussions', locale),
   };
 }
 
