@@ -2,7 +2,11 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Hero } from '@/components/sections/Hero';
 import { ProductPicker } from '@/components/sections/ProductPicker';
+import { VideoDemo } from '@/components/sections/VideoDemo';
 import { CoreBenefits } from '@/components/sections/CoreBenefits';
+import { HomeFeatures } from '@/components/sections/HomeFeatures';
+import { Stats } from '@/components/sections/Stats';
+import { Integrations } from '@/components/sections/Integrations';
 import { FAQ } from '@/components/sections/FAQ';
 import { CTASection } from '@/components/sections/CTASection';
 import { pageAlternates } from '@/lib/seo';
@@ -33,7 +37,11 @@ export default async function HomePage({
     <>
       <Hero />
       <ProductPicker />
+      <VideoDemo />
       <CoreBenefits />
+      <HomeFeatures />
+      <Stats />
+      <Integrations />
       <FAQ namespace="home.faq" />
       <CTASection
         primaryHref="/cloud"
