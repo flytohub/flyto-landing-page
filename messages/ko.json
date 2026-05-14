@@ -1,0 +1,52 @@
+{
+  "nav": {
+    "home": "홈",
+    "cloud": "Cloud",
+    "code": "Warroom",
+    "overview": "개요",
+    "pricing": "가격",
+    "download": "다운로드",
+    "templates": "템플릿",
+    "faq": "자주 묻는 질문",
+    "roadmap": "로드맵",
+    "oss": "오픈 소스",
+    "discussions": "토론",
+    "waitlist": "대기자 등록",
+    "docs": "문서",
+    "blog": "블로그",
+    "contact": "문의",
+    "signIn": "로그인",
+    "soon": "출시 예정",
+    "allProducts": "전체 제품"
+  },
+  "footer": {
+    "tagline": "오프라인 우선의 자동화 도구. 작업이 당신의 기기에 머무릅니다.",
+    "cloudTagline": "브라우저 자동화. 한 번 녹화하면 영원히 재생.",
+    "warroomTagline": "애플리케이션 보안 워룸. 폐쇄 루프 검증.",
+    "products": "제품",
+    "community": "커뮤니티",
+    "resources": "리소스",
+    "openSource": "오픈 소스",
+    "privacy": "개인정보",
+    "terms": "약관",
+    "license": "라이선스",
+    "copyright": "© 2026 FLYTO2"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "FLYTO2 · 오프라인 우선 자동화",
+      "title": "당신의 기기 위에서",
+      "titleAccent": "머무는 자동화.",
+      "lede": "Flyto2는 동일한 오프라인 우선 엔진 위에 두 가지 제품을 만듭니다. 하나는 브라우저에서의 반복 작업을 자동화하고, 다른 하나는 출시하는 모든 코드의 보안 자세를 감사합니다.",
+      "reassure": "오픈 소스 · 텔레메트리 없음 · 당신의 것"
+    },
+    "products": {
+      "cloud": {
+        "cta": "Cloud 보기"
+      },
+      "warroom": {
+        "cta": "Warroom 보기"
+      }
+    }
+  }
+}

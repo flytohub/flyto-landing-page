@@ -1,0 +1,52 @@
+{
+  "nav": {
+    "home": "Home",
+    "cloud": "Cloud",
+    "code": "Warroom",
+    "overview": "Panoramica",
+    "pricing": "Prezzi",
+    "download": "Download",
+    "templates": "Modelli",
+    "faq": "FAQ",
+    "roadmap": "Roadmap",
+    "oss": "Open source",
+    "discussions": "Discussioni",
+    "waitlist": "Lista d'attesa",
+    "docs": "Documentazione",
+    "blog": "Blog",
+    "contact": "Contatti",
+    "signIn": "Accedi",
+    "soon": "In arrivo",
+    "allProducts": "Tutti i prodotti"
+  },
+  "footer": {
+    "tagline": "Strumenti di automazione offline-first. Il tuo lavoro resta sulla tua macchina.",
+    "cloudTagline": "Automazione del browser. Registra una volta, riproduci per sempre.",
+    "warroomTagline": "Sala operativa per la sicurezza applicativa. Verifica a ciclo chiuso.",
+    "products": "Prodotti",
+    "community": "Community",
+    "resources": "Risorse",
+    "openSource": "Open source",
+    "privacy": "Privacy",
+    "terms": "Termini",
+    "license": "Licenza",
+    "copyright": "© 2026 FLYTO2"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "FLYTO2 · AUTOMAZIONE OFFLINE-FIRST",
+      "title": "Un'automazione che",
+      "titleAccent": "resta sulla tua macchina.",
+      "lede": "Flyto2 costruisce due prodotti sullo stesso motore offline-first. Uno automatizza il lavoro nel browser. L'altro verifica la sicurezza di ogni riga di codice che pubblichi.",
+      "reassure": "OPEN SOURCE · NESSUNA TELEMETRIA · TUO"
+    },
+    "products": {
+      "cloud": {
+        "cta": "Vai a Cloud"
+      },
+      "warroom": {
+        "cta": "Vai a Warroom"
+      }
+    }
+  }
+}

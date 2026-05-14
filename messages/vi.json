@@ -1,0 +1,52 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "cloud": "Cloud",
+    "code": "Warroom",
+    "overview": "Tổng quan",
+    "pricing": "Giá cả",
+    "download": "Tải về",
+    "templates": "Mẫu",
+    "faq": "Câu hỏi thường gặp",
+    "roadmap": "Lộ trình",
+    "oss": "Mã nguồn mở",
+    "discussions": "Thảo luận",
+    "waitlist": "Danh sách chờ",
+    "docs": "Tài liệu",
+    "blog": "Blog",
+    "contact": "Liên hệ",
+    "signIn": "Đăng nhập",
+    "soon": "Sắp ra mắt",
+    "allProducts": "Tất cả sản phẩm"
+  },
+  "footer": {
+    "tagline": "Công cụ tự động hoá ưu tiên offline. Công việc của bạn ở lại trên máy của bạn.",
+    "cloudTagline": "Tự động hoá trình duyệt. Ghi một lần, phát lại mãi mãi.",
+    "warroomTagline": "Phòng tác chiến an ninh ứng dụng. Xác minh vòng kín.",
+    "products": "Sản phẩm",
+    "community": "Cộng đồng",
+    "resources": "Tài nguyên",
+    "openSource": "Mã nguồn mở",
+    "privacy": "Quyền riêng tư",
+    "terms": "Điều khoản",
+    "license": "Giấy phép",
+    "copyright": "© 2026 FLYTO2"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "FLYTO2 · TỰ ĐỘNG HOÁ ƯU TIÊN OFFLINE",
+      "title": "Tự động hoá",
+      "titleAccent": "ở lại trên máy của bạn.",
+      "lede": "Flyto2 xây dựng hai sản phẩm trên cùng một động cơ ưu tiên offline. Một tự động hoá công việc lặp đi lặp lại trong trình duyệt. Một kiểm toán bảo mật của từng dòng mã bạn xuất xưởng.",
+      "reassure": "MÃ NGUỒN MỞ · KHÔNG TELEMETRY · CỦA BẠN"
+    },
+    "products": {
+      "cloud": {
+        "cta": "Vào Cloud"
+      },
+      "warroom": {
+        "cta": "Vào Warroom"
+      }
+    }
+  }
+}

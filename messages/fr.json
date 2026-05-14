@@ -1,0 +1,52 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "cloud": "Cloud",
+    "code": "Warroom",
+    "overview": "Vue d'ensemble",
+    "pricing": "Tarifs",
+    "download": "Téléchargement",
+    "templates": "Modèles",
+    "faq": "FAQ",
+    "roadmap": "Feuille de route",
+    "oss": "Open source",
+    "discussions": "Discussions",
+    "waitlist": "Liste d'attente",
+    "docs": "Documentation",
+    "blog": "Blog",
+    "contact": "Contact",
+    "signIn": "Connexion",
+    "soon": "Bientôt",
+    "allProducts": "Tous les produits"
+  },
+  "footer": {
+    "tagline": "Outils d'automatisation offline-first. Votre travail reste sur votre machine.",
+    "cloudTagline": "Automatisation du navigateur. Enregistrez une fois, rejouez à l'infini.",
+    "warroomTagline": "Salle d'opérations de sécurité applicative. Vérification en boucle fermée.",
+    "products": "Produits",
+    "community": "Communauté",
+    "resources": "Ressources",
+    "openSource": "Open source",
+    "privacy": "Confidentialité",
+    "terms": "Conditions",
+    "license": "Licence",
+    "copyright": "© 2026 FLYTO2"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "FLYTO2 · AUTOMATISATION OFFLINE-FIRST",
+      "title": "Une automatisation qui",
+      "titleAccent": "reste sur votre machine.",
+      "lede": "Flyto2 construit deux produits sur le même moteur offline-first. L'un automatise votre travail dans le navigateur. L'autre audite la sécurité de chaque ligne de code que vous livrez.",
+      "reassure": "OPEN SOURCE · SANS TÉLÉMÉTRIE · À VOUS"
+    },
+    "products": {
+      "cloud": {
+        "cta": "Voir Cloud"
+      },
+      "warroom": {
+        "cta": "Voir Warroom"
+      }
+    }
+  }
+}

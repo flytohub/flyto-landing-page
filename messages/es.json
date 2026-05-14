@@ -1,0 +1,52 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "cloud": "Cloud",
+    "code": "Warroom",
+    "overview": "Resumen",
+    "pricing": "Precios",
+    "download": "Descarga",
+    "templates": "Plantillas",
+    "faq": "Preguntas",
+    "roadmap": "Hoja de ruta",
+    "oss": "Código abierto",
+    "discussions": "Discusiones",
+    "waitlist": "Lista de espera",
+    "docs": "Documentación",
+    "blog": "Blog",
+    "contact": "Contacto",
+    "signIn": "Iniciar sesión",
+    "soon": "Próximamente",
+    "allProducts": "Todos los productos"
+  },
+  "footer": {
+    "tagline": "Herramientas de automatización offline-first. Tu trabajo se queda en tu máquina.",
+    "cloudTagline": "Automatización del navegador. Grábalo una vez, reprodúcelo siempre.",
+    "warroomTagline": "Sala de operaciones de seguridad de aplicaciones. Verificación en bucle cerrado.",
+    "products": "Productos",
+    "community": "Comunidad",
+    "resources": "Recursos",
+    "openSource": "Código abierto",
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "license": "Licencia",
+    "copyright": "© 2026 FLYTO2"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "FLYTO2 · AUTOMATIZACIÓN OFFLINE-FIRST",
+      "title": "Automatización que",
+      "titleAccent": "permanece en tu máquina.",
+      "lede": "Flyto2 construye dos productos sobre el mismo motor offline-first. Uno automatiza tu trabajo en el navegador. El otro audita la seguridad de cada línea de código que envías.",
+      "reassure": "CÓDIGO ABIERTO · SIN TELEMETRÍA · TUYO"
+    },
+    "products": {
+      "cloud": {
+        "cta": "Ir a Cloud"
+      },
+      "warroom": {
+        "cta": "Ir a Warroom"
+      }
+    }
+  }
+}

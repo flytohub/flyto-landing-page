@@ -1,0 +1,52 @@
+{
+  "nav": {
+    "home": "首页",
+    "cloud": "Cloud",
+    "code": "Warroom",
+    "overview": "概览",
+    "pricing": "定价",
+    "download": "下载",
+    "templates": "模板",
+    "faq": "常见问题",
+    "roadmap": "路线图",
+    "oss": "开源",
+    "discussions": "讨论区",
+    "waitlist": "加入候补",
+    "docs": "文档",
+    "blog": "博客",
+    "contact": "联系",
+    "signIn": "登录",
+    "soon": "即将推出",
+    "allProducts": "全部产品"
+  },
+  "footer": {
+    "tagline": "离线优先的自动化工具，让工作留在你的电脑上。",
+    "cloudTagline": "浏览器自动化。一次录制，永久回放。",
+    "warroomTagline": "应用安全战情室。闭环验证。",
+    "products": "产品",
+    "community": "社区",
+    "resources": "资源",
+    "openSource": "开源",
+    "privacy": "隐私",
+    "terms": "条款",
+    "license": "授权",
+    "copyright": "© 2026 FLYTO2"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "FLYTO2 · 离线优先的自动化",
+      "title": "让自动化",
+      "titleAccent": "留在你的电脑上。",
+      "lede": "Flyto2 用同一套离线优先引擎做两款产品。一款自动化你在浏览器里的重复工作，一款审你出货的每一行代码的安全姿态。",
+      "reassure": "开源 · 无遥测 · 属于你"
+    },
+    "products": {
+      "cloud": {
+        "cta": "前往 Cloud"
+      },
+      "warroom": {
+        "cta": "前往 Warroom"
+      }
+    }
+  }
+}

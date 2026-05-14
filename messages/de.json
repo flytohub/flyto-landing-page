@@ -1,0 +1,52 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "cloud": "Cloud",
+    "code": "Warroom",
+    "overview": "Übersicht",
+    "pricing": "Preise",
+    "download": "Download",
+    "templates": "Vorlagen",
+    "faq": "FAQ",
+    "roadmap": "Roadmap",
+    "oss": "Open Source",
+    "discussions": "Diskussionen",
+    "waitlist": "Warteliste",
+    "docs": "Dokumentation",
+    "blog": "Blog",
+    "contact": "Kontakt",
+    "signIn": "Anmelden",
+    "soon": "Bald",
+    "allProducts": "Alle Produkte"
+  },
+  "footer": {
+    "tagline": "Offline-first Automatisierung. Ihre Arbeit bleibt auf Ihrer Maschine.",
+    "cloudTagline": "Browser-Automatisierung. Einmal aufnehmen, immer abspielen.",
+    "warroomTagline": "Sicherheits-Lagezentrum für Anwendungen. Closed-Loop-Verifikation.",
+    "products": "Produkte",
+    "community": "Community",
+    "resources": "Ressourcen",
+    "openSource": "Open Source",
+    "privacy": "Datenschutz",
+    "terms": "AGB",
+    "license": "Lizenz",
+    "copyright": "© 2026 FLYTO2"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "FLYTO2 · OFFLINE-FIRST AUTOMATISIERUNG",
+      "title": "Automatisierung, die",
+      "titleAccent": "auf Ihrer Maschine bleibt.",
+      "lede": "Flyto2 baut zwei Produkte auf derselben Offline-first-Engine. Eines automatisiert Ihre Browser-Arbeit. Das andere prüft die Sicherheit jeder Zeile Code, die Sie ausliefern.",
+      "reassure": "OPEN SOURCE · KEINE TELEMETRIE · IHR EIGEN"
+    },
+    "products": {
+      "cloud": {
+        "cta": "Zu Cloud"
+      },
+      "warroom": {
+        "cta": "Zu Warroom"
+      }
+    }
+  }
+}

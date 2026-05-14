@@ -1,0 +1,52 @@
+{
+  "nav": {
+    "home": "Anasayfa",
+    "cloud": "Cloud",
+    "code": "Warroom",
+    "overview": "Genel bakış",
+    "pricing": "Fiyatlandırma",
+    "download": "İndir",
+    "templates": "Şablonlar",
+    "faq": "SSS",
+    "roadmap": "Yol haritası",
+    "oss": "Açık kaynak",
+    "discussions": "Tartışmalar",
+    "waitlist": "Bekleme listesi",
+    "docs": "Belgeler",
+    "blog": "Blog",
+    "contact": "İletişim",
+    "signIn": "Giriş yap",
+    "soon": "Yakında",
+    "allProducts": "Tüm ürünler"
+  },
+  "footer": {
+    "tagline": "Çevrimdışı öncelikli otomasyon araçları. Çalışmanız makinenizde kalır.",
+    "cloudTagline": "Tarayıcı otomasyonu. Bir kez kaydet, sonsuza dek oynat.",
+    "warroomTagline": "Uygulama güvenliği savaş odası. Kapalı döngü doğrulama.",
+    "products": "Ürünler",
+    "community": "Topluluk",
+    "resources": "Kaynaklar",
+    "openSource": "Açık kaynak",
+    "privacy": "Gizlilik",
+    "terms": "Şartlar",
+    "license": "Lisans",
+    "copyright": "© 2026 FLYTO2"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "FLYTO2 · ÇEVRİMDIŞI ÖNCELİKLİ OTOMASYON",
+      "title": "Otomasyon ki",
+      "titleAccent": "makinenizde kalır.",
+      "lede": "Flyto2 aynı çevrimdışı öncelikli motor üzerinde iki ürün geliştirir. Biri tarayıcıdaki tekrarlayan işinizi otomatikleştirir. Diğeri yayınladığınız her kod satırının güvenlik durumunu denetler.",
+      "reassure": "AÇIK KAYNAK · TELEMETRİ YOK · SİZE AİT"
+    },
+    "products": {
+      "cloud": {
+        "cta": "Cloud'a git"
+      },
+      "warroom": {
+        "cta": "Warroom'a git"
+      }
+    }
+  }
+}

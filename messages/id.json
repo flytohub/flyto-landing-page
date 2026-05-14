@@ -1,0 +1,52 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "cloud": "Cloud",
+    "code": "Warroom",
+    "overview": "Ringkasan",
+    "pricing": "Harga",
+    "download": "Unduh",
+    "templates": "Templat",
+    "faq": "FAQ",
+    "roadmap": "Peta jalan",
+    "oss": "Sumber terbuka",
+    "discussions": "Diskusi",
+    "waitlist": "Daftar tunggu",
+    "docs": "Dokumentasi",
+    "blog": "Blog",
+    "contact": "Kontak",
+    "signIn": "Masuk",
+    "soon": "Segera hadir",
+    "allProducts": "Semua produk"
+  },
+  "footer": {
+    "tagline": "Alat otomasi offline-first. Pekerjaan Anda tetap di mesin Anda.",
+    "cloudTagline": "Otomasi browser. Rekam sekali, putar selamanya.",
+    "warroomTagline": "Ruang operasi keamanan aplikasi. Verifikasi siklus tertutup.",
+    "products": "Produk",
+    "community": "Komunitas",
+    "resources": "Sumber daya",
+    "openSource": "Sumber terbuka",
+    "privacy": "Privasi",
+    "terms": "Ketentuan",
+    "license": "Lisensi",
+    "copyright": "© 2026 FLYTO2"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "FLYTO2 · OTOMASI OFFLINE-FIRST",
+      "title": "Otomasi yang",
+      "titleAccent": "tetap di mesin Anda.",
+      "lede": "Flyto2 membangun dua produk di atas mesin offline-first yang sama. Satu mengotomasi pekerjaan Anda di browser. Yang lain mengaudit keamanan setiap baris kode yang Anda kirim.",
+      "reassure": "SUMBER TERBUKA · TANPA TELEMETRI · MILIK ANDA"
+    },
+    "products": {
+      "cloud": {
+        "cta": "Buka Cloud"
+      },
+      "warroom": {
+        "cta": "Buka Warroom"
+      }
+    }
+  }
+}

@@ -14,6 +14,8 @@ const routes = [
   'cloud/discussions',
   'code',
   'code/discussions',
+  'privacy',
+  'terms',
 ];
 
 function localePath(locale: Locale, route: string) {
