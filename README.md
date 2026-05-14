@@ -14,17 +14,20 @@ product repos so marketing copy iterations don't force a product deploy.
 
 ## Stack
 
-- Static-first (Astro / Next SSG — see `package.json` for the actual framework)
-- Tailwind + shared design tokens from
-  [`@flyto/design-tokens`](https://github.com/flytohub/flyto-design-tokens)
-- Deployed on every push to `main`
+- Next.js 15 (App Router) with `output: 'export'` for static generation
+- next-intl for 16-locale routing
+- Tailwind v4 + Motion library + lucide-react
+- Firebase Web SDK (client-only) for the Q&A forum
+- Deployed to GitHub Pages on every push to `main` via
+  `.github/workflows/deploy.yml`
 
 ## Local dev
 
 ```bash
+cd next
 npm install
 npm run dev          # http://localhost:3000
-npm run build        # static output in dist/ (or .next/out)
+npm run build        # static output in next/out/
 ```
 
 ## Content workflow

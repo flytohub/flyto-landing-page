@@ -14,8 +14,7 @@ Thumbs.db
 # Dependencies
 node_modules/
 
-# Fetched data (regenerated at build time)
-scripts/cloud-templates.json
+# (Legacy build-time fetched data lived under scripts/cloud-templates.json.)
 
 # Environment / Secrets (never commit)
 .env
@@ -32,23 +31,9 @@ dist/
 build/
 *.min.js.map
 
-# Generated language directories (auto-built by scripts/build-i18n.js)
-# Do NOT commit - these are generated during CI/CD deployment
-/zh/
-/cn/
-/ja/
-/ko/
-/de/
-/fr/
-/es/
-/it/
-/pt/
-/pl/
-/tr/
-/th/
-/vi/
-/id/
-/hi/
+# Legacy locale-directory rules removed — old static site no longer exists,
+# next-intl emits locale-prefixed routes inside next/out/ which is itself
+# already gitignored above.
 
 # Backup files
 *.bak
