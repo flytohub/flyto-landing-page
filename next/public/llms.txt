@@ -1,0 +1,97 @@
+# Flyto2
+
+> Browser automation at machine speed. Record once, replay forever. No coding, no API needed — works on any website. Pause, verify, and resume at any step.
+
+Flyto2 is a no-code automation tool that records your browser actions and replays them at full speed. Unlike other automation tools, Flyto2 lets you pause mid-execution, verify what it's about to do, and resume — you always stay in control. It runs entirely on your computer with no cloud dependency, so your data never leaves your machine.
+
+## What makes Flyto2 different
+
+- **Record & Replay**: Show Flyto2 what to do once. It memorizes every click and keystroke, then replays at machine speed.
+- **Pause, Verify, Resume**: Other tools only have "not running" and "finished." Flyto2 lets you pause mid-task, check the state, correct mistakes, and continue exactly where you stopped.
+- **No coding required**: If you can click and type, you can use Flyto2. No scripts, no APIs, no Zapier.
+- **No API needed**: Works directly in the browser with any website — even sites that have no API or only allow one-at-a-time operations.
+- **Works offline**: Runs 100% locally on your computer. No cloud dependency. Same privacy and security on free and paid plans.
+- **Split-second timing**: Execute at the exact moment needed — flash sales, reservations, limited slots. Batch 100 items in the time it takes to do 1.
+
+## Who is Flyto2 for
+
+- **Business users** who spend hours on repetitive browser tasks (data entry, form filling, copy-pasting between systems)
+- **E-commerce sellers** who need to monitor prices, track inventory, or bulk-update listings
+- **Researchers** who collect data from websites that don't offer exports
+- **QA testers** who need cross-browser screenshots or link checking
+- **Anyone** who does the same browser task more than twice
+
+## Pricing
+
+- **Free**: Core recording and playback, unlimited local usage, MIT-licensed open source, no account or credit card required
+- **Pro**: Starting from $9/month (advanced features, coming soon)
+- **Enterprise**: Custom pricing, on-premises deployment, RBAC, audit logging, dedicated support
+- **Cloud (SaaS)**: Team collaboration, shared workflows (coming soon, waitlist available)
+
+All paid plans include a 30-day money-back guarantee. Discounts available for students, educators, non-profits, and teams (contact sales@flyto2.com).
+
+## Platforms
+
+- Windows, macOS (Intel + Apple Silicon M1–M4), Linux
+- CLI via PyPI (Python 3.9+, MIT license)
+- WebAssembly module
+- Node.js package
+- Desktop app (coming soon — visual workflow builder, 250+ built-in modules)
+- Self-hosted Docker deployment for enterprise
+
+## Templates (101+ free)
+
+Pre-built automation templates, all free, no coding required:
+
+- **Web scraping**: LinkedIn jobs, Google Maps reviews, social media profiles, restaurant menus
+- **Price monitoring**: Amazon tracker, eBay tracker, flight prices, crypto alerts, multi-site comparison
+- **Website health**: Broken link checker, uptime monitor, SSL certificate monitor, security headers check
+- **Data conversion**: CSV↔JSON, XML→JSON, merge CSV files
+- **Content**: Webpage to PDF, website screenshots, cross-browser screenshots, bulk image resize
+- **Notifications**: Price drop alerts, weather to Slack, Telegram alerts, exchange rate alerts
+- **Forms & login**: Auto-login, bulk form submission, auto-fill job applications, cookie consent dismiss
+
+Full template list: [Templates](https://flyto2.com/templates.html)
+
+## Developer tools
+
+Flyto2 Indexer is an MCP server (Model Context Protocol) providing code intelligence for AI tools:
+
+- Compatible with Claude Code, Cursor, Windsurf, and any MCP client
+- 25 MCP tools: symbol lookup, fulltext search, edit impact preview, test file finder, API tracking, and more
+- Cross-project API tracking — know which repos break when you change a shared function
+- Zero external dependencies
+
+## Pages
+
+- [Home](https://flyto2.com/): Product overview and key features
+- [Code - Pricing](https://flyto2.com/code/pricing.html): Plans, pricing, and comparison
+- [Code - Download](https://flyto2.com/code/download.html): CLI download (PyPI, .whl, .tar.gz)
+- [Code - Desktop App](https://flyto2.com/code/app.html): Desktop app with visual workflow builder
+- [Code - Templates](https://flyto2.com/code/templates.html): 101+ free automation templates
+- [Code - Developer](https://flyto2.com/code/dev.html): MCP server and developer tools
+- [Code - WebAssembly](https://flyto2.com/code/wasm.html): WebAssembly module
+- [Code - Node.js](https://flyto2.com/code/node.html): Node.js package
+- [Code - FAQ](https://flyto2.com/code/faq.html): Common questions and answers
+- [Documentation](https://docs.flyto2.com): Full documentation
+- [Blog](https://blog.flyto2.com): Tutorials and updates
+- [Contact](https://flyto2.com/contact.html): Support and inquiries
+
+## Contact
+
+- General: info@flyto2.com
+- Sales: sales@flyto2.com
+- GitHub: github.com/flytohub
+- YouTube: @Flyto2
+
+## Comparison with alternatives
+
+| Feature | Flyto2 | Selenium/Playwright | Zapier/Make | UiPath/Power Automate |
+|------|------|------|------|------|
+| No coding required | Yes | No | Partial | Partial |
+| Pause & resume mid-task | Yes | No | No | Limited |
+| Works without API | Yes | Yes | No | Partial |
+| Runs offline / locally | Yes | Yes | No | Partial |
+| Free tier | Yes (MIT) | Yes | Limited | Limited |
+| Browser automation | Yes | Yes | No | Yes |
+| Time-sensitive execution | Yes | Manual | No | Limited |

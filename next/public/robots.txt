@@ -1,0 +1,12 @@
+# Flyto Robots.txt
+# Next.js URL structure (no .html, trailing-slash dirs)
+
+User-agent: *
+Allow: /
+
+Sitemap: https://flyto2.com/sitemap.xml
+LLMs-Txt: https://flyto2.com/llms.txt
+
+# Block Anthropic's training crawler (mirrors prior policy)
+User-agent: anthropic-ai
+Disallow: /
