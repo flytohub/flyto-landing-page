@@ -3,6 +3,7 @@ import { readdirSync } from 'node:fs';
 import path from 'node:path';
 import { locales, defaultLocale, type Locale } from '@/lib/locales';
 import { whitepaperSlugs } from '@/lib/whitepapers';
+import { templates } from '@/lib/templates';
 
 export const dynamic = 'force-static';
 
@@ -42,8 +43,19 @@ function localePath(locale: Locale, route: string) {
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = discoverStaticRoutes(PAGES_ROOT);
-  const dynamicRoutes = whitepaperSlugs().map((slug) => `whitepaper/${slug}`);
-  const routes = [...staticRoutes, ...dynamicRoutes].sort();
+  const whitepaperRoutes = whitepaperSlugs().map((slug) => `whitepaper/${slug}`);
+  // Templates: include only primary slugs. Alias entries (canonicalSlug) 308
+  // redirect to their primary, so listing them would create duplicate sitemap
+  // entries pointing at the same content.
+  const templateRoutes = templates
+    .filter((tpl) => !tpl.canonicalSlug)
+    .map((tpl) => `cloud/templates/${tpl.slug}`);
+
+  const routes = [
+    ...staticRoutes,
+    ...whitepaperRoutes,
+    ...templateRoutes,
+  ].sort();
   const now = new Date();
 
   // Emit one <url> entry per (locale × route) combo. Each entry carries

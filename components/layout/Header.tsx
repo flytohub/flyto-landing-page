@@ -5,10 +5,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
 import { usePathname } from 'next/navigation';
-import { Menu, ArrowUpRight, Cloud, ShieldCheck } from 'lucide-react';
+import { Menu, Cloud, ShieldCheck } from 'lucide-react';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { MobileMenu } from './MobileMenu';
-import { products, productNav, detectProduct } from '@/lib/nav';
+import { MegaMenu } from './MegaMenu';
+import { products, productNavGrouped, detectProduct } from '@/lib/nav';
 import { cn } from '@/lib/cn';
 
 const PRODUCT_ICONS = { Cloud, ShieldCheck };
@@ -35,8 +36,8 @@ export function Header() {
         : `/${locale}${href === '/' ? '' : href}`;
 
   const product = detectProduct(pathname);
-  const subNav = productNav[product];
-  const showSubNav = subNav.length > 0;
+  const subNavGroups = productNavGrouped[product];
+  const showSubNav = subNavGroups.length > 0;
 
   return (
     <>
@@ -62,7 +63,6 @@ export function Header() {
               />
             </Link>
 
-            {/* Product tabs — center on desktop, hidden on mobile (mobile menu shows them) */}
             <div className="hidden items-center gap-1 md:flex">
               {products.map((p) => {
                 const Icon = PRODUCT_ICONS[p.icon as keyof typeof PRODUCT_ICONS];
@@ -115,7 +115,7 @@ export function Header() {
           </div>
         </div>
 
-        {/* Row 2 — contextual nav for current product (hidden on home) */}
+        {/* Row 2 — contextual nav, now grouped into 3 dropdowns */}
         {showSubNav && (
           <div className="hidden md:block">
             <div className="mx-auto flex h-10 max-w-7xl items-center justify-between gap-4 px-5 sm:px-8">
@@ -125,34 +125,14 @@ export function Header() {
                 </span>
               </div>
               <nav className="flex items-center gap-6">
-                {subNav.map((item) => {
-                  const href = item.external ? item.href : localized(item.href);
-                  const active =
-                    !item.external &&
-                    !item.href.includes('#') &&
-                    (item.href === pathname.replace(/^\/[a-z]{2}/, '') ||
-                      item.href === pathname);
-                  return (
-                    <Link
-                      key={item.key}
-                      href={href}
-                      target={item.external ? '_blank' : undefined}
-                      rel={item.external ? 'noopener noreferrer' : undefined}
-                      className={cn(
-                        'group inline-flex items-center gap-1 text-[12.5px] tracking-wide transition-colors',
-                        active ? 'text-bone-100' : 'text-bone-200 hover:text-bone-100',
-                      )}
-                    >
-                      {t(item.key)}
-                      {item.external && (
-                        <ArrowUpRight className="h-3 w-3 opacity-50" strokeWidth={1.5} />
-                      )}
-                      {active && (
-                        <span className="ml-1 inline-block h-1 w-1 rounded-full bg-violet-400" />
-                      )}
-                    </Link>
-                  );
-                })}
+                {subNavGroups.map((group) => (
+                  <MegaMenu
+                    key={group.key}
+                    group={group}
+                    localize={localized}
+                    activePath={pathname}
+                  />
+                ))}
               </nav>
             </div>
           </div>
@@ -161,9 +141,7 @@ export function Header() {
 
       <MobileMenu open={mobileOpen} onClose={() => setMobileOpen(false)} />
 
-      {/* Spacer matches header height. 48 (row 1) + 40 (row 2 if visible). */}
       <div aria-hidden className={cn(showSubNav ? 'h-[88px] md:h-[88px]' : 'h-12')} />
     </>
   );
 }
-

@@ -18,6 +18,8 @@ import {
 import { Tag } from '@/components/ui/Tag';
 import { CTASection } from '@/components/sections/CTASection';
 import { pageAlternates } from '@/lib/seo';
+import { templates } from '@/lib/templates';
+import { defaultLocale } from '@/lib/locales';
 
 export async function generateMetadata({
   params,
@@ -45,6 +47,7 @@ export default async function TemplatesPage({
     <>
       <TemplatesHero />
       <TemplatesGrid />
+      <CommunityTemplatesGrid locale={locale} />
       <CTASection
         namespace="templates.cta"
         primaryHref="https://github.com/flytohub/flyto2/discussions"
@@ -92,7 +95,7 @@ function TemplatesGrid() {
   const t = useTranslations('templates');
   const items = t.raw('items') as TemplateItem[];
   return (
-    <section className="mx-auto max-w-6xl px-5 pb-24 sm:px-8 sm:pb-32">
+    <section className="mx-auto max-w-6xl px-5 pb-16 sm:px-8 sm:pb-24">
       <header className="mb-10 max-w-2xl">
         <span className="label-mono">{t('gridLabel')}</span>
         <h2 className="h-display mt-4 text-[clamp(32px,5vw,52px)]">{t('gridTitle')}</h2>
@@ -125,6 +128,59 @@ function TemplatesGrid() {
           );
         })}
       </div>
+    </section>
+  );
+}
+
+function CommunityTemplatesGrid({ locale }: { locale: string }) {
+  // Only primary templates — alias entries (canonicalSlug) redirect, so they
+  // would clutter the grid with duplicates.
+  const primaryTemplates = templates.filter((tpl) => !tpl.canonicalSlug);
+  const prefix = locale === defaultLocale ? '' : `/${locale}`;
+
+  return (
+    <section className="mx-auto max-w-6xl px-5 pb-24 sm:px-8 sm:pb-32">
+      <header className="mb-10 max-w-2xl">
+        <span className="label-mono">COMMUNITY · {primaryTemplates.length} TEMPLATES</span>
+        <h2 className="h-display mt-4 text-[clamp(28px,4.5vw,44px)]">
+          Open-source workflows from the community
+        </h2>
+        <p className="mt-4 max-w-xl text-[14.5px] leading-relaxed text-bone-200">
+          Production-tested templates contributed by Flyto2 users. Fork, customize, and ship.
+        </p>
+      </header>
+
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {primaryTemplates.map((tpl) => {
+          const Icon = ICONS[tpl.iconName] ?? FileText;
+          return (
+            <Link
+              key={tpl.slug}
+              href={`${prefix}/cloud/templates/${tpl.slug}/`}
+              className="lift group flex flex-col gap-3 rounded-2xl border border-[var(--color-line)] bg-ink-700/30 p-5 transition-colors hover:border-violet-400/60"
+            >
+              <div className="flex items-start justify-between">
+                <span className="grid h-10 w-10 place-items-center rounded-lg border border-[var(--color-line-strong)] bg-ink-900 text-violet-300 transition-colors group-hover:text-violet-200">
+                  <Icon className="h-4 w-4" strokeWidth={1.5} />
+                </span>
+                <ArrowUpRight
+                  className="h-4 w-4 text-bone-300 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-bone-100"
+                  strokeWidth={1.5}
+                />
+              </div>
+              <span className="font-mono text-[10px] tracking-[0.14em] uppercase text-bone-300">
+                {tpl.category}
+              </span>
+              <h3 className="font-display text-[15.5px] font-semibold leading-tight tracking-tight text-bone-100">
+                {tpl.title}
+              </h3>
+              <p className="text-[12.5px] leading-relaxed text-bone-200 line-clamp-3">
+                {tpl.lede}
+              </p>
+            </Link>
+          );
+        })}
+      </div>
 
       <div className="mt-10 flex items-center justify-center gap-3">
         <Link
@@ -134,7 +190,7 @@ function TemplatesGrid() {
           className="group inline-flex items-center gap-2 rounded-full border border-[var(--color-line-strong)] bg-ink-700/30 px-5 py-3 text-[13px] tracking-wide text-bone-100 transition-all hover:border-violet-400 hover:bg-violet-500/10"
         >
           <Github className="h-4 w-4" strokeWidth={1.75} />
-          <span>{t('contributeOnGithub')}</span>
+          <span>Contribute on GitHub</span>
           <ArrowUpRight
             className="h-4 w-4 opacity-60 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
             strokeWidth={1.5}
