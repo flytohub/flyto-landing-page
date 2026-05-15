@@ -1,565 +1,909 @@
 {
-  "nav": {
-    "home": "ホーム",
-    "cloud": "Cloud",
-    "code": "Warroom",
-    "overview": "概要",
-    "pricing": "料金",
-    "download": "ダウンロード",
-    "templates": "テンプレート",
-    "faq": "FAQ",
-    "roadmap": "ロードマップ",
-    "oss": "オープンソース",
-    "discussions": "ディスカッション",
-    "waitlist": "ウェイトリスト",
-    "docs": "ドキュメント",
-    "blog": "ブログ",
-    "contact": "お問い合わせ",
-    "signIn": "サインイン",
-    "soon": "近日公開",
-    "allProducts": "すべての製品",
-    "beta": "ベータ",
-    "integrations": "統合",
-    "recipes": "レシピ",
-    "useCases": "ユースケース",
-    "changelog": "更新履歴",
-    "security": "セキュリティ"
-  },
-  "footer": {
-    "tagline": "あなたの作業をマシンに残す、オフラインファーストの自動化ツール。",
-    "cloudTagline": "ブラウザ自動化。一度記録、永遠再生。",
-    "warroomTagline": "アプリセキュリティ作戦本部。クローズドループ検証。",
-    "products": "製品",
-    "community": "コミュニティ",
-    "resources": "リソース",
-    "openSource": "オープンソース",
-    "privacy": "プライバシー",
-    "terms": "利用規約",
-    "license": "ライセンス",
-    "copyright": "© 2026 FLYTO2"
-  },
-  "home": {
-    "metaTitle": "Flyto2 — 一度記録、永遠再生",
-    "metaDescription": "オフラインで動くノーコードのブラウザ自動化。一度記録すれば永遠に再生。250以上のモジュール、16言語、MIT ライセンスのエンジン。",
-    "hero": {
-      "eyebrow": "FLYTO2 · オフラインファーストのブラウザ自動化",
-      "title": "一度、記録。",
-      "titleAccent": "永遠、再生。",
-      "lede": "Flyto2 はあなたがブラウザでやることを観察し、必要なときに正確に再現します。セレクタを書く必要も、糊付けコードを保守する必要もなく、データはマシンから出ません。",
-      "ctaPrimary": "無料ダウンロード",
-      "ctaSecondary": "デモを見る",
-      "reassure": "OPEN SOURCE · NO TELEMETRY · OFFLINE"
-    },
-    "video": {
-      "label": "DEMO",
-      "title": "ブラウザ自動化を",
-      "titleAccent": "実際に。",
-      "subtitle": "技術的な背景は不要。ロング版は実際のフローを最後まで、ショート版は60秒で要点を。",
-      "longLabel": "FULL DEMO",
-      "longTitle": "Flyto2 — full demo",
-      "longBody": "チェックアウトフローを記録、ステップを一つ編集、再生 — 2分でフルウォークスルー。",
-      "shortLabel": "60-SEC SHORT",
-      "shortTitle": "Flyto2 — 60秒ショート",
-      "shortBody": "フォーム入力の自動化。縦長、速い、スマホ共有向け。",
-      "moreOnYoutube": "@Flyto2 の YouTube でさらに"
-    },
-    "features": {
-      "label": "WHY FLYTO2",
-      "title": "あなたが繰り返す仕事のために。",
-      "items": [
-        {
-          "icon": "Video",
-          "title": "あらゆる操作を記録",
-          "body": "レコーダーを開いて、一度操作して、停止。クリック・スクロール・入力・待機すべてを取り込みます。"
-        },
-        {
-          "icon": "Pause",
-          "title": "一時停止と検査",
-          "body": "ワークフローはブラックボックスではありません。ステップ実行、途中で値変更、再開 — 日常業務のためのデバッガー。"
-        },
-        {
-          "icon": "ShieldOff",
-          "title": "オフライン設計",
-          "body": "あなたのマシンで動きます。認証情報、スクレイピングしたデータ、実行履歴 — 誰にも送られません。"
-        },
-        {
-          "icon": "Boxes",
-          "title": "250以上のモジュール",
-          "body": "CSV、Excel、Stripe、Notion、Postgres、Slack、OpenAI — API の配線を書く代わりにスナップで繋ぎます。"
-        },
-        {
-          "icon": "GitBranch",
-          "title": "分岐とマージ",
-          "body": "if/else、ループ、リトライ、エラーハンドラ — コードに書くようなことを、5秒で読める視覚ノードで。"
-        },
-        {
-          "icon": "Languages",
-          "title": "16 言語",
-          "body": "レコーダー、ランタイム、ドキュメント、エラーメッセージ — すべて翻訳済み。"
-        }
-      ]
-    },
-    "stats": {
-      "items": [
-        {
-          "value": "250+",
-          "label": "MODULES",
-          "body": "CSV、Excel、Stripe、Notion、Slack、AI、SQL — 自分で糊付けするはずだったものが、すぐ使えるノードとして。"
-        },
-        {
-          "value": "16",
-          "label": "LANGUAGES",
-          "body": "UI、レコーダー、ランタイム、ドキュメント、エラーメッセージ — ラベルだけでなく翻訳。"
-        },
-        {
-          "value": "100%",
-          "label": "ON YOUR MACHINE",
-          "body": "あなたの記録、認証情報、実行履歴。オプトインしない限りクラウドに行かない。テレメトリは一切なし。"
-        }
-      ]
-    },
-    "codeTeaser": {
-      "label": "ALSO BUILDING",
-      "status": "Pre-launch",
-      "title": "Warroom — アプリセキュリティ作戦本部。",
-      "body": "ソフトウェアを出荷する側のセキュリティを別プロダクトで。SCA、SAST、シークレット、ライセンス、CVE、ペンテスト — A–F のヘルススコアに集約。",
-      "cta": "Warroom を見る"
-    },
-    "faq": {
-      "label": "FAQ",
-      "title": "よくある質問、先にお答えします。",
-      "subtitle": "チームで Flyto2 を検討するときに、最初に聞かれることをまとめました。",
-      "items": [
-        {
-          "q": "Flyto2 は本当に無料でオープンソースですか?",
-          "a": "はい。実行エンジン `flyto-core` は GitHub 上で MIT ライセンスです。今日 PyPI からインストールしてアカウントなしで動かせます。ホステッドクラウドはその上にレイヤされた有料オプションで、必須ではありません。"
-        },
-        {
-          "q": "Zapier や Make との違いは?",
-          "a": "Zapier と Make はクラウドで SaaS API を繋ぎます。Flyto2 はブラウザそのものを記録・再生します — 公開 API のないサイトを含めて — そしてあなた自身のマシンで動きます。銀行、ERP、ベンダーポータルが Zapier のカタログにないなら、それが Flyto2 の埋める穴です。"
-        },
-        {
-          "q": "対象サイトがリニューアルしたら?",
-          "a": "Flyto2 は意味的なアクション(「ログインボタンをクリック」)を記録します。脆い CSS セレクタではありません。サイトが再スキンしてもほとんどのフローは動き続けます。何かが壊れたら、その一歩を直して再開 — フロー全体を書き直す必要はありません。"
-        },
-        {
-          "q": "チームでワークフローを共有できますか?",
-          "a": "はい。ワークフローは git にコミットでき、アプリ内マーケットプレイスで共有でき、Slack で渡せるプレーンファイルです。実行履歴はローカルに、ワークフロー定義だけが移動します。"
-        },
-        {
-          "q": "料金は?",
-          "a": "デスクトップアプリと OSS エンジンは個人利用無料。Pro と Team はホステッドスケジューリング、共有マーケットプレイス、優先サポートを追加 — 詳細は Cloud ページで。"
-        }
-      ]
-    },
-    "cta": {
-      "label": "GET STARTED",
-      "title": "同じことを二度するのをやめる。",
-      "body": "Flyto2 をダウンロードして、ワークフローを一つ記録すれば、一週間がまるごと空くのを感じます。",
-      "primary": "無料ダウンロード",
-      "secondary": "ドキュメントを読む"
-    },
-    "products": {
-      "warroom": {
-        "statusLabel": "ベータ版"
-      }
-    }
-  },
-  "cloud": {
-    "metaTitle": "Cloud — ノーコードブラウザ自動化",
-    "metaDescription": "一度記録、永遠再生。オフラインで動くノーコードのブラウザ自動化。",
-    "hero": {
-      "eyebrow": "01 / CLOUD",
-      "status": "SHIPPING",
-      "title": "ブラウザ作業を、",
-      "titleAccent": "オートパイロットで。",
-      "lede": "レコーダーを開いて、一度操作して、停止。Cloud がそれを編集・バージョン管理・スケジュール・共有可能な構造化ワークフローに変えます — コードは一行も書きません。",
-      "ctaPrimary": "デスクトップ版をダウンロード",
-      "ctaSecondary": "250以上のモジュールを見る"
-    },
-    "how": {
-      "label": "HOW IT WORKS",
-      "title": "手動から自動へ、3ステップ。",
-      "items": [
-        {
-          "step": "01",
-          "icon": "Video",
-          "title": "記録",
-          "body": "録画ボタンを押して、一度作業する。Flyto2 がクリック・スクロール・入力・待機 — 全ステップを順序通りローカルにキャプチャ。"
-        },
-        {
-          "step": "02",
-          "icon": "GitBranch",
-          "title": "編集",
-          "body": "if/else、ループ、リトライ、認証情報を視覚ノードとして追加。実行中に一時停止して値を確認・変更・再開。"
-        },
-        {
-          "step": "03",
-          "icon": "Repeat",
-          "title": "再生",
-          "body": "オンデマンド、スケジュール、CLI から実行。Flyto2 があなたのマシンで全ステップを正確に再現し、完全な監査トレイルを残します。"
-        }
-      ]
-    },
-    "features": {
-      "label": "CAPABILITIES",
-      "title": "あなたが繰り返す仕事のために。",
-      "items": [
-        {
-          "icon": "Video",
-          "title": "あらゆる操作を記録",
-          "body": "レコーダーを開いて、一度操作して、停止。"
-        },
-        {
-          "icon": "Pause",
-          "title": "一時停止と検査",
-          "body": "ワークフローはブラックボックスではありません。"
-        },
-        {
-          "icon": "ShieldOff",
-          "title": "オフライン設計",
-          "body": "あなたのマシンで動きます。"
-        },
-        {
-          "icon": "Boxes",
-          "title": "250以上のモジュール",
-          "body": "CSV、Excel、Stripe、Notion など。"
-        },
-        {
-          "icon": "GitBranch",
-          "title": "分岐とマージ",
-          "body": "if/else、ループ、リトライ、エラーハンドラ。"
-        },
-        {
-          "icon": "Languages",
-          "title": "16 言語",
-          "body": "全コンポーネント翻訳済み。"
-        }
-      ]
-    },
-    "useCases": {
-      "label": "USE CASES",
-      "title": "みんなが最初に自動化するもの。",
-      "items": [
-        {
-          "icon": "FileText",
-          "title": "請求書・領収書の抽出",
-          "body": "毎週月曜にベンダーポータルへログイン、PDF をダウンロード、クライアント別にファイリング、合計を Sheets にプッシュ — キーボードに触れずに。"
-        },
-        {
-          "icon": "Database",
-          "title": "システム間データ同期",
-          "body": "あなたが使う SaaS が経理の SaaS と話さないとき、Flyto2 がその橋を記録して毎晩実行。"
-        },
-        {
-          "icon": "Search",
-          "title": "価格・競合監視",
-          "body": "URL リストを訪問、価格をスクレイプ、CSV に書き出し、変化を Slack に通知。インターン2週間分の作業が、午後一回で自動化。"
-        },
-        {
-          "icon": "Mail",
-          "title": "リードのルーティングとエンリッチ",
-          "body": "CRM から取得、公開ウェブで補強、タグ付けして戻す。Zapier の中間業者なし、月間タスク上限なし。"
-        }
-      ]
-    },
-    "faq": {
-      "label": "FAQ",
-      "title": "Cloud — よくある質問。",
-      "subtitle": "記録、再生、セキュリティ、料金 — 運用や IT のリードがツール承認前に聞くこと。",
-      "items": [
-        {
-          "q": "公開 API のないサイトでも動きますか?",
-          "a": "それこそが Flyto2 の仕事です。ブラウザで操作できれば、Flyto2 は記録・再生できます — 内部ポータル、政府サイト、レガシー ERP、どこでも。"
-        },
-        {
-          "q": "本当に自分のマシンで動いているのですか?",
-          "a": "はい。デスクトップアプリには Chromium エンジンとワークフローランタイムが同梱されています。認証情報、記録ステップ、実行履歴はディスク上に。クラウドはスケジューリング、共有、チーム機能のオプトインです。"
-        },
-        {
-          "q": "サイトがリニューアルしたら?",
-          "a": "Flyto2 は意味的な意図(「サインインをクリック」、「メール欄に入力」)を記録します。脆い XPath ではありません。サイトが再スキンしても多くのフローは動き続けます。一歩が壊れたら、視覚エディタでその一歩だけ修正します。"
-        },
-        {
-          "q": "CI やスクリプトからフローをトリガーできますか?",
-          "a": "はい。すべてのワークフローには CLI 呼び出しと webhook URL があります。cron、GitHub Actions、自分のバックエンド、Flyto2 のホステッドスケジューラから — 同じワークフローファイル、同じ結果。"
-        },
-        {
-          "q": "2FA や CAPTCHA はどう扱いますか?",
-          "a": "Flyto2 は一時停止して、あなた(またはチームの誰か)に 2FA を完了するよう促し、続行できます。CAPTCHA は意図的にバイパスしません — 自動化を禁止するサイトで Flyto2 を使うかどうかはあなた次第です。"
-        },
-        {
-          "q": "料金は?",
-          "a": "デスクトップアプリと OSS エンジンは個人利用無料。Pro はホステッドスケジューリングと無制限のクラウド実行;Team は共有マーケットプレイスと SSO。詳細は Cloud ページで。"
-        }
-      ]
-    }
-  },
-  "forum": {
-    "titleCloud": "Cloud — ディスカッション",
-    "subtitleCloud": "質問、バグ報告、ワークフロー共有。誰でも読めますが、投稿は無料の Flyto2 アカウントが必要です。",
-    "titleCode": "Warroom — ディスカッション",
-    "subtitleCode": "セキュリティ、スキャン、クローズドループ検証。読むだけなら誰でも、投稿はアカウント必須。",
-    "auth": {
-      "loading": "サインイン状態を確認中…",
-      "title": "続行するにはサインイン",
-      "subtitle": "投稿はアカウントに紐づきます。返信があったときに通知できるようにするためです。メールアドレスは公開しません。",
-      "continueGoogle": "Google で続行",
-      "or": "または",
-      "email": "Email",
-      "password": "パスワード",
-      "signIn": "サインイン",
-      "signUp": "アカウント作成",
-      "switchToSignUp": "アカウントがない?作成する",
-      "switchToSignIn": "アカウントがある?サインイン",
-      "signOut": "サインアウト",
-      "error": "問題が発生しました。もう一度試してください。",
-      "reason": {
-        "post": "サインインして投稿",
-        "comment": "サインインして返信",
-        "react": "サインインしてリアクション"
-      }
-    },
-    "list": {
-      "compose": "新規投稿",
-      "composeSignIn": "サインインして投稿",
-      "loadMore": "もっと見る",
-      "empty": "まだ投稿はありません — 最初の質問者になりませんか。",
-      "error": "投稿の読み込みに失敗。再読み込みしてください。",
-      "indexBuilding": "Firestore がこのクエリのインデックスを構築中です。30秒ごとに自動で再試行します — 手動再読み込み不要です。",
-      "prev": "前へ",
-      "next": "次へ",
-      "first": "最初",
-      "pageIndicator": "{page} ページ目"
-    },
-    "categories": {
-      "all": "すべて",
-      "question": "Q&A",
-      "bug": "バグ",
-      "feature": "機能リクエスト",
-      "discussion": "ディスカッション"
-    },
-    "sort": {
-      "new": "新着",
-      "hot": "ホット",
-      "top": "トップ"
-    },
-    "composer": {
-      "title": "ディスカッションを始める",
-      "subtitle": "Markdown 対応。タイトルは一文で、本文に再現手順や背景を。",
-      "titlePlaceholder": "あなたの質問・報告は?",
-      "bodyPlaceholder": "詳細をここに — Markdown 対応、コードは三連バックティックで。",
-      "tagsPlaceholder": "タグ(カンマ区切り、最大5)",
-      "markdownHint": "Markdown · コードブロック · @ メンションは後日",
-      "submit": "投稿",
-      "error": "投稿失敗。接続を確認して再試行。"
-    },
-    "comments": {
-      "heading": "{count, plural, =0 {返信はまだありません} =1 {1 件の返信} other {# 件の返信}}",
-      "empty": "最初の返信を書いてみる。",
-      "placeholder": "返信を書く… Markdown 対応。",
-      "submit": "返信",
-      "error": "返信の送信に失敗。"
-    },
-    "detail": {
-      "back": "ディスカッションに戻る",
-      "notFound": "この投稿は削除されたか、存在しません。",
-      "error": "投稿の読み込みに失敗。"
-    }
-  },
-  "code": {
-    "metaTitle": "Warroom — アプリセキュリティ作戦本部",
-    "metaDescription": "SCA、SAST、シークレット、ライセンス、CVE、ペンテスト、ランタイム — あなたのコードベースの作戦地図。プレローンチ。",
-    "hero": {
-      "eyebrow": "02 / CODE",
-      "status": "ベータ版",
-      "title": "一つの作戦本部。",
-      "titleAccent": "全ての攻撃面。",
-      "lede": "SCA、SAST、シークレット検出、ライセンス監査、CVE トリアージ、ペンテストワークフロー、ランタイムテレメトリ。Warroom は、あなたが出荷するすべての行のセキュリティ作戦地図です。",
-      "ctaPrimary": "ウェイトリストに参加",
-      "ctaSecondary": "オープンソース CLI を試す",
-      "ctaBetaBadge": "Beta",
-      "ctaBeta": "ベータ版を開く"
-    },
-    "showcase": {
-      "label": "INSIDE THE WAR ROOM",
-      "title": "実際に見えるもの。",
-      "subtitle": "プライベートベータからのスクリーンショット。サムネイルをクリックでメインを切り替え。"
-    },
-    "scans": {
-      "label": "WHAT IT SCANS",
-      "title": "8つのシグナル、1つのヘルススコア。",
-      "subtitle": "プロジェクトごとに、攻撃者が実際に使うものを束ねた A–F スコア。シグナルをドリルダウンすれば、根拠の発見、推奨修正、AI 生成の修復 PR が見えます。",
-      "items": [
-        {
-          "icon": "Boxes",
-          "title": "SCA",
-          "body": "lockfile の脆弱な依存関係 — 「CVE があるか」だけでなく到達可能性で重み付け。"
-        },
-        {
-          "icon": "Code2",
-          "title": "SAST",
-          "body": "AST 認識のソースレベル taint flow、信頼できない入力から危険なシンクへ。"
-        },
-        {
-          "icon": "KeyRound",
-          "title": "Secrets",
-          "body": "ハードコードされた API キー、トークン、認証情報 — 履歴全体、HEAD だけではない。"
-        },
-        {
-          "icon": "ScrollText",
-          "title": "License",
-          "body": "GPL 汚染、商用非互換ライセンス、欠落している帰属。"
-        },
-        {
-          "icon": "Bug",
-          "title": "CVE",
-          "body": "新規 CVE の依存ツリーへのライブトリアージ、リプレイ POC 付き。"
-        },
-        {
-          "icon": "Crosshair",
-          "title": "Pentest",
-          "body": "Pentest-as-code:エクスプロイトチェーンを一度記録、すべてのリリースに対して再生。"
-        },
-        {
-          "icon": "Activity",
-          "title": "Runtime",
-          "body": "本番テレメトリ、ドリフト検出、キルスイッチ — Phase IV。"
-        },
-        {
-          "icon": "FileCheck2",
-          "title": "Compliance",
-          "body": "SOC 2、ISO 27001、地域データ所在の体制 — Phase V。"
-        }
-      ]
-    },
-    "phases": {
-      "label": "ROADMAP",
-      "title": "六つのフェーズ、一つのプラットフォーム。",
-      "items": [
-        {
-          "n": "I",
-          "title": "基盤",
-          "status": "shipping",
-          "body": "インデクサ、検索、依存グラフ、A–F ヘルススコア。"
-        },
-        {
-          "n": "II",
-          "title": "静的解析",
-          "status": "shipping",
-          "body": "SCA、SAST、シークレットスキャン、ライセンス監査 — オープンソース CLI。"
-        },
-        {
-          "n": "III",
-          "title": "動的解析",
-          "status": "next",
-          "body": "Pentest-as-code、ランタイムプローブ、CVE リプレイ。"
-        },
-        {
-          "n": "IV",
-          "title": "ランタイム",
-          "status": "planned",
-          "body": "本番テレメトリ、ドリフト検出、キルスイッチ。"
-        },
-        {
-          "n": "V",
-          "title": "コンプライアンス",
-          "status": "planned",
-          "body": "SOC 2、ISO 27001、地域データ所在の体制。"
-        },
-        {
-          "n": "VI",
-          "title": "フェデレーション",
-          "status": "planned",
-          "body": "セキュリティチーム向けのマルチ組織作戦本部。"
-        }
-      ]
-    },
-    "faq": {
-      "label": "FAQ",
-      "title": "Warroom — ウェイトリスト前の質問。",
-      "subtitle": "いつ出るか、何が違うか、今日何ができるか。",
-      "items": [
-        {
-          "q": "Warroom はいつ出ますか?",
-          "a": "Phase I と Phase II(基盤 + 静的解析)はすでにプライベートベータ。Phase III(動的解析)が次の公開マイルストーン — 2026年中頃のアーリーアクセス。ウェイトリスト参加で OSS CLI と招待を入手。"
-        },
-        {
-          "q": "Snyk、Aikido、GitHub Advanced Security との違いは?",
-          "a": "二つあります。(1) SCA、SAST、シークレット、ライセンス、CVE、ペンテスト、ランタイムを横断する一つのスコア — 八つのツールを自分で関連付ける必要なし。(2) Pentest-as-code:エクスプロイトチェーンを一度記録し、すべてのリリースに対して再生。"
-        },
-        {
-          "q": "今日何が試せますか?",
-          "a": "はい。`pip install flyto-indexer` で OSS スキャナーが手に入ります — 検索、参照、影響分析、デッドコード検出、AST taint analysis。Phase III が来たらホステッド作戦本部がその上に。"
-        },
-        {
-          "q": "ソースコードはクラウドにアップロードされますか?",
-          "a": "デフォルトでは、いいえ。CLI はローカルで動き、ローカルインデックスを生成。ホステッド作戦本部は finding(ソースではない)を取り込んでクロスプロジェクト集計可能;ソースアップロードはプロジェクト単位 opt-in。Self-hosted は Phase V。"
-        },
-        {
-          "q": "プライベートリポジトリで動きますか?",
-          "a": "OSS CLI はコードがどこにあるか気にしません。ホステッド作戦本部は GitHub、GitLab、Bitbucket、セルフホスト Git をそのままサポート。"
-        },
-        {
-          "q": "作戦本部を self-host できますか?",
-          "a": "Self-hosted はロードマップ上(Phase V、コンプライアンスと一緒)。OSS スキャナーは今日 self-host 可能;ホステッド UI/オーケストレータが続きます。"
-        }
-      ]
-    },
-    "gallery": {
-      "label": "さらに12のパネル",
-      "title": "セキュリティチームが実際に開くパネル、すべて。",
-      "subtitle": "7つのコアビュー以外にも、Warroomは深い機能群を備えています。デモのためだけのものは入っていません。",
-      "items": {
-        "autofix": {
-          "title": "Auto-fix PR",
-          "body": "AI生成の修正パッチがCIを通った後にPRとして登場。レビュアー承認、サプライズなし。"
-        },
-        "taintFlow": {
-          "title": "Taintフロー可視化",
-          "body": "ユーザ入力を変換を経てsinkに到達するまで追跡。関数間・パッケージ間、sanitizer認識。"
-        },
-        "license": {
-          "title": "ライセンス遵守",
-          "body": "GPL混入、商用ライセンス衝突、表記漏れ。法務が指摘する前に検出。"
-        },
-        "owasp": {
-          "title": "OWASPレポート",
-          "body": "検出結果をOWASP Top 10とCWE分類にマッピング。監査が必要とする表をエクスポート。"
-        },
-        "queue": {
-          "title": "セキュリティキュー",
-          "body": "小規模チーム向けトリアージビュー：割当済み、対応中、修正しない。チケットトラッカーの再実装ではない、必要十分。"
-        },
-        "malware": {
-          "title": "マルウェア検出",
-          "body": "npm installがタイポスクワットや侵害バージョンをツリーに入れる前に発見。"
-        },
-        "complexity": {
-          "title": "複雑度ホットスポット",
-          "body": "行数 × ネスト × 分岐 × 引数。統計的にレビューが難しい関数を順位付け。"
-        },
-        "deadCode": {
-          "title": "デッドコード探知",
-          "body": "caller ゼロのシンボル、importなしのファイル。IDEが静かに隠していたものを可視化。"
-        },
-        "assetMap": {
-          "title": "アセットインベントリ",
-          "body": "保有するドメイン、サブドメイン、ページ、エンドポイント。Notionではなくbuild成果物から導出。"
-        },
-        "domainSec": {
-          "title": "ドメインセキュリティスコア",
-          "body": "ヘッダー、TLS、露出面。インベントリ上の各ドメインごと。"
-        },
-        "duplicate": {
-          "title": "重複コードマップ",
-          "body": "同じロジックが3箇所にある？変更頻度で優先順位付けされたリファクタリング候補。"
-        },
-        "reportBuilder": {
-          "title": "レポートビルダー",
-          "body": "任意のパネルを組み合わせて1つのPDFに。取締役会、顧客、監査向け。定期テンプレートとして保存。"
-        }
-      }
-    }
-  }
+    "nav":  {
+                "home":  "ホーム",
+                "cloud":  "Cloud",
+                "code":  "Warroom",
+                "overview":  "概要",
+                "pricing":  "料金",
+                "download":  "ダウンロード",
+                "templates":  "テンプレート",
+                "faq":  "FAQ",
+                "roadmap":  "ロードマップ",
+                "oss":  "オープンソース",
+                "discussions":  "ディスカッション",
+                "waitlist":  "ウェイトリスト",
+                "docs":  "ドキュメント",
+                "blog":  "ブログ",
+                "contact":  "お問い合わせ",
+                "signIn":  "サインイン",
+                "soon":  "近日公開",
+                "allProducts":  "すべての製品",
+                "beta":  "ベータ",
+                "integrations":  "統合",
+                "recipes":  "レシピ",
+                "useCases":  "ユースケース",
+                "changelog":  "更新履歴",
+                "security":  "セキュリティ"
+            },
+    "footer":  {
+                   "tagline":  "あなたの作業をマシンに残す、オフラインファーストの自動化ツール。",
+                   "cloudTagline":  "ブラウザ自動化。一度記録、永遠再生。",
+                   "warroomTagline":  "アプリセキュリティ作戦本部。クローズドループ検証。",
+                   "products":  "製品",
+                   "community":  "コミュニティ",
+                   "resources":  "リソース",
+                   "openSource":  "オープンソース",
+                   "privacy":  "プライバシー",
+                   "terms":  "利用規約",
+                   "license":  "ライセンス",
+                   "copyright":  "© 2026 FLYTO2"
+               },
+    "home":  {
+                 "metaTitle":  "Flyto2 — 一度記録、永遠再生",
+                 "metaDescription":  "オフラインで動くノーコードのブラウザ自動化。一度記録すれば永遠に再生。250以上のモジュール、16言語、MIT ライセンスのエンジン。",
+                 "hero":  {
+                              "eyebrow":  "FLYTO2 · オフラインファーストのブラウザ自動化",
+                              "title":  "一度、記録。",
+                              "titleAccent":  "永遠、再生。",
+                              "lede":  "Flyto2 はあなたがブラウザでやることを観察し、必要なときに正確に再現します。セレクタを書く必要も、糊付けコードを保守する必要もなく、データはマシンから出ません。",
+                              "ctaPrimary":  "無料ダウンロード",
+                              "ctaSecondary":  "デモを見る",
+                              "reassure":  "OPEN SOURCE · NO TELEMETRY · OFFLINE"
+                          },
+                 "video":  {
+                               "label":  "DEMO",
+                               "title":  "ブラウザ自動化を",
+                               "titleAccent":  "実際に。",
+                               "subtitle":  "技術的な背景は不要。ロング版は実際のフローを最後まで、ショート版は60秒で要点を。",
+                               "longLabel":  "FULL DEMO",
+                               "longTitle":  "Flyto2 — full demo",
+                               "longBody":  "チェックアウトフローを記録、ステップを一つ編集、再生 — 2分でフルウォークスルー。",
+                               "shortLabel":  "60-SEC SHORT",
+                               "shortTitle":  "Flyto2 — 60秒ショート",
+                               "shortBody":  "フォーム入力の自動化。縦長、速い、スマホ共有向け。",
+                               "moreOnYoutube":  "@Flyto2 の YouTube でさらに"
+                           },
+                 "features":  {
+                                  "label":  "WHY FLYTO2",
+                                  "title":  "あなたが繰り返す仕事のために。",
+                                  "items":  [
+                                                {
+                                                    "icon":  "Video",
+                                                    "title":  "あらゆる操作を記録",
+                                                    "body":  "レコーダーを開いて、一度操作して、停止。クリック・スクロール・入力・待機すべてを取り込みます。"
+                                                },
+                                                {
+                                                    "icon":  "Pause",
+                                                    "title":  "一時停止と検査",
+                                                    "body":  "ワークフローはブラックボックスではありません。ステップ実行、途中で値変更、再開 — 日常業務のためのデバッガー。"
+                                                },
+                                                {
+                                                    "icon":  "ShieldOff",
+                                                    "title":  "オフライン設計",
+                                                    "body":  "あなたのマシンで動きます。認証情報、スクレイピングしたデータ、実行履歴 — 誰にも送られません。"
+                                                },
+                                                {
+                                                    "icon":  "Boxes",
+                                                    "title":  "250以上のモジュール",
+                                                    "body":  "CSV、Excel、Stripe、Notion、Postgres、Slack、OpenAI — API の配線を書く代わりにスナップで繋ぎます。"
+                                                },
+                                                {
+                                                    "icon":  "GitBranch",
+                                                    "title":  "分岐とマージ",
+                                                    "body":  "if/else、ループ、リトライ、エラーハンドラ — コードに書くようなことを、5秒で読める視覚ノードで。"
+                                                },
+                                                {
+                                                    "icon":  "Languages",
+                                                    "title":  "16 言語",
+                                                    "body":  "レコーダー、ランタイム、ドキュメント、エラーメッセージ — すべて翻訳済み。"
+                                                }
+                                            ]
+                              },
+                 "stats":  {
+                               "items":  [
+                                             {
+                                                 "value":  "250+",
+                                                 "label":  "MODULES",
+                                                 "body":  "CSV、Excel、Stripe、Notion、Slack、AI、SQL — 自分で糊付けするはずだったものが、すぐ使えるノードとして。"
+                                             },
+                                             {
+                                                 "value":  "16",
+                                                 "label":  "LANGUAGES",
+                                                 "body":  "UI、レコーダー、ランタイム、ドキュメント、エラーメッセージ — ラベルだけでなく翻訳。"
+                                             },
+                                             {
+                                                 "value":  "100%",
+                                                 "label":  "ON YOUR MACHINE",
+                                                 "body":  "あなたの記録、認証情報、実行履歴。オプトインしない限りクラウドに行かない。テレメトリは一切なし。"
+                                             }
+                                         ]
+                           },
+                 "codeTeaser":  {
+                                    "label":  "ALSO BUILDING",
+                                    "status":  "Pre-launch",
+                                    "title":  "Warroom — アプリセキュリティ作戦本部。",
+                                    "body":  "ソフトウェアを出荷する側のセキュリティを別プロダクトで。SCA、SAST、シークレット、ライセンス、CVE、ペンテスト — A–F のヘルススコアに集約。",
+                                    "cta":  "Warroom を見る"
+                                },
+                 "faq":  {
+                             "label":  "FAQ",
+                             "title":  "よくある質問、先にお答えします。",
+                             "subtitle":  "チームで Flyto2 を検討するときに、最初に聞かれることをまとめました。",
+                             "items":  [
+                                           {
+                                               "q":  "Flyto2 は本当に無料でオープンソースですか?",
+                                               "a":  "はい。実行エンジン `flyto-core` は GitHub 上で MIT ライセンスです。今日 PyPI からインストールしてアカウントなしで動かせます。ホステッドクラウドはその上にレイヤされた有料オプションで、必須ではありません。"
+                                           },
+                                           {
+                                               "q":  "Zapier や Make との違いは?",
+                                               "a":  "Zapier と Make はクラウドで SaaS API を繋ぎます。Flyto2 はブラウザそのものを記録・再生します — 公開 API のないサイトを含めて — そしてあなた自身のマシンで動きます。銀行、ERP、ベンダーポータルが Zapier のカタログにないなら、それが Flyto2 の埋める穴です。"
+                                           },
+                                           {
+                                               "q":  "対象サイトがリニューアルしたら?",
+                                               "a":  "Flyto2 は意味的なアクション(「ログインボタンをクリック」)を記録します。脆い CSS セレクタではありません。サイトが再スキンしてもほとんどのフローは動き続けます。何かが壊れたら、その一歩を直して再開 — フロー全体を書き直す必要はありません。"
+                                           },
+                                           {
+                                               "q":  "チームでワークフローを共有できますか?",
+                                               "a":  "はい。ワークフローは git にコミットでき、アプリ内マーケットプレイスで共有でき、Slack で渡せるプレーンファイルです。実行履歴はローカルに、ワークフロー定義だけが移動します。"
+                                           },
+                                           {
+                                               "q":  "料金は?",
+                                               "a":  "デスクトップアプリと OSS エンジンは個人利用無料。Pro と Team はホステッドスケジューリング、共有マーケットプレイス、優先サポートを追加 — 詳細は Cloud ページで。"
+                                           }
+                                       ]
+                         },
+                 "cta":  {
+                             "label":  "GET STARTED",
+                             "title":  "同じことを二度するのをやめる。",
+                             "body":  "Flyto2 をダウンロードして、ワークフローを一つ記録すれば、一週間がまるごと空くのを感じます。",
+                             "primary":  "無料ダウンロード",
+                             "secondary":  "ドキュメントを読む"
+                         },
+                 "products":  {
+                                  "warroom":  {
+                                                  "statusLabel":  "ベータ版"
+                                              }
+                              }
+             },
+    "cloud":  {
+                  "metaTitle":  "Cloud — ノーコードブラウザ自動化",
+                  "metaDescription":  "一度記録、永遠再生。オフラインで動くノーコードのブラウザ自動化。",
+                  "hero":  {
+                               "eyebrow":  "01 / CLOUD",
+                               "status":  "SHIPPING",
+                               "title":  "ブラウザ作業を、",
+                               "titleAccent":  "オートパイロットで。",
+                               "lede":  "レコーダーを開いて、一度操作して、停止。Cloud がそれを編集・バージョン管理・スケジュール・共有可能な構造化ワークフローに変えます — コードは一行も書きません。",
+                               "ctaPrimary":  "デスクトップ版をダウンロード",
+                               "ctaSecondary":  "250以上のモジュールを見る"
+                           },
+                  "how":  {
+                              "label":  "HOW IT WORKS",
+                              "title":  "手動から自動へ、3ステップ。",
+                              "items":  [
+                                            {
+                                                "step":  "01",
+                                                "icon":  "Video",
+                                                "title":  "記録",
+                                                "body":  "録画ボタンを押して、一度作業する。Flyto2 がクリック・スクロール・入力・待機 — 全ステップを順序通りローカルにキャプチャ。"
+                                            },
+                                            {
+                                                "step":  "02",
+                                                "icon":  "GitBranch",
+                                                "title":  "編集",
+                                                "body":  "if/else、ループ、リトライ、認証情報を視覚ノードとして追加。実行中に一時停止して値を確認・変更・再開。"
+                                            },
+                                            {
+                                                "step":  "03",
+                                                "icon":  "Repeat",
+                                                "title":  "再生",
+                                                "body":  "オンデマンド、スケジュール、CLI から実行。Flyto2 があなたのマシンで全ステップを正確に再現し、完全な監査トレイルを残します。"
+                                            }
+                                        ]
+                          },
+                  "features":  {
+                                   "label":  "CAPABILITIES",
+                                   "title":  "あなたが繰り返す仕事のために。",
+                                   "items":  [
+                                                 {
+                                                     "icon":  "Video",
+                                                     "title":  "あらゆる操作を記録",
+                                                     "body":  "レコーダーを開いて、一度操作して、停止。"
+                                                 },
+                                                 {
+                                                     "icon":  "Pause",
+                                                     "title":  "一時停止と検査",
+                                                     "body":  "ワークフローはブラックボックスではありません。"
+                                                 },
+                                                 {
+                                                     "icon":  "ShieldOff",
+                                                     "title":  "オフライン設計",
+                                                     "body":  "あなたのマシンで動きます。"
+                                                 },
+                                                 {
+                                                     "icon":  "Boxes",
+                                                     "title":  "250以上のモジュール",
+                                                     "body":  "CSV、Excel、Stripe、Notion など。"
+                                                 },
+                                                 {
+                                                     "icon":  "GitBranch",
+                                                     "title":  "分岐とマージ",
+                                                     "body":  "if/else、ループ、リトライ、エラーハンドラ。"
+                                                 },
+                                                 {
+                                                     "icon":  "Languages",
+                                                     "title":  "16 言語",
+                                                     "body":  "全コンポーネント翻訳済み。"
+                                                 }
+                                             ]
+                               },
+                  "useCases":  {
+                                   "label":  "USE CASES",
+                                   "title":  "みんなが最初に自動化するもの。",
+                                   "items":  [
+                                                 {
+                                                     "icon":  "FileText",
+                                                     "title":  "請求書・領収書の抽出",
+                                                     "body":  "毎週月曜にベンダーポータルへログイン、PDF をダウンロード、クライアント別にファイリング、合計を Sheets にプッシュ — キーボードに触れずに。"
+                                                 },
+                                                 {
+                                                     "icon":  "Database",
+                                                     "title":  "システム間データ同期",
+                                                     "body":  "あなたが使う SaaS が経理の SaaS と話さないとき、Flyto2 がその橋を記録して毎晩実行。"
+                                                 },
+                                                 {
+                                                     "icon":  "Search",
+                                                     "title":  "価格・競合監視",
+                                                     "body":  "URL リストを訪問、価格をスクレイプ、CSV に書き出し、変化を Slack に通知。インターン2週間分の作業が、午後一回で自動化。"
+                                                 },
+                                                 {
+                                                     "icon":  "Mail",
+                                                     "title":  "リードのルーティングとエンリッチ",
+                                                     "body":  "CRM から取得、公開ウェブで補強、タグ付けして戻す。Zapier の中間業者なし、月間タスク上限なし。"
+                                                 }
+                                             ]
+                               },
+                  "faq":  {
+                              "label":  "FAQ",
+                              "title":  "Cloud — よくある質問。",
+                              "subtitle":  "記録、再生、セキュリティ、料金 — 運用や IT のリードがツール承認前に聞くこと。",
+                              "items":  [
+                                            {
+                                                "q":  "公開 API のないサイトでも動きますか?",
+                                                "a":  "それこそが Flyto2 の仕事です。ブラウザで操作できれば、Flyto2 は記録・再生できます — 内部ポータル、政府サイト、レガシー ERP、どこでも。"
+                                            },
+                                            {
+                                                "q":  "本当に自分のマシンで動いているのですか?",
+                                                "a":  "はい。デスクトップアプリには Chromium エンジンとワークフローランタイムが同梱されています。認証情報、記録ステップ、実行履歴はディスク上に。クラウドはスケジューリング、共有、チーム機能のオプトインです。"
+                                            },
+                                            {
+                                                "q":  "サイトがリニューアルしたら?",
+                                                "a":  "Flyto2 は意味的な意図(「サインインをクリック」、「メール欄に入力」)を記録します。脆い XPath ではありません。サイトが再スキンしても多くのフローは動き続けます。一歩が壊れたら、視覚エディタでその一歩だけ修正します。"
+                                            },
+                                            {
+                                                "q":  "CI やスクリプトからフローをトリガーできますか?",
+                                                "a":  "はい。すべてのワークフローには CLI 呼び出しと webhook URL があります。cron、GitHub Actions、自分のバックエンド、Flyto2 のホステッドスケジューラから — 同じワークフローファイル、同じ結果。"
+                                            },
+                                            {
+                                                "q":  "2FA や CAPTCHA はどう扱いますか?",
+                                                "a":  "Flyto2 は一時停止して、あなた(またはチームの誰か)に 2FA を完了するよう促し、続行できます。CAPTCHA は意図的にバイパスしません — 自動化を禁止するサイトで Flyto2 を使うかどうかはあなた次第です。"
+                                            },
+                                            {
+                                                "q":  "料金は?",
+                                                "a":  "デスクトップアプリと OSS エンジンは個人利用無料。Pro はホステッドスケジューリングと無制限のクラウド実行;Team は共有マーケットプレイスと SSO。詳細は Cloud ページで。"
+                                            }
+                                        ]
+                          }
+              },
+    "forum":  {
+                  "titleCloud":  "Cloud — ディスカッション",
+                  "subtitleCloud":  "質問、バグ報告、ワークフロー共有。誰でも読めますが、投稿は無料の Flyto2 アカウントが必要です。",
+                  "titleCode":  "Warroom — ディスカッション",
+                  "subtitleCode":  "セキュリティ、スキャン、クローズドループ検証。読むだけなら誰でも、投稿はアカウント必須。",
+                  "auth":  {
+                               "loading":  "サインイン状態を確認中…",
+                               "title":  "続行するにはサインイン",
+                               "subtitle":  "投稿はアカウントに紐づきます。返信があったときに通知できるようにするためです。メールアドレスは公開しません。",
+                               "continueGoogle":  "Google で続行",
+                               "or":  "または",
+                               "email":  "Email",
+                               "password":  "パスワード",
+                               "signIn":  "サインイン",
+                               "signUp":  "アカウント作成",
+                               "switchToSignUp":  "アカウントがない?作成する",
+                               "switchToSignIn":  "アカウントがある?サインイン",
+                               "signOut":  "サインアウト",
+                               "error":  "問題が発生しました。もう一度試してください。",
+                               "reason":  {
+                                              "post":  "サインインして投稿",
+                                              "comment":  "サインインして返信",
+                                              "react":  "サインインしてリアクション"
+                                          }
+                           },
+                  "list":  {
+                               "compose":  "新規投稿",
+                               "composeSignIn":  "サインインして投稿",
+                               "loadMore":  "もっと見る",
+                               "empty":  "まだ投稿はありません — 最初の質問者になりませんか。",
+                               "error":  "投稿の読み込みに失敗。再読み込みしてください。",
+                               "indexBuilding":  "Firestore がこのクエリのインデックスを構築中です。30秒ごとに自動で再試行します — 手動再読み込み不要です。",
+                               "prev":  "前へ",
+                               "next":  "次へ",
+                               "first":  "最初",
+                               "pageIndicator":  "{page} ページ目"
+                           },
+                  "categories":  {
+                                     "all":  "すべて",
+                                     "question":  "Q&A",
+                                     "bug":  "バグ",
+                                     "feature":  "機能リクエスト",
+                                     "discussion":  "ディスカッション"
+                                 },
+                  "sort":  {
+                               "new":  "新着",
+                               "hot":  "ホット",
+                               "top":  "トップ"
+                           },
+                  "composer":  {
+                                   "title":  "ディスカッションを始める",
+                                   "subtitle":  "Markdown 対応。タイトルは一文で、本文に再現手順や背景を。",
+                                   "titlePlaceholder":  "あなたの質問・報告は?",
+                                   "bodyPlaceholder":  "詳細をここに — Markdown 対応、コードは三連バックティックで。",
+                                   "tagsPlaceholder":  "タグ(カンマ区切り、最大5)",
+                                   "markdownHint":  "Markdown · コードブロック · @ メンションは後日",
+                                   "submit":  "投稿",
+                                   "error":  "投稿失敗。接続を確認して再試行。"
+                               },
+                  "comments":  {
+                                   "heading":  "{count, plural, =0 {返信はまだありません} =1 {1 件の返信} other {# 件の返信}}",
+                                   "empty":  "最初の返信を書いてみる。",
+                                   "placeholder":  "返信を書く… Markdown 対応。",
+                                   "submit":  "返信",
+                                   "error":  "返信の送信に失敗。"
+                               },
+                  "detail":  {
+                                 "back":  "ディスカッションに戻る",
+                                 "notFound":  "この投稿は削除されたか、存在しません。",
+                                 "error":  "投稿の読み込みに失敗。"
+                             }
+              },
+    "code":  {
+                 "metaTitle":  "Warroom — アプリセキュリティ作戦本部",
+                 "metaDescription":  "SCA、SAST、シークレット、ライセンス、CVE、ペンテスト、ランタイム — あなたのコードベースの作戦地図。プレローンチ。",
+                 "hero":  {
+                              "eyebrow":  "02 / CODE",
+                              "status":  "ベータ版",
+                              "title":  "一つの作戦本部。",
+                              "titleAccent":  "全ての攻撃面。",
+                              "lede":  "SCA、SAST、シークレット検出、ライセンス監査、CVE トリアージ、ペンテストワークフロー、ランタイムテレメトリ。Warroom は、あなたが出荷するすべての行のセキュリティ作戦地図です。",
+                              "ctaPrimary":  "ウェイトリストに参加",
+                              "ctaSecondary":  "オープンソース CLI を試す",
+                              "ctaBetaBadge":  "Beta",
+                              "ctaBeta":  "ベータ版を開く"
+                          },
+                 "showcase":  {
+                                  "label":  "INSIDE THE WAR ROOM",
+                                  "title":  "実際に見えるもの。",
+                                  "subtitle":  "プライベートベータからのスクリーンショット。サムネイルをクリックでメインを切り替え。"
+                              },
+                 "scans":  {
+                               "label":  "WHAT IT SCANS",
+                               "title":  "8つのシグナル、1つのヘルススコア。",
+                               "subtitle":  "プロジェクトごとに、攻撃者が実際に使うものを束ねた A–F スコア。シグナルをドリルダウンすれば、根拠の発見、推奨修正、AI 生成の修復 PR が見えます。",
+                               "items":  [
+                                             {
+                                                 "icon":  "Boxes",
+                                                 "title":  "SCA",
+                                                 "body":  "lockfile の脆弱な依存関係 — 「CVE があるか」だけでなく到達可能性で重み付け。"
+                                             },
+                                             {
+                                                 "icon":  "Code2",
+                                                 "title":  "SAST",
+                                                 "body":  "AST 認識のソースレベル taint flow、信頼できない入力から危険なシンクへ。"
+                                             },
+                                             {
+                                                 "icon":  "KeyRound",
+                                                 "title":  "Secrets",
+                                                 "body":  "ハードコードされた API キー、トークン、認証情報 — 履歴全体、HEAD だけではない。"
+                                             },
+                                             {
+                                                 "icon":  "ScrollText",
+                                                 "title":  "License",
+                                                 "body":  "GPL 汚染、商用非互換ライセンス、欠落している帰属。"
+                                             },
+                                             {
+                                                 "icon":  "Bug",
+                                                 "title":  "CVE",
+                                                 "body":  "新規 CVE の依存ツリーへのライブトリアージ、リプレイ POC 付き。"
+                                             },
+                                             {
+                                                 "icon":  "Crosshair",
+                                                 "title":  "Pentest",
+                                                 "body":  "Pentest-as-code:エクスプロイトチェーンを一度記録、すべてのリリースに対して再生。"
+                                             },
+                                             {
+                                                 "icon":  "Activity",
+                                                 "title":  "Runtime",
+                                                 "body":  "本番テレメトリ、ドリフト検出、キルスイッチ — Phase IV。"
+                                             },
+                                             {
+                                                 "icon":  "FileCheck2",
+                                                 "title":  "Compliance",
+                                                 "body":  "SOC 2、ISO 27001、地域データ所在の体制 — Phase V。"
+                                             }
+                                         ]
+                           },
+                 "phases":  {
+                                "label":  "ROADMAP",
+                                "title":  "六つのフェーズ、一つのプラットフォーム。",
+                                "items":  [
+                                              {
+                                                  "n":  "I",
+                                                  "title":  "基盤",
+                                                  "status":  "shipping",
+                                                  "body":  "インデクサ、検索、依存グラフ、A–F ヘルススコア。"
+                                              },
+                                              {
+                                                  "n":  "II",
+                                                  "title":  "静的解析",
+                                                  "status":  "shipping",
+                                                  "body":  "SCA、SAST、シークレットスキャン、ライセンス監査 — オープンソース CLI。"
+                                              },
+                                              {
+                                                  "n":  "III",
+                                                  "title":  "動的解析",
+                                                  "status":  "next",
+                                                  "body":  "Pentest-as-code、ランタイムプローブ、CVE リプレイ。"
+                                              },
+                                              {
+                                                  "n":  "IV",
+                                                  "title":  "ランタイム",
+                                                  "status":  "planned",
+                                                  "body":  "本番テレメトリ、ドリフト検出、キルスイッチ。"
+                                              },
+                                              {
+                                                  "n":  "V",
+                                                  "title":  "コンプライアンス",
+                                                  "status":  "planned",
+                                                  "body":  "SOC 2、ISO 27001、地域データ所在の体制。"
+                                              },
+                                              {
+                                                  "n":  "VI",
+                                                  "title":  "フェデレーション",
+                                                  "status":  "planned",
+                                                  "body":  "セキュリティチーム向けのマルチ組織作戦本部。"
+                                              }
+                                          ]
+                            },
+                 "faq":  {
+                             "label":  "FAQ",
+                             "title":  "Warroom — ウェイトリスト前の質問。",
+                             "subtitle":  "いつ出るか、何が違うか、今日何ができるか。",
+                             "items":  [
+                                           {
+                                               "q":  "Warroom はいつ出ますか?",
+                                               "a":  "Phase I と Phase II(基盤 + 静的解析)はすでにプライベートベータ。Phase III(動的解析)が次の公開マイルストーン — 2026年中頃のアーリーアクセス。ウェイトリスト参加で OSS CLI と招待を入手。"
+                                           },
+                                           {
+                                               "q":  "Snyk、Aikido、GitHub Advanced Security との違いは?",
+                                               "a":  "二つあります。(1) SCA、SAST、シークレット、ライセンス、CVE、ペンテスト、ランタイムを横断する一つのスコア — 八つのツールを自分で関連付ける必要なし。(2) Pentest-as-code:エクスプロイトチェーンを一度記録し、すべてのリリースに対して再生。"
+                                           },
+                                           {
+                                               "q":  "今日何が試せますか?",
+                                               "a":  "はい。`pip install flyto-indexer` で OSS スキャナーが手に入ります — 検索、参照、影響分析、デッドコード検出、AST taint analysis。Phase III が来たらホステッド作戦本部がその上に。"
+                                           },
+                                           {
+                                               "q":  "ソースコードはクラウドにアップロードされますか?",
+                                               "a":  "デフォルトでは、いいえ。CLI はローカルで動き、ローカルインデックスを生成。ホステッド作戦本部は finding(ソースではない)を取り込んでクロスプロジェクト集計可能;ソースアップロードはプロジェクト単位 opt-in。Self-hosted は Phase V。"
+                                           },
+                                           {
+                                               "q":  "プライベートリポジトリで動きますか?",
+                                               "a":  "OSS CLI はコードがどこにあるか気にしません。ホステッド作戦本部は GitHub、GitLab、Bitbucket、セルフホスト Git をそのままサポート。"
+                                           },
+                                           {
+                                               "q":  "作戦本部を self-host できますか?",
+                                               "a":  "Self-hosted はロードマップ上(Phase V、コンプライアンスと一緒)。OSS スキャナーは今日 self-host 可能;ホステッド UI/オーケストレータが続きます。"
+                                           }
+                                       ]
+                         },
+                 "gallery":  {
+                                 "label":  "さらに12のパネル",
+                                 "title":  "セキュリティチームが実際に開くパネル、すべて。",
+                                 "subtitle":  "7つのコアビュー以外にも、Warroomは深い機能群を備えています。デモのためだけのものは入っていません。",
+                                 "items":  {
+                                               "autofix":  {
+                                                               "title":  "Auto-fix PR",
+                                                               "body":  "AI生成の修正パッチがCIを通った後にPRとして登場。レビュアー承認、サプライズなし。"
+                                                           },
+                                               "taintFlow":  {
+                                                                 "title":  "Taintフロー可視化",
+                                                                 "body":  "ユーザ入力を変換を経てsinkに到達するまで追跡。関数間・パッケージ間、sanitizer認識。"
+                                                             },
+                                               "license":  {
+                                                               "title":  "ライセンス遵守",
+                                                               "body":  "GPL混入、商用ライセンス衝突、表記漏れ。法務が指摘する前に検出。"
+                                                           },
+                                               "owasp":  {
+                                                             "title":  "OWASPレポート",
+                                                             "body":  "検出結果をOWASP Top 10とCWE分類にマッピング。監査が必要とする表をエクスポート。"
+                                                         },
+                                               "queue":  {
+                                                             "title":  "セキュリティキュー",
+                                                             "body":  "小規模チーム向けトリアージビュー：割当済み、対応中、修正しない。チケットトラッカーの再実装ではない、必要十分。"
+                                                         },
+                                               "malware":  {
+                                                               "title":  "マルウェア検出",
+                                                               "body":  "npm installがタイポスクワットや侵害バージョンをツリーに入れる前に発見。"
+                                                           },
+                                               "complexity":  {
+                                                                  "title":  "複雑度ホットスポット",
+                                                                  "body":  "行数 × ネスト × 分岐 × 引数。統計的にレビューが難しい関数を順位付け。"
+                                                              },
+                                               "deadCode":  {
+                                                                "title":  "デッドコード探知",
+                                                                "body":  "caller ゼロのシンボル、importなしのファイル。IDEが静かに隠していたものを可視化。"
+                                                            },
+                                               "assetMap":  {
+                                                                "title":  "アセットインベントリ",
+                                                                "body":  "保有するドメイン、サブドメイン、ページ、エンドポイント。Notionではなくbuild成果物から導出。"
+                                                            },
+                                               "domainSec":  {
+                                                                 "title":  "ドメインセキュリティスコア",
+                                                                 "body":  "ヘッダー、TLS、露出面。インベントリ上の各ドメインごと。"
+                                                             },
+                                               "duplicate":  {
+                                                                 "title":  "重複コードマップ",
+                                                                 "body":  "同じロジックが3箇所にある？変更頻度で優先順位付けされたリファクタリング候補。"
+                                                             },
+                                               "reportBuilder":  {
+                                                                     "title":  "レポートビルダー",
+                                                                     "body":  "任意のパネルを組み合わせて1つのPDFに。取締役会、顧客、監査向け。定期テンプレートとして保存。"
+                                                                 }
+                                           }
+                             }
+             },
+    "templates":  {
+                      "details":  {
+                                      "auto-login-template":  {
+                                                                  "title":  "自動ログインテンプレート",
+                                                                  "category":  "認証とセッション",
+                                                                  "lede":  "フローごとにセレクタを書き直さずに、任意のサイトへプログラムでログインできます。Auto-Login テンプレートはフォーム入力、MFA チャレンジ、セッション維持までを処理し、後続の自動化処理を認証済みの状態で開始させます。",
+                                                                  "metaDescription":  "Flyto2 Cloud で 2FA に対応したサイトログイン自動化を実現。暗号化された認証情報の保管と、ヘッドレスブラウザ向けの永続セッション再利用に対応します。",
+                                                                  "faqs":  [
+                                                                               {
+                                                                                   "q":  "SSO プロバイダに対応していますか？"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "パスワードはどう保護されますか？"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "CAPTCHA は自動で解けますか？"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "セッションが切れたらどうなりますか？"
+                                                                               }
+                                                                           ]
+                                                              },
+                                      "craigslist-listings-scraper":  {
+                                                                          "title":  "Craigslist 出品スクレイパー",
+                                                                          "category":  "マーケットプレイスデータ",
+                                                                          "lede":  "パーサを 1 行も書かずに、数百の都市圏にまたがる Craigslist データを構造化して取得できます。ページネーション、地域ルーティング、二十年来スクレイパーを悩ませてきた雑然としたマークアップに対応します。",
+                                                                          "metaDescription":  "Flyto2 のテンプレートで Craigslist の分類広告を大規模に取得。カテゴリと都市圏を横断してタイトル、価格、所在地、画像、出品者の連絡先を抽出します。",
+                                                                          "faqs":  [
+                                                                                       {
+                                                                                           "q":  "データの鮮度はどの程度ですか？"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "出品者の連絡先は取れますか？"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "ボット対策は突破できますか？"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "出力形式は何に対応していますか？"
+                                                                                       }
+                                                                                   ]
+                                                                      },
+                                      "domain-availability-checker":  {
+                                                                          "title":  "ドメイン空き状況チェッカー",
+                                                                          "category":  "ドメインと DNS ツール",
+                                                                          "lede":  "重要な TLD をすべて対象に、数千の候補ドメイン名を一括で走査し、実際に登録可能なものだけを浮かび上がらせます。複数の権威ある情報源を組み合わせ、誤検知を防ぎます。",
+                                                                          "metaDescription":  "Flyto2 の自動化テンプレートで、数百の TLD にまたがるドメインの空き状況を一括確認。WHOIS、RDAP、DNS プローブを組み合わせて高精度な結果を得られます。",
+                                                                          "faqs":  [
+                                                                                       {
+                                                                                           "q":  "結果の精度はどの程度ですか？"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "新 gTLD にも対応していますか？"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "自動で登録までできますか？"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "IDN ドメインはどう扱われますか？"
+                                                                                       }
+                                                                                   ]
+                                                                      },
+                                      "github-repo-stats-dashboard":  {
+                                                                          "title":  "GitHub リポジトリ統計ダッシュボード",
+                                                                          "category":  "DevTools と分析",
+                                                                          "lede":  "チームが保有するすべてのリポジトリの健全性メトリクスを一元化できます。本テンプレートは GitHub API から履歴値とリアルタイム値を取得し、永続化して共有可能・埋め込み可能なダッシュボードとして描画します。",
+                                                                          "metaDescription":  "Flyto2 でリアルタイムの GitHub リポジトリ分析ダッシュボードを構築。スター、フォーク、トラフィック、イシュー、PR スピード、コントリビューター活動を横断的に追跡します。",
+                                                                          "faqs":  [
+                                                                                       {
+                                                                                           "q":  "プライベートリポジトリでも動きますか？"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "レート制限はどう処理されますか？"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "BigQuery にエクスポートできますか？"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "GitHub Enterprise には対応していますか？"
+                                                                                       }
+                                                                                   ]
+                                                                      },
+                                      "google-search-results-scraper":  {
+                                                                            "title":  "Google 検索結果スクレイパー",
+                                                                            "category":  "SERP とリサーチ",
+                                                                            "lede":  "上位 10 件の青いリンクだけでなく、Google 検索結果の完全な構造を取得します。本テンプレートはオーガニック順位、広告、ナレッジパネル、強調スニペット、関連質問ブロックを 1 回のクロールで取得します。",
+                                                                            "metaDescription":  "Google SERP を大規模に取得し、オーガニック、広告、SERP 機能を構造化抽出。地域・端末ターゲティングに対応し、キーワード順位を継続的に追跡できます。",
+                                                                            "faqs":  [
+                                                                                         {
+                                                                                             "q":  "CAPTCHA に対応していますか？"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "国別に取得できますか？"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "モバイルとデスクトップの違いは？"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "出力は時間が経っても安定しますか？"
+                                                                                         }
+                                                                                     ]
+                                                                        },
+                                      "linkedin-job-listings-scraper":  {
+                                                                            "title":  "LinkedIn 求人スクレイパー",
+                                                                            "category":  "採用と求人",
+                                                                            "lede":  "LinkedIn の求人検索をクエリ可能なデータセットに変えます。本テンプレートは職種、企業、地域、シニアリティ別に求人を収集し、後続の採用・市場インテリジェンスのパイプライン向けに正規化します。",
+                                                                            "metaDescription":  "Flyto2 の自動化テンプレートで LinkedIn の求人を構造化データセットとして取り込み、採用分析、市場インテリジェンス、ATS 連携に活用できます。",
+                                                                            "faqs":  [
+                                                                                         {
+                                                                                             "q":  "プレミアムアカウントは必要ですか？"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "アカウント停止はどう防ぎますか？"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "給与情報は常に取れますか？"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "ATS へ直接連携できますか？"
+                                                                                         }
+                                                                                     ]
+                                                                        },
+                                      "news-headlines-aggregator":  {
+                                                                        "title":  "ニュース見出しアグリゲーター",
+                                                                        "category":  "ニュースとコンテンツ",
+                                                                        "lede":  "主要メディア、ニッチなブログ、RSS フィードを自由に組み合わせて、統合されたニュースの本流を構築できます。本テンプレートは正規化・重複排除・クラスタリングを行い、同じ事象の重複報道を 1 つにまとめます。",
+                                                                        "metaDescription":  "Flyto2 のニューススクレイピング自動化テンプレートで、数百のメディアの速報見出しを 1 本の重複排除済みフィードに集約します。",
+                                                                        "faqs":  [
+                                                                                     {
+                                                                                         "q":  "RSS がない情報源はどうしますか？"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "クラスタリングはどう機能しますか？"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "トピックで絞り込めますか？"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "見出しはどれくらい速く届きますか？"
+                                                                                     }
+                                                                                 ]
+                                                                    },
+                                      "page-load-speed-tester":  {
+                                                                     "title":  "ページ読み込み速度テスター",
+                                                                     "category":  "パフォーマンスと監視",
+                                                                     "lede":  "ユーザーが気付く前にパフォーマンス劣化を検知します。本テンプレートは複数の地域と端末から Core Web Vitals を計測し、主要指標が定義済みベースラインから外れた時にアラートを発します。",
+                                                                     "metaDescription":  "Flyto2 の Web パフォーマンス自動化テンプレートで合成ロードテストを実行。実際の Core Web Vitals、ウォーターフォール、回帰アラートを取得できます。",
+                                                                     "faqs":  [
+                                                                                  {
+                                                                                      "q":  "実ユーザーですか、合成監視ですか？"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "ログイン後ページもテストできますか？"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "ベースラインはどう算出されますか？"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "問題のあるデプロイを止められますか？"
+                                                                                  }
+                                                                              ]
+                                                                 },
+                                      "real-estate-listings-monitor":  {
+                                                                           "title":  "不動産物件モニター",
+                                                                           "category":  "不動産",
+                                                                           "lede":  "物件が市場に出た瞬間や価格が下がった瞬間を、誰よりも早く知ることができます。本テンプレートは主要な不動産ポータルを 1 時間未満のサイクルで監視し、追跡条件が成立した瞬間に通知します。",
+                                                                           "metaDescription":  "Flyto2 のモニターテンプレートで Zillow、Redfin、Realtor、MLS の不動産物件を追跡。新着在庫と価格変動のアラートを取得できます。",
+                                                                           "faqs":  [
+                                                                                        {
+                                                                                            "q":  "どのポータルに対応していますか？"
+                                                                                        },
+                                                                                        {
+                                                                                            "q":  "アラートはどれくらい速いですか？"
+                                                                                        },
+                                                                                        {
+                                                                                            "q":  "未公開物件も追跡できますか？"
+                                                                                        },
+                                                                                        {
+                                                                                            "q":  "商業用物件はどうですか？"
+                                                                                        }
+                                                                                    ]
+                                                                       },
+                                      "restaurant-menu-scraper-2":  {
+                                                                        "title":  "レストランメニュースクレイパー",
+                                                                        "category":  "飲食とホスピタリティ",
+                                                                        "lede":  "主要なデリバリープラットフォームから、すべての料理、オプション、価格を取り出して整ったデータセットにまとめます。本テンプレートは Uber Eats、DoorDash、Grubhub、レストラン公式サイトのバラバラなスキーマを吸収します。",
+                                                                        "metaDescription":  "Flyto2 のメニュースクレイピング自動化テンプレートで、Uber Eats、DoorDash、Grubhub、公式サイトのレストランメニューを構造化データとして抽出します。",
+                                                                        "faqs":  [
+                                                                                     {
+                                                                                         "q":  "オプションも漏れなく取れますか？"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "価格は地域ごとに変わりますか？"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "公式サイトもスクレイピングできますか？"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "どのくらいの頻度で取得すべきですか？"
+                                                                                     }
+                                                                                 ]
+                                                                    },
+                                      "send-telegram-alert":  {
+                                                                  "title":  "Telegram アラート送信",
+                                                                  "category":  "通知",
+                                                                  "lede":  "あらゆる自動化イベントを、リッチな Telegram 通知に変換します。本テンプレートはボットトークン、チャンネルルーティング、メッセージテンプレート、インラインキーボードを扱い、フォーマット済みかつアクション可能な状態でアラートを届けます。",
+                                                                  "metaDescription":  "あらゆる Flyto2 ワークフローから Telegram のチャンネル、グループ、DM にリッチアラートを送信。テンプレート、インラインキーボード、送達確認に対応します。",
+                                                                  "faqs":  [
+                                                                               {
+                                                                                   "q":  "Telegram ボットの作り方は？"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "ユーザーの DM にも送れますか？"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "インラインボタンは操作可能ですか？"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "メッセージサイズの上限は？"
+                                                                               }
+                                                                           ]
+                                                              },
+                                      "stock-price-dashboard-scraper":  {
+                                                                            "title":  "株価ダッシュボード",
+                                                                            "category":  "金融と市場データ",
+                                                                            "lede":  "任意のウォッチリストのリアルタイム気配値、ファンダメンタル、ニュースを 1 つの監査可能なダッシュボードに統合します。本テンプレートは複数のデータプロバイダにファンアウトし、結果を統一ビューに整合します。",
+                                                                            "metaDescription":  "Flyto2 のテンプレートでリアルタイム株価ダッシュボードを構築。複数の市場データソースを横断して気配値、ファンダメンタル、ニュース、アラートを集約します。",
+                                                                            "faqs":  [
+                                                                                         {
+                                                                                             "q":  "気配値はリアルタイムですか？"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "どの資産クラスに対応していますか？"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "データでバックテストできますか？"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "時間外取引の気配値は取れますか？"
+                                                                                         }
+                                                                                     ]
+                                                                        },
+                                      "weather-forecast-to-slack":  {
+                                                                        "title":  "Slack 天気予報",
+                                                                        "category":  "天気と生産性",
+                                                                        "lede":  "毎朝、パーソナライズされた天気ブリーフを Slack で受け取れます。本テンプレートは 1 か所または複数地点の予報を取得し、リッチな Slack ブロックとして描画し、悪天候時にはアラートをエスカレートします。",
+                                                                        "metaDescription":  "Flyto2 の自動化テンプレートで日次の天気予報を Slack チャンネルや DM にリッチブロックで送信。地域指定と悪天候アラートに対応します。",
+                                                                        "faqs":  [
+                                                                                     {
+                                                                                         "q":  "どの天気プロバイダを選ぶべきですか？"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "DM にも投稿できますか？"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "悪天候アラートはどう扱われますか？"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Slack 以外への配信もできますか？"
+                                                                                     }
+                                                                                 ]
+                                                                    },
+                                      "webpage-to-pdf-converter":  {
+                                                                       "title":  "Web ページ PDF 変換ツール",
+                                                                       "category":  "ドキュメント生成",
+                                                                       "lede":  "任意の URL を、どのビューアでも崩れずに開けるピクセル忠実な PDF として出力します。本テンプレートは紙の文書に求められるページサイズ、余白、ヘッダー、フッター、透かし、ページ番号などの細部を制御します。",
+                                                                       "metaDescription":  "Flyto2 Cloud で任意の Web ページを高忠実度な PDF に変換。カスタムページサイズ、ヘッダー、フッター、ページ番号、透かしの組み込みサポートを備えます。",
+                                                                       "faqs":  [
+                                                                                    {
+                                                                                        "q":  "出力テキストは選択できますか？"
+                                                                                    },
+                                                                                    {
+                                                                                        "q":  "ハイパーリンクは保持されますか？"
+                                                                                    },
+                                                                                    {
+                                                                                        "q":  "ページ番号は付けられますか？"
+                                                                                    },
+                                                                                    {
+                                                                                        "q":  "極端に長い 1 ページ文書はどうなりますか？"
+                                                                                    }
+                                                                                ]
+                                                                   },
+                                      "website-screenshot-gallery":  {
+                                                                         "title":  "Web サイトスクリーンショットギャラリー",
+                                                                         "category":  "ビジュアルモニタリング",
+                                                                         "lede":  "任意の一連のページについて、視覚的な履歴を構築します。本テンプレートはスケジュールに沿ってスクリーンショットを撮影し、直前の取得と画素差分を取り、すべてを閲覧可能なギャラリーとしてインデックス化します。",
+                                                                         "metaDescription":  "Flyto2 の自動化で、スケジュール撮影された Web サイトのスクリーンショットを検索可能なギャラリーへ集約。視覚的差分、複数ビューポート、アセット保管に対応します。",
+                                                                         "faqs":  [
+                                                                                      {
+                                                                                          "q":  "キャプチャのサイズはどの程度ですか？"
+                                                                                      },
+                                                                                      {
+                                                                                          "q":  "認証が必要なページも扱えますか？"
+                                                                                      },
+                                                                                      {
+                                                                                          "q":  "ベースラインと差分を取れますか？"
+                                                                                      },
+                                                                                      {
+                                                                                          "q":  "アニメーションはどう扱われますか？"
+                                                                                      }
+                                                                                  ]
+                                                                     },
+                                      "website-uptime-monitor":  {
+                                                                     "title":  "Web サイト稼働監視",
+                                                                     "category":  "監視と SRE",
+                                                                     "lede":  "自社インフラの外側からサービスを監視します。本テンプレートは複数地域から合成チェックを実行し、本物のインシデントだけを賢くエスカレートし、ステータスページに必要なデータを生成します。",
+                                                                     "metaDescription":  "Flyto2 の稼働監視自動化テンプレートで、複数地域から Web サイトの稼働状況、レイテンシ、SSL 期限を監視。豊富なインシデントエスカレーションに対応します。",
+                                                                     "faqs":  [
+                                                                                  {
+                                                                                      "q":  "プローブの最短間隔は？"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "TLS の内部状態も見られますか？"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "ログインフローもテストできますか？"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "フラッピング障害はどう処理されますか？"
+                                                                                  }
+                                                                              ]
+                                                                 },
+                                      "youtube-channel-stats-tracker":  {
+                                                                            "title":  "YouTube チャンネル統計トラッカー",
+                                                                            "category":  "ソーシャル分析",
+                                                                            "lede":  "YouTube 自身のレポート期間を超える、チャンネルと動画パフォーマンスの長期記録を構築します。本テンプレートは公開メトリクスをスケジュール取得し、ポートフォリオ横断のトレンドを浮かび上がらせます。",
+                                                                            "metaDescription":  "Flyto2 の自動化テンプレートで YouTube のチャンネル・動画指標を長期追跡。再生数、登録者、視聴時間、エンゲージメントを横断的に取得します。",
+                                                                            "faqs":  [
+                                                                                         {
+                                                                                             "q":  "カウンターの精度はどの程度ですか？"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "非公開アナリティクスは取れますか？"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "競合チャンネルも追跡できますか？"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "API クォータのコストは？"
+                                                                                         }
+                                                                                     ]
+                                                                        }
+                                  }
+                  }
 }

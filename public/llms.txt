@@ -43,7 +43,7 @@ Flyto2 builds automation tools that run on the user's own machine. The platform 
 - [Integrations](https://flyto2.com/cloud/integrations/) — 250+ modules grouped into 21 categories.
 - [Recipes](https://flyto2.com/cloud/recipes/) — 37 pre-built workflows.
 - [Use cases](https://flyto2.com/cloud/use-cases/) — ops, e-commerce, engineering, research personas.
-- [Templates](https://flyto2.com/cloud/templates/) — shared community templates.
+- [Templates](https://flyto2.com/cloud/templates/) — shared community templates (see Templates section below).
 - [Pricing](https://flyto2.com/cloud/pricing/) — free desktop, hosted plans.
 - [Download](https://flyto2.com/cloud/download/) — macOS / Windows / Linux desktop installers.
 - [Changelog](https://flyto2.com/cloud/changelog/) — recent releases.
@@ -58,6 +58,49 @@ Flyto2 builds automation tools that run on the user's own machine. The platform 
 - [Beta product](https://warroom.flyto2.com/) — live beta of the hosted war room.
 - [Open source](https://pypi.org/project/flyto-indexer/) — flyto-indexer MCP server.
 - [Discussions](https://flyto2.com/code/discussions/) — public Q&A.
+
+## Templates
+
+17 ready-to-fork Cloud workflow templates. Each page documents what the template does, features, use cases, integrations, quick-start CLI, best practices and FAQ.
+
+### Authentication & Sessions
+- [Auto-Login Template](https://flyto2.com/cloud/templates/auto-login-template/) — automate sign-in flows with 2FA support and persistent session reuse.
+
+### Marketplace Data
+- [Craigslist Listings Scraper](https://flyto2.com/cloud/templates/craigslist-listings-scraper/) — extract titles, prices, locations and seller contacts across metros.
+- [Real Estate Listings Monitor](https://flyto2.com/cloud/templates/real-estate-listings-monitor/) — monitor portal listings with price-drop alerts.
+
+### Search & Research
+- [Google Search Results Scraper](https://flyto2.com/cloud/templates/google-search-results-scraper/) — extract organic results, featured snippets, PAA and related searches.
+- [LinkedIn Job Listings Scraper](https://flyto2.com/cloud/templates/linkedin-job-listings-scraper/) — pull job postings by keyword, location and level.
+- [News Headlines Aggregator](https://flyto2.com/cloud/templates/news-headlines-aggregator/) — aggregate headlines from multiple news sites with dedup.
+
+### Domain & DNS
+- [Domain Availability Checker](https://flyto2.com/cloud/templates/domain-availability-checker/) — bulk check domain registration across hundreds of TLDs with WHOIS.
+
+### DevTools & Analytics
+- [GitHub Repo Stats Dashboard](https://flyto2.com/cloud/templates/github-repo-stats-dashboard/) — monitor stars, forks, contributors and releases.
+- [YouTube Channel Stats Tracker](https://flyto2.com/cloud/templates/youtube-channel-stats-tracker/) — track channel and video metrics over time.
+
+### Performance & Monitoring
+- [Page Load Speed Tester](https://flyto2.com/cloud/templates/page-load-speed-tester/) — measure load times and Core Web Vitals.
+- [Website Uptime Monitor](https://flyto2.com/cloud/templates/website-uptime-monitor/) — monitor uptime and latency across regions.
+- [Website Screenshot Gallery](https://flyto2.com/cloud/templates/website-screenshot-gallery/) — schedule full-page screenshots and build visual diffs.
+
+### Food & Hospitality
+- [Restaurant Menu Scraper](https://flyto2.com/cloud/templates/restaurant-menu-scraper-2/) — extract menus from delivery platforms and restaurant sites.
+
+### Notifications
+- [Send Telegram Alert](https://flyto2.com/cloud/templates/send-telegram-alert/) — send Telegram messages to channels or DMs.
+
+### Finance & Market Data
+- [Stock Price Dashboard](https://flyto2.com/cloud/templates/stock-price-dashboard-scraper/) — aggregate intraday and daily stock prices into a dashboard.
+
+### Weather & Productivity
+- [Weather Forecast to Slack](https://flyto2.com/cloud/templates/weather-forecast-to-slack/) — send daily weather forecasts to Slack channels.
+
+### Document Generation
+- [Webpage to PDF Converter](https://flyto2.com/cloud/templates/webpage-to-pdf-converter/) — convert web pages to paginated PDFs with print styles.
 
 ## Open-source components
 

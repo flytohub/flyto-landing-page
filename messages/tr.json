@@ -1,66 +1,410 @@
 {
-  "nav": {
-    "home": "Anasayfa",
-    "cloud": "Cloud",
-    "code": "Warroom",
-    "overview": "Genel bakış",
-    "pricing": "Fiyatlandırma",
-    "download": "İndir",
-    "templates": "Şablonlar",
-    "faq": "SSS",
-    "roadmap": "Yol haritası",
-    "oss": "Açık kaynak",
-    "discussions": "Tartışmalar",
-    "waitlist": "Bekleme listesi",
-    "docs": "Belgeler",
-    "blog": "Blog",
-    "contact": "İletişim",
-    "signIn": "Giriş yap",
-    "soon": "Yakında",
-    "allProducts": "Tüm ürünler",
-    "beta": "Beta",
-    "integrations": "Entegrasyon",
-    "recipes": "Tarifler",
-    "useCases": "Kullanım",
-    "changelog": "Değişiklik",
-    "security": "Güvenlik"
-  },
-  "footer": {
-    "tagline": "Çevrimdışı öncelikli otomasyon araçları. Çalışmanız makinenizde kalır.",
-    "cloudTagline": "Tarayıcı otomasyonu. Bir kez kaydet, sonsuza dek oynat.",
-    "warroomTagline": "Uygulama güvenliği savaş odası. Kapalı döngü doğrulama.",
-    "products": "Ürünler",
-    "community": "Topluluk",
-    "resources": "Kaynaklar",
-    "openSource": "Açık kaynak",
-    "privacy": "Gizlilik",
-    "terms": "Şartlar",
-    "license": "Lisans",
-    "copyright": "© 2026 FLYTO2"
-  },
-  "home": {
-    "hero": {
-      "eyebrow": "FLYTO2 · ÇEVRİMDIŞI ÖNCELİKLİ OTOMASYON",
-      "title": "Otomasyon ki",
-      "titleAccent": "makinenizde kalır.",
-      "lede": "Flyto2 aynı çevrimdışı öncelikli motor üzerinde iki ürün geliştirir. Biri tarayıcıdaki tekrarlayan işinizi otomatikleştirir. Diğeri yayınladığınız her kod satırının güvenlik durumunu denetler.",
-      "reassure": "AÇIK KAYNAK · TELEMETRİ YOK · SİZE AİT"
-    },
-    "products": {
-      "cloud": {
-        "cta": "Cloud'a git"
-      },
-      "warroom": {
-        "cta": "Warroom'a git",
-        "statusLabel": "BETA"
-      }
-    }
-  },
-  "code": {
-    "hero": {
-      "ctaBetaBadge": "Beta",
-      "ctaBeta": "Beta'yı aç",
-      "status": "BETA"
-    }
-  }
+    "nav":  {
+                "home":  "Anasayfa",
+                "cloud":  "Cloud",
+                "code":  "Warroom",
+                "overview":  "Genel bakış",
+                "pricing":  "Fiyatlandırma",
+                "download":  "İndir",
+                "templates":  "Şablonlar",
+                "faq":  "SSS",
+                "roadmap":  "Yol haritası",
+                "oss":  "Açık kaynak",
+                "discussions":  "Tartışmalar",
+                "waitlist":  "Bekleme listesi",
+                "docs":  "Belgeler",
+                "blog":  "Blog",
+                "contact":  "İletişim",
+                "signIn":  "Giriş yap",
+                "soon":  "Yakında",
+                "allProducts":  "Tüm ürünler",
+                "beta":  "Beta",
+                "integrations":  "Entegrasyon",
+                "recipes":  "Tarifler",
+                "useCases":  "Kullanım",
+                "changelog":  "Değişiklik",
+                "security":  "Güvenlik"
+            },
+    "footer":  {
+                   "tagline":  "Çevrimdışı öncelikli otomasyon araçları. Çalışmanız makinenizde kalır.",
+                   "cloudTagline":  "Tarayıcı otomasyonu. Bir kez kaydet, sonsuza dek oynat.",
+                   "warroomTagline":  "Uygulama güvenliği savaş odası. Kapalı döngü doğrulama.",
+                   "products":  "Ürünler",
+                   "community":  "Topluluk",
+                   "resources":  "Kaynaklar",
+                   "openSource":  "Açık kaynak",
+                   "privacy":  "Gizlilik",
+                   "terms":  "Şartlar",
+                   "license":  "Lisans",
+                   "copyright":  "© 2026 FLYTO2"
+               },
+    "home":  {
+                 "hero":  {
+                              "eyebrow":  "FLYTO2 · ÇEVRİMDIŞI ÖNCELİKLİ OTOMASYON",
+                              "title":  "Otomasyon ki",
+                              "titleAccent":  "makinenizde kalır.",
+                              "lede":  "Flyto2 aynı çevrimdışı öncelikli motor üzerinde iki ürün geliştirir. Biri tarayıcıdaki tekrarlayan işinizi otomatikleştirir. Diğeri yayınladığınız her kod satırının güvenlik durumunu denetler.",
+                              "reassure":  "AÇIK KAYNAK · TELEMETRİ YOK · SİZE AİT"
+                          },
+                 "products":  {
+                                  "cloud":  {
+                                                "cta":  "Cloud'a git"
+                                            },
+                                  "warroom":  {
+                                                  "cta":  "Warroom'a git",
+                                                  "statusLabel":  "BETA"
+                                              }
+                              }
+             },
+    "code":  {
+                 "hero":  {
+                              "ctaBetaBadge":  "Beta",
+                              "ctaBeta":  "Beta'yı aç",
+                              "status":  "BETA"
+                          }
+             },
+    "templates":  {
+                      "details":  {
+                                      "auto-login-template":  {
+                                                                  "title":  "Otomatik Oturum Açma Şablonu",
+                                                                  "category":  "Kimlik Doğrulama ve Oturumlar",
+                                                                  "lede":  "Her akış için seçicileri yeniden yazmadan herhangi bir siteye programatik olarak oturum açın. Auto-Login şablonu form alanlarını, MFA zorluklarını ve oturum kalıcılığını yöneterek sonraki otomasyonların kimliği doğrulanmış olarak başlamasını sağlar.",
+                                                                  "metaDescription":  "Flyto2 Cloud üzerinde 2FA desteği, şifreli kimlik bilgisi saklama ve headless tarayıcı iş akışları için kalıcı oturum yeniden kullanımı ile site oturum açma süreçlerini otomatikleştirin.",
+                                                                  "faqs":  [
+                                                                               {
+                                                                                   "q":  "SSO sağlayıcıları destekleniyor mu?"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "Şifreler nasıl korunuyor?"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "CAPTCHA'lar otomatik çözülebilir mi?"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "Oturum sona erdiğinde ne olur?"
+                                                                               }
+                                                                           ]
+                                                              },
+                                      "craigslist-listings-scraper":  {
+                                                                          "title":  "Craigslist İlan Kazıyıcısı",
+                                                                          "category":  "Pazar Yeri Verileri",
+                                                                          "lede":  "Tek bir parser yazmadan yüzlerce metro alanında yapılandırılmış Craigslist verisi toplayın. Şablon, sayfalama, coğrafi yönlendirme ve yirmi yıldır kazıyıcıları tökezleten dağınık biçimlendirmeyi yönetir.",
+                                                                          "metaDescription":  "Flyto2 şablonu ile Craigslist seri ilanlarını büyük ölçekte kazıyın. Başlık, fiyat, konum, görsel ve satıcı iletişim bilgilerini kategoriler ve şehirler arasında çıkarın.",
+                                                                          "faqs":  [
+                                                                                       {
+                                                                                           "q":  "Veriler ne kadar güncel?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Satıcı iletişimi alınabilir mi?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Anti-bot engellerini aşar mı?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Hangi çıktı formatları desteklenir?"
+                                                                                       }
+                                                                                   ]
+                                                                      },
+                                      "domain-availability-checker":  {
+                                                                          "title":  "Alan Adı Uygunluk Denetleyicisi",
+                                                                          "category":  "Alan Adı ve DNS Araçları",
+                                                                          "lede":  "Önemli her TLD'de binlerce aday alan adını tarayın ve gerçekten tescile uygun olanları öne çıkarın. Şablon, yanlış pozitiflerden kaçınmak için birden fazla yetkili kaynağı birleştirir.",
+                                                                          "metaDescription":  "Flyto2 otomasyon şablonuyla yüzlerce TLD'de alan adı uygunluğunu toplu olarak kontrol edin. Doğru sonuçlar için WHOIS, RDAP ve DNS sondalarını birleştirir.",
+                                                                          "faqs":  [
+                                                                                       {
+                                                                                           "q":  "Sonuçlar ne kadar doğru?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Yeni gTLD'leri destekliyor mu?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Alan adlarını otomatik kaydedebilir mi?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "IDN alan adlarında durum ne?"
+                                                                                       }
+                                                                                   ]
+                                                                      },
+                                      "github-repo-stats-dashboard":  {
+                                                                          "title":  "GitHub Repo İstatistik Panosu",
+                                                                          "category":  "DevTools ve Analitik",
+                                                                          "lede":  "Ekibinizin sahip olduğu her depo için sağlık metriklerini tek bir yerde toplayın. Şablon, GitHub API'sinden tarihsel ve canlı istatistikleri çekip kalıcı hale getirir ve paylaşılabilir veya gömülebilir bir pano oluşturur.",
+                                                                          "metaDescription":  "Flyto2 ile canlı GitHub depo analitik panosu kurun. Yıldız, fork, trafik, issue, PR hızı ve katkıda bulunan etkinliklerini birden fazla depoda izleyin.",
+                                                                          "faqs":  [
+                                                                                       {
+                                                                                           "q":  "Özel depolarda çalışır mı?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Rate limit'ler nasıl yönetilir?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "BigQuery'e dışa aktarabilir miyim?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "GitHub Enterprise için ne durumda?"
+                                                                                       }
+                                                                                   ]
+                                                                      },
+                                      "google-search-results-scraper":  {
+                                                                            "title":  "Google Arama Sonuçları Kazıyıcısı",
+                                                                            "category":  "SERP ve Araştırma",
+                                                                            "lede":  "Yalnızca ilk on mavi bağlantıyı değil, Google arama sonuçlarının tüm yapısını çıkarın. Şablon tek bir geçişte organik sıralamaları, reklamları, bilgi panellerini, öne çıkan snippet'leri ve People Also Ask bloklarını yakalar.",
+                                                                            "metaDescription":  "Google SERP'lerini büyük ölçekte kazıyın; organik, reklam ve SERP özelliklerinin yapılandırılmış çıkarımı, ülke ve cihaz hedefleme ile zaman içinde anahtar kelime sıralama takibi.",
+                                                                            "faqs":  [
+                                                                                         {
+                                                                                             "q":  "CAPTCHA'larla başa çıkar mı?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Belirli ülkelerden kazınabilir mi?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Mobil ile masaüstü arasındaki fark nedir?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Çıktı zamanla kararlı mı?"
+                                                                                         }
+                                                                                     ]
+                                                                        },
+                                      "linkedin-job-listings-scraper":  {
+                                                                            "title":  "LinkedIn İş İlanı Kazıyıcısı",
+                                                                            "category":  "İşe Alım ve İşler",
+                                                                            "lede":  "LinkedIn iş aramasını sorgulanabilir bir veri kümesine dönüştürün. Şablon, ilanları role, şirkete, coğrafyaya ve kıdeme göre toplar ve aşağı akış işe alım ve pazar istihbarat boru hatları için normalleştirir.",
+                                                                            "metaDescription":  "Flyto2 otomasyon şablonu ile LinkedIn iş ilanlarını işe alım analitiği, pazar istihbaratı ve ATS senkronizasyonu için yapılandırılmış bir veri kümesine alın.",
+                                                                            "faqs":  [
+                                                                                         {
+                                                                                             "q":  "Premium hesap gerekli mi?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Yasaklamalardan nasıl kaçınılır?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Maaş bilgisi her zaman alınır mı?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Doğrudan ATS'ime aktarabilir miyim?"
+                                                                                         }
+                                                                                     ]
+                                                                        },
+                                      "news-headlines-aggregator":  {
+                                                                        "title":  "Haber Manşetleri Toplayıcısı",
+                                                                        "category":  "Haberler ve İçerik",
+                                                                        "lede":  "Ana akım medya, niş bloglar ve RSS beslemelerinin herhangi bir kombinasyonundan birleşik bir haber firehose'u kurun. Şablon hikayeleri normalleştirir, tekrarları kaldırır ve gruplandırır; böylece aynı olayın kopyaları tek bir parçada birleşir.",
+                                                                        "metaDescription":  "Flyto2'nin haber kazıma otomasyon şablonuyla yüzlerce haber kaynağından son dakika manşetlerini tek, birleşik ve tekrarsız bir akışta toplayın.",
+                                                                        "faqs":  [
+                                                                                     {
+                                                                                         "q":  "Kaynak RSS yoksa ne olur?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Kümeleme nasıl çalışıyor?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Konuya göre filtreleyebilir miyim?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Manşetler ne kadar hızlı gelir?"
+                                                                                     }
+                                                                                 ]
+                                                                    },
+                                      "page-load-speed-tester":  {
+                                                                     "title":  "Sayfa Yükleme Hız Test Aracı",
+                                                                     "category":  "Performans ve İzleme",
+                                                                     "lede":  "Kullanıcılardan önce performans gerilemelerini yakalayın. Şablon, birden fazla coğrafya ve cihazdan Core Web Vitals'ı ölçer ve temel metrikler tanımladığınız temelden saptığında uyarı verir.",
+                                                                     "metaDescription":  "Flyto2 web performans otomasyon şablonu ile gerçek Core Web Vitals, waterfall verisi ve gerileme uyarıları içeren sentetik sayfa yükleme testleri çalıştırın.",
+                                                                     "faqs":  [
+                                                                                  {
+                                                                                      "q":  "Gerçek kullanıcı mı sentetik mi?"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "Oturum açılmış sayfaları test eder mi?"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "Temeller nasıl hesaplanır?"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "Kötü dağıtımları engelleyebilir mi?"
+                                                                                  }
+                                                                              ]
+                                                                 },
+                                      "real-estate-listings-monitor":  {
+                                                                           "title":  "Emlak İlan Takipçisi",
+                                                                           "category":  "Gayrimenkul",
+                                                                           "lede":  "Bir mülk piyasaya çıktığında veya fiyatı düştüğünde ilk öğrenen olun. Şablon, büyük emlak portallarını saatten kısa aralıklarla izler ve takip edilen bir kriter tetiklendiğinde anında haber verir.",
+                                                                           "metaDescription":  "Flyto2 izleme şablonuyla Zillow, Redfin, Realtor ve MLS portallarındaki emlak ilanlarını takip edin. Yeni envanter ve fiyat değişiklikleri için uyarılar alın.",
+                                                                           "faqs":  [
+                                                                                        {
+                                                                                            "q":  "Hangi portallar destekleniyor?"
+                                                                                        },
+                                                                                        {
+                                                                                            "q":  "Uyarılar ne kadar hızlı?"
+                                                                                        },
+                                                                                        {
+                                                                                            "q":  "Off-market mülkler izlenebilir mi?"
+                                                                                        },
+                                                                                        {
+                                                                                            "q":  "Ticari ilanlarda durum ne?"
+                                                                                        }
+                                                                                    ]
+                                                                       },
+                                      "restaurant-menu-scraper-2":  {
+                                                                        "title":  "Restoran Menü Kazıyıcısı",
+                                                                        "category":  "Yiyecek ve Konaklama",
+                                                                        "lede":  "Büyük teslimat platformlarındaki her yemek, ek seçenek ve fiyatı temiz bir veri kümesine çekin. Şablon, Uber Eats, DoorDash, Grubhub ve doğrudan restoran sitelerinin farklı şemalarını işler.",
+                                                                        "metaDescription":  "Flyto2 menü kazıma otomasyon şablonuyla Uber Eats, DoorDash, Grubhub ve resmi sitelerden restoran menülerini yapılandırılmış veri olarak çıkarın.",
+                                                                        "faqs":  [
+                                                                                     {
+                                                                                         "q":  "Ek seçenekler eksiksiz yakalanır mı?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Fiyatlar konuma göre değişir mi?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Doğrudan resmi siteler kazınabilir mi?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Ne sıklıkta kazımalıyım?"
+                                                                                     }
+                                                                                 ]
+                                                                    },
+                                      "send-telegram-alert":  {
+                                                                  "title":  "Telegram Uyarısı Gönder",
+                                                                  "category":  "Bildirimler",
+                                                                  "lede":  "Herhangi bir otomasyon olayını zengin bir Telegram bildirimine dönüştürün. Şablon, bot token'larını, kanal yönlendirmesini, mesaj şablonlamayı ve satır içi klavyeleri yönetir; böylece uyarılar biçimlendirilmiş ve aksiyon alınabilir şekilde ulaşır.",
+                                                                  "metaDescription":  "Herhangi bir Flyto2 iş akışından Telegram kanallarına, gruplara veya doğrudan sohbetlere zengin uyarılar gönderin; şablonlama, satır içi klavyeler ve teslim onayı dahil.",
+                                                                  "faqs":  [
+                                                                               {
+                                                                                   "q":  "Bot nasıl oluşturulur?"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "Kullanıcı DM'lerine gönderebilir mi?"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "Satır içi düğmeler etkileşimli mi?"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "Mesaj boyut sınırı nedir?"
+                                                                               }
+                                                                           ]
+                                                              },
+                                      "stock-price-dashboard-scraper":  {
+                                                                            "title":  "Hisse Senedi Fiyat Panosu",
+                                                                            "category":  "Finans ve Piyasa Verileri",
+                                                                            "lede":  "Herhangi bir izleme listesi için canlı fiyatları, temel verileri ve haberleri tek, denetlenebilir bir panoda birleştirin. Şablon, birden fazla veri sağlayıcısına yayar ve sonuçları birleşik bir görünüme uzlaştırır.",
+                                                                            "metaDescription":  "Flyto2 şablonu ile gerçek zamanlı hisse senedi fiyat panosu oluşturun. Birden fazla piyasa veri kaynağından fiyatları, temelleri, haberleri ve uyarıları birleştirin.",
+                                                                            "faqs":  [
+                                                                                         {
+                                                                                             "q":  "Fiyatlar gerçek zamanlı mı?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Hangi varlık sınıfları destekleniyor?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Veriler üzerinde backtest yapılabilir mi?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Seans sonrası fiyatlar var mı?"
+                                                                                         }
+                                                                                     ]
+                                                                        },
+                                      "weather-forecast-to-slack":  {
+                                                                        "title":  "Hava Durumu Tahmini Slack'e",
+                                                                        "category":  "Hava ve Verimlilik",
+                                                                        "lede":  "Her iş gününe Slack üzerinde kişiselleştirilmiş bir hava durumu özetiyle başlayın. Şablon, bir veya birden fazla konum için tahmin çeker, zengin Slack blokları olarak render eder ve sert hava tehdit ettiğinde uyarıyı yükseltir.",
+                                                                        "metaDescription":  "Flyto2 otomasyon şablonu ile günlük hava tahminlerini zengin bloklar, konum hedefleme ve sert hava uyarılarıyla Slack kanallarına veya DM'lere gönderin.",
+                                                                        "faqs":  [
+                                                                                     {
+                                                                                         "q":  "Hangi sağlayıcıyı kullanmalıyım?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "DM'lere gönderebilir mi?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Sert hava uyarıları nasıl ele alınır?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Slack dışı teslimat nasıl?"
+                                                                                     }
+                                                                                 ]
+                                                                    },
+                                      "webpage-to-pdf-converter":  {
+                                                                       "title":  "Web Sayfasından PDF Dönüştürücü",
+                                                                       "category":  "Belge Üretimi",
+                                                                       "lede":  "Herhangi bir URL'yi, her görüntüleyicide temiz açılan piksel sadakatinde bir PDF olarak render edin. Şablon, basılı belgelerin gerektirdiği sayfa boyutu, kenar boşlukları, üst bilgi, alt bilgi, filigran ve sayfa numaralandırma ayrıntılarını kontrol eder.",
+                                                                       "metaDescription":  "Flyto2 Cloud üzerinde herhangi bir web sayfasını yerleşik özel sayfa boyutu, üst bilgi, alt bilgi, sayfa numaralandırma ve filigran desteğiyle yüksek sadakatli PDF'e dönüştürün.",
+                                                                       "faqs":  [
+                                                                                    {
+                                                                                        "q":  "Çıktı metni seçilebilir mi?"
+                                                                                    },
+                                                                                    {
+                                                                                        "q":  "Bağlantılar korunuyor mu?"
+                                                                                    },
+                                                                                    {
+                                                                                        "q":  "Sayfa numarası ekleyebilir miyim?"
+                                                                                    },
+                                                                                    {
+                                                                                        "q":  "Çok uzun tek sayfa belgeler için ne?"
+                                                                                    }
+                                                                                ]
+                                                                   },
+                                      "website-screenshot-gallery":  {
+                                                                         "title":  "Web Sitesi Ekran Görüntüsü Galerisi",
+                                                                         "category":  "Görsel İzleme",
+                                                                         "lede":  "Belirlediğiniz sayfa kümesi için görsel bir geçmiş oluşturun. Şablon planlamaya göre ekran görüntüsü alır, önceki yakalamaya karşı piksel diff'i çalıştırır ve tümünü göz atılabilir bir galeriye dizinler.",
+                                                                         "metaDescription":  "Flyto2 otomasyonu ile planlanmış web sitesi ekran görüntülerini görsel diff, çoklu görünüm penceresi kapsamı ve varlık saklama özelliği olan aranabilir bir galeriye yakalayın.",
+                                                                         "faqs":  [
+                                                                                      {
+                                                                                          "q":  "Yakalamaların boyutu nedir?"
+                                                                                      },
+                                                                                      {
+                                                                                          "q":  "Oturum açılmış sayfalar destekleniyor mu?"
+                                                                                      },
+                                                                                      {
+                                                                                          "q":  "Bir temele karşı diff yapılabilir mi?"
+                                                                                      },
+                                                                                      {
+                                                                                          "q":  "Animasyonlu içerikte ne olur?"
+                                                                                      }
+                                                                                  ]
+                                                                     },
+                                      "website-uptime-monitor":  {
+                                                                     "title":  "Web Sitesi Çalışma Süresi İzleyicisi",
+                                                                     "category":  "İzleme ve SRE",
+                                                                     "lede":  "Servislerinizi kendi altyapınızın dışından gözleyin. Şablon birden fazla bölgeden sentetik denetimler çalıştırır, gerçek olayları akıllıca yükseltir ve müşterilerinizin beklediği durum sayfası verisini üretir.",
+                                                                     "metaDescription":  "Flyto2 çalışma süresi izleme otomasyon şablonu ile birden fazla bölgeden web sitesi çalışma süresini, gecikmeyi ve SSL süre bitimini izleyin; zengin olay yükseltme dahil.",
+                                                                     "faqs":  [
+                                                                                  {
+                                                                                      "q":  "Ne sıklıkta sonda gönderebilirim?"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "TLS iç ayrıntılarında durum ne?"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "Oturum açma akışları test edilebilir mi?"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "Flapping olayları nasıl yönetilir?"
+                                                                                  }
+                                                                              ]
+                                                                 },
+                                      "youtube-channel-stats-tracker":  {
+                                                                            "title":  "YouTube Kanal İstatistik Takipçisi",
+                                                                            "category":  "Sosyal Medya Analitiği",
+                                                                            "lede":  "YouTube'un kendi raporlama pencerelerinin ötesine geçen, kanal ve video performansının uzunlamasına bir kaydını oluşturun. Şablon planlamaya göre kamuya açık metrikleri yakalar ve portföyünüz genelinde eğilimleri ortaya çıkarır.",
+                                                                            "metaDescription":  "Flyto2 otomasyon şablonuyla YouTube kanal ve video metriklerini zaman içinde izleyin. Kanallar arasında izlenme, abone, izlenme süresi ve etkileşim verisini yakalayın.",
+                                                                            "faqs":  [
+                                                                                         {
+                                                                                             "q":  "Sayaçlar ne kadar hassas?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Özel analitik için durum ne?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Rakip kanallar izlenebilir mi?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Kota maliyeti nedir?"
+                                                                                         }
+                                                                                     ]
+                                                                        }
+                                  }
+                  }
 }

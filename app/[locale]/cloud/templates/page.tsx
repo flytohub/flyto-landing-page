@@ -43,8 +43,24 @@ export default async function TemplatesPage({
   const { locale } = await params;
   setRequestLocale(locale);
 
+  const cloudHref = locale === defaultLocale ? '/cloud/' : `/${locale}/cloud/`;
+  const hubHref =
+    locale === defaultLocale ? '/cloud/templates/' : `/${locale}/cloud/templates/`;
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Cloud', item: `https://flyto2.com${cloudHref}` },
+      { '@type': 'ListItem', position: 2, name: 'Templates', item: `https://flyto2.com${hubHref}` },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <TemplatesHero />
       <TemplatesGrid />
       <CommunityTemplatesGrid locale={locale} />

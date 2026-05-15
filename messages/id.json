@@ -1,66 +1,410 @@
 {
-  "nav": {
-    "home": "Beranda",
-    "cloud": "Cloud",
-    "code": "Warroom",
-    "overview": "Ringkasan",
-    "pricing": "Harga",
-    "download": "Unduh",
-    "templates": "Templat",
-    "faq": "FAQ",
-    "roadmap": "Peta jalan",
-    "oss": "Sumber terbuka",
-    "discussions": "Diskusi",
-    "waitlist": "Daftar tunggu",
-    "docs": "Dokumentasi",
-    "blog": "Blog",
-    "contact": "Kontak",
-    "signIn": "Masuk",
-    "soon": "Segera hadir",
-    "allProducts": "Semua produk",
-    "beta": "Beta",
-    "integrations": "Integrasi",
-    "recipes": "Resep",
-    "useCases": "Kasus pakai",
-    "changelog": "Riwayat",
-    "security": "Keamanan"
-  },
-  "footer": {
-    "tagline": "Alat otomasi offline-first. Pekerjaan Anda tetap di mesin Anda.",
-    "cloudTagline": "Otomasi browser. Rekam sekali, putar selamanya.",
-    "warroomTagline": "Ruang operasi keamanan aplikasi. Verifikasi siklus tertutup.",
-    "products": "Produk",
-    "community": "Komunitas",
-    "resources": "Sumber daya",
-    "openSource": "Sumber terbuka",
-    "privacy": "Privasi",
-    "terms": "Ketentuan",
-    "license": "Lisensi",
-    "copyright": "© 2026 FLYTO2"
-  },
-  "home": {
-    "hero": {
-      "eyebrow": "FLYTO2 · OTOMASI OFFLINE-FIRST",
-      "title": "Otomasi yang",
-      "titleAccent": "tetap di mesin Anda.",
-      "lede": "Flyto2 membangun dua produk di atas mesin offline-first yang sama. Satu mengotomasi pekerjaan Anda di browser. Yang lain mengaudit keamanan setiap baris kode yang Anda kirim.",
-      "reassure": "SUMBER TERBUKA · TANPA TELEMETRI · MILIK ANDA"
-    },
-    "products": {
-      "cloud": {
-        "cta": "Buka Cloud"
-      },
-      "warroom": {
-        "cta": "Buka Warroom",
-        "statusLabel": "BETA"
-      }
-    }
-  },
-  "code": {
-    "hero": {
-      "ctaBetaBadge": "Beta",
-      "ctaBeta": "Buka beta",
-      "status": "BETA"
-    }
-  }
+    "nav":  {
+                "home":  "Beranda",
+                "cloud":  "Cloud",
+                "code":  "Warroom",
+                "overview":  "Ringkasan",
+                "pricing":  "Harga",
+                "download":  "Unduh",
+                "templates":  "Templat",
+                "faq":  "FAQ",
+                "roadmap":  "Peta jalan",
+                "oss":  "Sumber terbuka",
+                "discussions":  "Diskusi",
+                "waitlist":  "Daftar tunggu",
+                "docs":  "Dokumentasi",
+                "blog":  "Blog",
+                "contact":  "Kontak",
+                "signIn":  "Masuk",
+                "soon":  "Segera hadir",
+                "allProducts":  "Semua produk",
+                "beta":  "Beta",
+                "integrations":  "Integrasi",
+                "recipes":  "Resep",
+                "useCases":  "Kasus pakai",
+                "changelog":  "Riwayat",
+                "security":  "Keamanan"
+            },
+    "footer":  {
+                   "tagline":  "Alat otomasi offline-first. Pekerjaan Anda tetap di mesin Anda.",
+                   "cloudTagline":  "Otomasi browser. Rekam sekali, putar selamanya.",
+                   "warroomTagline":  "Ruang operasi keamanan aplikasi. Verifikasi siklus tertutup.",
+                   "products":  "Produk",
+                   "community":  "Komunitas",
+                   "resources":  "Sumber daya",
+                   "openSource":  "Sumber terbuka",
+                   "privacy":  "Privasi",
+                   "terms":  "Ketentuan",
+                   "license":  "Lisensi",
+                   "copyright":  "© 2026 FLYTO2"
+               },
+    "home":  {
+                 "hero":  {
+                              "eyebrow":  "FLYTO2 · OTOMASI OFFLINE-FIRST",
+                              "title":  "Otomasi yang",
+                              "titleAccent":  "tetap di mesin Anda.",
+                              "lede":  "Flyto2 membangun dua produk di atas mesin offline-first yang sama. Satu mengotomasi pekerjaan Anda di browser. Yang lain mengaudit keamanan setiap baris kode yang Anda kirim.",
+                              "reassure":  "SUMBER TERBUKA · TANPA TELEMETRI · MILIK ANDA"
+                          },
+                 "products":  {
+                                  "cloud":  {
+                                                "cta":  "Buka Cloud"
+                                            },
+                                  "warroom":  {
+                                                  "cta":  "Buka Warroom",
+                                                  "statusLabel":  "BETA"
+                                              }
+                              }
+             },
+    "code":  {
+                 "hero":  {
+                              "ctaBetaBadge":  "Beta",
+                              "ctaBeta":  "Buka beta",
+                              "status":  "BETA"
+                          }
+             },
+    "templates":  {
+                      "details":  {
+                                      "auto-login-template":  {
+                                                                  "title":  "Template Login Otomatis",
+                                                                  "category":  "Otentikasi & Sesi",
+                                                                  "lede":  "Masuk ke situs mana pun secara programatik tanpa menulis ulang selector untuk setiap alur. Template Auto-Login menangani field formulir, tantangan MFA, dan persistensi sesi sehingga otomatisasi berikutnya berjalan dalam kondisi sudah terotentikasi.",
+                                                                  "metaDescription":  "Otomatiskan login situs di Flyto2 Cloud dengan dukungan 2FA, penyimpanan kredensial terenkripsi, dan penggunaan ulang sesi persisten untuk alur kerja browser headless.",
+                                                                  "faqs":  [
+                                                                               {
+                                                                                   "q":  "Apakah mendukung penyedia SSO?"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "Bagaimana password dilindungi?"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "Bisakah CAPTCHA dipecahkan otomatis?"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "Apa yang terjadi saat sesi kedaluwarsa?"
+                                                                               }
+                                                                           ]
+                                                              },
+                                      "craigslist-listings-scraper":  {
+                                                                          "title":  "Scraper Iklan Craigslist",
+                                                                          "category":  "Data Marketplace",
+                                                                          "lede":  "Kumpulkan data Craigslist terstruktur di ratusan area metropolitan tanpa menulis satu parser pun. Template ini menangani paginasi, geo-routing, dan markup berantakan yang telah menyandung scraper selama dua dekade.",
+                                                                          "metaDescription":  "Scrape iklan baris Craigslist dalam skala besar dengan template Flyto2. Ekstrak judul, harga, lokasi, gambar, dan kontak penjual lintas kategori dan kota besar.",
+                                                                          "faqs":  [
+                                                                                       {
+                                                                                           "q":  "Seberapa baru datanya?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Bisa dapat kontak penjual?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Mampu menangani blokir anti-bot?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Format output apa saja yang didukung?"
+                                                                                       }
+                                                                                   ]
+                                                                      },
+                                      "domain-availability-checker":  {
+                                                                          "title":  "Pemeriksa Ketersediaan Domain",
+                                                                          "category":  "Alat Domain & DNS",
+                                                                          "lede":  "Pindai ribuan kandidat nama domain di seluruh TLD penting, lalu tampilkan hanya yang benar-benar bebas untuk didaftarkan. Template ini menggabungkan beberapa sumber otoritatif untuk menghindari hasil positif palsu.",
+                                                                          "metaDescription":  "Periksa ketersediaan domain secara massal di ratusan TLD dengan template otomatisasi Flyto2. WHOIS, RDAP, dan probe DNS digabungkan untuk hasil yang akurat.",
+                                                                          "faqs":  [
+                                                                                       {
+                                                                                           "q":  "Seberapa akurat hasilnya?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Mendukung gTLD baru?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Bisa daftar nama otomatis?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Bagaimana dengan domain IDN?"
+                                                                                       }
+                                                                                   ]
+                                                                      },
+                                      "github-repo-stats-dashboard":  {
+                                                                          "title":  "Dasbor Statistik Repo GitHub",
+                                                                          "category":  "DevTools & Analitik",
+                                                                          "lede":  "Pusatkan metrik kesehatan setiap repositori yang dikelola tim Anda. Template ini menarik statistik historis dan langsung dari API GitHub, menyimpannya secara persisten, dan merender dasbor yang dapat dibagikan atau disematkan.",
+                                                                          "metaDescription":  "Bangun dasbor analitik repositori GitHub real-time dengan Flyto2. Lacak star, fork, traffic, issue, kecepatan PR, dan aktivitas kontributor lintas repo.",
+                                                                          "faqs":  [
+                                                                                       {
+                                                                                           "q":  "Bekerja di repo privat?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Bagaimana rate limit ditangani?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Bisa ekspor ke BigQuery?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Bagaimana dengan GitHub Enterprise?"
+                                                                                       }
+                                                                                   ]
+                                                                      },
+                                      "google-search-results-scraper":  {
+                                                                            "title":  "Scraper Hasil Pencarian Google",
+                                                                            "category":  "SERP & Riset",
+                                                                            "lede":  "Ekstrak struktur lengkap hasil pencarian Google, bukan hanya sepuluh tautan biru teratas. Template menangkap posisi organik, iklan, knowledge panel, featured snippet, dan blok People Also Ask dalam satu kali crawl.",
+                                                                            "metaDescription":  "Scrape SERP Google dalam skala besar dengan ekstraksi terstruktur untuk organik, iklan, dan fitur SERP. Targeting geografis dan perangkat, plus pelacakan ranking kata kunci dari waktu ke waktu.",
+                                                                            "faqs":  [
+                                                                                         {
+                                                                                             "q":  "Apakah menangani CAPTCHA?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Bisa scrape dari negara tertentu?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Bagaimana mobile vs desktop?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Apakah output stabil dalam waktu lama?"
+                                                                                         }
+                                                                                     ]
+                                                                        },
+                                      "linkedin-job-listings-scraper":  {
+                                                                            "title":  "Scraper Lowongan Kerja LinkedIn",
+                                                                            "category":  "Rekrutmen & Pekerjaan",
+                                                                            "lede":  "Ubah pencarian pekerjaan LinkedIn menjadi dataset yang dapat diquery. Template ini memanen lowongan berdasarkan peran, perusahaan, wilayah, dan senioritas, lalu menormalkannya untuk pipeline rekrutmen dan intelijen pasar di hilir.",
+                                                                            "metaDescription":  "Tarik lowongan LinkedIn ke dataset terstruktur untuk analitik rekrutmen, intelijen pasar, dan sinkronisasi ATS dengan template otomatisasi Flyto2.",
+                                                                            "faqs":  [
+                                                                                         {
+                                                                                             "q":  "Perlu akun premium?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Bagaimana banned dicegah?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Apakah gaji selalu tertangkap?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Bisa kirim langsung ke ATS saya?"
+                                                                                         }
+                                                                                     ]
+                                                                        },
+                                      "news-headlines-aggregator":  {
+                                                                        "title":  "Agregator Headline Berita",
+                                                                        "category":  "Berita & Konten",
+                                                                        "lede":  "Bangun firehose berita terpadu dari kombinasi media arus utama, blog niche, dan feed RSS. Template ini menormalkan, menyaring duplikat, dan mengelompokkan berita sehingga duplikasi peristiwa yang sama runtuh menjadi satu.",
+                                                                        "metaDescription":  "Agregasikan headline terbaru dari ratusan media berita ke dalam satu stream terpadu dan bebas duplikat dengan template otomatisasi scraping berita Flyto2.",
+                                                                        "faqs":  [
+                                                                                     {
+                                                                                         "q":  "Bagaimana jika sumber tanpa RSS?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Bagaimana clustering bekerja?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Bisa filter berdasarkan topik?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Seberapa cepat headline sampai?"
+                                                                                     }
+                                                                                 ]
+                                                                    },
+                                      "page-load-speed-tester":  {
+                                                                     "title":  "Penguji Kecepatan Muat Halaman",
+                                                                     "category":  "Performa & Pemantauan",
+                                                                     "lede":  "Tangkap regresi performa sebelum pengguna merasakannya. Template ini mengukur Core Web Vitals dari berbagai wilayah dan perangkat, lalu memberi peringatan saat metrik kunci menyimpang dari baseline yang Anda tentukan.",
+                                                                     "metaDescription":  "Jalankan tes muat sintetis dengan Core Web Vitals nyata, data waterfall, dan peringatan regresi memakai template otomatisasi performa web Flyto2.",
+                                                                     "faqs":  [
+                                                                                  {
+                                                                                      "q":  "Pengguna nyata atau sintetis?"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "Bisa uji halaman ber-login?"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "Bagaimana baseline dihitung?"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "Bisa memblokir deploy bermasalah?"
+                                                                                  }
+                                                                              ]
+                                                                 },
+                                      "real-estate-listings-monitor":  {
+                                                                           "title":  "Monitor Listing Properti",
+                                                                           "category":  "Properti",
+                                                                           "lede":  "Jadilah yang pertama tahu saat properti masuk pasar atau harganya turun. Template ini memantau portal properti besar dengan frekuensi kurang dari satu jam dan memberi peringatan saat kriteria yang dilacak terpenuhi.",
+                                                                           "metaDescription":  "Lacak listing properti di Zillow, Redfin, Realtor, dan portal MLS dengan template pemantauan Flyto2. Dapatkan peringatan untuk inventaris baru dan perubahan harga.",
+                                                                           "faqs":  [
+                                                                                        {
+                                                                                            "q":  "Portal mana saja yang didukung?"
+                                                                                        },
+                                                                                        {
+                                                                                            "q":  "Seberapa cepat peringatannya?"
+                                                                                        },
+                                                                                        {
+                                                                                            "q":  "Bisa lacak properti off-market?"
+                                                                                        },
+                                                                                        {
+                                                                                            "q":  "Bagaimana dengan properti komersial?"
+                                                                                        }
+                                                                                    ]
+                                                                       },
+                                      "restaurant-menu-scraper-2":  {
+                                                                        "title":  "Scraper Menu Restoran",
+                                                                        "category":  "Makanan & Perhotelan",
+                                                                        "lede":  "Tarik setiap hidangan, modifier, dan harga dari platform pengantaran besar ke dalam dataset bersih. Template ini menangani skema berbeda dari Uber Eats, DoorDash, Grubhub, dan situs restoran langsung.",
+                                                                        "metaDescription":  "Ekstrak menu restoran dari Uber Eats, DoorDash, Grubhub, dan situs resmi ke data terstruktur dengan template otomatisasi scraping menu Flyto2.",
+                                                                        "faqs":  [
+                                                                                     {
+                                                                                         "q":  "Modifier tertangkap lengkap?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Harga berbeda per lokasi?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Bisa scrape situs resmi?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Seberapa sering harus discrape?"
+                                                                                     }
+                                                                                 ]
+                                                                    },
+                                      "send-telegram-alert":  {
+                                                                  "title":  "Kirim Peringatan Telegram",
+                                                                  "category":  "Notifikasi",
+                                                                  "lede":  "Ubah setiap peristiwa otomatisasi menjadi notifikasi Telegram yang kaya. Template ini menangani token bot, routing channel, templating pesan, dan inline keyboard sehingga peringatan tiba dalam format yang siap ditindaklanjuti.",
+                                                                  "metaDescription":  "Kirim peringatan Telegram kaya ke channel, grup, atau chat langsung dari alur kerja Flyto2 mana pun, dengan templating, inline keyboard, dan konfirmasi pengiriman.",
+                                                                  "faqs":  [
+                                                                               {
+                                                                                   "q":  "Bagaimana cara membuat bot?"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "Bisa kirim ke DM pengguna?"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "Apakah tombol inline interaktif?"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "Berapa batas ukuran pesan?"
+                                                                               }
+                                                                           ]
+                                                              },
+                                      "stock-price-dashboard-scraper":  {
+                                                                            "title":  "Dasbor Harga Saham",
+                                                                            "category":  "Keuangan & Data Pasar",
+                                                                            "lede":  "Konsolidasikan kuotasi langsung, fundamental, dan berita untuk watchlist mana pun ke dasbor tunggal yang dapat diaudit. Template ini menyebar ke beberapa penyedia data dan merekonsiliasinya menjadi satu tampilan terpadu.",
+                                                                            "metaDescription":  "Bangun dasbor harga saham real-time dengan template Flyto2. Agregasikan kuotasi, fundamental, berita, dan peringatan dari beberapa sumber data pasar.",
+                                                                            "faqs":  [
+                                                                                         {
+                                                                                             "q":  "Apakah kuotasinya real-time?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Kelas aset mana yang didukung?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Bisa backtest dari datanya?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Bagaimana kuotasi after-hours?"
+                                                                                         }
+                                                                                     ]
+                                                                        },
+                                      "weather-forecast-to-slack":  {
+                                                                        "title":  "Prakiraan Cuaca ke Slack",
+                                                                        "category":  "Cuaca & Produktivitas",
+                                                                        "lede":  "Mulai hari kerja dengan briefing cuaca yang dipersonalisasi di Slack. Template ini menarik prakiraan untuk satu atau banyak lokasi, merender blok Slack yang kaya, dan meningkatkan peringatan saat cuaca buruk mengancam.",
+                                                                        "metaDescription":  "Kirim prakiraan cuaca harian ke channel atau DM Slack dengan blok kaya, targeting lokasi, dan peringatan cuaca ekstrem via template otomatisasi Flyto2.",
+                                                                        "faqs":  [
+                                                                                     {
+                                                                                         "q":  "Penyedia mana yang sebaiknya dipakai?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Bisa posting ke DM?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Bagaimana peringatan ekstrem ditangani?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Bagaimana pengiriman non-Slack?"
+                                                                                     }
+                                                                                 ]
+                                                                    },
+                                      "webpage-to-pdf-converter":  {
+                                                                       "title":  "Konverter Halaman Web ke PDF",
+                                                                       "category":  "Pembuatan Dokumen",
+                                                                       "lede":  "Render URL apa pun menjadi PDF dengan kesetiaan piksel yang terbuka rapi di viewer mana saja. Template ini mengontrol ukuran halaman, margin, header, footer, watermark, dan detail penomoran yang dibutuhkan dokumen cetak.",
+                                                                       "metaDescription":  "Konversi halaman web apa pun menjadi PDF berkualitas tinggi di Flyto2 Cloud dengan dukungan bawaan untuk ukuran halaman kustom, header, footer, penomoran, dan watermark.",
+                                                                       "faqs":  [
+                                                                                    {
+                                                                                        "q":  "Apakah teks output dapat dipilih?"
+                                                                                    },
+                                                                                    {
+                                                                                        "q":  "Apakah hyperlink dipertahankan?"
+                                                                                    },
+                                                                                    {
+                                                                                        "q":  "Bisa menambahkan nomor halaman?"
+                                                                                    },
+                                                                                    {
+                                                                                        "q":  "Bagaimana dokumen satu halaman panjang?"
+                                                                                    }
+                                                                                ]
+                                                                   },
+                                      "website-screenshot-gallery":  {
+                                                                         "title":  "Galeri Tangkapan Layar Situs",
+                                                                         "category":  "Pemantauan Visual",
+                                                                         "lede":  "Bangun riwayat visual untuk kumpulan halaman mana pun. Template ini mengambil tangkapan layar sesuai jadwal, menjalankan diff piksel terhadap tangkapan sebelumnya, dan mengindeks semuanya ke dalam galeri yang dapat ditelusuri.",
+                                                                         "metaDescription":  "Ambil tangkapan layar situs terjadwal ke galeri yang dapat dicari dengan visual diffing, cakupan multi-viewport, dan retensi aset via otomatisasi Flyto2.",
+                                                                         "faqs":  [
+                                                                                      {
+                                                                                          "q":  "Seberapa besar ukuran tangkapan?"
+                                                                                      },
+                                                                                      {
+                                                                                          "q":  "Bisa menangani halaman ber-login?"
+                                                                                      },
+                                                                                      {
+                                                                                          "q":  "Bisa diff terhadap baseline?"
+                                                                                      },
+                                                                                      {
+                                                                                          "q":  "Bagaimana konten animasi?"
+                                                                                      }
+                                                                                  ]
+                                                                     },
+                                      "website-uptime-monitor":  {
+                                                                     "title":  "Monitor Uptime Situs",
+                                                                     "category":  "Pemantauan & SRE",
+                                                                     "lede":  "Awasi layanan Anda dari luar infrastruktur sendiri. Template ini menjalankan pengecekan sintetis dari beberapa wilayah, meng-eskalasi insiden nyata dengan cerdas, dan menghasilkan data halaman status yang diharapkan pelanggan Anda.",
+                                                                     "metaDescription":  "Pantau uptime situs, latensi, dan kedaluwarsa SSL dari beberapa wilayah dengan eskalasi insiden yang kaya via template otomatisasi pemantauan uptime Flyto2.",
+                                                                     "faqs":  [
+                                                                                  {
+                                                                                      "q":  "Seberapa sering bisa probe?"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "Bagaimana detail internal TLS?"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "Bisa uji alur login?"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "Bagaimana insiden flapping ditangani?"
+                                                                                  }
+                                                                              ]
+                                                                 },
+                                      "youtube-channel-stats-tracker":  {
+                                                                            "title":  "Pelacak Statistik Channel YouTube",
+                                                                            "category":  "Analitik Media Sosial",
+                                                                            "lede":  "Bangun catatan longitudinal performa channel dan video yang melampaui jendela pelaporan YouTube sendiri. Template ini menangkap metrik publik sesuai jadwal dan memunculkan tren di seluruh portofolio Anda.",
+                                                                            "metaDescription":  "Lacak metrik channel dan video YouTube dari waktu ke waktu dengan template otomatisasi Flyto2. Tangkap views, subscriber, waktu tonton, dan engagement lintas channel.",
+                                                                            "faqs":  [
+                                                                                         {
+                                                                                             "q":  "Seberapa akurat counternya?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Bagaimana analitik privat?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Bisa lacak channel pesaing?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Berapa biaya kuotanya?"
+                                                                                         }
+                                                                                     ]
+                                                                        }
+                                  }
+                  }
 }

@@ -1,66 +1,410 @@
 {
-  "nav": {
-    "home": "Accueil",
-    "cloud": "Cloud",
-    "code": "Warroom",
-    "overview": "Vue d'ensemble",
-    "pricing": "Tarifs",
-    "download": "Téléchargement",
-    "templates": "Modèles",
-    "faq": "FAQ",
-    "roadmap": "Feuille de route",
-    "oss": "Open source",
-    "discussions": "Discussions",
-    "waitlist": "Liste d'attente",
-    "docs": "Documentation",
-    "blog": "Blog",
-    "contact": "Contact",
-    "signIn": "Connexion",
-    "soon": "Bientôt",
-    "allProducts": "Tous les produits",
-    "beta": "Bêta",
-    "integrations": "Intégrations",
-    "recipes": "Recettes",
-    "useCases": "Cas d'usage",
-    "changelog": "Changelog",
-    "security": "Sécurité"
-  },
-  "footer": {
-    "tagline": "Outils d'automatisation offline-first. Votre travail reste sur votre machine.",
-    "cloudTagline": "Automatisation du navigateur. Enregistrez une fois, rejouez à l'infini.",
-    "warroomTagline": "Salle d'opérations de sécurité applicative. Vérification en boucle fermée.",
-    "products": "Produits",
-    "community": "Communauté",
-    "resources": "Ressources",
-    "openSource": "Open source",
-    "privacy": "Confidentialité",
-    "terms": "Conditions",
-    "license": "Licence",
-    "copyright": "© 2026 FLYTO2"
-  },
-  "home": {
-    "hero": {
-      "eyebrow": "FLYTO2 · AUTOMATISATION OFFLINE-FIRST",
-      "title": "Une automatisation qui",
-      "titleAccent": "reste sur votre machine.",
-      "lede": "Flyto2 construit deux produits sur le même moteur offline-first. L'un automatise votre travail dans le navigateur. L'autre audite la sécurité de chaque ligne de code que vous livrez.",
-      "reassure": "OPEN SOURCE · SANS TÉLÉMÉTRIE · À VOUS"
-    },
-    "products": {
-      "cloud": {
-        "cta": "Voir Cloud"
-      },
-      "warroom": {
-        "cta": "Voir Warroom",
-        "statusLabel": "BÊTA"
-      }
-    }
-  },
-  "code": {
-    "hero": {
-      "ctaBetaBadge": "Beta",
-      "ctaBeta": "Ouvrir la bêta",
-      "status": "BÊTA"
-    }
-  }
+    "nav":  {
+                "home":  "Accueil",
+                "cloud":  "Cloud",
+                "code":  "Warroom",
+                "overview":  "Vue d'ensemble",
+                "pricing":  "Tarifs",
+                "download":  "Téléchargement",
+                "templates":  "Modèles",
+                "faq":  "FAQ",
+                "roadmap":  "Feuille de route",
+                "oss":  "Open source",
+                "discussions":  "Discussions",
+                "waitlist":  "Liste d'attente",
+                "docs":  "Documentation",
+                "blog":  "Blog",
+                "contact":  "Contact",
+                "signIn":  "Connexion",
+                "soon":  "Bientôt",
+                "allProducts":  "Tous les produits",
+                "beta":  "Bêta",
+                "integrations":  "Intégrations",
+                "recipes":  "Recettes",
+                "useCases":  "Cas d'usage",
+                "changelog":  "Changelog",
+                "security":  "Sécurité"
+            },
+    "footer":  {
+                   "tagline":  "Outils d'automatisation offline-first. Votre travail reste sur votre machine.",
+                   "cloudTagline":  "Automatisation du navigateur. Enregistrez une fois, rejouez à l'infini.",
+                   "warroomTagline":  "Salle d'opérations de sécurité applicative. Vérification en boucle fermée.",
+                   "products":  "Produits",
+                   "community":  "Communauté",
+                   "resources":  "Ressources",
+                   "openSource":  "Open source",
+                   "privacy":  "Confidentialité",
+                   "terms":  "Conditions",
+                   "license":  "Licence",
+                   "copyright":  "© 2026 FLYTO2"
+               },
+    "home":  {
+                 "hero":  {
+                              "eyebrow":  "FLYTO2 · AUTOMATISATION OFFLINE-FIRST",
+                              "title":  "Une automatisation qui",
+                              "titleAccent":  "reste sur votre machine.",
+                              "lede":  "Flyto2 construit deux produits sur le même moteur offline-first. L'un automatise votre travail dans le navigateur. L'autre audite la sécurité de chaque ligne de code que vous livrez.",
+                              "reassure":  "OPEN SOURCE · SANS TÉLÉMÉTRIE · À VOUS"
+                          },
+                 "products":  {
+                                  "cloud":  {
+                                                "cta":  "Voir Cloud"
+                                            },
+                                  "warroom":  {
+                                                  "cta":  "Voir Warroom",
+                                                  "statusLabel":  "BÊTA"
+                                              }
+                              }
+             },
+    "code":  {
+                 "hero":  {
+                              "ctaBetaBadge":  "Beta",
+                              "ctaBeta":  "Ouvrir la bêta",
+                              "status":  "BÊTA"
+                          }
+             },
+    "templates":  {
+                      "details":  {
+                                      "auto-login-template":  {
+                                                                  "title":  "Modèle de connexion automatique",
+                                                                  "category":  "Authentification et sessions",
+                                                                  "lede":  "Connectez-vous à n'importe quel site de façon programmatique sans réécrire les sélecteurs pour chaque flux. Le modèle Auto-Login gère les champs de formulaire, les défis MFA et la persistance de session, pour que les automatisations en aval démarrent déjà authentifiées.",
+                                                                  "metaDescription":  "Automatisez les connexions web sur Flyto2 Cloud avec prise en charge 2FA, stockage chiffré des identifiants et réutilisation de sessions persistantes pour les workflows en navigateur headless.",
+                                                                  "faqs":  [
+                                                                               {
+                                                                                   "q":  "Les fournisseurs SSO sont-ils pris en charge ?"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "Comment les mots de passe sont-ils protégés ?"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "Les CAPTCHA sont-ils résolus automatiquement ?"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "Que se passe-t-il quand la session expire ?"
+                                                                               }
+                                                                           ]
+                                                              },
+                                      "craigslist-listings-scraper":  {
+                                                                          "title":  "Scraper d'annonces Craigslist",
+                                                                          "category":  "Données de marketplaces",
+                                                                          "lede":  "Collectez des données structurées de Craigslist sur des centaines de zones métropolitaines sans écrire une seule ligne de parser. Ce modèle gère la pagination, le routage géographique et la balise désordonnée qui fait trébucher les scrapers depuis vingt ans.",
+                                                                          "metaDescription":  "Scrapez les petites annonces Craigslist à grande échelle avec le modèle Flyto2. Extrayez titres, prix, lieux, images et contacts vendeur sur toutes les catégories et villes.",
+                                                                          "faqs":  [
+                                                                                       {
+                                                                                           "q":  "À quel point les données sont-elles fraîches ?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Peut-on obtenir le contact du vendeur ?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Gère-t-il les blocages anti-bot ?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Quels formats de sortie sont pris en charge ?"
+                                                                                       }
+                                                                                   ]
+                                                                      },
+                                      "domain-availability-checker":  {
+                                                                          "title":  "Vérificateur de disponibilité de domaines",
+                                                                          "category":  "Outils domaine et DNS",
+                                                                          "lede":  "Balayez des milliers de noms de domaine candidats sur toutes les TLD pertinentes et ne retenez que ceux réellement libres à l'enregistrement. Le modèle combine plusieurs sources autoritatives pour éviter les faux positifs.",
+                                                                          "metaDescription":  "Vérifiez en masse la disponibilité de domaines sur des centaines de TLD avec le modèle d'automatisation Flyto2. WHOIS, RDAP et sondes DNS combinés pour des résultats précis.",
+                                                                          "faqs":  [
+                                                                                       {
+                                                                                           "q":  "Quelle est la précision des résultats ?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Les nouveaux gTLD sont-ils gérés ?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Peut-il enregistrer les noms automatiquement ?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Qu'en est-il des domaines IDN ?"
+                                                                                       }
+                                                                                   ]
+                                                                      },
+                                      "github-repo-stats-dashboard":  {
+                                                                          "title":  "Tableau de bord des stats GitHub",
+                                                                          "category":  "DevTools et analytique",
+                                                                          "lede":  "Centralisez les indicateurs de santé de chaque dépôt géré par votre équipe. Le modèle récupère les statistiques historiques et en direct depuis l'API GitHub, les persiste et rend un tableau de bord que vous pouvez partager ou intégrer.",
+                                                                          "metaDescription":  "Construisez un tableau de bord d'analytique GitHub en direct avec Flyto2. Suivez étoiles, forks, trafic, issues, vélocité des PR et activité des contributeurs sur tous les dépôts.",
+                                                                          "faqs":  [
+                                                                                       {
+                                                                                           "q":  "Fonctionne-t-il sur les dépôts privés ?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Comment gère-t-il les rate limits ?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Peut-on exporter vers BigQuery ?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Et GitHub Enterprise ?"
+                                                                                       }
+                                                                                   ]
+                                                                      },
+                                      "google-search-results-scraper":  {
+                                                                            "title":  "Scraper de résultats de recherche Google",
+                                                                            "category":  "SERP et recherche",
+                                                                            "lede":  "Extrayez la structure complète des résultats Google, pas seulement les dix premiers liens bleus. Le modèle capture positions organiques, annonces, knowledge panels, extraits optimisés et blocs People Also Ask en un seul passage.",
+                                                                            "metaDescription":  "Scrapez les SERP Google à grande échelle avec extraction structurée des résultats organiques, annonces et features SERP. Ciblage géographique et appareil, suivi des positions dans le temps.",
+                                                                            "faqs":  [
+                                                                                         {
+                                                                                             "q":  "Gère-t-il les CAPTCHA ?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Peut-il scraper depuis des pays précis ?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Mobile ou desktop ?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "La sortie est-elle stable dans le temps ?"
+                                                                                         }
+                                                                                     ]
+                                                                        },
+                                      "linkedin-job-listings-scraper":  {
+                                                                            "title":  "Scraper d'offres d'emploi LinkedIn",
+                                                                            "category":  "Recrutement et emplois",
+                                                                            "lede":  "Transformez la recherche d'emploi LinkedIn en un dataset interrogeable. Le modèle collecte des annonces par poste, entreprise, géographie et séniorité, puis les normalise pour les pipelines de recrutement et d'intelligence marché en aval.",
+                                                                            "metaDescription":  "Importez les annonces LinkedIn dans un dataset structuré pour l'analytique recrutement, l'intelligence marché et la synchronisation ATS, avec le modèle d'automatisation Flyto2.",
+                                                                            "faqs":  [
+                                                                                         {
+                                                                                             "q":  "Faut-il un compte premium ?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Comment évite-t-on les bannissements ?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Le salaire est-il toujours capturé ?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Peut-on pousser vers mon ATS directement ?"
+                                                                                         }
+                                                                                     ]
+                                                                        },
+                                      "news-headlines-aggregator":  {
+                                                                        "title":  "Agrégateur de titres d'actualité",
+                                                                        "category":  "Actualités et contenu",
+                                                                        "lede":  "Construisez un firehose unifié d'actualités à partir de toute combinaison de médias mainstream, blogs de niche et flux RSS. Le modèle normalise, déduplique et cluster les sujets, pour que les doublons d'un même événement fusionnent.",
+                                                                        "metaDescription":  "Agrégez les titres à la une de centaines de médias dans un flux unifié et dédupliqué avec le modèle d'automatisation de scraping d'actualités de Flyto2.",
+                                                                        "faqs":  [
+                                                                                     {
+                                                                                         "q":  "Et si une source n'a pas de RSS ?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Comment fonctionne le clustering ?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Peut-on filtrer par sujet ?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "À quelle vitesse les titres arrivent-ils ?"
+                                                                                     }
+                                                                                 ]
+                                                                    },
+                                      "page-load-speed-tester":  {
+                                                                     "title":  "Testeur de vitesse de chargement",
+                                                                     "category":  "Performance et monitoring",
+                                                                     "lede":  "Détectez les régressions de performance avant vos utilisateurs. Le modèle mesure les Core Web Vitals depuis plusieurs géographies et appareils, et alerte lorsque les indicateurs clés s'éloignent de la baseline définie.",
+                                                                     "metaDescription":  "Exécutez des tests de chargement synthétiques avec vrais Core Web Vitals, données waterfall et alertes de régression via le modèle d'automatisation de performance web Flyto2.",
+                                                                     "faqs":  [
+                                                                                  {
+                                                                                      "q":  "Utilisateurs réels ou synthétiques ?"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "Teste-t-il les pages authentifiées ?"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "Comment les baselines sont-elles calculées ?"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "Peut-il bloquer les mauvais déploiements ?"
+                                                                                  }
+                                                                              ]
+                                                                 },
+                                      "real-estate-listings-monitor":  {
+                                                                           "title":  "Moniteur d'annonces immobilières",
+                                                                           "category":  "Immobilier",
+                                                                           "lede":  "Soyez le premier informé quand un bien arrive sur le marché ou que son prix baisse. Le modèle surveille les principaux portails immobiliers à une cadence inférieure à l'heure et alerte dès qu'un critère suivi est rempli.",
+                                                                           "metaDescription":  "Suivez les annonces immobilières sur Zillow, Redfin, Realtor et les portails MLS avec le modèle Flyto2. Recevez des alertes sur les nouveaux biens et les changements de prix.",
+                                                                           "faqs":  [
+                                                                                        {
+                                                                                            "q":  "Quels portails sont pris en charge ?"
+                                                                                        },
+                                                                                        {
+                                                                                            "q":  "Quelle est la rapidité des alertes ?"
+                                                                                        },
+                                                                                        {
+                                                                                            "q":  "Peut-on suivre des biens off-market ?"
+                                                                                        },
+                                                                                        {
+                                                                                            "q":  "Et l'immobilier commercial ?"
+                                                                                        }
+                                                                                    ]
+                                                                       },
+                                      "restaurant-menu-scraper-2":  {
+                                                                        "title":  "Scraper de menus de restaurants",
+                                                                        "category":  "Restauration et hospitalité",
+                                                                        "lede":  "Récupérez chaque plat, modificateur et prix depuis les principales plateformes de livraison dans un dataset propre. Le modèle absorbe les schémas divergents d'Uber Eats, DoorDash, Grubhub et des sites des restaurants eux-mêmes.",
+                                                                        "metaDescription":  "Extrayez les menus de restaurants d'Uber Eats, DoorDash, Grubhub et des sites officiels en données structurées avec le modèle d'automatisation de scraping de menus Flyto2.",
+                                                                        "faqs":  [
+                                                                                     {
+                                                                                         "q":  "Les modificateurs sont-ils capturés ?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Les prix dépendent-ils du lieu ?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Peut-on scraper les sites officiels ?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "À quelle fréquence scraper ?"
+                                                                                     }
+                                                                                 ]
+                                                                    },
+                                      "send-telegram-alert":  {
+                                                                  "title":  "Envoyer une alerte Telegram",
+                                                                  "category":  "Notifications",
+                                                                  "lede":  "Transformez tout événement d'automatisation en notification Telegram riche. Le modèle gère les bot tokens, le routage de canaux, les templates de messages et les claviers inline pour que les alertes arrivent formatées et exploitables.",
+                                                                  "metaDescription":  "Envoyez des alertes Telegram riches vers des canaux, groupes ou conversations directes depuis n'importe quel workflow Flyto2, avec templates, claviers inline et confirmation de livraison.",
+                                                                  "faqs":  [
+                                                                               {
+                                                                                   "q":  "Comment créer le bot ?"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "Peut-il envoyer en MP utilisateur ?"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "Les boutons inline sont-ils interactifs ?"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "Quelle est la taille max d'un message ?"
+                                                                               }
+                                                                           ]
+                                                              },
+                                      "stock-price-dashboard-scraper":  {
+                                                                            "title":  "Tableau de bord des cours boursiers",
+                                                                            "category":  "Finance et données de marché",
+                                                                            "lede":  "Consolidez cotations en direct, fondamentaux et actualités d'une watchlist en un tableau de bord auditable. Le modèle distribue les requêtes sur plusieurs fournisseurs de données et les réconcilie en une vue unifiée.",
+                                                                            "metaDescription":  "Construisez un tableau de bord de cours boursiers en temps réel avec le modèle Flyto2. Agrégez cotations, fondamentaux, actualités et alertes depuis plusieurs sources de données de marché.",
+                                                                            "faqs":  [
+                                                                                         {
+                                                                                             "q":  "Les cotations sont-elles en temps réel ?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Quelles classes d'actifs sont gérées ?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Peut-on backtester sur ces données ?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Et les cotations hors séance ?"
+                                                                                         }
+                                                                                     ]
+                                                                        },
+                                      "weather-forecast-to-slack":  {
+                                                                        "title":  "Prévisions météo vers Slack",
+                                                                        "category":  "Météo et productivité",
+                                                                        "lede":  "Démarrez chaque journée avec un briefing météo personnalisé dans Slack. Le modèle récupère les prévisions pour un ou plusieurs lieux, rend des blocs Slack riches et escalade en cas de météo sévère.",
+                                                                        "metaDescription":  "Envoyez des prévisions météo quotidiennes vers des canaux ou MP Slack avec blocs riches, ciblage par lieu et alertes météo sévère via le modèle d'automatisation Flyto2.",
+                                                                        "faqs":  [
+                                                                                     {
+                                                                                         "q":  "Quel fournisseur dois-je utiliser ?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Peut-il poster en MP ?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Comment sont gérées les alertes sévères ?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Et la livraison hors Slack ?"
+                                                                                     }
+                                                                                 ]
+                                                                    },
+                                      "webpage-to-pdf-converter":  {
+                                                                       "title":  "Convertisseur page web vers PDF",
+                                                                       "category":  "Génération de documents",
+                                                                       "lede":  "Rendez n'importe quelle URL en PDF fidèle au pixel qui s'ouvre proprement dans tout visualiseur. Le modèle contrôle la taille de page, les marges, en-têtes, pieds de page, filigranes et numérotation que les documents imprimés exigent.",
+                                                                       "metaDescription":  "Convertissez toute page web en PDF haute fidélité sur Flyto2 Cloud avec tailles de page personnalisées, en-têtes, pieds, numérotation et filigranes intégrés.",
+                                                                       "faqs":  [
+                                                                                    {
+                                                                                        "q":  "Le texte de sortie est-il sélectionnable ?"
+                                                                                    },
+                                                                                    {
+                                                                                        "q":  "Les hyperliens sont-ils préservés ?"
+                                                                                    },
+                                                                                    {
+                                                                                        "q":  "Peut-on ajouter une numérotation ?"
+                                                                                    },
+                                                                                    {
+                                                                                        "q":  "Et les très longs documents en page unique ?"
+                                                                                    }
+                                                                                ]
+                                                                   },
+                                      "website-screenshot-gallery":  {
+                                                                         "title":  "Galerie de captures d'écran de sites",
+                                                                         "category":  "Monitoring visuel",
+                                                                         "lede":  "Construisez un historique visuel pour tout ensemble de pages. Le modèle prend des captures selon un planning, effectue des diffs pixel par pixel avec la précédente et indexe le tout dans une galerie navigable.",
+                                                                         "metaDescription":  "Capturez des captures d'écran planifiées de sites web dans une galerie consultable avec diffing visuel, couverture multi-viewport et rétention des assets via l'automatisation Flyto2.",
+                                                                         "faqs":  [
+                                                                                      {
+                                                                                          "q":  "Quelle taille font les captures ?"
+                                                                                      },
+                                                                                      {
+                                                                                          "q":  "Gère-t-il les pages authentifiées ?"
+                                                                                      },
+                                                                                      {
+                                                                                          "q":  "Peut-on comparer à une baseline ?"
+                                                                                      },
+                                                                                      {
+                                                                                          "q":  "Et le contenu animé ?"
+                                                                                      }
+                                                                                  ]
+                                                                     },
+                                      "website-uptime-monitor":  {
+                                                                     "title":  "Moniteur de disponibilité de site",
+                                                                     "category":  "Monitoring et SRE",
+                                                                     "lede":  "Surveillez vos services depuis l'extérieur de votre propre infrastructure. Le modèle exécute des vérifications synthétiques depuis plusieurs régions, escalade intelligemment les vrais incidents et produit les données de status page que vos clients attendent.",
+                                                                     "metaDescription":  "Surveillez la disponibilité, la latence et l'expiration SSL depuis plusieurs régions avec une riche escalade d'incidents via le modèle d'automatisation de monitoring d'uptime Flyto2.",
+                                                                     "faqs":  [
+                                                                                  {
+                                                                                      "q":  "À quelle fréquence puis-je sonder ?"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "Et les détails internes de TLS ?"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "Peut-il tester les flux de connexion ?"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "Comment sont gérés les incidents flapping ?"
+                                                                                  }
+                                                                              ]
+                                                                 },
+                                      "youtube-channel-stats-tracker":  {
+                                                                            "title":  "Tracker de statistiques de chaînes YouTube",
+                                                                            "category":  "Analytique des réseaux sociaux",
+                                                                            "lede":  "Construisez un historique longitudinal des performances de chaînes et vidéos qui dépasse les fenêtres de reporting natives de YouTube. Le modèle capture les indicateurs publics selon un planning et fait émerger des tendances sur tout votre portefeuille.",
+                                                                            "metaDescription":  "Suivez dans le temps les indicateurs de chaînes et vidéos YouTube avec le modèle d'automatisation Flyto2. Capturez vues, abonnés, temps de visionnage et engagement sur plusieurs chaînes.",
+                                                                            "faqs":  [
+                                                                                         {
+                                                                                             "q":  "Quelle est la précision des compteurs ?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Et les analytiques privées ?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Peut-on suivre les chaînes concurrentes ?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Quel est le coût en quota ?"
+                                                                                         }
+                                                                                     ]
+                                                                        }
+                                  }
+                  }
 }

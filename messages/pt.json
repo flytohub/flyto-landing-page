@@ -1,66 +1,410 @@
 {
-  "nav": {
-    "home": "Início",
-    "cloud": "Cloud",
-    "code": "Warroom",
-    "overview": "Visão geral",
-    "pricing": "Preços",
-    "download": "Baixar",
-    "templates": "Modelos",
-    "faq": "FAQ",
-    "roadmap": "Roadmap",
-    "oss": "Código aberto",
-    "discussions": "Discussões",
-    "waitlist": "Lista de espera",
-    "docs": "Documentação",
-    "blog": "Blog",
-    "contact": "Contato",
-    "signIn": "Entrar",
-    "soon": "Em breve",
-    "allProducts": "Todos os produtos",
-    "beta": "Beta",
-    "integrations": "Integrações",
-    "recipes": "Receitas",
-    "useCases": "Casos de uso",
-    "changelog": "Histórico",
-    "security": "Segurança"
-  },
-  "footer": {
-    "tagline": "Ferramentas de automação offline-first. Seu trabalho fica na sua máquina.",
-    "cloudTagline": "Automação de navegador. Grave uma vez, reproduza para sempre.",
-    "warroomTagline": "Centro de operações de segurança de aplicações. Verificação em malha fechada.",
-    "products": "Produtos",
-    "community": "Comunidade",
-    "resources": "Recursos",
-    "openSource": "Código aberto",
-    "privacy": "Privacidade",
-    "terms": "Termos",
-    "license": "Licença",
-    "copyright": "© 2026 FLYTO2"
-  },
-  "home": {
-    "hero": {
-      "eyebrow": "FLYTO2 · AUTOMAÇÃO OFFLINE-FIRST",
-      "title": "Automação que",
-      "titleAccent": "permanece na sua máquina.",
-      "lede": "O Flyto2 constrói dois produtos sobre o mesmo motor offline-first. Um automatiza seu trabalho no navegador. O outro audita a segurança de cada linha de código que você publica.",
-      "reassure": "CÓDIGO ABERTO · SEM TELEMETRIA · SEU"
-    },
-    "products": {
-      "cloud": {
-        "cta": "Ir para Cloud"
-      },
-      "warroom": {
-        "cta": "Ir para Warroom",
-        "statusLabel": "BETA"
-      }
-    }
-  },
-  "code": {
-    "hero": {
-      "ctaBetaBadge": "Beta",
-      "ctaBeta": "Abrir a beta",
-      "status": "BETA"
-    }
-  }
+    "nav":  {
+                "home":  "Início",
+                "cloud":  "Cloud",
+                "code":  "Warroom",
+                "overview":  "Visão geral",
+                "pricing":  "Preços",
+                "download":  "Baixar",
+                "templates":  "Modelos",
+                "faq":  "FAQ",
+                "roadmap":  "Roadmap",
+                "oss":  "Código aberto",
+                "discussions":  "Discussões",
+                "waitlist":  "Lista de espera",
+                "docs":  "Documentação",
+                "blog":  "Blog",
+                "contact":  "Contato",
+                "signIn":  "Entrar",
+                "soon":  "Em breve",
+                "allProducts":  "Todos os produtos",
+                "beta":  "Beta",
+                "integrations":  "Integrações",
+                "recipes":  "Receitas",
+                "useCases":  "Casos de uso",
+                "changelog":  "Histórico",
+                "security":  "Segurança"
+            },
+    "footer":  {
+                   "tagline":  "Ferramentas de automação offline-first. Seu trabalho fica na sua máquina.",
+                   "cloudTagline":  "Automação de navegador. Grave uma vez, reproduza para sempre.",
+                   "warroomTagline":  "Centro de operações de segurança de aplicações. Verificação em malha fechada.",
+                   "products":  "Produtos",
+                   "community":  "Comunidade",
+                   "resources":  "Recursos",
+                   "openSource":  "Código aberto",
+                   "privacy":  "Privacidade",
+                   "terms":  "Termos",
+                   "license":  "Licença",
+                   "copyright":  "© 2026 FLYTO2"
+               },
+    "home":  {
+                 "hero":  {
+                              "eyebrow":  "FLYTO2 · AUTOMAÇÃO OFFLINE-FIRST",
+                              "title":  "Automação que",
+                              "titleAccent":  "permanece na sua máquina.",
+                              "lede":  "O Flyto2 constrói dois produtos sobre o mesmo motor offline-first. Um automatiza seu trabalho no navegador. O outro audita a segurança de cada linha de código que você publica.",
+                              "reassure":  "CÓDIGO ABERTO · SEM TELEMETRIA · SEU"
+                          },
+                 "products":  {
+                                  "cloud":  {
+                                                "cta":  "Ir para Cloud"
+                                            },
+                                  "warroom":  {
+                                                  "cta":  "Ir para Warroom",
+                                                  "statusLabel":  "BETA"
+                                              }
+                              }
+             },
+    "code":  {
+                 "hero":  {
+                              "ctaBetaBadge":  "Beta",
+                              "ctaBeta":  "Abrir a beta",
+                              "status":  "BETA"
+                          }
+             },
+    "templates":  {
+                      "details":  {
+                                      "auto-login-template":  {
+                                                                  "title":  "Template de login automático",
+                                                                  "category":  "Autenticação e sessões",
+                                                                  "lede":  "Entre em qualquer site de forma programática sem reescrever seletores para cada fluxo. O template Auto-Login cuida dos campos de formulário, dos desafios de MFA e da persistência de sessão, para que as automações seguintes já comecem autenticadas.",
+                                                                  "metaDescription":  "Automatize logins em sites no Flyto2 Cloud com suporte a 2FA, armazenamento criptografado de credenciais e reutilização de sessões persistentes para workflows em navegador headless.",
+                                                                  "faqs":  [
+                                                                               {
+                                                                                   "q":  "Tem suporte a provedores de SSO?"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "Como as senhas são protegidas?"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "Resolve CAPTCHAs automaticamente?"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "O que acontece quando a sessão expira?"
+                                                                               }
+                                                                           ]
+                                                              },
+                                      "craigslist-listings-scraper":  {
+                                                                          "title":  "Scraper de anúncios do Craigslist",
+                                                                          "category":  "Dados de marketplaces",
+                                                                          "lede":  "Colete dados estruturados do Craigslist em centenas de regiões metropolitanas sem escrever uma linha de parser. Este template lida com paginação, roteamento geográfico e a marcação confusa que vem derrubando scrapers há duas décadas.",
+                                                                          "metaDescription":  "Faça scraping de classificados do Craigslist em escala com o template Flyto2. Extraia títulos, preços, locais, imagens e contatos de vendedores por categorias e cidades.",
+                                                                          "faqs":  [
+                                                                                       {
+                                                                                           "q":  "Os dados estão atualizados?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Dá para pegar contato do vendedor?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Lida com bloqueios anti-bot?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Quais formatos de saída suporta?"
+                                                                                       }
+                                                                                   ]
+                                                                      },
+                                      "domain-availability-checker":  {
+                                                                          "title":  "Verificador de disponibilidade de domínios",
+                                                                          "category":  "Ferramentas de domínio e DNS",
+                                                                          "lede":  "Varre milhares de nomes de domínio candidatos em todas as TLDs relevantes e exibe apenas os que estão realmente livres para registro. O template combina várias fontes oficiais para evitar falsos positivos.",
+                                                                          "metaDescription":  "Verifique em massa a disponibilidade de domínios em centenas de TLDs com o template de automação Flyto2. Combina WHOIS, RDAP e sondas DNS para resultados precisos.",
+                                                                          "faqs":  [
+                                                                                       {
+                                                                                           "q":  "Quão precisos são os resultados?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Suporta novas gTLDs?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Pode registrar nomes automaticamente?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "E os domínios IDN?"
+                                                                                       }
+                                                                                   ]
+                                                                      },
+                                      "github-repo-stats-dashboard":  {
+                                                                          "title":  "Dashboard de estatísticas de repositórios GitHub",
+                                                                          "category":  "DevTools e analytics",
+                                                                          "lede":  "Centralize métricas de saúde de cada repositório do seu time. O template puxa estatísticas históricas e em tempo real da API do GitHub, persiste tudo e renderiza um dashboard que você pode compartilhar ou embutir.",
+                                                                          "metaDescription":  "Crie um dashboard ao vivo de analytics de repositórios GitHub com Flyto2. Acompanhe stars, forks, tráfego, issues, velocidade de PRs e atividade de contribuidores entre repos.",
+                                                                          "faqs":  [
+                                                                                       {
+                                                                                           "q":  "Funciona com repositórios privados?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Como os rate limits são tratados?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Posso exportar para o BigQuery?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "E o GitHub Enterprise?"
+                                                                                       }
+                                                                                   ]
+                                                                      },
+                                      "google-search-results-scraper":  {
+                                                                            "title":  "Scraper de resultados do Google",
+                                                                            "category":  "SERP e pesquisa",
+                                                                            "lede":  "Extraia a estrutura completa dos resultados do Google, não só os dez primeiros links azuis. O template captura posições orgânicas, anúncios, knowledge panels, snippets em destaque e blocos People Also Ask em uma única passagem.",
+                                                                            "metaDescription":  "Faça scraping de SERPs do Google em escala com extração estruturada de orgânicos, anúncios e features da SERP. Segmente por país e dispositivo e acompanhe rankings ao longo do tempo.",
+                                                                            "faqs":  [
+                                                                                         {
+                                                                                             "q":  "Lida com CAPTCHAs?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Posso fazer scraping de países específicos?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Mobile ou desktop?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "A saída é estável ao longo do tempo?"
+                                                                                         }
+                                                                                     ]
+                                                                        },
+                                      "linkedin-job-listings-scraper":  {
+                                                                            "title":  "Scraper de vagas do LinkedIn",
+                                                                            "category":  "Recrutamento e vagas",
+                                                                            "lede":  "Transforme a busca de vagas do LinkedIn em um dataset consultável. O template coleta vagas por cargo, empresa, geografia e senioridade e as normaliza para pipelines de recrutamento e inteligência de mercado.",
+                                                                            "metaDescription":  "Leve as vagas do LinkedIn para um dataset estruturado para analytics de recrutamento, inteligência de mercado e sync com ATS, com o template de automação Flyto2.",
+                                                                            "faqs":  [
+                                                                                         {
+                                                                                             "q":  "Preciso de conta premium?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Como se evitam os banimentos?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "O salário é sempre capturado?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Posso enviar direto para meu ATS?"
+                                                                                         }
+                                                                                     ]
+                                                                        },
+                                      "news-headlines-aggregator":  {
+                                                                        "title":  "Agregador de manchetes de notícias",
+                                                                        "category":  "Notícias e conteúdo",
+                                                                        "lede":  "Monte um firehose unificado de notícias a partir de qualquer combinação de veículos mainstream, blogs de nicho e feeds RSS. O template normaliza, deduplica e agrupa histórias, fazendo com que duplicatas do mesmo evento se fundam.",
+                                                                        "metaDescription":  "Agregue manchetes de última hora de centenas de veículos em um único stream unificado e deduplicado com o template de automação de scraping de notícias do Flyto2.",
+                                                                        "faqs":  [
+                                                                                     {
+                                                                                         "q":  "E se a fonte não tem RSS?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Como funciona o agrupamento?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Posso filtrar por tópico?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Quão rápido as manchetes chegam?"
+                                                                                     }
+                                                                                 ]
+                                                                    },
+                                      "page-load-speed-tester":  {
+                                                                     "title":  "Testador de velocidade de carregamento",
+                                                                     "category":  "Performance e monitoramento",
+                                                                     "lede":  "Detecte regressões de performance antes dos usuários. O template mede Core Web Vitals em várias geografias e dispositivos e dispara alerta quando as métricas-chave saem da baseline definida.",
+                                                                     "metaDescription":  "Execute testes sintéticos de carregamento com Core Web Vitals reais, dados de waterfall e alertas de regressão usando o template de automação de performance web do Flyto2.",
+                                                                     "faqs":  [
+                                                                                  {
+                                                                                      "q":  "Usuários reais ou sintéticos?"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "Testa páginas autenticadas?"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "Como as baselines são calculadas?"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "Pode bloquear deploys ruins?"
+                                                                                  }
+                                                                              ]
+                                                                 },
+                                      "real-estate-listings-monitor":  {
+                                                                           "title":  "Monitor de anúncios imobiliários",
+                                                                           "category":  "Mercado imobiliário",
+                                                                           "lede":  "Saiba antes de qualquer um quando um imóvel entra no mercado ou tem queda de preço. O template observa os principais portais imobiliários em frequência sub-horária e avisa no instante em que um critério rastreado dispara.",
+                                                                           "metaDescription":  "Acompanhe anúncios imobiliários em Zillow, Redfin, Realtor e portais MLS com o template de monitoramento Flyto2. Receba alertas de novo inventário e mudanças de preço.",
+                                                                           "faqs":  [
+                                                                                        {
+                                                                                            "q":  "Quais portais são suportados?"
+                                                                                        },
+                                                                                        {
+                                                                                            "q":  "Quão rápidos são os alertas?"
+                                                                                        },
+                                                                                        {
+                                                                                            "q":  "Dá para rastrear imóveis off-market?"
+                                                                                        },
+                                                                                        {
+                                                                                            "q":  "E imóveis comerciais?"
+                                                                                        }
+                                                                                    ]
+                                                                       },
+                                      "restaurant-menu-scraper-2":  {
+                                                                        "title":  "Scraper de cardápios de restaurantes",
+                                                                        "category":  "Alimentação e hospitalidade",
+                                                                        "lede":  "Puxe cada prato, adicional e preço das grandes plataformas de delivery para um dataset limpo. O template lida com os esquemas divergentes de Uber Eats, DoorDash, Grubhub e dos próprios sites dos restaurantes.",
+                                                                        "metaDescription":  "Extraia cardápios de restaurantes do Uber Eats, DoorDash, Grubhub e sites próprios para dados estruturados com o template de automação de scraping de menu Flyto2.",
+                                                                        "faqs":  [
+                                                                                     {
+                                                                                         "q":  "Captura todos os adicionais?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Os preços variam por região?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Posso fazer scraping dos sites oficiais?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Com que frequência devo coletar?"
+                                                                                     }
+                                                                                 ]
+                                                                    },
+                                      "send-telegram-alert":  {
+                                                                  "title":  "Enviar alerta no Telegram",
+                                                                  "category":  "Notificações",
+                                                                  "lede":  "Transforme qualquer evento de automação em uma notificação rica no Telegram. O template cuida de bot tokens, roteamento de canais, templating de mensagens e teclados inline, para que os alertas cheguem formatados e acionáveis.",
+                                                                  "metaDescription":  "Envie alertas ricos no Telegram para canais, grupos ou DMs a partir de qualquer workflow Flyto2, com templating, teclados inline e confirmação de entrega.",
+                                                                  "faqs":  [
+                                                                               {
+                                                                                   "q":  "Como crio o bot?"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "Pode enviar para DMs de usuário?"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "Os botões inline são interativos?"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "Qual é o limite de tamanho da mensagem?"
+                                                                               }
+                                                                           ]
+                                                              },
+                                      "stock-price-dashboard-scraper":  {
+                                                                            "title":  "Dashboard de cotações de ações",
+                                                                            "category":  "Finanças e dados de mercado",
+                                                                            "lede":  "Consolide cotações em tempo real, fundamentos e notícias de qualquer watchlist em um único dashboard auditável. O template faz fan-out para vários provedores de dados e reconcilia tudo em uma visão unificada.",
+                                                                            "metaDescription":  "Construa um dashboard de cotações de ações em tempo real com o template Flyto2. Agregue cotações, fundamentos, notícias e alertas de várias fontes de dados de mercado.",
+                                                                            "faqs":  [
+                                                                                         {
+                                                                                             "q":  "As cotações são em tempo real?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Quais classes de ativo são cobertas?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Dá para fazer backtest nos dados?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "E cotações pós-pregão?"
+                                                                                         }
+                                                                                     ]
+                                                                        },
+                                      "weather-forecast-to-slack":  {
+                                                                        "title":  "Previsão do tempo para o Slack",
+                                                                        "category":  "Clima e produtividade",
+                                                                        "lede":  "Comece o dia útil com um briefing meteorológico personalizado no Slack. O template puxa a previsão para um ou vários locais, renderiza blocos ricos no Slack e escala alertas quando há tempo severo.",
+                                                                        "metaDescription":  "Envie previsões do tempo diárias para canais ou DMs do Slack com blocos ricos, segmentação por local e alertas de tempo severo via template de automação Flyto2.",
+                                                                        "faqs":  [
+                                                                                     {
+                                                                                         "q":  "Qual provedor devo usar?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Dá para postar em DMs?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Como os alertas severos são tratados?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "E entrega fora do Slack?"
+                                                                                     }
+                                                                                 ]
+                                                                    },
+                                      "webpage-to-pdf-converter":  {
+                                                                       "title":  "Conversor de página web em PDF",
+                                                                       "category":  "Geração de documentos",
+                                                                       "lede":  "Renderize qualquer URL em um PDF fiel pixel a pixel que abre limpo em qualquer visualizador. O template controla tamanho da página, margens, cabeçalhos, rodapés, marcas d'água e os detalhes de numeração que documentos impressos exigem.",
+                                                                       "metaDescription":  "Converta qualquer página web em um PDF de alta fidelidade no Flyto2 Cloud com tamanho de página personalizado, cabeçalhos, rodapés, numeração e marca d'água integrados.",
+                                                                       "faqs":  [
+                                                                                    {
+                                                                                        "q":  "O texto de saída é selecionável?"
+                                                                                    },
+                                                                                    {
+                                                                                        "q":  "Os hiperlinks são preservados?"
+                                                                                    },
+                                                                                    {
+                                                                                        "q":  "Posso adicionar números de página?"
+                                                                                    },
+                                                                                    {
+                                                                                        "q":  "E documentos de página única bem longos?"
+                                                                                    }
+                                                                                ]
+                                                                   },
+                                      "website-screenshot-gallery":  {
+                                                                         "title":  "Galeria de capturas de tela de sites",
+                                                                         "category":  "Monitoramento visual",
+                                                                         "lede":  "Monte um histórico visual de qualquer conjunto de páginas. O template captura screenshots em um cronograma, executa diffs pixel a pixel contra a captura anterior e indexa tudo em uma galeria navegável.",
+                                                                         "metaDescription":  "Capture screenshots agendados de sites em uma galeria pesquisável com diffing visual, cobertura multi-viewport e retenção de assets via automação Flyto2.",
+                                                                         "faqs":  [
+                                                                                      {
+                                                                                          "q":  "Qual é o tamanho das capturas?"
+                                                                                      },
+                                                                                      {
+                                                                                          "q":  "Lida com páginas autenticadas?"
+                                                                                      },
+                                                                                      {
+                                                                                          "q":  "Posso comparar com uma baseline?"
+                                                                                      },
+                                                                                      {
+                                                                                          "q":  "E conteúdo animado?"
+                                                                                      }
+                                                                                  ]
+                                                                     },
+                                      "website-uptime-monitor":  {
+                                                                     "title":  "Monitor de uptime de sites",
+                                                                     "category":  "Monitoramento e SRE",
+                                                                     "lede":  "Observe seus serviços de fora da sua própria infraestrutura. O template executa checks sintéticos a partir de várias regiões, escala incidentes reais de forma inteligente e gera os dados de status page que seus clientes esperam.",
+                                                                     "metaDescription":  "Monitore uptime, latência e expiração de SSL a partir de várias regiões com escalonamento avançado de incidentes via o template de automação de monitoramento de uptime Flyto2.",
+                                                                     "faqs":  [
+                                                                                  {
+                                                                                      "q":  "Com que frequência posso sondar?"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "E os detalhes internos de TLS?"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "Pode testar fluxos de login?"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "Como incidentes flapping são tratados?"
+                                                                                  }
+                                                                              ]
+                                                                 },
+                                      "youtube-channel-stats-tracker":  {
+                                                                            "title":  "Rastreador de estatísticas de canais YouTube",
+                                                                            "category":  "Analytics de redes sociais",
+                                                                            "lede":  "Construa um histórico longitudinal de performance de canais e vídeos que vai além das janelas de relatório nativas do YouTube. O template captura métricas públicas em cronograma e revela tendências em todo o portfólio.",
+                                                                            "metaDescription":  "Acompanhe ao longo do tempo as métricas de canais e vídeos do YouTube com o template de automação Flyto2. Capture views, inscritos, tempo de exibição e engajamento entre canais.",
+                                                                            "faqs":  [
+                                                                                         {
+                                                                                             "q":  "Quão precisos são os contadores?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "E os analytics privados?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Dá para rastrear canais concorrentes?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Qual o custo em quota?"
+                                                                                         }
+                                                                                     ]
+                                                                        }
+                                  }
+                  }
 }

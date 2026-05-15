@@ -1,66 +1,410 @@
 {
-  "nav": {
-    "home": "首页",
-    "cloud": "Cloud",
-    "code": "Warroom",
-    "overview": "概览",
-    "pricing": "定价",
-    "download": "下载",
-    "templates": "模板",
-    "faq": "常见问题",
-    "roadmap": "路线图",
-    "oss": "开源",
-    "discussions": "讨论区",
-    "waitlist": "加入候补",
-    "docs": "文档",
-    "blog": "博客",
-    "contact": "联系",
-    "signIn": "登录",
-    "soon": "即将推出",
-    "allProducts": "全部产品",
-    "beta": "公测",
-    "integrations": "集成",
-    "recipes": "预建食谱",
-    "useCases": "使用场景",
-    "changelog": "更新日志",
-    "security": "安全扫描"
-  },
-  "footer": {
-    "tagline": "离线优先的自动化工具，让工作留在你的电脑上。",
-    "cloudTagline": "浏览器自动化。一次录制，永久回放。",
-    "warroomTagline": "应用安全战情室。闭环验证。",
-    "products": "产品",
-    "community": "社区",
-    "resources": "资源",
-    "openSource": "开源",
-    "privacy": "隐私",
-    "terms": "条款",
-    "license": "授权",
-    "copyright": "© 2026 FLYTO2"
-  },
-  "home": {
-    "hero": {
-      "eyebrow": "FLYTO2 · 离线优先的自动化",
-      "title": "让自动化",
-      "titleAccent": "留在你的电脑上。",
-      "lede": "Flyto2 用同一套离线优先引擎做两款产品。一款自动化你在浏览器里的重复工作，一款审你出货的每一行代码的安全姿态。",
-      "reassure": "开源 · 无遥测 · 属于你"
-    },
-    "products": {
-      "cloud": {
-        "cta": "前往 Cloud"
-      },
-      "warroom": {
-        "cta": "前往 Warroom",
-        "statusLabel": "公测中"
-      }
-    }
-  },
-  "code": {
-    "hero": {
-      "ctaBetaBadge": "Beta",
-      "ctaBeta": "前往 Beta",
-      "status": "公测中"
-    }
-  }
+    "nav":  {
+                "home":  "首页",
+                "cloud":  "Cloud",
+                "code":  "Warroom",
+                "overview":  "概览",
+                "pricing":  "定价",
+                "download":  "下载",
+                "templates":  "模板",
+                "faq":  "常见问题",
+                "roadmap":  "路线图",
+                "oss":  "开源",
+                "discussions":  "讨论区",
+                "waitlist":  "加入候补",
+                "docs":  "文档",
+                "blog":  "博客",
+                "contact":  "联系",
+                "signIn":  "登录",
+                "soon":  "即将推出",
+                "allProducts":  "全部产品",
+                "beta":  "公测",
+                "integrations":  "集成",
+                "recipes":  "预建食谱",
+                "useCases":  "使用场景",
+                "changelog":  "更新日志",
+                "security":  "安全扫描"
+            },
+    "footer":  {
+                   "tagline":  "离线优先的自动化工具，让工作留在你的电脑上。",
+                   "cloudTagline":  "浏览器自动化。一次录制，永久回放。",
+                   "warroomTagline":  "应用安全战情室。闭环验证。",
+                   "products":  "产品",
+                   "community":  "社区",
+                   "resources":  "资源",
+                   "openSource":  "开源",
+                   "privacy":  "隐私",
+                   "terms":  "条款",
+                   "license":  "授权",
+                   "copyright":  "© 2026 FLYTO2"
+               },
+    "home":  {
+                 "hero":  {
+                              "eyebrow":  "FLYTO2 · 离线优先的自动化",
+                              "title":  "让自动化",
+                              "titleAccent":  "留在你的电脑上。",
+                              "lede":  "Flyto2 用同一套离线优先引擎做两款产品。一款自动化你在浏览器里的重复工作，一款审你出货的每一行代码的安全姿态。",
+                              "reassure":  "开源 · 无遥测 · 属于你"
+                          },
+                 "products":  {
+                                  "cloud":  {
+                                                "cta":  "前往 Cloud"
+                                            },
+                                  "warroom":  {
+                                                  "cta":  "前往 Warroom",
+                                                  "statusLabel":  "公测中"
+                                              }
+                              }
+             },
+    "code":  {
+                 "hero":  {
+                              "ctaBetaBadge":  "Beta",
+                              "ctaBeta":  "前往 Beta",
+                              "status":  "公测中"
+                          }
+             },
+    "templates":  {
+                      "details":  {
+                                      "auto-login-template":  {
+                                                                  "title":  "自动登录模板",
+                                                                  "category":  "身份验证与会话",
+                                                                  "lede":  "以编程方式登录任意网站，无需为每个流程重写选择器。Auto-Login 模板可处理表单字段、MFA 验证与会话保持，让下游自动化流程启动时即已通过认证。",
+                                                                  "metaDescription":  "在 Flyto2 Cloud 上自动化网站登录，支持 2FA、加密凭据存储与可复用的持久会话，适用于无头浏览器流程。",
+                                                                  "faqs":  [
+                                                                               {
+                                                                                   "q":  "是否支持 SSO 提供商？"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "密码如何受到保护？"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "可以自动破解验证码吗？"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "会话过期时会怎样？"
+                                                                               }
+                                                                           ]
+                                                              },
+                                      "craigslist-listings-scraper":  {
+                                                                          "title":  "Craigslist 商品信息抓取器",
+                                                                          "category":  "市场数据",
+                                                                          "lede":  "跨越数百个城市采集结构化 Craigslist 数据，完全无需自己编写解析器。本模板可处理分页、地区路由以及让爬虫头痛了二十年的杂乱页面结构。",
+                                                                          "metaDescription":  "使用 Flyto2 模板大规模抓取 Craigslist 分类广告，跨类别与城市提取标题、价格、地点、图片与卖家联系方式。",
+                                                                          "faqs":  [
+                                                                                       {
+                                                                                           "q":  "数据新鲜度如何？"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "可以获取卖家联系方式吗？"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "能应对反爬虫拦截吗？"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "支持哪些输出格式？"
+                                                                                       }
+                                                                                   ]
+                                                                      },
+                                      "domain-availability-checker":  {
+                                                                          "title":  "域名可用性查询器",
+                                                                          "category":  "域名与 DNS 工具",
+                                                                          "lede":  "在所有重要的 TLD 上一次扫描数千个候选域名，仅显示真正可注册的结果。本模板结合多个权威数据源，避免误判为可用。",
+                                                                          "metaDescription":  "通过 Flyto2 自动化模板，跨数百个 TLD 批量查询域名可用性，整合 WHOIS、RDAP 与 DNS 探测以获取准确结果。",
+                                                                          "faqs":  [
+                                                                                       {
+                                                                                           "q":  "查询结果有多准确？"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "是否支持新 gTLD？"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "可以自动注册域名吗？"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "如何处理 IDN 国际化域名？"
+                                                                                       }
+                                                                                   ]
+                                                                      },
+                                      "github-repo-stats-dashboard":  {
+                                                                          "title":  "GitHub 仓库统计仪表盘",
+                                                                          "category":  "开发工具与分析",
+                                                                          "lede":  "集中管理团队所拥有每个仓库的健康度指标。本模板从 GitHub API 拉取历史与实时数据，并持久化存储、生成可分享或嵌入的仪表盘。",
+                                                                          "metaDescription":  "用 Flyto2 构建实时 GitHub 仓库分析仪表盘，跨仓库追踪 star、fork、流量、issue、PR 速度与贡献者活跃度。",
+                                                                          "faqs":  [
+                                                                                       {
+                                                                                           "q":  "能用于私有仓库吗？"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "如何处理 API 速率限制？"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "可以导出到 BigQuery 吗？"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "支持 GitHub Enterprise 吗？"
+                                                                                       }
+                                                                                   ]
+                                                                      },
+                                      "google-search-results-scraper":  {
+                                                                            "title":  "Google 搜索结果抓取器",
+                                                                            "category":  "SERP 与研究",
+                                                                            "lede":  "提取 Google 搜索结果的完整结构，而不仅仅是前十条蓝色链接。本模板可在单次抓取中获取自然排名、广告、知识面板、精选摘要与相关问题模块。",
+                                                                            "metaDescription":  "大规模抓取 Google SERP，结构化提取自然结果、广告与 SERP 功能，支持地区与设备定位，并可长期追踪关键词排名。",
+                                                                            "faqs":  [
+                                                                                         {
+                                                                                             "q":  "能处理验证码吗？"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "可以指定国家抓取吗？"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "移动端与桌面端有何区别？"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "输出结果长期稳定吗？"
+                                                                                         }
+                                                                                     ]
+                                                                        },
+                                      "linkedin-job-listings-scraper":  {
+                                                                            "title":  "LinkedIn 招聘信息抓取器",
+                                                                            "category":  "招聘与岗位",
+                                                                            "lede":  "把 LinkedIn 招聘搜索变成可查询的数据集。本模板按岗位、公司、地区与资历收集招聘信息，并标准化以供下游招聘与市场情报管道使用。",
+                                                                            "metaDescription":  "通过 Flyto2 自动化模板将 LinkedIn 招聘信息导入结构化数据集，用于招聘分析、市场情报与 ATS 同步。",
+                                                                            "faqs":  [
+                                                                                         {
+                                                                                             "q":  "需要付费会员吗？"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "如何避免被封禁？"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "薪资字段都能取到吗？"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "可以直接推送到 ATS 吗？"
+                                                                                         }
+                                                                                     ]
+                                                                        },
+                                      "news-headlines-aggregator":  {
+                                                                        "title":  "新闻头条聚合器",
+                                                                        "category":  "新闻与内容",
+                                                                        "lede":  "整合主流媒体、垂直博客与 RSS 来源，打造统一的新闻信息流。本模板会标准化、去重、聚类，让同一事件的重复报道归并为单个簇。",
+                                                                        "metaDescription":  "用 Flyto2 新闻抓取自动化模板，将数百家媒体的突发头条聚合为单一、去重后的统一信息流。",
+                                                                        "faqs":  [
+                                                                                     {
+                                                                                         "q":  "信息源没有 RSS 怎么办？"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "聚类是如何工作的？"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "可以按主题过滤吗？"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "头条到达延迟有多大？"
+                                                                                     }
+                                                                                 ]
+                                                                    },
+                                      "page-load-speed-tester":  {
+                                                                     "title":  "网页加载速度测试器",
+                                                                     "category":  "性能与监控",
+                                                                     "lede":  "在用户察觉之前就抓出性能回归。本模板从多个地区与设备测量 Core Web Vitals，当关键指标偏离既定基线时立即告警。",
+                                                                     "metaDescription":  "用 Flyto2 网页性能自动化模板执行合成加载测试，获取真实 Core Web Vitals、waterfall 数据与回归告警。",
+                                                                     "faqs":  [
+                                                                                  {
+                                                                                      "q":  "是真实用户还是合成监测？"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "可以测试登录态页面吗？"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "基线如何计算？"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "能阻止问题部署吗？"
+                                                                                  }
+                                                                              ]
+                                                                 },
+                                      "real-estate-listings-monitor":  {
+                                                                           "title":  "房产信息监控器",
+                                                                           "category":  "房地产",
+                                                                           "lede":  "比所有人更早知道房源上架或降价。本模板以小于一小时的频率监控主要房产门户，一旦命中追踪条件就立即通知你。",
+                                                                           "metaDescription":  "使用 Flyto2 监控模板追踪 Zillow、Redfin、Realtor 与 MLS 上的房产信息，获得新房源与降价的即时告警。",
+                                                                           "faqs":  [
+                                                                                        {
+                                                                                            "q":  "支持哪些门户？"
+                                                                                        },
+                                                                                        {
+                                                                                            "q":  "告警有多即时？"
+                                                                                        },
+                                                                                        {
+                                                                                            "q":  "能追踪非公开房源吗？"
+                                                                                        },
+                                                                                        {
+                                                                                            "q":  "商业地产也支持吗？"
+                                                                                        }
+                                                                                    ]
+                                                                       },
+                                      "restaurant-menu-scraper-2":  {
+                                                                        "title":  "餐厅菜单抓取器",
+                                                                        "category":  "餐饮与酒店",
+                                                                        "lede":  "从主要外卖平台提取每一道菜、配料与价格，整合为干净的数据集。本模板可处理 Uber Eats、DoorDash、Grubhub 与餐厅官网各自不同的数据结构。",
+                                                                        "metaDescription":  "用 Flyto2 菜单抓取自动化模板，从 Uber Eats、DoorDash、Grubhub 与官方网站提取餐厅菜单为结构化数据。",
+                                                                        "faqs":  [
+                                                                                     {
+                                                                                         "q":  "能完整抓取配料选项吗？"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "价格会因地点而异吗？"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "可以抓取官网吗？"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "建议多久抓取一次？"
+                                                                                     }
+                                                                                 ]
+                                                                    },
+                                      "send-telegram-alert":  {
+                                                                  "title":  "发送 Telegram 告警",
+                                                                  "category":  "通知",
+                                                                  "lede":  "把任何自动化事件变成丰富的 Telegram 通知。本模板处理 bot token、频道路由、消息模板与内联键盘，让告警送达时格式完整且可操作。",
+                                                                  "metaDescription":  "从任意 Flyto2 工作流向 Telegram 频道、群组或私聊发送丰富告警，支持模板、内联键盘与送达确认。",
+                                                                  "faqs":  [
+                                                                               {
+                                                                                   "q":  "如何创建 Telegram bot？"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "可以发送到用户私聊吗？"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "内联按钮可交互吗？"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "消息大小上限是多少？"
+                                                                               }
+                                                                           ]
+                                                              },
+                                      "stock-price-dashboard-scraper":  {
+                                                                            "title":  "股票价格仪表盘",
+                                                                            "category":  "金融与市场数据",
+                                                                            "lede":  "把任意观察列表的实时报价、基本面与新闻整合为单一可审计的仪表盘。本模板会扇出查询多个数据供应商并调和为统一视图。",
+                                                                            "metaDescription":  "用 Flyto2 模板构建实时股价仪表盘，跨多个市场数据源聚合报价、基本面、新闻与告警。",
+                                                                            "faqs":  [
+                                                                                         {
+                                                                                             "q":  "报价是实时的吗？"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "支持哪些资产类别？"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "可以用数据做回测吗？"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "盘后报价支持吗？"
+                                                                                         }
+                                                                                     ]
+                                                                        },
+                                      "weather-forecast-to-slack":  {
+                                                                        "title":  "Slack 天气预报",
+                                                                        "category":  "天气与生产力",
+                                                                        "lede":  "每个工作日早晨在 Slack 收到个性化天气简报。本模板可拉取单个或多个地点的预报，渲染为丰富 Slack block，并在出现恶劣天气时升级告警。",
+                                                                        "metaDescription":  "通过 Flyto2 自动化模板把每日天气预报以丰富 block 推送到 Slack 频道或私聊，支持地点定位与恶劣天气告警。",
+                                                                        "faqs":  [
+                                                                                     {
+                                                                                         "q":  "应该选哪个天气服务商？"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "可以发送到私聊吗？"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "恶劣天气告警怎么处理？"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "可以发送到 Slack 以外的渠道吗？"
+                                                                                     }
+                                                                                 ]
+                                                                    },
+                                      "webpage-to-pdf-converter":  {
+                                                                       "title":  "网页转 PDF 转换器",
+                                                                       "category":  "文档生成",
+                                                                       "lede":  "把任意 URL 渲染为可在任何阅读器中干净打开的高保真 PDF。本模板可控制页面大小、边距、页眉页脚、水印与打印文档要求的页码细节。",
+                                                                       "metaDescription":  "在 Flyto2 Cloud 上把任意网页转换为高保真 PDF，内建自定义页面大小、页眉页脚、页码与水印支持。",
+                                                                       "faqs":  [
+                                                                                    {
+                                                                                        "q":  "输出文字可选中吗？"
+                                                                                    },
+                                                                                    {
+                                                                                        "q":  "超链接是否保留？"
+                                                                                    },
+                                                                                    {
+                                                                                        "q":  "可以添加页码吗？"
+                                                                                    },
+                                                                                    {
+                                                                                        "q":  "超长单页文档如何处理？"
+                                                                                    }
+                                                                                ]
+                                                                   },
+                                      "website-screenshot-gallery":  {
+                                                                         "title":  "网站截图画廊",
+                                                                         "category":  "视觉监控",
+                                                                         "lede":  "为任意一组页面建立视觉历史档案。本模板按计划截图、对上一次截图执行像素差异比对，并把全部结果索引为可浏览的画廊。",
+                                                                         "metaDescription":  "用 Flyto2 自动化按计划捕获网站截图至可搜索画廊，支持视觉差异比对、多视口覆盖与资源保留。",
+                                                                         "faqs":  [
+                                                                                      {
+                                                                                          "q":  "截图文件多大？"
+                                                                                      },
+                                                                                      {
+                                                                                          "q":  "能处理登录态页面吗？"
+                                                                                      },
+                                                                                      {
+                                                                                          "q":  "可以与基线截图比对吗？"
+                                                                                      },
+                                                                                      {
+                                                                                          "q":  "动画内容怎么处理？"
+                                                                                      }
+                                                                                  ]
+                                                                     },
+                                      "website-uptime-monitor":  {
+                                                                     "title":  "网站可用性监控",
+                                                                     "category":  "监控与 SRE",
+                                                                     "lede":  "从自有基础设施之外监视服务。本模板从多个地区执行合成检查，智能升级真实事件，并产出客户期望看到的 status page 数据。",
+                                                                     "metaDescription":  "通过 Flyto2 可用性监控自动化模板，从多个地区监测网站可用性、延迟与 SSL 到期，并提供丰富的事件升级机制。",
+                                                                     "faqs":  [
+                                                                                  {
+                                                                                      "q":  "最高可以多频繁探测？"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "TLS 内部细节能监测吗？"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "可以测试登录流程吗？"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "flapping 事件如何处理？"
+                                                                                  }
+                                                                              ]
+                                                                 },
+                                      "youtube-channel-stats-tracker":  {
+                                                                            "title":  "YouTube 频道数据追踪器",
+                                                                            "category":  "社交媒体分析",
+                                                                            "lede":  "建立超越 YouTube 自家报表时间范围的频道与视频表现长期记录。本模板按计划采集公开指标，并呈现整个内容矩阵的趋势。",
+                                                                            "metaDescription":  "用 Flyto2 自动化模板长期追踪 YouTube 频道与视频指标，跨频道采集观看量、订阅数、观看时长与互动率。",
+                                                                            "faqs":  [
+                                                                                         {
+                                                                                             "q":  "计数器有多精确？"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "私有分析数据能取到吗？"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "可以追踪竞品频道吗？"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "配额成本是多少？"
+                                                                                         }
+                                                                                     ]
+                                                                        }
+                                  }
+                  }
 }
