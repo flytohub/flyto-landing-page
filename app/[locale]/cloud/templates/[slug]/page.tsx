@@ -1,11 +1,31 @@
 import type { Metadata } from 'next';
 import { notFound, redirect } from 'next/navigation';
-import { setRequestLocale } from 'next-intl/server';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 import { ArrowUpRight, Check } from 'lucide-react';
 import { templates } from '@/lib/templates';
 import { locales, defaultLocale } from '@/lib/locales';
 import { pageAlternates } from '@/lib/seo';
+
+type TplDetailTranslation = {
+  title?: string;
+  category?: string;
+  lede?: string;
+  metaDescription?: string;
+  faqs?: Array<{ q: string }>;
+};
+
+async function getTplDetail(
+  locale: string,
+  slug: string,
+): Promise<TplDetailTranslation | null> {
+  try {
+    const t = await getTranslations({ locale, namespace: 'templates.details' });
+    return t.raw(slug) as TplDetailTranslation;
+  } catch {
+    return null;
+  }
+}
 
 export function generateStaticParams() {
   return templates.flatMap((tpl) =>
@@ -25,13 +45,17 @@ export async function generateMetadata({
   const canonicalSlug = tpl.canonicalSlug ?? tpl.slug;
   const primary = templates.find((t) => t.slug === canonicalSlug) ?? tpl;
 
+  const detail = await getTplDetail(locale, canonicalSlug);
+  const title = detail?.title ?? primary.title;
+  const description = detail?.metaDescription ?? primary.metaDescription;
+
   return {
-    title: `${primary.title} — Flyto2 Cloud Template`,
-    description: primary.metaDescription,
+    title: `${title} — Flyto2 Cloud Template`,
+    description,
     alternates: pageAlternates(`cloud/templates/${canonicalSlug}`, locale),
     openGraph: {
-      title: `${primary.title} — Flyto2 Cloud Template`,
-      description: primary.metaDescription,
+      title: `${title} — Flyto2 Cloud Template`,
+      description,
       type: 'website',
     },
   };
@@ -53,13 +77,25 @@ export default async function TemplateDetailPage({
 
   setRequestLocale(locale);
 
+  // Pull localized short fields. Falls back to English (from templates.ts)
+  // when the message key isn't present yet for this locale.
+  const detail = await getTplDetail(locale, tpl.slug);
+  const localTitle = detail?.title ?? tpl.title;
+  const localCategory = detail?.category ?? tpl.category;
+  const localLede = detail?.lede ?? tpl.lede;
+  const localMetaDescription = detail?.metaDescription ?? tpl.metaDescription;
+  const localFaqs = tpl.faqs.map((f, i) => ({
+    q: detail?.faqs?.[i]?.q ?? f.q,
+    a: f.a, // long answer remains English; partial-localization pattern
+  }));
+
   const softwareAppJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
-    name: tpl.title,
+    name: localTitle,
     applicationCategory: 'DeveloperApplication',
     operatingSystem: 'Cross-platform (cloud)',
-    description: tpl.metaDescription,
+    description: localMetaDescription,
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
     softwareHelp: 'https://docs.flyto2.com',
   };
@@ -67,7 +103,7 @@ export default async function TemplateDetailPage({
   const faqJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: tpl.faqs.map((f) => ({
+    mainEntity: localFaqs.map((f) => ({
       '@type': 'Question',
       name: f.q,
       acceptedAnswer: { '@type': 'Answer', text: f.a },
@@ -88,7 +124,7 @@ export default async function TemplateDetailPage({
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Cloud', item: `https://flyto2.com${cloudHref}` },
       { '@type': 'ListItem', position: 2, name: 'Templates', item: `https://flyto2.com${hubHref}` },
-      { '@type': 'ListItem', position: 3, name: tpl.title, item: `https://flyto2.com${detailHref}` },
+      { '@type': 'ListItem', position: 3, name: localTitle, item: `https://flyto2.com${detailHref}` },
     ],
   };
 
@@ -122,19 +158,19 @@ export default async function TemplateDetailPage({
           </li>
           <li aria-hidden className="text-bone-400">/</li>
           <li className="text-bone-100" aria-current="page">
-            {tpl.title}
+            {localTitle}
           </li>
         </ol>
       </nav>
 
       <header className="mb-10">
         <span className="font-mono text-[11px] tracking-[0.16em] uppercase text-violet-300">
-          Template · {tpl.category}
+          Template · {localCategory}
         </span>
         <h1 className="h-display mt-4 text-[clamp(36px,6vw,64px)] leading-tight">
-          {tpl.title}
+          {localTitle}
         </h1>
-        <p className="mt-6 max-w-2xl text-[17px] leading-relaxed text-bone-200">{tpl.lede}</p>
+        <p className="mt-6 max-w-2xl text-[17px] leading-relaxed text-bone-200">{localLede}</p>
       </header>
 
       <section className="space-y-5">
@@ -225,7 +261,7 @@ export default async function TemplateDetailPage({
           Frequently asked questions
         </h2>
         <dl className="mt-5 space-y-6">
-          {tpl.faqs.map((f, i) => (
+          {localFaqs.map((f, i) => (
             <div key={i}>
               <dt className="font-display text-[17px] font-semibold text-bone-100">{f.q}</dt>
               <dd className="mt-2 text-[15px] leading-relaxed text-bone-200">{f.a}</dd>

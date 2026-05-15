@@ -1,66 +1,410 @@
 {
-  "nav": {
-    "home": "Strona główna",
-    "cloud": "Cloud",
-    "code": "Warroom",
-    "overview": "Przegląd",
-    "pricing": "Cennik",
-    "download": "Pobierz",
-    "templates": "Szablony",
-    "faq": "FAQ",
-    "roadmap": "Plan rozwoju",
-    "oss": "Open source",
-    "discussions": "Dyskusje",
-    "waitlist": "Lista oczekujących",
-    "docs": "Dokumentacja",
-    "blog": "Blog",
-    "contact": "Kontakt",
-    "signIn": "Zaloguj się",
-    "soon": "Wkrótce",
-    "allProducts": "Wszystkie produkty",
-    "beta": "Beta",
-    "integrations": "Integracje",
-    "recipes": "Przepisy",
-    "useCases": "Zastosowania",
-    "changelog": "Zmiany",
-    "security": "Bezpieczeństwo"
-  },
-  "footer": {
-    "tagline": "Narzędzia automatyzacji offline-first. Twoja praca zostaje na twojej maszynie.",
-    "cloudTagline": "Automatyzacja przeglądarki. Nagraj raz, odtwarzaj zawsze.",
-    "warroomTagline": "Centrum bezpieczeństwa aplikacji. Weryfikacja w pętli zamkniętej.",
-    "products": "Produkty",
-    "community": "Społeczność",
-    "resources": "Zasoby",
-    "openSource": "Open source",
-    "privacy": "Prywatność",
-    "terms": "Warunki",
-    "license": "Licencja",
-    "copyright": "© 2026 FLYTO2"
-  },
-  "home": {
-    "hero": {
-      "eyebrow": "FLYTO2 · AUTOMATYZACJA OFFLINE-FIRST",
-      "title": "Automatyzacja, która",
-      "titleAccent": "zostaje na twojej maszynie.",
-      "lede": "Flyto2 buduje dwa produkty na tym samym silniku offline-first. Jeden automatyzuje twoją pracę w przeglądarce. Drugi audytuje bezpieczeństwo każdej linii kodu, którą wysyłasz.",
-      "reassure": "OPEN SOURCE · BEZ TELEMETRII · TWOJE"
-    },
-    "products": {
-      "cloud": {
-        "cta": "Przejdź do Cloud"
-      },
-      "warroom": {
-        "cta": "Przejdź do Warroom",
-        "statusLabel": "BETA"
-      }
-    }
-  },
-  "code": {
-    "hero": {
-      "ctaBetaBadge": "Beta",
-      "ctaBeta": "Otwórz betę",
-      "status": "BETA"
-    }
-  }
+    "nav":  {
+                "home":  "Strona główna",
+                "cloud":  "Cloud",
+                "code":  "Warroom",
+                "overview":  "Przegląd",
+                "pricing":  "Cennik",
+                "download":  "Pobierz",
+                "templates":  "Szablony",
+                "faq":  "FAQ",
+                "roadmap":  "Plan rozwoju",
+                "oss":  "Open source",
+                "discussions":  "Dyskusje",
+                "waitlist":  "Lista oczekujących",
+                "docs":  "Dokumentacja",
+                "blog":  "Blog",
+                "contact":  "Kontakt",
+                "signIn":  "Zaloguj się",
+                "soon":  "Wkrótce",
+                "allProducts":  "Wszystkie produkty",
+                "beta":  "Beta",
+                "integrations":  "Integracje",
+                "recipes":  "Przepisy",
+                "useCases":  "Zastosowania",
+                "changelog":  "Zmiany",
+                "security":  "Bezpieczeństwo"
+            },
+    "footer":  {
+                   "tagline":  "Narzędzia automatyzacji offline-first. Twoja praca zostaje na twojej maszynie.",
+                   "cloudTagline":  "Automatyzacja przeglądarki. Nagraj raz, odtwarzaj zawsze.",
+                   "warroomTagline":  "Centrum bezpieczeństwa aplikacji. Weryfikacja w pętli zamkniętej.",
+                   "products":  "Produkty",
+                   "community":  "Społeczność",
+                   "resources":  "Zasoby",
+                   "openSource":  "Open source",
+                   "privacy":  "Prywatność",
+                   "terms":  "Warunki",
+                   "license":  "Licencja",
+                   "copyright":  "© 2026 FLYTO2"
+               },
+    "home":  {
+                 "hero":  {
+                              "eyebrow":  "FLYTO2 · AUTOMATYZACJA OFFLINE-FIRST",
+                              "title":  "Automatyzacja, która",
+                              "titleAccent":  "zostaje na twojej maszynie.",
+                              "lede":  "Flyto2 buduje dwa produkty na tym samym silniku offline-first. Jeden automatyzuje twoją pracę w przeglądarce. Drugi audytuje bezpieczeństwo każdej linii kodu, którą wysyłasz.",
+                              "reassure":  "OPEN SOURCE · BEZ TELEMETRII · TWOJE"
+                          },
+                 "products":  {
+                                  "cloud":  {
+                                                "cta":  "Przejdź do Cloud"
+                                            },
+                                  "warroom":  {
+                                                  "cta":  "Przejdź do Warroom",
+                                                  "statusLabel":  "BETA"
+                                              }
+                              }
+             },
+    "code":  {
+                 "hero":  {
+                              "ctaBetaBadge":  "Beta",
+                              "ctaBeta":  "Otwórz betę",
+                              "status":  "BETA"
+                          }
+             },
+    "templates":  {
+                      "details":  {
+                                      "auto-login-template":  {
+                                                                  "title":  "Szablon automatycznego logowania",
+                                                                  "category":  "Uwierzytelnianie i sesje",
+                                                                  "lede":  "Loguj się do dowolnej witryny programowo, nie przepisując selektorów dla każdego przepływu. Szablon Auto-Login obsługuje pola formularza, wyzwania MFA i trwałość sesji, więc dalsze automatyzacje startują już zalogowane.",
+                                                                  "metaDescription":  "Automatyzuj logowanie na stronach w Flyto2 Cloud ze wsparciem 2FA, szyfrowanym magazynem poświadczeń i wielokrotnym używaniem trwałych sesji w przepływach z przeglądarką headless.",
+                                                                  "faqs":  [
+                                                                               {
+                                                                                   "q":  "Czy obsługuje dostawców SSO?"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "Jak chronione są hasła?"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "Czy CAPTCHA rozwiązywane są automatycznie?"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "Co dzieje się po wygaśnięciu sesji?"
+                                                                               }
+                                                                           ]
+                                                              },
+                                      "craigslist-listings-scraper":  {
+                                                                          "title":  "Scraper ogłoszeń Craigslist",
+                                                                          "category":  "Dane z marketplace'ów",
+                                                                          "lede":  "Zbieraj ustrukturyzowane dane z Craigslist w setkach aglomeracji bez pisania ani jednego parsera. Szablon obsługuje paginację, geo-routing i niechlujny markup, który od dwóch dekad łamie scrapery.",
+                                                                          "metaDescription":  "Zbieraj ogłoszenia drobne z Craigslist na dużą skalę dzięki szablonowi Flyto2. Wydobywaj tytuły, ceny, lokalizacje, zdjęcia i kontakty do sprzedawców w kategoriach i miastach.",
+                                                                          "faqs":  [
+                                                                                       {
+                                                                                           "q":  "Jak świeże są dane?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Czy można pozyskać kontakt do sprzedawcy?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Czy radzi sobie z blokadami anty-bot?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Jakie formaty wyjścia są wspierane?"
+                                                                                       }
+                                                                                   ]
+                                                                      },
+                                      "domain-availability-checker":  {
+                                                                          "title":  "Sprawdzarka dostępności domen",
+                                                                          "category":  "Narzędzia domenowe i DNS",
+                                                                          "lede":  "Przeskanuj tysiące kandydujących nazw domen we wszystkich istotnych TLD i wydobądź tylko te, które są naprawdę wolne do rejestracji. Szablon łączy kilka autorytatywnych źródeł, by uniknąć fałszywych trafień.",
+                                                                          "metaDescription":  "Sprawdzaj masowo dostępność domen w setkach TLD dzięki szablonowi automatyzacji Flyto2. Łączy WHOIS, RDAP i sondy DNS w celu uzyskania dokładnych wyników.",
+                                                                          "faqs":  [
+                                                                                       {
+                                                                                           "q":  "Jak dokładne są wyniki?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Czy wspiera nowe gTLD?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Czy może rejestrować nazwy automatycznie?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Co z domenami IDN?"
+                                                                                       }
+                                                                                   ]
+                                                                      },
+                                      "github-repo-stats-dashboard":  {
+                                                                          "title":  "Dashboard statystyk repozytoriów GitHub",
+                                                                          "category":  "DevTools i analityka",
+                                                                          "lede":  "Centralizuj metryki kondycji każdego repozytorium prowadzonego przez Twój zespół. Szablon pobiera dane historyczne i bieżące z API GitHub, zapisuje je i renderuje dashboard, który można udostępniać lub osadzać.",
+                                                                          "metaDescription":  "Buduj dashboard analityki repozytoriów GitHub w czasie rzeczywistym z Flyto2. Śledź gwiazdki, forki, ruch, issues, prędkość PR i aktywność kontrybutorów w wielu repo.",
+                                                                          "faqs":  [
+                                                                                       {
+                                                                                           "q":  "Czy działa dla repozytoriów prywatnych?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Jak obsługiwane są limity API?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Czy można eksportować do BigQuery?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "A co z GitHub Enterprise?"
+                                                                                       }
+                                                                                   ]
+                                                                      },
+                                      "google-search-results-scraper":  {
+                                                                            "title":  "Scraper wyników wyszukiwania Google",
+                                                                            "category":  "SERP i research",
+                                                                            "lede":  "Wydobywaj pełną strukturę wyników Google, nie tylko dziesięć pierwszych niebieskich linków. Szablon w jednym przebiegu chwyta pozycje organiczne, reklamy, panele wiedzy, fragmenty wyróżnione i bloki People Also Ask.",
+                                                                            "metaDescription":  "Zbieraj SERP-y Google na dużą skalę z ustrukturyzowaną ekstrakcją wyników organicznych, reklam i funkcji SERP. Targetowanie geograficzne i urządzeń oraz śledzenie pozycji w czasie.",
+                                                                            "faqs":  [
+                                                                                         {
+                                                                                             "q":  "Czy obsługuje CAPTCHA?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Czy można scrapować z konkretnych krajów?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Co z mobile vs desktop?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Czy wynik jest stabilny w czasie?"
+                                                                                         }
+                                                                                     ]
+                                                                        },
+                                      "linkedin-job-listings-scraper":  {
+                                                                            "title":  "Scraper ofert pracy LinkedIn",
+                                                                            "category":  "Rekrutacja i praca",
+                                                                            "lede":  "Zamień wyszukiwarkę ofert LinkedIn w zestaw danych, który da się odpytywać. Szablon zbiera ogłoszenia po roli, firmie, lokalizacji i poziomie seniority oraz normalizuje je dla dalszych potoków rekrutacyjnych i market-intel.",
+                                                                            "metaDescription":  "Wciągnij oferty pracy z LinkedIn do ustrukturyzowanego zestawu danych do analityki rekrutacji, market intelligence i synchronizacji z ATS dzięki szablonowi automatyzacji Flyto2.",
+                                                                            "faqs":  [
+                                                                                         {
+                                                                                             "q":  "Czy potrzebuję konta premium?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Jak unika się banów?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Czy wynagrodzenie zawsze jest zbierane?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Czy mogę wysyłać bezpośrednio do ATS?"
+                                                                                         }
+                                                                                     ]
+                                                                        },
+                                      "news-headlines-aggregator":  {
+                                                                        "title":  "Agregator nagłówków newsowych",
+                                                                        "category":  "Wiadomości i treści",
+                                                                        "lede":  "Zbuduj jednolity strumień wiadomości z dowolnej kombinacji mediów głównego nurtu, niszowych blogów i kanałów RSS. Szablon normalizuje, deduplikuje i klastruje teksty, więc duplikaty tego samego wydarzenia zlewają się w jeden.",
+                                                                        "metaDescription":  "Agreguj nagłówki na żywo z setek mediów do jednego ujednoliconego, odduplikowanego strumienia dzięki szablonowi automatyzacji scrapowania newsów Flyto2.",
+                                                                        "faqs":  [
+                                                                                     {
+                                                                                         "q":  "A jeśli źródło nie ma RSS?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Jak działa klastrowanie?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Czy mogę filtrować po temacie?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Jak szybko dostarczane są nagłówki?"
+                                                                                     }
+                                                                                 ]
+                                                                    },
+                                      "page-load-speed-tester":  {
+                                                                     "title":  "Tester szybkości ładowania stron",
+                                                                     "category":  "Wydajność i monitoring",
+                                                                     "lede":  "Łap regresje wydajności, zanim zrobią to użytkownicy. Szablon mierzy Core Web Vitals z wielu lokalizacji i urządzeń i alarmuje, gdy kluczowe metryki odchodzą od zdefiniowanej linii bazowej.",
+                                                                     "metaDescription":  "Uruchamiaj syntetyczne testy ładowania z prawdziwymi Core Web Vitals, danymi waterfall i alertami regresji dzięki szablonowi automatyzacji wydajności webowej Flyto2.",
+                                                                     "faqs":  [
+                                                                                  {
+                                                                                      "q":  "Prawdziwi użytkownicy czy syntetyczni?"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "Czy testuje strony zalogowane?"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "Jak liczona jest linia bazowa?"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "Czy może blokować złe wdrożenia?"
+                                                                                  }
+                                                                              ]
+                                                                 },
+                                      "real-estate-listings-monitor":  {
+                                                                           "title":  "Monitor ogłoszeń nieruchomości",
+                                                                           "category":  "Nieruchomości",
+                                                                           "lede":  "Dowiedz się jako pierwszy, gdy nieruchomość trafia na rynek lub spada cena. Szablon obserwuje główne portale nieruchomości częściej niż raz na godzinę i alarmuje, gdy spełnia się śledzony warunek.",
+                                                                           "metaDescription":  "Śledź ogłoszenia nieruchomości w Zillow, Redfin, Realtor i portalach MLS dzięki szablonowi monitorującemu Flyto2. Otrzymuj alerty o nowej ofercie i zmianach cen.",
+                                                                           "faqs":  [
+                                                                                        {
+                                                                                            "q":  "Które portale są wspierane?"
+                                                                                        },
+                                                                                        {
+                                                                                            "q":  "Jak szybkie są alerty?"
+                                                                                        },
+                                                                                        {
+                                                                                            "q":  "Czy można śledzić oferty off-market?"
+                                                                                        },
+                                                                                        {
+                                                                                            "q":  "A co z nieruchomościami komercyjnymi?"
+                                                                                        }
+                                                                                    ]
+                                                                       },
+                                      "restaurant-menu-scraper-2":  {
+                                                                        "title":  "Scraper menu restauracji",
+                                                                        "category":  "Gastronomia i hospitality",
+                                                                        "lede":  "Wyciągnij każde danie, dodatek i cenę z głównych platform dostawowych do czystego zestawu danych. Szablon obsługuje rozbieżne schematy Uber Eats, DoorDash, Grubhub oraz stron własnych restauracji.",
+                                                                        "metaDescription":  "Wydobywaj menu restauracji z Uber Eats, DoorDash, Grubhub i stron własnych do ustrukturyzowanych danych dzięki szablonowi automatyzacji scrapowania menu Flyto2.",
+                                                                        "faqs":  [
+                                                                                     {
+                                                                                         "q":  "Czy dodatki są w pełni przechwytywane?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Czy ceny są zależne od lokalizacji?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Czy mogę scrapować strony własne?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Jak często powinienem scrapować?"
+                                                                                     }
+                                                                                 ]
+                                                                    },
+                                      "send-telegram-alert":  {
+                                                                  "title":  "Wyślij alert na Telegram",
+                                                                  "category":  "Powiadomienia",
+                                                                  "lede":  "Zamień dowolne zdarzenie automatyzacji w bogate powiadomienie Telegram. Szablon obsługuje tokeny bota, routing kanałów, szablonowanie wiadomości i klawiatury inline, by alerty trafiały sformatowane i gotowe do działania.",
+                                                                  "metaDescription":  "Wysyłaj bogate alerty Telegram na kanały, grupy i czaty bezpośrednie z dowolnego przepływu Flyto2 z szablonowaniem, klawiaturami inline i potwierdzeniem dostarczenia.",
+                                                                  "faqs":  [
+                                                                               {
+                                                                                   "q":  "Jak stworzyć bota?"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "Czy może wysyłać do DM użytkowników?"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "Czy przyciski inline są interaktywne?"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "Jaki jest limit rozmiaru wiadomości?"
+                                                                               }
+                                                                           ]
+                                                              },
+                                      "stock-price-dashboard-scraper":  {
+                                                                            "title":  "Dashboard cen akcji",
+                                                                            "category":  "Finanse i dane rynkowe",
+                                                                            "lede":  "Skonsoliduj notowania na żywo, fundamenty i wiadomości dla dowolnej watchlisty w jeden audytowalny dashboard. Szablon rozdziela zapytania na wielu dostawców danych i uzgadnia je do spójnego widoku.",
+                                                                            "metaDescription":  "Buduj dashboard cen akcji w czasie rzeczywistym dzięki szablonowi Flyto2. Agreguj notowania, fundamenty, wiadomości i alerty z wielu źródeł danych rynkowych.",
+                                                                            "faqs":  [
+                                                                                         {
+                                                                                             "q":  "Czy notowania są w czasie rzeczywistym?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Jakie klasy aktywów są wspierane?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Czy mogę robić backtest na danych?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "A notowania po sesji?"
+                                                                                         }
+                                                                                     ]
+                                                                        },
+                                      "weather-forecast-to-slack":  {
+                                                                        "title":  "Prognoza pogody do Slacka",
+                                                                        "category":  "Pogoda i produktywność",
+                                                                        "lede":  "Zaczynaj każdy dzień pracy od spersonalizowanego briefu pogodowego na Slacku. Szablon pobiera prognozy dla jednej lub wielu lokalizacji, renderuje bogate bloki Slack i eskaluje alerty przy gwałtownej pogodzie.",
+                                                                        "metaDescription":  "Wysyłaj codzienne prognozy pogody na kanały Slack lub DM-y z bogatymi blokami, targetowaniem lokalizacji i alertami pogody ekstremalnej dzięki szablonowi automatyzacji Flyto2.",
+                                                                        "faqs":  [
+                                                                                     {
+                                                                                         "q":  "Którego dostawcę pogody wybrać?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Czy może pisać na DM?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Jak obsługiwane są alerty ekstremalne?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "A dostarczanie poza Slackiem?"
+                                                                                     }
+                                                                                 ]
+                                                                    },
+                                      "webpage-to-pdf-converter":  {
+                                                                       "title":  "Konwerter strony web do PDF",
+                                                                       "category":  "Generowanie dokumentów",
+                                                                       "lede":  "Zamień dowolny URL w pikseloodporny PDF, który otwiera się czysto w każdym czytniku. Szablon kontroluje rozmiar strony, marginesy, nagłówki, stopki, znaki wodne i szczegóły numeracji, których wymagają dokumenty drukowane.",
+                                                                       "metaDescription":  "Konwertuj dowolną stronę web do wiernego PDF w Flyto2 Cloud z wbudowaną obsługą niestandardowego rozmiaru strony, nagłówków, stopek, numeracji i znaków wodnych.",
+                                                                       "faqs":  [
+                                                                                    {
+                                                                                        "q":  "Czy tekst wyjściowy jest zaznaczalny?"
+                                                                                    },
+                                                                                    {
+                                                                                        "q":  "Czy hiperłącza są zachowane?"
+                                                                                    },
+                                                                                    {
+                                                                                        "q":  "Czy mogę dodać numery stron?"
+                                                                                    },
+                                                                                    {
+                                                                                        "q":  "Co z długimi dokumentami jednostronicowymi?"
+                                                                                    }
+                                                                                ]
+                                                                   },
+                                      "website-screenshot-gallery":  {
+                                                                         "title":  "Galeria zrzutów ekranu witryn",
+                                                                         "category":  "Monitoring wizualny",
+                                                                         "lede":  "Zbuduj wizualną historię dowolnego zestawu stron. Szablon robi zrzuty według harmonogramu, wykonuje diffy pikselowe wobec poprzedniego ujęcia i indeksuje wszystko w przeglądalnej galerii.",
+                                                                         "metaDescription":  "Przechwytuj zaplanowane zrzuty ekranu witryn do przeszukiwalnej galerii z diffowaniem wizualnym, pokryciem wielu viewportów i przechowywaniem zasobów dzięki automatyzacji Flyto2.",
+                                                                         "faqs":  [
+                                                                                      {
+                                                                                          "q":  "Jak duże są przechwycenia?"
+                                                                                      },
+                                                                                      {
+                                                                                          "q":  "Czy obsługuje strony zalogowane?"
+                                                                                      },
+                                                                                      {
+                                                                                          "q":  "Czy mogę porównać z linią bazową?"
+                                                                                      },
+                                                                                      {
+                                                                                          "q":  "A co z treściami animowanymi?"
+                                                                                      }
+                                                                                  ]
+                                                                     },
+                                      "website-uptime-monitor":  {
+                                                                     "title":  "Monitor dostępności witryn",
+                                                                     "category":  "Monitoring i SRE",
+                                                                     "lede":  "Obserwuj swoje usługi spoza własnej infrastruktury. Szablon uruchamia syntetyczne kontrole z wielu regionów, mądrze eskaluje prawdziwe incydenty i produkuje dane status page, których oczekują Twoi klienci.",
+                                                                     "metaDescription":  "Monitoruj dostępność witryn, opóźnienia i wygaśnięcia SSL z wielu regionów z bogatą eskalacją incydentów dzięki szablonowi automatyzacji monitorowania uptime Flyto2.",
+                                                                     "faqs":  [
+                                                                                  {
+                                                                                      "q":  "Jak często mogę sondować?"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "Co z wewnętrznymi szczegółami TLS?"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "Czy może testować przepływy logowania?"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "Jak obsługiwany jest flapping?"
+                                                                                  }
+                                                                              ]
+                                                                 },
+                                      "youtube-channel-stats-tracker":  {
+                                                                            "title":  "Tracker statystyk kanałów YouTube",
+                                                                            "category":  "Analityka social media",
+                                                                            "lede":  "Zbuduj długookresową ewidencję wydajności kanałów i wideo, która wykracza poza okno raportowania samego YouTube. Szablon zbiera publiczne metryki według harmonogramu i ujawnia trendy w całym portfolio.",
+                                                                            "metaDescription":  "Śledź w czasie metryki kanałów i filmów YouTube dzięki szablonowi automatyzacji Flyto2. Przechwytuj wyświetlenia, subskrybentów, czas oglądania i zaangażowanie w wielu kanałach.",
+                                                                            "faqs":  [
+                                                                                         {
+                                                                                             "q":  "Jak precyzyjne są liczniki?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "A analityka prywatna?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Czy mogę śledzić kanały konkurencji?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Jaki jest koszt limitu kwoty?"
+                                                                                         }
+                                                                                     ]
+                                                                        }
+                                  }
+                  }
 }

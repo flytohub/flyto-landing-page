@@ -1,66 +1,410 @@
 {
-  "nav": {
-    "home": "Trang chủ",
-    "cloud": "Cloud",
-    "code": "Warroom",
-    "overview": "Tổng quan",
-    "pricing": "Giá cả",
-    "download": "Tải về",
-    "templates": "Mẫu",
-    "faq": "Câu hỏi thường gặp",
-    "roadmap": "Lộ trình",
-    "oss": "Mã nguồn mở",
-    "discussions": "Thảo luận",
-    "waitlist": "Danh sách chờ",
-    "docs": "Tài liệu",
-    "blog": "Blog",
-    "contact": "Liên hệ",
-    "signIn": "Đăng nhập",
-    "soon": "Sắp ra mắt",
-    "allProducts": "Tất cả sản phẩm",
-    "beta": "Beta",
-    "integrations": "Tích hợp",
-    "recipes": "Công thức",
-    "useCases": "Trường hợp",
-    "changelog": "Cập nhật",
-    "security": "Bảo mật"
-  },
-  "footer": {
-    "tagline": "Công cụ tự động hoá ưu tiên offline. Công việc của bạn ở lại trên máy của bạn.",
-    "cloudTagline": "Tự động hoá trình duyệt. Ghi một lần, phát lại mãi mãi.",
-    "warroomTagline": "Phòng tác chiến an ninh ứng dụng. Xác minh vòng kín.",
-    "products": "Sản phẩm",
-    "community": "Cộng đồng",
-    "resources": "Tài nguyên",
-    "openSource": "Mã nguồn mở",
-    "privacy": "Quyền riêng tư",
-    "terms": "Điều khoản",
-    "license": "Giấy phép",
-    "copyright": "© 2026 FLYTO2"
-  },
-  "home": {
-    "hero": {
-      "eyebrow": "FLYTO2 · TỰ ĐỘNG HOÁ ƯU TIÊN OFFLINE",
-      "title": "Tự động hoá",
-      "titleAccent": "ở lại trên máy của bạn.",
-      "lede": "Flyto2 xây dựng hai sản phẩm trên cùng một động cơ ưu tiên offline. Một tự động hoá công việc lặp đi lặp lại trong trình duyệt. Một kiểm toán bảo mật của từng dòng mã bạn xuất xưởng.",
-      "reassure": "MÃ NGUỒN MỞ · KHÔNG TELEMETRY · CỦA BẠN"
-    },
-    "products": {
-      "cloud": {
-        "cta": "Vào Cloud"
-      },
-      "warroom": {
-        "cta": "Vào Warroom",
-        "statusLabel": "BETA"
-      }
-    }
-  },
-  "code": {
-    "hero": {
-      "ctaBetaBadge": "Beta",
-      "ctaBeta": "Mở bản beta",
-      "status": "BETA"
-    }
-  }
+    "nav":  {
+                "home":  "Trang chủ",
+                "cloud":  "Cloud",
+                "code":  "Warroom",
+                "overview":  "Tổng quan",
+                "pricing":  "Giá cả",
+                "download":  "Tải về",
+                "templates":  "Mẫu",
+                "faq":  "Câu hỏi thường gặp",
+                "roadmap":  "Lộ trình",
+                "oss":  "Mã nguồn mở",
+                "discussions":  "Thảo luận",
+                "waitlist":  "Danh sách chờ",
+                "docs":  "Tài liệu",
+                "blog":  "Blog",
+                "contact":  "Liên hệ",
+                "signIn":  "Đăng nhập",
+                "soon":  "Sắp ra mắt",
+                "allProducts":  "Tất cả sản phẩm",
+                "beta":  "Beta",
+                "integrations":  "Tích hợp",
+                "recipes":  "Công thức",
+                "useCases":  "Trường hợp",
+                "changelog":  "Cập nhật",
+                "security":  "Bảo mật"
+            },
+    "footer":  {
+                   "tagline":  "Công cụ tự động hoá ưu tiên offline. Công việc của bạn ở lại trên máy của bạn.",
+                   "cloudTagline":  "Tự động hoá trình duyệt. Ghi một lần, phát lại mãi mãi.",
+                   "warroomTagline":  "Phòng tác chiến an ninh ứng dụng. Xác minh vòng kín.",
+                   "products":  "Sản phẩm",
+                   "community":  "Cộng đồng",
+                   "resources":  "Tài nguyên",
+                   "openSource":  "Mã nguồn mở",
+                   "privacy":  "Quyền riêng tư",
+                   "terms":  "Điều khoản",
+                   "license":  "Giấy phép",
+                   "copyright":  "© 2026 FLYTO2"
+               },
+    "home":  {
+                 "hero":  {
+                              "eyebrow":  "FLYTO2 · TỰ ĐỘNG HOÁ ƯU TIÊN OFFLINE",
+                              "title":  "Tự động hoá",
+                              "titleAccent":  "ở lại trên máy của bạn.",
+                              "lede":  "Flyto2 xây dựng hai sản phẩm trên cùng một động cơ ưu tiên offline. Một tự động hoá công việc lặp đi lặp lại trong trình duyệt. Một kiểm toán bảo mật của từng dòng mã bạn xuất xưởng.",
+                              "reassure":  "MÃ NGUỒN MỞ · KHÔNG TELEMETRY · CỦA BẠN"
+                          },
+                 "products":  {
+                                  "cloud":  {
+                                                "cta":  "Vào Cloud"
+                                            },
+                                  "warroom":  {
+                                                  "cta":  "Vào Warroom",
+                                                  "statusLabel":  "BETA"
+                                              }
+                              }
+             },
+    "code":  {
+                 "hero":  {
+                              "ctaBetaBadge":  "Beta",
+                              "ctaBeta":  "Mở bản beta",
+                              "status":  "BETA"
+                          }
+             },
+    "templates":  {
+                      "details":  {
+                                      "auto-login-template":  {
+                                                                  "title":  "Mẫu đăng nhập tự động",
+                                                                  "category":  "Xác thực và phiên",
+                                                                  "lede":  "Đăng nhập vào bất kỳ trang nào theo cách lập trình mà không cần viết lại selector cho từng luồng. Mẫu Auto-Login xử lý các trường biểu mẫu, thử thách MFA và duy trì phiên, để các tự động hóa sau đó khởi động ở trạng thái đã xác thực.",
+                                                                  "metaDescription":  "Tự động hóa đăng nhập website trên Flyto2 Cloud với hỗ trợ 2FA, lưu trữ thông tin đăng nhập mã hóa và tái sử dụng phiên bền cho luồng làm việc trình duyệt headless.",
+                                                                  "faqs":  [
+                                                                               {
+                                                                                   "q":  "Có hỗ trợ nhà cung cấp SSO không?"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "Mật khẩu được bảo vệ ra sao?"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "Có thể tự giải CAPTCHA không?"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "Khi phiên hết hạn thì sao?"
+                                                                               }
+                                                                           ]
+                                                              },
+                                      "craigslist-listings-scraper":  {
+                                                                          "title":  "Scraper tin đăng Craigslist",
+                                                                          "category":  "Dữ liệu chợ trực tuyến",
+                                                                          "lede":  "Thu thập dữ liệu Craigslist có cấu trúc trên hàng trăm vùng đô thị mà không cần viết một bộ phân tích nào. Mẫu này xử lý phân trang, định tuyến theo địa lý và mã đánh dấu lộn xộn từng làm khốn đốn các scraper suốt hai thập kỷ.",
+                                                                          "metaDescription":  "Scrape tin rao vặt Craigslist quy mô lớn với mẫu Flyto2. Trích xuất tiêu đề, giá, vị trí, hình ảnh và liên hệ người bán trên các danh mục và thành phố.",
+                                                                          "faqs":  [
+                                                                                       {
+                                                                                           "q":  "Dữ liệu mới đến mức nào?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Có lấy được liên hệ người bán không?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Có xử lý chặn anti-bot không?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Hỗ trợ định dạng đầu ra nào?"
+                                                                                       }
+                                                                                   ]
+                                                                      },
+                                      "domain-availability-checker":  {
+                                                                          "title":  "Trình kiểm tra tình trạng tên miền",
+                                                                          "category":  "Công cụ tên miền và DNS",
+                                                                          "lede":  "Quét hàng nghìn tên miền ứng viên trên mọi TLD quan trọng và chỉ làm nổi bật những tên thực sự còn trống để đăng ký. Mẫu này kết hợp nhiều nguồn có thẩm quyền để tránh báo trống nhầm.",
+                                                                          "metaDescription":  "Kiểm tra hàng loạt tình trạng tên miền trên hàng trăm TLD với mẫu tự động hóa Flyto2. Kết hợp WHOIS, RDAP và truy vấn DNS để có kết quả chính xác.",
+                                                                          "faqs":  [
+                                                                                       {
+                                                                                           "q":  "Kết quả chính xác đến đâu?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Có hỗ trợ các gTLD mới không?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Có tự đăng ký tên miền được không?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Tên miền IDN thì sao?"
+                                                                                       }
+                                                                                   ]
+                                                                      },
+                                      "github-repo-stats-dashboard":  {
+                                                                          "title":  "Dashboard thống kê repo GitHub",
+                                                                          "category":  "DevTools và phân tích",
+                                                                          "lede":  "Tập trung các chỉ số sức khỏe cho mọi repository mà nhóm bạn sở hữu. Mẫu kéo dữ liệu lịch sử và trực tiếp từ GitHub API, lưu trữ liên tục và hiển thị thành dashboard có thể chia sẻ hoặc nhúng.",
+                                                                          "metaDescription":  "Xây dựng dashboard phân tích repository GitHub trực tiếp với Flyto2. Theo dõi sao, fork, lưu lượng, issue, tốc độ PR và hoạt động đóng góp xuyên suốt nhiều repo.",
+                                                                          "faqs":  [
+                                                                                       {
+                                                                                           "q":  "Có dùng cho repo riêng tư không?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Giới hạn rate xử lý ra sao?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "Có thể xuất sang BigQuery không?"
+                                                                                       },
+                                                                                       {
+                                                                                           "q":  "GitHub Enterprise thì sao?"
+                                                                                       }
+                                                                                   ]
+                                                                      },
+                                      "google-search-results-scraper":  {
+                                                                            "title":  "Scraper kết quả tìm kiếm Google",
+                                                                            "category":  "SERP và nghiên cứu",
+                                                                            "lede":  "Trích xuất toàn bộ cấu trúc kết quả tìm kiếm Google, không chỉ mười liên kết xanh đầu. Mẫu nắm bắt vị trí organic, quảng cáo, knowledge panel, đoạn nổi bật và khối People Also Ask trong một lần thu thập.",
+                                                                            "metaDescription":  "Scrape SERP Google quy mô lớn với trích xuất có cấu trúc cho organic, quảng cáo và tính năng SERP. Nhắm mục tiêu theo quốc gia, thiết bị và theo dõi xếp hạng từ khóa theo thời gian.",
+                                                                            "faqs":  [
+                                                                                         {
+                                                                                             "q":  "Có xử lý CAPTCHA không?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Có scrape theo quốc gia cụ thể không?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Mobile và desktop khác nhau ra sao?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Đầu ra có ổn định theo thời gian không?"
+                                                                                         }
+                                                                                     ]
+                                                                        },
+                                      "linkedin-job-listings-scraper":  {
+                                                                            "title":  "Scraper tin tuyển dụng LinkedIn",
+                                                                            "category":  "Tuyển dụng và việc làm",
+                                                                            "lede":  "Biến tìm kiếm việc làm trên LinkedIn thành một bộ dữ liệu truy vấn được. Mẫu thu thập tin theo vai trò, công ty, khu vực và cấp bậc, rồi chuẩn hóa cho pipeline tuyển dụng và phân tích thị trường ở phía sau.",
+                                                                            "metaDescription":  "Đưa tin tuyển dụng LinkedIn vào bộ dữ liệu có cấu trúc phục vụ phân tích tuyển dụng, market intelligence và đồng bộ ATS, với mẫu tự động hóa Flyto2.",
+                                                                            "faqs":  [
+                                                                                         {
+                                                                                             "q":  "Có cần tài khoản premium không?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Tránh bị chặn ra sao?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Lương có luôn được lấy không?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Có đẩy thẳng vào ATS được không?"
+                                                                                         }
+                                                                                     ]
+                                                                        },
+                                      "news-headlines-aggregator":  {
+                                                                        "title":  "Tổng hợp tiêu đề tin tức",
+                                                                        "category":  "Tin tức và nội dung",
+                                                                        "lede":  "Dựng dòng tin tức hợp nhất từ bất kỳ tổ hợp nào của báo lớn, blog ngách và RSS. Mẫu chuẩn hóa, khử trùng lặp và phân cụm để các bài trùng về cùng một sự kiện gom lại thành một.",
+                                                                        "metaDescription":  "Tổng hợp tiêu đề nóng từ hàng trăm trang tin vào một dòng hợp nhất và đã khử trùng lặp với mẫu tự động hóa scrape tin tức của Flyto2.",
+                                                                        "faqs":  [
+                                                                                     {
+                                                                                         "q":  "Nếu nguồn không có RSS thì sao?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Phân cụm hoạt động thế nào?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Có lọc theo chủ đề không?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Tiêu đề đến nhanh đến đâu?"
+                                                                                     }
+                                                                                 ]
+                                                                    },
+                                      "page-load-speed-tester":  {
+                                                                     "title":  "Công cụ kiểm thử tốc độ tải trang",
+                                                                     "category":  "Hiệu năng và giám sát",
+                                                                     "lede":  "Phát hiện hồi quy hiệu năng trước cả khi người dùng nhận ra. Mẫu đo Core Web Vitals từ nhiều khu vực và thiết bị, rồi cảnh báo khi các chỉ số chính lệch khỏi baseline bạn đặt.",
+                                                                     "metaDescription":  "Chạy kiểm thử tải tổng hợp với Core Web Vitals thật, dữ liệu waterfall và cảnh báo hồi quy bằng mẫu tự động hóa hiệu năng web Flyto2.",
+                                                                     "faqs":  [
+                                                                                  {
+                                                                                      "q":  "Người dùng thật hay tổng hợp?"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "Có kiểm thử trang đã đăng nhập không?"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "Baseline được tính thế nào?"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "Có chặn được bản deploy lỗi không?"
+                                                                                  }
+                                                                              ]
+                                                                 },
+                                      "real-estate-listings-monitor":  {
+                                                                           "title":  "Giám sát tin đăng bất động sản",
+                                                                           "category":  "Bất động sản",
+                                                                           "lede":  "Là người đầu tiên biết khi một bất động sản lên sàn hoặc giảm giá. Mẫu giám sát các cổng bất động sản lớn với chu kỳ dưới một giờ và cảnh báo ngay khi tiêu chí theo dõi được thỏa mãn.",
+                                                                           "metaDescription":  "Theo dõi tin đăng bất động sản trên Zillow, Redfin, Realtor và các cổng MLS với mẫu giám sát Flyto2. Nhận cảnh báo cho nguồn cung mới và thay đổi giá.",
+                                                                           "faqs":  [
+                                                                                        {
+                                                                                            "q":  "Hỗ trợ những cổng nào?"
+                                                                                        },
+                                                                                        {
+                                                                                            "q":  "Cảnh báo nhanh đến mức nào?"
+                                                                                        },
+                                                                                        {
+                                                                                            "q":  "Có theo dõi bất động sản off-market không?"
+                                                                                        },
+                                                                                        {
+                                                                                            "q":  "Bất động sản thương mại thì sao?"
+                                                                                        }
+                                                                                    ]
+                                                                       },
+                                      "restaurant-menu-scraper-2":  {
+                                                                        "title":  "Scraper thực đơn nhà hàng",
+                                                                        "category":  "Ẩm thực và lưu trú",
+                                                                        "lede":  "Kéo từng món, tùy chọn và giá từ các nền tảng giao đồ ăn lớn vào một bộ dữ liệu sạch. Mẫu xử lý các schema khác nhau của Uber Eats, DoorDash, Grubhub và trang nhà hàng trực tiếp.",
+                                                                        "metaDescription":  "Trích xuất thực đơn nhà hàng từ Uber Eats, DoorDash, Grubhub và website trực tiếp thành dữ liệu có cấu trúc với mẫu tự động hóa scrape thực đơn của Flyto2.",
+                                                                        "faqs":  [
+                                                                                     {
+                                                                                         "q":  "Có lấy đủ tùy chọn không?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Giá có thay đổi theo địa điểm?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Có scrape được website chính chủ?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Nên scrape với tần suất nào?"
+                                                                                     }
+                                                                                 ]
+                                                                    },
+                                      "send-telegram-alert":  {
+                                                                  "title":  "Gửi cảnh báo Telegram",
+                                                                  "category":  "Thông báo",
+                                                                  "lede":  "Biến mọi sự kiện tự động hóa thành thông báo Telegram phong phú. Mẫu xử lý bot token, định tuyến kênh, template tin nhắn và bàn phím inline để cảnh báo đến nơi đã được định dạng và có thể hành động.",
+                                                                  "metaDescription":  "Gửi cảnh báo Telegram phong phú đến kênh, nhóm hoặc chat trực tiếp từ bất kỳ workflow Flyto2 nào, có template, bàn phím inline và xác nhận giao.",
+                                                                  "faqs":  [
+                                                                               {
+                                                                                   "q":  "Tạo bot thế nào?"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "Có gửi vào DM người dùng không?"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "Nút inline có tương tác không?"
+                                                                               },
+                                                                               {
+                                                                                   "q":  "Giới hạn kích thước tin nhắn là gì?"
+                                                                               }
+                                                                           ]
+                                                              },
+                                      "stock-price-dashboard-scraper":  {
+                                                                            "title":  "Dashboard giá cổ phiếu",
+                                                                            "category":  "Tài chính và dữ liệu thị trường",
+                                                                            "lede":  "Hợp nhất bảng giá trực tiếp, cơ bản và tin tức của mọi watchlist vào một dashboard có thể kiểm toán. Mẫu phân nhánh sang nhiều nhà cung cấp dữ liệu và hợp nhất kết quả vào một góc nhìn thống nhất.",
+                                                                            "metaDescription":  "Xây dashboard giá cổ phiếu thời gian thực với mẫu Flyto2. Tổng hợp bảng giá, dữ liệu cơ bản, tin tức và cảnh báo từ nhiều nguồn dữ liệu thị trường.",
+                                                                            "faqs":  [
+                                                                                         {
+                                                                                             "q":  "Bảng giá có thời gian thực không?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Hỗ trợ những loại tài sản nào?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Có backtest trên dữ liệu được không?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Giá ngoài giờ giao dịch thì sao?"
+                                                                                         }
+                                                                                     ]
+                                                                        },
+                                      "weather-forecast-to-slack":  {
+                                                                        "title":  "Dự báo thời tiết lên Slack",
+                                                                        "category":  "Thời tiết và năng suất",
+                                                                        "lede":  "Bắt đầu mỗi ngày làm việc bằng bản tin thời tiết cá nhân hóa trên Slack. Mẫu lấy dự báo cho một hoặc nhiều địa điểm, render thành các block Slack phong phú và leo thang khi thời tiết khắc nghiệt đe dọa.",
+                                                                        "metaDescription":  "Gửi dự báo thời tiết hàng ngày tới kênh hoặc DM Slack với block phong phú, nhắm vị trí và cảnh báo thời tiết khắc nghiệt qua mẫu tự động hóa Flyto2.",
+                                                                        "faqs":  [
+                                                                                     {
+                                                                                         "q":  "Nên chọn nhà cung cấp nào?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Có đăng được vào DM không?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Cảnh báo khắc nghiệt xử lý thế nào?"
+                                                                                     },
+                                                                                     {
+                                                                                         "q":  "Giao ngoài Slack thì sao?"
+                                                                                     }
+                                                                                 ]
+                                                                    },
+                                      "webpage-to-pdf-converter":  {
+                                                                       "title":  "Trình chuyển trang web sang PDF",
+                                                                       "category":  "Tạo tài liệu",
+                                                                       "lede":  "Render mọi URL thành PDF trung thực từng pixel, mở sạch sẽ trong mọi trình xem. Mẫu kiểm soát kích thước trang, lề, đầu trang, chân trang, hình mờ và chi tiết số trang mà tài liệu in ấn yêu cầu.",
+                                                                       "metaDescription":  "Chuyển bất kỳ trang web nào thành PDF chất lượng cao trên Flyto2 Cloud với hỗ trợ sẵn cho kích thước trang tùy chỉnh, đầu/chân trang, số trang và hình mờ.",
+                                                                       "faqs":  [
+                                                                                    {
+                                                                                        "q":  "Văn bản đầu ra có chọn được không?"
+                                                                                    },
+                                                                                    {
+                                                                                        "q":  "Liên kết có được giữ lại không?"
+                                                                                    },
+                                                                                    {
+                                                                                        "q":  "Có thể thêm số trang không?"
+                                                                                    },
+                                                                                    {
+                                                                                        "q":  "Tài liệu một trang siêu dài thì sao?"
+                                                                                    }
+                                                                                ]
+                                                                   },
+                                      "website-screenshot-gallery":  {
+                                                                         "title":  "Thư viện ảnh chụp màn hình website",
+                                                                         "category":  "Giám sát trực quan",
+                                                                         "lede":  "Xây lịch sử trực quan cho bất kỳ tập hợp trang nào. Mẫu chụp ảnh theo lịch, chạy diff pixel với lần chụp trước và lập chỉ mục mọi thứ vào một thư viện có thể duyệt.",
+                                                                         "metaDescription":  "Chụp ảnh website theo lịch vào thư viện có thể tìm kiếm với diff trực quan, bao phủ đa viewport và lưu giữ tài nguyên qua tự động hóa Flyto2.",
+                                                                         "faqs":  [
+                                                                                      {
+                                                                                          "q":  "Ảnh chụp có dung lượng bao nhiêu?"
+                                                                                      },
+                                                                                      {
+                                                                                          "q":  "Có xử lý trang đã đăng nhập không?"
+                                                                                      },
+                                                                                      {
+                                                                                          "q":  "Có thể diff với baseline không?"
+                                                                                      },
+                                                                                      {
+                                                                                          "q":  "Nội dung hoạt hình thì sao?"
+                                                                                      }
+                                                                                  ]
+                                                                     },
+                                      "website-uptime-monitor":  {
+                                                                     "title":  "Giám sát uptime website",
+                                                                     "category":  "Giám sát và SRE",
+                                                                     "lede":  "Theo dõi dịch vụ từ bên ngoài chính hạ tầng của bạn. Mẫu chạy kiểm tra tổng hợp từ nhiều khu vực, leo thang sự cố thật một cách thông minh và tạo dữ liệu trang trạng thái mà khách hàng mong đợi.",
+                                                                     "metaDescription":  "Giám sát uptime website, độ trễ và hạn SSL từ nhiều khu vực với leo thang sự cố phong phú qua mẫu tự động hóa giám sát uptime của Flyto2.",
+                                                                     "faqs":  [
+                                                                                  {
+                                                                                      "q":  "Tần suất thăm dò tối đa là bao nhiêu?"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "Chi tiết bên trong TLS thì sao?"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "Có kiểm thử luồng đăng nhập không?"
+                                                                                  },
+                                                                                  {
+                                                                                      "q":  "Sự cố flapping xử lý thế nào?"
+                                                                                  }
+                                                                              ]
+                                                                 },
+                                      "youtube-channel-stats-tracker":  {
+                                                                            "title":  "Trình theo dõi thống kê kênh YouTube",
+                                                                            "category":  "Phân tích mạng xã hội",
+                                                                            "lede":  "Xây bản ghi dài hạn về hiệu quả kênh và video, vượt qua khung báo cáo gốc của YouTube. Mẫu chụp các chỉ số công khai theo lịch và làm rõ xu hướng trên toàn bộ danh mục.",
+                                                                            "metaDescription":  "Theo dõi chỉ số kênh và video YouTube theo thời gian với mẫu tự động hóa Flyto2. Ghi lượt xem, người đăng ký, thời gian xem và tương tác qua nhiều kênh.",
+                                                                            "faqs":  [
+                                                                                         {
+                                                                                             "q":  "Bộ đếm chính xác đến đâu?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Còn phân tích riêng tư thì sao?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Có theo dõi kênh đối thủ được không?"
+                                                                                         },
+                                                                                         {
+                                                                                             "q":  "Chi phí quota là bao nhiêu?"
+                                                                                         }
+                                                                                     ]
+                                                                        }
+                                  }
+                  }
 }
