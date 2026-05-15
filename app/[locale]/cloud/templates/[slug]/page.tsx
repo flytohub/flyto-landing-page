@@ -77,6 +77,20 @@ export default async function TemplateDetailPage({
   const hubHref =
     locale === defaultLocale ? '/cloud/templates/' : `/${locale}/cloud/templates/`;
   const cloudHref = locale === defaultLocale ? '/cloud/' : `/${locale}/cloud/`;
+  const detailHref =
+    locale === defaultLocale
+      ? `/cloud/templates/${tpl.slug}/`
+      : `/${locale}/cloud/templates/${tpl.slug}/`;
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Cloud', item: `https://flyto2.com${cloudHref}` },
+      { '@type': 'ListItem', position: 2, name: 'Templates', item: `https://flyto2.com${hubHref}` },
+      { '@type': 'ListItem', position: 3, name: tpl.title, item: `https://flyto2.com${detailHref}` },
+    ],
+  };
 
   return (
     <article className="mx-auto max-w-3xl px-5 py-20 sm:px-8 sm:py-28">
@@ -88,6 +102,30 @@ export default async function TemplateDetailPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+
+      <nav aria-label="Breadcrumb" className="mb-6 font-mono text-[11px] tracking-[0.14em] uppercase text-bone-300">
+        <ol className="flex items-center gap-2">
+          <li>
+            <Link href={cloudHref} className="hover:text-bone-100">
+              Cloud
+            </Link>
+          </li>
+          <li aria-hidden className="text-bone-400">/</li>
+          <li>
+            <Link href={hubHref} className="hover:text-bone-100">
+              Templates
+            </Link>
+          </li>
+          <li aria-hidden className="text-bone-400">/</li>
+          <li className="text-bone-100" aria-current="page">
+            {tpl.title}
+          </li>
+        </ol>
+      </nav>
 
       <header className="mb-10">
         <span className="font-mono text-[11px] tracking-[0.16em] uppercase text-violet-300">
