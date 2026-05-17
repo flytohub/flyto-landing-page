@@ -39,17 +39,68 @@
                    "copyright":  "© 2026 FLYTO2"
                },
     "home":  {
-                 "metaTitle":  "Flyto2 — 一度記録、永遠再生",
-                 "metaDescription":  "オフラインで動くノーコードのブラウザ自動化。一度記録すれば永遠に再生。250以上のモジュール、16言語、MIT ライセンスのエンジン。",
+                 "metaTitle":  "Flyto2 — オフラインファーストの自動化ツール",
+                 "metaDescription":  "Flyto2 はオフラインファーストの自動化ツールを構築します。Cloud はノーコードブラウザ自動化で、本日リリース。Warroom はアプリセキュリティ作戦本部、プレローンチ。",
                  "hero":  {
-                              "eyebrow":  "FLYTO2 · オフラインファーストのブラウザ自動化",
-                              "title":  "一度、記録。",
-                              "titleAccent":  "永遠、再生。",
-                              "lede":  "Flyto2 はあなたがブラウザでやることを観察し、必要なときに正確に再現します。セレクタを書く必要も、糊付けコードを保守する必要もなく、データはマシンから出ません。",
+                              "eyebrow":  "FLYTO2 · オフラインファーストの自動化",
+                              "title":  "あなたのマシンに",
+                              "titleAccent":  "残る自動化。",
+                              "lede":  "Flyto2 は同じオフラインファーストエンジンの上に2つの製品を構築しています。一方はブラウザでの作業を自動化し、もう一方は出荷するすべてのコードのセキュリティを監査します。",
+                              "reassure":  "オープンソース · テレメトリーなし · あなたのもの",
                               "ctaPrimary":  "無料ダウンロード",
-                              "ctaSecondary":  "デモを見る",
-                              "reassure":  "OPEN SOURCE · NO TELEMETRY · OFFLINE"
+                              "ctaSecondary":  "デモを見る"
                           },
+                 "products":  {
+                                  "label":  "2つの製品",
+                                  "title":  "今日の問題を解くものを選ぶ。",
+                                  "subtitle":  "同じエンジン、同じ哲学。各製品は独自のオーディエンス、独自のページ、独自の料金体系を持っています。",
+                                  "cloud":  {
+                                                "name":  "Cloud",
+                                                "statusLabel":  "リリース中",
+                                                "tagline":  "ノーコードブラウザ自動化。一度記録、永遠再生。",
+                                                "point1":  "セレクタを書かずにブラウザ操作を記録",
+                                                "point2":  "一時停止、検査、実行中の値編集、再開",
+                                                "point3":  "250以上の事前設定済みモジュール — CSV、Stripe、Notion、Slack、OpenAI",
+                                                "cta":  "Cloud を見る"
+                                            },
+                                  "warroom":  {
+                                                  "name":  "Warroom",
+                                                  "statusLabel":  "ベータ版",
+                                                  "tagline":  "アプリセキュリティ作戦本部。SCA、SAST、シークレット、ライセンス、CVE — 一つの作戦地図。",
+                                                  "point1":  "すべてのシグナルを集約する A–F ヘルススコア",
+                                                  "point2":  "到達可能性分析 — 実際に動く CVE だけを修正",
+                                                  "point3":  "今日インストールできるオープンソース CLI、次はホステッド作戦本部",
+                                                  "cta":  "Warroom を見る"
+                                              }
+                              },
+                 "benefits":  {
+                                  "items":  [
+                                                {
+                                                    "iconName":  "Zap",
+                                                    "metric":  "1.2s",
+                                                    "title":  "中央値実行時間",
+                                                    "body":  "ほとんどのワークフローは2秒以内に完了します。あなたの仕事と同じ速さで動きます。"
+                                                },
+                                                {
+                                                    "iconName":  "ShieldOff",
+                                                    "metric":  "0",
+                                                    "title":  "外部送信バイト数",
+                                                    "body":  "認証情報と実行履歴はあなたのマシンに保存。テレメトリなし、コールバックなし。"
+                                                },
+                                                {
+                                                    "iconName":  "Code2",
+                                                    "metric":  "MIT",
+                                                    "title":  "オープンソースコア",
+                                                    "body":  "エンジンを読んで、フォークして、出荷する。ランタイムは GitHub と PyPI にあります。"
+                                                },
+                                                {
+                                                    "iconName":  "Globe2",
+                                                    "metric":  "16",
+                                                    "title":  "対応言語数",
+                                                    "body":  "レコーダー、ランタイム、ドキュメント、エラーメッセージ — ラベルだけでなく、すべて翻訳済み。"
+                                                }
+                                            ]
+                              },
                  "video":  {
                                "label":  "DEMO",
                                "title":  "ブラウザ自動化を",
@@ -95,10 +146,48 @@
                                                 {
                                                     "icon":  "Languages",
                                                     "title":  "16 言語",
-                                                    "body":  "レコーダー、ランタイム、ドキュメント、エラーメッセージ — すべて翻訳済み。"
+                                                    "body":  "レコーダー、ランタイム、ドキュメント、エラーメッセージ — すべて翻訳済み。あなたの運用チームが自分の言語で Flyto2 を使えます。"
                                                 }
                                             ]
                               },
+                 "examples":  {
+                                  "label":  "REAL WORKFLOWS",
+                                  "title":  "実際に作られたもの。",
+                                  "subtitle":  "各カードは Flyto2 がエンドツーエンドで実行したワークフローです — 一度記録し、スケジュールで再現し、出力を好きな場所にファイリング。",
+                                  "viewWorkflow":  "このワークフローを見る",
+                                  "items":  [
+                                                {
+                                                    "category":  "デイリーダイジェスト",
+                                                    "title":  "Hacker News 朝刊ブリーフ",
+                                                    "body":  "毎朝7時にトップ30記事をスクレイプ、OpenAI でまとめ、スタンドアップ前にプライベート Slack チャンネルへ配信。",
+                                                    "metric":  "RUNS · 毎日 06:55"
+                                                },
+                                                {
+                                                    "category":  "DEV INTEL",
+                                                    "title":  "GitHub トレンドトラッカー",
+                                                    "body":  "タグのトレンドページを監視し、新着リポジトリをスター数・ライセンス・言語とともに Sheets に保存。次のホットツールを誰より先に。",
+                                                    "metric":  "RUNS · 毎時"
+                                                },
+                                                {
+                                                    "category":  "パフォーマンス",
+                                                    "title":  "Pagespeed 一括監査",
+                                                    "body":  "CSV の URL リストを与えると、モバイル+デスクトップスコア、Core Web Vitals のデルタ、回帰時の Slack 通知付き Sheet が返ってくる。",
+                                                    "metric":  "RUNS · 毎週"
+                                                },
+                                                {
+                                                    "category":  "セキュリティ",
+                                                    "title":  "セキュリティヘッダー一斉調査",
+                                                    "body":  "ドメイン群をプローブし、ヘッダーを採点し、チームオーナー別にレポートをファイリング。誰も保守する時間がなかった四半期監査スクリプトを置き換える。",
+                                                    "metric":  "RUNS · 毎月"
+                                                }
+                                            ]
+                              },
+                 "integrations":  {
+                                      "label":  "INTEGRATIONS",
+                                      "title":  "250以上のモジュールがすぐ使える。",
+                                      "subtitle":  "配線はすでに済んでいます。ドラッグ、ドロップ、設定するだけ — 「Sheet A から API B へ行をコピー」スクリプトを二度と書かない。",
+                                      "andMore":  "+ 230以上 · PYTHON または JS でカスタムビルド"
+                                  },
                  "stats":  {
                                "items":  [
                                              {
@@ -153,21 +242,16 @@
                                        ]
                          },
                  "cta":  {
-                             "label":  "GET STARTED",
-                             "title":  "同じことを二度するのをやめる。",
-                             "body":  "Flyto2 をダウンロードして、ワークフローを一つ記録すれば、一週間がまるごと空くのを感じます。",
-                             "primary":  "無料ダウンロード",
-                             "secondary":  "ドキュメントを読む"
-                         },
-                 "products":  {
-                                  "warroom":  {
-                                                  "statusLabel":  "ベータ版"
-                                              }
-                              }
+                             "label":  "EXPLORE THE PLATFORM",
+                             "title":  "2つの製品。1つの哲学。",
+                             "body":  "Cloud は本日リリース中。Warroom は間もなく。両製品はオフラインファーストエンジンを共有 — 今日の問題に合うものを選んでください。",
+                             "primary":  "Cloud を見る",
+                             "secondary":  "Warroom を見る"
+                         }
              },
     "cloud":  {
                   "metaTitle":  "Cloud — ノーコードブラウザ自動化",
-                  "metaDescription":  "一度記録、永遠再生。オフラインで動くノーコードのブラウザ自動化。",
+                  "metaDescription":  "一度記録、永遠再生。オフラインで動くノーコードのブラウザ自動化。250以上のモジュール、16言語、MIT ライセンスのエンジン。",
                   "hero":  {
                                "eyebrow":  "01 / CLOUD",
                                "status":  "SHIPPING",
@@ -208,35 +292,176 @@
                                                  {
                                                      "icon":  "Video",
                                                      "title":  "あらゆる操作を記録",
-                                                     "body":  "レコーダーを開いて、一度操作して、停止。"
+                                                     "body":  "レコーダーを開いて、一度操作して、停止。編集・共有できる構造化ワークフローとしてキャプチャします。"
                                                  },
                                                  {
                                                      "icon":  "Pause",
                                                      "title":  "一時停止と検査",
-                                                     "body":  "ワークフローはブラックボックスではありません。"
+                                                     "body":  "ワークフローはブラックボックスではありません。ステップ実行、途中で値変更、再開 — 日常業務のためのデバッガー。"
                                                  },
                                                  {
                                                      "icon":  "ShieldOff",
                                                      "title":  "オフライン設計",
-                                                     "body":  "あなたのマシンで動きます。"
+                                                     "body":  "あなたのマシンで動きます。認証情報、スクレイピングしたデータ、実行履歴 — 誰にも送られません。"
                                                  },
                                                  {
                                                      "icon":  "Boxes",
                                                      "title":  "250以上のモジュール",
-                                                     "body":  "CSV、Excel、Stripe、Notion など。"
+                                                     "body":  "CSV、Excel、Stripe、Notion、Sheets、Postgres、Slack、OpenAI — API の配線を書く代わりにスナップで繋ぎます。"
                                                  },
                                                  {
                                                      "icon":  "GitBranch",
                                                      "title":  "分岐とマージ",
-                                                     "body":  "if/else、ループ、リトライ、エラーハンドラ。"
+                                                     "body":  "if/else、ループ、リトライ、エラーハンドラ — コードに書くようなことを、5秒で読める視覚ノードで。"
                                                  },
                                                  {
                                                      "icon":  "Languages",
                                                      "title":  "16 言語",
-                                                     "body":  "全コンポーネント翻訳済み。"
+                                                     "body":  "レコーダー、ランタイム、ドキュメント、エラーメッセージ — すべて翻訳済み。あなたの運用チームが自分の言語で使えます。"
                                                  }
                                              ]
                                },
+                  "codeSample":  {
+                                     "label":  "UNDER THE HOOD",
+                                     "title":  "読めるファイルです。",
+                                     "subtitle":  "記録したワークフローはすべて JSON ファイルです。git にコミット、レビューで差分確認、CI から実行、どこからでもトリガー。",
+                                     "point1":  "プレーン JSON — 独自バイナリ形式なし",
+                                     "point2":  "CLI、webhook、cron、または自分のバックエンドからトリガー",
+                                     "point3":  "GitHub Actions、GitLab CI、Jenkins へワンコマンドでエクスポート"
+                                 },
+                  "comparison":  {
+                                     "label":  "VS THE ALTERNATIVES",
+                                     "title":  "チームが Flyto2 に切り替える理由。",
+                                     "subtitle":  "Zapier、Make、Selenium — それぞれが問題の一部を埋めます。Flyto2 は、ブラウザ真のふるまいをローカルで、タスク課金なしで必要なときに選ぶツールです。",
+                                     "featureHeader":  "必要な機能",
+                                     "data":  {
+                                                  "rows":  [
+                                                               {
+                                                                   "feature":  "実際のブラウザ操作を記録",
+                                                                   "values":  [
+                                                                                  "yes",
+                                                                                  "no",
+                                                                                  "no",
+                                                                                  "yes"
+                                                                              ]
+                                                               },
+                                                               {
+                                                                   "feature":  "オフライン / 自分のマシンで実行",
+                                                                   "values":  [
+                                                                                  "yes",
+                                                                                  "no",
+                                                                                  "no",
+                                                                                  "yes"
+                                                                              ]
+                                                               },
+                                                               {
+                                                                   "feature":  "個人利用無料",
+                                                                   "values":  [
+                                                                                  "yes",
+                                                                                  "partial",
+                                                                                  "partial",
+                                                                                  "yes"
+                                                                              ]
+                                                               },
+                                                               {
+                                                                   "feature":  "ビジュアルエディタ（コード不要）",
+                                                                   "values":  [
+                                                                                  "yes",
+                                                                                  "yes",
+                                                                                  "yes",
+                                                                                  "no"
+                                                                              ]
+                                                               },
+                                                               {
+                                                                   "feature":  "実行中に一時停止・検査・再開",
+                                                                   "values":  [
+                                                                                  "yes",
+                                                                                  "no",
+                                                                                  "no",
+                                                                                  "partial"
+                                                                              ]
+                                                               },
+                                                               {
+                                                                   "feature":  "タスク課金ではなくポイント制",
+                                                                   "values":  [
+                                                                                  "yes",
+                                                                                  "no",
+                                                                                  "no",
+                                                                                  "yes"
+                                                                              ]
+                                                               },
+                                                               {
+                                                                   "feature":  "ワークフローファイルはプレーン JSON",
+                                                                   "values":  [
+                                                                                  "yes",
+                                                                                  "no",
+                                                                                  "no",
+                                                                                  "no"
+                                                                              ]
+                                                               },
+                                                               {
+                                                                   "feature":  "オープンソースエンジン",
+                                                                   "values":  [
+                                                                                  "yes",
+                                                                                  "no",
+                                                                                  "no",
+                                                                                  "yes"
+                                                                              ]
+                                                               }
+                                                           ]
+                                              }
+                                 },
+                  "recipes":  {
+                                  "label":  "PRE-BUILT RECIPES",
+                                  "title":  "ワンコマンドで、実際の結果を。",
+                                  "subtitle":  "レシピは配線・テスト済みのワークフローです。Cloud をインストールし、`flyto recipe [name]` を実行すれば、レポートが手に入ります。基本的なものはセットアップも API キーも不要。",
+                                  "items":  [
+                                                {
+                                                    "iconName":  "Search",
+                                                    "name":  "competitor-intel",
+                                                    "command":  "flyto recipe competitor-intel --url https://competitor.com/pricing",
+                                                    "body":  "料金ティアを取得、デスクトップ+モバイルのスクリーンショット、Web Vitals、SEO メタを解析し、構造化 JSON レポートとして返却。",
+                                                    "outputs":  [
+                                                                    "pricing.json",
+                                                                    "intel-desktop.png",
+                                                                    "intel-mobile.png",
+                                                                    "vitals",
+                                                                    "seo"
+                                                                ]
+                                                },
+                                                {
+                                                    "iconName":  "Activity",
+                                                    "name":  "full-audit",
+                                                    "command":  "flyto recipe full-audit --url https://example.com",
+                                                    "body":  "Web Vitals + SEO + アクセシビリティ（alt タグ、ラベル）+ コンソールエラー + モバイル/デスクトップスクリーンショット + 印刷可能な PDF。",
+                                                    "outputs":  [
+                                                                    "audit.json",
+                                                                    "audit-desktop.png",
+                                                                    "audit-mobile.png",
+                                                                    "audit-page.pdf"
+                                                                ]
+                                                },
+                                                {
+                                                    "iconName":  "Globe",
+                                                    "name":  "site-audit",
+                                                    "command":  "flyto recipe site-audit --url https://github.com",
+                                                    "body":  "SEO + パフォーマンス監査 — メタ、見出し、alt 漏れ、Web Vitals、全ページスクリーンショット。full-audit より軽量、数秒で完了。",
+                                                    "outputs":  [
+                                                                    "report.json",
+                                                                    "page.png"
+                                                                ]
+                                                },
+                                                {
+                                                    "iconName":  "Camera",
+                                                    "name":  "screenshot",
+                                                    "command":  "flyto recipe screenshot --url https://flyto2.com --device mobile",
+                                                    "body":  "任意のデバイスビューポートでピクセル完全なスクリーンショット。QA、デザインレビュー、または日次の変更検知差分合成に便利。",
+                                                    "outputs":  [
+                                                                    "screenshot.png"
+                                                                ]
+                                                }
+                                            ]
+                              },
                   "useCases":  {
                                    "label":  "USE CASES",
                                    "title":  "みんなが最初に自動化するもの。",
@@ -293,8 +518,125 @@
                                                 "a":  "デスクトップアプリと OSS エンジンは個人利用無料。Pro はホステッドスケジューリングと無制限のクラウド実行;Team は共有マーケットプレイスと SSO。詳細は Cloud ページで。"
                                             }
                                         ]
+                          },
+                  "cta":  {
+                              "label":  "GET STARTED",
+                              "title":  "一度記録すれば、毎週月曜が自動化される。",
+                              "body":  "デスクトップアプリをダウンロードして、5分で最初のワークフローを記録。あとはずっと動き続けます。",
+                              "primary":  "無料でダウンロード",
+                              "secondary":  "ドキュメントを読む"
                           }
               },
+    "download":  {
+                     "metaTitle":  "Flyto2 をダウンロード",
+                     "metaDescription":  "Flyto2 をダウンロード — macOS、Windows、Linux 向け無料デスクトップアプリ。オフラインで動くブラウザ自動化、アカウント不要。",
+                     "downloadFor":  "{os} 向けにダウンロード",
+                     "allReleases":  "GitHub のすべてのリリース",
+                     "hero":  {
+                                  "eyebrow":  "DESKTOP APP · FREE",
+                                  "title":  "ダウンロード",
+                                  "titleAccent":  "Flyto2。",
+                                  "lede":  "個人利用は永久無料。macOS、Windows、Linux — オープンソースエンジン同梱。アカウント不要、テレメトリなし、オフライン動作。"
+                              },
+                     "docker":  {
+                                    "title":  "Docker でセルフホスト",
+                                    "body":  "同じエンジンをコンテナで実行 — ヘッドレスサーバー、CI エージェント、またはエアギャップ環境へのエンタープライズ展開に最適。",
+                                    "cta":  "Docker Hub"
+                                },
+                     "oss":  {
+                                 "title":  "PyPI でエンジンだけを取得",
+                                 "body":  "実行コアは MIT ライセンスの Python です。ライブラリとしてインストール、CLI を使用、自分のパイプラインに組み込み可能。",
+                                 "cta":  "GitHub でソースを見る"
+                             },
+                     "cta":  {
+                                 "label":  "ALSO HELPFUL",
+                                 "title":  "特定のものをお探しですか?",
+                                 "body":  "古いリリース、別アーキテクチャ、または規制環境への展開をお探しなら、GitHub リリースかドキュメントをご覧ください。",
+                                 "primary":  "リリースを開く",
+                                 "secondary":  "ドキュメントを読む"
+                             }
+                 },
+    "pricing":  {
+                    "metaTitle":  "料金 — Flyto2",
+                    "metaDescription":  "個人利用は永久無料。Pro は月額 $9、Team は月額 $19。オフラインで動くブラウザ自動化の透明な料金体系。",
+                    "perMonth":  "/ 月",
+                    "mostPopular":  "最も人気",
+                    "priceFootnote":  "USD · いつでもキャンセル可 · 開始にクレジットカード不要",
+                    "hero":  {
+                                 "eyebrow":  "PRICING",
+                                 "title":  "永久無料。",
+                                 "titleAccent":  "スケール時に Pro へ。",
+                                 "lede":  "個人利用はデスクトップと OSS エンジンで無料。ホステッドスケジューリング、チーム管理、または高い月間コンピュートが必要になったときだけアップグレードを。"
+                             },
+                    "plans":  {
+                                  "free":  {
+                                               "label":  "FREE",
+                                               "name":  "Free",
+                                               "tagline":  "自動化を探求する個人向け。",
+                                               "feature1":  "1,000 コンピュートポイント / 月",
+                                               "feature2":  "最大5件の保存ワークフロー",
+                                               "feature3":  "250以上のモジュール全て",
+                                               "feature4":  "コミュニティサポート",
+                                               "cta":  "無料でダウンロード"
+                                           },
+                                  "pro":  {
+                                              "label":  "PRO",
+                                              "name":  "Pro",
+                                              "tagline":  "毎日自動化を使うパワーユーザー向け。",
+                                              "feature1":  "50,000 コンピュートポイント / 月",
+                                              "feature2":  "無制限のワークフロー",
+                                              "feature3":  "ホステッドスケジューリング — cron、webhook、リトライ",
+                                              "feature4":  "優先サポート、24時間 SLA",
+                                              "feature5":  "マーケットプレイス公開",
+                                              "cta":  "Pro を始める"
+                                          },
+                                  "team":  {
+                                               "label":  "TEAM",
+                                               "name":  "Team",
+                                               "tagline":  "社内でワークフローを共有する運用チーム向け。",
+                                               "feature1":  "200,000 コンピュートポイント / 月",
+                                               "feature2":  "最大10シート",
+                                               "feature3":  "RBAC と共有マーケットプレイス",
+                                               "feature4":  "SSO（Google、Microsoft）",
+                                               "feature5":  "専任オンボーディング",
+                                               "cta":  "Team を始める"
+                                           }
+                              },
+                    "faq":  {
+                                "label":  "FAQ",
+                                "title":  "料金に関する質問、お答えします。",
+                                "subtitle":  "コンピュートポイント、シート上限、課金 — 購入前に買い手が聞くこと。",
+                                "items":  [
+                                              {
+                                                  "q":  "「コンピュートポイント」とは?",
+                                                  "a":  "ポイントは作業の単位です — おおよそワークフローの一ステップ（クリック、CSV の1行、API 呼び出し）。50,000ポイントは月間約100時間の典型的なブラウザ自動化をカバーします。"
+                                              },
+                                              {
+                                                  "q":  "無料プランは本当に永久無料ですか?",
+                                                  "a":  "はい。デスクトップアプリとオープンソースエンジンは個人利用で永久無料です。無料ティアに含まれないのは、ホステッドスケジューリングとチーム機能だけです。"
+                                              },
+                                              {
+                                                  "q":  "月間ポイントを超えたら?",
+                                                  "a":  "ワークフローは次のサイクルまで一時停止されます。または1,000ポイントあたり $0.20 でトップアップを購入できます。無断で課金することはありません — 実行前にトップアップを確認します。"
+                                              },
+                                              {
+                                                  "q":  "年間請求や割引はありますか?",
+                                                  "a":  "年間請求では Pro と Team が20%オフになります。教育機関・非営利団体向け割引もあります — info@flyto2.com にメールを。"
+                                              },
+                                              {
+                                                  "q":  "代わりにセルフホストできますか?",
+                                                  "a":  "はい。PyPI の OSS エンジンはホステッドスケジューリング以外のすべてを動かします。SSO とエアギャップ展開を備えたエンタープライズセルフホストはロードマップ上にあります。"
+                                              }
+                                          ]
+                            },
+                    "cta":  {
+                                "label":  "STILL DECIDING",
+                                "title":  "払う前に試す。",
+                                "body":  "無料デスクトップアプリをダウンロードして、ワークフローを記録し、Flyto2 が解こうとしている問題に合うか確かめてください。価値があると判断したときだけアップグレードを。",
+                                "primary":  "無料でダウンロード",
+                                "secondary":  "ドキュメントを読む"
+                            }
+                },
     "forum":  {
                   "titleCloud":  "Cloud — ディスカッション",
                   "subtitleCloud":  "質問、バグ報告、ワークフロー共有。誰でも読めますが、投稿は無料の Flyto2 アカウントが必要です。",
@@ -367,202 +709,76 @@
                                  "error":  "投稿の読み込みに失敗。"
                              }
               },
-    "code":  {
-                 "metaTitle":  "Warroom — アプリセキュリティ作戦本部",
-                 "metaDescription":  "SCA、SAST、シークレット、ライセンス、CVE、ペンテスト、ランタイム — あなたのコードベースの作戦地図。プレローンチ。",
-                 "hero":  {
-                              "eyebrow":  "02 / CODE",
-                              "status":  "ベータ版",
-                              "title":  "一つの作戦本部。",
-                              "titleAccent":  "全ての攻撃面。",
-                              "lede":  "SCA、SAST、シークレット検出、ライセンス監査、CVE トリアージ、ペンテストワークフロー、ランタイムテレメトリ。Warroom は、あなたが出荷するすべての行のセキュリティ作戦地図です。",
-                              "ctaPrimary":  "ウェイトリストに参加",
-                              "ctaSecondary":  "オープンソース CLI を試す",
-                              "ctaBetaBadge":  "Beta",
-                              "ctaBeta":  "ベータ版を開く"
-                          },
-                 "showcase":  {
-                                  "label":  "INSIDE THE WAR ROOM",
-                                  "title":  "実際に見えるもの。",
-                                  "subtitle":  "プライベートベータからのスクリーンショット。サムネイルをクリックでメインを切り替え。"
-                              },
-                 "scans":  {
-                               "label":  "WHAT IT SCANS",
-                               "title":  "8つのシグナル、1つのヘルススコア。",
-                               "subtitle":  "プロジェクトごとに、攻撃者が実際に使うものを束ねた A–F スコア。シグナルをドリルダウンすれば、根拠の発見、推奨修正、AI 生成の修復 PR が見えます。",
-                               "items":  [
-                                             {
-                                                 "icon":  "Boxes",
-                                                 "title":  "SCA",
-                                                 "body":  "lockfile の脆弱な依存関係 — 「CVE があるか」だけでなく到達可能性で重み付け。"
-                                             },
-                                             {
-                                                 "icon":  "Code2",
-                                                 "title":  "SAST",
-                                                 "body":  "AST 認識のソースレベル taint flow、信頼できない入力から危険なシンクへ。"
-                                             },
-                                             {
-                                                 "icon":  "KeyRound",
-                                                 "title":  "Secrets",
-                                                 "body":  "ハードコードされた API キー、トークン、認証情報 — 履歴全体、HEAD だけではない。"
-                                             },
-                                             {
-                                                 "icon":  "ScrollText",
-                                                 "title":  "License",
-                                                 "body":  "GPL 汚染、商用非互換ライセンス、欠落している帰属。"
-                                             },
-                                             {
-                                                 "icon":  "Bug",
-                                                 "title":  "CVE",
-                                                 "body":  "新規 CVE の依存ツリーへのライブトリアージ、リプレイ POC 付き。"
-                                             },
-                                             {
-                                                 "icon":  "Crosshair",
-                                                 "title":  "Pentest",
-                                                 "body":  "Pentest-as-code:エクスプロイトチェーンを一度記録、すべてのリリースに対して再生。"
-                                             },
-                                             {
-                                                 "icon":  "Activity",
-                                                 "title":  "Runtime",
-                                                 "body":  "本番テレメトリ、ドリフト検出、キルスイッチ — Phase IV。"
-                                             },
-                                             {
-                                                 "icon":  "FileCheck2",
-                                                 "title":  "Compliance",
-                                                 "body":  "SOC 2、ISO 27001、地域データ所在の体制 — Phase V。"
-                                             }
-                                         ]
-                           },
-                 "phases":  {
-                                "label":  "ROADMAP",
-                                "title":  "六つのフェーズ、一つのプラットフォーム。",
-                                "items":  [
-                                              {
-                                                  "n":  "I",
-                                                  "title":  "基盤",
-                                                  "status":  "shipping",
-                                                  "body":  "インデクサ、検索、依存グラフ、A–F ヘルススコア。"
-                                              },
-                                              {
-                                                  "n":  "II",
-                                                  "title":  "静的解析",
-                                                  "status":  "shipping",
-                                                  "body":  "SCA、SAST、シークレットスキャン、ライセンス監査 — オープンソース CLI。"
-                                              },
-                                              {
-                                                  "n":  "III",
-                                                  "title":  "動的解析",
-                                                  "status":  "next",
-                                                  "body":  "Pentest-as-code、ランタイムプローブ、CVE リプレイ。"
-                                              },
-                                              {
-                                                  "n":  "IV",
-                                                  "title":  "ランタイム",
-                                                  "status":  "planned",
-                                                  "body":  "本番テレメトリ、ドリフト検出、キルスイッチ。"
-                                              },
-                                              {
-                                                  "n":  "V",
-                                                  "title":  "コンプライアンス",
-                                                  "status":  "planned",
-                                                  "body":  "SOC 2、ISO 27001、地域データ所在の体制。"
-                                              },
-                                              {
-                                                  "n":  "VI",
-                                                  "title":  "フェデレーション",
-                                                  "status":  "planned",
-                                                  "body":  "セキュリティチーム向けのマルチ組織作戦本部。"
-                                              }
-                                          ]
-                            },
-                 "faq":  {
-                             "label":  "FAQ",
-                             "title":  "Warroom — ウェイトリスト前の質問。",
-                             "subtitle":  "いつ出るか、何が違うか、今日何ができるか。",
-                             "items":  [
-                                           {
-                                               "q":  "Warroom はいつ出ますか?",
-                                               "a":  "Phase I と Phase II(基盤 + 静的解析)はすでにプライベートベータ。Phase III(動的解析)が次の公開マイルストーン — 2026年中頃のアーリーアクセス。ウェイトリスト参加で OSS CLI と招待を入手。"
-                                           },
-                                           {
-                                               "q":  "Snyk、Aikido、GitHub Advanced Security との違いは?",
-                                               "a":  "二つあります。(1) SCA、SAST、シークレット、ライセンス、CVE、ペンテスト、ランタイムを横断する一つのスコア — 八つのツールを自分で関連付ける必要なし。(2) Pentest-as-code:エクスプロイトチェーンを一度記録し、すべてのリリースに対して再生。"
-                                           },
-                                           {
-                                               "q":  "今日何が試せますか?",
-                                               "a":  "はい。`pip install flyto-indexer` で OSS スキャナーが手に入ります — 検索、参照、影響分析、デッドコード検出、AST taint analysis。Phase III が来たらホステッド作戦本部がその上に。"
-                                           },
-                                           {
-                                               "q":  "ソースコードはクラウドにアップロードされますか?",
-                                               "a":  "デフォルトでは、いいえ。CLI はローカルで動き、ローカルインデックスを生成。ホステッド作戦本部は finding(ソースではない)を取り込んでクロスプロジェクト集計可能;ソースアップロードはプロジェクト単位 opt-in。Self-hosted は Phase V。"
-                                           },
-                                           {
-                                               "q":  "プライベートリポジトリで動きますか?",
-                                               "a":  "OSS CLI はコードがどこにあるか気にしません。ホステッド作戦本部は GitHub、GitLab、Bitbucket、セルフホスト Git をそのままサポート。"
-                                           },
-                                           {
-                                               "q":  "作戦本部を self-host できますか?",
-                                               "a":  "Self-hosted はロードマップ上(Phase V、コンプライアンスと一緒)。OSS スキャナーは今日 self-host 可能;ホステッド UI/オーケストレータが続きます。"
-                                           }
-                                       ]
-                         },
-                 "gallery":  {
-                                 "label":  "さらに12のパネル",
-                                 "title":  "セキュリティチームが実際に開くパネル、すべて。",
-                                 "subtitle":  "7つのコアビュー以外にも、Warroomは深い機能群を備えています。デモのためだけのものは入っていません。",
-                                 "items":  {
-                                               "autofix":  {
-                                                               "title":  "Auto-fix PR",
-                                                               "body":  "AI生成の修正パッチがCIを通った後にPRとして登場。レビュアー承認、サプライズなし。"
-                                                           },
-                                               "taintFlow":  {
-                                                                 "title":  "Taintフロー可視化",
-                                                                 "body":  "ユーザ入力を変換を経てsinkに到達するまで追跡。関数間・パッケージ間、sanitizer認識。"
-                                                             },
-                                               "license":  {
-                                                               "title":  "ライセンス遵守",
-                                                               "body":  "GPL混入、商用ライセンス衝突、表記漏れ。法務が指摘する前に検出。"
-                                                           },
-                                               "owasp":  {
-                                                             "title":  "OWASPレポート",
-                                                             "body":  "検出結果をOWASP Top 10とCWE分類にマッピング。監査が必要とする表をエクスポート。"
-                                                         },
-                                               "queue":  {
-                                                             "title":  "セキュリティキュー",
-                                                             "body":  "小規模チーム向けトリアージビュー：割当済み、対応中、修正しない。チケットトラッカーの再実装ではない、必要十分。"
-                                                         },
-                                               "malware":  {
-                                                               "title":  "マルウェア検出",
-                                                               "body":  "npm installがタイポスクワットや侵害バージョンをツリーに入れる前に発見。"
-                                                           },
-                                               "complexity":  {
-                                                                  "title":  "複雑度ホットスポット",
-                                                                  "body":  "行数 × ネスト × 分岐 × 引数。統計的にレビューが難しい関数を順位付け。"
-                                                              },
-                                               "deadCode":  {
-                                                                "title":  "デッドコード探知",
-                                                                "body":  "caller ゼロのシンボル、importなしのファイル。IDEが静かに隠していたものを可視化。"
-                                                            },
-                                               "assetMap":  {
-                                                                "title":  "アセットインベントリ",
-                                                                "body":  "保有するドメイン、サブドメイン、ページ、エンドポイント。Notionではなくbuild成果物から導出。"
-                                                            },
-                                               "domainSec":  {
-                                                                 "title":  "ドメインセキュリティスコア",
-                                                                 "body":  "ヘッダー、TLS、露出面。インベントリ上の各ドメインごと。"
-                                                             },
-                                               "duplicate":  {
-                                                                 "title":  "重複コードマップ",
-                                                                 "body":  "同じロジックが3箇所にある？変更頻度で優先順位付けされたリファクタリング候補。"
-                                                             },
-                                               "reportBuilder":  {
-                                                                     "title":  "レポートビルダー",
-                                                                     "body":  "任意のパネルを組み合わせて1つのPDFに。取締役会、顧客、監査向け。定期テンプレートとして保存。"
-                                                                 }
-                                           }
-                             }
-             },
     "templates":  {
+                      "metaTitle":  "テンプレート — Flyto2 マーケットプレイス",
+                      "metaDescription":  "請求書処理、スクレイピング、リードエンリッチなどの事前構築済みワークフローテンプレート。ワンクリックでインストール。",
+                      "gridLabel":  "MOST INSTALLED",
+                      "gridTitle":  "実際に使われているワークフロー。",
+                      "gridSubtitle":  "実際の顧客アカウントに登場するレシピです。各テンプレートは出発点 — クローンして、アレンジして、実行してください。",
+                      "contributeOnGithub":  "GitHub でテンプレートを投稿",
+                      "hero":  {
+                                   "eyebrow":  "MARKETPLACE · GROWING",
+                                   "title":  "ワンクリックで",
+                                   "titleAccent":  "インストールできるワークフロー。",
+                                   "lede":  "記録済み、タグ付き、すぐ実行可能。アプリ内からマーケットプレイスを参照するか、以下で人気のものをチェック — 各エントリには編集可能なソースワークフローファイルが付属します。"
+                               },
+                      "items":  [
+                                    {
+                                        "iconName":  "Receipt",
+                                        "category":  "FINANCE",
+                                        "title":  "請求書抽出",
+                                        "body":  "ベンダーポータルにログイン、PDF をダウンロード、クライアント別にファイリング、合計を Sheets にプッシュ。"
+                                    },
+                                    {
+                                        "iconName":  "ShoppingCart",
+                                        "category":  "ECOMMERCE",
+                                        "title":  "受注照合",
+                                        "body":  "Stripe から受注を取得し、Shopify と突き合わせ、差異を Slack に表示。"
+                                    },
+                                    {
+                                        "iconName":  "Search",
+                                        "category":  "RESEARCH",
+                                        "title":  "競合監視",
+                                        "body":  "URL リストを訪問し、価格をスクレイプ、変化があれば Slack に通知。"
+                                    },
+                                    {
+                                        "iconName":  "Mail",
+                                        "category":  "GROWTH",
+                                        "title":  "リードエンリッチ",
+                                        "body":  "CRM から取得、公開ウェブで補強、タグ付きコンタクトとして書き戻し。"
+                                    },
+                                    {
+                                        "iconName":  "Database",
+                                        "category":  "SYNC",
+                                        "title":  "SaaS 間同期",
+                                        "body":  "ネイティブには連携しない2つの SaaS ツールを、毎晩橋渡し。"
+                                    },
+                                    {
+                                        "iconName":  "Calendar",
+                                        "category":  "OPS",
+                                        "title":  "カレンダー一括処理",
+                                        "body":  "予約の CSV を読み込み、カレンダーイベントを作成し、リマインダーを送信。"
+                                    },
+                                    {
+                                        "iconName":  "FileText",
+                                        "category":  "COMPLIANCE",
+                                        "title":  "ドキュメント取得",
+                                        "body":  "明細書、契約書、証明書の四半期ダウンロード — 自動ファイリング。"
+                                    },
+                                    {
+                                        "iconName":  "Bell",
+                                        "category":  "MONITORING",
+                                        "title":  "サイト稼働確認",
+                                        "body":  "URL リストをプローブし、ステータスを確認、異常があれば通知。"
+                                    }
+                                ],
+                      "cta":  {
+                                  "label":  "CAN'T FIND ONE?",
+                                  "title":  "最初に自動化したいものを教えてください。",
+                                  "body":  "欲しいワークフローテンプレートがあれば、GitHub Discussions でお知らせください。または自分でビルドを — ランタイムはオープンソースです。",
+                                  "primary":  "ディスカッションを開く",
+                                  "secondary":  "ドキュメントを読む"
+                              },
                       "details":  {
                                       "auto-login-template":  {
                                                                   "title":  "自動ログインテンプレート",
@@ -905,5 +1121,378 @@
                                                                                      ]
                                                                         }
                                   }
-                  }
+                  },
+    "code":  {
+                 "metaTitle":  "Warroom — アプリセキュリティ作戦本部",
+                 "metaDescription":  "SCA、SAST、シークレット、ライセンス、CVE、ペンテスト、ランタイム — あなたのコードベースの作戦地図。プレローンチ。",
+                 "hero":  {
+                              "eyebrow":  "02 / CODE",
+                              "status":  "ベータ版",
+                              "title":  "一つの作戦本部。",
+                              "titleAccent":  "全ての攻撃面。",
+                              "lede":  "SCA、SAST、シークレット検出、ライセンス監査、CVE トリアージ、ペンテストワークフロー、ランタイムテレメトリ。Warroom は、あなたが出荷するすべての行のセキュリティ作戦地図です。",
+                              "ctaPrimary":  "ウェイトリストに参加",
+                              "ctaSecondary":  "オープンソース CLI を試す",
+                              "ctaBetaBadge":  "Beta",
+                              "ctaBeta":  "ベータ版を開く"
+                          },
+                 "closedLoop":  {
+                                    "label":  "WHAT MAKES IT DIFFERENT",
+                                    "title":  "クローズドループ検証。",
+                                    "subtitle":  "他のセキュリティツールはアラートで止まります。Warroom は各検出結果を YAML ペンテストに変換し、実際のブラウザでステージング環境に対して実行し、評決を報告します — 実証済み、無害化済み、または到達不能。",
+                                    "find":  {
+                                                 "title":  "発見",
+                                                 "body":  "SCA、SAST、シークレット、ライセンス、IaC。同じスキャンがコードをコールグラフとアーキテクチャマップに解析。",
+                                                 "signal":  "scan"
+                                             },
+                                    "craft":  {
+                                                  "title":  "生成",
+                                                  "body":  "セキュリティ関連の各検出結果に対して、影響を受けるルートにスコープした YAML ペンテストワークフローを生成。",
+                                                  "signal":  "yaml"
+                                              },
+                                    "run":  {
+                                                "title":  "実行",
+                                                "body":  "実際の Chrome セッションでステージングに対してワークフローを実行。12の公式 OWASP / LLM / ビジネスロジックプレイブックが今日から使えます。",
+                                                "signal":  "live"
+                                            },
+                                    "verdictStep":  {
+                                                        "title":  "評決",
+                                                        "body":  "HMAC 署名付きエビデンスをキャプチャ、悪用可能 / 無害化済み / 到達不能を報告し、毎晩の再実行のためにワークフローをリグレッションボルトに保存。",
+                                                        "signal":  "ledger"
+                                                    },
+                                    "verdict":  {
+                                                    "exploitable":  {
+                                                                        "title":  "悪用可能",
+                                                                        "body":  "脆弱性がエンドツーエンドで実行されました。エビデンスパック添付。キューの最上位にトリアージ。"
+                                                                    },
+                                                    "sanitized":  {
+                                                                      "title":  "無害化済み",
+                                                                      "body":  "下流の制御（認証、WAF、フレームワーク）によって緩和済み。ログ記録、優先度引き下げ。"
+                                                                  },
+                                                    "unreachable":  {
+                                                                        "title":  "到達不能",
+                                                                        "body":  "脆弱なコードは存在するが、ユーザー入力が到達するパスがない。確認済み、低優先度。"
+                                                                    }
+                                                }
+                                },
+                 "proof":  {
+                               "label":  "REAL PROOF",
+                               "title":  "OWASP Juice Shop でテスト済み。",
+                               "subtitle":  "合成サンドボックスではありません。意図的に脆弱な定番 EC アプリを、クローズドループを通してエンドツーエンドで実行。これが一つのキャンペーン出力です。",
+                               "caption":  "各検出結果には HMAC 署名付きエビデンスパックが付属します。チェーンはリグレッションボルト経由で毎晩再生 — 修正が入ったら、Warroom は修正が維持されていることを検証します。",
+                               "data":  {
+                                            "metric":  [
+                                                           {
+                                                               "value":  "5",
+                                                               "label":  "BREACH レベルのチェーン"
+                                                           },
+                                                           {
+                                                               "value":  "11",
+                                                               "label":  "クリティカルな検出"
+                                                           },
+                                                           {
+                                                               "value":  "12",
+                                                               "label":  "ペンテストプレイブック"
+                                                           },
+                                                           {
+                                                               "value":  "100%",
+                                                               "label":  "毎晩再生可能"
+                                                           }
+                                                       ],
+                                            "chain":  [
+                                                          {
+                                                              "vector":  "SQLi · ログイン",
+                                                              "finding":  "POST /rest/user/login の `email` フィールドのトートロジーバイパス — 認証をスキップしてセッショントークンを発行。"
+                                                          },
+                                                          {
+                                                              "vector":  "トークン窃取",
+                                                              "finding":  "レスポンスから JWT を取得してデコード — admin クレームは存在しないが署名キーがユーザー間で再利用。"
+                                                          },
+                                                          {
+                                                              "vector":  "連鎖 IDOR",
+                                                              "finding":  "GET /api/Users/{id} が任意の id を受け入れ、サーバーがパスワードハッシュを含む完全なレコードを返却。"
+                                                          },
+                                                          {
+                                                              "vector":  "権限昇格",
+                                                              "finding":  "漏洩キーで JWT を偽造し role=admin を設定してリクエストを再生 — 管理者専用エンドポイントが 200 を返す。"
+                                                          },
+                                                          {
+                                                              "vector":  "データ流出",
+                                                              "finding":  "GET /api/Orders が全顧客の購入履歴を列挙。エビデンスパック: 2.4 MB。"
+                                                          }
+                                                      ]
+                                        }
+                           },
+                 "features":  {
+                                  "label":  "INSIDE THE WAR ROOM",
+                                  "title":  "7つのビュー、1つの真実の源。",
+                                  "subtitle":  "Warroom の各パネルは、セキュリティチームがすでに抱えている問いに基づいて構築されています。作戦本部で実際に見えるものをご紹介します。",
+                                  "items":  [
+                                                {
+                                                    "label":  "DASHBOARD",
+                                                    "title":  "プロジェクトごとに A–F スコア1つ。",
+                                                    "body":  "SCA、SAST、シークレット、ライセンス、CVE、ランタイムのすべてのシグナルを1つのグレードに集約。CISO はヘッドラインを見る。エンジニアは問題のあるパネルをドリルダウン。",
+                                                    "imageAlt":  "A–F スコアリングを持つ Warroom ヘルスダッシュボード",
+                                                    "bullets":  [
+                                                                    "カテゴリごとのトレンドライン",
+                                                                    "チーム別・サービス別ロールアップ",
+                                                                    "自動生成の週次ブリーフィング"
+                                                                ]
+                                                },
+                                                {
+                                                    "label":  "REACHABILITY",
+                                                    "title":  "実際に動く CVE はどれか。",
+                                                    "body":  "CVE アラートのほとんどはノイズです — 脆弱な関数はあなたのコードから呼ばれることがありません。到達可能性分析が実際のコールパスをトレースするので、重要な5%だけを修正し、重要でない95%は後回しにできます。",
+                                                    "imageAlt":  "悪用可能なコールパスを示す到達可能性分析",
+                                                    "bullets":  [
+                                                                    "静的 + 動的コールグラフ",
+                                                                    "パッケージ横断の汚染伝播",
+                                                                    "偽陽性率は測定済み、主張のみではない"
+                                                                ]
+                                                },
+                                                {
+                                                    "label":  "DEPENDENCIES",
+                                                    "title":  "サプライチェーンを可視化。",
+                                                    "body":  "すべての直接依存と推移的依存をリスクで重み付けし、CVE をオーバーレイ。任意のノードをクリックして、誰が引き込んだか、次に何を引き込むか、どのサービスがそれに依存するかを確認。",
+                                                    "imageAlt":  "脆弱性オーバーレイ付き依存グラフ",
+                                                    "bullets":  [
+                                                                    "ライセンス + メンテナリスクオーバーレイ",
+                                                                    "異なるバージョンに固定された重複を発見",
+                                                                    "モノレポ設定から伝播するオーナーシップラベル"
+                                                                ]
+                                                },
+                                                {
+                                                    "label":  "ARCHITECTURE",
+                                                    "title":  "コードベース全体の形。",
+                                                    "body":  "モジュール、サービス、データフロー、オーナーシップ境界 — 6ヶ月古い Wiki ではなくソースから直接導出。アノテーションなしで読み取り、出荷するたびに洗練されます。",
+                                                    "imageAlt":  "サービスとモジュールのアーキテクチャマップ",
+                                                    "bullets":  [
+                                                                    "ビルドファイルからサービスを自動検出",
+                                                                    "境界を超える呼び出しをハイライト",
+                                                                    "前回リリースとの差分でドリフトを検出"
+                                                                ]
+                                                },
+                                                {
+                                                    "label":  "API SURFACE",
+                                                    "title":  "すべてのエンドポイントをインベントリ化。",
+                                                    "body":  "REST、gRPC、GraphQL — Warroom がハンドラから検出し、何を受け入れ、何を返し、誰が呼ぶかをリスト化。認証ギャップと未認証エンドポイントが自動で浮かび上がります。",
+                                                    "imageAlt":  "認証メタデータ付き API エンドポイントインベントリ",
+                                                    "bullets":  [
+                                                                    "ルートごとの認証戦略カラム",
+                                                                    "公開 vs 内部の分類",
+                                                                    "任意のフレームワーク向け OpenAPI エクスポート"
+                                                                ]
+                                                },
+                                                {
+                                                    "label":  "INFRASTRUCTURE",
+                                                    "title":  "IaC も同じ実行でスキャン。",
+                                                    "body":  "Terraform、Kubernetes マニフェスト、Dockerfile — Warroom がアプリケーションコードと並行してインフラを読み取り、セキュリティポスチャとランタイムトポロジーが同一パスから得られます。",
+                                                    "imageAlt":  "Infrastructure-as-code スキャンビュー",
+                                                    "bullets":  [
+                                                                    "Terraform、Helm、K8s、Dockerfile",
+                                                                    "CIS に追随する誤設定カタログ",
+                                                                    "ドリフト検出: デプロイ済みとチェックイン済みの差分"
+                                                                ]
+                                                },
+                                                {
+                                                    "label":  "PULSE",
+                                                    "title":  "セキュリティドリフトの時系列。",
+                                                    "body":  "何が変わり、いつ、スコアにどう影響したかのチーム全体のライブティッカー。閲覧のためのダッシュボードではなく、気付くためのダッシュボード。",
+                                                    "imageAlt":  "セキュリティドリフトのタイムラインを示す Pulse ビュー",
+                                                    "bullets":  [
+                                                                    "エンジニアごとのリスクデルタへの貢献",
+                                                                    "スコア急落時のエスカレーションルール",
+                                                                    "再生可能な履歴 — スコアを動かしたコミットを特定"
+                                                                ]
+                                                }
+                                            ]
+                              },
+                 "scans":  {
+                               "label":  "WHAT IT SCANS",
+                               "title":  "8つのシグナル、1つのヘルススコア。",
+                               "subtitle":  "プロジェクトごとに、攻撃者が実際に使うものを束ねた A–F スコア。シグナルをドリルダウンすれば、根拠の発見、推奨修正、AI 生成の修復 PR が見えます。",
+                               "items":  [
+                                             {
+                                                 "icon":  "Boxes",
+                                                 "title":  "SCA",
+                                                 "body":  "lockfile の脆弱な依存関係 — 「CVE があるか」だけでなく到達可能性で重み付け。"
+                                             },
+                                             {
+                                                 "icon":  "Code2",
+                                                 "title":  "SAST",
+                                                 "body":  "AST 認識のソースレベル taint flow、信頼できない入力から危険なシンクへ。"
+                                             },
+                                             {
+                                                 "icon":  "KeyRound",
+                                                 "title":  "Secrets",
+                                                 "body":  "ハードコードされた API キー、トークン、認証情報 — 履歴全体、HEAD だけではない。"
+                                             },
+                                             {
+                                                 "icon":  "ScrollText",
+                                                 "title":  "License",
+                                                 "body":  "GPL 汚染、商用非互換ライセンス、欠落している帰属。"
+                                             },
+                                             {
+                                                 "icon":  "Bug",
+                                                 "title":  "CVE",
+                                                 "body":  "新規 CVE の依存ツリーへのライブトリアージ、リプレイ POC 付き。"
+                                             },
+                                             {
+                                                 "icon":  "Crosshair",
+                                                 "title":  "Pentest",
+                                                 "body":  "Pentest-as-code:エクスプロイトチェーンを一度記録、すべてのリリースに対して再生。"
+                                             },
+                                             {
+                                                 "icon":  "Activity",
+                                                 "title":  "Runtime",
+                                                 "body":  "本番テレメトリ、ドリフト検出、キルスイッチ — Phase IV。"
+                                             },
+                                             {
+                                                 "icon":  "FileCheck2",
+                                                 "title":  "Compliance",
+                                                 "body":  "SOC 2、ISO 27001、地域データ所在の体制 — Phase V。"
+                                             }
+                                         ]
+                           },
+                 "phases":  {
+                                "label":  "ROADMAP",
+                                "title":  "六つのフェーズ、一つのプラットフォーム。",
+                                "items":  [
+                                              {
+                                                  "n":  "I",
+                                                  "title":  "基盤",
+                                                  "status":  "shipping",
+                                                  "body":  "インデクサ、検索、依存グラフ、A–F ヘルススコア。"
+                                              },
+                                              {
+                                                  "n":  "II",
+                                                  "title":  "静的解析",
+                                                  "status":  "shipping",
+                                                  "body":  "SCA、SAST、シークレットスキャン、ライセンス監査 — オープンソース CLI。"
+                                              },
+                                              {
+                                                  "n":  "III",
+                                                  "title":  "動的解析",
+                                                  "status":  "next",
+                                                  "body":  "Pentest-as-code、ランタイムプローブ、CVE リプレイ。"
+                                              },
+                                              {
+                                                  "n":  "IV",
+                                                  "title":  "ランタイム",
+                                                  "status":  "planned",
+                                                  "body":  "本番テレメトリ、ドリフト検出、キルスイッチ。"
+                                              },
+                                              {
+                                                  "n":  "V",
+                                                  "title":  "コンプライアンス",
+                                                  "status":  "planned",
+                                                  "body":  "SOC 2、ISO 27001、地域データ所在の体制。"
+                                              },
+                                              {
+                                                  "n":  "VI",
+                                                  "title":  "フェデレーション",
+                                                  "status":  "planned",
+                                                  "body":  "セキュリティチーム向けのマルチ組織作戦本部。"
+                                              }
+                                          ]
+                            },
+                 "faq":  {
+                             "label":  "FAQ",
+                             "title":  "Warroom — ウェイトリスト前の質問。",
+                             "subtitle":  "いつ出るか、何が違うか、今日何ができるか。",
+                             "items":  [
+                                           {
+                                               "q":  "Warroom はいつ出ますか?",
+                                               "a":  "Phase I と Phase II(基盤 + 静的解析)はすでにプライベートベータ。Phase III(動的解析)が次の公開マイルストーン — 2026年中頃のアーリーアクセス。ウェイトリスト参加で OSS CLI と招待を入手。"
+                                           },
+                                           {
+                                               "q":  "Snyk、Aikido、GitHub Advanced Security との違いは?",
+                                               "a":  "二つあります。(1) SCA、SAST、シークレット、ライセンス、CVE、ペンテスト、ランタイムを横断する一つのスコア — 八つのツールを自分で関連付ける必要なし。(2) Pentest-as-code:エクスプロイトチェーンを一度記録し、Cloud がブラウザフローを再生するのと同じように、すべてのリリースに対して再生。"
+                                           },
+                                           {
+                                               "q":  "今日何が試せますか?",
+                                               "a":  "はい。`pip install flyto-indexer` で OSS スキャナーが手に入ります — 検索、参照、影響分析、デッドコード検出、AST taint analysis。Phase III が来たらホステッド作戦本部がその上に。"
+                                           },
+                                           {
+                                               "q":  "ソースコードはクラウドにアップロードされますか?",
+                                               "a":  "デフォルトでは、いいえ。CLI はローカルで動き、ローカルインデックスを生成。ホステッド作戦本部は finding(ソースではない)を取り込んでクロスプロジェクト集計可能;ソースアップロードはプロジェクト単位 opt-in。Self-hosted は Phase V。"
+                                           },
+                                           {
+                                               "q":  "プライベートリポジトリで動きますか?",
+                                               "a":  "OSS CLI はコードがどこにあるか気にしません。ホステッド作戦本部は GitHub、GitLab、Bitbucket、セルフホスト Git をそのままサポート。"
+                                           },
+                                           {
+                                               "q":  "作戦本部を self-host できますか?",
+                                               "a":  "Self-hosted はロードマップ上(Phase V、コンプライアンスと一緒)。OSS スキャナーは今日 self-host 可能;ホステッド UI/オーケストレータが続きます。"
+                                           }
+                                       ]
+                         },
+                 "cta":  {
+                             "label":  "EARLY ACCESS",
+                             "title":  "作戦本部に最初に入る。",
+                             "body":  "ホステッド作戦本部はブラウザベース — インストール不要。Phase III が開放されたときの招待を得るためウェイトリストに参加し、オープンソーススキャナーを今日入手。",
+                             "primary":  "ウェイトリストに参加",
+                             "secondary":  "OSS スキャナーをインストール"
+                         },
+                 "showcase":  {
+                                  "label":  "INSIDE THE WAR ROOM",
+                                  "title":  "実際に見えるもの。",
+                                  "subtitle":  "プライベートベータからのスクリーンショット。サムネイルをクリックでメインを切り替え。"
+                              },
+                 "gallery":  {
+                                 "label":  "さらに12のパネル",
+                                 "title":  "セキュリティチームが実際に開くパネル、すべて。",
+                                 "subtitle":  "7つのコアビュー以外にも、Warroomは深い機能群を備えています。デモのためだけのものは入っていません。",
+                                 "items":  {
+                                               "autofix":  {
+                                                               "title":  "Auto-fix PR",
+                                                               "body":  "AI生成の修正パッチがCIを通った後にPRとして登場。レビュアー承認、サプライズなし。"
+                                                           },
+                                               "taintFlow":  {
+                                                                 "title":  "Taintフロー可視化",
+                                                                 "body":  "ユーザ入力を変換を経てsinkに到達するまで追跡。関数間・パッケージ間、sanitizer認識。"
+                                                             },
+                                               "license":  {
+                                                               "title":  "ライセンス遵守",
+                                                               "body":  "GPL混入、商用ライセンス衝突、表記漏れ。法務が指摘する前に検出。"
+                                                           },
+                                               "owasp":  {
+                                                             "title":  "OWASPレポート",
+                                                             "body":  "検出結果をOWASP Top 10とCWE分類にマッピング。監査が必要とする表をエクスポート。"
+                                                         },
+                                               "queue":  {
+                                                             "title":  "セキュリティキュー",
+                                                             "body":  "小規模チーム向けトリアージビュー：割当済み、対応中、修正しない。チケットトラッカーの再実装ではない、必要十分。"
+                                                         },
+                                               "malware":  {
+                                                               "title":  "マルウェア検出",
+                                                               "body":  "npm installがタイポスクワットや侵害バージョンをツリーに入れる前に発見。"
+                                                           },
+                                               "complexity":  {
+                                                                  "title":  "複雑度ホットスポット",
+                                                                  "body":  "行数 × ネスト × 分岐 × 引数。統計的にレビューが難しい関数を順位付け。"
+                                                              },
+                                               "deadCode":  {
+                                                                "title":  "デッドコード探知",
+                                                                "body":  "caller ゼロのシンボル、importなしのファイル。IDEが静かに隠していたものを可視化。"
+                                                            },
+                                               "assetMap":  {
+                                                                "title":  "アセットインベントリ",
+                                                                "body":  "保有するドメイン、サブドメイン、ページ、エンドポイント。Notionではなくbuild成果物から導出。"
+                                                            },
+                                               "domainSec":  {
+                                                                 "title":  "ドメインセキュリティスコア",
+                                                                 "body":  "ヘッダー、TLS、露出面。インベントリ上の各ドメインごと。"
+                                                             },
+                                               "duplicate":  {
+                                                                 "title":  "重複コードマップ",
+                                                                 "body":  "同じロジックが3箇所にある？変更頻度で優先順位付けされたリファクタリング候補。"
+                                                             },
+                                               "reportBuilder":  {
+                                                                     "title":  "レポートビルダー",
+                                                                     "body":  "任意のパネルを組み合わせて1つのPDFに。取締役会、顧客、監査向け。定期テンプレートとして保存。"
+                                                                 }
+                                           }
+                             }
+             }
 }

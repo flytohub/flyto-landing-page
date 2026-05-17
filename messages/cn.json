@@ -39,31 +39,745 @@
                    "copyright":  "© 2026 FLYTO2"
                },
     "home":  {
+                 "metaTitle":  "Flyto2 — 离线优先的自动化工具",
+                 "metaDescription":  "Flyto2 打造离线优先的自动化工具。Cloud 是无代码浏览器自动化，现已上线。Warroom 是应用安全战情室，即将发布。",
                  "hero":  {
                               "eyebrow":  "FLYTO2 · 离线优先的自动化",
                               "title":  "让自动化",
                               "titleAccent":  "留在你的电脑上。",
-                              "lede":  "Flyto2 用同一套离线优先引擎做两款产品。一款自动化你在浏览器里的重复工作，一款审你出货的每一行代码的安全姿态。",
+                              "lede":  "Flyto2 用同一套离线优先引擎打造两款产品。一款自动化你在浏览器里的重复工作，一款审你出货的每一行代码的安全姿态。",
                               "reassure":  "开源 · 无遥测 · 属于你"
                           },
                  "products":  {
+                                  "label":  "两款产品",
+                                  "title":  "选一个解决今天的问题。",
+                                  "subtitle":  "同一引擎，同一理念。每款产品围绕各自的受众、独立的页面和独立的定价构建。",
                                   "cloud":  {
+                                                "name":  "Cloud",
+                                                "statusLabel":  "已上线",
+                                                "tagline":  "无代码浏览器自动化。一次录制，永久回放。",
+                                                "point1":  "无需编写选择器，录制任意浏览器操作流",
+                                                "point2":  "运行中可暂停、检查、修改值后继续",
+                                                "point3":  "250+ 预建模块 — CSV、Stripe、Notion、Slack、OpenAI",
                                                 "cta":  "前往 Cloud"
                                             },
                                   "warroom":  {
+                                                  "name":  "Warroom",
+                                                  "statusLabel":  "公测中",
+                                                  "tagline":  "应用安全战情室。SCA、SAST、密钥、许可证、CVE — 一张作战全图。",
+                                                  "point1":  "A–F 健康评分，汇总所有信号",
+                                                  "point2":  "可达性分析 — 只修复实际运行的 CVE",
+                                                  "point3":  "开源 CLI 今日可安装，托管战情室即将上线",
                                                   "cta":  "前往 Warroom",
                                                   "statusLabel":  "公测中"
                                               }
-                              }
+                              },
+                 "benefits":  {
+                                  "items":  [
+                                                {
+                                                    "iconName":  "Zap",
+                                                    "metric":  "1.2s",
+                                                    "title":  "中位运行时长",
+                                                    "body":  "大多数工作流在两秒内完成。你的工作流，跑得和你一样快。"
+                                                },
+                                                {
+                                                    "iconName":  "ShieldOff",
+                                                    "metric":  "0",
+                                                    "title":  "上传字节数",
+                                                    "body":  "凭据和运行历史留在你的电脑上。无遥测，无回调。"
+                                                },
+                                                {
+                                                    "iconName":  "Code2",
+                                                    "metric":  "MIT",
+                                                    "title":  "开源核心",
+                                                    "body":  "读引擎，fork 它，发布它。运行时在 GitHub 和 PyPI 上。"
+                                                },
+                                                {
+                                                    "iconName":  "Globe2",
+                                                    "metric":  "16",
+                                                    "title":  "支持语言",
+                                                    "body":  "录制器、运行时、文档和错误提示 — 全部翻译，不只是贴标签。"
+                                                }
+                                            ]
+                              },
+                 "video":  {
+                               "label":  "演示",
+                               "title":  "看看浏览器自动化",
+                               "titleAccent":  "实战效果。",
+                               "subtitle":  "无需技术背景。完整版逐步展示真实流程；短版用 60 秒呈现核心亮点。",
+                               "longLabel":  "完整演示",
+                               "longTitle":  "Flyto2 — 完整演示",
+                               "longBody":  "完整演练：录制一个结账流程，编辑一个步骤，回放。两分钟，无解说技巧。",
+                               "shortLabel":  "60秒短片",
+                               "shortTitle":  "Flyto2 — 60秒短片",
+                               "shortBody":  "表单填写，自动化。竖屏，快节奏，适合手机分享。",
+                               "moreOnYoutube":  "在 YouTube 上关注 @Flyto2 看更多视频"
+                           },
+                 "features":  {
+                                  "label":  "为何选择 FLYTO2",
+                                  "title":  "专为你反复在做的工作而生。",
+                                  "items":  [
+                                                {
+                                                    "icon":  "Video",
+                                                    "title":  "录制任意流程",
+                                                    "body":  "点击录制，做一次任务，停止。Flyto2 捕获每一次点击、滚动、输入和等待。"
+                                                },
+                                                {
+                                                    "icon":  "Pause",
+                                                    "title":  "暂停并检查",
+                                                    "body":  "工作流不是黑盒子。逐步执行，运行中修改值，继续 — 像日常工作的调试器。"
+                                                },
+                                                {
+                                                    "icon":  "ShieldOff",
+                                                    "title":  "设计即离线",
+                                                    "body":  "在你的电脑上运行。凭据、抓取的数据、运行历史 — 从不发送到任何地方，包括我们。"
+                                                },
+                                                {
+                                                    "icon":  "Boxes",
+                                                    "title":  "250+ 模块",
+                                                    "body":  "CSV、Excel、Stripe、Notion、Postgres、Slack、OpenAI — 预先接好线，让你直接拼接而不是手写 API。"
+                                                },
+                                                {
+                                                    "icon":  "GitBranch",
+                                                    "title":  "分支与合并",
+                                                    "body":  "if/else、循环、重试、错误处理 — 你会在代码里写的东西，以可视化节点呈现，五秒读懂。"
+                                                },
+                                                {
+                                                    "icon":  "Languages",
+                                                    "title":  "16 种语言",
+                                                    "body":  "录制器、运行时、文档、错误消息 — 全部翻译。你的运营团队用自己的语言使用 Flyto2。"
+                                                }
+                                            ]
+                              },
+                 "examples":  {
+                                  "label":  "真实工作流",
+                                  "title":  "大家实际构建的案例。",
+                                  "subtitle":  "每张卡片都是 Flyto2 端到端运行过的工作流 — 录制一次，按计划重放，输出归档到你指定的位置。",
+                                  "viewWorkflow":  "查看此工作流",
+                                  "items":  [
+                                                {
+                                                    "category":  "每日摘要",
+                                                    "title":  "Hacker News 晨报",
+                                                    "body":  "每天早上 7 点抓取热门前 30 条，通过 OpenAI 总结，在站会前推送到私有 Slack 频道。",
+                                                    "metric":  "运行 · 每天 06:55"
+                                                },
+                                                {
+                                                    "category":  "开发情报",
+                                                    "title":  "GitHub 趋势追踪器",
+                                                    "body":  "监控某标签的趋势页，将新仓库连同 star 数、许可证、语言持久化到 Sheets。比所有人更早发现下一个热门工具。",
+                                                    "metric":  "运行 · 每小时"
+                                                },
+                                                {
+                                                    "category":  "性能",
+                                                    "title":  "批量页面速度审计",
+                                                    "body":  "输入 URL CSV，返回包含移动端+桌面端评分、Core Web Vitals 差值的 Sheet，任何指标回退时 Slack 告警。",
+                                                    "metric":  "运行 · 每周"
+                                                },
+                                                {
+                                                    "category":  "安全",
+                                                    "title":  "安全头部扫描",
+                                                    "body":  "探测一批域名，评估响应头，按团队负责人归档报告。替代了没人有时间维护的季度审计脚本。",
+                                                    "metric":  "运行 · 每月"
+                                                }
+                                            ]
+                              },
+                 "integrations":  {
+                                      "label":  "集成",
+                                      "title":  "开箱即用 250+ 模块。",
+                                      "subtitle":  "管道已经接好了。拖拽、放置、配置 — 再也不用写「把这行从 Sheet A 复制到 API B」的脚本。",
+                                      "andMore":  "+ 230 更多 · 用 PYTHON 或 JS 构建你自己的"
+                                  },
+                 "stats":  {
+                               "items":  [
+                                             {
+                                                 "value":  "250+",
+                                                 "label":  "模块",
+                                                 "body":  "预建节点，涵盖 CSV、Excel、Stripe、Notion、Slack、AI、SQL — 你原本需要自己拼接的那些。"
+                                             },
+                                             {
+                                                 "value":  "16",
+                                                 "label":  "支持语言",
+                                                 "body":  "界面、录制器、运行时、文档和错误消息 — 全部翻译，不只是贴标签。"
+                                             },
+                                             {
+                                                 "value":  "100%",
+                                                 "label":  "在你的电脑上",
+                                                 "body":  "你的录制、凭据、运行历史。除非你主动选择，否则不经过云端。永远无遥测。"
+                                             }
+                                         ]
+                           },
+                 "codeTeaser":  {
+                                    "label":  "同步在建",
+                                    "status":  "预发布",
+                                    "title":  "Warroom — 应用安全战情室。",
+                                    "body":  "专为软件交付安全侧打造的独立产品。SCA、SAST、密钥、许可证、CVE、渗透测试 — 统一在一个 A–F 健康评分下。",
+                                    "cta":  "前往 Warroom"
+                                },
+                 "faq":  {
+                             "label":  "常见问题",
+                             "title":  "常见问题，提前解答。",
+                             "subtitle":  "如果你在为团队评估 Flyto2，这些是大家最先问的问题。",
+                             "items":  [
+                                           {
+                                               "q":  "Flyto2 真的免费且开源吗？",
+                                               "a":  "是的。执行引擎（`flyto-core`）以 MIT 许可证开源在 GitHub 上。你今天就可以从 PyPI 安装并运行流程，无需创建账户。托管云服务是在此基础上叠加的付费选项 — 从不是必须的。"
+                                           },
+                                           {
+                                               "q":  "这和 Zapier 或 Make 有什么区别？",
+                                               "a":  "Zapier 和 Make 在云端连接 SaaS API。Flyto2 录制并回放真实的浏览器操作 — 包括没有公共 API 的网站 — 并在你自己的电脑上运行。如果你的银行、ERP 或供应商门户不在 Zapier 的目录里，那正是 Flyto2 填补的空白。"
+                                           },
+                                           {
+                                               "q":  "我自动化的网站改版了怎么办？",
+                                               "a":  "Flyto2 录制语义动作（「点击登录按钮」）而不是脆弱的 CSS 选择器。当网站重新换皮时，大多数流程继续运行。当某一步确实出问题，你暂停、修复这一步、继续 — 不需要重写整个流程。"
+                                           },
+                                           {
+                                               "q":  "团队可以共享工作流吗？",
+                                               "a":  "可以。工作流是普通文件，你可以提交到 git、通过应用内市场分享，或发给同事。运行历史保留在本地；只有工作流定义会传递。"
+                                           },
+                                           {
+                                               "q":  "费用是多少？",
+                                               "a":  "桌面应用和开源引擎对个人使用免费。Pro 和 Team 方案增加托管调度、共享市场和优先支持 — 定价详见 Cloud 页面。"
+                                           }
+                                       ]
+                         },
+                 "cta":  {
+                             "label":  "探索平台",
+                             "title":  "两款产品。一种理念。",
+                             "body":  "Cloud 今日已上线。Warroom 即将到来。两者共享离线优先引擎 — 选一个解决今天的问题。",
+                             "primary":  "前往 Cloud",
+                             "secondary":  "前往 Warroom"
+                         }
              },
-    "code":  {
-                 "hero":  {
-                              "ctaBetaBadge":  "Beta",
-                              "ctaBeta":  "前往 Beta",
-                              "status":  "公测中"
+    "cloud":  {
+                  "metaTitle":  "Cloud — 无代码浏览器自动化",
+                  "metaDescription":  "一次录制，永久回放。离线运行的浏览器自动化。250+ 模块，16 种语言，MIT 许可证引擎。",
+                  "hero":  {
+                               "eyebrow":  "01 / CLOUD",
+                               "status":  "已上线",
+                               "title":  "浏览器工作，",
+                               "titleAccent":  "全自动驾驶。",
+                               "lede":  "打开录制器，做一次任务，停止。Flyto2 将其转化为可编辑、可版本化、可调度和可共享的结构化工作流 — 无需写一行代码。",
+                               "ctaPrimary":  "下载桌面应用",
+                               "ctaSecondary":  "浏览 250+ 模块"
+                           },
+                  "how":  {
+                              "label":  "工作原理",
+                              "title":  "三步从手动到自动化。",
+                              "items":  [
+                                            {
+                                                "step":  "01",
+                                                "icon":  "Video",
+                                                "title":  "录制",
+                                                "body":  "点击录制按钮，做一次任务。Flyto2 捕获点击、滚动、输入和等待 — 每一步，按顺序，在本地。"
+                                            },
+                                            {
+                                                "step":  "02",
+                                                "icon":  "GitBranch",
+                                                "title":  "编辑",
+                                                "body":  "以可视化节点添加 if/else、循环、重试和凭据。运行中暂停检查某个值，修改后继续。"
+                                            },
+                                            {
+                                                "step":  "03",
+                                                "icon":  "Repeat",
+                                                "title":  "回放",
+                                                "body":  "按需运行、按计划运行，或通过 CLI 运行。Flyto2 在你的电脑上精确重现每一步，并留下完整审计轨迹。"
+                                            }
+                                        ]
+                          },
+                  "features":  {
+                                   "label":  "功能",
+                                   "title":  "专为你反复在做的工作而生。",
+                                   "items":  [
+                                                 {
+                                                     "icon":  "Video",
+                                                     "title":  "录制任意流程",
+                                                     "body":  "打开录制器，做一次任务，停止。Flyto2 将其捕获为可编辑和可共享的结构化工作流。"
+                                                 },
+                                                 {
+                                                     "icon":  "Pause",
+                                                     "title":  "暂停并检查",
+                                                     "body":  "工作流不是黑盒子。逐步执行，运行中修改值，继续 — 像日常工作的调试器。"
+                                                 },
+                                                 {
+                                                     "icon":  "ShieldOff",
+                                                     "title":  "设计即离线",
+                                                     "body":  "在你的电脑上运行。凭据、抓取的数据、运行历史 — 从不发送到任何地方，包括我们。"
+                                                 },
+                                                 {
+                                                     "icon":  "Boxes",
+                                                     "title":  "250+ 模块",
+                                                     "body":  "CSV、Excel、Stripe、Notion、Sheets、Postgres、Slack、OpenAI — 预先接好线，让你直接拼接而不是手写 API。"
+                                                 },
+                                                 {
+                                                     "icon":  "GitBranch",
+                                                     "title":  "分支与合并",
+                                                     "body":  "if/else、循环、重试、错误处理 — 你会在代码里写的东西，以可视化节点呈现，五秒读懂。"
+                                                 },
+                                                 {
+                                                     "icon":  "Languages",
+                                                     "title":  "16 种语言",
+                                                     "body":  "录制器、运行时、文档、错误消息 — 全部翻译。你的运营团队用自己的语言使用 Flyto2，而不是你的语言。"
+                                                 }
+                                             ]
+                               },
+                  "codeSample":  {
+                                     "label":  "底层原理",
+                                     "title":  "一个你能读懂的文件。",
+                                     "subtitle":  "每个录制的工作流都是一个 JSON 文件。提交到 git、在 review 时 diff、从 CI 运行、从任何地方触发。",
+                                     "point1":  "纯 JSON — 无专有二进制格式",
+                                     "point2":  "从 CLI、webhook、cron 或你自己的后端触发",
+                                     "point3":  "一键导出到 GitHub Actions、GitLab CI 或 Jenkins"
+                                 },
+                  "comparison":  {
+                                     "label":  "对比竞品",
+                                     "title":  "为什么团队切换到 Flyto2。",
+                                     "subtitle":  "Zapier、Make、Selenium — 各自解决部分问题。当你需要真实浏览器行为、在本地、无需按任务租用算力时，Flyto2 是你的选择。",
+                                     "featureHeader":  "你的需求",
+                                     "data":  {
+                                                  "rows":  [
+                                                               {
+                                                                   "feature":  "录制真实浏览器操作",
+                                                                   "values":  [
+                                                                                  "yes",
+                                                                                  "no",
+                                                                                  "no",
+                                                                                  "yes"
+                                                                              ]
+                                                               },
+                                                               {
+                                                                   "feature":  "离线 / 本地运行",
+                                                                   "values":  [
+                                                                                  "yes",
+                                                                                  "no",
+                                                                                  "no",
+                                                                                  "yes"
+                                                                              ]
+                                                               },
+                                                               {
+                                                                   "feature":  "个人使用免费",
+                                                                   "values":  [
+                                                                                  "yes",
+                                                                                  "partial",
+                                                                                  "partial",
+                                                                                  "yes"
+                                                                              ]
+                                                               },
+                                                               {
+                                                                   "feature":  "可视化编辑器（无需代码）",
+                                                                   "values":  [
+                                                                                  "yes",
+                                                                                  "yes",
+                                                                                  "yes",
+                                                                                  "no"
+                                                                              ]
+                                                               },
+                                                               {
+                                                                   "feature":  "运行中可暂停、检查、继续",
+                                                                   "values":  [
+                                                                                  "yes",
+                                                                                  "no",
+                                                                                  "no",
+                                                                                  "partial"
+                                                                              ]
+                                                               },
+                                                               {
+                                                                   "feature":  "按积分计费，而非按任务计费",
+                                                                   "values":  [
+                                                                                  "yes",
+                                                                                  "no",
+                                                                                  "no",
+                                                                                  "yes"
+                                                                              ]
+                                                               },
+                                                               {
+                                                                   "feature":  "工作流文件为纯 JSON",
+                                                                   "values":  [
+                                                                                  "yes",
+                                                                                  "no",
+                                                                                  "no",
+                                                                                  "no"
+                                                                              ]
+                                                               },
+                                                               {
+                                                                   "feature":  "开源引擎",
+                                                                   "values":  [
+                                                                                  "yes",
+                                                                                  "no",
+                                                                                  "no",
+                                                                                  "yes"
+                                                                              ]
+                                                               }
+                                                           ]
+                                              }
+                                 },
+                  "recipes":  {
+                                  "label":  "预建食谱",
+                                  "title":  "一条命令，真实结果。",
+                                  "subtitle":  "食谱是已接好线并经过测试的工作流。安装 Cloud，运行 `flyto recipe [name]`，获取报告。无需配置，基础功能无需 API 密钥。",
+                                  "items":  [
+                                                {
+                                                    "iconName":  "Search",
+                                                    "name":  "competitor-intel",
+                                                    "command":  "flyto recipe competitor-intel --url https://competitor.com/pricing",
+                                                    "body":  "抓取定价层级，截取桌面端+移动端截图，捕获 Web Vitals，解析 SEO meta，返回一份结构化 JSON 报告。",
+                                                    "outputs":  [
+                                                                    "pricing.json",
+                                                                    "intel-desktop.png",
+                                                                    "intel-mobile.png",
+                                                                    "vitals",
+                                                                    "seo"
+                                                                ]
+                                                },
+                                                {
+                                                    "iconName":  "Activity",
+                                                    "name":  "full-audit",
+                                                    "command":  "flyto recipe full-audit --url https://example.com",
+                                                    "body":  "Web Vitals + SEO + 无障碍（alt 标签、标签）+ 控制台错误 + 移动端/桌面端截图 + 可打印 PDF。",
+                                                    "outputs":  [
+                                                                    "audit.json",
+                                                                    "audit-desktop.png",
+                                                                    "audit-mobile.png",
+                                                                    "audit-page.pdf"
+                                                                ]
+                                                },
+                                                {
+                                                    "iconName":  "Globe",
+                                                    "name":  "site-audit",
+                                                    "command":  "flyto recipe site-audit --url https://github.com",
+                                                    "body":  "SEO + 性能审计 — meta、标题、缺失 alt、Web Vitals、全页截图。比 full-audit 更轻量，秒级完成。",
+                                                    "outputs":  [
+                                                                    "report.json",
+                                                                    "page.png"
+                                                                ]
+                                                },
+                                                {
+                                                    "iconName":  "Camera",
+                                                    "name":  "screenshot",
+                                                    "command":  "flyto recipe screenshot --url https://flyto2.com --device mobile",
+                                                    "body":  "任意设备视口的像素级精确截图。适用于 QA、设计评审或拼接每日变更检测差异图。",
+                                                    "outputs":  [
+                                                                    "screenshot.png"
+                                                                ]
+                                                }
+                                            ]
+                              },
+                  "useCases":  {
+                                   "label":  "使用场景",
+                                   "title":  "大家最先自动化什么。",
+                                   "items":  [
+                                                 {
+                                                     "icon":  "FileText",
+                                                     "title":  "发票与收据提取",
+                                                     "body":  "每周一登录供应商门户，下载 PDF，按客户归档，推送汇总到 Sheets — 全程不碰键盘。"
+                                                 },
+                                                 {
+                                                     "icon":  "Database",
+                                                     "title":  "跨系统数据同步",
+                                                     "body":  "当你常用的 SaaS 和财务团队常用的 SaaS 不互通时，Flyto2 录制这座桥，每晚自动运行。"
+                                                 },
+                                                 {
+                                                     "icon":  "Search",
+                                                     "title":  "价格与竞品监控",
+                                                     "body":  "访问一批 URL，抓取价格，写入 CSV，变化时告警 Slack。两周的实习生工作，一个下午自动化完成。"
+                                                 },
+                                                 {
+                                                     "icon":  "Mail",
+                                                     "title":  "线索路由与丰富",
+                                                     "body":  "从 CRM 拉取，通过公开网络丰富，推回带标签的联系人。无 Zapier 中间人，无月度任务上限。"
+                                                 }
+                                             ]
+                               },
+                  "faq":  {
+                              "label":  "常见问题",
+                              "title":  "Cloud — 最常被问到的问题。",
+                              "subtitle":  "录制、回放、安全、定价 — 运营和 IT 负责人在批准工具前会问的问题。",
+                              "items":  [
+                                            {
+                                                "q":  "Cloud 能在没有公共 API 的网站上工作吗？",
+                                                "a":  "这正是它的职责。只要你能在浏览器里做这个任务，Flyto2 就能录制并回放 — 内部门户、政府网站、老旧 ERP，任何地方。"
+                                            },
+                                            {
+                                                "q":  "它真的在我的电脑上运行吗？",
+                                                "a":  "是的。桌面应用捆绑了 Chromium 引擎和工作流运行时。你的凭据、录制步骤和执行历史存在你的磁盘上。云服务是调度、共享和团队功能的可选项。"
+                                            },
+                                            {
+                                                "q":  "网站改版了怎么办？",
+                                                "a":  "Flyto2 录制语义意图（「点击登录」、「填写邮箱字段」）而不是脆弱的 XPath。当网站重新换皮时，大多数流程继续正常运行。当某一步出问题，你只需在可视化编辑器中修复那一步。"
+                                            },
+                                            {
+                                                "q":  "我能从 CI / 脚本触发流程吗？",
+                                                "a":  "可以。每个工作流都有 CLI 调用方式和 webhook URL。从 cron、GitHub Actions、你自己的后端，或 Flyto2 的托管调度器运行 — 同一个工作流文件，同样的结果。"
+                                            },
+                                            {
+                                                "q":  "如何处理双因素认证和验证码？",
+                                                "a":  "Flyto2 可以暂停并提示你（或团队中的成员）完成双因素认证挑战，然后继续。验证码故意不被绕过 — 在禁止自动化的网站上使用 Flyto2，由你自己决定，而不是我们。"
+                                            },
+                                            {
+                                                "q":  "价格是多少？",
+                                                "a":  "桌面应用和开源引擎对个人使用免费。Pro 增加托管调度和无限云端运行；Team 增加共享市场和 SSO。详细定价见 Cloud 页面。"
+                                            }
+                                        ]
+                          },
+                  "cta":  {
+                              "label":  "开始使用",
+                              "title":  "录制一次，每周自动化。",
+                              "body":  "下载桌面应用，五分钟录制你的第一个工作流，看它永久运行。",
+                              "primary":  "免费下载",
+                              "secondary":  "阅读文档"
                           }
-             },
+              },
+    "download":  {
+                     "metaTitle":  "下载 Flyto2",
+                     "metaDescription":  "下载 Flyto2 — 适用于 macOS、Windows 和 Linux 的免费桌面应用。离线运行的浏览器自动化，无需账户。",
+                     "downloadFor":  "下载 {os} 版本",
+                     "allReleases":  "GitHub 上的所有版本",
+                     "hero":  {
+                                  "eyebrow":  "桌面应用 · 免费",
+                                  "title":  "下载",
+                                  "titleAccent":  "Flyto2。",
+                                  "lede":  "个人使用永久免费。macOS、Windows、Linux — 捆绑开源引擎。无需账户，无遥测，离线运行。"
+                              },
+                     "docker":  {
+                                    "title":  "用 Docker 自托管",
+                                    "body":  "在容器中运行同一引擎 — 非常适合无头服务器、CI 代理或隔离网络的企业部署。",
+                                    "cta":  "Docker Hub"
+                                },
+                     "oss":  {
+                                 "title":  "或只用 PyPI 上的引擎",
+                                 "body":  "执行核心是 MIT 许可证的 Python 库。作为库安装，使用 CLI，嵌入你自己的管道。",
+                                 "cta":  "在 GitHub 上查看源码"
+                             },
+                     "cta":  {
+                                 "label":  "其他帮助",
+                                 "title":  "需要特定内容？",
+                                 "body":  "寻找旧版本、不同架构，或部署到受监管环境？前往 GitHub releases 或文档。",
+                                 "primary":  "查看发布版本",
+                                 "secondary":  "阅读文档"
+                             }
+                 },
+    "pricing":  {
+                    "metaTitle":  "定价 — Flyto2",
+                    "metaDescription":  "个人使用永久免费。Pro 方案 $9/月，Team 方案 $19/月。离线运行浏览器自动化的透明定价。",
+                    "perMonth":  "/ 月",
+                    "mostPopular":  "最受欢迎",
+                    "priceFootnote":  "美元 · 随时取消 · 无需信用卡即可开始",
+                    "hero":  {
+                                 "eyebrow":  "定价",
+                                 "title":  "永久免费。",
+                                 "titleAccent":  "规模扩大时升级 Pro。",
+                                 "lede":  "个人使用在桌面和开源引擎上均免费。仅在需要托管调度、团队管理或更高月度算力时升级。"
+                             },
+                    "plans":  {
+                                  "free":  {
+                                               "label":  "免费",
+                                               "name":  "免费版",
+                                               "tagline":  "适合个人探索自动化。",
+                                               "feature1":  "每月 1,000 计算积分",
+                                               "feature2":  "最多 5 个已保存工作流",
+                                               "feature3":  "所有 250+ 模块",
+                                               "feature4":  "社区支持",
+                                               "cta":  "免费下载"
+                                           },
+                                  "pro":  {
+                                              "label":  "专业版",
+                                              "name":  "Pro",
+                                              "tagline":  "适合每天运行自动化的重度用户。",
+                                              "feature1":  "每月 50,000 计算积分",
+                                              "feature2":  "无限工作流",
+                                              "feature3":  "托管调度 — cron、webhook、重试",
+                                              "feature4":  "优先支持，24 小时 SLA",
+                                              "feature5":  "市场发布",
+                                              "cta":  "开始使用 Pro"
+                                          },
+                                  "team":  {
+                                               "label":  "团队版",
+                                               "name":  "Team",
+                                               "tagline":  "适合在公司内共享工作流的运营团队。",
+                                               "feature1":  "每月 200,000 计算积分",
+                                               "feature2":  "最多 10 个席位",
+                                               "feature3":  "RBAC 和共享市场",
+                                               "feature4":  "SSO（Google、Microsoft）",
+                                               "feature5":  "专属入门指导",
+                                               "cta":  "开始使用 Team"
+                                           }
+                              },
+                    "faq":  {
+                                "label":  "常见问题",
+                                "title":  "定价问题，逐一解答。",
+                                "subtitle":  "计算积分、席位限制、计费 — 买家在出手前会问的问题。",
+                                "items":  [
+                                              {
+                                                  "q":  "什么是「计算积分」？",
+                                                  "a":  "积分是工作单位 — 大约对应一个工作流步骤（一次点击、一行 CSV、一次 API 调用）。50,000 积分每月大约覆盖 100 小时的典型浏览器自动化。"
+                                              },
+                                              {
+                                                  "q":  "免费方案真的永久免费吗？",
+                                                  "a":  "是的。桌面应用和开源引擎对个人使用永久免费。免费层唯一不包含的是托管调度和团队功能。"
+                                              },
+                                              {
+                                                  "q":  "超出月度积分会怎样？",
+                                                  "a":  "工作流将暂停至下个周期，或者你可以按每 1,000 积分 $0.20 的价格购买补充包。我们从不悄悄超收 — 你在运行前确认补充。"
+                                              },
+                                              {
+                                                  "q":  "有年付或折扣吗？",
+                                                  "a":  "年付可节省 Pro 和 Team 方案 20% 费用。提供教育和非营利折扣 — 发邮件至 info@flyto2.com。"
+                                              },
+                                              {
+                                                  "q":  "我可以自托管吗？",
+                                                  "a":  "可以。PyPI 上的开源引擎可运行除托管调度之外的所有功能。带 SSO 和隔离网络部署的企业自托管在路线图中。"
+                                              }
+                                          ]
+                            },
+                    "cta":  {
+                                "label":  "仍在考虑",
+                                "title":  "付款前先试用。",
+                                "body":  "下载免费桌面应用，录制一个工作流，看 Flyto2 是否适合你要解决的问题。只有在确认值得时才升级。",
+                                "primary":  "免费下载",
+                                "secondary":  "阅读文档"
+                            }
+                },
+    "forum":  {
+                  "titleCloud":  "Cloud — 讨论区",
+                  "subtitleCloud":  "提问、报告错误、分享工作流。所有人可阅读，使用免费 Flyto2 账户发帖。",
+                  "titleCode":  "Warroom — 讨论区",
+                  "subtitleCode":  "安全、扫描、闭环验证。公开可阅读，免费账户可发帖。",
+                  "auth":  {
+                               "loading":  "正在检查登录状态…",
+                               "title":  "登录以继续",
+                               "subtitle":  "帖子与你的账户关联，以便在回复中显示你的名字并通知你。我们不会分享你的邮箱。",
+                               "continueGoogle":  "使用 Google 继续",
+                               "or":  "或",
+                               "email":  "邮箱",
+                               "password":  "密码",
+                               "signIn":  "登录",
+                               "signUp":  "创建账户",
+                               "switchToSignUp":  "没有账户？创建一个",
+                               "switchToSignIn":  "已有账户？登录",
+                               "signOut":  "退出登录",
+                               "error":  "出错了，请重试。",
+                               "reason":  {
+                                              "post":  "登录后发帖",
+                                              "comment":  "登录后回复",
+                                              "react":  "登录后点赞"
+                                          }
+                           },
+                  "list":  {
+                               "compose":  "新建帖子",
+                               "composeSignIn":  "登录后发帖",
+                               "loadMore":  "加载更多",
+                               "empty":  "暂无帖子 — 第一个提问吧。",
+                               "error":  "无法加载帖子，刷新后重试。",
+                               "indexBuilding":  "Firestore 正在为此查询建立索引。每 30 秒自动重试 — 无需刷新。",
+                               "prev":  "上一页",
+                               "next":  "下一页",
+                               "first":  "第一页",
+                               "pageIndicator":  "第 {page} 页"
+                           },
+                  "categories":  {
+                                     "all":  "全部",
+                                     "question":  "问答",
+                                     "bug":  "错误报告",
+                                     "feature":  "功能请求",
+                                     "discussion":  "讨论"
+                                 },
+                  "sort":  {
+                               "new":  "最新",
+                               "hot":  "热门",
+                               "top":  "精华"
+                           },
+                  "composer":  {
+                                   "title":  "发起讨论",
+                                   "subtitle":  "支持 Markdown。请具体说明 — 标题一行，正文附上复现步骤/背景。",
+                                   "titlePlaceholder":  "你的问题或报告是什么？",
+                                   "bodyPlaceholder":  "添加详情 — 支持 Markdown。代码块使用三个反引号。",
+                                   "tagsPlaceholder":  "标签（逗号分隔，最多 5 个）",
+                                   "markdownHint":  "Markdown · 代码块 · @提及（即将支持）",
+                                   "submit":  "发布",
+                                   "error":  "无法发布，检查网络后重试。"
+                               },
+                  "comments":  {
+                                   "heading":  "{count, plural, =0 {暂无回复} =1 {1 条回复} other {# 条回复}}",
+                                   "empty":  "第一个回复吧。",
+                                   "placeholder":  "写下回复… 支持 Markdown。",
+                                   "submit":  "回复",
+                                   "error":  "无法发布回复。"
+                               },
+                  "detail":  {
+                                 "back":  "返回讨论区",
+                                 "notFound":  "此帖子已删除或从未存在。",
+                                 "error":  "无法加载此帖子。"
+                             }
+              },
     "templates":  {
+                      "metaTitle":  "模板 — Flyto2 市场",
+                      "metaDescription":  "用于发票、抓取、线索丰富等场景的预建工作流模板。一键安装。",
+                      "gridLabel":  "安装最多",
+                      "gridTitle":  "大家实际运行的工作流。",
+                      "gridSubtitle":  "这些是真实客户账户中出现的食谱。每个都是起点 — 克隆、适配、运行。",
+                      "contributeOnGithub":  "在 GitHub 上贡献模板",
+                      "hero":  {
+                                   "eyebrow":  "市场 · 持续增长",
+                                   "title":  "一键可安装的",
+                                   "titleAccent":  "工作流。",
+                                   "lede":  "已录制、已标签、随时可运行。从应用内浏览市场，或在下方查看最受欢迎的内容 — 每个条目都附有可编辑的源工作流文件。"
+                               },
+                      "items":  [
+                                    {
+                                        "iconName":  "Receipt",
+                                        "category":  "财务",
+                                        "title":  "发票提取",
+                                        "body":  "登录供应商门户，下载 PDF，按客户归档，推送汇总到 Sheets。"
+                                    },
+                                    {
+                                        "iconName":  "ShoppingCart",
+                                        "category":  "电商",
+                                        "title":  "订单对账",
+                                        "body":  "从 Stripe 拉取订单，与 Shopify 匹配，在 Slack 中呈现差异。"
+                                    },
+                                    {
+                                        "iconName":  "Search",
+                                        "category":  "调研",
+                                        "title":  "竞品监控",
+                                        "body":  "访问一批 URL，抓取定价，任何变动时告警 Slack。"
+                                    },
+                                    {
+                                        "iconName":  "Mail",
+                                        "category":  "增长",
+                                        "title":  "线索丰富",
+                                        "body":  "从 CRM 拉取，通过公开网络丰富，写回带标签的联系人。"
+                                    },
+                                    {
+                                        "iconName":  "Database",
+                                        "category":  "同步",
+                                        "title":  "跨 SaaS 同步",
+                                        "body":  "每晚桥接两个原生不互通的 SaaS 工具。"
+                                    },
+                                    {
+                                        "iconName":  "Calendar",
+                                        "category":  "运营",
+                                        "title":  "日历批处理",
+                                        "body":  "读取预订 CSV，创建日历事件，发送提醒。"
+                                    },
+                                    {
+                                        "iconName":  "FileText",
+                                        "category":  "合规",
+                                        "title":  "文档获取",
+                                        "body":  "季度下载账单、合同、证书 — 自动归档。"
+                                    },
+                                    {
+                                        "iconName":  "Bell",
+                                        "category":  "监控",
+                                        "title":  "网站可用性检查",
+                                        "body":  "探测一批 URL，检查状态，任何出现红色时告警。"
+                                    }
+                                ],
+                      "cta":  {
+                                  "label":  "找不到合适的？",
+                                  "title":  "告诉我们你最想自动化什么。",
+                                  "body":  "如果有你想要的工作流模板，在 GitHub Discussions 中告诉我们，或者自己构建 — 运行时是开源的。",
+                                  "primary":  "打开讨论区",
+                                  "secondary":  "阅读文档"
+                              },
                       "details":  {
                                       "auto-login-template":  {
                                                                   "title":  "自动登录模板",
@@ -406,5 +1120,373 @@
                                                                                      ]
                                                                         }
                                   }
-                  }
+                  },
+    "code":  {
+                 "metaTitle":  "Warroom — 应用安全战情室",
+                 "metaDescription":  "SCA、SAST、密钥、许可证、CVE、渗透测试、运行时 — 你的代码库的一张完整作战图。即将发布。",
+                 "hero":  {
+                              "eyebrow":  "02 / CODE",
+                              "status":  "公测中",
+                              "title":  "一个战情室。",
+                              "titleAccent":  "覆盖每个攻击角度。",
+                              "lede":  "SCA、SAST、密钥检测、许可证审计、CVE 分诊、渗透测试工作流、运行时遥测。Warroom 是你交付的每一行代码安全性的作战图。",
+                              "ctaPrimary":  "加入候补名单",
+                              "ctaSecondary":  "试用开源 CLI",
+                              "ctaBetaBadge":  "Beta",
+                              "ctaBeta":  "前往 Beta"
+                          },
+                 "closedLoop":  {
+                                    "label":  "差异所在",
+                                    "title":  "闭环验证。",
+                                    "subtitle":  "其他所有安全工具都止步于告警。Warroom 将每个发现转化为 YAML 渗透测试，在真实浏览器中对你的 staging 环境运行，并给出裁定 — 可利用、已净化或不可达。",
+                                    "find":  {
+                                                 "title":  "发现",
+                                                 "body":  "SCA、SAST、密钥、许可证、IaC。同一次扫描将你的代码解析为调用图和架构图。",
+                                                 "signal":  "scan"
+                                             },
+                                    "craft":  {
+                                                  "title":  "构造",
+                                                  "body":  "针对每个安全相关发现，生成一个作用于受影响路由的 YAML 渗透测试工作流。",
+                                                  "signal":  "yaml"
+                                              },
+                                    "run":  {
+                                                "title":  "运行",
+                                                "body":  "在真实 Chrome 会话中对 staging 环境执行工作流。今日已内置 12 个官方 OWASP / LLM / 业务逻辑剧本。",
+                                                "signal":  "live"
+                                            },
+                                    "verdictStep":  {
+                                                        "title":  "裁定",
+                                                        "body":  "捕获 HMAC 签名证据，报告可利用 / 已净化 / 不可达，将工作流存入回归库以供每晚重跑。",
+                                                        "signal":  "ledger"
+                                                    },
+                                    "verdict":  {
+                                                    "exploitable":  {
+                                                                        "title":  "可利用",
+                                                                        "body":  "漏洞端到端可运行。已附证据包。升级至队列顶部处理。"
+                                                                    },
+                                                    "sanitized":  {
+                                                                      "title":  "已净化",
+                                                                      "body":  "已被下游控制（认证、WAF、框架）缓解。已记录，降优先级。"
+                                                                  },
+                                                    "unreachable":  {
+                                                                        "title":  "不可达",
+                                                                        "body":  "存在漏洞代码，但没有用户输入路径可到达它。已确认，低优先级。"
+                                                                    }
+                                                }
+                                },
+                 "proof":  {
+                               "label":  "真实验证",
+                               "title":  "我们在 OWASP Juice Shop 上测试过。",
+                               "subtitle":  "不是合成沙盒。经典的故意存在漏洞的电商应用，端到端通过闭环运行。这是其中一次活动的输出。",
+                               "caption":  "每个发现都附带 HMAC 签名证据包。证据链通过回归库每晚重放 — 当修复落地时，Warroom 验证它保持已修复状态。",
+                               "data":  {
+                                            "metric":  [
+                                                           {
+                                                               "value":  "5",
+                                                               "label":  "BREACH 级攻击链"
+                                                           },
+                                                           {
+                                                               "value":  "11",
+                                                               "label":  "严重发现"
+                                                           },
+                                                           {
+                                                               "value":  "12",
+                                                               "label":  "渗透测试剧本"
+                                                           },
+                                                           {
+                                                               "value":  "100%",
+                                                               "label":  "每晚可重放"
+                                                           }
+                                                       ],
+                                            "chain":  [
+                                                          {
+                                                              "vector":  "SQLi · 登录",
+                                                              "finding":  "POST /rest/user/login 的 `email` 字段中存在重言式绕过 — 认证被跳过，会话 token 已颁发。"
+                                                          },
+                                                          {
+                                                              "vector":  "Token 窃取",
+                                                              "finding":  "从响应中提取 JWT 并解码 — admin 声明不存在，但签名密钥在用户间复用。"
+                                                          },
+                                                          {
+                                                              "vector":  "链式 IDOR",
+                                                              "finding":  "GET /api/Users/{id} 接受任意 id；服务器返回包含密码哈希的完整记录。"
+                                                          },
+                                                          {
+                                                              "vector":  "权限提升",
+                                                              "finding":  "使用泄露密钥伪造 JWT，设置 role=admin，重放请求 — 仅限管理员的端点响应 200。"
+                                                          },
+                                                          {
+                                                              "vector":  "数据外泄",
+                                                              "finding":  "GET /api/Orders 枚举了每个客户的购买历史。证据包：2.4 MB。"
+                                                          }
+                                                      ]
+                                        }
+                           },
+                 "features":  {
+                                  "label":  "战情室内部",
+                                  "title":  "七个视图，一个真相来源。",
+                                  "subtitle":  "Warroom 的每个面板都围绕安全团队已经在问的问题构建。以下是你在战情室中实际看到的内容。",
+                                  "items":  [
+                                                {
+                                                    "label":  "仪表盘",
+                                                    "title":  "每个项目一个 A–F 评分。",
+                                                    "body":  "将所有信号 — SCA、SAST、密钥、许可证、CVE、运行时 — 汇总为单一评级。你的 CISO 看到标题数字。你的工程师深入到出血的面板。",
+                                                    "imageAlt":  "Warroom 健康仪表盘，带 A–F 评分",
+                                                    "bullets":  [
+                                                                    "每个类别的趋势线",
+                                                                    "按团队和按服务汇总",
+                                                                    "自动生成每周简报"
+                                                                ]
+                                                },
+                                                {
+                                                    "label":  "可达性",
+                                                    "title":  "哪些 CVE 实际上在运行。",
+                                                    "body":  "大多数 CVE 告警都是噪音 — 存在漏洞的函数从未从你的代码中被调用。可达性分析追踪真实调用路径，让你修复重要的 5%，而不是无关紧要的 95%。",
+                                                    "imageAlt":  "可达性分析，显示可利用调用路径",
+                                                    "bullets":  [
+                                                                    "静态 + 动态调用图",
+                                                                    "跨包污点传播",
+                                                                    "假阳性率经过测量，而非声称"
+                                                                ]
+                                                },
+                                                {
+                                                    "label":  "依赖项",
+                                                    "title":  "你的供应链，一图呈现。",
+                                                    "body":  "每个直接和传递依赖项，按风险加权并叠加 CVE。点击任意节点，查看谁引入了它、它下一步引入什么，以及你的哪些服务依赖它。",
+                                                    "imageAlt":  "依赖图，带漏洞叠加层",
+                                                    "bullets":  [
+                                                                    "许可证 + 维护者风险叠加层",
+                                                                    "发现固定在不同版本的重复项",
+                                                                    "所有权标签从 monorepo 配置传播"
+                                                                ]
+                                                },
+                                                {
+                                                    "label":  "架构",
+                                                    "title":  "你的代码库的整体形态。",
+                                                    "body":  "模块、服务、数据流、所有权边界 — 直接从源码推导，而非来自六个月未更新的 wiki。无需注解即可读取，随着你的交付不断精化。",
+                                                    "imageAlt":  "服务和模块的架构图",
+                                                    "bullets":  [
+                                                                    "从构建文件自动发现服务",
+                                                                    "高亮跨边界调用",
+                                                                    "与上次发布对比，捕获漂移"
+                                                                ]
+                                                },
+                                                {
+                                                    "label":  "API 接口",
+                                                    "title":  "每个端点，已建档。",
+                                                    "body":  "REST、gRPC、GraphQL — Warroom 在你的处理器中找到它们，并列出它们接受什么、返回什么、谁调用它们。认证缺口和未认证端点自动浮现。",
+                                                    "imageAlt":  "API 端点清单，带认证元数据",
+                                                    "bullets":  [
+                                                                    "每个路由的认证策略列",
+                                                                    "公开与内部分类",
+                                                                    "任意框架的 OpenAPI 导出"
+                                                                ]
+                                                },
+                                                {
+                                                    "label":  "基础设施",
+                                                    "title":  "IaC 在同一次运行中扫描。",
+                                                    "body":  "Terraform、Kubernetes 清单、Dockerfile — Warroom 与应用代码一起读取你的基础设施，因此安全态势和运行时拓扑来自同一次扫描。",
+                                                    "imageAlt":  "基础设施即代码扫描视图",
+                                                    "bullets":  [
+                                                                    "Terraform、Helm、K8s、Dockerfile",
+                                                                    "与 CIS 同步更新的错误配置目录",
+                                                                    "漂移检测：已部署 vs 已提交的差异"
+                                                                ]
+                                                },
+                                                {
+                                                    "label":  "脉搏",
+                                                    "title":  "安全漂移，随时间呈现。",
+                                                    "body":  "全团队实时动态，显示什么发生了变化、何时变化、以及如何影响评分。不是用来浏览的仪表盘 — 是用来发现问题的仪表盘。",
+                                                    "imageAlt":  "脉搏视图，显示安全漂移时间线",
+                                                    "bullets":  [
+                                                                    "每位工程师对风险变化的贡献",
+                                                                    "评分骤降时的升级规则",
+                                                                    "可重放历史 — 查看移动指针的确切提交"
+                                                                ]
+                                                }
+                                            ]
+                              },
+                 "scans":  {
+                               "label":  "扫描内容",
+                               "title":  "八个信号，一个健康评分。",
+                               "subtitle":  "每个项目获得一个 A–F 评分，汇总攻击者实际对你使用的内容。深入任意信号，查看底层发现、建议修复方案和 AI 生成的修复 PR。",
+                               "items":  [
+                                             {
+                                                 "icon":  "Boxes",
+                                                 "title":  "SCA",
+                                                 "body":  "锁文件中的存在漏洞依赖项，按可达性加权 — 而不仅仅是「CVE 存在」。"
+                                             },
+                                             {
+                                                 "icon":  "Code2",
+                                                 "title":  "SAST",
+                                                 "body":  "从不受信任输入到危险汇点的源码级污点流，基于 AST 感知。"
+                                             },
+                                             {
+                                                 "icon":  "KeyRound",
+                                                 "title":  "密钥",
+                                                 "body":  "硬编码的 API 密钥、token 和凭据 — 跨历史记录，而不仅仅是 HEAD。"
+                                             },
+                                             {
+                                                 "icon":  "ScrollText",
+                                                 "title":  "许可证",
+                                                 "body":  "GPL 污染、商业不兼容许可证、缺失署名。"
+                                             },
+                                             {
+                                                 "icon":  "Bug",
+                                                 "title":  "CVE",
+                                                 "body":  "针对你的依赖树实时分诊新 CVE，附带重放 POC。"
+                                             },
+                                             {
+                                                 "icon":  "Crosshair",
+                                                 "title":  "渗透测试",
+                                                 "body":  "渗透测试即代码：录制一次漏洞利用链，对每次发布重放。"
+                                             },
+                                             {
+                                                 "icon":  "Activity",
+                                                 "title":  "运行时",
+                                                 "body":  "生产遥测、漂移检测、kill-switch — 第四阶段。"
+                                             },
+                                             {
+                                                 "icon":  "FileCheck2",
+                                                 "title":  "合规",
+                                                 "body":  "SOC 2、ISO 27001、区域数据驻留态势 — 第五阶段。"
+                                             }
+                                         ]
+                           },
+                 "phases":  {
+                                "label":  "路线图",
+                                "title":  "六个阶段，一个平台。",
+                                "items":  [
+                                              {
+                                                  "n":  "I",
+                                                  "title":  "基础",
+                                                  "status":  "shipping",
+                                                  "body":  "索引器、搜索、依赖图、A–F 健康评分。"
+                                              },
+                                              {
+                                                  "n":  "II",
+                                                  "title":  "静态分析",
+                                                  "status":  "shipping",
+                                                  "body":  "SCA、SAST、密钥扫描、许可证审计 — 开源 CLI。"
+                                              },
+                                              {
+                                                  "n":  "III",
+                                                  "title":  "动态分析",
+                                                  "status":  "next",
+                                                  "body":  "渗透测试即代码、运行时探针、CVE 重放。"
+                                              },
+                                              {
+                                                  "n":  "IV",
+                                                  "title":  "运行时",
+                                                  "status":  "planned",
+                                                  "body":  "生产遥测、漂移检测、kill-switch。"
+                                              },
+                                              {
+                                                  "n":  "V",
+                                                  "title":  "合规",
+                                                  "status":  "planned",
+                                                  "body":  "SOC 2、ISO 27001、区域数据驻留态势。"
+                                              },
+                                              {
+                                                  "n":  "VI",
+                                                  "title":  "联邦化",
+                                                  "status":  "planned",
+                                                  "body":  "安全团队的多组织战情室。"
+                                              }
+                                          ]
+                            },
+                 "faq":  {
+                             "label":  "常见问题",
+                             "title":  "Warroom — 加入候补前的问题。",
+                             "subtitle":  "何时上线、有何不同、今天能做什么。",
+                             "items":  [
+                                           {
+                                               "q":  "Warroom 何时上线？",
+                                               "a":  "第一和第二阶段（基础 + 静态分析）已处于私测状态。第三阶段（动态分析）是下一个公开里程碑 — 2026 年中提前访问。加入候补名单可获得开源 CLI 和邀请。"
+                                           },
+                                           {
+                                               "q":  "这与其他安全工具有什么不同？",
+                                               "a":  "两个差异。（1）跨 SCA、SAST、密钥、许可证、CVE、渗透测试和运行时的单一评分 — 而不是你需要关联的八个工具。（2）渗透测试即代码：你录制一次漏洞利用链，对每次发布重放，就像 Cloud 重放浏览器流一样。"
+                                           },
+                                           {
+                                               "q":  "今天能试用什么？",
+                                               "a":  "可以。`pip install flyto-indexer` 提供开源扫描器 — 搜索、引用、影响分析、死代码检测、基于 AST 的污点分析。托管战情室在第三阶段落地后叠加其上。"
+                                           },
+                                           {
+                                               "q":  "我的源码会上传到云端吗？",
+                                               "a":  "默认不会。CLI 在本地运行并生成本地索引。托管战情室可以摄取发现结果（而非源码）用于跨项目汇总；完整源码上传是每个项目的可选项。自托管是第五阶段的选项。"
+                                           },
+                                           {
+                                               "q":  "它支持私有仓库吗？",
+                                               "a":  "支持 — 开源 CLI 不关心你的代码在哪里。托管战情室开箱支持 GitHub、GitLab、Bitbucket 和自托管 Git。"
+                                           },
+                                           {
+                                               "q":  "我可以自托管战情室吗？",
+                                               "a":  "自托管在路线图中（第五阶段，与合规并行）。开源扫描器今天就可以自托管；托管 UI/编排器随后跟进。"
+                                           }
+                                       ]
+                         },
+                 "cta":  {
+                             "label":  "提前访问",
+                             "title":  "率先进入战情室。",
+                             "body":  "托管战情室基于浏览器 — 无需安装应用。加入候补名单，在第三阶段开放时获得邀请，并立即获取开源扫描器。",
+                             "primary":  "加入候补名单",
+                             "secondary":  "安装开源扫描器"
+                         },
+                 "gallery":  {
+                                 "label":  "还有十二项更多",
+                                 "title":  "每个面板都是安全团队会实际打开的。",
+                                 "subtitle":  "除了七个核心视图之外，Warroom 还提供深度专注工具目录。每一个都有其存在的理由 — 没有演示填充物。",
+                                 "items":  {
+                                               "autofix":  {
+                                                               "title":  "自动修复 PR",
+                                                               "body":  "AI 生成的修复补丁，在作为 PR 出现之前先通过你自己的 CI。评审者签字确认；没有惊喜。"
+                                                           },
+                                               "taintFlow":  {
+                                                                 "title":  "污点流可视化器",
+                                                                 "body":  "追踪用户输入经过每次转换直到命中汇点。跨函数、跨包、净化器感知。"
+                                                             },
+                                               "license":  {
+                                                               "title":  "许可证合规",
+                                                               "body":  "GPL 污染、商业冲突、署名缺口 — 在法务询问之前浮现。"
+                                                           },
+                                               "owasp":  {
+                                                             "title":  "OWASP 报告",
+                                                             "body":  "将发现映射到 OWASP Top 10 和 CWE 分类。导出审计员想要的表格。"
+                                                         },
+                                               "queue":  {
+                                                             "title":  "安全队列",
+                                                             "body":  "为小团队设计的分诊视图：已分配、进行中、不修复。不是重建工单系统 — 刚刚好。"
+                                                         },
+                                               "malware":  {
+                                                               "title":  "恶意软件检测",
+                                                               "body":  "在 npm install 将仿冒包和被攻陷的依赖版本落入你的树之前捕获它们。"
+                                                           },
+                                               "complexity":  {
+                                                                  "title":  "复杂度热点",
+                                                                  "body":  "代码行数 × 嵌套 × 分支 × 参数。统计上更难审查的函数，已排名。"
+                                                              },
+                                               "deadCode":  {
+                                                                "title":  "死代码查找器",
+                                                                "body":  "零调用者的符号、没有导入的文件。浮现你的 IDE 悄悄隐藏的内容。"
+                                                            },
+                                               "assetMap":  {
+                                                                "title":  "资产清单",
+                                                                "body":  "你拥有的每个域名、子域名、页面和端点 — 从构建产物映射，而非来自 Notion 文档。"
+                                                            },
+                                               "domainSec":  {
+                                                                 "title":  "域名安全评分",
+                                                                 "body":  "响应头、TLS 态势、暴露面 — 针对你清单中的每个域名。"
+                                                             },
+                                               "duplicate":  {
+                                                                 "title":  "重复代码图",
+                                                                 "body":  "相同逻辑存在于三个地方的情况。重构候选项，按每个克隆的变更频率排名。"
+                                                             },
+                                               "reportBuilder":  {
+                                                                     "title":  "报告构建器",
+                                                                     "body":  "将任意面板组合拼接为单一 PDF，用于董事会、客户或审计员 — 保存为周期性模板。"
+                                                                 }
+                                           }
+                             }
+             }
 }
