@@ -539,11 +539,6 @@
                               "ctaBetaBadge":  "Beta",
                               "ctaBeta":  "前往 Beta"
                           },
-                 "showcase":  {
-                                  "label":  "戰情室內部",
-                                  "title":  "你實際會看到的畫面。",
-                                  "subtitle":  "私有測試版的截圖。點縮圖切換主畫面。"
-                              },
                  "scans":  {
                                "label":  "掃描什麼",
                                "title":  "八個訊號,一個健康分數。",
