@@ -40,7 +40,7 @@
     "copyright": "© 2026 FLYTO2"
   },
   "home": {
-    "metaTitle": "Flyto2 — Offline-first automation tools",
+    "metaTitle": "Offline-first automation tools",
     "metaDescription": "Flyto2 builds offline-first automation tools. Cloud is no-code browser automation, shipping today. Warroom is the application security war room, pre-launch.",
     "hero": {
       "eyebrow": "FLYTO2 · OFFLINE-FIRST AUTOMATION",
@@ -556,7 +556,7 @@
     }
   },
   "pricing": {
-    "metaTitle": "Pricing — Flyto2",
+    "metaTitle": "Pricing",
     "metaDescription": "Free for personal use, forever. Pro at $9/mo and Team at $19/mo. Transparent pricing for browser automation that runs offline.",
     "perMonth": "/ month",
     "mostPopular": "Most popular",

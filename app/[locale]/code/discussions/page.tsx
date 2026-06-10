@@ -15,6 +15,7 @@ export async function generateMetadata({
     title: t('titleCode'),
     description: t('subtitleCode'),
     alternates: pageAlternates('code/discussions', locale),
+    robots: { index: false, follow: true },
   };
 }
 

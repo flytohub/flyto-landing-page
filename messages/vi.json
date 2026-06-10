@@ -1,1287 +1,1491 @@
 {
-    "nav": {
-        "home": "Trang chủ",
-        "cloud": "Cloud",
-        "code": "Warroom",
-        "overview": "Tổng quan",
-        "pricing": "Giá cả",
-        "download": "Tải về",
-        "templates": "Mẫu",
-        "faq": "Câu hỏi thường gặp",
-        "roadmap": "Lộ trình",
-        "oss": "Mã nguồn mở",
-        "discussions": "Thảo luận",
-        "waitlist": "Danh sách chờ",
-        "docs": "Tài liệu",
-        "blog": "Blog",
-        "contact": "Liên hệ",
-        "signIn": "Đăng nhập",
-        "soon": "Sắp ra mắt",
-        "allProducts": "Tất cả sản phẩm",
-        "beta": "Beta",
-        "integrations": "Tích hợp",
-        "recipes": "Công thức",
-        "useCases": "Trường hợp",
-        "changelog": "Cập nhật",
-        "security": "Bảo mật"
+  "nav": {
+    "home": "Trang chủ",
+    "cloud": "Cloud",
+    "code": "Warroom",
+    "overview": "Tổng quan",
+    "pricing": "Giá cả",
+    "download": "Tải về",
+    "templates": "Mẫu",
+    "faq": "Câu hỏi thường gặp",
+    "roadmap": "Lộ trình",
+    "oss": "Mã nguồn mở",
+    "discussions": "Thảo luận",
+    "waitlist": "Danh sách chờ",
+    "docs": "Tài liệu",
+    "blog": "Blog",
+    "contact": "Liên hệ",
+    "signIn": "Đăng nhập",
+    "soon": "Sắp ra mắt",
+    "allProducts": "Tất cả sản phẩm",
+    "beta": "Beta",
+    "integrations": "Tích hợp",
+    "recipes": "Công thức",
+    "useCases": "Trường hợp",
+    "changelog": "Cập nhật",
+    "security": "Bảo mật"
+  },
+  "footer": {
+    "tagline": "Công cụ tự động hoá ưu tiên offline. Công việc của bạn ở lại trên máy của bạn.",
+    "cloudTagline": "Tự động hoá trình duyệt. Ghi một lần, phát lại mãi mãi.",
+    "warroomTagline": "Phòng tác chiến an ninh ứng dụng. Xác minh vòng kín.",
+    "products": "Sản phẩm",
+    "community": "Cộng đồng",
+    "resources": "Tài nguyên",
+    "openSource": "Mã nguồn mở",
+    "privacy": "Quyền riêng tư",
+    "terms": "Điều khoản",
+    "license": "Giấy phép",
+    "copyright": "© 2026 FLYTO2"
+  },
+  "home": {
+    "metaTitle": "Công cụ tự động hoá ưu tiên offline",
+    "metaDescription": "Flyto2 xây dựng công cụ tự động hoá ưu tiên offline. Cloud là tự động hoá trình duyệt không cần code, ra mắt ngay hôm nay. Warroom là phòng tác chiến bảo mật ứng dụng, sắp ra mắt.",
+    "hero": {
+      "eyebrow": "FLYTO2 · TỰ ĐỘNG HOÁ ƯU TIÊN OFFLINE",
+      "title": "Tự động hoá",
+      "titleAccent": "ở lại trên máy của bạn.",
+      "lede": "Flyto2 xây dựng hai sản phẩm trên cùng một động cơ ưu tiên offline. Một tự động hoá công việc lặp đi lặp lại trong trình duyệt. Một kiểm toán bảo mật của từng dòng mã bạn xuất xưởng.",
+      "reassure": "MÃ NGUỒN MỞ · KHÔNG TELEMETRY · CỦA BẠN"
     },
-    "footer": {
-        "tagline": "Công cụ tự động hoá ưu tiên offline. Công việc của bạn ở lại trên máy của bạn.",
-        "cloudTagline": "Tự động hoá trình duyệt. Ghi một lần, phát lại mãi mãi.",
-        "warroomTagline": "Phòng tác chiến an ninh ứng dụng. Xác minh vòng kín.",
-        "products": "Sản phẩm",
-        "community": "Cộng đồng",
-        "resources": "Tài nguyên",
-        "openSource": "Mã nguồn mở",
-        "privacy": "Quyền riêng tư",
-        "terms": "Điều khoản",
-        "license": "Giấy phép",
-        "copyright": "© 2026 FLYTO2"
+    "products": {
+      "label": "HAI SẢN PHẨM",
+      "title": "Chọn cái giải quyết vấn đề hôm nay.",
+      "subtitle": "Cùng một động cơ, cùng một triết lý. Mỗi sản phẩm được xây dựng cho đối tượng riêng, trang riêng, định giá riêng.",
+      "cloud": {
+        "name": "Cloud",
+        "statusLabel": "ĐANG RA MẮT",
+        "tagline": "Tự động hoá trình duyệt không cần code. Ghi một lần, phát lại mãi mãi.",
+        "point1": "Ghi lại bất kỳ luồng trình duyệt nào mà không cần viết selector",
+        "point2": "Tạm dừng, kiểm tra, chỉnh sửa giá trị giữa chừng, tiếp tục",
+        "point3": "250+ module được kết nối sẵn — CSV, Stripe, Notion, Slack, OpenAI",
+        "cta": "Vào Cloud"
+      },
+      "warroom": {
+        "name": "Warroom",
+        "statusLabel": "BETA",
+        "tagline": "Phòng tác chiến bảo mật ứng dụng. SCA, SAST, bí mật, giấy phép, CVE — một bức tranh toàn cảnh.",
+        "point1": "Điểm sức khoẻ A–F tổng hợp mọi tín hiệu",
+        "point2": "Phân tích khả năng tiếp cận — sửa CVE thực sự chạy được",
+        "point3": "CLI mã nguồn mở có thể cài ngay hôm nay, phòng tác chiến có máy chủ sắp ra",
+        "cta": "Vào Warroom"
+      }
     },
-    "home": {
-        "metaTitle": "Flyto2 — Công cụ tự động hoá ưu tiên offline",
-        "metaDescription": "Flyto2 xây dựng công cụ tự động hoá ưu tiên offline. Cloud là tự động hoá trình duyệt không cần code, ra mắt ngay hôm nay. Warroom là phòng tác chiến bảo mật ứng dụng, sắp ra mắt.",
-        "hero": {
-            "eyebrow": "FLYTO2 · TỰ ĐỘNG HOÁ ƯU TIÊN OFFLINE",
-            "title": "Tự động hoá",
-            "titleAccent": "ở lại trên máy của bạn.",
-            "lede": "Flyto2 xây dựng hai sản phẩm trên cùng một động cơ ưu tiên offline. Một tự động hoá công việc lặp đi lặp lại trong trình duyệt. Một kiểm toán bảo mật của từng dòng mã bạn xuất xưởng.",
-            "reassure": "MÃ NGUỒN MỞ · KHÔNG TELEMETRY · CỦA BẠN"
+    "benefits": {
+      "items": [
+        {
+          "iconName": "Zap",
+          "metric": "1.2s",
+          "title": "Thời gian chạy trung vị",
+          "body": "Hầu hết quy trình hoàn thành trong dưới hai giây. Của bạn chạy nhanh như bạn làm việc."
         },
-        "products": {
-            "label": "HAI SẢN PHẨM",
-            "title": "Chọn cái giải quyết vấn đề hôm nay.",
-            "subtitle": "Cùng một động cơ, cùng một triết lý. Mỗi sản phẩm được xây dựng cho đối tượng riêng, trang riêng, định giá riêng.",
-            "cloud": {
-                "name": "Cloud",
-                "statusLabel": "ĐANG RA MẮT",
-                "tagline": "Tự động hoá trình duyệt không cần code. Ghi một lần, phát lại mãi mãi.",
-                "point1": "Ghi lại bất kỳ luồng trình duyệt nào mà không cần viết selector",
-                "point2": "Tạm dừng, kiểm tra, chỉnh sửa giá trị giữa chừng, tiếp tục",
-                "point3": "250+ module được kết nối sẵn — CSV, Stripe, Notion, Slack, OpenAI",
-                "cta": "Vào Cloud"
-            },
-            "warroom": {
-                "name": "Warroom",
-                "statusLabel": "BETA",
-                "tagline": "Phòng tác chiến bảo mật ứng dụng. SCA, SAST, bí mật, giấy phép, CVE — một bức tranh toàn cảnh.",
-                "point1": "Điểm sức khoẻ A–F tổng hợp mọi tín hiệu",
-                "point2": "Phân tích khả năng tiếp cận — sửa CVE thực sự chạy được",
-                "point3": "CLI mã nguồn mở có thể cài ngay hôm nay, phòng tác chiến có máy chủ sắp ra",
-                "cta": "Vào Warroom"
-            }
+        {
+          "iconName": "ShieldOff",
+          "metric": "0",
+          "title": "Byte gửi ra ngoài",
+          "body": "Thông tin xác thực và lịch sử chạy ở trên máy bạn. Không telemetry, không callback."
         },
-        "benefits": {
-            "items": [
-                {
-                    "iconName": "Zap",
-                    "metric": "1.2s",
-                    "title": "Thời gian chạy trung vị",
-                    "body": "Hầu hết quy trình hoàn thành trong dưới hai giây. Của bạn chạy nhanh như bạn làm việc."
-                },
-                {
-                    "iconName": "ShieldOff",
-                    "metric": "0",
-                    "title": "Byte gửi ra ngoài",
-                    "body": "Thông tin xác thực và lịch sử chạy ở trên máy bạn. Không telemetry, không callback."
-                },
-                {
-                    "iconName": "Code2",
-                    "metric": "MIT",
-                    "title": "Lõi mã nguồn mở",
-                    "body": "Đọc mã nguồn, fork, xuất xưởng. Bộ thực thi có trên GitHub và PyPI."
-                },
-                {
-                    "iconName": "Globe2",
-                    "metric": "16",
-                    "title": "Ngôn ngữ",
-                    "body": "Trình ghi, bộ thực thi, tài liệu và lỗi — tất cả được dịch, không chỉ dán nhãn."
-                }
-            ]
+        {
+          "iconName": "Code2",
+          "metric": "MIT",
+          "title": "Lõi mã nguồn mở",
+          "body": "Đọc mã nguồn, fork, xuất xưởng. Bộ thực thi có trên GitHub và PyPI."
         },
-        "video": {
-            "label": "DEMO",
-            "title": "Xem tự động hoá trình duyệt",
-            "titleAccent": "thực tế hoạt động.",
-            "subtitle": "Không cần nền tảng kỹ thuật. Bản dài đi qua một luồng thực từ đầu đến cuối; bản ngắn cho thấy ý chính trong 60 giây.",
-            "longLabel": "DEMO ĐẦY ĐỦ",
-            "longTitle": "Flyto2 — demo đầy đủ",
-            "longBody": "Hướng dẫn hoàn chỉnh: ghi luồng thanh toán, chỉnh một bước, phát lại. Hai phút, không có thủ thuật dẫn chương trình.",
-            "shortLabel": "BẢN NGẮN 60 GIÂY",
-            "shortTitle": "Flyto2 — bản ngắn 60 giây",
-            "shortBody": "Điền form, tự động. Dọc, nhanh, phù hợp để chia sẻ trên điện thoại.",
-            "moreOnYoutube": "Thêm video tại @Flyto2 trên YouTube"
-        },
-        "features": {
-            "label": "TẠI SAO CHỌN FLYTO2",
-            "title": "Được xây dựng cho công việc bạn cứ phải làm đi làm lại.",
-            "items": [
-                {
-                    "icon": "Video",
-                    "title": "Ghi bất kỳ luồng nào",
-                    "body": "Nhấn nút ghi, làm công việc một lần, nhấn dừng. Flyto2 ghi lại mọi cú nhấp, cuộn, gõ và chờ."
-                },
-                {
-                    "icon": "Pause",
-                    "title": "Tạm dừng và kiểm tra",
-                    "body": "Quy trình không phải là hộp đen. Đi từng bước, thay đổi giá trị giữa chừng, tiếp tục — như trình gỡ lỗi cho công việc hàng ngày."
-                },
-                {
-                    "icon": "ShieldOff",
-                    "title": "Offline theo thiết kế",
-                    "body": "Chạy trên máy của bạn. Thông tin xác thực, dữ liệu thu thập, lịch sử chạy — không bao giờ gửi đi đâu, kể cả cho chúng tôi."
-                },
-                {
-                    "icon": "Boxes",
-                    "title": "250+ module",
-                    "body": "CSV, Excel, Stripe, Notion, Postgres, Slack, OpenAI — kết nối sẵn để bạn ghép lại thay vì viết API plumbing."
-                },
-                {
-                    "icon": "GitBranch",
-                    "title": "Phân nhánh và hợp nhất",
-                    "body": "if/else, vòng lặp, thử lại, bộ xử lý lỗi — những thứ bạn sẽ viết bằng code, chỉ là dưới dạng nút trực quan đọc được trong năm giây."
-                },
-                {
-                    "icon": "Languages",
-                    "title": "16 ngôn ngữ",
-                    "body": "Trình ghi, bộ thực thi, tài liệu, thông báo lỗi — tất cả được dịch. Nhóm vận hành của bạn dùng Flyto2 bằng ngôn ngữ của họ."
-                }
-            ]
-        },
-        "examples": {
-            "label": "QUY TRÌNH THỰC TẾ",
-            "title": "Những thứ người ta thực sự xây dựng.",
-            "subtitle": "Mỗi thẻ là một quy trình Flyto2 đã chạy từ đầu đến cuối — ghi một lần, phát lại theo lịch, kết quả lưu ở nơi bạn muốn.",
-            "viewWorkflow": "Xem quy trình này",
-            "items": [
-                {
-                    "category": "BẢN TÓM TẮT HÀNG NGÀY",
-                    "title": "Bản tin sáng Hacker News",
-                    "body": "Cào 30 câu chuyện hàng đầu mỗi sáng lúc 7 giờ, tóm tắt qua OpenAI, đẩy bản tin vào kênh Slack riêng trước khi standup.",
-                    "metric": "CHẠY · 06:55 hàng ngày"
-                },
-                {
-                    "category": "TIN TỨC DEV",
-                    "title": "Theo dõi xu hướng GitHub",
-                    "body": "Xem trang trending cho một tag, lưu repo mới vào Sheets kèm stars, giấy phép, ngôn ngữ. Bắt được công cụ hot tiếp theo trước mọi người.",
-                    "metric": "CHẠY · hàng giờ"
-                },
-                {
-                    "category": "HIỆU NĂNG",
-                    "title": "Kiểm tra Pagespeed hàng loạt",
-                    "body": "Nhập CSV các URL, nhận lại Sheet với điểm mobile + desktop, delta Core Web Vitals, và ping Slack khi có gì đó tụt điểm.",
-                    "metric": "CHẠY · hàng tuần"
-                },
-                {
-                    "category": "BẢO MẬT",
-                    "title": "Quét security-headers",
-                    "body": "Thăm dò một loạt domain, chấm điểm header, nộp báo cáo theo chủ sở hữu nhóm. Thay thế script kiểm tra hàng quý mà không ai có thời gian bảo trì.",
-                    "metric": "CHẠY · hàng tháng"
-                }
-            ]
-        },
-        "integrations": {
-            "label": "TÍCH HỢP",
-            "title": "250+ module ngay khi mở hộp.",
-            "subtitle": "Hệ thống kết nối đã được nối sẵn. Kéo, thả, cấu hình — không bao giờ phải viết thêm script \"sao chép hàng này từ Sheet A sang API B\".",
-            "andMore": "+ 230 THÊM · TỰ XÂY BẰNG PYTHON HOẶC JS"
-        },
-        "stats": {
-            "items": [
-                {
-                    "value": "250+",
-                    "label": "MODULE",
-                    "body": "Nút được xây dựng sẵn cho CSV, Excel, Stripe, Notion, Slack, AI, SQL — những thứ bạn sẽ phải tự ghép lại."
-                },
-                {
-                    "value": "16",
-                    "label": "NGÔN NGỮ",
-                    "body": "Giao diện, trình ghi, bộ thực thi, tài liệu và thông báo lỗi — được dịch, không chỉ dán nhãn."
-                },
-                {
-                    "value": "100%",
-                    "label": "TRÊN MÁY CỦA BẠN",
-                    "body": "Bản ghi, thông tin xác thực, lịch sử chạy. Không lên đám mây trừ khi bạn chọn. Không bao giờ có telemetry."
-                }
-            ]
-        },
-        "codeTeaser": {
-            "label": "CŨNG ĐANG XÂY DỰNG",
-            "status": "Sắp ra mắt",
-            "title": "Warroom — phòng tác chiến bảo mật ứng dụng.",
-            "body": "Một sản phẩm riêng cho mảng bảo mật khi xuất xưởng phần mềm. SCA, SAST, bí mật, giấy phép, CVE, pentest — dưới một điểm sức khoẻ A–F.",
-            "cta": "Vào Warroom"
-        },
-        "faq": {
-            "label": "CÂU HỎI THƯỜNG GẶP",
-            "title": "Câu hỏi phổ biến, trả lời thẳng thắn.",
-            "subtitle": "Nếu bạn đang đánh giá Flyto2 cho nhóm, đây là những gì mọi người hỏi trước tiên.",
-            "items": [
-                {
-                    "q": "Flyto2 có thực sự miễn phí và mã nguồn mở không?",
-                    "a": "Có. Bộ thực thi (`flyto-core`) được cấp phép MIT trên GitHub. Bạn có thể cài từ PyPI ngay hôm nay và chạy các luồng mà không cần tạo tài khoản. Cloud có máy chủ là tuỳ chọn trả phí được xây thêm lên trên — không bao giờ là yêu cầu bắt buộc."
-                },
-                {
-                    "q": "Cái này khác gì Zapier hay Make?",
-                    "a": "Zapier và Make kết nối API SaaS trên đám mây. Flyto2 ghi lại và phát lại trình duyệt thực — kể cả các trang không có API công khai — và chạy trên máy của bạn. Nếu ngân hàng, ERP hoặc cổng nhà cung cấp của bạn không có trong danh mục Zapier, đó chính xác là lỗ hổng Flyto2 lấp đầy."
-                },
-                {
-                    "q": "Điều gì xảy ra khi trang web tôi đang tự động hoá thay đổi?",
-                    "a": "Flyto2 ghi lại các hành động ngữ nghĩa (\"nhấp vào nút Đăng nhập\") thay vì các CSS selector dễ hỏng. Khi trang web đổi giao diện, hầu hết các luồng vẫn tiếp tục chạy. Khi có gì đó hỏng, bạn tạm dừng, sửa bước đó, và tiếp tục — bạn không phải viết lại toàn bộ luồng."
-                },
-                {
-                    "q": "Nhóm tôi có thể chia sẻ quy trình không?",
-                    "a": "Có. Quy trình là file thông thường bạn có thể commit vào git, chia sẻ qua Marketplace trong ứng dụng, hoặc gửi cho đồng nghiệp qua Slack. Lịch sử chạy ở lại local; chỉ định nghĩa quy trình di chuyển."
-                },
-                {
-                    "q": "Chi phí là bao nhiêu?",
-                    "a": "Ứng dụng desktop và bộ thực thi mã nguồn mở miễn phí cho cá nhân. Gói Pro và Team thêm lịch chạy có máy chủ, marketplace chia sẻ và hỗ trợ ưu tiên — định giá ở trang Cloud."
-                }
-            ]
-        },
-        "cta": {
-            "label": "KHÁM PHÁ NỀN TẢNG",
-            "title": "Hai sản phẩm. Một triết lý.",
-            "body": "Cloud đang ra mắt hôm nay. Warroom đang trên đường. Cả hai dùng chung động cơ ưu tiên offline — chọn cái phù hợp với vấn đề hôm nay.",
-            "primary": "Vào Cloud",
-            "secondary": "Vào Warroom"
+        {
+          "iconName": "Globe2",
+          "metric": "16",
+          "title": "Ngôn ngữ",
+          "body": "Trình ghi, bộ thực thi, tài liệu và lỗi — tất cả được dịch, không chỉ dán nhãn."
         }
+      ]
     },
-    "cloud": {
-        "metaTitle": "Cloud — Tự động hoá trình duyệt không cần code",
-        "metaDescription": "Ghi một lần, phát lại mãi mãi. Tự động hoá trình duyệt chạy offline. 250+ module, 16 ngôn ngữ, bộ thực thi cấp phép MIT.",
-        "hero": {
-            "eyebrow": "01 / CLOUD",
-            "status": "ĐANG RA MẮT",
-            "title": "Công việc trình duyệt,",
-            "titleAccent": "tự động lái.",
-            "lede": "Mở trình ghi, làm công việc một lần, nhấn dừng. Flyto2 biến nó thành quy trình có cấu trúc bạn có thể chỉnh sửa, quản lý phiên bản, lên lịch và chia sẻ — không cần viết một dòng code.",
-            "ctaPrimary": "Tải ứng dụng desktop",
-            "ctaSecondary": "Duyệt 250+ module"
-        },
-        "how": {
-            "label": "CÁCH HOẠT ĐỘNG",
-            "title": "Ba bước từ thủ công đến tự động.",
-            "items": [
-                {
-                    "step": "01",
-                    "icon": "Video",
-                    "title": "Ghi",
-                    "body": "Nhấn nút ghi và làm công việc một lần. Flyto2 ghi lại cú nhấp, cuộn, gõ và chờ — mọi bước, theo thứ tự, cục bộ."
-                },
-                {
-                    "step": "02",
-                    "icon": "GitBranch",
-                    "title": "Chỉnh sửa",
-                    "body": "Thêm if/else, vòng lặp, thử lại và thông tin xác thực dưới dạng nút trực quan. Tạm dừng giữa chừng để kiểm tra giá trị, thay đổi và tiếp tục."
-                },
-                {
-                    "step": "03",
-                    "icon": "Repeat",
-                    "title": "Phát lại",
-                    "body": "Chạy theo yêu cầu, theo lịch hoặc từ CLI. Flyto2 tái tạo mọi bước chính xác, trên máy của bạn, với đầy đủ nhật ký kiểm tra."
-                }
-            ]
-        },
-        "features": {
-            "label": "KHẢ NĂNG",
-            "title": "Được xây dựng cho công việc bạn cứ phải làm đi làm lại.",
-            "items": [
-                {
-                    "icon": "Video",
-                    "title": "Ghi bất kỳ luồng nào",
-                    "body": "Mở trình ghi, làm công việc một lần, nhấn dừng. Flyto2 ghi lại thành quy trình có cấu trúc bạn có thể chỉnh sửa và chia sẻ."
-                },
-                {
-                    "icon": "Pause",
-                    "title": "Tạm dừng và kiểm tra",
-                    "body": "Quy trình không phải là hộp đen. Đi từng bước, thay đổi giá trị giữa chừng, tiếp tục — như trình gỡ lỗi cho công việc hàng ngày."
-                },
-                {
-                    "icon": "ShieldOff",
-                    "title": "Offline theo thiết kế",
-                    "body": "Chạy trên máy của bạn. Thông tin xác thực, dữ liệu thu thập, lịch sử chạy — không bao giờ gửi đi đâu, kể cả cho chúng tôi."
-                },
-                {
-                    "icon": "Boxes",
-                    "title": "250+ module",
-                    "body": "CSV, Excel, Stripe, Notion, Sheets, Postgres, Slack, OpenAI — kết nối sẵn để bạn ghép lại thay vì viết API plumbing."
-                },
-                {
-                    "icon": "GitBranch",
-                    "title": "Phân nhánh và hợp nhất",
-                    "body": "if/else, vòng lặp, thử lại, bộ xử lý lỗi — những thứ bạn sẽ viết bằng code, chỉ là dưới dạng nút trực quan đọc được trong năm giây."
-                },
-                {
-                    "icon": "Languages",
-                    "title": "16 ngôn ngữ",
-                    "body": "Trình ghi, bộ thực thi, tài liệu, thông báo lỗi — tất cả được dịch. Nhóm vận hành của bạn dùng Flyto2 bằng ngôn ngữ của họ, không phải ngôn ngữ của bạn."
-                }
-            ]
-        },
-        "codeSample": {
-            "label": "PHÍA SAU MÀN HÌNH",
-            "title": "Đây là file bạn có thể đọc được.",
-            "subtitle": "Mọi quy trình đã ghi là một file JSON. Commit vào git, diff khi review, chạy từ CI, trigger từ bất cứ đâu.",
-            "point1": "JSON thuần — không có định dạng nhị phân độc quyền",
-            "point2": "Trigger từ CLI, webhook, cron, hoặc backend của bạn",
-            "point3": "Xuất sang GitHub Actions, GitLab CI hoặc Jenkins bằng một lệnh"
-        },
-        "comparison": {
-            "label": "SO VỚI CÁC LỰA CHỌN THAY THẾ",
-            "title": "Tại sao nhóm chuyển sang Flyto2.",
-            "subtitle": "Zapier, Make, Selenium — mỗi cái lấp một phần vấn đề. Flyto2 là thứ bạn dùng khi cần hành vi trình duyệt thực, cục bộ, mà không thuê điện toán theo tác vụ.",
-            "featureHeader": "Những gì bạn cần",
-            "data": {
-                "rows": [
-                    {
-                        "feature": "Ghi lại hành động trình duyệt thực",
-                        "values": ["yes", "no", "no", "yes"]
-                    },
-                    {
-                        "feature": "Chạy offline / trên máy của bạn",
-                        "values": ["yes", "no", "no", "yes"]
-                    },
-                    {
-                        "feature": "Miễn phí cho cá nhân",
-                        "values": ["yes", "partial", "partial", "yes"]
-                    },
-                    {
-                        "feature": "Trình soạn thảo trực quan (không cần code)",
-                        "values": ["yes", "yes", "yes", "no"]
-                    },
-                    {
-                        "feature": "Tạm dừng, kiểm tra, tiếp tục giữa chừng",
-                        "values": ["yes", "no", "no", "partial"]
-                    },
-                    {
-                        "feature": "Định giá theo điểm, không phải theo tác vụ",
-                        "values": ["yes", "no", "no", "yes"]
-                    },
-                    {
-                        "feature": "File quy trình là JSON thuần",
-                        "values": ["yes", "no", "no", "no"]
-                    },
-                    {
-                        "feature": "Bộ thực thi mã nguồn mở",
-                        "values": ["yes", "no", "no", "yes"]
-                    }
-                ]
-            }
-        },
-        "recipes": {
-            "label": "CÔNG THỨC ĐƯỢC XÂY DỰNG SẴN",
-            "title": "Một lệnh, kết quả thực.",
-            "subtitle": "Công thức là các quy trình đã được kết nối và kiểm thử. Cài Cloud, chạy `flyto recipe [tên]`, nhận báo cáo. Không cần thiết lập, không cần API key cho các chức năng cơ bản.",
-            "items": [
-                {
-                    "iconName": "Search",
-                    "name": "competitor-intel",
-                    "command": "flyto recipe competitor-intel --url https://competitor.com/pricing",
-                    "body": "Lấy các gói định giá, chụp ảnh màn hình desktop + mobile, thu thập Web Vitals, phân tích SEO meta, trả về một báo cáo JSON có cấu trúc.",
-                    "outputs": ["pricing.json", "intel-desktop.png", "intel-mobile.png", "vitals", "seo"]
-                },
-                {
-                    "iconName": "Activity",
-                    "name": "full-audit",
-                    "command": "flyto recipe full-audit --url https://example.com",
-                    "body": "Web Vitals + SEO + khả năng tiếp cận (thẻ alt, nhãn) + lỗi console + ảnh chụp mobile/desktop + PDF có thể in.",
-                    "outputs": ["audit.json", "audit-desktop.png", "audit-mobile.png", "audit-page.pdf"]
-                },
-                {
-                    "iconName": "Globe",
-                    "name": "site-audit",
-                    "command": "flyto recipe site-audit --url https://github.com",
-                    "body": "Kiểm tra SEO + hiệu năng — meta, tiêu đề, thiếu alt, Web Vitals, ảnh chụp toàn trang. Nhẹ hơn full-audit, chạy trong vài giây.",
-                    "outputs": ["report.json", "page.png"]
-                },
-                {
-                    "iconName": "Camera",
-                    "name": "screenshot",
-                    "command": "flyto recipe screenshot --url https://flyto2.com --device mobile",
-                    "body": "Ảnh chụp màn hình chính xác từng pixel ở bất kỳ viewport nào. Hữu ích cho QA, review thiết kế, hoặc ghép diff phát hiện thay đổi hàng ngày.",
-                    "outputs": ["screenshot.png"]
-                }
-            ]
-        },
-        "useCases": {
-            "label": "TRƯỜNG HỢP SỬ DỤNG",
-            "title": "Những gì người ta tự động hoá đầu tiên.",
-            "items": [
-                {
-                    "icon": "FileText",
-                    "title": "Trích xuất hoá đơn và biên lai",
-                    "body": "Đăng nhập vào cổng nhà cung cấp mỗi thứ Hai, tải PDF, phân loại theo khách hàng, đẩy tổng số vào Sheets — không cần chạm bàn phím."
-                },
-                {
-                    "icon": "Database",
-                    "title": "Đồng bộ dữ liệu đa hệ thống",
-                    "body": "Khi SaaS bạn dùng không nói chuyện với SaaS nhóm tài chính dùng, Flyto2 ghi lại cầu nối và chạy nó hàng đêm."
-                },
-                {
-                    "icon": "Search",
-                    "title": "Theo dõi giá & đối thủ",
-                    "body": "Truy cập danh sách URL, cào giá, ghi vào CSV, cảnh báo Slack khi có thay đổi. Công việc hai tuần của thực tập sinh, tự động hoá trong một buổi chiều."
-                },
-                {
-                    "icon": "Mail",
-                    "title": "Định tuyến & làm giàu lead",
-                    "body": "Lấy từ CRM, làm giàu qua web công khai, đẩy lại với nhãn. Không có người trung gian Zapier, không có giới hạn tác vụ hàng tháng."
-                }
-            ]
-        },
-        "faq": {
-            "label": "CÂU HỎI THƯỜNG GẶP",
-            "title": "Cloud — những câu hỏi chúng tôi nghe nhiều nhất.",
-            "subtitle": "Ghi, phát lại, bảo mật, định giá — câu trả lời mà trưởng vận hành và IT yêu cầu trước khi phê duyệt công cụ.",
-            "items": [
-                {
-                    "q": "Cloud có hoạt động trên các trang không có API công khai không?",
-                    "a": "Đó chính xác là công việc của nó. Nếu bạn có thể làm công việc trong trình duyệt, Flyto2 có thể ghi lại và phát lại — cổng nội bộ, trang chính phủ, ERP cũ, bất cứ đâu."
-                },
-                {
-                    "q": "Nó có thực sự chạy trên máy của tôi không?",
-                    "a": "Có. Ứng dụng desktop đóng gói bộ thực thi Chromium và bộ thực thi quy trình. Thông tin xác thực, các bước đã ghi và lịch sử thực thi ở trên đĩa của bạn. Cloud là tuỳ chọn để lên lịch, chia sẻ và các tính năng nhóm."
-                },
-                {
-                    "q": "Điều gì xảy ra khi trang web thiết kế lại?",
-                    "a": "Flyto2 ghi lại ý định ngữ nghĩa (\"nhấp Đăng nhập\", \"điền trường email\") thay vì XPath dễ hỏng. Khi trang web đổi giao diện, hầu hết các luồng vẫn tiếp tục hoạt động. Khi một bước hỏng, bạn chỉ sửa bước đó trong trình soạn thảo trực quan."
-                },
-                {
-                    "q": "Tôi có thể trigger luồng từ CI / một script không?",
-                    "a": "Có. Mọi quy trình đều có lệnh CLI và URL webhook. Chạy từ cron, GitHub Actions, backend của bạn, hoặc lịch có máy chủ của Flyto2 — cùng file quy trình, cùng kết quả."
-                },
-                {
-                    "q": "Bạn xử lý 2FA và CAPTCHA như thế nào?",
-                    "a": "Flyto2 có thể tạm dừng và nhắc bạn (hoặc người trong nhóm) hoàn thành thử thách 2FA, sau đó tiếp tục. CAPTCHA cố tình không bị bỏ qua — việc dùng Flyto2 trên các trang cấm tự động hoá là trách nhiệm của bạn, không phải của chúng tôi."
-                },
-                {
-                    "q": "Định giá như thế nào?",
-                    "a": "Miễn phí cho cá nhân dùng ứng dụng desktop và bộ thực thi OSS. Pro thêm lịch có máy chủ và chạy cloud không giới hạn; Team thêm marketplace chia sẻ và SSO. Định giá chi tiết ở trang Cloud."
-                }
-            ]
-        },
-        "cta": {
-            "label": "BẮT ĐẦU",
-            "title": "Một lần ghi, mỗi thứ Hai tự động chạy.",
-            "body": "Tải ứng dụng desktop, ghi quy trình đầu tiên trong năm phút, và xem nó chạy mãi mãi.",
-            "primary": "Tải miễn phí",
-            "secondary": "Đọc tài liệu"
-        }
+    "video": {
+      "label": "DEMO",
+      "title": "Xem tự động hoá trình duyệt",
+      "titleAccent": "thực tế hoạt động.",
+      "subtitle": "Không cần nền tảng kỹ thuật. Bản dài đi qua một luồng thực từ đầu đến cuối; bản ngắn cho thấy ý chính trong 60 giây.",
+      "longLabel": "DEMO ĐẦY ĐỦ",
+      "longTitle": "Flyto2 — demo đầy đủ",
+      "longBody": "Hướng dẫn hoàn chỉnh: ghi luồng thanh toán, chỉnh một bước, phát lại. Hai phút, không có thủ thuật dẫn chương trình.",
+      "shortLabel": "BẢN NGẮN 60 GIÂY",
+      "shortTitle": "Flyto2 — bản ngắn 60 giây",
+      "shortBody": "Điền form, tự động. Dọc, nhanh, phù hợp để chia sẻ trên điện thoại.",
+      "moreOnYoutube": "Thêm video tại @Flyto2 trên YouTube"
     },
-    "download": {
-        "metaTitle": "Tải Flyto2",
-        "metaDescription": "Tải Flyto2 — ứng dụng desktop miễn phí cho macOS, Windows và Linux. Tự động hoá trình duyệt chạy offline, không cần tài khoản.",
-        "downloadFor": "Tải cho {os}",
-        "allReleases": "Tất cả bản phát hành trên GitHub",
-        "hero": {
-            "eyebrow": "ỨNG DỤNG DESKTOP · MIỄN PHÍ",
-            "title": "Tải",
-            "titleAccent": "Flyto2.",
-            "lede": "Miễn phí cho cá nhân, mãi mãi. macOS, Windows, Linux — đi kèm bộ thực thi mã nguồn mở. Không cần tài khoản, không telemetry, chạy offline."
+    "features": {
+      "label": "TẠI SAO CHỌN FLYTO2",
+      "title": "Được xây dựng cho công việc bạn cứ phải làm đi làm lại.",
+      "items": [
+        {
+          "icon": "Video",
+          "title": "Ghi bất kỳ luồng nào",
+          "body": "Nhấn nút ghi, làm công việc một lần, nhấn dừng. Flyto2 ghi lại mọi cú nhấp, cuộn, gõ và chờ."
         },
-        "docker": {
-            "title": "Tự lưu trữ với Docker",
-            "body": "Chạy cùng một bộ thực thi trong container — hoàn hảo cho máy chủ headless, CI agent, hoặc triển khai doanh nghiệp cách ly khỏi mạng.",
-            "cta": "Docker Hub"
+        {
+          "icon": "Pause",
+          "title": "Tạm dừng và kiểm tra",
+          "body": "Quy trình không phải là hộp đen. Đi từng bước, thay đổi giá trị giữa chừng, tiếp tục — như trình gỡ lỗi cho công việc hàng ngày."
         },
-        "oss": {
-            "title": "Hoặc chỉ lấy bộ thực thi, trên PyPI",
-            "body": "Lõi thực thi là Python cấp phép MIT. Cài như thư viện, dùng CLI, nhúng vào pipeline của bạn.",
-            "cta": "Xem mã nguồn trên GitHub"
+        {
+          "icon": "ShieldOff",
+          "title": "Offline theo thiết kế",
+          "body": "Chạy trên máy của bạn. Thông tin xác thực, dữ liệu thu thập, lịch sử chạy — không bao giờ gửi đi đâu, kể cả cho chúng tôi."
         },
-        "cta": {
-            "label": "CŨNG HỮU ÍCH",
-            "title": "Cần thứ cụ thể hơn?",
-            "body": "Tìm bản phát hành cũ hơn, kiến trúc khác, hoặc triển khai vào môi trường được quản lý? Vào GitHub releases hoặc tài liệu.",
-            "primary": "Mở releases",
-            "secondary": "Đọc tài liệu"
+        {
+          "icon": "Boxes",
+          "title": "250+ module",
+          "body": "CSV, Excel, Stripe, Notion, Postgres, Slack, OpenAI — kết nối sẵn để bạn ghép lại thay vì viết API plumbing."
+        },
+        {
+          "icon": "GitBranch",
+          "title": "Phân nhánh và hợp nhất",
+          "body": "if/else, vòng lặp, thử lại, bộ xử lý lỗi — những thứ bạn sẽ viết bằng code, chỉ là dưới dạng nút trực quan đọc được trong năm giây."
+        },
+        {
+          "icon": "Languages",
+          "title": "16 ngôn ngữ",
+          "body": "Trình ghi, bộ thực thi, tài liệu, thông báo lỗi — tất cả được dịch. Nhóm vận hành của bạn dùng Flyto2 bằng ngôn ngữ của họ."
         }
+      ]
     },
-    "pricing": {
-        "metaTitle": "Định giá — Flyto2",
-        "metaDescription": "Miễn phí cho cá nhân, mãi mãi. Pro ở $9/tháng và Team ở $19/tháng. Định giá minh bạch cho tự động hoá trình duyệt chạy offline.",
-        "perMonth": "/ tháng",
-        "mostPopular": "Phổ biến nhất",
-        "priceFootnote": "USD · Huỷ bất cứ lúc nào · Không cần thẻ tín dụng để bắt đầu",
-        "hero": {
-            "eyebrow": "ĐỊNH GIÁ",
-            "title": "Miễn phí mãi mãi.",
-            "titleAccent": "Pro khi bạn mở rộng.",
-            "lede": "Cá nhân dùng miễn phí, trên desktop và bộ thực thi OSS. Nâng cấp chỉ khi bạn cần lịch có máy chủ, quản lý nhóm, hoặc điện toán tháng cao hơn."
+    "examples": {
+      "label": "QUY TRÌNH THỰC TẾ",
+      "title": "Những thứ người ta thực sự xây dựng.",
+      "subtitle": "Mỗi thẻ là một quy trình Flyto2 đã chạy từ đầu đến cuối — ghi một lần, phát lại theo lịch, kết quả lưu ở nơi bạn muốn.",
+      "viewWorkflow": "Xem quy trình này",
+      "items": [
+        {
+          "category": "BẢN TÓM TẮT HÀNG NGÀY",
+          "title": "Bản tin sáng Hacker News",
+          "body": "Cào 30 câu chuyện hàng đầu mỗi sáng lúc 7 giờ, tóm tắt qua OpenAI, đẩy bản tin vào kênh Slack riêng trước khi standup.",
+          "metric": "CHẠY · 06:55 hàng ngày"
         },
-        "plans": {
-            "free": {
-                "label": "MIỄN PHÍ",
-                "name": "Free",
-                "tagline": "Cho cá nhân khám phá tự động hoá.",
-                "feature1": "1.000 điểm điện toán / tháng",
-                "feature2": "Tối đa 5 quy trình đã lưu",
-                "feature3": "Toàn bộ 250+ module",
-                "feature4": "Hỗ trợ cộng đồng",
-                "cta": "Tải miễn phí"
-            },
-            "pro": {
-                "label": "PRO",
-                "name": "Pro",
-                "tagline": "Cho người dùng chạy tự động hoá hàng ngày.",
-                "feature1": "50.000 điểm điện toán / tháng",
-                "feature2": "Quy trình không giới hạn",
-                "feature3": "Lịch có máy chủ — cron, webhook, thử lại",
-                "feature4": "Hỗ trợ ưu tiên, SLA 24 giờ",
-                "feature5": "Xuất bản lên Marketplace",
-                "cta": "Bắt đầu với Pro"
-            },
-            "team": {
-                "label": "TEAM",
-                "name": "Team",
-                "tagline": "Cho nhóm vận hành chia sẻ quy trình trong toàn công ty.",
-                "feature1": "200.000 điểm điện toán / tháng",
-                "feature2": "Tối đa 10 ghế",
-                "feature3": "RBAC và marketplace chia sẻ",
-                "feature4": "SSO (Google, Microsoft)",
-                "feature5": "Hỗ trợ triển khai chuyên biệt",
-                "cta": "Bắt đầu với Team"
-            }
+        {
+          "category": "TIN TỨC DEV",
+          "title": "Theo dõi xu hướng GitHub",
+          "body": "Xem trang trending cho một tag, lưu repo mới vào Sheets kèm stars, giấy phép, ngôn ngữ. Bắt được công cụ hot tiếp theo trước mọi người.",
+          "metric": "CHẠY · hàng giờ"
         },
-        "faq": {
-            "label": "CÂU HỎI THƯỜNG GẶP",
-            "title": "Câu hỏi về định giá, đã trả lời.",
-            "subtitle": "Điểm điện toán, giới hạn ghế, thanh toán — những câu hỏi người mua hỏi trước khi rút thẻ.",
-            "items": [
-                {
-                    "q": "\"Điểm điện toán\" là gì?",
-                    "a": "Một điểm là một đơn vị công việc — xấp xỉ một bước quy trình (một cú nhấp, một hàng CSV, một lời gọi API). 50.000 điểm tương đương khoảng 100 giờ tự động hoá trình duyệt thông thường mỗi tháng."
-                },
-                {
-                    "q": "Gói miễn phí có thực sự miễn phí mãi mãi không?",
-                    "a": "Có. Ứng dụng desktop và bộ thực thi mã nguồn mở miễn phí cho cá nhân mãi mãi. Điều duy nhất gói miễn phí không có là lịch có máy chủ và các tính năng nhóm."
-                },
-                {
-                    "q": "Điều gì xảy ra nếu tôi vượt quá điểm hàng tháng?",
-                    "a": "Quy trình tạm dừng đến chu kỳ tiếp theo, hoặc bạn có thể mua thêm với giá $0.20 cho 1.000 điểm. Chúng tôi không bao giờ tính phí ngầm — bạn xác nhận việc mua thêm trước khi nó chạy."
-                },
-                {
-                    "q": "Bạn có cung cấp thanh toán hàng năm hoặc giảm giá không?",
-                    "a": "Thanh toán hàng năm tiết kiệm 20% cho Pro và Team. Giảm giá cho giáo dục và phi lợi nhuận — email info@flyto2.com."
-                },
-                {
-                    "q": "Tôi có thể tự lưu trữ thay thế không?",
-                    "a": "Có. Bộ thực thi OSS trên PyPI chạy mọi thứ ngoại trừ lịch có máy chủ. Tự lưu trữ doanh nghiệp với SSO và triển khai cách ly mạng đang trong lộ trình."
-                }
-            ]
+        {
+          "category": "HIỆU NĂNG",
+          "title": "Kiểm tra Pagespeed hàng loạt",
+          "body": "Nhập CSV các URL, nhận lại Sheet với điểm mobile + desktop, delta Core Web Vitals, và ping Slack khi có gì đó tụt điểm.",
+          "metric": "CHẠY · hàng tuần"
         },
-        "cta": {
-            "label": "VẪN ĐANG CÂN NHẮC",
-            "title": "Dùng thử trước khi trả tiền.",
-            "body": "Tải ứng dụng desktop miễn phí, ghi một quy trình, xem Flyto2 có phù hợp với vấn đề bạn đang cố giải quyết không. Nâng cấp chỉ khi bạn quyết định nó xứng đáng.",
-            "primary": "Tải miễn phí",
-            "secondary": "Đọc tài liệu"
+        {
+          "category": "BẢO MẬT",
+          "title": "Quét security-headers",
+          "body": "Thăm dò một loạt domain, chấm điểm header, nộp báo cáo theo chủ sở hữu nhóm. Thay thế script kiểm tra hàng quý mà không ai có thời gian bảo trì.",
+          "metric": "CHẠY · hàng tháng"
         }
+      ]
     },
-    "forum": {
-        "titleCloud": "Cloud — Thảo luận",
-        "subtitleCloud": "Đặt câu hỏi, báo lỗi, chia sẻ quy trình. Mọi người đều đọc được, đăng bài với tài khoản Flyto2 miễn phí.",
-        "titleCode": "Warroom — Thảo luận",
-        "subtitleCode": "Bảo mật, quét, xác minh vòng kín. Công khai để đọc, tài khoản miễn phí để đăng.",
-        "auth": {
-            "loading": "Đang kiểm tra đăng nhập…",
-            "title": "Đăng nhập để tiếp tục",
-            "subtitle": "Bài đăng gắn với tài khoản của bạn để chúng tôi có thể hiển thị tên bạn trong phản hồi và thông báo cho bạn. Chúng tôi không chia sẻ email của bạn.",
-            "continueGoogle": "Tiếp tục với Google",
-            "or": "HOẶC",
-            "email": "Email",
-            "password": "Mật khẩu",
-            "signIn": "Đăng nhập",
-            "signUp": "Tạo tài khoản",
-            "switchToSignUp": "Chưa có tài khoản? Tạo một cái",
-            "switchToSignIn": "Đã có tài khoản? Đăng nhập",
-            "signOut": "Đăng xuất",
-            "error": "Có gì đó không ổn. Thử lại.",
-            "reason": {
-                "post": "ĐĂNG NHẬP ĐỂ ĐĂNG BÀI",
-                "comment": "ĐĂNG NHẬP ĐỂ PHẢN HỒI",
-                "react": "ĐĂNG NHẬP ĐỂ PHẢN ỨNG"
-            }
-        },
-        "list": {
-            "compose": "Bài đăng mới",
-            "composeSignIn": "Đăng nhập để đăng",
-            "loadMore": "Tải thêm",
-            "empty": "Chưa có bài đăng nào — hãy là người đầu tiên hỏi.",
-            "error": "Không thể tải bài đăng. Làm mới để thử lại.",
-            "indexBuilding": "Firestore vẫn đang xây dựng chỉ mục cho truy vấn này. Chúng tôi sẽ tự động thử lại mỗi 30 giây — không cần làm mới.",
-            "prev": "Trước",
-            "next": "Tiếp",
-            "first": "Đầu",
-            "pageIndicator": "Trang {page}"
-        },
-        "categories": {
-            "all": "Tất cả",
-            "question": "Hỏi & Đáp",
-            "bug": "Lỗi",
-            "feature": "Đề xuất tính năng",
-            "discussion": "Thảo luận"
-        },
-        "sort": {
-            "new": "Mới",
-            "hot": "Nóng",
-            "top": "Hàng đầu"
-        },
-        "composer": {
-            "title": "Bắt đầu thảo luận",
-            "subtitle": "Hỗ trợ Markdown. Hãy cụ thể — tiêu đề trong một dòng, bước tái hiện / ngữ cảnh trong nội dung.",
-            "titlePlaceholder": "Câu hỏi hoặc báo cáo của bạn là gì?",
-            "bodyPlaceholder": "Thêm chi tiết — hỗ trợ Markdown. Khối code với ba dấu backtick.",
-            "tagsPlaceholder": "Thẻ (phân cách bằng dấu phẩy, tối đa 5)",
-            "markdownHint": "Markdown · khối code · @nhắc đến sau",
-            "submit": "Đăng",
-            "error": "Không thể đăng. Kiểm tra kết nối và thử lại."
-        },
-        "comments": {
-            "heading": "{count, plural, =0 {Chưa có phản hồi} =1 {1 phản hồi} other {# phản hồi}}",
-            "empty": "Hãy là người đầu tiên phản hồi.",
-            "placeholder": "Viết phản hồi… Hỗ trợ Markdown.",
-            "submit": "Phản hồi",
-            "error": "Không thể đăng phản hồi."
-        },
-        "detail": {
-            "back": "Quay lại thảo luận",
-            "notFound": "Bài đăng này đã bị xoá hoặc không tồn tại.",
-            "error": "Không thể tải bài đăng này."
-        }
+    "integrations": {
+      "label": "TÍCH HỢP",
+      "title": "250+ module ngay khi mở hộp.",
+      "subtitle": "Hệ thống kết nối đã được nối sẵn. Kéo, thả, cấu hình — không bao giờ phải viết thêm script \"sao chép hàng này từ Sheet A sang API B\".",
+      "andMore": "+ 230 THÊM · TỰ XÂY BẰNG PYTHON HOẶC JS"
     },
-    "templates": {
-        "metaTitle": "Mẫu — Flyto2 Marketplace",
-        "metaDescription": "Mẫu quy trình được xây dựng sẵn cho hoá đơn, cào dữ liệu, làm giàu lead và nhiều hơn nữa. Cài đặt trong một cú nhấp.",
-        "gridLabel": "ĐƯỢC CÀI NHIỀU NHẤT",
-        "gridTitle": "Quy trình người ta thực sự chạy.",
-        "gridSubtitle": "Đây là những công thức xuất hiện trong tài khoản khách hàng thực tế. Mỗi cái là điểm khởi đầu — clone, chỉnh, chạy.",
-        "contributeOnGithub": "Đóng góp mẫu trên GitHub",
-        "hero": {
-            "eyebrow": "MARKETPLACE · ĐANG MỞ RỘNG",
-            "title": "Quy trình bạn có thể",
-            "titleAccent": "cài đặt trong một cú nhấp.",
-            "lede": "Được ghi, gắn thẻ và sẵn sàng chạy. Duyệt marketplace từ bên trong ứng dụng, hoặc xem những gì phổ biến nhất bên dưới — mọi mục đều kèm file quy trình nguồn bạn có thể chỉnh sửa."
+    "stats": {
+      "items": [
+        {
+          "value": "250+",
+          "label": "MODULE",
+          "body": "Nút được xây dựng sẵn cho CSV, Excel, Stripe, Notion, Slack, AI, SQL — những thứ bạn sẽ phải tự ghép lại."
         },
-        "items": [
-            {
-                "iconName": "Receipt",
-                "category": "TÀI CHÍNH",
-                "title": "Trích xuất hoá đơn",
-                "body": "Đăng nhập vào cổng nhà cung cấp, tải PDF, phân loại theo khách hàng, đẩy tổng số vào Sheets."
-            },
-            {
-                "iconName": "ShoppingCart",
-                "category": "THƯƠNG MẠI ĐIỆN TỬ",
-                "title": "Đối soát đơn hàng",
-                "body": "Lấy đơn hàng từ Stripe, khớp với Shopify, hiển thị sai lệch trong Slack."
-            },
-            {
-                "iconName": "Search",
-                "category": "NGHIÊN CỨU",
-                "title": "Theo dõi đối thủ",
-                "body": "Truy cập danh sách URL, cào giá, cảnh báo Slack khi có thay đổi."
-            },
-            {
-                "iconName": "Mail",
-                "category": "TĂNG TRƯỞNG",
-                "title": "Làm giàu lead",
-                "body": "Lấy từ CRM, làm giàu qua web công khai, ghi lại liên hệ với nhãn."
-            },
-            {
-                "iconName": "Database",
-                "category": "ĐỒNG BỘ",
-                "title": "Đồng bộ đa SaaS",
-                "body": "Kết nối hai công cụ SaaS không tích hợp với nhau nguyên bản, mỗi đêm."
-            },
-            {
-                "iconName": "Calendar",
-                "category": "VẬN HÀNH",
-                "title": "Xử lý lịch hàng loạt",
-                "body": "Đọc CSV đặt chỗ, tạo sự kiện lịch, gửi lời nhắc."
-            },
-            {
-                "iconName": "FileText",
-                "category": "TUÂN THỦ",
-                "title": "Tải tài liệu",
-                "body": "Tải hàng quý các sao kê, hợp đồng, chứng chỉ — tự động lưu trữ."
-            },
-            {
-                "iconName": "Bell",
-                "category": "GIÁM SÁT",
-                "title": "Kiểm tra uptime trang web",
-                "body": "Thăm dò danh sách URL, kiểm tra trạng thái, cảnh báo khi có gì đó đỏ."
-            }
-        ],
-        "cta": {
-            "label": "KHÔNG TÌM THẤY?",
-            "title": "Cho chúng tôi biết bạn muốn tự động hoá gì trước tiên.",
-            "body": "Nếu có quy trình bạn muốn có mẫu, ping chúng tôi trong GitHub Discussions hoặc tự xây dựng — bộ thực thi là mã nguồn mở.",
-            "primary": "Mở Discussions",
-            "secondary": "Đọc tài liệu"
+        {
+          "value": "16",
+          "label": "NGÔN NGỮ",
+          "body": "Giao diện, trình ghi, bộ thực thi, tài liệu và thông báo lỗi — được dịch, không chỉ dán nhãn."
         },
-        "details": {
-            "auto-login-template": {
-                "title": "Mẫu đăng nhập tự động",
-                "category": "Xác thực và phiên",
-                "lede": "Đăng nhập vào bất kỳ trang nào theo cách lập trình mà không cần viết lại selector cho từng luồng. Mẫu Auto-Login xử lý các trường biểu mẫu, thử thách MFA và duy trì phiên, để các tự động hóa sau đó khởi động ở trạng thái đã xác thực.",
-                "metaDescription": "Tự động hóa đăng nhập website trên Flyto2 Cloud với hỗ trợ 2FA, lưu trữ thông tin đăng nhập mã hóa và tái sử dụng phiên bền cho luồng làm việc trình duyệt headless.",
-                "faqs": [
-                    { "q": "Có hỗ trợ nhà cung cấp SSO không?" },
-                    { "q": "Mật khẩu được bảo vệ ra sao?" },
-                    { "q": "Có thể tự giải CAPTCHA không?" },
-                    { "q": "Khi phiên hết hạn thì sao?" }
-                ]
-            },
-            "craigslist-listings-scraper": {
-                "title": "Scraper tin đăng Craigslist",
-                "category": "Dữ liệu chợ trực tuyến",
-                "lede": "Thu thập dữ liệu Craigslist có cấu trúc trên hàng trăm vùng đô thị mà không cần viết một bộ phân tích nào. Mẫu này xử lý phân trang, định tuyến theo địa lý và mã đánh dấu lộn xộn từng làm khốn đốn các scraper suốt hai thập kỷ.",
-                "metaDescription": "Scrape tin rao vặt Craigslist quy mô lớn với mẫu Flyto2. Trích xuất tiêu đề, giá, vị trí, hình ảnh và liên hệ người bán trên các danh mục và thành phố.",
-                "faqs": [
-                    { "q": "Dữ liệu mới đến mức nào?" },
-                    { "q": "Có lấy được liên hệ người bán không?" },
-                    { "q": "Có xử lý chặn anti-bot không?" },
-                    { "q": "Hỗ trợ định dạng đầu ra nào?" }
-                ]
-            },
-            "domain-availability-checker": {
-                "title": "Trình kiểm tra tình trạng tên miền",
-                "category": "Công cụ tên miền và DNS",
-                "lede": "Quét hàng nghìn tên miền ứng viên trên mọi TLD quan trọng và chỉ làm nổi bật những tên thực sự còn trống để đăng ký. Mẫu này kết hợp nhiều nguồn có thẩm quyền để tránh báo trống nhầm.",
-                "metaDescription": "Kiểm tra hàng loạt tình trạng tên miền trên hàng trăm TLD với mẫu tự động hóa Flyto2. Kết hợp WHOIS, RDAP và truy vấn DNS để có kết quả chính xác.",
-                "faqs": [
-                    { "q": "Kết quả chính xác đến đâu?" },
-                    { "q": "Có hỗ trợ các gTLD mới không?" },
-                    { "q": "Có tự đăng ký tên miền được không?" },
-                    { "q": "Tên miền IDN thì sao?" }
-                ]
-            },
-            "github-repo-stats-dashboard": {
-                "title": "Dashboard thống kê repo GitHub",
-                "category": "DevTools và phân tích",
-                "lede": "Tập trung các chỉ số sức khỏe cho mọi repository mà nhóm bạn sở hữu. Mẫu kéo dữ liệu lịch sử và trực tiếp từ GitHub API, lưu trữ liên tục và hiển thị thành dashboard có thể chia sẻ hoặc nhúng.",
-                "metaDescription": "Xây dựng dashboard phân tích repository GitHub trực tiếp với Flyto2. Theo dõi sao, fork, lưu lượng, issue, tốc độ PR và hoạt động đóng góp xuyên suốt nhiều repo.",
-                "faqs": [
-                    { "q": "Có dùng cho repo riêng tư không?" },
-                    { "q": "Giới hạn rate xử lý ra sao?" },
-                    { "q": "Có thể xuất sang BigQuery không?" },
-                    { "q": "GitHub Enterprise thì sao?" }
-                ]
-            },
-            "google-search-results-scraper": {
-                "title": "Scraper kết quả tìm kiếm Google",
-                "category": "SERP và nghiên cứu",
-                "lede": "Trích xuất toàn bộ cấu trúc kết quả tìm kiếm Google, không chỉ mười liên kết xanh đầu. Mẫu nắm bắt vị trí organic, quảng cáo, knowledge panel, đoạn nổi bật và khối People Also Ask trong một lần thu thập.",
-                "metaDescription": "Scrape SERP Google quy mô lớn với trích xuất có cấu trúc cho organic, quảng cáo và tính năng SERP. Nhắm mục tiêu theo quốc gia, thiết bị và theo dõi xếp hạng từ khóa theo thời gian.",
-                "faqs": [
-                    { "q": "Có xử lý CAPTCHA không?" },
-                    { "q": "Có scrape theo quốc gia cụ thể không?" },
-                    { "q": "Mobile và desktop khác nhau ra sao?" },
-                    { "q": "Đầu ra có ổn định theo thời gian không?" }
-                ]
-            },
-            "linkedin-job-listings-scraper": {
-                "title": "Scraper tin tuyển dụng LinkedIn",
-                "category": "Tuyển dụng và việc làm",
-                "lede": "Biến tìm kiếm việc làm trên LinkedIn thành một bộ dữ liệu truy vấn được. Mẫu thu thập tin theo vai trò, công ty, khu vực và cấp bậc, rồi chuẩn hóa cho pipeline tuyển dụng và phân tích thị trường ở phía sau.",
-                "metaDescription": "Đưa tin tuyển dụng LinkedIn vào bộ dữ liệu có cấu trúc phục vụ phân tích tuyển dụng, market intelligence và đồng bộ ATS, với mẫu tự động hóa Flyto2.",
-                "faqs": [
-                    { "q": "Có cần tài khoản premium không?" },
-                    { "q": "Tránh bị chặn ra sao?" },
-                    { "q": "Lương có luôn được lấy không?" },
-                    { "q": "Có đẩy thẳng vào ATS được không?" }
-                ]
-            },
-            "news-headlines-aggregator": {
-                "title": "Tổng hợp tiêu đề tin tức",
-                "category": "Tin tức và nội dung",
-                "lede": "Dựng dòng tin tức hợp nhất từ bất kỳ tổ hợp nào của báo lớn, blog ngách và RSS. Mẫu chuẩn hóa, khử trùng lặp và phân cụm để các bài trùng về cùng một sự kiện gom lại thành một.",
-                "metaDescription": "Tổng hợp tiêu đề nóng từ hàng trăm trang tin vào một dòng hợp nhất và đã khử trùng lặp với mẫu tự động hóa scrape tin tức của Flyto2.",
-                "faqs": [
-                    { "q": "Nếu nguồn không có RSS thì sao?" },
-                    { "q": "Phân cụm hoạt động thế nào?" },
-                    { "q": "Có lọc theo chủ đề không?" },
-                    { "q": "Tiêu đề đến nhanh đến đâu?" }
-                ]
-            },
-            "page-load-speed-tester": {
-                "title": "Công cụ kiểm thử tốc độ tải trang",
-                "category": "Hiệu năng và giám sát",
-                "lede": "Phát hiện hồi quy hiệu năng trước cả khi người dùng nhận ra. Mẫu đo Core Web Vitals từ nhiều khu vực và thiết bị, rồi cảnh báo khi các chỉ số chính lệch khỏi baseline bạn đặt.",
-                "metaDescription": "Chạy kiểm thử tải tổng hợp với Core Web Vitals thật, dữ liệu waterfall và cảnh báo hồi quy bằng mẫu tự động hóa hiệu năng web Flyto2.",
-                "faqs": [
-                    { "q": "Người dùng thật hay tổng hợp?" },
-                    { "q": "Có kiểm thử trang đã đăng nhập không?" },
-                    { "q": "Baseline được tính thế nào?" },
-                    { "q": "Có chặn được bản deploy lỗi không?" }
-                ]
-            },
-            "real-estate-listings-monitor": {
-                "title": "Giám sát tin đăng bất động sản",
-                "category": "Bất động sản",
-                "lede": "Là người đầu tiên biết khi một bất động sản lên sàn hoặc giảm giá. Mẫu giám sát các cổng bất động sản lớn với chu kỳ dưới một giờ và cảnh báo ngay khi tiêu chí theo dõi được thỏa mãn.",
-                "metaDescription": "Theo dõi tin đăng bất động sản trên Zillow, Redfin, Realtor và các cổng MLS với mẫu giám sát Flyto2. Nhận cảnh báo cho nguồn cung mới và thay đổi giá.",
-                "faqs": [
-                    { "q": "Hỗ trợ những cổng nào?" },
-                    { "q": "Cảnh báo nhanh đến mức nào?" },
-                    { "q": "Có theo dõi bất động sản off-market không?" },
-                    { "q": "Bất động sản thương mại thì sao?" }
-                ]
-            },
-            "restaurant-menu-scraper-2": {
-                "title": "Scraper thực đơn nhà hàng",
-                "category": "Ẩm thực và lưu trú",
-                "lede": "Kéo từng món, tùy chọn và giá từ các nền tảng giao đồ ăn lớn vào một bộ dữ liệu sạch. Mẫu xử lý các schema khác nhau của Uber Eats, DoorDash, Grubhub và trang nhà hàng trực tiếp.",
-                "metaDescription": "Trích xuất thực đơn nhà hàng từ Uber Eats, DoorDash, Grubhub và website trực tiếp thành dữ liệu có cấu trúc với mẫu tự động hóa scrape thực đơn của Flyto2.",
-                "faqs": [
-                    { "q": "Có lấy đủ tùy chọn không?" },
-                    { "q": "Giá có thay đổi theo địa điểm?" },
-                    { "q": "Có scrape được website chính chủ?" },
-                    { "q": "Nên scrape với tần suất nào?" }
-                ]
-            },
-            "send-telegram-alert": {
-                "title": "Gửi cảnh báo Telegram",
-                "category": "Thông báo",
-                "lede": "Biến mọi sự kiện tự động hóa thành thông báo Telegram phong phú. Mẫu xử lý bot token, định tuyến kênh, template tin nhắn và bàn phím inline để cảnh báo đến nơi đã được định dạng và có thể hành động.",
-                "metaDescription": "Gửi cảnh báo Telegram phong phú đến kênh, nhóm hoặc chat trực tiếp từ bất kỳ workflow Flyto2 nào, có template, bàn phím inline và xác nhận giao.",
-                "faqs": [
-                    { "q": "Tạo bot thế nào?" },
-                    { "q": "Có gửi vào DM người dùng không?" },
-                    { "q": "Nút inline có tương tác không?" },
-                    { "q": "Giới hạn kích thước tin nhắn là gì?" }
-                ]
-            },
-            "stock-price-dashboard-scraper": {
-                "title": "Dashboard giá cổ phiếu",
-                "category": "Tài chính và dữ liệu thị trường",
-                "lede": "Hợp nhất bảng giá trực tiếp, cơ bản và tin tức của mọi watchlist vào một dashboard có thể kiểm toán. Mẫu phân nhánh sang nhiều nhà cung cấp dữ liệu và hợp nhất kết quả vào một góc nhìn thống nhất.",
-                "metaDescription": "Xây dashboard giá cổ phiếu thời gian thực với mẫu Flyto2. Tổng hợp bảng giá, dữ liệu cơ bản, tin tức và cảnh báo từ nhiều nguồn dữ liệu thị trường.",
-                "faqs": [
-                    { "q": "Bảng giá có thời gian thực không?" },
-                    { "q": "Hỗ trợ những loại tài sản nào?" },
-                    { "q": "Có backtest trên dữ liệu được không?" },
-                    { "q": "Giá ngoài giờ giao dịch thì sao?" }
-                ]
-            },
-            "weather-forecast-to-slack": {
-                "title": "Dự báo thời tiết lên Slack",
-                "category": "Thời tiết và năng suất",
-                "lede": "Bắt đầu mỗi ngày làm việc bằng bản tin thời tiết cá nhân hóa trên Slack. Mẫu lấy dự báo cho một hoặc nhiều địa điểm, render thành các block Slack phong phú và leo thang khi thời tiết khắc nghiệt đe dọa.",
-                "metaDescription": "Gửi dự báo thời tiết hàng ngày tới kênh hoặc DM Slack với block phong phú, nhắm vị trí và cảnh báo thời tiết khắc nghiệt qua mẫu tự động hóa Flyto2.",
-                "faqs": [
-                    { "q": "Nên chọn nhà cung cấp nào?" },
-                    { "q": "Có đăng được vào DM không?" },
-                    { "q": "Cảnh báo khắc nghiệt xử lý thế nào?" },
-                    { "q": "Giao ngoài Slack thì sao?" }
-                ]
-            },
-            "webpage-to-pdf-converter": {
-                "title": "Trình chuyển trang web sang PDF",
-                "category": "Tạo tài liệu",
-                "lede": "Render mọi URL thành PDF trung thực từng pixel, mở sạch sẽ trong mọi trình xem. Mẫu kiểm soát kích thước trang, lề, đầu trang, chân trang, hình mờ và chi tiết số trang mà tài liệu in ấn yêu cầu.",
-                "metaDescription": "Chuyển bất kỳ trang web nào thành PDF chất lượng cao trên Flyto2 Cloud với hỗ trợ sẵn cho kích thước trang tùy chỉnh, đầu/chân trang, số trang và hình mờ.",
-                "faqs": [
-                    { "q": "Văn bản đầu ra có chọn được không?" },
-                    { "q": "Liên kết có được giữ lại không?" },
-                    { "q": "Có thể thêm số trang không?" },
-                    { "q": "Tài liệu một trang siêu dài thì sao?" }
-                ]
-            },
-            "website-screenshot-gallery": {
-                "title": "Thư viện ảnh chụp màn hình website",
-                "category": "Giám sát trực quan",
-                "lede": "Xây lịch sử trực quan cho bất kỳ tập hợp trang nào. Mẫu chụp ảnh theo lịch, chạy diff pixel với lần chụp trước và lập chỉ mục mọi thứ vào một thư viện có thể duyệt.",
-                "metaDescription": "Chụp ảnh website theo lịch vào thư viện có thể tìm kiếm với diff trực quan, bao phủ đa viewport và lưu giữ tài nguyên qua tự động hóa Flyto2.",
-                "faqs": [
-                    { "q": "Ảnh chụp có dung lượng bao nhiêu?" },
-                    { "q": "Có xử lý trang đã đăng nhập không?" },
-                    { "q": "Có thể diff với baseline không?" },
-                    { "q": "Nội dung hoạt hình thì sao?" }
-                ]
-            },
-            "website-uptime-monitor": {
-                "title": "Giám sát uptime website",
-                "category": "Giám sát và SRE",
-                "lede": "Theo dõi dịch vụ từ bên ngoài chính hạ tầng của bạn. Mẫu chạy kiểm tra tổng hợp từ nhiều khu vực, leo thang sự cố thật một cách thông minh và tạo dữ liệu trang trạng thái mà khách hàng mong đợi.",
-                "metaDescription": "Giám sát uptime website, độ trễ và hạn SSL từ nhiều khu vực với leo thang sự cố phong phú qua mẫu tự động hóa giám sát uptime của Flyto2.",
-                "faqs": [
-                    { "q": "Tần suất thăm dò tối đa là bao nhiêu?" },
-                    { "q": "Chi tiết bên trong TLS thì sao?" },
-                    { "q": "Có kiểm thử luồng đăng nhập không?" },
-                    { "q": "Sự cố flapping xử lý thế nào?" }
-                ]
-            },
-            "youtube-channel-stats-tracker": {
-                "title": "Trình theo dõi thống kê kênh YouTube",
-                "category": "Phân tích mạng xã hội",
-                "lede": "Xây bản ghi dài hạn về hiệu quả kênh và video, vượt qua khung báo cáo gốc của YouTube. Mẫu chụp các chỉ số công khai theo lịch và làm rõ xu hướng trên toàn bộ danh mục.",
-                "metaDescription": "Theo dõi chỉ số kênh và video YouTube theo thời gian với mẫu tự động hóa Flyto2. Ghi lượt xem, người đăng ký, thời gian xem và tương tác qua nhiều kênh.",
-                "faqs": [
-                    { "q": "Bộ đếm chính xác đến đâu?" },
-                    { "q": "Còn phân tích riêng tư thì sao?" },
-                    { "q": "Có theo dõi kênh đối thủ được không?" },
-                    { "q": "Chi phí quota là bao nhiêu?" }
-                ]
-            }
+        {
+          "value": "100%",
+          "label": "TRÊN MÁY CỦA BẠN",
+          "body": "Bản ghi, thông tin xác thực, lịch sử chạy. Không lên đám mây trừ khi bạn chọn. Không bao giờ có telemetry."
         }
+      ]
     },
-    "code": {
-        "metaTitle": "Warroom — Phòng tác chiến bảo mật ứng dụng",
-        "metaDescription": "SCA, SAST, bí mật, giấy phép, CVE, pentest, runtime — một bức tranh toàn cảnh cho codebase của bạn. Sắp ra mắt.",
-        "hero": {
-            "eyebrow": "02 / CODE",
-            "status": "BETA",
-            "title": "Một phòng tác chiến.",
-            "titleAccent": "Mọi góc độ tấn công.",
-            "lede": "SCA, SAST, phát hiện bí mật, kiểm toán giấy phép, phân loại CVE, quy trình pentest, telemetry runtime. Warroom là bức tranh toàn cảnh bảo mật cho mọi dòng code bạn xuất xưởng.",
-            "ctaPrimary": "Đăng ký danh sách chờ",
-            "ctaSecondary": "Dùng thử CLI mã nguồn mở",
-            "ctaBetaBadge": "Beta",
-            "ctaBeta": "Mở bản beta"
+    "codeTeaser": {
+      "label": "CŨNG ĐANG XÂY DỰNG",
+      "status": "Sắp ra mắt",
+      "title": "Warroom — phòng tác chiến bảo mật ứng dụng.",
+      "body": "Một sản phẩm riêng cho mảng bảo mật khi xuất xưởng phần mềm. SCA, SAST, bí mật, giấy phép, CVE, pentest — dưới một điểm sức khoẻ A–F.",
+      "cta": "Vào Warroom"
+    },
+    "faq": {
+      "label": "CÂU HỎI THƯỜNG GẶP",
+      "title": "Câu hỏi phổ biến, trả lời thẳng thắn.",
+      "subtitle": "Nếu bạn đang đánh giá Flyto2 cho nhóm, đây là những gì mọi người hỏi trước tiên.",
+      "items": [
+        {
+          "q": "Flyto2 có thực sự miễn phí và mã nguồn mở không?",
+          "a": "Có. Bộ thực thi (`flyto-core`) được cấp phép MIT trên GitHub. Bạn có thể cài từ PyPI ngay hôm nay và chạy các luồng mà không cần tạo tài khoản. Cloud có máy chủ là tuỳ chọn trả phí được xây thêm lên trên — không bao giờ là yêu cầu bắt buộc."
         },
-        "closedLoop": {
-            "label": "ĐIỀU LÀM NÓ KHÁC BIỆT",
-            "title": "Xác minh vòng kín.",
-            "subtitle": "Mọi công cụ bảo mật khác dừng lại ở cảnh báo. Warroom biến từng phát hiện thành YAML pentest, chạy nó trên staging của bạn trong trình duyệt thực, và báo cáo phán quyết — khai thác được, đã vô hiệu hoá, hoặc không thể tiếp cận.",
-            "find": {
-                "title": "Phát hiện",
-                "body": "SCA, SAST, bí mật, giấy phép, IaC. Cùng một lần quét phân tích code của bạn thành call graph và bản đồ kiến trúc.",
-                "signal": "scan"
-            },
-            "craft": {
-                "title": "Tạo",
-                "body": "Với mỗi phát hiện liên quan đến bảo mật, tạo một quy trình pentest YAML được giới hạn phạm vi đến route bị ảnh hưởng.",
-                "signal": "yaml"
-            },
-            "run": {
-                "title": "Chạy",
-                "body": "Thực thi quy trình trên staging trong phiên Chrome thực. 12 playbook OWASP / LLM / logic nghiệp vụ chính thức ra mắt ngay hôm nay.",
-                "signal": "live"
-            },
-            "verdictStep": {
-                "title": "Phán quyết",
-                "body": "Thu thập bằng chứng ký HMAC, báo cáo có thể khai thác / đã vô hiệu hoá / không thể tiếp cận, lưu quy trình vào regression vault để chạy lại hàng đêm.",
-                "signal": "ledger"
-            },
-            "verdict": {
-                "exploitable": {
-                    "title": "Có thể khai thác",
-                    "body": "Lỗ hổng chạy từ đầu đến cuối. Gói bằng chứng kèm theo. Đưa lên đầu hàng đợi phân loại."
-                },
-                "sanitized": {
-                    "title": "Đã vô hiệu hoá",
-                    "body": "Được giảm thiểu bởi kiểm soát phía sau (auth, WAF, framework). Đã ghi lại, hạ ưu tiên."
-                },
-                "unreachable": {
-                    "title": "Không thể tiếp cận",
-                    "body": "Code dễ bị tấn công tồn tại nhưng không có đường dẫn đầu vào người dùng nào đến được. Đã ghi nhận, ưu tiên thấp."
-                }
-            }
+        {
+          "q": "Cái này khác gì Zapier hay Make?",
+          "a": "Zapier và Make kết nối API SaaS trên đám mây. Flyto2 ghi lại và phát lại trình duyệt thực — kể cả các trang không có API công khai — và chạy trên máy của bạn. Nếu ngân hàng, ERP hoặc cổng nhà cung cấp của bạn không có trong danh mục Zapier, đó chính xác là lỗ hổng Flyto2 lấp đầy."
         },
-        "proof": {
-            "label": "BẰNG CHỨNG THỰC TẾ",
-            "title": "Chúng tôi đã kiểm thử trên OWASP Juice Shop.",
-            "subtitle": "Không phải sandbox tổng hợp. Ứng dụng thương mại điện tử cố tình có lỗ hổng kinh điển, chạy từ đầu đến cuối qua vòng kín. Đây là kết quả một chiến dịch.",
-            "caption": "Mọi phát hiện đều kèm gói bằng chứng ký HMAC. Chuỗi phát lại hàng đêm qua regression vault — khi có bản sửa, Warroom xác minh nó vẫn được sửa.",
-            "data": {
-                "metric": [
-                    { "value": "5", "label": "Chuỗi tấn công cấp độ BREACH" },
-                    { "value": "11", "label": "Critical findings" },
-                    { "value": "12", "label": "Pentest playbook" },
-                    { "value": "100%", "label": "Phát lại được hàng đêm" }
-                ],
-                "chain": [
-                    {
-                        "vector": "SQLi · login",
-                        "finding": "Bypass tautology trong trường `email` của POST /rest/user/login — xác thực bị bỏ qua, session token được cấp."
-                    },
-                    {
-                        "vector": "Token theft",
-                        "finding": "JWT lấy từ response, giải mã — không có admin claim nhưng khoá ký dùng chung giữa các user."
-                    },
-                    {
-                        "vector": "Chained IDOR",
-                        "finding": "GET /api/Users/{id} chấp nhận id tuỳ ý; server trả về bản ghi đầy đủ bao gồm password hash."
-                    },
-                    {
-                        "vector": "Privilege escalation",
-                        "finding": "Giả mạo JWT bằng khoá bị rò rỉ, đặt role=admin, phát lại request — endpoint chỉ dành cho admin trả về 200."
-                    },
-                    {
-                        "vector": "Data exfiltration",
-                        "finding": "GET /api/Orders liệt kê lịch sử mua hàng của mọi khách hàng. Gói bằng chứng: 2.4 MB."
-                    }
-                ]
-            }
+        {
+          "q": "Điều gì xảy ra khi trang web tôi đang tự động hoá thay đổi?",
+          "a": "Flyto2 ghi lại các hành động ngữ nghĩa (\"nhấp vào nút Đăng nhập\") thay vì các CSS selector dễ hỏng. Khi trang web đổi giao diện, hầu hết các luồng vẫn tiếp tục chạy. Khi có gì đó hỏng, bạn tạm dừng, sửa bước đó, và tiếp tục — bạn không phải viết lại toàn bộ luồng."
         },
-        "features": {
-            "label": "BÊN TRONG PHÒNG TÁC CHIẾN",
-            "title": "Bảy góc nhìn, một nguồn sự thật.",
-            "subtitle": "Mỗi bảng điều khiển của Warroom được xây dựng xung quanh một câu hỏi mà nhóm bảo mật đã đặt ra. Đây là những gì bạn thực sự thấy trong phòng tác chiến.",
-            "items": [
-                {
-                    "label": "BẢNG ĐIỀU KHIỂN",
-                    "title": "Một điểm A–F cho mỗi dự án.",
-                    "body": "Tổng hợp mọi tín hiệu — SCA, SAST, bí mật, giấy phép, CVE, runtime — thành một điểm duy nhất. CISO của bạn xem tiêu đề. Kỹ sư của bạn đi sâu vào bảng đang chảy máu.",
-                    "imageAlt": "Bảng điều khiển sức khoẻ Warroom với chấm điểm A–F",
-                    "bullets": [
-                        "Đường xu hướng cho mọi danh mục",
-                        "Tổng hợp theo nhóm và theo dịch vụ",
-                        "Bản tin hàng tuần được tạo tự động"
-                    ]
-                },
-                {
-                    "label": "KHẢ NĂNG TIẾP CẬN",
-                    "title": "CVE nào thực sự chạy được.",
-                    "body": "Hầu hết cảnh báo CVE là nhiễu — hàm dễ bị tấn công không bao giờ được gọi từ code của bạn. Phân tích khả năng tiếp cận truy dấu các đường dẫn gọi thực để bạn sửa 5% quan trọng, không phải 95% không quan trọng.",
-                    "imageAlt": "Phân tích khả năng tiếp cận hiển thị các đường dẫn gọi có thể khai thác",
-                    "bullets": [
-                        "Call graph tĩnh + động",
-                        "Lan truyền taint đa gói",
-                        "Tỷ lệ dương tính giả được đo lường, không chỉ tuyên bố"
-                    ]
-                },
-                {
-                    "label": "PHỤ THUỘC",
-                    "title": "Chuỗi cung ứng của bạn, được vẽ ra.",
-                    "body": "Mọi phụ thuộc trực tiếp và bắc cầu, được tính trọng số theo rủi ro và phủ thêm CVE. Nhấp vào bất kỳ nút nào để xem ai kéo nó vào, nó kéo gì tiếp theo, và dịch vụ nào của bạn phụ thuộc vào nó.",
-                    "imageAlt": "Biểu đồ phụ thuộc với lớp phủ lỗ hổng",
-                    "bullets": [
-                        "Lớp phủ rủi ro giấy phép + người bảo trì",
-                        "Tìm bản trùng lặp được ghim ở các phiên bản khác nhau",
-                        "Nhãn sở hữu lan truyền từ cấu hình monorepo"
-                    ]
-                },
-                {
-                    "label": "KIẾN TRÚC",
-                    "title": "Toàn bộ hình dạng của codebase.",
-                    "body": "Module, dịch vụ, luồng dữ liệu, ranh giới sở hữu — được suy ra trực tiếp từ nguồn, không phải từ wiki đã lỗi thời sáu tháng. Đọc được mà không cần annotation, tinh chỉnh khi bạn xuất xưởng.",
-                    "imageAlt": "Bản đồ kiến trúc dịch vụ và module",
-                    "bullets": [
-                        "Tự động phát hiện dịch vụ từ file build",
-                        "Nổi bật các lời gọi đa ranh giới",
-                        "Diff với bản phát hành cuối để phát hiện drift"
-                    ]
-                },
-                {
-                    "label": "BỀ MẶT API",
-                    "title": "Mọi endpoint, được kiểm kê.",
-                    "body": "REST, gRPC, GraphQL — Warroom tìm thấy chúng trong handler của bạn và liệt kê những gì chúng chấp nhận, những gì chúng trả về, ai gọi chúng. Lỗ hổng xác thực và endpoint không xác thực tự động nổi lên.",
-                    "imageAlt": "Kiểm kê endpoint API với metadata xác thực",
-                    "bullets": [
-                        "Cột chiến lược xác thực cho mỗi route",
-                        "Phân loại công khai vs nội bộ",
-                        "Xuất OpenAPI cho bất kỳ framework nào"
-                    ]
-                },
-                {
-                    "label": "HẠ TẦNG",
-                    "title": "IaC được quét trong cùng một lần chạy.",
-                    "body": "Terraform, Kubernetes manifest, Dockerfile — Warroom đọc hạ tầng của bạn cùng với code ứng dụng, để tư thế bảo mật và cấu trúc runtime đến từ cùng một lần quét.",
-                    "imageAlt": "Giao diện quét Infrastructure-as-code",
-                    "bullets": [
-                        "Terraform, Helm, K8s, Dockerfile",
-                        "Danh mục cấu hình sai được cập nhật theo CIS",
-                        "Phát hiện drift: những gì được triển khai vs những gì được check in"
-                    ]
-                },
-                {
-                    "label": "NHỊP ĐẬP",
-                    "title": "Drift bảo mật, theo thời gian.",
-                    "body": "Ticker trực tiếp toàn nhóm về những gì đã thay đổi, khi nào, và nó di chuyển điểm bao nhiêu. Không phải bảng điều khiển để duyệt — mà là bảng điều khiển để chú ý.",
-                    "imageAlt": "Giao diện nhịp đập hiển thị dòng thời gian drift bảo mật",
-                    "bullets": [
-                        "Đóng góp của từng kỹ sư vào delta rủi ro",
-                        "Quy tắc leo thang cho điểm giảm đột ngột",
-                        "Lịch sử có thể phát lại — xem chính xác commit nào đã di chuyển kim chỉ"
-                    ]
-                }
-            ]
+        {
+          "q": "Nhóm tôi có thể chia sẻ quy trình không?",
+          "a": "Có. Quy trình là file thông thường bạn có thể commit vào git, chia sẻ qua Marketplace trong ứng dụng, hoặc gửi cho đồng nghiệp qua Slack. Lịch sử chạy ở lại local; chỉ định nghĩa quy trình di chuyển."
         },
-        "scans": {
-            "label": "NÓ QUÉT GÌ",
-            "title": "Tám tín hiệu, một điểm sức khoẻ.",
-            "subtitle": "Mọi dự án đều được cho điểm A–F tổng hợp những thứ kẻ tấn công thực sự sử dụng chống lại bạn. Đi sâu vào bất kỳ tín hiệu nào để xem các phát hiện cơ bản, các bản sửa được đề xuất và PR khắc phục do AI tạo.",
-            "items": [
-                {
-                    "icon": "Boxes",
-                    "title": "SCA",
-                    "body": "Phụ thuộc dễ bị tấn công trong lockfile của bạn, được tính trọng số theo khả năng tiếp cận — không chỉ là \"có CVE\"."
-                },
-                {
-                    "icon": "Code2",
-                    "title": "SAST",
-                    "body": "Luồng taint cấp nguồn từ đầu vào không đáng tin cậy đến sink nguy hiểm, nhận biết AST."
-                },
-                {
-                    "icon": "KeyRound",
-                    "title": "Bí mật",
-                    "body": "API key, token và thông tin xác thực được hard-code — trên toàn bộ lịch sử, không chỉ HEAD."
-                },
-                {
-                    "icon": "ScrollText",
-                    "title": "Giấy phép",
-                    "body": "Ô nhiễm GPL, giấy phép không tương thích thương mại, attribution bị thiếu."
-                },
-                {
-                    "icon": "Bug",
-                    "title": "CVE",
-                    "body": "Phân loại trực tiếp CVE mới đối với cây phụ thuộc của bạn, kèm replay POC."
-                },
-                {
-                    "icon": "Crosshair",
-                    "title": "Pentest",
-                    "body": "Pentest-as-code: ghi lại chuỗi khai thác một lần, phát lại với mọi bản phát hành."
-                },
-                {
-                    "icon": "Activity",
-                    "title": "Runtime",
-                    "body": "Telemetry sản xuất, phát hiện drift, kill-switch — Giai đoạn IV."
-                },
-                {
-                    "icon": "FileCheck2",
-                    "title": "Tuân thủ",
-                    "body": "SOC 2, ISO 27001, tư thế lưu trú dữ liệu khu vực — Giai đoạn V."
-                }
-            ]
-        },
-        "phases": {
-            "label": "LỘ TRÌNH",
-            "title": "Sáu giai đoạn, một nền tảng.",
-            "items": [
-                {
-                    "n": "I",
-                    "title": "Nền tảng",
-                    "status": "shipping",
-                    "body": "Indexer, tìm kiếm, biểu đồ phụ thuộc, điểm sức khoẻ A–F."
-                },
-                {
-                    "n": "II",
-                    "title": "Tĩnh",
-                    "status": "shipping",
-                    "body": "SCA, SAST, quét bí mật, kiểm toán giấy phép — CLI mã nguồn mở."
-                },
-                {
-                    "n": "III",
-                    "title": "Động",
-                    "status": "next",
-                    "body": "Pentest-as-code, probe runtime, phát lại CVE."
-                },
-                {
-                    "n": "IV",
-                    "title": "Runtime",
-                    "status": "planned",
-                    "body": "Telemetry sản xuất, phát hiện drift, kill-switch."
-                },
-                {
-                    "n": "V",
-                    "title": "Tuân thủ",
-                    "status": "planned",
-                    "body": "SOC 2, ISO 27001, tư thế lưu trú dữ liệu khu vực."
-                },
-                {
-                    "n": "VI",
-                    "title": "Liên kết",
-                    "status": "planned",
-                    "body": "Phòng tác chiến đa tổ chức cho nhóm bảo mật."
-                }
-            ]
-        },
-        "faq": {
-            "label": "CÂU HỎI THƯỜNG GẶP",
-            "title": "Warroom — câu hỏi trước khi đăng ký danh sách chờ.",
-            "subtitle": "Khi nào ra mắt, khác gì so với các lựa chọn khác, bạn có thể làm gì ngay hôm nay.",
-            "items": [
-                {
-                    "q": "Warroom ra mắt khi nào?",
-                    "a": "Giai đoạn I và II (Nền tảng + Tĩnh) đã trong beta riêng tư. Giai đoạn III (Động) là cột mốc công khai tiếp theo — truy cập sớm giữa năm 2026. Đăng ký danh sách chờ để nhận CLI OSS và lời mời."
-                },
-                {
-                    "q": "Cái này khác gì so với Snyk, Aikido, GitHub Advanced Security?",
-                    "a": "Hai điểm khác biệt. (1) Một điểm trên SCA, SAST, bí mật, giấy phép, CVE, pentest và runtime — không phải tám công cụ bạn phải tự tương quan. (2) Pentest-as-code: bạn ghi lại chuỗi khai thác một lần và phát lại với mọi bản phát hành, giống cách Cloud phát lại luồng trình duyệt."
-                },
-                {
-                    "q": "Tôi có thể dùng thử gì ngay hôm nay không?",
-                    "a": "Có. `pip install flyto-indexer` cho bạn bộ quét OSS — tìm kiếm, tham chiếu, phân tích tác động, phát hiện dead-code, phân tích taint dựa trên AST. Phòng tác chiến có máy chủ được xây thêm khi Giai đoạn III ra mắt."
-                },
-                {
-                    "q": "Source code của tôi có được tải lên đám mây không?",
-                    "a": "Mặc định không. CLI chạy cục bộ và tạo chỉ mục cục bộ. Phòng tác chiến có máy chủ có thể nhận các phát hiện (không phải nguồn) để tổng hợp đa dự án; tải lên nguồn đầy đủ là opt-in theo từng dự án. Tự lưu trữ là tuỳ chọn Giai đoạn V."
-                },
-                {
-                    "q": "Nó có hoạt động với repo riêng tư không?",
-                    "a": "Có — CLI OSS không quan tâm code của bạn ở đâu. Phòng tác chiến có máy chủ hỗ trợ GitHub, GitLab, Bitbucket và Git tự lưu trữ ngay khi mở hộp."
-                },
-                {
-                    "q": "Tôi có thể tự lưu trữ phòng tác chiến không?",
-                    "a": "Tự lưu trữ có trong lộ trình (Giai đoạn V, cùng với tuân thủ). Bộ quét OSS có thể tự lưu trữ ngay hôm nay; UI/orchestrator có máy chủ theo sau."
-                }
-            ]
-        },
-        "cta": {
-            "label": "TRUY CẬP SỚM",
-            "title": "Vào phòng tác chiến trước tiên.",
-            "body": "Phòng tác chiến có máy chủ dựa trên trình duyệt — không cần cài ứng dụng. Đăng ký danh sách chờ để nhận lời mời khi Giai đoạn III mở, và lấy bộ quét mã nguồn mở ngay hôm nay.",
-            "primary": "Đăng ký danh sách chờ",
-            "secondary": "Cài bộ quét OSS"
-        },
-        "gallery": {
-            "label": "VÀ MƯỜI HAI CÁI NỮA",
-            "title": "Mỗi bảng điều khiển là thứ nhóm bảo mật thực sự sẽ mở.",
-            "subtitle": "Ngoài bảy giao diện cốt lõi, Warroom đi kèm danh mục sâu các công cụ tập trung. Mỗi cái có lý do tồn tại — không có thứ chỉ để trình diễn.",
-            "items": {
-                "autofix": {
-                    "title": "PR sửa tự động",
-                    "body": "Các bản vá khắc phục do AI tạo ra vượt qua CI của chính bạn trước khi xuất hiện dưới dạng PR. Reviewer ký duyệt; không có gì bất ngờ."
-                },
-                "taintFlow": {
-                    "title": "Trực quan hoá luồng taint",
-                    "body": "Theo dõi đầu vào người dùng qua mọi phép biến đổi cho đến khi chạm đến sink. Đa hàm, đa gói, nhận biết sanitizer."
-                },
-                "license": {
-                    "title": "Tuân thủ giấy phép",
-                    "body": "Ô nhiễm GPL, xung đột thương mại, khoảng trống attribution — được nổi lên trước khi pháp lý hỏi tại sao."
-                },
-                "owasp": {
-                    "title": "Báo cáo OWASP",
-                    "body": "Ánh xạ các phát hiện với OWASP Top 10 và phân loại CWE. Xuất bảng mà kiểm toán viên muốn."
-                },
-                "queue": {
-                    "title": "Hàng đợi bảo mật",
-                    "body": "Giao diện phân loại cho nhóm nhỏ: đã phân công, đang xử lý, sẽ không sửa. Không phải rebuild ticket-tracker — vừa đủ dùng."
-                },
-                "malware": {
-                    "title": "Phát hiện phần mềm độc hại",
-                    "body": "Bắt typosquat và phiên bản phụ thuộc bị xâm phạm trước khi npm install đưa chúng vào cây của bạn."
-                },
-                "complexity": {
-                    "title": "Điểm nóng độ phức tạp",
-                    "body": "Dòng × lồng nhau × nhánh × tham số. Các hàm về mặt thống kê khó review hơn, được xếp hạng."
-                },
-                "deadCode": {
-                    "title": "Tìm dead-code",
-                    "body": "Symbol không có caller, file không có import. Nổi lên những thứ IDE của bạn âm thầm giấu đi."
-                },
-                "assetMap": {
-                    "title": "Kiểm kê tài sản",
-                    "body": "Mọi domain, subdomain, trang và endpoint bạn sở hữu — được ánh xạ từ build artifact, không phải tài liệu Notion."
-                },
-                "domainSec": {
-                    "title": "Điểm bảo mật domain",
-                    "body": "Header, tư thế TLS, bề mặt bị phơi bày — cho mỗi domain trong kiểm kê của bạn."
-                },
-                "duplicate": {
-                    "title": "Bản đồ code trùng lặp",
-                    "body": "Logic giống nhau tồn tại ở ba nơi. Ứng viên tái cấu trúc, được xếp hạng theo mức độ thay đổi thường xuyên của mỗi bản sao."
-                },
-                "reportBuilder": {
-                    "title": "Trình tạo báo cáo",
-                    "body": "Ghép bất kỳ tổ hợp bảng nào thành một PDF cho ban lãnh đạo, khách hàng hoặc kiểm toán viên — được lưu dưới dạng mẫu định kỳ."
-                }
-            }
+        {
+          "q": "Chi phí là bao nhiêu?",
+          "a": "Ứng dụng desktop và bộ thực thi mã nguồn mở miễn phí cho cá nhân. Gói Pro và Team thêm lịch chạy có máy chủ, marketplace chia sẻ và hỗ trợ ưu tiên — định giá ở trang Cloud."
         }
+      ]
+    },
+    "cta": {
+      "label": "KHÁM PHÁ NỀN TẢNG",
+      "title": "Hai sản phẩm. Một triết lý.",
+      "body": "Cloud đang ra mắt hôm nay. Warroom đang trên đường. Cả hai dùng chung động cơ ưu tiên offline — chọn cái phù hợp với vấn đề hôm nay.",
+      "primary": "Vào Cloud",
+      "secondary": "Vào Warroom"
     }
+  },
+  "cloud": {
+    "metaTitle": "Cloud — Tự động hoá trình duyệt không cần code",
+    "metaDescription": "Ghi một lần, phát lại mãi mãi. Tự động hoá trình duyệt chạy offline. 250+ module, 16 ngôn ngữ, bộ thực thi cấp phép MIT.",
+    "hero": {
+      "eyebrow": "01 / CLOUD",
+      "status": "ĐANG RA MẮT",
+      "title": "Công việc trình duyệt,",
+      "titleAccent": "tự động lái.",
+      "lede": "Mở trình ghi, làm công việc một lần, nhấn dừng. Flyto2 biến nó thành quy trình có cấu trúc bạn có thể chỉnh sửa, quản lý phiên bản, lên lịch và chia sẻ — không cần viết một dòng code.",
+      "ctaPrimary": "Tải ứng dụng desktop",
+      "ctaSecondary": "Duyệt 250+ module"
+    },
+    "how": {
+      "label": "CÁCH HOẠT ĐỘNG",
+      "title": "Ba bước từ thủ công đến tự động.",
+      "items": [
+        {
+          "step": "01",
+          "icon": "Video",
+          "title": "Ghi",
+          "body": "Nhấn nút ghi và làm công việc một lần. Flyto2 ghi lại cú nhấp, cuộn, gõ và chờ — mọi bước, theo thứ tự, cục bộ."
+        },
+        {
+          "step": "02",
+          "icon": "GitBranch",
+          "title": "Chỉnh sửa",
+          "body": "Thêm if/else, vòng lặp, thử lại và thông tin xác thực dưới dạng nút trực quan. Tạm dừng giữa chừng để kiểm tra giá trị, thay đổi và tiếp tục."
+        },
+        {
+          "step": "03",
+          "icon": "Repeat",
+          "title": "Phát lại",
+          "body": "Chạy theo yêu cầu, theo lịch hoặc từ CLI. Flyto2 tái tạo mọi bước chính xác, trên máy của bạn, với đầy đủ nhật ký kiểm tra."
+        }
+      ]
+    },
+    "features": {
+      "label": "KHẢ NĂNG",
+      "title": "Được xây dựng cho công việc bạn cứ phải làm đi làm lại.",
+      "items": [
+        {
+          "icon": "Video",
+          "title": "Ghi bất kỳ luồng nào",
+          "body": "Mở trình ghi, làm công việc một lần, nhấn dừng. Flyto2 ghi lại thành quy trình có cấu trúc bạn có thể chỉnh sửa và chia sẻ."
+        },
+        {
+          "icon": "Pause",
+          "title": "Tạm dừng và kiểm tra",
+          "body": "Quy trình không phải là hộp đen. Đi từng bước, thay đổi giá trị giữa chừng, tiếp tục — như trình gỡ lỗi cho công việc hàng ngày."
+        },
+        {
+          "icon": "ShieldOff",
+          "title": "Offline theo thiết kế",
+          "body": "Chạy trên máy của bạn. Thông tin xác thực, dữ liệu thu thập, lịch sử chạy — không bao giờ gửi đi đâu, kể cả cho chúng tôi."
+        },
+        {
+          "icon": "Boxes",
+          "title": "250+ module",
+          "body": "CSV, Excel, Stripe, Notion, Sheets, Postgres, Slack, OpenAI — kết nối sẵn để bạn ghép lại thay vì viết API plumbing."
+        },
+        {
+          "icon": "GitBranch",
+          "title": "Phân nhánh và hợp nhất",
+          "body": "if/else, vòng lặp, thử lại, bộ xử lý lỗi — những thứ bạn sẽ viết bằng code, chỉ là dưới dạng nút trực quan đọc được trong năm giây."
+        },
+        {
+          "icon": "Languages",
+          "title": "16 ngôn ngữ",
+          "body": "Trình ghi, bộ thực thi, tài liệu, thông báo lỗi — tất cả được dịch. Nhóm vận hành của bạn dùng Flyto2 bằng ngôn ngữ của họ, không phải ngôn ngữ của bạn."
+        }
+      ]
+    },
+    "codeSample": {
+      "label": "PHÍA SAU MÀN HÌNH",
+      "title": "Đây là file bạn có thể đọc được.",
+      "subtitle": "Mọi quy trình đã ghi là một file JSON. Commit vào git, diff khi review, chạy từ CI, trigger từ bất cứ đâu.",
+      "point1": "JSON thuần — không có định dạng nhị phân độc quyền",
+      "point2": "Trigger từ CLI, webhook, cron, hoặc backend của bạn",
+      "point3": "Xuất sang GitHub Actions, GitLab CI hoặc Jenkins bằng một lệnh"
+    },
+    "comparison": {
+      "label": "SO VỚI CÁC LỰA CHỌN THAY THẾ",
+      "title": "Tại sao nhóm chuyển sang Flyto2.",
+      "subtitle": "Zapier, Make, Selenium — mỗi cái lấp một phần vấn đề. Flyto2 là thứ bạn dùng khi cần hành vi trình duyệt thực, cục bộ, mà không thuê điện toán theo tác vụ.",
+      "featureHeader": "Những gì bạn cần",
+      "data": {
+        "rows": [
+          {
+            "feature": "Ghi lại hành động trình duyệt thực",
+            "values": [
+              "yes",
+              "no",
+              "no",
+              "yes"
+            ]
+          },
+          {
+            "feature": "Chạy offline / trên máy của bạn",
+            "values": [
+              "yes",
+              "no",
+              "no",
+              "yes"
+            ]
+          },
+          {
+            "feature": "Miễn phí cho cá nhân",
+            "values": [
+              "yes",
+              "partial",
+              "partial",
+              "yes"
+            ]
+          },
+          {
+            "feature": "Trình soạn thảo trực quan (không cần code)",
+            "values": [
+              "yes",
+              "yes",
+              "yes",
+              "no"
+            ]
+          },
+          {
+            "feature": "Tạm dừng, kiểm tra, tiếp tục giữa chừng",
+            "values": [
+              "yes",
+              "no",
+              "no",
+              "partial"
+            ]
+          },
+          {
+            "feature": "Định giá theo điểm, không phải theo tác vụ",
+            "values": [
+              "yes",
+              "no",
+              "no",
+              "yes"
+            ]
+          },
+          {
+            "feature": "File quy trình là JSON thuần",
+            "values": [
+              "yes",
+              "no",
+              "no",
+              "no"
+            ]
+          },
+          {
+            "feature": "Bộ thực thi mã nguồn mở",
+            "values": [
+              "yes",
+              "no",
+              "no",
+              "yes"
+            ]
+          }
+        ]
+      }
+    },
+    "recipes": {
+      "label": "CÔNG THỨC ĐƯỢC XÂY DỰNG SẴN",
+      "title": "Một lệnh, kết quả thực.",
+      "subtitle": "Công thức là các quy trình đã được kết nối và kiểm thử. Cài Cloud, chạy `flyto recipe [tên]`, nhận báo cáo. Không cần thiết lập, không cần API key cho các chức năng cơ bản.",
+      "items": [
+        {
+          "iconName": "Search",
+          "name": "competitor-intel",
+          "command": "flyto recipe competitor-intel --url https://competitor.com/pricing",
+          "body": "Lấy các gói định giá, chụp ảnh màn hình desktop + mobile, thu thập Web Vitals, phân tích SEO meta, trả về một báo cáo JSON có cấu trúc.",
+          "outputs": [
+            "pricing.json",
+            "intel-desktop.png",
+            "intel-mobile.png",
+            "vitals",
+            "seo"
+          ]
+        },
+        {
+          "iconName": "Activity",
+          "name": "full-audit",
+          "command": "flyto recipe full-audit --url https://example.com",
+          "body": "Web Vitals + SEO + khả năng tiếp cận (thẻ alt, nhãn) + lỗi console + ảnh chụp mobile/desktop + PDF có thể in.",
+          "outputs": [
+            "audit.json",
+            "audit-desktop.png",
+            "audit-mobile.png",
+            "audit-page.pdf"
+          ]
+        },
+        {
+          "iconName": "Globe",
+          "name": "site-audit",
+          "command": "flyto recipe site-audit --url https://github.com",
+          "body": "Kiểm tra SEO + hiệu năng — meta, tiêu đề, thiếu alt, Web Vitals, ảnh chụp toàn trang. Nhẹ hơn full-audit, chạy trong vài giây.",
+          "outputs": [
+            "report.json",
+            "page.png"
+          ]
+        },
+        {
+          "iconName": "Camera",
+          "name": "screenshot",
+          "command": "flyto recipe screenshot --url https://flyto2.com --device mobile",
+          "body": "Ảnh chụp màn hình chính xác từng pixel ở bất kỳ viewport nào. Hữu ích cho QA, review thiết kế, hoặc ghép diff phát hiện thay đổi hàng ngày.",
+          "outputs": [
+            "screenshot.png"
+          ]
+        }
+      ]
+    },
+    "useCases": {
+      "label": "TRƯỜNG HỢP SỬ DỤNG",
+      "title": "Những gì người ta tự động hoá đầu tiên.",
+      "items": [
+        {
+          "icon": "FileText",
+          "title": "Trích xuất hoá đơn và biên lai",
+          "body": "Đăng nhập vào cổng nhà cung cấp mỗi thứ Hai, tải PDF, phân loại theo khách hàng, đẩy tổng số vào Sheets — không cần chạm bàn phím."
+        },
+        {
+          "icon": "Database",
+          "title": "Đồng bộ dữ liệu đa hệ thống",
+          "body": "Khi SaaS bạn dùng không nói chuyện với SaaS nhóm tài chính dùng, Flyto2 ghi lại cầu nối và chạy nó hàng đêm."
+        },
+        {
+          "icon": "Search",
+          "title": "Theo dõi giá & đối thủ",
+          "body": "Truy cập danh sách URL, cào giá, ghi vào CSV, cảnh báo Slack khi có thay đổi. Công việc hai tuần của thực tập sinh, tự động hoá trong một buổi chiều."
+        },
+        {
+          "icon": "Mail",
+          "title": "Định tuyến & làm giàu lead",
+          "body": "Lấy từ CRM, làm giàu qua web công khai, đẩy lại với nhãn. Không có người trung gian Zapier, không có giới hạn tác vụ hàng tháng."
+        }
+      ]
+    },
+    "faq": {
+      "label": "CÂU HỎI THƯỜNG GẶP",
+      "title": "Cloud — những câu hỏi chúng tôi nghe nhiều nhất.",
+      "subtitle": "Ghi, phát lại, bảo mật, định giá — câu trả lời mà trưởng vận hành và IT yêu cầu trước khi phê duyệt công cụ.",
+      "items": [
+        {
+          "q": "Cloud có hoạt động trên các trang không có API công khai không?",
+          "a": "Đó chính xác là công việc của nó. Nếu bạn có thể làm công việc trong trình duyệt, Flyto2 có thể ghi lại và phát lại — cổng nội bộ, trang chính phủ, ERP cũ, bất cứ đâu."
+        },
+        {
+          "q": "Nó có thực sự chạy trên máy của tôi không?",
+          "a": "Có. Ứng dụng desktop đóng gói bộ thực thi Chromium và bộ thực thi quy trình. Thông tin xác thực, các bước đã ghi và lịch sử thực thi ở trên đĩa của bạn. Cloud là tuỳ chọn để lên lịch, chia sẻ và các tính năng nhóm."
+        },
+        {
+          "q": "Điều gì xảy ra khi trang web thiết kế lại?",
+          "a": "Flyto2 ghi lại ý định ngữ nghĩa (\"nhấp Đăng nhập\", \"điền trường email\") thay vì XPath dễ hỏng. Khi trang web đổi giao diện, hầu hết các luồng vẫn tiếp tục hoạt động. Khi một bước hỏng, bạn chỉ sửa bước đó trong trình soạn thảo trực quan."
+        },
+        {
+          "q": "Tôi có thể trigger luồng từ CI / một script không?",
+          "a": "Có. Mọi quy trình đều có lệnh CLI và URL webhook. Chạy từ cron, GitHub Actions, backend của bạn, hoặc lịch có máy chủ của Flyto2 — cùng file quy trình, cùng kết quả."
+        },
+        {
+          "q": "Bạn xử lý 2FA và CAPTCHA như thế nào?",
+          "a": "Flyto2 có thể tạm dừng và nhắc bạn (hoặc người trong nhóm) hoàn thành thử thách 2FA, sau đó tiếp tục. CAPTCHA cố tình không bị bỏ qua — việc dùng Flyto2 trên các trang cấm tự động hoá là trách nhiệm của bạn, không phải của chúng tôi."
+        },
+        {
+          "q": "Định giá như thế nào?",
+          "a": "Miễn phí cho cá nhân dùng ứng dụng desktop và bộ thực thi OSS. Pro thêm lịch có máy chủ và chạy cloud không giới hạn; Team thêm marketplace chia sẻ và SSO. Định giá chi tiết ở trang Cloud."
+        }
+      ]
+    },
+    "cta": {
+      "label": "BẮT ĐẦU",
+      "title": "Một lần ghi, mỗi thứ Hai tự động chạy.",
+      "body": "Tải ứng dụng desktop, ghi quy trình đầu tiên trong năm phút, và xem nó chạy mãi mãi.",
+      "primary": "Tải miễn phí",
+      "secondary": "Đọc tài liệu"
+    }
+  },
+  "download": {
+    "metaTitle": "Tải Flyto2",
+    "metaDescription": "Tải Flyto2 — ứng dụng desktop miễn phí cho macOS, Windows và Linux. Tự động hoá trình duyệt chạy offline, không cần tài khoản.",
+    "downloadFor": "Tải cho {os}",
+    "allReleases": "Tất cả bản phát hành trên GitHub",
+    "hero": {
+      "eyebrow": "ỨNG DỤNG DESKTOP · MIỄN PHÍ",
+      "title": "Tải",
+      "titleAccent": "Flyto2.",
+      "lede": "Miễn phí cho cá nhân, mãi mãi. macOS, Windows, Linux — đi kèm bộ thực thi mã nguồn mở. Không cần tài khoản, không telemetry, chạy offline."
+    },
+    "docker": {
+      "title": "Tự lưu trữ với Docker",
+      "body": "Chạy cùng một bộ thực thi trong container — hoàn hảo cho máy chủ headless, CI agent, hoặc triển khai doanh nghiệp cách ly khỏi mạng.",
+      "cta": "Docker Hub"
+    },
+    "oss": {
+      "title": "Hoặc chỉ lấy bộ thực thi, trên PyPI",
+      "body": "Lõi thực thi là Python cấp phép MIT. Cài như thư viện, dùng CLI, nhúng vào pipeline của bạn.",
+      "cta": "Xem mã nguồn trên GitHub"
+    },
+    "cta": {
+      "label": "CŨNG HỮU ÍCH",
+      "title": "Cần thứ cụ thể hơn?",
+      "body": "Tìm bản phát hành cũ hơn, kiến trúc khác, hoặc triển khai vào môi trường được quản lý? Vào GitHub releases hoặc tài liệu.",
+      "primary": "Mở releases",
+      "secondary": "Đọc tài liệu"
+    }
+  },
+  "pricing": {
+    "metaTitle": "Định giá",
+    "metaDescription": "Miễn phí cho cá nhân, mãi mãi. Pro ở $9/tháng và Team ở $19/tháng. Định giá minh bạch cho tự động hoá trình duyệt chạy offline.",
+    "perMonth": "/ tháng",
+    "mostPopular": "Phổ biến nhất",
+    "priceFootnote": "USD · Huỷ bất cứ lúc nào · Không cần thẻ tín dụng để bắt đầu",
+    "hero": {
+      "eyebrow": "ĐỊNH GIÁ",
+      "title": "Miễn phí mãi mãi.",
+      "titleAccent": "Pro khi bạn mở rộng.",
+      "lede": "Cá nhân dùng miễn phí, trên desktop và bộ thực thi OSS. Nâng cấp chỉ khi bạn cần lịch có máy chủ, quản lý nhóm, hoặc điện toán tháng cao hơn."
+    },
+    "plans": {
+      "free": {
+        "label": "MIỄN PHÍ",
+        "name": "Free",
+        "tagline": "Cho cá nhân khám phá tự động hoá.",
+        "feature1": "1.000 điểm điện toán / tháng",
+        "feature2": "Tối đa 5 quy trình đã lưu",
+        "feature3": "Toàn bộ 250+ module",
+        "feature4": "Hỗ trợ cộng đồng",
+        "cta": "Tải miễn phí"
+      },
+      "pro": {
+        "label": "PRO",
+        "name": "Pro",
+        "tagline": "Cho người dùng chạy tự động hoá hàng ngày.",
+        "feature1": "50.000 điểm điện toán / tháng",
+        "feature2": "Quy trình không giới hạn",
+        "feature3": "Lịch có máy chủ — cron, webhook, thử lại",
+        "feature4": "Hỗ trợ ưu tiên, SLA 24 giờ",
+        "feature5": "Xuất bản lên Marketplace",
+        "cta": "Bắt đầu với Pro"
+      },
+      "team": {
+        "label": "TEAM",
+        "name": "Team",
+        "tagline": "Cho nhóm vận hành chia sẻ quy trình trong toàn công ty.",
+        "feature1": "200.000 điểm điện toán / tháng",
+        "feature2": "Tối đa 10 ghế",
+        "feature3": "RBAC và marketplace chia sẻ",
+        "feature4": "SSO (Google, Microsoft)",
+        "feature5": "Hỗ trợ triển khai chuyên biệt",
+        "cta": "Bắt đầu với Team"
+      }
+    },
+    "faq": {
+      "label": "CÂU HỎI THƯỜNG GẶP",
+      "title": "Câu hỏi về định giá, đã trả lời.",
+      "subtitle": "Điểm điện toán, giới hạn ghế, thanh toán — những câu hỏi người mua hỏi trước khi rút thẻ.",
+      "items": [
+        {
+          "q": "\"Điểm điện toán\" là gì?",
+          "a": "Một điểm là một đơn vị công việc — xấp xỉ một bước quy trình (một cú nhấp, một hàng CSV, một lời gọi API). 50.000 điểm tương đương khoảng 100 giờ tự động hoá trình duyệt thông thường mỗi tháng."
+        },
+        {
+          "q": "Gói miễn phí có thực sự miễn phí mãi mãi không?",
+          "a": "Có. Ứng dụng desktop và bộ thực thi mã nguồn mở miễn phí cho cá nhân mãi mãi. Điều duy nhất gói miễn phí không có là lịch có máy chủ và các tính năng nhóm."
+        },
+        {
+          "q": "Điều gì xảy ra nếu tôi vượt quá điểm hàng tháng?",
+          "a": "Quy trình tạm dừng đến chu kỳ tiếp theo, hoặc bạn có thể mua thêm với giá $0.20 cho 1.000 điểm. Chúng tôi không bao giờ tính phí ngầm — bạn xác nhận việc mua thêm trước khi nó chạy."
+        },
+        {
+          "q": "Bạn có cung cấp thanh toán hàng năm hoặc giảm giá không?",
+          "a": "Thanh toán hàng năm tiết kiệm 20% cho Pro và Team. Giảm giá cho giáo dục và phi lợi nhuận — email info@flyto2.com."
+        },
+        {
+          "q": "Tôi có thể tự lưu trữ thay thế không?",
+          "a": "Có. Bộ thực thi OSS trên PyPI chạy mọi thứ ngoại trừ lịch có máy chủ. Tự lưu trữ doanh nghiệp với SSO và triển khai cách ly mạng đang trong lộ trình."
+        }
+      ]
+    },
+    "cta": {
+      "label": "VẪN ĐANG CÂN NHẮC",
+      "title": "Dùng thử trước khi trả tiền.",
+      "body": "Tải ứng dụng desktop miễn phí, ghi một quy trình, xem Flyto2 có phù hợp với vấn đề bạn đang cố giải quyết không. Nâng cấp chỉ khi bạn quyết định nó xứng đáng.",
+      "primary": "Tải miễn phí",
+      "secondary": "Đọc tài liệu"
+    }
+  },
+  "forum": {
+    "titleCloud": "Cloud — Thảo luận",
+    "subtitleCloud": "Đặt câu hỏi, báo lỗi, chia sẻ quy trình. Mọi người đều đọc được, đăng bài với tài khoản Flyto2 miễn phí.",
+    "titleCode": "Warroom — Thảo luận",
+    "subtitleCode": "Bảo mật, quét, xác minh vòng kín. Công khai để đọc, tài khoản miễn phí để đăng.",
+    "auth": {
+      "loading": "Đang kiểm tra đăng nhập…",
+      "title": "Đăng nhập để tiếp tục",
+      "subtitle": "Bài đăng gắn với tài khoản của bạn để chúng tôi có thể hiển thị tên bạn trong phản hồi và thông báo cho bạn. Chúng tôi không chia sẻ email của bạn.",
+      "continueGoogle": "Tiếp tục với Google",
+      "or": "HOẶC",
+      "email": "Email",
+      "password": "Mật khẩu",
+      "signIn": "Đăng nhập",
+      "signUp": "Tạo tài khoản",
+      "switchToSignUp": "Chưa có tài khoản? Tạo một cái",
+      "switchToSignIn": "Đã có tài khoản? Đăng nhập",
+      "signOut": "Đăng xuất",
+      "error": "Có gì đó không ổn. Thử lại.",
+      "reason": {
+        "post": "ĐĂNG NHẬP ĐỂ ĐĂNG BÀI",
+        "comment": "ĐĂNG NHẬP ĐỂ PHẢN HỒI",
+        "react": "ĐĂNG NHẬP ĐỂ PHẢN ỨNG"
+      }
+    },
+    "list": {
+      "compose": "Bài đăng mới",
+      "composeSignIn": "Đăng nhập để đăng",
+      "loadMore": "Tải thêm",
+      "empty": "Chưa có bài đăng nào — hãy là người đầu tiên hỏi.",
+      "error": "Không thể tải bài đăng. Làm mới để thử lại.",
+      "indexBuilding": "Firestore vẫn đang xây dựng chỉ mục cho truy vấn này. Chúng tôi sẽ tự động thử lại mỗi 30 giây — không cần làm mới.",
+      "prev": "Trước",
+      "next": "Tiếp",
+      "first": "Đầu",
+      "pageIndicator": "Trang {page}"
+    },
+    "categories": {
+      "all": "Tất cả",
+      "question": "Hỏi & Đáp",
+      "bug": "Lỗi",
+      "feature": "Đề xuất tính năng",
+      "discussion": "Thảo luận"
+    },
+    "sort": {
+      "new": "Mới",
+      "hot": "Nóng",
+      "top": "Hàng đầu"
+    },
+    "composer": {
+      "title": "Bắt đầu thảo luận",
+      "subtitle": "Hỗ trợ Markdown. Hãy cụ thể — tiêu đề trong một dòng, bước tái hiện / ngữ cảnh trong nội dung.",
+      "titlePlaceholder": "Câu hỏi hoặc báo cáo của bạn là gì?",
+      "bodyPlaceholder": "Thêm chi tiết — hỗ trợ Markdown. Khối code với ba dấu backtick.",
+      "tagsPlaceholder": "Thẻ (phân cách bằng dấu phẩy, tối đa 5)",
+      "markdownHint": "Markdown · khối code · @nhắc đến sau",
+      "submit": "Đăng",
+      "error": "Không thể đăng. Kiểm tra kết nối và thử lại."
+    },
+    "comments": {
+      "heading": "{count, plural, =0 {Chưa có phản hồi} =1 {1 phản hồi} other {# phản hồi}}",
+      "empty": "Hãy là người đầu tiên phản hồi.",
+      "placeholder": "Viết phản hồi… Hỗ trợ Markdown.",
+      "submit": "Phản hồi",
+      "error": "Không thể đăng phản hồi."
+    },
+    "detail": {
+      "back": "Quay lại thảo luận",
+      "notFound": "Bài đăng này đã bị xoá hoặc không tồn tại.",
+      "error": "Không thể tải bài đăng này."
+    }
+  },
+  "templates": {
+    "metaTitle": "Mẫu — Flyto2 Marketplace",
+    "metaDescription": "Mẫu quy trình được xây dựng sẵn cho hoá đơn, cào dữ liệu, làm giàu lead và nhiều hơn nữa. Cài đặt trong một cú nhấp.",
+    "gridLabel": "ĐƯỢC CÀI NHIỀU NHẤT",
+    "gridTitle": "Quy trình người ta thực sự chạy.",
+    "gridSubtitle": "Đây là những công thức xuất hiện trong tài khoản khách hàng thực tế. Mỗi cái là điểm khởi đầu — clone, chỉnh, chạy.",
+    "contributeOnGithub": "Đóng góp mẫu trên GitHub",
+    "hero": {
+      "eyebrow": "MARKETPLACE · ĐANG MỞ RỘNG",
+      "title": "Quy trình bạn có thể",
+      "titleAccent": "cài đặt trong một cú nhấp.",
+      "lede": "Được ghi, gắn thẻ và sẵn sàng chạy. Duyệt marketplace từ bên trong ứng dụng, hoặc xem những gì phổ biến nhất bên dưới — mọi mục đều kèm file quy trình nguồn bạn có thể chỉnh sửa."
+    },
+    "items": [
+      {
+        "iconName": "Receipt",
+        "category": "TÀI CHÍNH",
+        "title": "Trích xuất hoá đơn",
+        "body": "Đăng nhập vào cổng nhà cung cấp, tải PDF, phân loại theo khách hàng, đẩy tổng số vào Sheets."
+      },
+      {
+        "iconName": "ShoppingCart",
+        "category": "THƯƠNG MẠI ĐIỆN TỬ",
+        "title": "Đối soát đơn hàng",
+        "body": "Lấy đơn hàng từ Stripe, khớp với Shopify, hiển thị sai lệch trong Slack."
+      },
+      {
+        "iconName": "Search",
+        "category": "NGHIÊN CỨU",
+        "title": "Theo dõi đối thủ",
+        "body": "Truy cập danh sách URL, cào giá, cảnh báo Slack khi có thay đổi."
+      },
+      {
+        "iconName": "Mail",
+        "category": "TĂNG TRƯỞNG",
+        "title": "Làm giàu lead",
+        "body": "Lấy từ CRM, làm giàu qua web công khai, ghi lại liên hệ với nhãn."
+      },
+      {
+        "iconName": "Database",
+        "category": "ĐỒNG BỘ",
+        "title": "Đồng bộ đa SaaS",
+        "body": "Kết nối hai công cụ SaaS không tích hợp với nhau nguyên bản, mỗi đêm."
+      },
+      {
+        "iconName": "Calendar",
+        "category": "VẬN HÀNH",
+        "title": "Xử lý lịch hàng loạt",
+        "body": "Đọc CSV đặt chỗ, tạo sự kiện lịch, gửi lời nhắc."
+      },
+      {
+        "iconName": "FileText",
+        "category": "TUÂN THỦ",
+        "title": "Tải tài liệu",
+        "body": "Tải hàng quý các sao kê, hợp đồng, chứng chỉ — tự động lưu trữ."
+      },
+      {
+        "iconName": "Bell",
+        "category": "GIÁM SÁT",
+        "title": "Kiểm tra uptime trang web",
+        "body": "Thăm dò danh sách URL, kiểm tra trạng thái, cảnh báo khi có gì đó đỏ."
+      }
+    ],
+    "cta": {
+      "label": "KHÔNG TÌM THẤY?",
+      "title": "Cho chúng tôi biết bạn muốn tự động hoá gì trước tiên.",
+      "body": "Nếu có quy trình bạn muốn có mẫu, ping chúng tôi trong GitHub Discussions hoặc tự xây dựng — bộ thực thi là mã nguồn mở.",
+      "primary": "Mở Discussions",
+      "secondary": "Đọc tài liệu"
+    },
+    "details": {
+      "auto-login-template": {
+        "title": "Mẫu đăng nhập tự động",
+        "category": "Xác thực và phiên",
+        "lede": "Đăng nhập vào bất kỳ trang nào theo cách lập trình mà không cần viết lại selector cho từng luồng. Mẫu Auto-Login xử lý các trường biểu mẫu, thử thách MFA và duy trì phiên, để các tự động hóa sau đó khởi động ở trạng thái đã xác thực.",
+        "metaDescription": "Tự động hóa đăng nhập website trên Flyto2 Cloud với hỗ trợ 2FA, lưu trữ thông tin đăng nhập mã hóa và tái sử dụng phiên bền cho luồng làm việc trình duyệt headless.",
+        "faqs": [
+          {
+            "q": "Có hỗ trợ nhà cung cấp SSO không?"
+          },
+          {
+            "q": "Mật khẩu được bảo vệ ra sao?"
+          },
+          {
+            "q": "Có thể tự giải CAPTCHA không?"
+          },
+          {
+            "q": "Khi phiên hết hạn thì sao?"
+          }
+        ]
+      },
+      "craigslist-listings-scraper": {
+        "title": "Scraper tin đăng Craigslist",
+        "category": "Dữ liệu chợ trực tuyến",
+        "lede": "Thu thập dữ liệu Craigslist có cấu trúc trên hàng trăm vùng đô thị mà không cần viết một bộ phân tích nào. Mẫu này xử lý phân trang, định tuyến theo địa lý và mã đánh dấu lộn xộn từng làm khốn đốn các scraper suốt hai thập kỷ.",
+        "metaDescription": "Scrape tin rao vặt Craigslist quy mô lớn với mẫu Flyto2. Trích xuất tiêu đề, giá, vị trí, hình ảnh và liên hệ người bán trên các danh mục và thành phố.",
+        "faqs": [
+          {
+            "q": "Dữ liệu mới đến mức nào?"
+          },
+          {
+            "q": "Có lấy được liên hệ người bán không?"
+          },
+          {
+            "q": "Có xử lý chặn anti-bot không?"
+          },
+          {
+            "q": "Hỗ trợ định dạng đầu ra nào?"
+          }
+        ]
+      },
+      "domain-availability-checker": {
+        "title": "Trình kiểm tra tình trạng tên miền",
+        "category": "Công cụ tên miền và DNS",
+        "lede": "Quét hàng nghìn tên miền ứng viên trên mọi TLD quan trọng và chỉ làm nổi bật những tên thực sự còn trống để đăng ký. Mẫu này kết hợp nhiều nguồn có thẩm quyền để tránh báo trống nhầm.",
+        "metaDescription": "Kiểm tra hàng loạt tình trạng tên miền trên hàng trăm TLD với mẫu tự động hóa Flyto2. Kết hợp WHOIS, RDAP và truy vấn DNS để có kết quả chính xác.",
+        "faqs": [
+          {
+            "q": "Kết quả chính xác đến đâu?"
+          },
+          {
+            "q": "Có hỗ trợ các gTLD mới không?"
+          },
+          {
+            "q": "Có tự đăng ký tên miền được không?"
+          },
+          {
+            "q": "Tên miền IDN thì sao?"
+          }
+        ]
+      },
+      "github-repo-stats-dashboard": {
+        "title": "Dashboard thống kê repo GitHub",
+        "category": "DevTools và phân tích",
+        "lede": "Tập trung các chỉ số sức khỏe cho mọi repository mà nhóm bạn sở hữu. Mẫu kéo dữ liệu lịch sử và trực tiếp từ GitHub API, lưu trữ liên tục và hiển thị thành dashboard có thể chia sẻ hoặc nhúng.",
+        "metaDescription": "Xây dựng dashboard phân tích repository GitHub trực tiếp với Flyto2. Theo dõi sao, fork, lưu lượng, issue, tốc độ PR và hoạt động đóng góp xuyên suốt nhiều repo.",
+        "faqs": [
+          {
+            "q": "Có dùng cho repo riêng tư không?"
+          },
+          {
+            "q": "Giới hạn rate xử lý ra sao?"
+          },
+          {
+            "q": "Có thể xuất sang BigQuery không?"
+          },
+          {
+            "q": "GitHub Enterprise thì sao?"
+          }
+        ]
+      },
+      "google-search-results-scraper": {
+        "title": "Scraper kết quả tìm kiếm Google",
+        "category": "SERP và nghiên cứu",
+        "lede": "Trích xuất toàn bộ cấu trúc kết quả tìm kiếm Google, không chỉ mười liên kết xanh đầu. Mẫu nắm bắt vị trí organic, quảng cáo, knowledge panel, đoạn nổi bật và khối People Also Ask trong một lần thu thập.",
+        "metaDescription": "Scrape SERP Google quy mô lớn với trích xuất có cấu trúc cho organic, quảng cáo và tính năng SERP. Nhắm mục tiêu theo quốc gia, thiết bị và theo dõi xếp hạng từ khóa theo thời gian.",
+        "faqs": [
+          {
+            "q": "Có xử lý CAPTCHA không?"
+          },
+          {
+            "q": "Có scrape theo quốc gia cụ thể không?"
+          },
+          {
+            "q": "Mobile và desktop khác nhau ra sao?"
+          },
+          {
+            "q": "Đầu ra có ổn định theo thời gian không?"
+          }
+        ]
+      },
+      "linkedin-job-listings-scraper": {
+        "title": "Scraper tin tuyển dụng LinkedIn",
+        "category": "Tuyển dụng và việc làm",
+        "lede": "Biến tìm kiếm việc làm trên LinkedIn thành một bộ dữ liệu truy vấn được. Mẫu thu thập tin theo vai trò, công ty, khu vực và cấp bậc, rồi chuẩn hóa cho pipeline tuyển dụng và phân tích thị trường ở phía sau.",
+        "metaDescription": "Đưa tin tuyển dụng LinkedIn vào bộ dữ liệu có cấu trúc phục vụ phân tích tuyển dụng, market intelligence và đồng bộ ATS, với mẫu tự động hóa Flyto2.",
+        "faqs": [
+          {
+            "q": "Có cần tài khoản premium không?"
+          },
+          {
+            "q": "Tránh bị chặn ra sao?"
+          },
+          {
+            "q": "Lương có luôn được lấy không?"
+          },
+          {
+            "q": "Có đẩy thẳng vào ATS được không?"
+          }
+        ]
+      },
+      "news-headlines-aggregator": {
+        "title": "Tổng hợp tiêu đề tin tức",
+        "category": "Tin tức và nội dung",
+        "lede": "Dựng dòng tin tức hợp nhất từ bất kỳ tổ hợp nào của báo lớn, blog ngách và RSS. Mẫu chuẩn hóa, khử trùng lặp và phân cụm để các bài trùng về cùng một sự kiện gom lại thành một.",
+        "metaDescription": "Tổng hợp tiêu đề nóng từ hàng trăm trang tin vào một dòng hợp nhất và đã khử trùng lặp với mẫu tự động hóa scrape tin tức của Flyto2.",
+        "faqs": [
+          {
+            "q": "Nếu nguồn không có RSS thì sao?"
+          },
+          {
+            "q": "Phân cụm hoạt động thế nào?"
+          },
+          {
+            "q": "Có lọc theo chủ đề không?"
+          },
+          {
+            "q": "Tiêu đề đến nhanh đến đâu?"
+          }
+        ]
+      },
+      "page-load-speed-tester": {
+        "title": "Công cụ kiểm thử tốc độ tải trang",
+        "category": "Hiệu năng và giám sát",
+        "lede": "Phát hiện hồi quy hiệu năng trước cả khi người dùng nhận ra. Mẫu đo Core Web Vitals từ nhiều khu vực và thiết bị, rồi cảnh báo khi các chỉ số chính lệch khỏi baseline bạn đặt.",
+        "metaDescription": "Chạy kiểm thử tải tổng hợp với Core Web Vitals thật, dữ liệu waterfall và cảnh báo hồi quy bằng mẫu tự động hóa hiệu năng web Flyto2.",
+        "faqs": [
+          {
+            "q": "Người dùng thật hay tổng hợp?"
+          },
+          {
+            "q": "Có kiểm thử trang đã đăng nhập không?"
+          },
+          {
+            "q": "Baseline được tính thế nào?"
+          },
+          {
+            "q": "Có chặn được bản deploy lỗi không?"
+          }
+        ]
+      },
+      "real-estate-listings-monitor": {
+        "title": "Giám sát tin đăng bất động sản",
+        "category": "Bất động sản",
+        "lede": "Là người đầu tiên biết khi một bất động sản lên sàn hoặc giảm giá. Mẫu giám sát các cổng bất động sản lớn với chu kỳ dưới một giờ và cảnh báo ngay khi tiêu chí theo dõi được thỏa mãn.",
+        "metaDescription": "Theo dõi tin đăng bất động sản trên Zillow, Redfin, Realtor và các cổng MLS với mẫu giám sát Flyto2. Nhận cảnh báo cho nguồn cung mới và thay đổi giá.",
+        "faqs": [
+          {
+            "q": "Hỗ trợ những cổng nào?"
+          },
+          {
+            "q": "Cảnh báo nhanh đến mức nào?"
+          },
+          {
+            "q": "Có theo dõi bất động sản off-market không?"
+          },
+          {
+            "q": "Bất động sản thương mại thì sao?"
+          }
+        ]
+      },
+      "restaurant-menu-scraper-2": {
+        "title": "Scraper thực đơn nhà hàng",
+        "category": "Ẩm thực và lưu trú",
+        "lede": "Kéo từng món, tùy chọn và giá từ các nền tảng giao đồ ăn lớn vào một bộ dữ liệu sạch. Mẫu xử lý các schema khác nhau của Uber Eats, DoorDash, Grubhub và trang nhà hàng trực tiếp.",
+        "metaDescription": "Trích xuất thực đơn nhà hàng từ Uber Eats, DoorDash, Grubhub và website trực tiếp thành dữ liệu có cấu trúc với mẫu tự động hóa scrape thực đơn của Flyto2.",
+        "faqs": [
+          {
+            "q": "Có lấy đủ tùy chọn không?"
+          },
+          {
+            "q": "Giá có thay đổi theo địa điểm?"
+          },
+          {
+            "q": "Có scrape được website chính chủ?"
+          },
+          {
+            "q": "Nên scrape với tần suất nào?"
+          }
+        ]
+      },
+      "send-telegram-alert": {
+        "title": "Gửi cảnh báo Telegram",
+        "category": "Thông báo",
+        "lede": "Biến mọi sự kiện tự động hóa thành thông báo Telegram phong phú. Mẫu xử lý bot token, định tuyến kênh, template tin nhắn và bàn phím inline để cảnh báo đến nơi đã được định dạng và có thể hành động.",
+        "metaDescription": "Gửi cảnh báo Telegram phong phú đến kênh, nhóm hoặc chat trực tiếp từ bất kỳ workflow Flyto2 nào, có template, bàn phím inline và xác nhận giao.",
+        "faqs": [
+          {
+            "q": "Tạo bot thế nào?"
+          },
+          {
+            "q": "Có gửi vào DM người dùng không?"
+          },
+          {
+            "q": "Nút inline có tương tác không?"
+          },
+          {
+            "q": "Giới hạn kích thước tin nhắn là gì?"
+          }
+        ]
+      },
+      "stock-price-dashboard-scraper": {
+        "title": "Dashboard giá cổ phiếu",
+        "category": "Tài chính và dữ liệu thị trường",
+        "lede": "Hợp nhất bảng giá trực tiếp, cơ bản và tin tức của mọi watchlist vào một dashboard có thể kiểm toán. Mẫu phân nhánh sang nhiều nhà cung cấp dữ liệu và hợp nhất kết quả vào một góc nhìn thống nhất.",
+        "metaDescription": "Xây dashboard giá cổ phiếu thời gian thực với mẫu Flyto2. Tổng hợp bảng giá, dữ liệu cơ bản, tin tức và cảnh báo từ nhiều nguồn dữ liệu thị trường.",
+        "faqs": [
+          {
+            "q": "Bảng giá có thời gian thực không?"
+          },
+          {
+            "q": "Hỗ trợ những loại tài sản nào?"
+          },
+          {
+            "q": "Có backtest trên dữ liệu được không?"
+          },
+          {
+            "q": "Giá ngoài giờ giao dịch thì sao?"
+          }
+        ]
+      },
+      "weather-forecast-to-slack": {
+        "title": "Dự báo thời tiết lên Slack",
+        "category": "Thời tiết và năng suất",
+        "lede": "Bắt đầu mỗi ngày làm việc bằng bản tin thời tiết cá nhân hóa trên Slack. Mẫu lấy dự báo cho một hoặc nhiều địa điểm, render thành các block Slack phong phú và leo thang khi thời tiết khắc nghiệt đe dọa.",
+        "metaDescription": "Gửi dự báo thời tiết hàng ngày tới kênh hoặc DM Slack với block phong phú, nhắm vị trí và cảnh báo thời tiết khắc nghiệt qua mẫu tự động hóa Flyto2.",
+        "faqs": [
+          {
+            "q": "Nên chọn nhà cung cấp nào?"
+          },
+          {
+            "q": "Có đăng được vào DM không?"
+          },
+          {
+            "q": "Cảnh báo khắc nghiệt xử lý thế nào?"
+          },
+          {
+            "q": "Giao ngoài Slack thì sao?"
+          }
+        ]
+      },
+      "webpage-to-pdf-converter": {
+        "title": "Trình chuyển trang web sang PDF",
+        "category": "Tạo tài liệu",
+        "lede": "Render mọi URL thành PDF trung thực từng pixel, mở sạch sẽ trong mọi trình xem. Mẫu kiểm soát kích thước trang, lề, đầu trang, chân trang, hình mờ và chi tiết số trang mà tài liệu in ấn yêu cầu.",
+        "metaDescription": "Chuyển bất kỳ trang web nào thành PDF chất lượng cao trên Flyto2 Cloud với hỗ trợ sẵn cho kích thước trang tùy chỉnh, đầu/chân trang, số trang và hình mờ.",
+        "faqs": [
+          {
+            "q": "Văn bản đầu ra có chọn được không?"
+          },
+          {
+            "q": "Liên kết có được giữ lại không?"
+          },
+          {
+            "q": "Có thể thêm số trang không?"
+          },
+          {
+            "q": "Tài liệu một trang siêu dài thì sao?"
+          }
+        ]
+      },
+      "website-screenshot-gallery": {
+        "title": "Thư viện ảnh chụp màn hình website",
+        "category": "Giám sát trực quan",
+        "lede": "Xây lịch sử trực quan cho bất kỳ tập hợp trang nào. Mẫu chụp ảnh theo lịch, chạy diff pixel với lần chụp trước và lập chỉ mục mọi thứ vào một thư viện có thể duyệt.",
+        "metaDescription": "Chụp ảnh website theo lịch vào thư viện có thể tìm kiếm với diff trực quan, bao phủ đa viewport và lưu giữ tài nguyên qua tự động hóa Flyto2.",
+        "faqs": [
+          {
+            "q": "Ảnh chụp có dung lượng bao nhiêu?"
+          },
+          {
+            "q": "Có xử lý trang đã đăng nhập không?"
+          },
+          {
+            "q": "Có thể diff với baseline không?"
+          },
+          {
+            "q": "Nội dung hoạt hình thì sao?"
+          }
+        ]
+      },
+      "website-uptime-monitor": {
+        "title": "Giám sát uptime website",
+        "category": "Giám sát và SRE",
+        "lede": "Theo dõi dịch vụ từ bên ngoài chính hạ tầng của bạn. Mẫu chạy kiểm tra tổng hợp từ nhiều khu vực, leo thang sự cố thật một cách thông minh và tạo dữ liệu trang trạng thái mà khách hàng mong đợi.",
+        "metaDescription": "Giám sát uptime website, độ trễ và hạn SSL từ nhiều khu vực với leo thang sự cố phong phú qua mẫu tự động hóa giám sát uptime của Flyto2.",
+        "faqs": [
+          {
+            "q": "Tần suất thăm dò tối đa là bao nhiêu?"
+          },
+          {
+            "q": "Chi tiết bên trong TLS thì sao?"
+          },
+          {
+            "q": "Có kiểm thử luồng đăng nhập không?"
+          },
+          {
+            "q": "Sự cố flapping xử lý thế nào?"
+          }
+        ]
+      },
+      "youtube-channel-stats-tracker": {
+        "title": "Trình theo dõi thống kê kênh YouTube",
+        "category": "Phân tích mạng xã hội",
+        "lede": "Xây bản ghi dài hạn về hiệu quả kênh và video, vượt qua khung báo cáo gốc của YouTube. Mẫu chụp các chỉ số công khai theo lịch và làm rõ xu hướng trên toàn bộ danh mục.",
+        "metaDescription": "Theo dõi chỉ số kênh và video YouTube theo thời gian với mẫu tự động hóa Flyto2. Ghi lượt xem, người đăng ký, thời gian xem và tương tác qua nhiều kênh.",
+        "faqs": [
+          {
+            "q": "Bộ đếm chính xác đến đâu?"
+          },
+          {
+            "q": "Còn phân tích riêng tư thì sao?"
+          },
+          {
+            "q": "Có theo dõi kênh đối thủ được không?"
+          },
+          {
+            "q": "Chi phí quota là bao nhiêu?"
+          }
+        ]
+      }
+    }
+  },
+  "code": {
+    "metaTitle": "Warroom — Phòng tác chiến bảo mật ứng dụng",
+    "metaDescription": "SCA, SAST, bí mật, giấy phép, CVE, pentest, runtime — một bức tranh toàn cảnh cho codebase của bạn. Sắp ra mắt.",
+    "hero": {
+      "eyebrow": "02 / CODE",
+      "status": "BETA",
+      "title": "Một phòng tác chiến.",
+      "titleAccent": "Mọi góc độ tấn công.",
+      "lede": "SCA, SAST, phát hiện bí mật, kiểm toán giấy phép, phân loại CVE, quy trình pentest, telemetry runtime. Warroom là bức tranh toàn cảnh bảo mật cho mọi dòng code bạn xuất xưởng.",
+      "ctaPrimary": "Đăng ký danh sách chờ",
+      "ctaSecondary": "Dùng thử CLI mã nguồn mở",
+      "ctaBetaBadge": "Beta",
+      "ctaBeta": "Mở bản beta"
+    },
+    "closedLoop": {
+      "label": "ĐIỀU LÀM NÓ KHÁC BIỆT",
+      "title": "Xác minh vòng kín.",
+      "subtitle": "Mọi công cụ bảo mật khác dừng lại ở cảnh báo. Warroom biến từng phát hiện thành YAML pentest, chạy nó trên staging của bạn trong trình duyệt thực, và báo cáo phán quyết — khai thác được, đã vô hiệu hoá, hoặc không thể tiếp cận.",
+      "find": {
+        "title": "Phát hiện",
+        "body": "SCA, SAST, bí mật, giấy phép, IaC. Cùng một lần quét phân tích code của bạn thành call graph và bản đồ kiến trúc.",
+        "signal": "scan"
+      },
+      "craft": {
+        "title": "Tạo",
+        "body": "Với mỗi phát hiện liên quan đến bảo mật, tạo một quy trình pentest YAML được giới hạn phạm vi đến route bị ảnh hưởng.",
+        "signal": "yaml"
+      },
+      "run": {
+        "title": "Chạy",
+        "body": "Thực thi quy trình trên staging trong phiên Chrome thực. 12 playbook OWASP / LLM / logic nghiệp vụ chính thức ra mắt ngay hôm nay.",
+        "signal": "live"
+      },
+      "verdictStep": {
+        "title": "Phán quyết",
+        "body": "Thu thập bằng chứng ký HMAC, báo cáo có thể khai thác / đã vô hiệu hoá / không thể tiếp cận, lưu quy trình vào regression vault để chạy lại hàng đêm.",
+        "signal": "ledger"
+      },
+      "verdict": {
+        "exploitable": {
+          "title": "Có thể khai thác",
+          "body": "Lỗ hổng chạy từ đầu đến cuối. Gói bằng chứng kèm theo. Đưa lên đầu hàng đợi phân loại."
+        },
+        "sanitized": {
+          "title": "Đã vô hiệu hoá",
+          "body": "Được giảm thiểu bởi kiểm soát phía sau (auth, WAF, framework). Đã ghi lại, hạ ưu tiên."
+        },
+        "unreachable": {
+          "title": "Không thể tiếp cận",
+          "body": "Code dễ bị tấn công tồn tại nhưng không có đường dẫn đầu vào người dùng nào đến được. Đã ghi nhận, ưu tiên thấp."
+        }
+      }
+    },
+    "proof": {
+      "label": "BẰNG CHỨNG THỰC TẾ",
+      "title": "Chúng tôi đã kiểm thử trên OWASP Juice Shop.",
+      "subtitle": "Không phải sandbox tổng hợp. Ứng dụng thương mại điện tử cố tình có lỗ hổng kinh điển, chạy từ đầu đến cuối qua vòng kín. Đây là kết quả một chiến dịch.",
+      "caption": "Mọi phát hiện đều kèm gói bằng chứng ký HMAC. Chuỗi phát lại hàng đêm qua regression vault — khi có bản sửa, Warroom xác minh nó vẫn được sửa.",
+      "data": {
+        "metric": [
+          {
+            "value": "5",
+            "label": "Chuỗi tấn công cấp độ BREACH"
+          },
+          {
+            "value": "11",
+            "label": "Critical findings"
+          },
+          {
+            "value": "12",
+            "label": "Pentest playbook"
+          },
+          {
+            "value": "100%",
+            "label": "Phát lại được hàng đêm"
+          }
+        ],
+        "chain": [
+          {
+            "vector": "SQLi · login",
+            "finding": "Bypass tautology trong trường `email` của POST /rest/user/login — xác thực bị bỏ qua, session token được cấp."
+          },
+          {
+            "vector": "Token theft",
+            "finding": "JWT lấy từ response, giải mã — không có admin claim nhưng khoá ký dùng chung giữa các user."
+          },
+          {
+            "vector": "Chained IDOR",
+            "finding": "GET /api/Users/{id} chấp nhận id tuỳ ý; server trả về bản ghi đầy đủ bao gồm password hash."
+          },
+          {
+            "vector": "Privilege escalation",
+            "finding": "Giả mạo JWT bằng khoá bị rò rỉ, đặt role=admin, phát lại request — endpoint chỉ dành cho admin trả về 200."
+          },
+          {
+            "vector": "Data exfiltration",
+            "finding": "GET /api/Orders liệt kê lịch sử mua hàng của mọi khách hàng. Gói bằng chứng: 2.4 MB."
+          }
+        ]
+      }
+    },
+    "features": {
+      "label": "BÊN TRONG PHÒNG TÁC CHIẾN",
+      "title": "Bảy góc nhìn, một nguồn sự thật.",
+      "subtitle": "Mỗi bảng điều khiển của Warroom được xây dựng xung quanh một câu hỏi mà nhóm bảo mật đã đặt ra. Đây là những gì bạn thực sự thấy trong phòng tác chiến.",
+      "items": [
+        {
+          "label": "BẢNG ĐIỀU KHIỂN",
+          "title": "Một điểm A–F cho mỗi dự án.",
+          "body": "Tổng hợp mọi tín hiệu — SCA, SAST, bí mật, giấy phép, CVE, runtime — thành một điểm duy nhất. CISO của bạn xem tiêu đề. Kỹ sư của bạn đi sâu vào bảng đang chảy máu.",
+          "imageAlt": "Bảng điều khiển sức khoẻ Warroom với chấm điểm A–F",
+          "bullets": [
+            "Đường xu hướng cho mọi danh mục",
+            "Tổng hợp theo nhóm và theo dịch vụ",
+            "Bản tin hàng tuần được tạo tự động"
+          ]
+        },
+        {
+          "label": "KHẢ NĂNG TIẾP CẬN",
+          "title": "CVE nào thực sự chạy được.",
+          "body": "Hầu hết cảnh báo CVE là nhiễu — hàm dễ bị tấn công không bao giờ được gọi từ code của bạn. Phân tích khả năng tiếp cận truy dấu các đường dẫn gọi thực để bạn sửa 5% quan trọng, không phải 95% không quan trọng.",
+          "imageAlt": "Phân tích khả năng tiếp cận hiển thị các đường dẫn gọi có thể khai thác",
+          "bullets": [
+            "Call graph tĩnh + động",
+            "Lan truyền taint đa gói",
+            "Tỷ lệ dương tính giả được đo lường, không chỉ tuyên bố"
+          ]
+        },
+        {
+          "label": "PHỤ THUỘC",
+          "title": "Chuỗi cung ứng của bạn, được vẽ ra.",
+          "body": "Mọi phụ thuộc trực tiếp và bắc cầu, được tính trọng số theo rủi ro và phủ thêm CVE. Nhấp vào bất kỳ nút nào để xem ai kéo nó vào, nó kéo gì tiếp theo, và dịch vụ nào của bạn phụ thuộc vào nó.",
+          "imageAlt": "Biểu đồ phụ thuộc với lớp phủ lỗ hổng",
+          "bullets": [
+            "Lớp phủ rủi ro giấy phép + người bảo trì",
+            "Tìm bản trùng lặp được ghim ở các phiên bản khác nhau",
+            "Nhãn sở hữu lan truyền từ cấu hình monorepo"
+          ]
+        },
+        {
+          "label": "KIẾN TRÚC",
+          "title": "Toàn bộ hình dạng của codebase.",
+          "body": "Module, dịch vụ, luồng dữ liệu, ranh giới sở hữu — được suy ra trực tiếp từ nguồn, không phải từ wiki đã lỗi thời sáu tháng. Đọc được mà không cần annotation, tinh chỉnh khi bạn xuất xưởng.",
+          "imageAlt": "Bản đồ kiến trúc dịch vụ và module",
+          "bullets": [
+            "Tự động phát hiện dịch vụ từ file build",
+            "Nổi bật các lời gọi đa ranh giới",
+            "Diff với bản phát hành cuối để phát hiện drift"
+          ]
+        },
+        {
+          "label": "BỀ MẶT API",
+          "title": "Mọi endpoint, được kiểm kê.",
+          "body": "REST, gRPC, GraphQL — Warroom tìm thấy chúng trong handler của bạn và liệt kê những gì chúng chấp nhận, những gì chúng trả về, ai gọi chúng. Lỗ hổng xác thực và endpoint không xác thực tự động nổi lên.",
+          "imageAlt": "Kiểm kê endpoint API với metadata xác thực",
+          "bullets": [
+            "Cột chiến lược xác thực cho mỗi route",
+            "Phân loại công khai vs nội bộ",
+            "Xuất OpenAPI cho bất kỳ framework nào"
+          ]
+        },
+        {
+          "label": "HẠ TẦNG",
+          "title": "IaC được quét trong cùng một lần chạy.",
+          "body": "Terraform, Kubernetes manifest, Dockerfile — Warroom đọc hạ tầng của bạn cùng với code ứng dụng, để tư thế bảo mật và cấu trúc runtime đến từ cùng một lần quét.",
+          "imageAlt": "Giao diện quét Infrastructure-as-code",
+          "bullets": [
+            "Terraform, Helm, K8s, Dockerfile",
+            "Danh mục cấu hình sai được cập nhật theo CIS",
+            "Phát hiện drift: những gì được triển khai vs những gì được check in"
+          ]
+        },
+        {
+          "label": "NHỊP ĐẬP",
+          "title": "Drift bảo mật, theo thời gian.",
+          "body": "Ticker trực tiếp toàn nhóm về những gì đã thay đổi, khi nào, và nó di chuyển điểm bao nhiêu. Không phải bảng điều khiển để duyệt — mà là bảng điều khiển để chú ý.",
+          "imageAlt": "Giao diện nhịp đập hiển thị dòng thời gian drift bảo mật",
+          "bullets": [
+            "Đóng góp của từng kỹ sư vào delta rủi ro",
+            "Quy tắc leo thang cho điểm giảm đột ngột",
+            "Lịch sử có thể phát lại — xem chính xác commit nào đã di chuyển kim chỉ"
+          ]
+        }
+      ]
+    },
+    "scans": {
+      "label": "NÓ QUÉT GÌ",
+      "title": "Tám tín hiệu, một điểm sức khoẻ.",
+      "subtitle": "Mọi dự án đều được cho điểm A–F tổng hợp những thứ kẻ tấn công thực sự sử dụng chống lại bạn. Đi sâu vào bất kỳ tín hiệu nào để xem các phát hiện cơ bản, các bản sửa được đề xuất và PR khắc phục do AI tạo.",
+      "items": [
+        {
+          "icon": "Boxes",
+          "title": "SCA",
+          "body": "Phụ thuộc dễ bị tấn công trong lockfile của bạn, được tính trọng số theo khả năng tiếp cận — không chỉ là \"có CVE\"."
+        },
+        {
+          "icon": "Code2",
+          "title": "SAST",
+          "body": "Luồng taint cấp nguồn từ đầu vào không đáng tin cậy đến sink nguy hiểm, nhận biết AST."
+        },
+        {
+          "icon": "KeyRound",
+          "title": "Bí mật",
+          "body": "API key, token và thông tin xác thực được hard-code — trên toàn bộ lịch sử, không chỉ HEAD."
+        },
+        {
+          "icon": "ScrollText",
+          "title": "Giấy phép",
+          "body": "Ô nhiễm GPL, giấy phép không tương thích thương mại, attribution bị thiếu."
+        },
+        {
+          "icon": "Bug",
+          "title": "CVE",
+          "body": "Phân loại trực tiếp CVE mới đối với cây phụ thuộc của bạn, kèm replay POC."
+        },
+        {
+          "icon": "Crosshair",
+          "title": "Pentest",
+          "body": "Pentest-as-code: ghi lại chuỗi khai thác một lần, phát lại với mọi bản phát hành."
+        },
+        {
+          "icon": "Activity",
+          "title": "Runtime",
+          "body": "Telemetry sản xuất, phát hiện drift, kill-switch — Giai đoạn IV."
+        },
+        {
+          "icon": "FileCheck2",
+          "title": "Tuân thủ",
+          "body": "SOC 2, ISO 27001, tư thế lưu trú dữ liệu khu vực — Giai đoạn V."
+        }
+      ]
+    },
+    "phases": {
+      "label": "LỘ TRÌNH",
+      "title": "Sáu giai đoạn, một nền tảng.",
+      "items": [
+        {
+          "n": "I",
+          "title": "Nền tảng",
+          "status": "shipping",
+          "body": "Indexer, tìm kiếm, biểu đồ phụ thuộc, điểm sức khoẻ A–F."
+        },
+        {
+          "n": "II",
+          "title": "Tĩnh",
+          "status": "shipping",
+          "body": "SCA, SAST, quét bí mật, kiểm toán giấy phép — CLI mã nguồn mở."
+        },
+        {
+          "n": "III",
+          "title": "Động",
+          "status": "next",
+          "body": "Pentest-as-code, probe runtime, phát lại CVE."
+        },
+        {
+          "n": "IV",
+          "title": "Runtime",
+          "status": "planned",
+          "body": "Telemetry sản xuất, phát hiện drift, kill-switch."
+        },
+        {
+          "n": "V",
+          "title": "Tuân thủ",
+          "status": "planned",
+          "body": "SOC 2, ISO 27001, tư thế lưu trú dữ liệu khu vực."
+        },
+        {
+          "n": "VI",
+          "title": "Liên kết",
+          "status": "planned",
+          "body": "Phòng tác chiến đa tổ chức cho nhóm bảo mật."
+        }
+      ]
+    },
+    "faq": {
+      "label": "CÂU HỎI THƯỜNG GẶP",
+      "title": "Warroom — câu hỏi trước khi đăng ký danh sách chờ.",
+      "subtitle": "Khi nào ra mắt, khác gì so với các lựa chọn khác, bạn có thể làm gì ngay hôm nay.",
+      "items": [
+        {
+          "q": "Warroom ra mắt khi nào?",
+          "a": "Giai đoạn I và II (Nền tảng + Tĩnh) đã trong beta riêng tư. Giai đoạn III (Động) là cột mốc công khai tiếp theo — truy cập sớm giữa năm 2026. Đăng ký danh sách chờ để nhận CLI OSS và lời mời."
+        },
+        {
+          "q": "Cái này khác gì so với Snyk, Aikido, GitHub Advanced Security?",
+          "a": "Hai điểm khác biệt. (1) Một điểm trên SCA, SAST, bí mật, giấy phép, CVE, pentest và runtime — không phải tám công cụ bạn phải tự tương quan. (2) Pentest-as-code: bạn ghi lại chuỗi khai thác một lần và phát lại với mọi bản phát hành, giống cách Cloud phát lại luồng trình duyệt."
+        },
+        {
+          "q": "Tôi có thể dùng thử gì ngay hôm nay không?",
+          "a": "Có. `pip install flyto-indexer` cho bạn bộ quét OSS — tìm kiếm, tham chiếu, phân tích tác động, phát hiện dead-code, phân tích taint dựa trên AST. Phòng tác chiến có máy chủ được xây thêm khi Giai đoạn III ra mắt."
+        },
+        {
+          "q": "Source code của tôi có được tải lên đám mây không?",
+          "a": "Mặc định không. CLI chạy cục bộ và tạo chỉ mục cục bộ. Phòng tác chiến có máy chủ có thể nhận các phát hiện (không phải nguồn) để tổng hợp đa dự án; tải lên nguồn đầy đủ là opt-in theo từng dự án. Tự lưu trữ là tuỳ chọn Giai đoạn V."
+        },
+        {
+          "q": "Nó có hoạt động với repo riêng tư không?",
+          "a": "Có — CLI OSS không quan tâm code của bạn ở đâu. Phòng tác chiến có máy chủ hỗ trợ GitHub, GitLab, Bitbucket và Git tự lưu trữ ngay khi mở hộp."
+        },
+        {
+          "q": "Tôi có thể tự lưu trữ phòng tác chiến không?",
+          "a": "Tự lưu trữ có trong lộ trình (Giai đoạn V, cùng với tuân thủ). Bộ quét OSS có thể tự lưu trữ ngay hôm nay; UI/orchestrator có máy chủ theo sau."
+        }
+      ]
+    },
+    "cta": {
+      "label": "TRUY CẬP SỚM",
+      "title": "Vào phòng tác chiến trước tiên.",
+      "body": "Phòng tác chiến có máy chủ dựa trên trình duyệt — không cần cài ứng dụng. Đăng ký danh sách chờ để nhận lời mời khi Giai đoạn III mở, và lấy bộ quét mã nguồn mở ngay hôm nay.",
+      "primary": "Đăng ký danh sách chờ",
+      "secondary": "Cài bộ quét OSS"
+    },
+    "gallery": {
+      "label": "VÀ MƯỜI HAI CÁI NỮA",
+      "title": "Mỗi bảng điều khiển là thứ nhóm bảo mật thực sự sẽ mở.",
+      "subtitle": "Ngoài bảy giao diện cốt lõi, Warroom đi kèm danh mục sâu các công cụ tập trung. Mỗi cái có lý do tồn tại — không có thứ chỉ để trình diễn.",
+      "items": {
+        "autofix": {
+          "title": "PR sửa tự động",
+          "body": "Các bản vá khắc phục do AI tạo ra vượt qua CI của chính bạn trước khi xuất hiện dưới dạng PR. Reviewer ký duyệt; không có gì bất ngờ."
+        },
+        "taintFlow": {
+          "title": "Trực quan hoá luồng taint",
+          "body": "Theo dõi đầu vào người dùng qua mọi phép biến đổi cho đến khi chạm đến sink. Đa hàm, đa gói, nhận biết sanitizer."
+        },
+        "license": {
+          "title": "Tuân thủ giấy phép",
+          "body": "Ô nhiễm GPL, xung đột thương mại, khoảng trống attribution — được nổi lên trước khi pháp lý hỏi tại sao."
+        },
+        "owasp": {
+          "title": "Báo cáo OWASP",
+          "body": "Ánh xạ các phát hiện với OWASP Top 10 và phân loại CWE. Xuất bảng mà kiểm toán viên muốn."
+        },
+        "queue": {
+          "title": "Hàng đợi bảo mật",
+          "body": "Giao diện phân loại cho nhóm nhỏ: đã phân công, đang xử lý, sẽ không sửa. Không phải rebuild ticket-tracker — vừa đủ dùng."
+        },
+        "malware": {
+          "title": "Phát hiện phần mềm độc hại",
+          "body": "Bắt typosquat và phiên bản phụ thuộc bị xâm phạm trước khi npm install đưa chúng vào cây của bạn."
+        },
+        "complexity": {
+          "title": "Điểm nóng độ phức tạp",
+          "body": "Dòng × lồng nhau × nhánh × tham số. Các hàm về mặt thống kê khó review hơn, được xếp hạng."
+        },
+        "deadCode": {
+          "title": "Tìm dead-code",
+          "body": "Symbol không có caller, file không có import. Nổi lên những thứ IDE của bạn âm thầm giấu đi."
+        },
+        "assetMap": {
+          "title": "Kiểm kê tài sản",
+          "body": "Mọi domain, subdomain, trang và endpoint bạn sở hữu — được ánh xạ từ build artifact, không phải tài liệu Notion."
+        },
+        "domainSec": {
+          "title": "Điểm bảo mật domain",
+          "body": "Header, tư thế TLS, bề mặt bị phơi bày — cho mỗi domain trong kiểm kê của bạn."
+        },
+        "duplicate": {
+          "title": "Bản đồ code trùng lặp",
+          "body": "Logic giống nhau tồn tại ở ba nơi. Ứng viên tái cấu trúc, được xếp hạng theo mức độ thay đổi thường xuyên của mỗi bản sao."
+        },
+        "reportBuilder": {
+          "title": "Trình tạo báo cáo",
+          "body": "Ghép bất kỳ tổ hợp bảng nào thành một PDF cho ban lãnh đạo, khách hàng hoặc kiểm toán viên — được lưu dưới dạng mẫu định kỳ."
+        }
+      }
+    }
+  }
 }

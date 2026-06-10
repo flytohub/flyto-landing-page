@@ -441,7 +441,7 @@ right resolution; per-day timing is false precision.
 ## 8. Feature Coverage
 
 The full feature matrix is tracked in
-[`docs/PRODUCT_ROADMAP.md`](./PRODUCT_ROADMAP.md). Summary:
+`docs/PRODUCT_ROADMAP.md`. Summary:
 
 | Category | Status |
 |---|---|
@@ -477,16 +477,16 @@ There is no webhook back into flyto-code; users editing a pushed
 template in the cloud UI have forked it and the sync flags them as
 diverged rather than overwriting.
 
-Full contract in [`docs/cloud-integration.md`](./cloud-integration.md).
+Full contract in `docs/cloud-integration.md`.
 
-Binding design doc (engine side): [`flyto-engine/docs/flyto-code-sync.md`](../../flyto-engine/docs/flyto-code-sync.md).
+Binding design doc (engine side): `flyto-engine/docs/flyto-code-sync.md`.
 
 ---
 
 ## 10. Roadmap at a Glance
 
 Seven phases. Phase 1 is current. Detailed tracker in
-[`docs/PRODUCT_ROADMAP.md`](./PRODUCT_ROADMAP.md).
+`docs/PRODUCT_ROADMAP.md`.
 
 | Phase | Theme | Representative capability |
 |---|---|---|
@@ -508,7 +508,7 @@ graphs.
 
 Four trust levels: L0 (offline), L1 (upload summary), L2 (upload symbol
 graph), L3 (CI automation). Full specification in
-[`flyto-engine/docs/trust-model.md`](../../flyto-engine/docs/trust-model.md).
+`flyto-engine/docs/trust-model.md`.
 
 Most application-security platforms require a GitHub OAuth token (read
 access to all repos) on day one. Flyto2 asks for nothing — users
@@ -520,15 +520,15 @@ access to all repos) on day one. Flyto2 asks for nothing — users
 
 | Doc | Purpose |
 |---|---|
-| [`docs/PRODUCT_ROADMAP.md`](./PRODUCT_ROADMAP.md) | Feature matrix, phase tracker, pricing sketch |
-| [`docs/cloud-integration.md`](./cloud-integration.md) | Template sync contract with flyto-cloud |
-| [`CLAUDE.md`](../CLAUDE.md) | AI-agent context (tech stack, paths, conventions) |
-| [`flyto-engine/docs/trust-model.md`](../../flyto-engine/docs/trust-model.md) | Progressive trust model, 4 levels, data disclosure |
-| [`flyto-engine/docs/scan-upload.md`](../../flyto-engine/docs/scan-upload.md) | Scan upload API, 3 modes, CI examples |
-| [`flyto-indexer/integrations/flyto-engine.md`](../../flyto-indexer/integrations/flyto-engine.md) | Client-side export command, usage guide |
-| [`flyto-engine/docs/flyto-code-sync.md`](../../flyto-engine/docs/flyto-code-sync.md) | Engine-side binding doc (source of truth) |
-| [`flyto-engine/CLAUDE.md`](../../flyto-engine/CLAUDE.md) | Engine architecture and conventions |
-| [`flyto-indexer/CLAUDE.md`](../../flyto-indexer/CLAUDE.md) | Scanner design, MCP tools, zero-dependency rule |
+| `docs/PRODUCT_ROADMAP.md` | Feature matrix, phase tracker, pricing sketch |
+| `docs/cloud-integration.md` | Template sync contract with flyto-cloud |
+| `CLAUDE.md` | AI-agent context (tech stack, paths, conventions) |
+| `flyto-engine/docs/trust-model.md` | Progressive trust model, 4 levels, data disclosure |
+| `flyto-engine/docs/scan-upload.md` | Scan upload API, 3 modes, CI examples |
+| `flyto-indexer/integrations/flyto-engine.md` | Client-side export command, usage guide |
+| `flyto-engine/docs/flyto-code-sync.md` | Engine-side binding doc (source of truth) |
+| `flyto-engine/CLAUDE.md` | Engine architecture and conventions |
+| `flyto-indexer/CLAUDE.md` | Scanner design, MCP tools, zero-dependency rule |
 
 ---
 

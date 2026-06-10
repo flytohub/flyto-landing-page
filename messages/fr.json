@@ -1,1315 +1,1491 @@
 {
-    "nav": {
-        "home": "Accueil",
-        "cloud": "Cloud",
-        "code": "Warroom",
-        "overview": "Vue d'ensemble",
-        "pricing": "Tarifs",
-        "download": "Téléchargement",
-        "templates": "Modèles",
-        "faq": "FAQ",
-        "roadmap": "Feuille de route",
-        "oss": "Open source",
-        "discussions": "Discussions",
-        "waitlist": "Liste d'attente",
-        "docs": "Documentation",
-        "blog": "Blog",
-        "contact": "Contact",
-        "signIn": "Connexion",
-        "soon": "Bientôt",
-        "allProducts": "Tous les produits",
-        "beta": "Bêta",
-        "integrations": "Intégrations",
-        "recipes": "Recettes",
-        "useCases": "Cas d'usage",
-        "changelog": "Changelog",
-        "security": "Sécurité"
+  "nav": {
+    "home": "Accueil",
+    "cloud": "Cloud",
+    "code": "Warroom",
+    "overview": "Vue d'ensemble",
+    "pricing": "Tarifs",
+    "download": "Téléchargement",
+    "templates": "Modèles",
+    "faq": "FAQ",
+    "roadmap": "Feuille de route",
+    "oss": "Open source",
+    "discussions": "Discussions",
+    "waitlist": "Liste d'attente",
+    "docs": "Documentation",
+    "blog": "Blog",
+    "contact": "Contact",
+    "signIn": "Connexion",
+    "soon": "Bientôt",
+    "allProducts": "Tous les produits",
+    "beta": "Bêta",
+    "integrations": "Intégrations",
+    "recipes": "Recettes",
+    "useCases": "Cas d'usage",
+    "changelog": "Changelog",
+    "security": "Sécurité"
+  },
+  "footer": {
+    "tagline": "Outils d'automatisation offline-first. Votre travail reste sur votre machine.",
+    "cloudTagline": "Automatisation du navigateur. Enregistrez une fois, rejouez à l'infini.",
+    "warroomTagline": "Salle d'opérations de sécurité applicative. Vérification en boucle fermée.",
+    "products": "Produits",
+    "community": "Communauté",
+    "resources": "Ressources",
+    "openSource": "Open source",
+    "privacy": "Confidentialité",
+    "terms": "Conditions",
+    "license": "Licence",
+    "copyright": "© 2026 FLYTO2"
+  },
+  "home": {
+    "metaTitle": "Outils d'automatisation offline-first",
+    "metaDescription": "Flyto2 développe des outils d'automatisation offline-first. Cloud est l'automatisation de navigateur sans code, disponible aujourd'hui. Warroom est la salle d'opérations de sécurité applicative, en pré-lancement.",
+    "hero": {
+      "eyebrow": "FLYTO2 · AUTOMATISATION OFFLINE-FIRST",
+      "title": "Une automatisation qui",
+      "titleAccent": "reste sur votre machine.",
+      "lede": "Flyto2 construit deux produits sur le même moteur offline-first. L'un automatise votre travail dans le navigateur. L'autre audite la sécurité de chaque ligne de code que vous livrez.",
+      "reassure": "OPEN SOURCE · AUCUNE TÉLÉMÉTRIE · À VOUS"
     },
-    "footer": {
-        "tagline": "Outils d'automatisation offline-first. Votre travail reste sur votre machine.",
-        "cloudTagline": "Automatisation du navigateur. Enregistrez une fois, rejouez à l'infini.",
-        "warroomTagline": "Salle d'opérations de sécurité applicative. Vérification en boucle fermée.",
-        "products": "Produits",
-        "community": "Communauté",
-        "resources": "Ressources",
-        "openSource": "Open source",
-        "privacy": "Confidentialité",
-        "terms": "Conditions",
-        "license": "Licence",
-        "copyright": "© 2026 FLYTO2"
+    "products": {
+      "label": "DEUX PRODUITS",
+      "title": "Choisissez celui qui résout le problème du jour.",
+      "subtitle": "Même moteur, même philosophie. Chaque produit est conçu pour son propre public, sa propre page, sa propre tarification.",
+      "cloud": {
+        "name": "Cloud",
+        "statusLabel": "DISPONIBLE",
+        "tagline": "Automatisation de navigateur sans code. Enregistrez une fois, rejouez à l'infini.",
+        "point1": "Enregistrez n'importe quel flux de navigateur sans écrire de sélecteurs",
+        "point2": "Mettez en pause, inspectez, modifiez les valeurs en cours d'exécution, reprenez",
+        "point3": "Plus de 250 modules prêts à l'emploi — CSV, Stripe, Notion, Slack, OpenAI",
+        "cta": "Voir Cloud"
+      },
+      "warroom": {
+        "name": "Warroom",
+        "statusLabel": "BÊTA",
+        "tagline": "Salle d'opérations de sécurité applicative. SCA, SAST, secrets, licences, CVE — une vue opérationnelle unifiée.",
+        "point1": "Score de santé A–F qui agrège chaque signal",
+        "point2": "Analyse d'accessibilité — corrigez les CVE qui s'exécutent vraiment",
+        "point3": "CLI open source installable aujourd'hui, salle d'opérations hébergée prochainement",
+        "cta": "Voir Warroom"
+      }
     },
-    "home": {
-        "metaTitle": "Flyto2 — Outils d'automatisation offline-first",
-        "metaDescription": "Flyto2 développe des outils d'automatisation offline-first. Cloud est l'automatisation de navigateur sans code, disponible aujourd'hui. Warroom est la salle d'opérations de sécurité applicative, en pré-lancement.",
-        "hero": {
-            "eyebrow": "FLYTO2 · AUTOMATISATION OFFLINE-FIRST",
-            "title": "Une automatisation qui",
-            "titleAccent": "reste sur votre machine.",
-            "lede": "Flyto2 construit deux produits sur le même moteur offline-first. L'un automatise votre travail dans le navigateur. L'autre audite la sécurité de chaque ligne de code que vous livrez.",
-            "reassure": "OPEN SOURCE · AUCUNE TÉLÉMÉTRIE · À VOUS"
+    "benefits": {
+      "items": [
+        {
+          "iconName": "Zap",
+          "metric": "1,2s",
+          "title": "Durée d'exécution médiane",
+          "body": "La plupart des workflows se terminent en moins de deux secondes. Le vôtre tourne aussi vite que vous."
         },
-        "products": {
-            "label": "DEUX PRODUITS",
-            "title": "Choisissez celui qui résout le problème du jour.",
-            "subtitle": "Même moteur, même philosophie. Chaque produit est conçu pour son propre public, sa propre page, sa propre tarification.",
-            "cloud": {
-                "name": "Cloud",
-                "statusLabel": "DISPONIBLE",
-                "tagline": "Automatisation de navigateur sans code. Enregistrez une fois, rejouez à l'infini.",
-                "point1": "Enregistrez n'importe quel flux de navigateur sans écrire de sélecteurs",
-                "point2": "Mettez en pause, inspectez, modifiez les valeurs en cours d'exécution, reprenez",
-                "point3": "Plus de 250 modules prêts à l'emploi — CSV, Stripe, Notion, Slack, OpenAI",
-                "cta": "Voir Cloud"
-            },
-            "warroom": {
-                "name": "Warroom",
-                "statusLabel": "BÊTA",
-                "tagline": "Salle d'opérations de sécurité applicative. SCA, SAST, secrets, licences, CVE — une vue opérationnelle unifiée.",
-                "point1": "Score de santé A–F qui agrège chaque signal",
-                "point2": "Analyse d'accessibilité — corrigez les CVE qui s'exécutent vraiment",
-                "point3": "CLI open source installable aujourd'hui, salle d'opérations hébergée prochainement",
-                "cta": "Voir Warroom"
-            }
+        {
+          "iconName": "ShieldOff",
+          "metric": "0",
+          "title": "Octets envoyés",
+          "body": "Vos identifiants et l'historique des exécutions restent sur votre machine. Aucune télémétrie, aucun callback."
         },
-        "benefits": {
-            "items": [
-                {
-                    "iconName": "Zap",
-                    "metric": "1,2s",
-                    "title": "Durée d'exécution médiane",
-                    "body": "La plupart des workflows se terminent en moins de deux secondes. Le vôtre tourne aussi vite que vous."
-                },
-                {
-                    "iconName": "ShieldOff",
-                    "metric": "0",
-                    "title": "Octets envoyés",
-                    "body": "Vos identifiants et l'historique des exécutions restent sur votre machine. Aucune télémétrie, aucun callback."
-                },
-                {
-                    "iconName": "Code2",
-                    "metric": "MIT",
-                    "title": "Moteur open source",
-                    "body": "Lisez le moteur, forkez-le, déployez-le. Le runtime est sur GitHub et PyPI."
-                },
-                {
-                    "iconName": "Globe2",
-                    "metric": "16",
-                    "title": "Langues",
-                    "body": "Enregistreur, runtime, documentation et messages d'erreur — traduits, pas seulement étiquetés."
-                }
-            ]
+        {
+          "iconName": "Code2",
+          "metric": "MIT",
+          "title": "Moteur open source",
+          "body": "Lisez le moteur, forkez-le, déployez-le. Le runtime est sur GitHub et PyPI."
         },
-        "video": {
-            "label": "DÉMO",
-            "title": "Découvrez l'automatisation de navigateur",
-            "titleAccent": "en action.",
-            "subtitle": "Aucun prérequis technique. La version longue parcourt un flux réel de bout en bout ; la version courte montre l'essentiel en 60 secondes.",
-            "longLabel": "DÉMO COMPLÈTE",
-            "longTitle": "Flyto2 — démo complète",
-            "longBody": "Un parcours complet : enregistrez un flux de paiement, modifiez une étape, rejouez-le. Deux minutes, sans effets de narration.",
-            "shortLabel": "VERSION 60 SEC",
-            "shortTitle": "Flyto2 — version 60 secondes",
-            "shortBody": "Remplissage de formulaire, automatisé. Format vertical, rapide, conçu pour le partage sur mobile.",
-            "moreOnYoutube": "Plus de vidéos sur @Flyto2 sur YouTube"
-        },
-        "features": {
-            "label": "POURQUOI FLYTO2",
-            "title": "Conçu pour les tâches que vous recommencez sans cesse.",
-            "items": [
-                {
-                    "icon": "Video",
-                    "title": "Enregistrez n'importe quel flux",
-                    "body": "Cliquez sur Enregistrer, effectuez la tâche une fois, appuyez sur Stop. Flyto2 capture chaque clic, défilement, saisie et attente."
-                },
-                {
-                    "icon": "Pause",
-                    "title": "Mettez en pause et inspectez",
-                    "body": "Les workflows ne sont pas des boîtes noires. Avancez pas à pas, modifiez une valeur en cours d'exécution, reprenez — comme un débogueur pour le travail quotidien."
-                },
-                {
-                    "icon": "ShieldOff",
-                    "title": "Offline par conception",
-                    "body": "Fonctionne sur votre machine. Identifiants, données collectées, historique d'exécution — jamais transmis nulle part, y compris à nous."
-                },
-                {
-                    "icon": "Boxes",
-                    "title": "Plus de 250 modules",
-                    "body": "CSV, Excel, Stripe, Notion, Postgres, Slack, OpenAI — précâblés pour que vous les assembliez sans écrire de plomberie API."
-                },
-                {
-                    "icon": "GitBranch",
-                    "title": "Branchements et fusions",
-                    "body": "if/else, boucles, nouvelles tentatives, gestionnaires d'erreurs — ce que vous écririez en code, uniquement sous forme de nœuds visuels lisibles en cinq secondes."
-                },
-                {
-                    "icon": "Languages",
-                    "title": "16 langues",
-                    "body": "Enregistreur, runtime, documentation, messages d'erreur — tout est traduit. Votre équipe opérationnelle utilise Flyto2 dans sa langue."
-                }
-            ]
-        },
-        "examples": {
-            "label": "WORKFLOWS RÉELS",
-            "title": "Ce que les gens ont vraiment construit.",
-            "subtitle": "Chaque carte est un workflow exécuté de bout en bout par Flyto2 — enregistré une fois, reproduit selon un planning, résultat déposé où vous le souhaitiez.",
-            "viewWorkflow": "Inspecter ce workflow",
-            "items": [
-                {
-                    "category": "REVUE QUOTIDIENNE",
-                    "title": "Briefing matinal Hacker News",
-                    "body": "Scrapez les 30 meilleures histoires chaque matin à 7h, résumez via OpenAI, envoyez le digest dans un canal Slack privé avant le standup.",
-                    "metric": "EXÉCUTION · tous les jours à 06h55"
-                },
-                {
-                    "category": "VEILLE DEV",
-                    "title": "Tracker des tendances GitHub",
-                    "body": "Surveillez la page des tendances pour un tag, persistez les nouveaux dépôts dans Sheets avec étoiles, licence, langage. Détectez le prochain outil phare avant tout le monde.",
-                    "metric": "EXÉCUTION · toutes les heures"
-                },
-                {
-                    "category": "PERFORMANCE",
-                    "title": "Audit Pagespeed par lot",
-                    "body": "Fournissez un CSV d'URL, obtenez en retour une feuille avec les scores mobile + desktop, les deltas Core Web Vitals et une notification Slack en cas de régression.",
-                    "metric": "EXÉCUTION · chaque semaine"
-                },
-                {
-                    "category": "SÉCURITÉ",
-                    "title": "Balayage des en-têtes de sécurité",
-                    "body": "Sondez un parc de domaines, évaluez leurs en-têtes, déposez le rapport par responsable d'équipe. Remplace un script d'audit trimestriel que personne n'avait le temps de maintenir.",
-                    "metric": "EXÉCUTION · chaque mois"
-                }
-            ]
-        },
-        "integrations": {
-            "label": "INTÉGRATIONS",
-            "title": "Plus de 250 modules d'emblée.",
-            "subtitle": "La plomberie est déjà câblée. Glissez, déposez, configurez — n'écrivez plus jamais un script « copier cette ligne de Sheet A vers l'API B ».",
-            "andMore": "+ 230 DE PLUS · CRÉEZ LE VÔTRE EN PYTHON OU JS"
-        },
-        "stats": {
-            "items": [
-                {
-                    "value": "250+",
-                    "label": "MODULES",
-                    "body": "Nœuds préconstruits pour CSV, Excel, Stripe, Notion, Slack, IA, SQL — ce que vous assembleriez sinon vous-même."
-                },
-                {
-                    "value": "16",
-                    "label": "LANGUES",
-                    "body": "Interface, enregistreur, runtime, documentation et messages d'erreur — traduits, pas seulement étiquetés."
-                },
-                {
-                    "value": "100%",
-                    "label": "SUR VOTRE MACHINE",
-                    "body": "Vos enregistrements, identifiants, historique d'exécution. Pas de cloud sauf si vous l'activez. Jamais de télémétrie."
-                }
-            ]
-        },
-        "codeTeaser": {
-            "label": "EN COURS DE CONSTRUCTION",
-            "status": "Pré-lancement",
-            "title": "Warroom — salle d'opérations de sécurité applicative.",
-            "body": "Un produit distinct pour la sécurité du déploiement logiciel. SCA, SAST, secrets, licences, CVE, pentest — sous un seul score de santé A–F.",
-            "cta": "Voir Warroom"
-        },
-        "faq": {
-            "label": "FAQ",
-            "title": "Questions fréquentes, répondues d'emblée.",
-            "subtitle": "Si vous évaluez Flyto2 pour votre équipe, ce sont les premières questions que l'on pose.",
-            "items": [
-                {
-                    "q": "Flyto2 est-il vraiment gratuit et open source ?",
-                    "a": "Oui. Le moteur d'exécution (`flyto-core`) est sous licence MIT sur GitHub. Vous pouvez l'installer depuis PyPI aujourd'hui et exécuter des flux sans jamais créer de compte. Le cloud hébergé est une option payante qui s'ajoute par-dessus — jamais une obligation."
-                },
-                {
-                    "q": "En quoi est-ce différent de Zapier ou Make ?",
-                    "a": "Zapier et Make connectent des API SaaS dans le cloud. Flyto2 enregistre et rejoue le vrai navigateur — y compris les sites sans API publique — et l'exécute sur votre propre machine. Si votre banque, votre ERP ou votre portail fournisseur ne figure pas dans le catalogue de Zapier, c'est exactement le vide que Flyto2 comble."
-                },
-                {
-                    "q": "Que se passe-t-il quand le site que j'automatise change ?",
-                    "a": "Flyto2 enregistre des actions sémantiques (« cliquer sur le bouton Connexion ») plutôt que des sélecteurs CSS fragiles. Lorsqu'un site se refait une apparence, la plupart des flux continuent de fonctionner. Quand quelque chose se casse, vous mettez en pause, corrigez l'unique étape concernée et reprenez — vous ne réécrivez pas l'intégralité du flux."
-                },
-                {
-                    "q": "Mon équipe peut-elle partager des workflows ?",
-                    "a": "Oui. Les workflows sont de simples fichiers que vous pouvez committer dans git, partager via la Marketplace intégrée, ou transmettre à un collègue via Slack. L'historique d'exécution reste local ; seule la définition du workflow circule."
-                },
-                {
-                    "q": "Quel est le coût ?",
-                    "a": "L'application de bureau et le moteur open source sont gratuits pour un usage individuel. Les offres Pro et Team ajoutent la planification hébergée, les marketplaces partagées et le support prioritaire — la tarification est sur la page Cloud."
-                }
-            ]
-        },
-        "cta": {
-            "label": "EXPLORER LA PLATEFORME",
-            "title": "Deux produits. Une philosophie.",
-            "body": "Cloud est disponible aujourd'hui. Warroom arrive. Les deux partagent le moteur offline-first — choisissez celui qui correspond au problème du moment.",
-            "primary": "Voir Cloud",
-            "secondary": "Voir Warroom"
+        {
+          "iconName": "Globe2",
+          "metric": "16",
+          "title": "Langues",
+          "body": "Enregistreur, runtime, documentation et messages d'erreur — traduits, pas seulement étiquetés."
         }
+      ]
     },
-    "cloud": {
-        "metaTitle": "Cloud — Automatisation de navigateur sans code",
-        "metaDescription": "Enregistrez une fois, rejouez à l'infini. Automatisation de navigateur qui fonctionne hors ligne. Plus de 250 modules, 16 langues, moteur sous licence MIT.",
-        "hero": {
-            "eyebrow": "01 / CLOUD",
-            "status": "DISPONIBLE",
-            "title": "Le travail de navigateur,",
-            "titleAccent": "en pilotage automatique.",
-            "lede": "Ouvrez l'enregistreur, effectuez la tâche une fois, appuyez sur Stop. Flyto2 la transforme en workflow structuré que vous pouvez modifier, versionner, planifier et partager — sans écrire une seule ligne de code.",
-            "ctaPrimary": "Télécharger l'application de bureau",
-            "ctaSecondary": "Parcourir les 250+ modules"
-        },
-        "how": {
-            "label": "COMMENT ÇA MARCHE",
-            "title": "Trois étapes du manuel à l'automatisé.",
-            "items": [
-                {
-                    "step": "01",
-                    "icon": "Video",
-                    "title": "Enregistrer",
-                    "body": "Cliquez sur Enregistrer et effectuez la tâche une fois. Flyto2 capture le clic, le défilement, la saisie et l'attente — chaque étape, dans l'ordre, localement."
-                },
-                {
-                    "step": "02",
-                    "icon": "GitBranch",
-                    "title": "Modifier",
-                    "body": "Ajoutez des if/else, des boucles, des nouvelles tentatives et des identifiants comme nœuds visuels. Mettez en pause en cours d'exécution pour inspecter une valeur, la modifier et continuer."
-                },
-                {
-                    "step": "03",
-                    "icon": "Repeat",
-                    "title": "Rejouer",
-                    "body": "Exécutez à la demande, selon un planning ou depuis la CLI. Flyto2 reproduit chaque étape exactement, sur votre machine, avec une piste d'audit complète."
-                }
-            ]
-        },
-        "features": {
-            "label": "FONCTIONNALITÉS",
-            "title": "Conçu pour les tâches que vous recommencez sans cesse.",
-            "items": [
-                {
-                    "icon": "Video",
-                    "title": "Enregistrez n'importe quel flux",
-                    "body": "Ouvrez l'enregistreur, effectuez la tâche une fois, appuyez sur Stop. Flyto2 la capture comme un workflow structuré que vous pouvez modifier et partager."
-                },
-                {
-                    "icon": "Pause",
-                    "title": "Mettez en pause et inspectez",
-                    "body": "Les workflows ne sont pas des boîtes noires. Avancez pas à pas, modifiez une valeur en cours d'exécution, reprenez — comme un débogueur pour le travail quotidien."
-                },
-                {
-                    "icon": "ShieldOff",
-                    "title": "Offline par conception",
-                    "body": "Fonctionne sur votre machine. Identifiants, données collectées, historique d'exécution — jamais transmis nulle part, y compris à nous."
-                },
-                {
-                    "icon": "Boxes",
-                    "title": "Plus de 250 modules",
-                    "body": "CSV, Excel, Stripe, Notion, Sheets, Postgres, Slack, OpenAI — précâblés pour que vous les assembliez sans écrire de plomberie API."
-                },
-                {
-                    "icon": "GitBranch",
-                    "title": "Branchements et fusions",
-                    "body": "if/else, boucles, nouvelles tentatives, gestionnaires d'erreurs — ce que vous écririez en code, uniquement sous forme de nœuds visuels lisibles en cinq secondes."
-                },
-                {
-                    "icon": "Languages",
-                    "title": "16 langues",
-                    "body": "Enregistreur, runtime, documentation, messages d'erreur — tout est traduit. Votre équipe opérationnelle utilise Flyto2 dans sa langue, pas la vôtre."
-                }
-            ]
-        },
-        "codeSample": {
-            "label": "SOUS LE CAPOT",
-            "title": "C'est un fichier lisible.",
-            "subtitle": "Chaque workflow enregistré est un fichier JSON. Committez-le dans git, faites une diff en revue de code, exécutez-le depuis la CI, déclenchez-le depuis n'importe où.",
-            "point1": "JSON brut — aucun format binaire propriétaire",
-            "point2": "Déclenchez depuis la CLI, un webhook, un cron ou votre propre backend",
-            "point3": "Exportez vers GitHub Actions, GitLab CI ou Jenkins en une commande"
-        },
-        "comparison": {
-            "label": "FACE AUX ALTERNATIVES",
-            "title": "Pourquoi les équipes passent à Flyto2.",
-            "subtitle": "Zapier, Make, Selenium — chacun couvre une partie du problème. Flyto2 est ce que vous choisissez quand vous avez besoin d'un comportement vrai du navigateur, localement, sans louer de la puissance de calcul à la tâche.",
-            "featureHeader": "Ce dont vous avez besoin",
-            "data": {
-                "rows": [
-                    {
-                        "feature": "Enregistre les actions réelles du navigateur",
-                        "values": ["yes", "no", "no", "yes"]
-                    },
-                    {
-                        "feature": "Fonctionne hors ligne / sur votre machine",
-                        "values": ["yes", "no", "no", "yes"]
-                    },
-                    {
-                        "feature": "Gratuit pour usage individuel",
-                        "values": ["yes", "partial", "partial", "yes"]
-                    },
-                    {
-                        "feature": "Éditeur visuel (aucun code requis)",
-                        "values": ["yes", "yes", "yes", "no"]
-                    },
-                    {
-                        "feature": "Pause, inspection, reprise en cours d'exécution",
-                        "values": ["yes", "no", "no", "partial"]
-                    },
-                    {
-                        "feature": "Tarification par points, pas par tâche",
-                        "values": ["yes", "no", "no", "yes"]
-                    },
-                    {
-                        "feature": "Fichier workflow en JSON brut",
-                        "values": ["yes", "no", "no", "no"]
-                    },
-                    {
-                        "feature": "Moteur open source",
-                        "values": ["yes", "no", "no", "yes"]
-                    }
-                ]
-            }
-        },
-        "recipes": {
-            "label": "RECETTES PRÊTES À L'EMPLOI",
-            "title": "Une commande, des résultats concrets.",
-            "subtitle": "Les recettes sont des workflows déjà câblés et testés. Installez Cloud, exécutez `flyto recipe [nom]`, obtenez le rapport. Aucune configuration, pas de clés API pour les bases.",
-            "items": [
-                {
-                    "iconName": "Search",
-                    "name": "competitor-intel",
-                    "command": "flyto recipe competitor-intel --url https://competitor.com/pricing",
-                    "body": "Extrayez les paliers de tarification, prenez des captures desktop + mobile, capturez les Web Vitals, parsez les métas SEO, retournez un rapport JSON structuré.",
-                    "outputs": [
-                        "pricing.json",
-                        "intel-desktop.png",
-                        "intel-mobile.png",
-                        "vitals",
-                        "seo"
-                    ]
-                },
-                {
-                    "iconName": "Activity",
-                    "name": "full-audit",
-                    "command": "flyto recipe full-audit --url https://example.com",
-                    "body": "Web Vitals + SEO + accessibilité (attributs alt, labels) + erreurs console + captures mobile/desktop + un PDF imprimable.",
-                    "outputs": [
-                        "audit.json",
-                        "audit-desktop.png",
-                        "audit-mobile.png",
-                        "audit-page.pdf"
-                    ]
-                },
-                {
-                    "iconName": "Globe",
-                    "name": "site-audit",
-                    "command": "flyto recipe site-audit --url https://github.com",
-                    "body": "Audit SEO + performance — métas, titres, alt manquants, Web Vitals, capture pleine page. Plus léger que full-audit, s'exécute en quelques secondes.",
-                    "outputs": [
-                        "report.json",
-                        "page.png"
-                    ]
-                },
-                {
-                    "iconName": "Camera",
-                    "name": "screenshot",
-                    "command": "flyto recipe screenshot --url https://flyto2.com --device mobile",
-                    "body": "Captures d'écran pixel-perfect sur n'importe quel viewport d'appareil. Utile pour le QA, la revue design ou pour assembler des diffs de détection de changements quotidiens.",
-                    "outputs": [
-                        "screenshot.png"
-                    ]
-                }
-            ]
-        },
-        "useCases": {
-            "label": "CAS D'USAGE",
-            "title": "Ce que les gens automatisent en premier.",
-            "items": [
-                {
-                    "icon": "FileText",
-                    "title": "Extraction de factures et reçus",
-                    "body": "Connectez-vous aux portails fournisseurs chaque lundi, téléchargez les PDF, classez-les par client, envoyez les totaux vers Sheets — sans toucher le clavier."
-                },
-                {
-                    "icon": "Database",
-                    "title": "Synchronisation de données entre systèmes",
-                    "body": "Quand le SaaS dans lequel vous travaillez ne communique pas avec celui de votre équipe financière, Flyto2 enregistre le pont et l'exécute chaque nuit."
-                },
-                {
-                    "icon": "Search",
-                    "title": "Veille des prix et de la concurrence",
-                    "body": "Visitez une liste d'URL, scrapez le prix, écrivez dans un CSV, alertez Slack en cas de changement. Deux semaines de travail de stagiaire, automatisées en une après-midi."
-                },
-                {
-                    "icon": "Mail",
-                    "title": "Routage et enrichissement des leads",
-                    "body": "Extrayez depuis votre CRM, enrichissez via le web public, réinjectez avec les tags. Pas d'intermédiaire Zapier, pas de plafond mensuel de tâches."
-                }
-            ]
-        },
-        "faq": {
-            "label": "FAQ",
-            "title": "Cloud — les questions les plus fréquentes.",
-            "subtitle": "Enregistrement, replay, sécurité, tarification — les réponses que les responsables ops et IT demandent avant d'approuver un outil.",
-            "items": [
-                {
-                    "q": "Cloud fonctionne-t-il sur des sites sans API publique ?",
-                    "a": "C'est exactement sa vocation. Si vous pouvez effectuer la tâche dans un navigateur, Flyto2 peut l'enregistrer et la rejouer — portails internes, sites gouvernementaux, ERP legacy, partout."
-                },
-                {
-                    "q": "S'exécute-t-il vraiment sur ma machine ?",
-                    "a": "Oui. L'application de bureau intègre un moteur Chromium et le runtime de workflow. Vos identifiants, étapes enregistrées et historique d'exécution résident sur votre disque. Le cloud est optionnel pour la planification, le partage et les fonctionnalités d'équipe."
-                },
-                {
-                    "q": "Que se passe-t-il quand un site fait une refonte ?",
-                    "a": "Flyto2 enregistre l'intention sémantique (« cliquer sur Connexion », « remplir le champ e-mail ») plutôt que des XPath fragiles. Lorsqu'un site change d'apparence, la plupart des flux continuent de fonctionner. Quand une étape se casse, vous ne corrigez que cette étape dans l'éditeur visuel."
-                },
-                {
-                    "q": "Puis-je déclencher des flux depuis la CI / un script ?",
-                    "a": "Oui. Chaque workflow dispose d'un appel CLI et d'une URL webhook. Exécutez-les depuis cron, GitHub Actions, votre propre backend ou le planificateur hébergé de Flyto2 — même fichier workflow, même résultat."
-                },
-                {
-                    "q": "Comment gérez-vous la 2FA et les CAPTCHA ?",
-                    "a": "Flyto2 peut mettre en pause et vous inviter (ou un membre de votre équipe) à compléter un défi 2FA, puis continuer. Les CAPTCHA ne sont délibérément pas contournés — utiliser Flyto2 sur des sites qui interdisent l'automatisation est votre décision, pas la nôtre."
-                },
-                {
-                    "q": "Quelle est la tarification ?",
-                    "a": "Gratuit pour un usage individuel de l'application de bureau et du moteur OSS. Pro ajoute la planification hébergée et des exécutions cloud illimitées ; Team ajoute la marketplace partagée et le SSO. Tarification détaillée sur la page Cloud."
-                }
-            ]
-        },
-        "cta": {
-            "label": "COMMENCER",
-            "title": "Un enregistrement, chaque lundi automatisé.",
-            "body": "Téléchargez l'application de bureau, enregistrez votre premier workflow en cinq minutes, et regardez-le s'exécuter indéfiniment.",
-            "primary": "Télécharger gratuitement",
-            "secondary": "Lire la documentation"
-        }
+    "video": {
+      "label": "DÉMO",
+      "title": "Découvrez l'automatisation de navigateur",
+      "titleAccent": "en action.",
+      "subtitle": "Aucun prérequis technique. La version longue parcourt un flux réel de bout en bout ; la version courte montre l'essentiel en 60 secondes.",
+      "longLabel": "DÉMO COMPLÈTE",
+      "longTitle": "Flyto2 — démo complète",
+      "longBody": "Un parcours complet : enregistrez un flux de paiement, modifiez une étape, rejouez-le. Deux minutes, sans effets de narration.",
+      "shortLabel": "VERSION 60 SEC",
+      "shortTitle": "Flyto2 — version 60 secondes",
+      "shortBody": "Remplissage de formulaire, automatisé. Format vertical, rapide, conçu pour le partage sur mobile.",
+      "moreOnYoutube": "Plus de vidéos sur @Flyto2 sur YouTube"
     },
-    "download": {
-        "metaTitle": "Télécharger Flyto2",
-        "metaDescription": "Téléchargez Flyto2 — application de bureau gratuite pour macOS, Windows et Linux. Automatisation de navigateur fonctionnant hors ligne, aucun compte requis.",
-        "downloadFor": "Télécharger pour {os}",
-        "allReleases": "Toutes les versions sur GitHub",
-        "hero": {
-            "eyebrow": "APPLICATION DE BUREAU · GRATUITE",
-            "title": "Téléchargez",
-            "titleAccent": "Flyto2.",
-            "lede": "Gratuit pour usage personnel, pour toujours. macOS, Windows, Linux — intégré avec le moteur open source. Aucun compte, aucune télémétrie, fonctionne hors ligne."
+    "features": {
+      "label": "POURQUOI FLYTO2",
+      "title": "Conçu pour les tâches que vous recommencez sans cesse.",
+      "items": [
+        {
+          "icon": "Video",
+          "title": "Enregistrez n'importe quel flux",
+          "body": "Cliquez sur Enregistrer, effectuez la tâche une fois, appuyez sur Stop. Flyto2 capture chaque clic, défilement, saisie et attente."
         },
-        "docker": {
-            "title": "Auto-hébergez avec Docker",
-            "body": "Exécutez le même moteur dans un conteneur — idéal pour les serveurs headless, les agents CI ou les déploiements enterprise en réseau isolé.",
-            "cta": "Docker Hub"
+        {
+          "icon": "Pause",
+          "title": "Mettez en pause et inspectez",
+          "body": "Les workflows ne sont pas des boîtes noires. Avancez pas à pas, modifiez une valeur en cours d'exécution, reprenez — comme un débogueur pour le travail quotidien."
         },
-        "oss": {
-            "title": "Ou juste le moteur, sur PyPI",
-            "body": "Le cœur d'exécution est du Python sous licence MIT. Installez-le comme bibliothèque, utilisez la CLI, intégrez-le dans vos propres pipelines.",
-            "cta": "Voir le code source sur GitHub"
+        {
+          "icon": "ShieldOff",
+          "title": "Offline par conception",
+          "body": "Fonctionne sur votre machine. Identifiants, données collectées, historique d'exécution — jamais transmis nulle part, y compris à nous."
         },
-        "cta": {
-            "label": "ÉGALEMENT UTILE",
-            "title": "Vous cherchez quelque chose de précis ?",
-            "body": "Vous cherchez une version antérieure, une architecture différente ou vous déployez dans un environnement réglementé ? Consultez les releases GitHub ou la documentation.",
-            "primary": "Ouvrir les releases",
-            "secondary": "Lire la documentation"
+        {
+          "icon": "Boxes",
+          "title": "Plus de 250 modules",
+          "body": "CSV, Excel, Stripe, Notion, Postgres, Slack, OpenAI — précâblés pour que vous les assembliez sans écrire de plomberie API."
+        },
+        {
+          "icon": "GitBranch",
+          "title": "Branchements et fusions",
+          "body": "if/else, boucles, nouvelles tentatives, gestionnaires d'erreurs — ce que vous écririez en code, uniquement sous forme de nœuds visuels lisibles en cinq secondes."
+        },
+        {
+          "icon": "Languages",
+          "title": "16 langues",
+          "body": "Enregistreur, runtime, documentation, messages d'erreur — tout est traduit. Votre équipe opérationnelle utilise Flyto2 dans sa langue."
         }
+      ]
     },
-    "pricing": {
-        "metaTitle": "Tarifs — Flyto2",
-        "metaDescription": "Gratuit pour usage personnel, pour toujours. Pro à 9 $/mois et Team à 19 $/mois. Tarification transparente pour l'automatisation de navigateur fonctionnant hors ligne.",
-        "perMonth": "/ mois",
-        "mostPopular": "Le plus populaire",
-        "priceFootnote": "USD · Annulez à tout moment · Aucune carte de crédit pour démarrer",
-        "hero": {
-            "eyebrow": "TARIFS",
-            "title": "Gratuit pour toujours.",
-            "titleAccent": "Pro quand vous montez en charge.",
-            "lede": "L'usage personnel est gratuit, sur le bureau et le moteur OSS. Passez à la version supérieure uniquement lorsque vous avez besoin de planification hébergée, de gestion d'équipe ou d'un volume mensuel plus élevé."
+    "examples": {
+      "label": "WORKFLOWS RÉELS",
+      "title": "Ce que les gens ont vraiment construit.",
+      "subtitle": "Chaque carte est un workflow exécuté de bout en bout par Flyto2 — enregistré une fois, reproduit selon un planning, résultat déposé où vous le souhaitiez.",
+      "viewWorkflow": "Inspecter ce workflow",
+      "items": [
+        {
+          "category": "REVUE QUOTIDIENNE",
+          "title": "Briefing matinal Hacker News",
+          "body": "Scrapez les 30 meilleures histoires chaque matin à 7h, résumez via OpenAI, envoyez le digest dans un canal Slack privé avant le standup.",
+          "metric": "EXÉCUTION · tous les jours à 06h55"
         },
-        "plans": {
-            "free": {
-                "label": "GRATUIT",
-                "name": "Gratuit",
-                "tagline": "Pour les personnes qui découvrent l'automatisation.",
-                "feature1": "1 000 points de calcul / mois",
-                "feature2": "Jusqu'à 5 workflows sauvegardés",
-                "feature3": "Tous les 250+ modules",
-                "feature4": "Support communautaire",
-                "cta": "Télécharger gratuitement"
-            },
-            "pro": {
-                "label": "PRO",
-                "name": "Pro",
-                "tagline": "Pour les utilisateurs expérimentés qui automatisent quotidiennement.",
-                "feature1": "50 000 points de calcul / mois",
-                "feature2": "Workflows illimités",
-                "feature3": "Planification hébergée — cron, webhook, nouvelle tentative",
-                "feature4": "Support prioritaire, SLA 24 heures",
-                "feature5": "Publication sur la Marketplace",
-                "cta": "Démarrer avec Pro"
-            },
-            "team": {
-                "label": "TEAM",
-                "name": "Team",
-                "tagline": "Pour les équipes ops qui partagent des workflows à l'échelle de l'entreprise.",
-                "feature1": "200 000 points de calcul / mois",
-                "feature2": "Jusqu'à 10 postes",
-                "feature3": "RBAC et marketplace partagée",
-                "feature4": "SSO (Google, Microsoft)",
-                "feature5": "Onboarding dédié",
-                "cta": "Démarrer avec Team"
-            }
+        {
+          "category": "VEILLE DEV",
+          "title": "Tracker des tendances GitHub",
+          "body": "Surveillez la page des tendances pour un tag, persistez les nouveaux dépôts dans Sheets avec étoiles, licence, langage. Détectez le prochain outil phare avant tout le monde.",
+          "metric": "EXÉCUTION · toutes les heures"
         },
-        "faq": {
-            "label": "FAQ",
-            "title": "Questions sur la tarification, répondues.",
-            "subtitle": "Points de calcul, limites de postes, facturation — les questions que les acheteurs posent avant de sortir la carte.",
-            "items": [
-                {
-                    "q": "Qu'est-ce qu'un « point de calcul » ?",
-                    "a": "Un point est une unité de travail — environ une étape de workflow (un clic, une ligne CSV, un appel API). 50 000 points couvrent environ 100 heures d'automatisation de navigateur typique par mois."
-                },
-                {
-                    "q": "L'offre gratuite est-elle vraiment gratuite pour toujours ?",
-                    "a": "Oui. L'application de bureau et le moteur open source sont gratuits pour usage personnel pour toujours. La seule chose que le niveau gratuit n'inclut pas, c'est la planification hébergée et les fonctionnalités d'équipe."
-                },
-                {
-                    "q": "Que se passe-t-il si je dépasse mes points mensuels ?",
-                    "a": "Les workflows se mettent en pause jusqu'au prochain cycle, ou vous pouvez acheter un rechargement à 0,20 $ pour 1 000 points. Nous ne surfacturons jamais silencieusement — vous confirmez le rechargement avant qu'il s'exécute."
-                },
-                {
-                    "q": "Proposez-vous une facturation annuelle ou des remises ?",
-                    "a": "La facturation annuelle économise 20 % sur Pro et Team. Des remises pour l'éducation et les associations sont disponibles — écrivez à info@flyto2.com."
-                },
-                {
-                    "q": "Puis-je plutôt m'auto-héberger ?",
-                    "a": "Oui. Le moteur OSS sur PyPI exécute tout sauf la planification hébergée. L'auto-hébergement enterprise avec SSO et déploiement en réseau isolé est sur la feuille de route."
-                }
-            ]
+        {
+          "category": "PERFORMANCE",
+          "title": "Audit Pagespeed par lot",
+          "body": "Fournissez un CSV d'URL, obtenez en retour une feuille avec les scores mobile + desktop, les deltas Core Web Vitals et une notification Slack en cas de régression.",
+          "metric": "EXÉCUTION · chaque semaine"
         },
-        "cta": {
-            "label": "ENCORE INDÉCIS",
-            "title": "Essayez avant de payer.",
-            "body": "Téléchargez l'application de bureau gratuite, enregistrez un workflow, voyez si Flyto2 correspond au problème que vous essayez de résoudre. Passez à la version supérieure uniquement quand vous avez décidé que ça en vaut la peine.",
-            "primary": "Télécharger gratuitement",
-            "secondary": "Lire la documentation"
+        {
+          "category": "SÉCURITÉ",
+          "title": "Balayage des en-têtes de sécurité",
+          "body": "Sondez un parc de domaines, évaluez leurs en-têtes, déposez le rapport par responsable d'équipe. Remplace un script d'audit trimestriel que personne n'avait le temps de maintenir.",
+          "metric": "EXÉCUTION · chaque mois"
         }
+      ]
     },
-    "forum": {
-        "titleCloud": "Cloud — Discussions",
-        "subtitleCloud": "Posez des questions, signalez des bugs, partagez des workflows. Lu par tous, publié avec un compte Flyto2 gratuit.",
-        "titleCode": "Warroom — Discussions",
-        "subtitleCode": "Sécurité, analyse, vérification en boucle fermée. Lecture publique, compte gratuit pour poster.",
-        "auth": {
-            "loading": "Vérification de la connexion…",
-            "title": "Connectez-vous pour continuer",
-            "subtitle": "Les publications sont liées à votre compte afin d'afficher votre nom sur les réponses et vous notifier. Nous ne partageons pas votre e-mail.",
-            "continueGoogle": "Continuer avec Google",
-            "or": "OU",
-            "email": "E-mail",
-            "password": "Mot de passe",
-            "signIn": "Connexion",
-            "signUp": "Créer un compte",
-            "switchToSignUp": "Pas de compte ? Créez-en un",
-            "switchToSignIn": "Vous avez déjà un compte ? Connectez-vous",
-            "signOut": "Déconnexion",
-            "error": "Une erreur s'est produite. Réessayez.",
-            "reason": {
-                "post": "CONNECTEZ-VOUS POUR POSTER",
-                "comment": "CONNECTEZ-VOUS POUR RÉPONDRE",
-                "react": "CONNECTEZ-VOUS POUR RÉAGIR"
-            }
-        },
-        "list": {
-            "compose": "Nouvelle publication",
-            "composeSignIn": "Connectez-vous pour poster",
-            "loadMore": "Charger plus",
-            "empty": "Aucune publication pour l'instant — soyez le premier à poser une question.",
-            "error": "Impossible de charger les publications. Actualisez pour réessayer.",
-            "indexBuilding": "Firestore est encore en train de construire l'index pour cette requête. Nous réessaierons automatiquement toutes les 30 secondes — inutile d'actualiser.",
-            "prev": "Précédent",
-            "next": "Suivant",
-            "first": "Premier",
-            "pageIndicator": "Page {page}"
-        },
-        "categories": {
-            "all": "Tout",
-            "question": "Q&R",
-            "bug": "Bugs",
-            "feature": "Demandes de fonctionnalités",
-            "discussion": "Discussion"
-        },
-        "sort": {
-            "new": "Nouveau",
-            "hot": "Tendance",
-            "top": "Top"
-        },
-        "composer": {
-            "title": "Démarrer une discussion",
-            "subtitle": "Markdown pris en charge. Soyez précis — titre en une ligne, reproduction / contexte dans le corps.",
-            "titlePlaceholder": "Quelle est votre question ou votre rapport ?",
-            "bodyPlaceholder": "Ajoutez des détails — Markdown pris en charge. Blocs de code avec trois backticks.",
-            "tagsPlaceholder": "Tags (séparés par des virgules, max 5)",
-            "markdownHint": "Markdown · blocs de code · @mentions bientôt",
-            "submit": "Publier",
-            "error": "Impossible de publier. Vérifiez votre connexion et réessayez."
-        },
-        "comments": {
-            "heading": "{count, plural, =0 {Aucune réponse} =1 {1 réponse} other {# réponses}}",
-            "empty": "Soyez le premier à répondre.",
-            "placeholder": "Rédigez une réponse… Markdown pris en charge.",
-            "submit": "Répondre",
-            "error": "Impossible de publier la réponse."
-        },
-        "detail": {
-            "back": "Retour aux discussions",
-            "notFound": "Cette publication a été supprimée ou n'a jamais existé.",
-            "error": "Impossible de charger cette publication."
-        }
+    "integrations": {
+      "label": "INTÉGRATIONS",
+      "title": "Plus de 250 modules d'emblée.",
+      "subtitle": "La plomberie est déjà câblée. Glissez, déposez, configurez — n'écrivez plus jamais un script « copier cette ligne de Sheet A vers l'API B ».",
+      "andMore": "+ 230 DE PLUS · CRÉEZ LE VÔTRE EN PYTHON OU JS"
     },
-    "templates": {
-        "metaTitle": "Modèles — Marketplace Flyto2",
-        "metaDescription": "Modèles de workflow préconstruits pour la facturation, le scraping, l'enrichissement de leads, et plus encore. Installez en un clic.",
-        "gridLabel": "LES PLUS INSTALLÉS",
-        "gridTitle": "Des workflows que les gens utilisent vraiment.",
-        "gridSubtitle": "Ce sont les recettes qui apparaissent dans les vrais comptes clients. Chacune est un point de départ — clonez, adaptez, exécutez.",
-        "contributeOnGithub": "Contribuez un modèle sur GitHub",
-        "hero": {
-            "eyebrow": "MARKETPLACE · EN CROISSANCE",
-            "title": "Des workflows que vous pouvez",
-            "titleAccent": "installer en un clic.",
-            "lede": "Enregistrés, tagués et prêts à l'emploi. Parcourez la marketplace depuis l'application, ou regardez ce qui est le plus populaire ci-dessous — chaque entrée inclut le fichier de workflow source que vous pouvez modifier."
+    "stats": {
+      "items": [
+        {
+          "value": "250+",
+          "label": "MODULES",
+          "body": "Nœuds préconstruits pour CSV, Excel, Stripe, Notion, Slack, IA, SQL — ce que vous assembleriez sinon vous-même."
         },
-        "items": [
-            {
-                "iconName": "Receipt",
-                "category": "FINANCE",
-                "title": "Extraction de factures",
-                "body": "Connectez-vous au portail fournisseur, téléchargez les PDF, classez par client, envoyez les totaux vers Sheets."
-            },
-            {
-                "iconName": "ShoppingCart",
-                "category": "E-COMMERCE",
-                "title": "Rapprochement de commandes",
-                "body": "Extrayez les commandes de Stripe, faites correspondre avec Shopify, remontez les écarts dans Slack."
-            },
-            {
-                "iconName": "Search",
-                "category": "RECHERCHE",
-                "title": "Veille concurrentielle",
-                "body": "Visitez une liste d'URL, scrapez les prix, alertez Slack quand quelque chose change."
-            },
-            {
-                "iconName": "Mail",
-                "category": "CROISSANCE",
-                "title": "Enrichissement de leads",
-                "body": "Extrayez depuis le CRM, enrichissez via le web public, réécrivez des contacts tagués."
-            },
-            {
-                "iconName": "Database",
-                "category": "SYNCHRO",
-                "title": "Synchro cross-SaaS",
-                "body": "Faites le pont entre deux outils SaaS qui ne communiquent pas nativement, chaque nuit."
-            },
-            {
-                "iconName": "Calendar",
-                "category": "OPS",
-                "title": "Traitement par lot de calendrier",
-                "body": "Lisez un CSV de réservations, créez des événements de calendrier, envoyez des rappels."
-            },
-            {
-                "iconName": "FileText",
-                "category": "CONFORMITÉ",
-                "title": "Récupération de documents",
-                "body": "Téléchargement trimestriel de relevés, contrats, certificats — classés automatiquement."
-            },
-            {
-                "iconName": "Bell",
-                "category": "MONITORING",
-                "title": "Vérification de disponibilité",
-                "body": "Sondez une liste d'URL, vérifiez le statut, alertez quand quelque chose tombe."
-            }
-        ],
-        "cta": {
-            "label": "VOUS N'EN TROUVEZ PAS UN ?",
-            "title": "Dites-nous ce que vous automatiseriez en premier.",
-            "body": "Si vous souhaitez un modèle pour un workflow particulier, signalez-le dans les GitHub Discussions ou construisez-le vous-même — le runtime est open source.",
-            "primary": "Ouvrir les Discussions",
-            "secondary": "Lire la documentation"
+        {
+          "value": "16",
+          "label": "LANGUES",
+          "body": "Interface, enregistreur, runtime, documentation et messages d'erreur — traduits, pas seulement étiquetés."
         },
-        "details": {
-            "auto-login-template": {
-                "title": "Modèle de connexion automatique",
-                "category": "Authentification et sessions",
-                "lede": "Connectez-vous à n'importe quel site de façon programmatique sans réécrire les sélecteurs pour chaque flux. Le modèle Auto-Login gère les champs de formulaire, les défis MFA et la persistance de session, pour que les automatisations en aval démarrent déjà authentifiées.",
-                "metaDescription": "Automatisez les connexions web sur Flyto2 Cloud avec prise en charge 2FA, stockage chiffré des identifiants et réutilisation de sessions persistantes pour les workflows en navigateur headless.",
-                "faqs": [
-                    { "q": "Les fournisseurs SSO sont-ils pris en charge ?" },
-                    { "q": "Comment les mots de passe sont-ils protégés ?" },
-                    { "q": "Les CAPTCHA sont-ils résolus automatiquement ?" },
-                    { "q": "Que se passe-t-il quand la session expire ?" }
-                ]
-            },
-            "craigslist-listings-scraper": {
-                "title": "Scraper d'annonces Craigslist",
-                "category": "Données de marketplaces",
-                "lede": "Collectez des données structurées de Craigslist sur des centaines de zones métropolitaines sans écrire une seule ligne de parser. Ce modèle gère la pagination, le routage géographique et la balise désordonnée qui fait trébucher les scrapers depuis vingt ans.",
-                "metaDescription": "Scrapez les petites annonces Craigslist à grande échelle avec le modèle Flyto2. Extrayez titres, prix, lieux, images et contacts vendeur sur toutes les catégories et villes.",
-                "faqs": [
-                    { "q": "À quel point les données sont-elles fraîches ?" },
-                    { "q": "Peut-on obtenir le contact du vendeur ?" },
-                    { "q": "Gère-t-il les blocages anti-bot ?" },
-                    { "q": "Quels formats de sortie sont pris en charge ?" }
-                ]
-            },
-            "domain-availability-checker": {
-                "title": "Vérificateur de disponibilité de domaines",
-                "category": "Outils domaine et DNS",
-                "lede": "Balayez des milliers de noms de domaine candidats sur toutes les TLD pertinentes et ne retenez que ceux réellement libres à l'enregistrement. Le modèle combine plusieurs sources autoritatives pour éviter les faux positifs.",
-                "metaDescription": "Vérifiez en masse la disponibilité de domaines sur des centaines de TLD avec le modèle d'automatisation Flyto2. WHOIS, RDAP et sondes DNS combinés pour des résultats précis.",
-                "faqs": [
-                    { "q": "Quelle est la précision des résultats ?" },
-                    { "q": "Les nouveaux gTLD sont-ils gérés ?" },
-                    { "q": "Peut-il enregistrer les noms automatiquement ?" },
-                    { "q": "Qu'en est-il des domaines IDN ?" }
-                ]
-            },
-            "github-repo-stats-dashboard": {
-                "title": "Tableau de bord des stats GitHub",
-                "category": "DevTools et analytique",
-                "lede": "Centralisez les indicateurs de santé de chaque dépôt géré par votre équipe. Le modèle récupère les statistiques historiques et en direct depuis l'API GitHub, les persiste et rend un tableau de bord que vous pouvez partager ou intégrer.",
-                "metaDescription": "Construisez un tableau de bord d'analytique GitHub en direct avec Flyto2. Suivez étoiles, forks, trafic, issues, vélocité des PR et activité des contributeurs sur tous les dépôts.",
-                "faqs": [
-                    { "q": "Fonctionne-t-il sur les dépôts privés ?" },
-                    { "q": "Comment gère-t-il les rate limits ?" },
-                    { "q": "Peut-on exporter vers BigQuery ?" },
-                    { "q": "Et GitHub Enterprise ?" }
-                ]
-            },
-            "google-search-results-scraper": {
-                "title": "Scraper de résultats de recherche Google",
-                "category": "SERP et recherche",
-                "lede": "Extrayez la structure complète des résultats Google, pas seulement les dix premiers liens bleus. Le modèle capture positions organiques, annonces, knowledge panels, extraits optimisés et blocs People Also Ask en un seul passage.",
-                "metaDescription": "Scrapez les SERP Google à grande échelle avec extraction structurée des résultats organiques, annonces et features SERP. Ciblage géographique et appareil, suivi des positions dans le temps.",
-                "faqs": [
-                    { "q": "Gère-t-il les CAPTCHA ?" },
-                    { "q": "Peut-il scraper depuis des pays précis ?" },
-                    { "q": "Mobile ou desktop ?" },
-                    { "q": "La sortie est-elle stable dans le temps ?" }
-                ]
-            },
-            "linkedin-job-listings-scraper": {
-                "title": "Scraper d'offres d'emploi LinkedIn",
-                "category": "Recrutement et emplois",
-                "lede": "Transformez la recherche d'emploi LinkedIn en un dataset interrogeable. Le modèle collecte des annonces par poste, entreprise, géographie et séniorité, puis les normalise pour les pipelines de recrutement et d'intelligence marché en aval.",
-                "metaDescription": "Importez les annonces LinkedIn dans un dataset structuré pour l'analytique recrutement, l'intelligence marché et la synchronisation ATS, avec le modèle d'automatisation Flyto2.",
-                "faqs": [
-                    { "q": "Faut-il un compte premium ?" },
-                    { "q": "Comment évite-t-on les bannissements ?" },
-                    { "q": "Le salaire est-il toujours capturé ?" },
-                    { "q": "Peut-on pousser vers mon ATS directement ?" }
-                ]
-            },
-            "news-headlines-aggregator": {
-                "title": "Agrégateur de titres d'actualité",
-                "category": "Actualités et contenu",
-                "lede": "Construisez un firehose unifié d'actualités à partir de toute combinaison de médias mainstream, blogs de niche et flux RSS. Le modèle normalise, déduplique et cluster les sujets, pour que les doublons d'un même événement fusionnent.",
-                "metaDescription": "Agrégez les titres à la une de centaines de médias dans un flux unifié et dédupliqué avec le modèle d'automatisation de scraping d'actualités de Flyto2.",
-                "faqs": [
-                    { "q": "Et si une source n'a pas de RSS ?" },
-                    { "q": "Comment fonctionne le clustering ?" },
-                    { "q": "Peut-on filtrer par sujet ?" },
-                    { "q": "À quelle vitesse les titres arrivent-ils ?" }
-                ]
-            },
-            "page-load-speed-tester": {
-                "title": "Testeur de vitesse de chargement",
-                "category": "Performance et monitoring",
-                "lede": "Détectez les régressions de performance avant vos utilisateurs. Le modèle mesure les Core Web Vitals depuis plusieurs géographies et appareils, et alerte lorsque les indicateurs clés s'éloignent de la baseline définie.",
-                "metaDescription": "Exécutez des tests de chargement synthétiques avec vrais Core Web Vitals, données waterfall et alertes de régression via le modèle d'automatisation de performance web Flyto2.",
-                "faqs": [
-                    { "q": "Utilisateurs réels ou synthétiques ?" },
-                    { "q": "Teste-t-il les pages authentifiées ?" },
-                    { "q": "Comment les baselines sont-elles calculées ?" },
-                    { "q": "Peut-il bloquer les mauvais déploiements ?" }
-                ]
-            },
-            "real-estate-listings-monitor": {
-                "title": "Moniteur d'annonces immobilières",
-                "category": "Immobilier",
-                "lede": "Soyez le premier informé quand un bien arrive sur le marché ou que son prix baisse. Le modèle surveille les principaux portails immobiliers à une cadence inférieure à l'heure et alerte dès qu'un critère suivi est rempli.",
-                "metaDescription": "Suivez les annonces immobilières sur Zillow, Redfin, Realtor et les portails MLS avec le modèle Flyto2. Recevez des alertes sur les nouveaux biens et les changements de prix.",
-                "faqs": [
-                    { "q": "Quels portails sont pris en charge ?" },
-                    { "q": "Quelle est la rapidité des alertes ?" },
-                    { "q": "Peut-on suivre des biens off-market ?" },
-                    { "q": "Et l'immobilier commercial ?" }
-                ]
-            },
-            "restaurant-menu-scraper-2": {
-                "title": "Scraper de menus de restaurants",
-                "category": "Restauration et hospitalité",
-                "lede": "Récupérez chaque plat, modificateur et prix depuis les principales plateformes de livraison dans un dataset propre. Le modèle absorbe les schémas divergents d'Uber Eats, DoorDash, Grubhub et des sites des restaurants eux-mêmes.",
-                "metaDescription": "Extrayez les menus de restaurants d'Uber Eats, DoorDash, Grubhub et des sites officiels en données structurées avec le modèle d'automatisation de scraping de menus Flyto2.",
-                "faqs": [
-                    { "q": "Les modificateurs sont-ils capturés ?" },
-                    { "q": "Les prix dépendent-ils du lieu ?" },
-                    { "q": "Peut-on scraper les sites officiels ?" },
-                    { "q": "À quelle fréquence scraper ?" }
-                ]
-            },
-            "send-telegram-alert": {
-                "title": "Envoyer une alerte Telegram",
-                "category": "Notifications",
-                "lede": "Transformez tout événement d'automatisation en notification Telegram riche. Le modèle gère les bot tokens, le routage de canaux, les templates de messages et les claviers inline pour que les alertes arrivent formatées et exploitables.",
-                "metaDescription": "Envoyez des alertes Telegram riches vers des canaux, groupes ou conversations directes depuis n'importe quel workflow Flyto2, avec templates, claviers inline et confirmation de livraison.",
-                "faqs": [
-                    { "q": "Comment créer le bot ?" },
-                    { "q": "Peut-il envoyer en MP utilisateur ?" },
-                    { "q": "Les boutons inline sont-ils interactifs ?" },
-                    { "q": "Quelle est la taille max d'un message ?" }
-                ]
-            },
-            "stock-price-dashboard-scraper": {
-                "title": "Tableau de bord des cours boursiers",
-                "category": "Finance et données de marché",
-                "lede": "Consolidez cotations en direct, fondamentaux et actualités d'une watchlist en un tableau de bord auditable. Le modèle distribue les requêtes sur plusieurs fournisseurs de données et les réconcilie en une vue unifiée.",
-                "metaDescription": "Construisez un tableau de bord de cours boursiers en temps réel avec le modèle Flyto2. Agrégez cotations, fondamentaux, actualités et alertes depuis plusieurs sources de données de marché.",
-                "faqs": [
-                    { "q": "Les cotations sont-elles en temps réel ?" },
-                    { "q": "Quelles classes d'actifs sont gérées ?" },
-                    { "q": "Peut-on backtester sur ces données ?" },
-                    { "q": "Et les cotations hors séance ?" }
-                ]
-            },
-            "weather-forecast-to-slack": {
-                "title": "Prévisions météo vers Slack",
-                "category": "Météo et productivité",
-                "lede": "Démarrez chaque journée avec un briefing météo personnalisé dans Slack. Le modèle récupère les prévisions pour un ou plusieurs lieux, rend des blocs Slack riches et escalade en cas de météo sévère.",
-                "metaDescription": "Envoyez des prévisions météo quotidiennes vers des canaux ou MP Slack avec blocs riches, ciblage par lieu et alertes météo sévère via le modèle d'automatisation Flyto2.",
-                "faqs": [
-                    { "q": "Quel fournisseur dois-je utiliser ?" },
-                    { "q": "Peut-il poster en MP ?" },
-                    { "q": "Comment sont gérées les alertes sévères ?" },
-                    { "q": "Et la livraison hors Slack ?" }
-                ]
-            },
-            "webpage-to-pdf-converter": {
-                "title": "Convertisseur page web vers PDF",
-                "category": "Génération de documents",
-                "lede": "Rendez n'importe quelle URL en PDF fidèle au pixel qui s'ouvre proprement dans tout visualiseur. Le modèle contrôle la taille de page, les marges, en-têtes, pieds de page, filigranes et numérotation que les documents imprimés exigent.",
-                "metaDescription": "Convertissez toute page web en PDF haute fidélité sur Flyto2 Cloud avec tailles de page personnalisées, en-têtes, pieds, numérotation et filigranes intégrés.",
-                "faqs": [
-                    { "q": "Le texte de sortie est-il sélectionnable ?" },
-                    { "q": "Les hyperliens sont-ils préservés ?" },
-                    { "q": "Peut-on ajouter une numérotation ?" },
-                    { "q": "Et les très longs documents en page unique ?" }
-                ]
-            },
-            "website-screenshot-gallery": {
-                "title": "Galerie de captures d'écran de sites",
-                "category": "Monitoring visuel",
-                "lede": "Construisez un historique visuel pour tout ensemble de pages. Le modèle prend des captures selon un planning, effectue des diffs pixel par pixel avec la précédente et indexe le tout dans une galerie navigable.",
-                "metaDescription": "Capturez des captures d'écran planifiées de sites web dans une galerie consultable avec diffing visuel, couverture multi-viewport et rétention des assets via l'automatisation Flyto2.",
-                "faqs": [
-                    { "q": "Quelle taille font les captures ?" },
-                    { "q": "Gère-t-il les pages authentifiées ?" },
-                    { "q": "Peut-on comparer à une baseline ?" },
-                    { "q": "Et le contenu animé ?" }
-                ]
-            },
-            "website-uptime-monitor": {
-                "title": "Moniteur de disponibilité de site",
-                "category": "Monitoring et SRE",
-                "lede": "Surveillez vos services depuis l'extérieur de votre propre infrastructure. Le modèle exécute des vérifications synthétiques depuis plusieurs régions, escalade intelligemment les vrais incidents et produit les données de status page que vos clients attendent.",
-                "metaDescription": "Surveillez la disponibilité, la latence et l'expiration SSL depuis plusieurs régions avec une riche escalade d'incidents via le modèle d'automatisation de monitoring d'uptime Flyto2.",
-                "faqs": [
-                    { "q": "À quelle fréquence puis-je sonder ?" },
-                    { "q": "Et les détails internes de TLS ?" },
-                    { "q": "Peut-il tester les flux de connexion ?" },
-                    { "q": "Comment sont gérés les incidents flapping ?" }
-                ]
-            },
-            "youtube-channel-stats-tracker": {
-                "title": "Tracker de statistiques de chaînes YouTube",
-                "category": "Analytique des réseaux sociaux",
-                "lede": "Construisez un historique longitudinal des performances de chaînes et vidéos qui dépasse les fenêtres de reporting natives de YouTube. Le modèle capture les indicateurs publics selon un planning et fait émerger des tendances sur tout votre portefeuille.",
-                "metaDescription": "Suivez dans le temps les indicateurs de chaînes et vidéos YouTube avec le modèle d'automatisation Flyto2. Capturez vues, abonnés, temps de visionnage et engagement sur plusieurs chaînes.",
-                "faqs": [
-                    { "q": "Quelle est la précision des compteurs ?" },
-                    { "q": "Et les analytiques privées ?" },
-                    { "q": "Peut-on suivre les chaînes concurrentes ?" },
-                    { "q": "Quel est le coût en quota ?" }
-                ]
-            }
+        {
+          "value": "100%",
+          "label": "SUR VOTRE MACHINE",
+          "body": "Vos enregistrements, identifiants, historique d'exécution. Pas de cloud sauf si vous l'activez. Jamais de télémétrie."
         }
+      ]
     },
-    "code": {
-        "metaTitle": "Warroom — Salle d'opérations de sécurité applicative",
-        "metaDescription": "SCA, SAST, secrets, licences, CVE, pentest, runtime — une vue opérationnelle unifiée pour votre codebase. Pré-lancement.",
-        "hero": {
-            "eyebrow": "02 / CODE",
-            "status": "BÊTA",
-            "title": "Une salle d'opérations.",
-            "titleAccent": "Chaque angle d'attaque.",
-            "lede": "SCA, SAST, détection de secrets, audit de licences, triage CVE, workflows de pentest, télémétrie runtime. Warroom est la vue opérationnelle pour la sécurité de chaque ligne de code que vous livrez.",
-            "ctaPrimary": "Rejoindre la liste d'attente",
-            "ctaSecondary": "Essayer la CLI open source",
-            "ctaBetaBadge": "Beta",
-            "ctaBeta": "Ouvrir la bêta"
+    "codeTeaser": {
+      "label": "EN COURS DE CONSTRUCTION",
+      "status": "Pré-lancement",
+      "title": "Warroom — salle d'opérations de sécurité applicative.",
+      "body": "Un produit distinct pour la sécurité du déploiement logiciel. SCA, SAST, secrets, licences, CVE, pentest — sous un seul score de santé A–F.",
+      "cta": "Voir Warroom"
+    },
+    "faq": {
+      "label": "FAQ",
+      "title": "Questions fréquentes, répondues d'emblée.",
+      "subtitle": "Si vous évaluez Flyto2 pour votre équipe, ce sont les premières questions que l'on pose.",
+      "items": [
+        {
+          "q": "Flyto2 est-il vraiment gratuit et open source ?",
+          "a": "Oui. Le moteur d'exécution (`flyto-core`) est sous licence MIT sur GitHub. Vous pouvez l'installer depuis PyPI aujourd'hui et exécuter des flux sans jamais créer de compte. Le cloud hébergé est une option payante qui s'ajoute par-dessus — jamais une obligation."
         },
-        "closedLoop": {
-            "label": "CE QUI LE DIFFÉRENCIE",
-            "title": "Vérification en boucle fermée.",
-            "subtitle": "Tous les autres outils de sécurité s'arrêtent à l'alerte. Warroom transforme chaque constat en pentest YAML, l'exécute contre votre staging dans un vrai navigateur et rend un verdict — exploitable, neutralisé ou inaccessible.",
-            "find": {
-                "title": "Détecter",
-                "body": "SCA, SAST, secrets, licences, IaC. Le même scan analyse votre code en graphes d'appels et cartes d'architecture.",
-                "signal": "scan"
-            },
-            "craft": {
-                "title": "Élaborer",
-                "body": "Pour chaque constat lié à la sécurité, générez un workflow de pentest YAML ciblant la route affectée.",
-                "signal": "yaml"
-            },
-            "run": {
-                "title": "Exécuter",
-                "body": "Exécutez le workflow contre le staging dans une vraie session Chrome. 12 playbooks OWASP / LLM / logique métier officiels disponibles dès aujourd'hui.",
-                "signal": "live"
-            },
-            "verdictStep": {
-                "title": "Verdict",
-                "body": "Capturez des preuves signées HMAC, signalez exploitable / neutralisé / inaccessible, stockez le workflow dans le coffre de régression pour des ré-exécutions nocturnes.",
-                "signal": "ledger"
-            },
-            "verdict": {
-                "exploitable": {
-                    "title": "Exploitable",
-                    "body": "La vulnérabilité s'exécute de bout en bout. Pack de preuves joint. Montez en priorité de triage."
-                },
-                "sanitized": {
-                    "title": "Neutralisé",
-                    "body": "Atténué par un contrôle en aval (auth, WAF, framework). Enregistré, déprioritisé."
-                },
-                "unreachable": {
-                    "title": "Inaccessible",
-                    "body": "Le code vulnérable existe mais aucun chemin d'entrée utilisateur ne l'atteint. Reconnu, basse priorité."
-                }
-            }
+        {
+          "q": "En quoi est-ce différent de Zapier ou Make ?",
+          "a": "Zapier et Make connectent des API SaaS dans le cloud. Flyto2 enregistre et rejoue le vrai navigateur — y compris les sites sans API publique — et l'exécute sur votre propre machine. Si votre banque, votre ERP ou votre portail fournisseur ne figure pas dans le catalogue de Zapier, c'est exactement le vide que Flyto2 comble."
         },
-        "proof": {
-            "label": "PREUVE CONCRÈTE",
-            "title": "Nous l'avons testé sur OWASP Juice Shop.",
-            "subtitle": "Pas un sandbox synthétique. La classique application e-commerce intentionnellement vulnérable, exécutée de bout en bout via la boucle fermée. Voici la sortie d'une campagne.",
-            "caption": "Chaque constat est livré avec un pack de preuves signé HMAC. La chaîne se rejoue chaque nuit via le coffre de régression — quand un correctif arrive, Warroom vérifie qu'il reste corrigé.",
-            "data": {
-                "metric": [
-                    {
-                        "value": "5",
-                        "label": "Chaînes de niveau BREACH"
-                    },
-                    {
-                        "value": "11",
-                        "label": "Constats critiques"
-                    },
-                    {
-                        "value": "12",
-                        "label": "Playbooks de pentest"
-                    },
-                    {
-                        "value": "100%",
-                        "label": "Rejouables chaque nuit"
-                    }
-                ],
-                "chain": [
-                    {
-                        "vector": "SQLi · connexion",
-                        "finding": "Contournement par tautologie dans le champ `email` du POST /rest/user/login — authentification ignorée, jeton de session émis."
-                    },
-                    {
-                        "vector": "Vol de jeton",
-                        "finding": "JWT extrait de la réponse, décodé — claim admin absent mais clé de signature réutilisée entre utilisateurs."
-                    },
-                    {
-                        "vector": "IDOR chaîné",
-                        "finding": "GET /api/Users/{id} accepte un id arbitraire ; le serveur retourne l'enregistrement complet incluant le hash du mot de passe."
-                    },
-                    {
-                        "vector": "Élévation de privilèges",
-                        "finding": "Forge du JWT avec la clé divulguée, définition de role=admin, rejeu de la requête — les endpoints réservés aux admins répondent 200."
-                    },
-                    {
-                        "vector": "Exfiltration de données",
-                        "finding": "GET /api/Orders énumère l'historique d'achat de chaque client. Pack de preuves : 2,4 Mo."
-                    }
-                ]
-            }
+        {
+          "q": "Que se passe-t-il quand le site que j'automatise change ?",
+          "a": "Flyto2 enregistre des actions sémantiques (« cliquer sur le bouton Connexion ») plutôt que des sélecteurs CSS fragiles. Lorsqu'un site se refait une apparence, la plupart des flux continuent de fonctionner. Quand quelque chose se casse, vous mettez en pause, corrigez l'unique étape concernée et reprenez — vous ne réécrivez pas l'intégralité du flux."
         },
-        "features": {
-            "label": "DANS LA SALLE D'OPÉRATIONS",
-            "title": "Sept vues, une source de vérité.",
-            "subtitle": "Chaque panneau de Warroom est conçu autour d'une question que les équipes sécurité posent déjà. Voici ce que vous voyez réellement dans la salle d'opérations.",
-            "items": [
-                {
-                    "label": "TABLEAU DE BORD",
-                    "title": "Un score A–F par projet.",
-                    "body": "Agrégez chaque signal — SCA, SAST, secrets, licences, CVE, runtime — en une seule note. Votre RSSI voit le titre. Vos ingénieurs plongent dans le panneau qui saigne.",
-                    "imageAlt": "Tableau de bord de santé Warroom avec notation A–F",
-                    "bullets": [
-                        "Courbes de tendance pour chaque catégorie",
-                        "Agrégations par équipe et par service",
-                        "Briefing hebdomadaire généré automatiquement"
-                    ]
-                },
-                {
-                    "label": "ACCESSIBILITÉ",
-                    "title": "Quels CVE s'exécutent vraiment.",
-                    "body": "La plupart des alertes CVE sont du bruit — la fonction vulnérable n'est jamais appelée depuis votre code. L'analyse d'accessibilité trace les vrais chemins d'appel pour que vous corrigiez les 5 % qui comptent, pas les 95 % qui ne comptent pas.",
-                    "imageAlt": "Analyse d'accessibilité montrant les chemins d'appel exploitables",
-                    "bullets": [
-                        "Graphe d'appels statique + dynamique",
-                        "Propagation de contamination inter-packages",
-                        "Taux de faux positifs mesuré, pas affirmé"
-                    ]
-                },
-                {
-                    "label": "DÉPENDANCES",
-                    "title": "Votre chaîne d'approvisionnement, dessinée.",
-                    "body": "Chaque dépendance directe et transitive, pondérée par le risque et superposée avec les CVE. Cliquez sur un nœud pour voir qui l'a introduit, ce qu'il importe à son tour, et quels services en dépendent.",
-                    "imageAlt": "Graphe de dépendances avec superposition de vulnérabilités",
-                    "bullets": [
-                        "Superpositions licence + risque mainteneur",
-                        "Trouvez les doublons épinglés à des versions différentes",
-                        "Les étiquettes de propriété se propagent depuis les configs de monorepo"
-                    ]
-                },
-                {
-                    "label": "ARCHITECTURE",
-                    "title": "La forme globale de votre codebase.",
-                    "body": "Modules, services, flux de données, frontières de propriété — dérivés directement du code source, pas d'un wiki vieux de six mois. Fonctionne sans annotation, s'affine à chaque livraison.",
-                    "imageAlt": "Carte d'architecture des services et modules",
-                    "bullets": [
-                        "Auto-découverte des services depuis les fichiers de build",
-                        "Met en évidence les appels inter-frontières",
-                        "Diff par rapport à la dernière release pour détecter la dérive"
-                    ]
-                },
-                {
-                    "label": "SURFACE API",
-                    "title": "Chaque endpoint, inventorié.",
-                    "body": "REST, gRPC, GraphQL — Warroom les trouve dans vos handlers et liste ce qu'ils acceptent, ce qu'ils retournent, qui les appelle. Les lacunes d'authentification et les endpoints non authentifiés remontent automatiquement.",
-                    "imageAlt": "Inventaire des endpoints API avec métadonnées d'authentification",
-                    "bullets": [
-                        "Colonne de stratégie d'auth par route",
-                        "Classification public vs interne",
-                        "Export OpenAPI pour n'importe quel framework"
-                    ]
-                },
-                {
-                    "label": "INFRASTRUCTURE",
-                    "title": "IaC analysé dans le même passage.",
-                    "body": "Terraform, manifestes Kubernetes, Dockerfiles — Warroom lit votre infrastructure en même temps que votre code applicatif, de sorte que la posture sécurité et la topologie runtime proviennent du même passage.",
-                    "imageAlt": "Vue d'analyse de l'Infrastructure-as-Code",
-                    "bullets": [
-                        "Terraform, Helm, K8s, Dockerfile",
-                        "Catalogue de mauvaises configurations maintenu à jour avec CIS",
-                        "Détection de dérive : ce qui est déployé vs ce qui est versionné"
-                    ]
-                },
-                {
-                    "label": "PULSE",
-                    "title": "La dérive sécurité, dans le temps.",
-                    "body": "Un ticker en direct à l'échelle de l'équipe de ce qui a changé, quand, et comment cela a fait évoluer le score. Pas un tableau de bord pour la navigation — un tableau de bord pour la vigilance.",
-                    "imageAlt": "Vue Pulse montrant la chronologie de la dérive sécurité",
-                    "bullets": [
-                        "Contribution par ingénieur au delta de risque",
-                        "Règles d'escalade pour les chutes soudaines de score",
-                        "Historique rejouable — voyez le commit exact qui a fait bouger l'aiguille"
-                    ]
-                }
-            ]
+        {
+          "q": "Mon équipe peut-elle partager des workflows ?",
+          "a": "Oui. Les workflows sont de simples fichiers que vous pouvez committer dans git, partager via la Marketplace intégrée, ou transmettre à un collègue via Slack. L'historique d'exécution reste local ; seule la définition du workflow circule."
         },
-        "scans": {
-            "label": "CE QU'IL ANALYSE",
-            "title": "Huit signaux, un score de santé.",
-            "subtitle": "Chaque projet reçoit un score A–F qui agrège ce que les attaquants utilisent réellement contre vous. Plongez dans n'importe quel signal pour les constats sous-jacents, les corrections suggérées et les PR de remédiation générées par IA.",
-            "items": [
-                {
-                    "icon": "Boxes",
-                    "title": "SCA",
-                    "body": "Dépendances vulnérables dans votre lockfile, pondérées par l'accessibilité — pas seulement « CVE présente »."
-                },
-                {
-                    "icon": "Code2",
-                    "title": "SAST",
-                    "body": "Flux de contamination au niveau source depuis les entrées non fiables vers les sinks dangereux, en connaissance de l'AST."
-                },
-                {
-                    "icon": "KeyRound",
-                    "title": "Secrets",
-                    "body": "Clés API, tokens et identifiants codés en dur — sur tout l'historique, pas seulement HEAD."
-                },
-                {
-                    "icon": "ScrollText",
-                    "title": "Licences",
-                    "body": "Contamination GPL, licences incompatibles avec usage commercial, attributions manquantes."
-                },
-                {
-                    "icon": "Bug",
-                    "title": "CVE",
-                    "body": "Triage en direct des nouvelles CVE contre votre arbre de dépendances, avec des POC rejouables."
-                },
-                {
-                    "icon": "Crosshair",
-                    "title": "Pentest",
-                    "body": "Pentest-as-code : enregistrez une chaîne d'exploitation une fois, rejouez-la contre chaque release."
-                },
-                {
-                    "icon": "Activity",
-                    "title": "Runtime",
-                    "body": "Télémétrie production, détection de dérive, kill-switch — Phase IV."
-                },
-                {
-                    "icon": "FileCheck2",
-                    "title": "Conformité",
-                    "body": "SOC 2, ISO 27001, posture de résidence des données régionale — Phase V."
-                }
-            ]
-        },
-        "phases": {
-            "label": "FEUILLE DE ROUTE",
-            "title": "Six phases, une plateforme.",
-            "items": [
-                {
-                    "n": "I",
-                    "title": "Fondations",
-                    "status": "shipping",
-                    "body": "Indexeur, recherche, graphe de dépendances, score de santé A–F."
-                },
-                {
-                    "n": "II",
-                    "title": "Statique",
-                    "status": "shipping",
-                    "body": "SCA, SAST, scan de secrets, audit de licences — CLI open source."
-                },
-                {
-                    "n": "III",
-                    "title": "Dynamique",
-                    "status": "next",
-                    "body": "Pentest-as-code, sondes runtime, replay CVE."
-                },
-                {
-                    "n": "IV",
-                    "title": "Runtime",
-                    "status": "planned",
-                    "body": "Télémétrie production, détection de dérive, kill-switch."
-                },
-                {
-                    "n": "V",
-                    "title": "Conformité",
-                    "status": "planned",
-                    "body": "SOC 2, ISO 27001, posture de résidence des données régionale."
-                },
-                {
-                    "n": "VI",
-                    "title": "Fédération",
-                    "status": "planned",
-                    "body": "Salles d'opérations multi-org pour les équipes sécurité."
-                }
-            ]
-        },
-        "faq": {
-            "label": "FAQ",
-            "title": "Warroom — questions avant de rejoindre la liste d'attente.",
-            "subtitle": "Quand ça sort, en quoi c'est différent, ce que vous pouvez faire aujourd'hui.",
-            "items": [
-                {
-                    "q": "Quand Warroom sort-il ?",
-                    "a": "Les Phases I et II (Fondations + Statique) sont déjà en bêta privée. La Phase III (Dynamique) est le prochain jalon public — accès anticipé mi-2026. Rejoignez la liste d'attente pour obtenir la CLI OSS et une invitation."
-                },
-                {
-                    "q": "En quoi est-ce différent de Snyk, Aikido, GitHub Advanced Security ?",
-                    "a": "Deux différences. (1) Un seul score couvrant SCA, SAST, secrets, licences, CVE, pentest et runtime — pas huit outils à corréler vous-même. (2) Pentest-as-code : vous enregistrez une chaîne d'exploitation une fois et la rejouez contre chaque release, de la même façon que Cloud rejoue un flux de navigateur."
-                },
-                {
-                    "q": "Puis-je essayer quelque chose aujourd'hui ?",
-                    "a": "Oui. `pip install flyto-indexer` vous donne le scanner OSS — recherche, références, analyse d'impact, détection de code mort, analyse de contamination basée sur l'AST. La salle d'opérations hébergée s'ajoute par-dessus à l'arrivée de la Phase III."
-                },
-                {
-                    "q": "Mon code source est-il envoyé dans le cloud ?",
-                    "a": "Par défaut, non. La CLI s'exécute localement et produit un index local. La salle d'opérations hébergée peut ingérer des constats (pas le source) pour l'agrégation inter-projets ; l'envoi du source complet est optionnel par projet. L'auto-hébergement est une option de la Phase V."
-                },
-                {
-                    "q": "Fonctionne-t-il avec des dépôts privés ?",
-                    "a": "Oui — la CLI OSS ne se soucie pas de l'emplacement de votre code. La salle d'opérations hébergée prend en charge GitHub, GitLab, Bitbucket et Git auto-hébergé nativement."
-                },
-                {
-                    "q": "Puis-je auto-héberger la salle d'opérations ?",
-                    "a": "L'auto-hébergement est sur la feuille de route (Phase V, avec la conformité). Le scanner OSS peut être auto-hébergé dès aujourd'hui ; l'interface / orchestrateur hébergé suit."
-                }
-            ]
-        },
-        "cta": {
-            "label": "ACCÈS ANTICIPÉ",
-            "title": "Soyez le premier dans la salle d'opérations.",
-            "body": "La salle d'opérations hébergée est basée sur le navigateur — aucune application à installer. Rejoignez la liste d'attente pour recevoir une invitation à l'ouverture de la Phase III, et récupérez le scanner open source dès aujourd'hui.",
-            "primary": "Rejoindre la liste d'attente",
-            "secondary": "Installer le scanner OSS"
-        },
-        "gallery": {
-            "label": "ET DOUZE DE PLUS",
-            "title": "Chaque panneau qu'une équipe sécurité ouvrira vraiment.",
-            "subtitle": "Au-delà des sept vues principales, Warroom propose un catalogue approfondi d'outils ciblés. Chacun mérite sa place — pas de démo gadget.",
-            "items": {
-                "autofix": {
-                    "title": "PR de correction automatique",
-                    "body": "Correctifs de remédiation générés par IA qui passent votre propre CI avant d'apparaître comme PR. Le relecteur approuve ; rien ne surprend."
-                },
-                "taintFlow": {
-                    "title": "Visualiseur de flux de contamination",
-                    "body": "Tracez les entrées utilisateur à travers chaque transformation jusqu'à ce qu'elles atteignent un sink. Inter-fonctions, inter-packages, sensible aux assainisseurs."
-                },
-                "license": {
-                    "title": "Conformité des licences",
-                    "body": "Contamination GPL, conflits commerciaux, lacunes d'attribution — remontés avant que le service juridique ne demande pourquoi."
-                },
-                "owasp": {
-                    "title": "Rapports OWASP",
-                    "body": "Cartographiez les constats par rapport à l'OWASP Top 10 et aux classifications CWE. Exportez le tableau que votre auditeur demande."
-                },
-                "queue": {
-                    "title": "File de sécurité",
-                    "body": "Une vue de triage dimensionnée pour une petite équipe : assigné, en cours, ne sera pas corrigé. Pas une refonte de gestionnaire de tickets — juste l'essentiel."
-                },
-                "malware": {
-                    "title": "Détection de malware",
-                    "body": "Détectez les typosquats et les versions de dépendances compromises avant que npm install ne les installe dans votre arbre."
-                },
-                "complexity": {
-                    "title": "Points chauds de complexité",
-                    "body": "Lignes × imbrication × branches × paramètres. Les fonctions statistiquement plus difficiles à relire, classées."
-                },
-                "deadCode": {
-                    "title": "Détecteur de code mort",
-                    "body": "Symboles sans appelants, fichiers sans imports. Remonte ce que votre IDE vous cachait silencieusement."
-                },
-                "assetMap": {
-                    "title": "Inventaire des assets",
-                    "body": "Chaque domaine, sous-domaine, page et endpoint que vous possédez — cartographié depuis les artefacts de build, pas un document Notion."
-                },
-                "domainSec": {
-                    "title": "Score de sécurité de domaine",
-                    "body": "En-têtes, posture TLS, surfaces exposées — pour chaque domaine de votre inventaire."
-                },
-                "duplicate": {
-                    "title": "Carte de code dupliqué",
-                    "body": "Là où la même logique vit à trois endroits. Candidats au refactoring, classés par fréquence de changement de chaque clone."
-                },
-                "reportBuilder": {
-                    "title": "Constructeur de rapports",
-                    "body": "Assemblez n'importe quelle combinaison de panneaux en un seul PDF pour le conseil, le client ou l'auditeur — sauvegardé comme modèle récurrent."
-                }
-            }
+        {
+          "q": "Quel est le coût ?",
+          "a": "L'application de bureau et le moteur open source sont gratuits pour un usage individuel. Les offres Pro et Team ajoutent la planification hébergée, les marketplaces partagées et le support prioritaire — la tarification est sur la page Cloud."
         }
+      ]
+    },
+    "cta": {
+      "label": "EXPLORER LA PLATEFORME",
+      "title": "Deux produits. Une philosophie.",
+      "body": "Cloud est disponible aujourd'hui. Warroom arrive. Les deux partagent le moteur offline-first — choisissez celui qui correspond au problème du moment.",
+      "primary": "Voir Cloud",
+      "secondary": "Voir Warroom"
     }
+  },
+  "cloud": {
+    "metaTitle": "Cloud — Automatisation de navigateur sans code",
+    "metaDescription": "Enregistrez une fois, rejouez à l'infini. Automatisation de navigateur qui fonctionne hors ligne. Plus de 250 modules, 16 langues, moteur sous licence MIT.",
+    "hero": {
+      "eyebrow": "01 / CLOUD",
+      "status": "DISPONIBLE",
+      "title": "Le travail de navigateur,",
+      "titleAccent": "en pilotage automatique.",
+      "lede": "Ouvrez l'enregistreur, effectuez la tâche une fois, appuyez sur Stop. Flyto2 la transforme en workflow structuré que vous pouvez modifier, versionner, planifier et partager — sans écrire une seule ligne de code.",
+      "ctaPrimary": "Télécharger l'application de bureau",
+      "ctaSecondary": "Parcourir les 250+ modules"
+    },
+    "how": {
+      "label": "COMMENT ÇA MARCHE",
+      "title": "Trois étapes du manuel à l'automatisé.",
+      "items": [
+        {
+          "step": "01",
+          "icon": "Video",
+          "title": "Enregistrer",
+          "body": "Cliquez sur Enregistrer et effectuez la tâche une fois. Flyto2 capture le clic, le défilement, la saisie et l'attente — chaque étape, dans l'ordre, localement."
+        },
+        {
+          "step": "02",
+          "icon": "GitBranch",
+          "title": "Modifier",
+          "body": "Ajoutez des if/else, des boucles, des nouvelles tentatives et des identifiants comme nœuds visuels. Mettez en pause en cours d'exécution pour inspecter une valeur, la modifier et continuer."
+        },
+        {
+          "step": "03",
+          "icon": "Repeat",
+          "title": "Rejouer",
+          "body": "Exécutez à la demande, selon un planning ou depuis la CLI. Flyto2 reproduit chaque étape exactement, sur votre machine, avec une piste d'audit complète."
+        }
+      ]
+    },
+    "features": {
+      "label": "FONCTIONNALITÉS",
+      "title": "Conçu pour les tâches que vous recommencez sans cesse.",
+      "items": [
+        {
+          "icon": "Video",
+          "title": "Enregistrez n'importe quel flux",
+          "body": "Ouvrez l'enregistreur, effectuez la tâche une fois, appuyez sur Stop. Flyto2 la capture comme un workflow structuré que vous pouvez modifier et partager."
+        },
+        {
+          "icon": "Pause",
+          "title": "Mettez en pause et inspectez",
+          "body": "Les workflows ne sont pas des boîtes noires. Avancez pas à pas, modifiez une valeur en cours d'exécution, reprenez — comme un débogueur pour le travail quotidien."
+        },
+        {
+          "icon": "ShieldOff",
+          "title": "Offline par conception",
+          "body": "Fonctionne sur votre machine. Identifiants, données collectées, historique d'exécution — jamais transmis nulle part, y compris à nous."
+        },
+        {
+          "icon": "Boxes",
+          "title": "Plus de 250 modules",
+          "body": "CSV, Excel, Stripe, Notion, Sheets, Postgres, Slack, OpenAI — précâblés pour que vous les assembliez sans écrire de plomberie API."
+        },
+        {
+          "icon": "GitBranch",
+          "title": "Branchements et fusions",
+          "body": "if/else, boucles, nouvelles tentatives, gestionnaires d'erreurs — ce que vous écririez en code, uniquement sous forme de nœuds visuels lisibles en cinq secondes."
+        },
+        {
+          "icon": "Languages",
+          "title": "16 langues",
+          "body": "Enregistreur, runtime, documentation, messages d'erreur — tout est traduit. Votre équipe opérationnelle utilise Flyto2 dans sa langue, pas la vôtre."
+        }
+      ]
+    },
+    "codeSample": {
+      "label": "SOUS LE CAPOT",
+      "title": "C'est un fichier lisible.",
+      "subtitle": "Chaque workflow enregistré est un fichier JSON. Committez-le dans git, faites une diff en revue de code, exécutez-le depuis la CI, déclenchez-le depuis n'importe où.",
+      "point1": "JSON brut — aucun format binaire propriétaire",
+      "point2": "Déclenchez depuis la CLI, un webhook, un cron ou votre propre backend",
+      "point3": "Exportez vers GitHub Actions, GitLab CI ou Jenkins en une commande"
+    },
+    "comparison": {
+      "label": "FACE AUX ALTERNATIVES",
+      "title": "Pourquoi les équipes passent à Flyto2.",
+      "subtitle": "Zapier, Make, Selenium — chacun couvre une partie du problème. Flyto2 est ce que vous choisissez quand vous avez besoin d'un comportement vrai du navigateur, localement, sans louer de la puissance de calcul à la tâche.",
+      "featureHeader": "Ce dont vous avez besoin",
+      "data": {
+        "rows": [
+          {
+            "feature": "Enregistre les actions réelles du navigateur",
+            "values": [
+              "yes",
+              "no",
+              "no",
+              "yes"
+            ]
+          },
+          {
+            "feature": "Fonctionne hors ligne / sur votre machine",
+            "values": [
+              "yes",
+              "no",
+              "no",
+              "yes"
+            ]
+          },
+          {
+            "feature": "Gratuit pour usage individuel",
+            "values": [
+              "yes",
+              "partial",
+              "partial",
+              "yes"
+            ]
+          },
+          {
+            "feature": "Éditeur visuel (aucun code requis)",
+            "values": [
+              "yes",
+              "yes",
+              "yes",
+              "no"
+            ]
+          },
+          {
+            "feature": "Pause, inspection, reprise en cours d'exécution",
+            "values": [
+              "yes",
+              "no",
+              "no",
+              "partial"
+            ]
+          },
+          {
+            "feature": "Tarification par points, pas par tâche",
+            "values": [
+              "yes",
+              "no",
+              "no",
+              "yes"
+            ]
+          },
+          {
+            "feature": "Fichier workflow en JSON brut",
+            "values": [
+              "yes",
+              "no",
+              "no",
+              "no"
+            ]
+          },
+          {
+            "feature": "Moteur open source",
+            "values": [
+              "yes",
+              "no",
+              "no",
+              "yes"
+            ]
+          }
+        ]
+      }
+    },
+    "recipes": {
+      "label": "RECETTES PRÊTES À L'EMPLOI",
+      "title": "Une commande, des résultats concrets.",
+      "subtitle": "Les recettes sont des workflows déjà câblés et testés. Installez Cloud, exécutez `flyto recipe [nom]`, obtenez le rapport. Aucune configuration, pas de clés API pour les bases.",
+      "items": [
+        {
+          "iconName": "Search",
+          "name": "competitor-intel",
+          "command": "flyto recipe competitor-intel --url https://competitor.com/pricing",
+          "body": "Extrayez les paliers de tarification, prenez des captures desktop + mobile, capturez les Web Vitals, parsez les métas SEO, retournez un rapport JSON structuré.",
+          "outputs": [
+            "pricing.json",
+            "intel-desktop.png",
+            "intel-mobile.png",
+            "vitals",
+            "seo"
+          ]
+        },
+        {
+          "iconName": "Activity",
+          "name": "full-audit",
+          "command": "flyto recipe full-audit --url https://example.com",
+          "body": "Web Vitals + SEO + accessibilité (attributs alt, labels) + erreurs console + captures mobile/desktop + un PDF imprimable.",
+          "outputs": [
+            "audit.json",
+            "audit-desktop.png",
+            "audit-mobile.png",
+            "audit-page.pdf"
+          ]
+        },
+        {
+          "iconName": "Globe",
+          "name": "site-audit",
+          "command": "flyto recipe site-audit --url https://github.com",
+          "body": "Audit SEO + performance — métas, titres, alt manquants, Web Vitals, capture pleine page. Plus léger que full-audit, s'exécute en quelques secondes.",
+          "outputs": [
+            "report.json",
+            "page.png"
+          ]
+        },
+        {
+          "iconName": "Camera",
+          "name": "screenshot",
+          "command": "flyto recipe screenshot --url https://flyto2.com --device mobile",
+          "body": "Captures d'écran pixel-perfect sur n'importe quel viewport d'appareil. Utile pour le QA, la revue design ou pour assembler des diffs de détection de changements quotidiens.",
+          "outputs": [
+            "screenshot.png"
+          ]
+        }
+      ]
+    },
+    "useCases": {
+      "label": "CAS D'USAGE",
+      "title": "Ce que les gens automatisent en premier.",
+      "items": [
+        {
+          "icon": "FileText",
+          "title": "Extraction de factures et reçus",
+          "body": "Connectez-vous aux portails fournisseurs chaque lundi, téléchargez les PDF, classez-les par client, envoyez les totaux vers Sheets — sans toucher le clavier."
+        },
+        {
+          "icon": "Database",
+          "title": "Synchronisation de données entre systèmes",
+          "body": "Quand le SaaS dans lequel vous travaillez ne communique pas avec celui de votre équipe financière, Flyto2 enregistre le pont et l'exécute chaque nuit."
+        },
+        {
+          "icon": "Search",
+          "title": "Veille des prix et de la concurrence",
+          "body": "Visitez une liste d'URL, scrapez le prix, écrivez dans un CSV, alertez Slack en cas de changement. Deux semaines de travail de stagiaire, automatisées en une après-midi."
+        },
+        {
+          "icon": "Mail",
+          "title": "Routage et enrichissement des leads",
+          "body": "Extrayez depuis votre CRM, enrichissez via le web public, réinjectez avec les tags. Pas d'intermédiaire Zapier, pas de plafond mensuel de tâches."
+        }
+      ]
+    },
+    "faq": {
+      "label": "FAQ",
+      "title": "Cloud — les questions les plus fréquentes.",
+      "subtitle": "Enregistrement, replay, sécurité, tarification — les réponses que les responsables ops et IT demandent avant d'approuver un outil.",
+      "items": [
+        {
+          "q": "Cloud fonctionne-t-il sur des sites sans API publique ?",
+          "a": "C'est exactement sa vocation. Si vous pouvez effectuer la tâche dans un navigateur, Flyto2 peut l'enregistrer et la rejouer — portails internes, sites gouvernementaux, ERP legacy, partout."
+        },
+        {
+          "q": "S'exécute-t-il vraiment sur ma machine ?",
+          "a": "Oui. L'application de bureau intègre un moteur Chromium et le runtime de workflow. Vos identifiants, étapes enregistrées et historique d'exécution résident sur votre disque. Le cloud est optionnel pour la planification, le partage et les fonctionnalités d'équipe."
+        },
+        {
+          "q": "Que se passe-t-il quand un site fait une refonte ?",
+          "a": "Flyto2 enregistre l'intention sémantique (« cliquer sur Connexion », « remplir le champ e-mail ») plutôt que des XPath fragiles. Lorsqu'un site change d'apparence, la plupart des flux continuent de fonctionner. Quand une étape se casse, vous ne corrigez que cette étape dans l'éditeur visuel."
+        },
+        {
+          "q": "Puis-je déclencher des flux depuis la CI / un script ?",
+          "a": "Oui. Chaque workflow dispose d'un appel CLI et d'une URL webhook. Exécutez-les depuis cron, GitHub Actions, votre propre backend ou le planificateur hébergé de Flyto2 — même fichier workflow, même résultat."
+        },
+        {
+          "q": "Comment gérez-vous la 2FA et les CAPTCHA ?",
+          "a": "Flyto2 peut mettre en pause et vous inviter (ou un membre de votre équipe) à compléter un défi 2FA, puis continuer. Les CAPTCHA ne sont délibérément pas contournés — utiliser Flyto2 sur des sites qui interdisent l'automatisation est votre décision, pas la nôtre."
+        },
+        {
+          "q": "Quelle est la tarification ?",
+          "a": "Gratuit pour un usage individuel de l'application de bureau et du moteur OSS. Pro ajoute la planification hébergée et des exécutions cloud illimitées ; Team ajoute la marketplace partagée et le SSO. Tarification détaillée sur la page Cloud."
+        }
+      ]
+    },
+    "cta": {
+      "label": "COMMENCER",
+      "title": "Un enregistrement, chaque lundi automatisé.",
+      "body": "Téléchargez l'application de bureau, enregistrez votre premier workflow en cinq minutes, et regardez-le s'exécuter indéfiniment.",
+      "primary": "Télécharger gratuitement",
+      "secondary": "Lire la documentation"
+    }
+  },
+  "download": {
+    "metaTitle": "Télécharger Flyto2",
+    "metaDescription": "Téléchargez Flyto2 — application de bureau gratuite pour macOS, Windows et Linux. Automatisation de navigateur fonctionnant hors ligne, aucun compte requis.",
+    "downloadFor": "Télécharger pour {os}",
+    "allReleases": "Toutes les versions sur GitHub",
+    "hero": {
+      "eyebrow": "APPLICATION DE BUREAU · GRATUITE",
+      "title": "Téléchargez",
+      "titleAccent": "Flyto2.",
+      "lede": "Gratuit pour usage personnel, pour toujours. macOS, Windows, Linux — intégré avec le moteur open source. Aucun compte, aucune télémétrie, fonctionne hors ligne."
+    },
+    "docker": {
+      "title": "Auto-hébergez avec Docker",
+      "body": "Exécutez le même moteur dans un conteneur — idéal pour les serveurs headless, les agents CI ou les déploiements enterprise en réseau isolé.",
+      "cta": "Docker Hub"
+    },
+    "oss": {
+      "title": "Ou juste le moteur, sur PyPI",
+      "body": "Le cœur d'exécution est du Python sous licence MIT. Installez-le comme bibliothèque, utilisez la CLI, intégrez-le dans vos propres pipelines.",
+      "cta": "Voir le code source sur GitHub"
+    },
+    "cta": {
+      "label": "ÉGALEMENT UTILE",
+      "title": "Vous cherchez quelque chose de précis ?",
+      "body": "Vous cherchez une version antérieure, une architecture différente ou vous déployez dans un environnement réglementé ? Consultez les releases GitHub ou la documentation.",
+      "primary": "Ouvrir les releases",
+      "secondary": "Lire la documentation"
+    }
+  },
+  "pricing": {
+    "metaTitle": "Tarifs",
+    "metaDescription": "Gratuit pour usage personnel, pour toujours. Pro à 9 $/mois et Team à 19 $/mois. Tarification transparente pour l'automatisation de navigateur fonctionnant hors ligne.",
+    "perMonth": "/ mois",
+    "mostPopular": "Le plus populaire",
+    "priceFootnote": "USD · Annulez à tout moment · Aucune carte de crédit pour démarrer",
+    "hero": {
+      "eyebrow": "TARIFS",
+      "title": "Gratuit pour toujours.",
+      "titleAccent": "Pro quand vous montez en charge.",
+      "lede": "L'usage personnel est gratuit, sur le bureau et le moteur OSS. Passez à la version supérieure uniquement lorsque vous avez besoin de planification hébergée, de gestion d'équipe ou d'un volume mensuel plus élevé."
+    },
+    "plans": {
+      "free": {
+        "label": "GRATUIT",
+        "name": "Gratuit",
+        "tagline": "Pour les personnes qui découvrent l'automatisation.",
+        "feature1": "1 000 points de calcul / mois",
+        "feature2": "Jusqu'à 5 workflows sauvegardés",
+        "feature3": "Tous les 250+ modules",
+        "feature4": "Support communautaire",
+        "cta": "Télécharger gratuitement"
+      },
+      "pro": {
+        "label": "PRO",
+        "name": "Pro",
+        "tagline": "Pour les utilisateurs expérimentés qui automatisent quotidiennement.",
+        "feature1": "50 000 points de calcul / mois",
+        "feature2": "Workflows illimités",
+        "feature3": "Planification hébergée — cron, webhook, nouvelle tentative",
+        "feature4": "Support prioritaire, SLA 24 heures",
+        "feature5": "Publication sur la Marketplace",
+        "cta": "Démarrer avec Pro"
+      },
+      "team": {
+        "label": "TEAM",
+        "name": "Team",
+        "tagline": "Pour les équipes ops qui partagent des workflows à l'échelle de l'entreprise.",
+        "feature1": "200 000 points de calcul / mois",
+        "feature2": "Jusqu'à 10 postes",
+        "feature3": "RBAC et marketplace partagée",
+        "feature4": "SSO (Google, Microsoft)",
+        "feature5": "Onboarding dédié",
+        "cta": "Démarrer avec Team"
+      }
+    },
+    "faq": {
+      "label": "FAQ",
+      "title": "Questions sur la tarification, répondues.",
+      "subtitle": "Points de calcul, limites de postes, facturation — les questions que les acheteurs posent avant de sortir la carte.",
+      "items": [
+        {
+          "q": "Qu'est-ce qu'un « point de calcul » ?",
+          "a": "Un point est une unité de travail — environ une étape de workflow (un clic, une ligne CSV, un appel API). 50 000 points couvrent environ 100 heures d'automatisation de navigateur typique par mois."
+        },
+        {
+          "q": "L'offre gratuite est-elle vraiment gratuite pour toujours ?",
+          "a": "Oui. L'application de bureau et le moteur open source sont gratuits pour usage personnel pour toujours. La seule chose que le niveau gratuit n'inclut pas, c'est la planification hébergée et les fonctionnalités d'équipe."
+        },
+        {
+          "q": "Que se passe-t-il si je dépasse mes points mensuels ?",
+          "a": "Les workflows se mettent en pause jusqu'au prochain cycle, ou vous pouvez acheter un rechargement à 0,20 $ pour 1 000 points. Nous ne surfacturons jamais silencieusement — vous confirmez le rechargement avant qu'il s'exécute."
+        },
+        {
+          "q": "Proposez-vous une facturation annuelle ou des remises ?",
+          "a": "La facturation annuelle économise 20 % sur Pro et Team. Des remises pour l'éducation et les associations sont disponibles — écrivez à info@flyto2.com."
+        },
+        {
+          "q": "Puis-je plutôt m'auto-héberger ?",
+          "a": "Oui. Le moteur OSS sur PyPI exécute tout sauf la planification hébergée. L'auto-hébergement enterprise avec SSO et déploiement en réseau isolé est sur la feuille de route."
+        }
+      ]
+    },
+    "cta": {
+      "label": "ENCORE INDÉCIS",
+      "title": "Essayez avant de payer.",
+      "body": "Téléchargez l'application de bureau gratuite, enregistrez un workflow, voyez si Flyto2 correspond au problème que vous essayez de résoudre. Passez à la version supérieure uniquement quand vous avez décidé que ça en vaut la peine.",
+      "primary": "Télécharger gratuitement",
+      "secondary": "Lire la documentation"
+    }
+  },
+  "forum": {
+    "titleCloud": "Cloud — Discussions",
+    "subtitleCloud": "Posez des questions, signalez des bugs, partagez des workflows. Lu par tous, publié avec un compte Flyto2 gratuit.",
+    "titleCode": "Warroom — Discussions",
+    "subtitleCode": "Sécurité, analyse, vérification en boucle fermée. Lecture publique, compte gratuit pour poster.",
+    "auth": {
+      "loading": "Vérification de la connexion…",
+      "title": "Connectez-vous pour continuer",
+      "subtitle": "Les publications sont liées à votre compte afin d'afficher votre nom sur les réponses et vous notifier. Nous ne partageons pas votre e-mail.",
+      "continueGoogle": "Continuer avec Google",
+      "or": "OU",
+      "email": "E-mail",
+      "password": "Mot de passe",
+      "signIn": "Connexion",
+      "signUp": "Créer un compte",
+      "switchToSignUp": "Pas de compte ? Créez-en un",
+      "switchToSignIn": "Vous avez déjà un compte ? Connectez-vous",
+      "signOut": "Déconnexion",
+      "error": "Une erreur s'est produite. Réessayez.",
+      "reason": {
+        "post": "CONNECTEZ-VOUS POUR POSTER",
+        "comment": "CONNECTEZ-VOUS POUR RÉPONDRE",
+        "react": "CONNECTEZ-VOUS POUR RÉAGIR"
+      }
+    },
+    "list": {
+      "compose": "Nouvelle publication",
+      "composeSignIn": "Connectez-vous pour poster",
+      "loadMore": "Charger plus",
+      "empty": "Aucune publication pour l'instant — soyez le premier à poser une question.",
+      "error": "Impossible de charger les publications. Actualisez pour réessayer.",
+      "indexBuilding": "Firestore est encore en train de construire l'index pour cette requête. Nous réessaierons automatiquement toutes les 30 secondes — inutile d'actualiser.",
+      "prev": "Précédent",
+      "next": "Suivant",
+      "first": "Premier",
+      "pageIndicator": "Page {page}"
+    },
+    "categories": {
+      "all": "Tout",
+      "question": "Q&R",
+      "bug": "Bugs",
+      "feature": "Demandes de fonctionnalités",
+      "discussion": "Discussion"
+    },
+    "sort": {
+      "new": "Nouveau",
+      "hot": "Tendance",
+      "top": "Top"
+    },
+    "composer": {
+      "title": "Démarrer une discussion",
+      "subtitle": "Markdown pris en charge. Soyez précis — titre en une ligne, reproduction / contexte dans le corps.",
+      "titlePlaceholder": "Quelle est votre question ou votre rapport ?",
+      "bodyPlaceholder": "Ajoutez des détails — Markdown pris en charge. Blocs de code avec trois backticks.",
+      "tagsPlaceholder": "Tags (séparés par des virgules, max 5)",
+      "markdownHint": "Markdown · blocs de code · @mentions bientôt",
+      "submit": "Publier",
+      "error": "Impossible de publier. Vérifiez votre connexion et réessayez."
+    },
+    "comments": {
+      "heading": "{count, plural, =0 {Aucune réponse} =1 {1 réponse} other {# réponses}}",
+      "empty": "Soyez le premier à répondre.",
+      "placeholder": "Rédigez une réponse… Markdown pris en charge.",
+      "submit": "Répondre",
+      "error": "Impossible de publier la réponse."
+    },
+    "detail": {
+      "back": "Retour aux discussions",
+      "notFound": "Cette publication a été supprimée ou n'a jamais existé.",
+      "error": "Impossible de charger cette publication."
+    }
+  },
+  "templates": {
+    "metaTitle": "Modèles — Marketplace Flyto2",
+    "metaDescription": "Modèles de workflow préconstruits pour la facturation, le scraping, l'enrichissement de leads, et plus encore. Installez en un clic.",
+    "gridLabel": "LES PLUS INSTALLÉS",
+    "gridTitle": "Des workflows que les gens utilisent vraiment.",
+    "gridSubtitle": "Ce sont les recettes qui apparaissent dans les vrais comptes clients. Chacune est un point de départ — clonez, adaptez, exécutez.",
+    "contributeOnGithub": "Contribuez un modèle sur GitHub",
+    "hero": {
+      "eyebrow": "MARKETPLACE · EN CROISSANCE",
+      "title": "Des workflows que vous pouvez",
+      "titleAccent": "installer en un clic.",
+      "lede": "Enregistrés, tagués et prêts à l'emploi. Parcourez la marketplace depuis l'application, ou regardez ce qui est le plus populaire ci-dessous — chaque entrée inclut le fichier de workflow source que vous pouvez modifier."
+    },
+    "items": [
+      {
+        "iconName": "Receipt",
+        "category": "FINANCE",
+        "title": "Extraction de factures",
+        "body": "Connectez-vous au portail fournisseur, téléchargez les PDF, classez par client, envoyez les totaux vers Sheets."
+      },
+      {
+        "iconName": "ShoppingCart",
+        "category": "E-COMMERCE",
+        "title": "Rapprochement de commandes",
+        "body": "Extrayez les commandes de Stripe, faites correspondre avec Shopify, remontez les écarts dans Slack."
+      },
+      {
+        "iconName": "Search",
+        "category": "RECHERCHE",
+        "title": "Veille concurrentielle",
+        "body": "Visitez une liste d'URL, scrapez les prix, alertez Slack quand quelque chose change."
+      },
+      {
+        "iconName": "Mail",
+        "category": "CROISSANCE",
+        "title": "Enrichissement de leads",
+        "body": "Extrayez depuis le CRM, enrichissez via le web public, réécrivez des contacts tagués."
+      },
+      {
+        "iconName": "Database",
+        "category": "SYNCHRO",
+        "title": "Synchro cross-SaaS",
+        "body": "Faites le pont entre deux outils SaaS qui ne communiquent pas nativement, chaque nuit."
+      },
+      {
+        "iconName": "Calendar",
+        "category": "OPS",
+        "title": "Traitement par lot de calendrier",
+        "body": "Lisez un CSV de réservations, créez des événements de calendrier, envoyez des rappels."
+      },
+      {
+        "iconName": "FileText",
+        "category": "CONFORMITÉ",
+        "title": "Récupération de documents",
+        "body": "Téléchargement trimestriel de relevés, contrats, certificats — classés automatiquement."
+      },
+      {
+        "iconName": "Bell",
+        "category": "MONITORING",
+        "title": "Vérification de disponibilité",
+        "body": "Sondez une liste d'URL, vérifiez le statut, alertez quand quelque chose tombe."
+      }
+    ],
+    "cta": {
+      "label": "VOUS N'EN TROUVEZ PAS UN ?",
+      "title": "Dites-nous ce que vous automatiseriez en premier.",
+      "body": "Si vous souhaitez un modèle pour un workflow particulier, signalez-le dans les GitHub Discussions ou construisez-le vous-même — le runtime est open source.",
+      "primary": "Ouvrir les Discussions",
+      "secondary": "Lire la documentation"
+    },
+    "details": {
+      "auto-login-template": {
+        "title": "Modèle de connexion automatique",
+        "category": "Authentification et sessions",
+        "lede": "Connectez-vous à n'importe quel site de façon programmatique sans réécrire les sélecteurs pour chaque flux. Le modèle Auto-Login gère les champs de formulaire, les défis MFA et la persistance de session, pour que les automatisations en aval démarrent déjà authentifiées.",
+        "metaDescription": "Automatisez les connexions web sur Flyto2 Cloud avec prise en charge 2FA, stockage chiffré des identifiants et réutilisation de sessions persistantes pour les workflows en navigateur headless.",
+        "faqs": [
+          {
+            "q": "Les fournisseurs SSO sont-ils pris en charge ?"
+          },
+          {
+            "q": "Comment les mots de passe sont-ils protégés ?"
+          },
+          {
+            "q": "Les CAPTCHA sont-ils résolus automatiquement ?"
+          },
+          {
+            "q": "Que se passe-t-il quand la session expire ?"
+          }
+        ]
+      },
+      "craigslist-listings-scraper": {
+        "title": "Scraper d'annonces Craigslist",
+        "category": "Données de marketplaces",
+        "lede": "Collectez des données structurées de Craigslist sur des centaines de zones métropolitaines sans écrire une seule ligne de parser. Ce modèle gère la pagination, le routage géographique et la balise désordonnée qui fait trébucher les scrapers depuis vingt ans.",
+        "metaDescription": "Scrapez les petites annonces Craigslist à grande échelle avec le modèle Flyto2. Extrayez titres, prix, lieux, images et contacts vendeur sur toutes les catégories et villes.",
+        "faqs": [
+          {
+            "q": "À quel point les données sont-elles fraîches ?"
+          },
+          {
+            "q": "Peut-on obtenir le contact du vendeur ?"
+          },
+          {
+            "q": "Gère-t-il les blocages anti-bot ?"
+          },
+          {
+            "q": "Quels formats de sortie sont pris en charge ?"
+          }
+        ]
+      },
+      "domain-availability-checker": {
+        "title": "Vérificateur de disponibilité de domaines",
+        "category": "Outils domaine et DNS",
+        "lede": "Balayez des milliers de noms de domaine candidats sur toutes les TLD pertinentes et ne retenez que ceux réellement libres à l'enregistrement. Le modèle combine plusieurs sources autoritatives pour éviter les faux positifs.",
+        "metaDescription": "Vérifiez en masse la disponibilité de domaines sur des centaines de TLD avec le modèle d'automatisation Flyto2. WHOIS, RDAP et sondes DNS combinés pour des résultats précis.",
+        "faqs": [
+          {
+            "q": "Quelle est la précision des résultats ?"
+          },
+          {
+            "q": "Les nouveaux gTLD sont-ils gérés ?"
+          },
+          {
+            "q": "Peut-il enregistrer les noms automatiquement ?"
+          },
+          {
+            "q": "Qu'en est-il des domaines IDN ?"
+          }
+        ]
+      },
+      "github-repo-stats-dashboard": {
+        "title": "Tableau de bord des stats GitHub",
+        "category": "DevTools et analytique",
+        "lede": "Centralisez les indicateurs de santé de chaque dépôt géré par votre équipe. Le modèle récupère les statistiques historiques et en direct depuis l'API GitHub, les persiste et rend un tableau de bord que vous pouvez partager ou intégrer.",
+        "metaDescription": "Construisez un tableau de bord d'analytique GitHub en direct avec Flyto2. Suivez étoiles, forks, trafic, issues, vélocité des PR et activité des contributeurs sur tous les dépôts.",
+        "faqs": [
+          {
+            "q": "Fonctionne-t-il sur les dépôts privés ?"
+          },
+          {
+            "q": "Comment gère-t-il les rate limits ?"
+          },
+          {
+            "q": "Peut-on exporter vers BigQuery ?"
+          },
+          {
+            "q": "Et GitHub Enterprise ?"
+          }
+        ]
+      },
+      "google-search-results-scraper": {
+        "title": "Scraper de résultats de recherche Google",
+        "category": "SERP et recherche",
+        "lede": "Extrayez la structure complète des résultats Google, pas seulement les dix premiers liens bleus. Le modèle capture positions organiques, annonces, knowledge panels, extraits optimisés et blocs People Also Ask en un seul passage.",
+        "metaDescription": "Scrapez les SERP Google à grande échelle avec extraction structurée des résultats organiques, annonces et features SERP. Ciblage géographique et appareil, suivi des positions dans le temps.",
+        "faqs": [
+          {
+            "q": "Gère-t-il les CAPTCHA ?"
+          },
+          {
+            "q": "Peut-il scraper depuis des pays précis ?"
+          },
+          {
+            "q": "Mobile ou desktop ?"
+          },
+          {
+            "q": "La sortie est-elle stable dans le temps ?"
+          }
+        ]
+      },
+      "linkedin-job-listings-scraper": {
+        "title": "Scraper d'offres d'emploi LinkedIn",
+        "category": "Recrutement et emplois",
+        "lede": "Transformez la recherche d'emploi LinkedIn en un dataset interrogeable. Le modèle collecte des annonces par poste, entreprise, géographie et séniorité, puis les normalise pour les pipelines de recrutement et d'intelligence marché en aval.",
+        "metaDescription": "Importez les annonces LinkedIn dans un dataset structuré pour l'analytique recrutement, l'intelligence marché et la synchronisation ATS, avec le modèle d'automatisation Flyto2.",
+        "faqs": [
+          {
+            "q": "Faut-il un compte premium ?"
+          },
+          {
+            "q": "Comment évite-t-on les bannissements ?"
+          },
+          {
+            "q": "Le salaire est-il toujours capturé ?"
+          },
+          {
+            "q": "Peut-on pousser vers mon ATS directement ?"
+          }
+        ]
+      },
+      "news-headlines-aggregator": {
+        "title": "Agrégateur de titres d'actualité",
+        "category": "Actualités et contenu",
+        "lede": "Construisez un firehose unifié d'actualités à partir de toute combinaison de médias mainstream, blogs de niche et flux RSS. Le modèle normalise, déduplique et cluster les sujets, pour que les doublons d'un même événement fusionnent.",
+        "metaDescription": "Agrégez les titres à la une de centaines de médias dans un flux unifié et dédupliqué avec le modèle d'automatisation de scraping d'actualités de Flyto2.",
+        "faqs": [
+          {
+            "q": "Et si une source n'a pas de RSS ?"
+          },
+          {
+            "q": "Comment fonctionne le clustering ?"
+          },
+          {
+            "q": "Peut-on filtrer par sujet ?"
+          },
+          {
+            "q": "À quelle vitesse les titres arrivent-ils ?"
+          }
+        ]
+      },
+      "page-load-speed-tester": {
+        "title": "Testeur de vitesse de chargement",
+        "category": "Performance et monitoring",
+        "lede": "Détectez les régressions de performance avant vos utilisateurs. Le modèle mesure les Core Web Vitals depuis plusieurs géographies et appareils, et alerte lorsque les indicateurs clés s'éloignent de la baseline définie.",
+        "metaDescription": "Exécutez des tests de chargement synthétiques avec vrais Core Web Vitals, données waterfall et alertes de régression via le modèle d'automatisation de performance web Flyto2.",
+        "faqs": [
+          {
+            "q": "Utilisateurs réels ou synthétiques ?"
+          },
+          {
+            "q": "Teste-t-il les pages authentifiées ?"
+          },
+          {
+            "q": "Comment les baselines sont-elles calculées ?"
+          },
+          {
+            "q": "Peut-il bloquer les mauvais déploiements ?"
+          }
+        ]
+      },
+      "real-estate-listings-monitor": {
+        "title": "Moniteur d'annonces immobilières",
+        "category": "Immobilier",
+        "lede": "Soyez le premier informé quand un bien arrive sur le marché ou que son prix baisse. Le modèle surveille les principaux portails immobiliers à une cadence inférieure à l'heure et alerte dès qu'un critère suivi est rempli.",
+        "metaDescription": "Suivez les annonces immobilières sur Zillow, Redfin, Realtor et les portails MLS avec le modèle Flyto2. Recevez des alertes sur les nouveaux biens et les changements de prix.",
+        "faqs": [
+          {
+            "q": "Quels portails sont pris en charge ?"
+          },
+          {
+            "q": "Quelle est la rapidité des alertes ?"
+          },
+          {
+            "q": "Peut-on suivre des biens off-market ?"
+          },
+          {
+            "q": "Et l'immobilier commercial ?"
+          }
+        ]
+      },
+      "restaurant-menu-scraper-2": {
+        "title": "Scraper de menus de restaurants",
+        "category": "Restauration et hospitalité",
+        "lede": "Récupérez chaque plat, modificateur et prix depuis les principales plateformes de livraison dans un dataset propre. Le modèle absorbe les schémas divergents d'Uber Eats, DoorDash, Grubhub et des sites des restaurants eux-mêmes.",
+        "metaDescription": "Extrayez les menus de restaurants d'Uber Eats, DoorDash, Grubhub et des sites officiels en données structurées avec le modèle d'automatisation de scraping de menus Flyto2.",
+        "faqs": [
+          {
+            "q": "Les modificateurs sont-ils capturés ?"
+          },
+          {
+            "q": "Les prix dépendent-ils du lieu ?"
+          },
+          {
+            "q": "Peut-on scraper les sites officiels ?"
+          },
+          {
+            "q": "À quelle fréquence scraper ?"
+          }
+        ]
+      },
+      "send-telegram-alert": {
+        "title": "Envoyer une alerte Telegram",
+        "category": "Notifications",
+        "lede": "Transformez tout événement d'automatisation en notification Telegram riche. Le modèle gère les bot tokens, le routage de canaux, les templates de messages et les claviers inline pour que les alertes arrivent formatées et exploitables.",
+        "metaDescription": "Envoyez des alertes Telegram riches vers des canaux, groupes ou conversations directes depuis n'importe quel workflow Flyto2, avec templates, claviers inline et confirmation de livraison.",
+        "faqs": [
+          {
+            "q": "Comment créer le bot ?"
+          },
+          {
+            "q": "Peut-il envoyer en MP utilisateur ?"
+          },
+          {
+            "q": "Les boutons inline sont-ils interactifs ?"
+          },
+          {
+            "q": "Quelle est la taille max d'un message ?"
+          }
+        ]
+      },
+      "stock-price-dashboard-scraper": {
+        "title": "Tableau de bord des cours boursiers",
+        "category": "Finance et données de marché",
+        "lede": "Consolidez cotations en direct, fondamentaux et actualités d'une watchlist en un tableau de bord auditable. Le modèle distribue les requêtes sur plusieurs fournisseurs de données et les réconcilie en une vue unifiée.",
+        "metaDescription": "Construisez un tableau de bord de cours boursiers en temps réel avec le modèle Flyto2. Agrégez cotations, fondamentaux, actualités et alertes depuis plusieurs sources de données de marché.",
+        "faqs": [
+          {
+            "q": "Les cotations sont-elles en temps réel ?"
+          },
+          {
+            "q": "Quelles classes d'actifs sont gérées ?"
+          },
+          {
+            "q": "Peut-on backtester sur ces données ?"
+          },
+          {
+            "q": "Et les cotations hors séance ?"
+          }
+        ]
+      },
+      "weather-forecast-to-slack": {
+        "title": "Prévisions météo vers Slack",
+        "category": "Météo et productivité",
+        "lede": "Démarrez chaque journée avec un briefing météo personnalisé dans Slack. Le modèle récupère les prévisions pour un ou plusieurs lieux, rend des blocs Slack riches et escalade en cas de météo sévère.",
+        "metaDescription": "Envoyez des prévisions météo quotidiennes vers des canaux ou MP Slack avec blocs riches, ciblage par lieu et alertes météo sévère via le modèle d'automatisation Flyto2.",
+        "faqs": [
+          {
+            "q": "Quel fournisseur dois-je utiliser ?"
+          },
+          {
+            "q": "Peut-il poster en MP ?"
+          },
+          {
+            "q": "Comment sont gérées les alertes sévères ?"
+          },
+          {
+            "q": "Et la livraison hors Slack ?"
+          }
+        ]
+      },
+      "webpage-to-pdf-converter": {
+        "title": "Convertisseur page web vers PDF",
+        "category": "Génération de documents",
+        "lede": "Rendez n'importe quelle URL en PDF fidèle au pixel qui s'ouvre proprement dans tout visualiseur. Le modèle contrôle la taille de page, les marges, en-têtes, pieds de page, filigranes et numérotation que les documents imprimés exigent.",
+        "metaDescription": "Convertissez toute page web en PDF haute fidélité sur Flyto2 Cloud avec tailles de page personnalisées, en-têtes, pieds, numérotation et filigranes intégrés.",
+        "faqs": [
+          {
+            "q": "Le texte de sortie est-il sélectionnable ?"
+          },
+          {
+            "q": "Les hyperliens sont-ils préservés ?"
+          },
+          {
+            "q": "Peut-on ajouter une numérotation ?"
+          },
+          {
+            "q": "Et les très longs documents en page unique ?"
+          }
+        ]
+      },
+      "website-screenshot-gallery": {
+        "title": "Galerie de captures d'écran de sites",
+        "category": "Monitoring visuel",
+        "lede": "Construisez un historique visuel pour tout ensemble de pages. Le modèle prend des captures selon un planning, effectue des diffs pixel par pixel avec la précédente et indexe le tout dans une galerie navigable.",
+        "metaDescription": "Capturez des captures d'écran planifiées de sites web dans une galerie consultable avec diffing visuel, couverture multi-viewport et rétention des assets via l'automatisation Flyto2.",
+        "faqs": [
+          {
+            "q": "Quelle taille font les captures ?"
+          },
+          {
+            "q": "Gère-t-il les pages authentifiées ?"
+          },
+          {
+            "q": "Peut-on comparer à une baseline ?"
+          },
+          {
+            "q": "Et le contenu animé ?"
+          }
+        ]
+      },
+      "website-uptime-monitor": {
+        "title": "Moniteur de disponibilité de site",
+        "category": "Monitoring et SRE",
+        "lede": "Surveillez vos services depuis l'extérieur de votre propre infrastructure. Le modèle exécute des vérifications synthétiques depuis plusieurs régions, escalade intelligemment les vrais incidents et produit les données de status page que vos clients attendent.",
+        "metaDescription": "Surveillez la disponibilité, la latence et l'expiration SSL depuis plusieurs régions avec une riche escalade d'incidents via le modèle d'automatisation de monitoring d'uptime Flyto2.",
+        "faqs": [
+          {
+            "q": "À quelle fréquence puis-je sonder ?"
+          },
+          {
+            "q": "Et les détails internes de TLS ?"
+          },
+          {
+            "q": "Peut-il tester les flux de connexion ?"
+          },
+          {
+            "q": "Comment sont gérés les incidents flapping ?"
+          }
+        ]
+      },
+      "youtube-channel-stats-tracker": {
+        "title": "Tracker de statistiques de chaînes YouTube",
+        "category": "Analytique des réseaux sociaux",
+        "lede": "Construisez un historique longitudinal des performances de chaînes et vidéos qui dépasse les fenêtres de reporting natives de YouTube. Le modèle capture les indicateurs publics selon un planning et fait émerger des tendances sur tout votre portefeuille.",
+        "metaDescription": "Suivez dans le temps les indicateurs de chaînes et vidéos YouTube avec le modèle d'automatisation Flyto2. Capturez vues, abonnés, temps de visionnage et engagement sur plusieurs chaînes.",
+        "faqs": [
+          {
+            "q": "Quelle est la précision des compteurs ?"
+          },
+          {
+            "q": "Et les analytiques privées ?"
+          },
+          {
+            "q": "Peut-on suivre les chaînes concurrentes ?"
+          },
+          {
+            "q": "Quel est le coût en quota ?"
+          }
+        ]
+      }
+    }
+  },
+  "code": {
+    "metaTitle": "Warroom — Salle d'opérations de sécurité applicative",
+    "metaDescription": "SCA, SAST, secrets, licences, CVE, pentest, runtime — une vue opérationnelle unifiée pour votre codebase. Pré-lancement.",
+    "hero": {
+      "eyebrow": "02 / CODE",
+      "status": "BÊTA",
+      "title": "Une salle d'opérations.",
+      "titleAccent": "Chaque angle d'attaque.",
+      "lede": "SCA, SAST, détection de secrets, audit de licences, triage CVE, workflows de pentest, télémétrie runtime. Warroom est la vue opérationnelle pour la sécurité de chaque ligne de code que vous livrez.",
+      "ctaPrimary": "Rejoindre la liste d'attente",
+      "ctaSecondary": "Essayer la CLI open source",
+      "ctaBetaBadge": "Beta",
+      "ctaBeta": "Ouvrir la bêta"
+    },
+    "closedLoop": {
+      "label": "CE QUI LE DIFFÉRENCIE",
+      "title": "Vérification en boucle fermée.",
+      "subtitle": "Tous les autres outils de sécurité s'arrêtent à l'alerte. Warroom transforme chaque constat en pentest YAML, l'exécute contre votre staging dans un vrai navigateur et rend un verdict — exploitable, neutralisé ou inaccessible.",
+      "find": {
+        "title": "Détecter",
+        "body": "SCA, SAST, secrets, licences, IaC. Le même scan analyse votre code en graphes d'appels et cartes d'architecture.",
+        "signal": "scan"
+      },
+      "craft": {
+        "title": "Élaborer",
+        "body": "Pour chaque constat lié à la sécurité, générez un workflow de pentest YAML ciblant la route affectée.",
+        "signal": "yaml"
+      },
+      "run": {
+        "title": "Exécuter",
+        "body": "Exécutez le workflow contre le staging dans une vraie session Chrome. 12 playbooks OWASP / LLM / logique métier officiels disponibles dès aujourd'hui.",
+        "signal": "live"
+      },
+      "verdictStep": {
+        "title": "Verdict",
+        "body": "Capturez des preuves signées HMAC, signalez exploitable / neutralisé / inaccessible, stockez le workflow dans le coffre de régression pour des ré-exécutions nocturnes.",
+        "signal": "ledger"
+      },
+      "verdict": {
+        "exploitable": {
+          "title": "Exploitable",
+          "body": "La vulnérabilité s'exécute de bout en bout. Pack de preuves joint. Montez en priorité de triage."
+        },
+        "sanitized": {
+          "title": "Neutralisé",
+          "body": "Atténué par un contrôle en aval (auth, WAF, framework). Enregistré, déprioritisé."
+        },
+        "unreachable": {
+          "title": "Inaccessible",
+          "body": "Le code vulnérable existe mais aucun chemin d'entrée utilisateur ne l'atteint. Reconnu, basse priorité."
+        }
+      }
+    },
+    "proof": {
+      "label": "PREUVE CONCRÈTE",
+      "title": "Nous l'avons testé sur OWASP Juice Shop.",
+      "subtitle": "Pas un sandbox synthétique. La classique application e-commerce intentionnellement vulnérable, exécutée de bout en bout via la boucle fermée. Voici la sortie d'une campagne.",
+      "caption": "Chaque constat est livré avec un pack de preuves signé HMAC. La chaîne se rejoue chaque nuit via le coffre de régression — quand un correctif arrive, Warroom vérifie qu'il reste corrigé.",
+      "data": {
+        "metric": [
+          {
+            "value": "5",
+            "label": "Chaînes de niveau BREACH"
+          },
+          {
+            "value": "11",
+            "label": "Constats critiques"
+          },
+          {
+            "value": "12",
+            "label": "Playbooks de pentest"
+          },
+          {
+            "value": "100%",
+            "label": "Rejouables chaque nuit"
+          }
+        ],
+        "chain": [
+          {
+            "vector": "SQLi · connexion",
+            "finding": "Contournement par tautologie dans le champ `email` du POST /rest/user/login — authentification ignorée, jeton de session émis."
+          },
+          {
+            "vector": "Vol de jeton",
+            "finding": "JWT extrait de la réponse, décodé — claim admin absent mais clé de signature réutilisée entre utilisateurs."
+          },
+          {
+            "vector": "IDOR chaîné",
+            "finding": "GET /api/Users/{id} accepte un id arbitraire ; le serveur retourne l'enregistrement complet incluant le hash du mot de passe."
+          },
+          {
+            "vector": "Élévation de privilèges",
+            "finding": "Forge du JWT avec la clé divulguée, définition de role=admin, rejeu de la requête — les endpoints réservés aux admins répondent 200."
+          },
+          {
+            "vector": "Exfiltration de données",
+            "finding": "GET /api/Orders énumère l'historique d'achat de chaque client. Pack de preuves : 2,4 Mo."
+          }
+        ]
+      }
+    },
+    "features": {
+      "label": "DANS LA SALLE D'OPÉRATIONS",
+      "title": "Sept vues, une source de vérité.",
+      "subtitle": "Chaque panneau de Warroom est conçu autour d'une question que les équipes sécurité posent déjà. Voici ce que vous voyez réellement dans la salle d'opérations.",
+      "items": [
+        {
+          "label": "TABLEAU DE BORD",
+          "title": "Un score A–F par projet.",
+          "body": "Agrégez chaque signal — SCA, SAST, secrets, licences, CVE, runtime — en une seule note. Votre RSSI voit le titre. Vos ingénieurs plongent dans le panneau qui saigne.",
+          "imageAlt": "Tableau de bord de santé Warroom avec notation A–F",
+          "bullets": [
+            "Courbes de tendance pour chaque catégorie",
+            "Agrégations par équipe et par service",
+            "Briefing hebdomadaire généré automatiquement"
+          ]
+        },
+        {
+          "label": "ACCESSIBILITÉ",
+          "title": "Quels CVE s'exécutent vraiment.",
+          "body": "La plupart des alertes CVE sont du bruit — la fonction vulnérable n'est jamais appelée depuis votre code. L'analyse d'accessibilité trace les vrais chemins d'appel pour que vous corrigiez les 5 % qui comptent, pas les 95 % qui ne comptent pas.",
+          "imageAlt": "Analyse d'accessibilité montrant les chemins d'appel exploitables",
+          "bullets": [
+            "Graphe d'appels statique + dynamique",
+            "Propagation de contamination inter-packages",
+            "Taux de faux positifs mesuré, pas affirmé"
+          ]
+        },
+        {
+          "label": "DÉPENDANCES",
+          "title": "Votre chaîne d'approvisionnement, dessinée.",
+          "body": "Chaque dépendance directe et transitive, pondérée par le risque et superposée avec les CVE. Cliquez sur un nœud pour voir qui l'a introduit, ce qu'il importe à son tour, et quels services en dépendent.",
+          "imageAlt": "Graphe de dépendances avec superposition de vulnérabilités",
+          "bullets": [
+            "Superpositions licence + risque mainteneur",
+            "Trouvez les doublons épinglés à des versions différentes",
+            "Les étiquettes de propriété se propagent depuis les configs de monorepo"
+          ]
+        },
+        {
+          "label": "ARCHITECTURE",
+          "title": "La forme globale de votre codebase.",
+          "body": "Modules, services, flux de données, frontières de propriété — dérivés directement du code source, pas d'un wiki vieux de six mois. Fonctionne sans annotation, s'affine à chaque livraison.",
+          "imageAlt": "Carte d'architecture des services et modules",
+          "bullets": [
+            "Auto-découverte des services depuis les fichiers de build",
+            "Met en évidence les appels inter-frontières",
+            "Diff par rapport à la dernière release pour détecter la dérive"
+          ]
+        },
+        {
+          "label": "SURFACE API",
+          "title": "Chaque endpoint, inventorié.",
+          "body": "REST, gRPC, GraphQL — Warroom les trouve dans vos handlers et liste ce qu'ils acceptent, ce qu'ils retournent, qui les appelle. Les lacunes d'authentification et les endpoints non authentifiés remontent automatiquement.",
+          "imageAlt": "Inventaire des endpoints API avec métadonnées d'authentification",
+          "bullets": [
+            "Colonne de stratégie d'auth par route",
+            "Classification public vs interne",
+            "Export OpenAPI pour n'importe quel framework"
+          ]
+        },
+        {
+          "label": "INFRASTRUCTURE",
+          "title": "IaC analysé dans le même passage.",
+          "body": "Terraform, manifestes Kubernetes, Dockerfiles — Warroom lit votre infrastructure en même temps que votre code applicatif, de sorte que la posture sécurité et la topologie runtime proviennent du même passage.",
+          "imageAlt": "Vue d'analyse de l'Infrastructure-as-Code",
+          "bullets": [
+            "Terraform, Helm, K8s, Dockerfile",
+            "Catalogue de mauvaises configurations maintenu à jour avec CIS",
+            "Détection de dérive : ce qui est déployé vs ce qui est versionné"
+          ]
+        },
+        {
+          "label": "PULSE",
+          "title": "La dérive sécurité, dans le temps.",
+          "body": "Un ticker en direct à l'échelle de l'équipe de ce qui a changé, quand, et comment cela a fait évoluer le score. Pas un tableau de bord pour la navigation — un tableau de bord pour la vigilance.",
+          "imageAlt": "Vue Pulse montrant la chronologie de la dérive sécurité",
+          "bullets": [
+            "Contribution par ingénieur au delta de risque",
+            "Règles d'escalade pour les chutes soudaines de score",
+            "Historique rejouable — voyez le commit exact qui a fait bouger l'aiguille"
+          ]
+        }
+      ]
+    },
+    "scans": {
+      "label": "CE QU'IL ANALYSE",
+      "title": "Huit signaux, un score de santé.",
+      "subtitle": "Chaque projet reçoit un score A–F qui agrège ce que les attaquants utilisent réellement contre vous. Plongez dans n'importe quel signal pour les constats sous-jacents, les corrections suggérées et les PR de remédiation générées par IA.",
+      "items": [
+        {
+          "icon": "Boxes",
+          "title": "SCA",
+          "body": "Dépendances vulnérables dans votre lockfile, pondérées par l'accessibilité — pas seulement « CVE présente »."
+        },
+        {
+          "icon": "Code2",
+          "title": "SAST",
+          "body": "Flux de contamination au niveau source depuis les entrées non fiables vers les sinks dangereux, en connaissance de l'AST."
+        },
+        {
+          "icon": "KeyRound",
+          "title": "Secrets",
+          "body": "Clés API, tokens et identifiants codés en dur — sur tout l'historique, pas seulement HEAD."
+        },
+        {
+          "icon": "ScrollText",
+          "title": "Licences",
+          "body": "Contamination GPL, licences incompatibles avec usage commercial, attributions manquantes."
+        },
+        {
+          "icon": "Bug",
+          "title": "CVE",
+          "body": "Triage en direct des nouvelles CVE contre votre arbre de dépendances, avec des POC rejouables."
+        },
+        {
+          "icon": "Crosshair",
+          "title": "Pentest",
+          "body": "Pentest-as-code : enregistrez une chaîne d'exploitation une fois, rejouez-la contre chaque release."
+        },
+        {
+          "icon": "Activity",
+          "title": "Runtime",
+          "body": "Télémétrie production, détection de dérive, kill-switch — Phase IV."
+        },
+        {
+          "icon": "FileCheck2",
+          "title": "Conformité",
+          "body": "SOC 2, ISO 27001, posture de résidence des données régionale — Phase V."
+        }
+      ]
+    },
+    "phases": {
+      "label": "FEUILLE DE ROUTE",
+      "title": "Six phases, une plateforme.",
+      "items": [
+        {
+          "n": "I",
+          "title": "Fondations",
+          "status": "shipping",
+          "body": "Indexeur, recherche, graphe de dépendances, score de santé A–F."
+        },
+        {
+          "n": "II",
+          "title": "Statique",
+          "status": "shipping",
+          "body": "SCA, SAST, scan de secrets, audit de licences — CLI open source."
+        },
+        {
+          "n": "III",
+          "title": "Dynamique",
+          "status": "next",
+          "body": "Pentest-as-code, sondes runtime, replay CVE."
+        },
+        {
+          "n": "IV",
+          "title": "Runtime",
+          "status": "planned",
+          "body": "Télémétrie production, détection de dérive, kill-switch."
+        },
+        {
+          "n": "V",
+          "title": "Conformité",
+          "status": "planned",
+          "body": "SOC 2, ISO 27001, posture de résidence des données régionale."
+        },
+        {
+          "n": "VI",
+          "title": "Fédération",
+          "status": "planned",
+          "body": "Salles d'opérations multi-org pour les équipes sécurité."
+        }
+      ]
+    },
+    "faq": {
+      "label": "FAQ",
+      "title": "Warroom — questions avant de rejoindre la liste d'attente.",
+      "subtitle": "Quand ça sort, en quoi c'est différent, ce que vous pouvez faire aujourd'hui.",
+      "items": [
+        {
+          "q": "Quand Warroom sort-il ?",
+          "a": "Les Phases I et II (Fondations + Statique) sont déjà en bêta privée. La Phase III (Dynamique) est le prochain jalon public — accès anticipé mi-2026. Rejoignez la liste d'attente pour obtenir la CLI OSS et une invitation."
+        },
+        {
+          "q": "En quoi est-ce différent de Snyk, Aikido, GitHub Advanced Security ?",
+          "a": "Deux différences. (1) Un seul score couvrant SCA, SAST, secrets, licences, CVE, pentest et runtime — pas huit outils à corréler vous-même. (2) Pentest-as-code : vous enregistrez une chaîne d'exploitation une fois et la rejouez contre chaque release, de la même façon que Cloud rejoue un flux de navigateur."
+        },
+        {
+          "q": "Puis-je essayer quelque chose aujourd'hui ?",
+          "a": "Oui. `pip install flyto-indexer` vous donne le scanner OSS — recherche, références, analyse d'impact, détection de code mort, analyse de contamination basée sur l'AST. La salle d'opérations hébergée s'ajoute par-dessus à l'arrivée de la Phase III."
+        },
+        {
+          "q": "Mon code source est-il envoyé dans le cloud ?",
+          "a": "Par défaut, non. La CLI s'exécute localement et produit un index local. La salle d'opérations hébergée peut ingérer des constats (pas le source) pour l'agrégation inter-projets ; l'envoi du source complet est optionnel par projet. L'auto-hébergement est une option de la Phase V."
+        },
+        {
+          "q": "Fonctionne-t-il avec des dépôts privés ?",
+          "a": "Oui — la CLI OSS ne se soucie pas de l'emplacement de votre code. La salle d'opérations hébergée prend en charge GitHub, GitLab, Bitbucket et Git auto-hébergé nativement."
+        },
+        {
+          "q": "Puis-je auto-héberger la salle d'opérations ?",
+          "a": "L'auto-hébergement est sur la feuille de route (Phase V, avec la conformité). Le scanner OSS peut être auto-hébergé dès aujourd'hui ; l'interface / orchestrateur hébergé suit."
+        }
+      ]
+    },
+    "cta": {
+      "label": "ACCÈS ANTICIPÉ",
+      "title": "Soyez le premier dans la salle d'opérations.",
+      "body": "La salle d'opérations hébergée est basée sur le navigateur — aucune application à installer. Rejoignez la liste d'attente pour recevoir une invitation à l'ouverture de la Phase III, et récupérez le scanner open source dès aujourd'hui.",
+      "primary": "Rejoindre la liste d'attente",
+      "secondary": "Installer le scanner OSS"
+    },
+    "gallery": {
+      "label": "ET DOUZE DE PLUS",
+      "title": "Chaque panneau qu'une équipe sécurité ouvrira vraiment.",
+      "subtitle": "Au-delà des sept vues principales, Warroom propose un catalogue approfondi d'outils ciblés. Chacun mérite sa place — pas de démo gadget.",
+      "items": {
+        "autofix": {
+          "title": "PR de correction automatique",
+          "body": "Correctifs de remédiation générés par IA qui passent votre propre CI avant d'apparaître comme PR. Le relecteur approuve ; rien ne surprend."
+        },
+        "taintFlow": {
+          "title": "Visualiseur de flux de contamination",
+          "body": "Tracez les entrées utilisateur à travers chaque transformation jusqu'à ce qu'elles atteignent un sink. Inter-fonctions, inter-packages, sensible aux assainisseurs."
+        },
+        "license": {
+          "title": "Conformité des licences",
+          "body": "Contamination GPL, conflits commerciaux, lacunes d'attribution — remontés avant que le service juridique ne demande pourquoi."
+        },
+        "owasp": {
+          "title": "Rapports OWASP",
+          "body": "Cartographiez les constats par rapport à l'OWASP Top 10 et aux classifications CWE. Exportez le tableau que votre auditeur demande."
+        },
+        "queue": {
+          "title": "File de sécurité",
+          "body": "Une vue de triage dimensionnée pour une petite équipe : assigné, en cours, ne sera pas corrigé. Pas une refonte de gestionnaire de tickets — juste l'essentiel."
+        },
+        "malware": {
+          "title": "Détection de malware",
+          "body": "Détectez les typosquats et les versions de dépendances compromises avant que npm install ne les installe dans votre arbre."
+        },
+        "complexity": {
+          "title": "Points chauds de complexité",
+          "body": "Lignes × imbrication × branches × paramètres. Les fonctions statistiquement plus difficiles à relire, classées."
+        },
+        "deadCode": {
+          "title": "Détecteur de code mort",
+          "body": "Symboles sans appelants, fichiers sans imports. Remonte ce que votre IDE vous cachait silencieusement."
+        },
+        "assetMap": {
+          "title": "Inventaire des assets",
+          "body": "Chaque domaine, sous-domaine, page et endpoint que vous possédez — cartographié depuis les artefacts de build, pas un document Notion."
+        },
+        "domainSec": {
+          "title": "Score de sécurité de domaine",
+          "body": "En-têtes, posture TLS, surfaces exposées — pour chaque domaine de votre inventaire."
+        },
+        "duplicate": {
+          "title": "Carte de code dupliqué",
+          "body": "Là où la même logique vit à trois endroits. Candidats au refactoring, classés par fréquence de changement de chaque clone."
+        },
+        "reportBuilder": {
+          "title": "Constructeur de rapports",
+          "body": "Assemblez n'importe quelle combinaison de panneaux en un seul PDF pour le conseil, le client ou l'auditeur — sauvegardé comme modèle récurrent."
+        }
+      }
+    }
+  }
 }
