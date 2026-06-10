@@ -55,6 +55,7 @@ export const productNavGrouped: Record<ProductId, NavGroup[]> = {
       key: 'product',
       items: [
         { key: 'overview', href: '/code' },
+        { key: 'platform', href: '/code/platform' },
         { key: 'security', href: '/code/security' },
         { key: 'pricing',  href: '/code/pricing' },
       ],

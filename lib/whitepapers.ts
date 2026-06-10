@@ -36,6 +36,24 @@ const ENTRIES: Omit<WhitepaperMeta, 'readingMinutes'>[] = [
     blurb:
       'How flyto-engine receives structured analysis from flyto-indexer and stores each dimension as an independent query surface. Taint, SAST, secrets, IaC, complexity, dead code, API drift, bus factor, perf patterns — every dimension addressable without parsing the full profile blob.',
   },
+  {
+    slug: 'mssp-warroom',
+    title: 'The MSSP War-Room: Nine Surfaces, One Closed Loop',
+    blurb:
+      'How Flyto2\'s 戰情室 converges nine independently-usable, individually-closed-loop security surfaces into a single unified score and one operational picture — and why the MSSP / BYO integration model, not breadth, is the differentiator.',
+  },
+  {
+    slug: 'byo-integration',
+    title: 'Bring Your Own Stack: The Integration MSSP Model',
+    blurb:
+      'We don\'t replace the security tools you already own — we integrate them. Bring your scanners, ratings and threat feeds, we ingest and supplement the gaps, then run correlation, scoring, pentest, evidence and red-team across the combined picture in one closed loop.',
+  },
+  {
+    slug: 'security-surfaces',
+    title: 'Nine Security Surfaces in Depth',
+    blurb:
+      'A surface-by-surface walkthrough of the war-room: external attack surface, code intelligence + red-team, MCP security, container/runtime, darkweb, footprint, asset map, pentest and red-team — each independently closed-loop, all sharing one execution substrate, evidence model and scoring lens.',
+  },
 ];
 
 function countMinutes(md: string): number {
