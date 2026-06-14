@@ -38,17 +38,25 @@ function main() {
   }
 
   const routes = ['', ...walkLocaleRoutes(enDir)];
-  let copied = 0;
+  const routeFiles = ['index.html', 'index.txt'];
+  let copiedRoutes = 0;
+  let copiedFiles = 0;
   for (const route of routes) {
-    const sourceFile = path.join(enDir, route, 'index.html');
-    if (!existsSync(sourceFile)) continue;
+    let routeCopied = false;
     const targetDir = route ? path.join(OUT, route) : OUT;
-    const targetFile = path.join(targetDir, 'index.html');
-    mkdirSync(targetDir, { recursive: true });
-    copyFileSync(sourceFile, targetFile);
-    copied++;
+    for (const fileName of routeFiles) {
+      const sourceFile = path.join(enDir, route, fileName);
+      if (!existsSync(sourceFile)) continue;
+      mkdirSync(targetDir, { recursive: true });
+      copyFileSync(sourceFile, path.join(targetDir, fileName));
+      copiedFiles++;
+      routeCopied = true;
+    }
+    if (routeCopied) copiedRoutes++;
   }
-  console.log(`postbuild-redirects: copied ${copied} English routes to bare canonical paths`);
+  console.log(
+    `postbuild-redirects: copied ${copiedFiles} English route files for ${copiedRoutes} bare canonical paths`
+  );
 }
 
 main();
