@@ -23,7 +23,8 @@ const mono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://flyto2.com'),
   title: { default: 'Flyto2', template: '%s — Flyto2' },
-  description: 'Record once, replay forever. Browser automation that runs offline.',
+  description:
+    'Evidence-backed CTEM for attack surface, dark web, code risk, red-team validation, and BYO security integrations.',
   icons: { icon: '/favicon.ico' },
 };
 

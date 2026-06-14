@@ -24,12 +24,17 @@
     "useCases": "Use cases",
     "changelog": "Changelog",
     "security": "Security",
-    "platform": "Platform"
+    "platform": "Platform",
+    "ctem": "CTEM",
+    "attackSurface": "Attack Surface",
+    "darkWeb": "Dark Web",
+    "mssp": "MSSP",
+    "aiSecurity": "AI Security"
   },
   "footer": {
-    "tagline": "Offline-first automation tools, built so your work stays on your machine.",
-    "cloudTagline": "Browser automation. Record once, replay forever.",
-    "warroomTagline": "Application security war room. Closed-loop verification.",
+    "tagline": "Evidence-backed CTEM for attack surface, dark web, code risk, red-team validation, and BYO integrations.",
+    "cloudTagline": "Deterministic execution engine for evidence and replay.",
+    "warroomTagline": "Security war room. Correlate, validate, and act with evidence.",
     "products": "Products",
     "community": "Community",
     "resources": "Resources",
@@ -40,63 +45,63 @@
     "copyright": "© 2026 FLYTO2"
   },
   "home": {
-    "metaTitle": "Offline-first automation tools",
-    "metaDescription": "Flyto2 builds offline-first automation tools. Cloud is no-code browser automation, shipping today. Warroom is the application security war room, pre-launch.",
+    "metaTitle": "Evidence-backed CTEM for attack surface, dark web, and code risk",
+    "metaDescription": "Flyto2 is a security war room that integrates existing ASM, dark web, code security, pentest, and red-team signals into one evidence-backed CTEM workflow.",
     "hero": {
-      "eyebrow": "FLYTO2 · OFFLINE-FIRST AUTOMATION",
-      "title": "Automation that",
-      "titleAccent": "stays on your machine.",
-      "lede": "Flyto2 builds two products on the same offline-first engine. One automates the work you do in a browser. The other audits the security of every line of code you ship.",
-      "reassure": "OPEN SOURCE · NO TELEMETRY · YOURS"
+      "eyebrow": "FLYTO2 · SECURITY WAR ROOM",
+      "title": "Connect your security signals.",
+      "titleAccent": "Act with evidence.",
+      "lede": "Flyto2 is a security war room that integrates existing ASM, dark web, code security, pentest, and red-team signals into one evidence-backed CTEM workflow.",
+      "reassure": "CTEM · ASM / EASM · BYO-FRIENDLY"
     },
     "products": {
-      "label": "TWO PRODUCTS",
-      "title": "Pick the one that solves today's problem.",
-      "subtitle": "Same engine, same philosophy. Each product is built around its own audience, its own page, its own pricing.",
+      "label": "SECURITY-FIRST",
+      "title": "One war room, one deterministic engine underneath.",
+      "subtitle": "Warroom is the primary security surface. Cloud remains the execution substrate for browser automation, evidence capture, and replay.",
       "cloud": {
-        "name": "Cloud",
+        "name": "Execution engine",
         "statusLabel": "SHIPPING",
-        "tagline": "No-code browser automation. Record once, replay forever.",
-        "point1": "Record any browser flow without writing selectors",
-        "point2": "Pause, inspect, edit values mid-run, resume",
-        "point3": "250+ pre-wired modules — CSV, Stripe, Notion, Slack, OpenAI",
-        "cta": "Visit Cloud"
+        "tagline": "Browser automation, YAML recipes, and evidence replay that support security validation workflows.",
+        "point1": "Run deterministic browser and API workflows",
+        "point2": "Capture replayable evidence for audit and verification",
+        "point3": "250+ modules across browser, data, files, cloud, AI, and notifications",
+        "cta": "Explore the engine"
       },
       "warroom": {
         "name": "Warroom",
         "statusLabel": "BETA",
-        "tagline": "Application security war room. SCA, SAST, secrets, license, CVE — one operating picture.",
-        "point1": "A–F health score that rolls every signal up",
-        "point2": "Reachability analysis — fix CVEs that actually run",
-        "point3": "Open-source CLI you can install today, hosted war room next",
-        "cta": "Visit Warroom"
+        "tagline": "Evidence-backed CTEM across ASM, EASM, dark web, code risk, pentest, and red-team signals.",
+        "point1": "Bring the tools and data you already trust",
+        "point2": "Correlate external, internal, and threat signals",
+        "point3": "Validate what matters with replayable evidence",
+        "cta": "Explore CTEM"
       }
     },
     "benefits": {
       "items": [
         {
-          "iconName": "Zap",
-          "metric": "1.2s",
-          "title": "Median run time",
-          "body": "Most workflows finish in under two seconds. Yours runs as fast as you do."
+          "iconName": "Radar",
+          "metric": "ASM",
+          "title": "Attack surface context",
+          "body": "Ingest external exposure and rating signals, then reconcile them against owned assets and code context."
         },
         {
-          "iconName": "ShieldOff",
-          "metric": "0",
-          "title": "Bytes sent home",
-          "body": "Credentials and run history live on your machine. No telemetry, no callbacks."
+          "iconName": "KeyRound",
+          "metric": "BYO",
+          "title": "Bring trusted tools",
+          "body": "Keep the scanners, ratings, feeds, repos, and asset data your team already uses."
+        },
+        {
+          "iconName": "Crosshair",
+          "metric": "L2",
+          "title": "Validation before action",
+          "body": "Promote important paths through controlled pentest and red-team workflows before mobilizing teams."
         },
         {
           "iconName": "Code2",
-          "metric": "MIT",
-          "title": "Open source core",
-          "body": "Read the engine, fork it, ship it. The runtime is on GitHub and PyPI."
-        },
-        {
-          "iconName": "Globe2",
-          "metric": "16",
-          "title": "Languages",
-          "body": "Recorder, runtime, docs and errors — all translated, not just labelled."
+          "metric": "OSS",
+          "title": "Deterministic substrate",
+          "body": "Use the same module engine, YAML recipes, and replay model that power Flyto2 automation."
         }
       ]
     },
@@ -115,37 +120,37 @@
     },
     "features": {
       "label": "WHY FLYTO2",
-      "title": "Built for the work you keep redoing.",
+      "title": "Built for security teams that already have tools.",
       "items": [
         {
-          "icon": "Video",
-          "title": "Record any flow",
-          "body": "Click the recorder, do the task once, hit stop. Flyto2 captures every click, scroll, type and wait."
+          "icon": "Radar",
+          "title": "ASM / EASM correlation",
+          "body": "Connect external attack surface findings with ownership, assets, code, credentials, and validation evidence."
         },
         {
-          "icon": "Pause",
-          "title": "Pause and inspect",
-          "body": "Workflows are not black boxes. Step through, change a value mid-run, resume — like a debugger for daily work."
+          "icon": "KeyRound",
+          "title": "Dark web and credential signals",
+          "body": "Use breach, IOC, actor, and brand-abuse signals as inputs to the same CTEM workflow."
         },
         {
-          "icon": "ShieldOff",
-          "title": "Offline by design",
-          "body": "Runs on your machine. Credentials, scraped data, run history — never sent anywhere, including to us."
+          "icon": "Code2",
+          "title": "Code risk in the same picture",
+          "body": "SCA, SAST, secrets, license, API, and reachability context help explain whether an exposure matters."
         },
         {
-          "icon": "Boxes",
-          "title": "250+ modules",
-          "body": "CSV, Excel, Stripe, Notion, Postgres, Slack, OpenAI — pre-wired so you snap them together instead of writing API plumbing."
+          "icon": "Crosshair",
+          "title": "Pentest validation",
+          "body": "Turn selected findings into controlled, consented validation workflows with replayable evidence."
         },
         {
-          "icon": "GitBranch",
-          "title": "Branch and merge",
-          "body": "if/else, loops, retries, error handlers — the things you'd write in code, only as visual nodes you can read in five seconds."
+          "icon": "Swords",
+          "title": "Red-team simulation",
+          "body": "Chain verified findings into adversary-style exercises that feed back into prioritization."
         },
         {
-          "icon": "Languages",
-          "title": "16 languages",
-          "body": "Recorder, runtime, docs, error messages — all translated. Your operations team uses Flyto2 in their language."
+          "icon": "FileCheck2",
+          "title": "Evidence-backed reporting",
+          "body": "Keep findings, validation status, and remediation context tied to evidence for operators and stakeholders."
         }
       ]
     },
@@ -182,27 +187,27 @@
       ]
     },
     "integrations": {
-      "label": "INTEGRATIONS",
-      "title": "250+ modules out of the box.",
-      "subtitle": "The plumbing is already wired. Drag, drop, configure — never write another \"copy this row from Sheet A to API B\" script.",
-      "andMore": "+ 230 MORE · BUILD YOUR OWN IN PYTHON OR JS"
+      "label": "BYO INTEGRATIONS",
+      "title": "Bring the tools and data you already trust.",
+      "subtitle": "Flyto2 correlates them, validates what matters, and turns findings into evidence-backed action.",
+      "andMore": "SCANNERS · RATINGS · THREAT FEEDS · REPOS · CLOUD · CMDB"
     },
     "stats": {
       "items": [
         {
+          "value": "9",
+          "label": "SECURITY SURFACES",
+          "body": "ASM/EASM, code risk, MCP security, runtime/cloud, dark web, footprint, asset map, pentest, and red-team."
+        },
+        {
           "value": "250+",
-          "label": "MODULES",
-          "body": "Pre-built nodes for CSV, Excel, Stripe, Notion, Slack, AI, SQL — the things you'd otherwise glue together yourself."
+          "label": "EXECUTION MODULES",
+          "body": "Deterministic modules for browser, API, data, file, cloud, and notification workflows."
         },
         {
-          "value": "16",
-          "label": "LANGUAGES",
-          "body": "UI, recorder, runtime, docs and error messages — translated, not just labelled."
-        },
-        {
-          "value": "100%",
-          "label": "ON YOUR MACHINE",
-          "body": "Your recordings, credentials, run history. No cloud unless you opt in. No telemetry, ever."
+          "value": "BYO",
+          "label": "INTEGRATION MODEL",
+          "body": "Use existing scanners, ratings, feeds, repos, cloud exports, and asset inventories as first-class inputs."
         }
       ]
     },
@@ -215,37 +220,37 @@
     },
     "faq": {
       "label": "FAQ",
-      "title": "Common questions, answered up front.",
-      "subtitle": "If you're evaluating Flyto2 for the team, these are the things people ask first.",
+      "title": "Security positioning, stated plainly.",
+      "subtitle": "If you are evaluating Flyto2 alongside existing security tools, these are the first questions.",
       "items": [
         {
-          "q": "Is Flyto2 really free and open source?",
-          "a": "Yes. The execution engine (`flyto-core`) is MIT-licensed on GitHub. You can install it from PyPI today and run flows without ever creating an account. The hosted cloud is a paid option layered on top — never a requirement."
+          "q": "Is Flyto2 trying to replace our scanners or rating tools?",
+          "a": "No. Flyto2 complements and integrates existing security tools. Bring the scanners, ratings, feeds, repos, and asset data you already trust; Flyto2 correlates them and helps validate what matters."
         },
         {
-          "q": "How is this different from Zapier or Make?",
-          "a": "Zapier and Make connect SaaS APIs in the cloud. Flyto2 records and replays the actual browser — including sites without a public API — and runs it on your own machine. If your bank, ERP or vendor portal isn't on Zapier's catalog, that's exactly the gap Flyto2 fills."
+          "q": "How does Flyto2 fit a CTEM program?",
+          "a": "Flyto2 keeps scoping, discovery, prioritization, validation, and mobilization in one evidence-backed workflow. External findings, code risk, leaked credentials, asset ownership, pentest results, and red-team evidence stay connected."
         },
         {
-          "q": "What happens when the website I'm automating changes?",
-          "a": "Flyto2 records semantic actions (\"click the Login button\") rather than fragile CSS selectors. When a site re-skins itself, most flows keep running. When something does break, you pause, fix the one step, and resume — you don't rewrite the whole flow."
+          "q": "Can Flyto2 work with Bitsight?",
+          "a": "For teams that already use Bitsight or similar external-rating tools, Flyto2 can ingest those signals, correlate them with code, assets, dark web, and validation evidence, and help security teams act on the combined picture."
         },
         {
-          "q": "Can my team share workflows?",
-          "a": "Yes. Workflows are plain files you can commit to git, share via the in-app Marketplace, or hand to a colleague over Slack. Run history stays local; only the workflow definition travels."
+          "q": "What is the BYO model?",
+          "a": "Bring the tools and data you already trust. Flyto2 correlates them, validates what matters, and turns findings into evidence-backed action. The value is integration and closed-loop verification, not forcing a new scanner into every slot."
         },
         {
-          "q": "What does it cost?",
-          "a": "The desktop app and the open-source engine are free for individual use. Pro and Team tiers add hosted scheduling, shared marketplaces and priority support — pricing is on the Cloud page."
+          "q": "Where does Cloud automation fit now?",
+          "a": "Cloud remains the deterministic execution substrate: browser automation, modules, YAML recipes, and evidence/replay. The public positioning is security-first, with automation supporting validation and evidence workflows."
         }
       ]
     },
     "cta": {
-      "label": "EXPLORE THE PLATFORM",
-      "title": "Two products. One philosophy.",
-      "body": "Cloud is shipping today. Warroom is on the way. Both share the offline-first engine — pick the one that fits today's problem.",
-      "primary": "Visit Cloud",
-      "secondary": "Visit Warroom"
+      "label": "START WITH THE SECURITY LOOP",
+      "title": "Connect your signals. Validate what matters.",
+      "body": "Explore the CTEM workflow or the MSSP-ready BYO integration model.",
+      "primary": "Explore CTEM",
+      "secondary": "MSSP platform"
     }
   },
   "cloud": {
@@ -1123,13 +1128,13 @@
   },
   "code": {
     "metaTitle": "Warroom — Application security war room",
-    "metaDescription": "SCA, SAST, secrets, license, CVE, pentest, runtime — one operating picture for your codebase. Pre-launch.",
+    "metaDescription": "Evidence-backed security war room for code risk, attack surface, pentest validation, and BYO security signals.",
     "hero": {
-      "eyebrow": "02 / CODE",
+      "eyebrow": "02 / WARROOM",
       "status": "BETA",
       "title": "One war room.",
-      "titleAccent": "Every angle of attack.",
-      "lede": "SCA, SAST, secret detection, license audit, CVE triage, pentest workflows, runtime telemetry. Warroom is the operating picture for the security of every line of code you ship.",
+      "titleAccent": "Signals with evidence.",
+      "lede": "Correlate code risk, external exposure, dark web, pentest, and red-team signals in one evidence-backed security workflow. Flyto2 works alongside the scanners and feeds your team already trusts.",
       "ctaPrimary": "Join the waitlist",
       "ctaSecondary": "Try the open-source CLI",
       "ctaBetaBadge": "Beta",
@@ -1138,7 +1143,7 @@
     "closedLoop": {
       "label": "WHAT MAKES IT DIFFERENT",
       "title": "Closed-loop verification.",
-      "subtitle": "Every other security tool stops at the alert. Warroom turns each finding into a YAML pentest, runs it against your staging in a real browser, and reports a verdict — exploit, sanitised, or unreachable.",
+      "subtitle": "Alerts are useful inputs, but action needs validation. Warroom can turn selected findings into YAML pentest workflows, run them against consented staging, and report a verdict — exploitable, sanitized, or unreachable.",
       "find": {
         "title": "Find",
         "body": "SCA, SAST, secrets, license, IaC. Same scan parses your code into call graphs and architecture maps.",
@@ -1194,8 +1199,8 @@
             "label": "Pentest playbooks"
           },
           {
-            "value": "100%",
-            "label": "Replayable nightly"
+            "value": "Nightly",
+            "label": "Replay cadence"
           }
         ],
         "chain": [
@@ -1489,22 +1494,22 @@
       }
     },
     "platform": {
-      "metaTitle": "Warroom Platform & MSSP — bring your own tools, we run the closed loop",
-      "metaDescription": "An MSSP war-room that integrates the security tools you already own, supplements the gaps, then runs correlation, scoring, pentest, evidence and red-team across nine surfaces in one closed loop.",
+      "metaTitle": "MSSP-ready security war room — BYO tools, evidence-backed action",
+      "metaDescription": "A BYO-friendly security war room that integrates existing tools, supplements gaps, and runs correlation, validation, evidence, and red-team workflows across nine surfaces.",
       "hero": {
         "eyebrow": "MSSP WAR-ROOM",
         "status": "Beta",
-        "title": "We don't replace your stack.",
-        "titleAccent": "We integrate it.",
-        "lede": "Flyto2 Warroom is an MSSP war-room (戰情室) that converges nine security surfaces into one unified score. If you already pay for an attack-surface rating, a darkweb feed or a scanner, you don't re-buy a platform — you bring your data, we ingest it, we supplement what you lack, then we run correlation and scoring on the combined picture: all the way through pentest, evidence collection and red-team simulation, in one closed loop.",
+        "title": "Bring your trusted stack.",
+        "titleAccent": "We correlate it.",
+        "lede": "Flyto2 Warroom is a BYO-friendly security war room that complements and integrates existing tools. Bring the scanners, ratings, feeds, cloud accounts, repos, and asset data you already trust; Flyto2 correlates them, validates what matters, and turns findings into evidence-backed action.",
         "ctaPrimary": "Read the MSSP war-room whitepaper",
         "ctaSecondary": "BYO integration model",
         "ctaDocs": "Warroom docs"
       },
       "thesis": {
         "label": "THE INTEGRATION THESIS",
-        "title": "We charge for the integration and the closed loop — not for re-running an algorithm you already paid for.",
-        "body": "Nine surfaces are worth more together than apart. Each one is independently usable and individually closed-loop, but the structural value is the correlation across them: one asset map, one unified score, one operational picture. That is what being an MSSP actually means — we own the integration, the evidence chain and the simulation, and we ride the same deterministic engine that powers Flyto2 automation to do it."
+        "title": "The value is integration, correlation, and evidence — not forcing another scanner into every slot.",
+        "body": "Nine surfaces are worth more together than apart. Each one is independently usable and individually closed-loop, but the structural value is the correlation across them: one asset map, one operational picture, and evidence for the findings that matter. That is what a security war room should provide."
       },
       "surfaces": {
         "label": "NINE SURFACES",
@@ -1561,7 +1566,7 @@
       "byo": {
         "label": "THE BYO ENTRY FLOW",
         "title": "One big closed loop, starting from what you already own.",
-        "subtitle": "The first thing you do on entry is integrate every asset and tool you already have. Then we ingest external data, supplement the gaps, and run the algorithms across the combined picture — through pentest, evidence and red-team.",
+        "subtitle": "The first thing you do on entry is integrate every asset and tool you already have. Then we ingest external data, supplement gaps, and run correlation across the combined picture — through pentest, evidence, and red-team validation when needed.",
         "steps": [
           {
             "n": "01",
@@ -1576,7 +1581,7 @@
           {
             "n": "03",
             "title": "Supplement",
-            "body": "Wherever you have a gap, we fill it with our own deterministic surfaces, so the picture is complete without forcing you to abandon what works."
+            "body": "Wherever you have a gap, we supplement it with deterministic surfaces while keeping source coverage and assumptions visible."
           },
           {
             "n": "04",
@@ -1623,7 +1628,7 @@
       "cta": {
         "label": "START THE LOOP",
         "title": "Bring what you have. We'll close the loop.",
-        "body": "Read how the MSSP war-room and the bring-your-own integration model work, or dive into the nine security surfaces in detail.",
+        "body": "Read how the MSSP-ready war room and the bring-your-own integration model work, or dive into the nine security surfaces in detail.",
         "primary": "MSSP war-room whitepaper",
         "secondary": "BYO integration model"
       }

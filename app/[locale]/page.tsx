@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Hero } from '@/components/sections/Hero';
 import { ProductPicker } from '@/components/sections/ProductPicker';
-import { VideoDemo } from '@/components/sections/VideoDemo';
 import { CoreBenefits } from '@/components/sections/CoreBenefits';
 import { HomeFeatures } from '@/components/sections/HomeFeatures';
 import { Stats } from '@/components/sections/Stats';
@@ -33,20 +32,53 @@ export default async function HomePage({
   const { locale } = await params;
   setRequestLocale(locale);
 
+  const homeJsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Organization',
+        '@id': 'https://flyto2.com/#organization',
+        name: 'Flyto2',
+        url: 'https://flyto2.com',
+      },
+      {
+        '@type': 'WebSite',
+        '@id': 'https://flyto2.com/#website',
+        name: 'Flyto2',
+        url: 'https://flyto2.com',
+        publisher: { '@id': 'https://flyto2.com/#organization' },
+      },
+      {
+        '@type': 'SoftwareApplication',
+        '@id': 'https://flyto2.com/#software',
+        name: 'Flyto2',
+        applicationCategory: 'SecurityApplication',
+        operatingSystem: 'Web',
+        url: 'https://flyto2.com',
+        description:
+          'Flyto2 is a security war room that integrates existing ASM, dark web, code security, pentest, and red-team signals into one evidence-backed CTEM workflow.',
+        publisher: { '@id': 'https://flyto2.com/#organization' },
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeJsonLd) }}
+      />
       <Hero />
       <ProductPicker />
-      <VideoDemo />
       <CoreBenefits />
       <HomeFeatures />
       <Stats />
       <Integrations />
       <FAQ namespace="home.faq" />
       <CTASection
-        primaryHref="/cloud"
-        secondaryHref="/code"
-        primaryIcon="Download"
+        primaryHref="/ctem"
+        secondaryHref="/mssp-platform"
+        primaryIcon="BookOpen"
         secondaryIcon="CodeIcon"
       />
     </>

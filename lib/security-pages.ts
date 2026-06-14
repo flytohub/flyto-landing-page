@@ -1,0 +1,334 @@
+export interface SecurityPageSection {
+  title: string;
+  body: string;
+  bullets: string[];
+}
+
+export interface SecurityPage {
+  slug: string;
+  metaTitle: string;
+  metaDescription: string;
+  eyebrow: string;
+  title: string;
+  lede: string;
+  image: string;
+  imageAlt: string;
+  primaryCta: { label: string; href: string };
+  secondaryCta: { label: string; href: string };
+  proofPoints: string[];
+  sections: SecurityPageSection[];
+  related: { label: string; href: string }[];
+}
+
+export const securityPages = {
+  'attack-surface-management': {
+    slug: 'attack-surface-management',
+    metaTitle: 'Attack Surface Management Tools for Evidence-Backed CTEM',
+    metaDescription:
+      'Flyto2 integrates ASM, code, dark web, pentest, and red-team signals into an evidence-backed CTEM workflow.',
+    eyebrow: 'ATTACK SURFACE MANAGEMENT',
+    title: 'Attack surface management that connects exposure to evidence.',
+    lede:
+      'Flyto2 complements the attack surface tools you already trust. Bring existing ASM, EASM, scanner, rating, and asset data; Flyto2 correlates it with code, dark web, pentest, and red-team evidence so teams can act on the combined picture.',
+    image: '/assets/img/warroom/26-asset-map.png',
+    imageAlt: 'Flyto2 asset map showing domains, services, and ownership context',
+    primaryCta: { label: 'Read the CTEM workflow', href: '/ctem' },
+    secondaryCta: { label: 'Open ASM docs', href: 'https://docs.flyto2.com/warroom/surfaces/attack-surface' },
+    proofPoints: [
+      'BYO-friendly asset and exposure ingestion',
+      'External findings correlated with owned assets and code context',
+      'Pentest and red-team validation when a path needs proof',
+    ],
+    sections: [
+      {
+        title: 'Bring your existing ASM data',
+        body:
+          'Flyto2 is not positioned as a rip-and-replace scanner. It accepts the tools, exports, and feeds your team already uses, then normalizes them into an ownership-gated asset map.',
+        bullets: ['External ratings and scanner output', 'Domain and service inventory', 'Cloud, repo, and CMDB context'],
+      },
+      {
+        title: 'Correlate exposure with what matters',
+        body:
+          'An exposed service is more useful when it is connected to the repository, dependency, credential, or threat signal behind it. Flyto2 keeps that context in one evidence-backed workflow.',
+        bullets: ['Asset-to-repo mapping', 'Code and dependency risk context', 'Dark web and leaked-credential joins'],
+      },
+      {
+        title: 'Validate before you mobilize',
+        body:
+          'When a path matters, Flyto2 can route it into consented pentest and red-team validation so remediation work is based on evidence, not just an alert count.',
+        bullets: ['Closed-loop verification', 'Replayable evidence packs', 'Actionable owner-facing remediation context'],
+      },
+    ],
+    related: [
+      { label: 'External attack surface management', href: '/external-attack-surface-management' },
+      { label: 'BYO integration model', href: '/mssp-platform' },
+      { label: 'Attack surface guide', href: 'https://blog.flyto2.com/posts/attack-surface-management-guide' },
+    ],
+  },
+  'external-attack-surface-management': {
+    slug: 'external-attack-surface-management',
+    metaTitle: 'External Attack Surface Management Platform for CTEM',
+    metaDescription:
+      'Flyto2 helps teams correlate EASM findings with assets, code risk, dark web signals, and validation evidence.',
+    eyebrow: 'EASM',
+    title: 'External attack surface management for teams that need correlation.',
+    lede:
+      'Flyto2 works alongside external attack surface management tools by ingesting discovered domains, services, certificates, exposed paths, and external-rating signals, then connecting them to code, asset ownership, and validation evidence.',
+    image: '/assets/img/warroom/23-domain-security.png',
+    imageAlt: 'Flyto2 domain security view with external posture findings',
+    primaryCta: { label: 'See attack surface docs', href: 'https://docs.flyto2.com/warroom/surfaces/attack-surface' },
+    secondaryCta: { label: 'Read the EASM guide', href: 'https://blog.flyto2.com/posts/what-is-easm-external-attack-surface-management' },
+    proofPoints: [
+      'Outside-in discovery without losing ownership context',
+      'External posture tied to asset and repository evidence',
+      'CTEM prioritization instead of isolated exports',
+    ],
+    sections: [
+      {
+        title: 'Start from the outside, then reconcile',
+        body:
+          'EASM discovers what attackers can see. Flyto2 adds the ownership and business context needed to decide what belongs in scope and what should move first.',
+        bullets: ['Domains, subdomains, certificates, ports', 'Attribution and ownership gates', 'Asset-map reconciliation'],
+      },
+      {
+        title: 'Use existing external-rating signals',
+        body:
+          'For teams that already use external-rating or EASM tools, Flyto2 can ingest those signals and correlate them with code, assets, dark web, and validation evidence.',
+        bullets: ['Works alongside existing EASM tools', 'Vendor signal as input, not a replacement claim', 'Combined operational picture'],
+      },
+      {
+        title: 'Feed CTEM instead of a static list',
+        body:
+          'External findings should feed a loop: scope, discover, prioritize, validate, and mobilize. Flyto2 keeps those stages connected in one war room.',
+        bullets: ['Prioritized exposure workflows', 'Pentest target generation', 'Evidence-backed mobilization'],
+      },
+    ],
+    related: [
+      { label: 'What is EASM?', href: 'https://blog.flyto2.com/posts/what-is-easm-external-attack-surface-management' },
+      { label: 'CTEM', href: '/ctem' },
+      { label: 'Bitsight alternative', href: '/bitsight-alternative' },
+    ],
+  },
+  ctem: {
+    slug: 'ctem',
+    metaTitle: 'Evidence-Backed CTEM for Attack Surface, Dark Web, and Code Risk',
+    metaDescription:
+      'Flyto2 is a security war room that integrates ASM, dark web, code security, pentest, and red-team signals into one evidence-backed CTEM workflow.',
+    eyebrow: 'CONTINUOUS THREAT EXPOSURE MANAGEMENT',
+    title: 'Flyto2 — Evidence-backed CTEM for attack surface, dark web, and code risk',
+    lede:
+      'Flyto2 is a security war room that integrates existing ASM, dark web, code security, pentest, and red-team signals into one evidence-backed CTEM workflow.',
+    image: '/assets/img/warroom/21-scoring-breakdown.png',
+    imageAlt: 'Flyto2 scoring breakdown for CTEM security surfaces',
+    primaryCta: { label: 'Read CTEM guide', href: 'https://blog.flyto2.com/posts/what-is-ctem-continuous-threat-exposure-management' },
+    secondaryCta: { label: 'Open Warroom docs', href: 'https://docs.flyto2.com/warroom/' },
+    proofPoints: [
+      'Scope, discover, prioritize, validate, and mobilize in one loop',
+      'Evidence trails for findings and validation work',
+      'BYO-friendly integrations for existing security tools',
+    ],
+    sections: [
+      {
+        title: 'A CTEM workflow, not another isolated dashboard',
+        body:
+          'CTEM only works when discovery, prioritization, validation, and action stay connected. Flyto2 turns those stages into one workflow that can consume your existing security data.',
+        bullets: ['External surface and asset inventory', 'Code and dependency context', 'Validation through pentest and red-team loops'],
+      },
+      {
+        title: 'Prioritize with context',
+        body:
+          'Flyto2 correlates findings across assets, code, credentials, and threat signals so prioritization is based on reachability and impact rather than raw volume.',
+        bullets: ['Owned asset context', 'Code reachability context', 'Dark web and IOC context'],
+      },
+      {
+        title: 'Act with evidence',
+        body:
+          'Findings can carry replayable evidence, validation status, and remediation context so security and engineering teams share the same facts.',
+        bullets: ['Evidence-backed tickets and reports', 'Closed-loop verification', 'Regression-friendly replay'],
+      },
+    ],
+    related: [
+      { label: 'Attack surface management', href: '/attack-surface-management' },
+      { label: 'Dark web monitoring', href: '/dark-web-monitoring' },
+      { label: 'Closed-loop docs', href: 'https://docs.flyto2.com/warroom/closed-loop' },
+    ],
+  },
+  'dark-web-monitoring': {
+    slug: 'dark-web-monitoring',
+    metaTitle: 'Dark Web Monitoring Service for Credential and Threat Signal Correlation',
+    metaDescription:
+      'Flyto2 correlates dark web monitoring signals with assets, code, credentials, attack surface, and validation evidence.',
+    eyebrow: 'DARK WEB MONITORING',
+    title: 'Dark web monitoring connected to the rest of your security picture.',
+    lede:
+      'Bring the dark web, breach, and threat-intel feeds you already trust. Flyto2 correlates leaked credentials, IOCs, actor context, and brand abuse with owned assets, code risk, and validation workflows.',
+    image: '/assets/img/warroom/19-malware-detection.png',
+    imageAlt: 'Flyto2 threat and malware detection view',
+    primaryCta: { label: 'Read dark web guide', href: 'https://blog.flyto2.com/posts/darkweb-monitoring-explained' },
+    secondaryCta: { label: 'Open dark web docs', href: 'https://docs.flyto2.com/warroom/surfaces/darkweb-threat-intel' },
+    proofPoints: [
+      'Leaked credentials tied to domains and assets',
+      'IOC and actor context correlated with exposure',
+      'BYO threat feeds with supplemental coverage where needed',
+    ],
+    sections: [
+      {
+        title: 'Credential monitoring with ownership context',
+        body:
+          'A leaked credential matters most when it can be tied to an active domain, identity, or service. Flyto2 keeps those relationships visible instead of leaving leaks in a silo.',
+        bullets: ['Domain and email matching', 'Asset-map joins', 'Footprint seeding from confirmed signals'],
+      },
+      {
+        title: 'Threat intelligence as operational input',
+        body:
+          'Threat actors, IOCs, ransomware activity, and brand abuse become inputs to CTEM prioritization, not standalone headlines.',
+        bullets: ['IOC lookup', 'Actor and malware context', 'Brand impersonation tracking'],
+      },
+      {
+        title: 'Bring the feed you already trust',
+        body:
+          'If you already pay for a breach-data or threat-intel provider, Flyto2 can use that data as a first-class input and supplement gaps where needed.',
+        bullets: ['Feed ingestion', 'Coverage visibility', 'Correlation over the combined picture'],
+      },
+    ],
+    related: [
+      { label: 'Dark web monitoring explained', href: 'https://blog.flyto2.com/posts/darkweb-monitoring-explained' },
+      { label: 'BYO integration', href: '/mssp-platform' },
+      { label: 'CTEM', href: '/ctem' },
+    ],
+  },
+  'mssp-platform': {
+    slug: 'mssp-platform',
+    metaTitle: 'MSSP-Ready Security War Room with BYO Integrations',
+    metaDescription:
+      'Flyto2 is a BYO-friendly, MSSP-ready security war room that correlates existing tools and turns findings into evidence-backed action.',
+    eyebrow: 'MSSP / BYO PLATFORM',
+    title: 'Bring the tools and data you already trust.',
+    lede:
+      'Flyto2 correlates them, validates what matters, and turns findings into evidence-backed action. The goal is not to replace every tool; it is to make existing signals useful together.',
+    image: '/assets/img/warroom/28-reports-builder.png',
+    imageAlt: 'Flyto2 report builder for evidence-backed security workflows',
+    primaryCta: { label: 'Read BYO docs', href: 'https://docs.flyto2.com/warroom/byo-integration' },
+    secondaryCta: { label: 'Read MSSP overview', href: 'https://docs.flyto2.com/warroom/mssp-overview' },
+    proofPoints: [
+      'Built for teams and service providers with existing toolchains',
+      'Ingest, supplement, correlate, validate, and report',
+      'Evidence-backed outputs for customers, boards, and engineering teams',
+    ],
+    sections: [
+      {
+        title: 'Integrate first',
+        body:
+          'The first move is to connect the assets, feeds, scanners, repos, and cloud posture data your team already uses.',
+        bullets: ['Repositories and CI outputs', 'Domains and asset inventories', 'External feeds and scanner exports'],
+      },
+      {
+        title: 'Supplement the gaps',
+        body:
+          'Flyto2 can add deterministic discovery and validation where your existing stack has coverage gaps, while keeping those gaps visible.',
+        bullets: ['Attack surface discovery', 'Threat feed supplementation', 'Pentest and red-team validation'],
+      },
+      {
+        title: 'Package evidence-backed action',
+        body:
+          'MSSP workflows need more than alerts. Flyto2 connects findings to owners, evidence, reports, and follow-up validation.',
+        bullets: ['Customer-ready reports', 'Replayable evidence', 'Operational views for remediation'],
+      },
+    ],
+    related: [
+      { label: 'BYO Integration Guide', href: 'https://docs.flyto2.com/warroom/byo-integration' },
+      { label: 'MSSP overview', href: 'https://docs.flyto2.com/warroom/mssp-overview' },
+      { label: 'How to choose an MSSP', href: 'https://blog.flyto2.com/posts/how-to-choose-an-mssp' },
+    ],
+  },
+  'ai-security': {
+    slug: 'ai-security',
+    metaTitle: 'AI Security Platform for Agent, MCP, Code, and Exposure Risk',
+    metaDescription:
+      'Flyto2 helps teams correlate AI security, MCP security, code risk, attack surface, and validation evidence in one security war room.',
+    eyebrow: 'AI SECURITY PLATFORM',
+    title: 'AI security posture needs code, tools, and evidence in the same room.',
+    lede:
+      'Flyto2 helps security teams reason about agent-native risk by correlating MCP/tool surfaces, code intelligence, cloud and container posture, attack surface, and evidence-backed validation.',
+    image: '/assets/img/warroom/15-api-routes.png',
+    imageAlt: 'Flyto2 API route inventory used for agent and application security review',
+    primaryCta: { label: 'Read AI security guide', href: 'https://blog.flyto2.com/posts/ai-security-platform-guide' },
+    secondaryCta: { label: 'Open MCP security docs', href: 'https://docs.flyto2.com/warroom/surfaces/mcp-security' },
+    proofPoints: [
+      'MCP and tool-surface posture alongside code risk',
+      'Agent-accessible APIs tied to ownership and auth context',
+      'Validation workflows for high-impact findings',
+    ],
+    sections: [
+      {
+        title: 'Map what agents and tools can touch',
+        body:
+          'AI security is partly an access and integration problem. Flyto2 surfaces MCP servers, tool routes, APIs, and code paths so teams can see what an agent-native stack exposes.',
+        bullets: ['MCP server posture', 'API and route inventory', 'Auth and ownership context'],
+      },
+      {
+        title: 'Connect AI risk to application risk',
+        body:
+          'Agent workflows still land on code, credentials, cloud resources, and external services. Flyto2 keeps those layers connected in one security workflow.',
+        bullets: ['Code intelligence', 'Secrets and dependency risk', 'Cloud and container posture'],
+      },
+      {
+        title: 'Validate before escalation',
+        body:
+          'When a risky tool or code path matters, Flyto2 can route it into controlled verification and evidence capture.',
+        bullets: ['Closed-loop verification', 'Replayable evidence', 'Owner-facing remediation context'],
+      },
+    ],
+    related: [
+      { label: 'MCP security docs', href: 'https://docs.flyto2.com/warroom/surfaces/mcp-security' },
+      { label: 'Code risk', href: '/code/security' },
+      { label: 'AI security platform guide', href: 'https://blog.flyto2.com/posts/ai-security-platform-guide' },
+    ],
+  },
+  'bitsight-alternative': {
+    slug: 'bitsight-alternative',
+    metaTitle: 'Bitsight Alternatives: Correlate External Ratings with CTEM Evidence',
+    metaDescription:
+      'For teams that use Bitsight or similar external-rating tools, Flyto2 can ingest those signals and correlate them with code, assets, dark web, and validation evidence.',
+    eyebrow: 'BITSIGHT ALTERNATIVE',
+    title: 'A CTEM war room that can work alongside Bitsight signals.',
+    lede:
+      'For teams that already use Bitsight or similar external-rating tools, Flyto2 can ingest those signals, correlate them with code, assets, dark web, and validation evidence, and help security teams act on the combined picture.',
+    image: '/assets/img/warroom/23-domain-security.png',
+    imageAlt: 'Flyto2 external posture view for correlating rating and attack-surface signals',
+    primaryCta: { label: 'Read comparison guide', href: 'https://blog.flyto2.com/posts/bitsight-alternatives' },
+    secondaryCta: { label: 'Open BYO docs', href: 'https://docs.flyto2.com/warroom/byo-integration' },
+    proofPoints: [
+      'Complements external-rating workflows',
+      'Uses rating signals as inputs to CTEM correlation',
+      'Connects external posture with assets, code, dark web, and validation evidence',
+    ],
+    sections: [
+      {
+        title: 'Use external ratings as inputs',
+        body:
+          'Flyto2 treats Bitsight and similar external-rating data as useful inputs. It is a security war room that can consume those signals and connect them to operational security workflows.',
+        bullets: ['External-rating signal ingest', 'Asset and ownership reconciliation', 'Combined CTEM prioritization'],
+      },
+      {
+        title: 'Correlate with internal context',
+        body:
+          'External posture becomes more actionable when linked to repositories, dependencies, leaked credentials, cloud posture, and validation results.',
+        bullets: ['Code and asset mapping', 'Dark web and threat-intel joins', 'Pentest validation paths'],
+      },
+      {
+        title: 'Act on the combined picture',
+        body:
+          'Flyto2 helps teams move from rating observations to owner-facing action with evidence and follow-up validation.',
+        bullets: ['Evidence-backed remediation', 'Closed-loop verification', 'MSSP-ready reporting'],
+      },
+    ],
+    related: [
+      { label: 'Bitsight alternatives guide', href: 'https://blog.flyto2.com/posts/bitsight-alternatives' },
+      { label: 'BYO integration', href: 'https://docs.flyto2.com/warroom/byo-integration' },
+      { label: 'External attack surface management', href: '/external-attack-surface-management' },
+    ],
+  },
+} satisfies Record<string, SecurityPage>;
+
+export type SecurityPageSlug = keyof typeof securityPages;

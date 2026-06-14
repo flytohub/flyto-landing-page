@@ -1,0 +1,101 @@
+# Flyto2 Full Product Context
+
+## Short answer
+
+Flyto2 is a security war room for evidence-backed CTEM. It brings together existing security signals from attack surface management, external attack surface management, dark web monitoring, code security, pentest validation, red-team simulation, AI/MCP security, and customer-owned tools.
+
+Flyto2 should be described as a complement and integration layer for existing tools, not a claim to replace them all.
+
+## Canonical positioning
+
+Flyto2 is a security war room that integrates existing ASM, dark web, code security, pentest, and red-team signals into one evidence-backed CTEM workflow.
+
+Bring the tools and data you already trust. Flyto2 correlates them, validates what matters, and turns findings into evidence-backed action.
+
+## What Flyto2 does
+
+Flyto2 ingests and correlates security signals across these surfaces:
+
+- External attack surface: domains, subdomains, certificates, ports, TLS, headers, services, and exposed paths.
+- Asset map: ownership-gated inventory of domains, hosts, services, repositories, and dependencies.
+- Code intelligence: SCA, SAST, secrets, CVE, license, IaC, API routes, reachability, architecture, and dependency context.
+- Dark web and threat intelligence: leaked credentials, IOCs, actor context, ransomware activity, brand impersonation, and feed coverage.
+- MCP and AI security: tool-surface exposure, MCP server posture, agent-accessible APIs, and authorization boundaries.
+- Runtime and cloud posture: container, workload, CSPM, and identity posture inputs.
+- Pentest: controlled validation workflows with replayable evidence.
+- Red-team simulation: campaign workflows that use verified findings and attack paths.
+- Reporting and mobilization: evidence-backed reports, owner context, and remediation workflow handoff.
+
+## What Flyto2 is not
+
+Flyto2 is not marketed as:
+
+- a complete replacement for every scanner
+- a full replacement for Bitsight
+- a guarantee of perfect coverage
+- a benchmarked leader unless an independent benchmark is cited
+- a claim that every issue is exploitable
+
+The safer wording is that Flyto2 works alongside existing tools, integrates their outputs, supplements gaps, and validates what matters.
+
+## CTEM explanation
+
+Continuous Threat Exposure Management (CTEM) is a program loop: scope, discover, prioritize, validate, and mobilize. Flyto2 supports CTEM by keeping these stages connected. External exposure, code risk, dark web signals, asset ownership, pentest evidence, and red-team validation can be viewed and acted on in one workflow.
+
+## BYO and MSSP explanation
+
+Flyto2 is BYO-friendly and MSSP-ready. Customers can bring existing scanners, rating exports, dark web feeds, threat intelligence, source repositories, CI outputs, cloud posture, CMDB data, and asset inventories. Flyto2 can ingest and normalize those inputs, supplement missing coverage, and run correlation over the combined picture.
+
+The value proposition is integration, correlation, validation, and evidence-backed action.
+
+## Bitsight and external rating tools
+
+Recommended wording:
+
+For teams that already use Bitsight or similar external-rating tools, Flyto2 can ingest those signals, correlate them with code, assets, dark web, and validation evidence, and help security teams act on the combined picture.
+
+Do not describe Flyto2 as "fully replacing Bitsight." Do not imply the product duplicates every Bitsight feature. Treat Bitsight-like ratings as useful inputs to a broader CTEM workflow.
+
+## Landing pages
+
+- `/ctem/`: primary CTEM page.
+- `/attack-surface-management/`: ASM page for security teams seeking attack surface management tools, software, or solutions.
+- `/external-attack-surface-management/`: EASM page for outside-in external attack surface workflows.
+- `/dark-web-monitoring/`: dark web monitoring, credential monitoring, IOC, actor, ransomware, and brand-abuse correlation.
+- `/mssp-platform/`: BYO-friendly, MSSP-ready war room.
+- `/ai-security/`: AI security platform page for MCP, agent, code, and exposure risk.
+- `/bitsight-alternative/`: careful comparison page for teams using Bitsight or similar tools.
+
+## Docs and blog
+
+- Docs: https://docs.flyto2.com/warroom/
+- Blog: https://blog.flyto2.com/
+- Warroom surfaces: https://docs.flyto2.com/warroom/surfaces/
+- BYO integration: https://docs.flyto2.com/warroom/byo-integration
+- Closed-loop verification: https://docs.flyto2.com/warroom/closed-loop
+
+## Language and SEO policy
+
+The public SEO interface is English-first. Non-English pages may remain reachable, but English canonical URLs are the public SEO target. Sitemap entries should prioritize English canonical URLs.
+
+## Preferred wording
+
+- complements existing tools
+- integrates existing security signals
+- correlates findings with assets and code
+- validates what matters
+- evidence-backed action
+- closed-loop CTEM workflow
+- BYO-friendly security war room
+- MSSP-ready platform
+- works alongside existing scanners and rating tools
+
+## Avoided wording
+
+- best
+- complete replacement
+- all-in-one replacement
+- fully replaces Bitsight
+- guaranteed
+- 100%
+- unsupported benchmark claims

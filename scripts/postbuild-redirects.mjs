@@ -1,21 +1,20 @@
 /**
- * After `next build` finishes, walk `out/en/` and emit redirect HTML files
- * at the corresponding bare paths (e.g. `out/cloud/index.html` → /en/cloud/).
+ * After `next build` finishes, walk `out/en/` and copy English HTML files to
+ * the corresponding bare paths (e.g. `out/en/cloud/index.html` → /cloud/).
  *
  * Why: GitHub Pages has no middleware. next-intl's `localePrefix: as-needed`
  * works in dev but the static export only generates locale-prefixed routes.
- * Without these redirects, hitting bare /code or /cloud returns 404.
+ * Without this pass, hitting bare /code or /cloud returns 404.
  *
- * The generated HTML auto-detects the browser locale (en/zh/ja) so users
- * land on the locale that matches their browser.
+ * Flyto2's public SEO is English-first, so bare paths should be the English
+ * canonical content instead of browser-locale redirects.
  */
 
-import { readdirSync, writeFileSync, existsSync, statSync, mkdirSync } from 'node:fs';
+import { copyFileSync, existsSync, mkdirSync, readdirSync } from 'node:fs';
 import path from 'node:path';
 
 const OUT = 'out';
 const DEFAULT_LOCALE = 'en';
-const LOCALES = ['en', 'zh', 'ja'];
 
 function walkLocaleRoutes(dir, base = '') {
   const entries = readdirSync(dir, { withFileTypes: true });
@@ -31,38 +30,6 @@ function walkLocaleRoutes(dir, base = '') {
   return routes;
 }
 
-function buildRedirectHtml(route) {
-  // route is like 'cloud' or 'cloud/discussions'
-  const defaultTarget = `/${DEFAULT_LOCALE}/${route}/`;
-  const supportedJson = JSON.stringify(LOCALES);
-  return `<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Redirecting…</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex">
-<link rel="canonical" href="https://flyto2.com${defaultTarget}">
-<script>
-(function () {
-  var supported = ${supportedJson};
-  var nav = (navigator.language || '${DEFAULT_LOCALE}').toLowerCase();
-  var pick = '${DEFAULT_LOCALE}';
-  if (/^zh/.test(nav)) pick = 'zh';
-  else if (/^ja/.test(nav)) pick = 'ja';
-  if (supported.indexOf(pick) < 0) pick = '${DEFAULT_LOCALE}';
-  location.replace('/' + pick + '/${route}/');
-})();
-</script>
-<meta http-equiv="refresh" content="0; url=${defaultTarget}">
-</head>
-<body>
-<p>Redirecting to <a href="${defaultTarget}">${defaultTarget}</a>…</p>
-</body>
-</html>
-`;
-}
-
 function main() {
   const enDir = path.join(OUT, DEFAULT_LOCALE);
   if (!existsSync(enDir)) {
@@ -70,18 +37,18 @@ function main() {
     process.exit(1);
   }
 
-  const routes = walkLocaleRoutes(enDir);
-  let written = 0;
+  const routes = ['', ...walkLocaleRoutes(enDir)];
+  let copied = 0;
   for (const route of routes) {
-    const targetDir = path.join(OUT, route);
+    const sourceFile = path.join(enDir, route, 'index.html');
+    if (!existsSync(sourceFile)) continue;
+    const targetDir = route ? path.join(OUT, route) : OUT;
     const targetFile = path.join(targetDir, 'index.html');
-    // Don't overwrite if a real bare page already exists (e.g. public/<route>/index.html).
-    if (existsSync(targetFile)) continue;
     mkdirSync(targetDir, { recursive: true });
-    writeFileSync(targetFile, buildRedirectHtml(route));
-    written++;
+    copyFileSync(sourceFile, targetFile);
+    copied++;
   }
-  console.log(`postbuild-redirects: wrote ${written} bare-path redirects across ${routes.length} routes`);
+  console.log(`postbuild-redirects: copied ${copied} English routes to bare canonical paths`);
 }
 
 main();

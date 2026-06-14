@@ -59,19 +59,22 @@ export function MobileMenu({ open, onClose }: { open: boolean; onClose: () => vo
         <div className="flex-1 overflow-y-auto px-6 py-6">
           <div className="label-mono mb-4">PRODUCTS</div>
           <div className="grid grid-cols-2 gap-2.5">
-            <ProductPill href={localized('/cloud')} icon={<Cloud className="h-4 w-4" strokeWidth={1.5} />} label={t('cloud')} onClose={onClose} />
             <ProductPill
               href={localized('/code')}
               icon={<ShieldCheck className="h-4 w-4" strokeWidth={1.5} />}
               label={t('code')}
-              soon={t('soon')}
+              soon={t('beta')}
               onClose={onClose}
             />
+            <ProductPill href={localized('/cloud')} icon={<Cloud className="h-4 w-4" strokeWidth={1.5} />} label={t('cloud')} onClose={onClose} />
           </div>
 
           <div className="label-mono mb-4 mt-10">NAVIGATE</div>
           <ul className="space-y-1">
             <NavRow href={localized('/')} label={t('home')} onClose={onClose} />
+            <NavRow href={localized('/ctem')} label={t('ctem')} onClose={onClose} />
+            <NavRow href={localized('/attack-surface-management')} label={t('attackSurface')} onClose={onClose} />
+            <NavRow href={localized('/dark-web-monitoring')} label={t('darkWeb')} onClose={onClose} />
             <NavRow href="https://docs.flyto2.com" external icon={<BookOpen className="h-4 w-4" strokeWidth={1.5} />} label={t('docs')} onClose={onClose} />
             <NavRow href="https://blog.flyto2.com" external icon={<PenSquare className="h-4 w-4" strokeWidth={1.5} />} label={t('blog')} onClose={onClose} />
             <NavRow href={localized('/contact')} icon={<Mail className="h-4 w-4" strokeWidth={1.5} />} label={t('contact')} onClose={onClose} />
@@ -80,11 +83,11 @@ export function MobileMenu({ open, onClose }: { open: boolean; onClose: () => vo
 
         <div className="border-t border-[var(--color-line)] px-6 py-5">
           <Link
-            href={localized('/cloud/download')}
+            href={localized('/ctem')}
             onClick={onClose}
             className="block rounded-full bg-bone-100 py-3 text-center text-[13px] font-medium tracking-wide text-ink-900"
           >
-            {t('download')}
+            {t('ctem')}
           </Link>
         </div>
       </aside>

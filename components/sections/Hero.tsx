@@ -61,11 +61,11 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.4 }}
           className="mt-10 inline-flex flex-wrap items-center justify-center gap-x-3 gap-y-2 font-mono text-[10.5px] tracking-[0.18em] uppercase text-bone-300"
         >
-          <span>OPEN SOURCE</span>
+          <span>CTEM</span>
           <Dot />
-          <span>NO TELEMETRY</span>
+          <span>ASM / EASM</span>
           <Dot />
-          <span>YOURS</span>
+          <span>BYO-FRIENDLY</span>
         </motion.div>
       </div>
 
@@ -86,7 +86,7 @@ export function Hero() {
             <BrowserChrome />
             <div className="relative aspect-[16/10] w-full bg-ink-900">
               <Image
-                src="/assets/img/hero-screenshot.png"
+                src="/assets/img/warroom/01-projects-home.png"
                 alt={t('eyebrow')}
                 fill
                 priority
@@ -122,7 +122,7 @@ function BrowserChrome() {
       <div className="hidden flex-1 sm:block">
         <div className="mx-auto inline-flex w-full max-w-md items-center justify-center gap-2 rounded-md border border-[var(--color-line)] bg-ink-900/70 px-3 py-1 font-mono text-[11px] tracking-wide text-bone-100/50">
           <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-          flyto2.com
+          warroom.flyto2.com
         </div>
       </div>
       <div className="hidden sm:block sm:w-[58px]" />

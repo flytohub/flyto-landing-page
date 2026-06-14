@@ -12,8 +12,8 @@ export interface NavGroup {
 }
 
 export const products = [
-  { id: 'cloud' as const, name: 'Cloud', href: '/cloud', icon: 'Cloud',       status: 'live' as const },
   { id: 'code'  as const, name: 'Warroom',  href: '/code',  icon: 'ShieldCheck', status: 'beta' as const },
+  { id: 'cloud' as const, name: 'Cloud', href: '/cloud', icon: 'Cloud',       status: 'live' as const },
 ];
 
 /**

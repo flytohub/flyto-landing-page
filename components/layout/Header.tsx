@@ -6,7 +6,6 @@ import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
 import { usePathname } from 'next/navigation';
 import { Menu, Cloud, ShieldCheck } from 'lucide-react';
-import { LanguageSwitcher } from './LanguageSwitcher';
 import { MobileMenu } from './MobileMenu';
 import { MegaMenu } from './MegaMenu';
 import { products, productNavGrouped, detectProduct } from '@/lib/nav';
@@ -38,6 +37,9 @@ export function Header() {
   const product = detectProduct(pathname);
   const subNavGroups = productNavGrouped[product];
   const showSubNav = subNavGroups.length > 0;
+  const ctaHref =
+    product === 'code' ? '/code#waitlist' : product === 'cloud' ? '/cloud/download' : '/ctem';
+  const ctaLabel = product === 'code' ? t('waitlist') : product === 'cloud' ? t('download') : t('ctem');
 
   return (
     <>
@@ -97,12 +99,11 @@ export function Header() {
             </div>
 
             <div className="flex items-center gap-2">
-              <LanguageSwitcher />
               <Link
-                href={product === 'code' ? '/code#waitlist' : localized('/cloud/download')}
+                href={localized(ctaHref)}
                 className="hidden h-8 items-center rounded-full bg-bone-100 px-3.5 text-[12px] font-medium tracking-wide text-ink-900 transition-all hover:-translate-y-px hover:bg-white sm:inline-flex"
               >
-                {product === 'code' ? t('waitlist') : t('download')}
+                {ctaLabel}
               </Link>
               <button
                 onClick={() => setMobileOpen(true)}

@@ -40,6 +40,18 @@ interface ProductCardData {
 
 const CARDS: ProductCardData[] = [
   {
+    productKey: 'warroom',
+    href: '/ctem',
+    IconMark: ShieldCheck,
+    status: 'beta',
+    paint: {
+      panel:    'linear-gradient(180deg, rgba(34, 211, 238, 0.18), rgba(34, 211, 238, 0.04) 70%)',
+      border:   'rgba(34, 211, 238, 0.32)',
+      accent:   '#67e8f9',
+      visualBg: '#08141a',
+    },
+  },
+  {
     productKey: 'cloud',
     href: '/cloud',
     IconMark: Cloud,
@@ -49,18 +61,6 @@ const CARDS: ProductCardData[] = [
       border:   'rgba(139, 92, 246, 0.35)',
       accent:   '#c4b5fd',
       visualBg: '#0f0a1f',
-    },
-  },
-  {
-    productKey: 'warroom',
-    href: '/code',
-    IconMark: ShieldCheck,
-    status: 'beta',
-    paint: {
-      panel:    'linear-gradient(180deg, rgba(34, 211, 238, 0.18), rgba(34, 211, 238, 0.04) 70%)',
-      border:   'rgba(34, 211, 238, 0.32)',
-      accent:   '#67e8f9',
-      visualBg: '#08141a',
     },
   },
 ];

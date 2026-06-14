@@ -2,10 +2,10 @@
 
 import { motion } from 'motion/react';
 import { useTranslations } from 'next-intl';
-import { Zap, ShieldOff, Code2, Globe2, type LucideIcon } from 'lucide-react';
+import { Zap, ShieldOff, Code2, Globe2, Radar, Crosshair, KeyRound, type LucideIcon } from 'lucide-react';
 
 const ICONS: Record<string, LucideIcon> = {
-  Zap, ShieldOff, Code2, Globe2,
+  Zap, ShieldOff, Code2, Globe2, Radar, Crosshair, KeyRound,
 };
 
 interface BenefitItem {

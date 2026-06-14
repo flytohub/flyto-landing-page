@@ -9,6 +9,12 @@ import {
   Boxes,
   GitBranch,
   Languages,
+  Radar,
+  Crosshair,
+  KeyRound,
+  Fingerprint,
+  Swords,
+  FileCheck2,
   type LucideIcon,
 } from 'lucide-react';
 
@@ -19,6 +25,12 @@ const ICONS: Record<string, LucideIcon> = {
   Boxes,
   GitBranch,
   Languages,
+  Radar,
+  Crosshair,
+  KeyRound,
+  Fingerprint,
+  Swords,
+  FileCheck2,
 };
 
 interface FeatureItem {

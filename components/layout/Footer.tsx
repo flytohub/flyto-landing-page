@@ -57,15 +57,14 @@ export function Footer() {
         </div>
 
         <Column title={t('products')} className="md:col-span-2">
-          <FooterLink href={localized('/cloud')}>{nav('cloud')}</FooterLink>
-          <FooterLink href={localized('/cloud/integrations')}>{nav('integrations')}</FooterLink>
-          <FooterLink href={localized('/cloud/recipes')}>{nav('recipes')}</FooterLink>
-          <FooterLink href={localized('/cloud/pricing')}>{nav('pricing')}</FooterLink>
-          <FooterLink href={localized('/cloud/download')}>{nav('download')}</FooterLink>
-          <FooterLink href={localized('/cloud/changelog')}>{nav('changelog')}</FooterLink>
-          <FooterLink href={localized('/code')}>{nav('code')}</FooterLink>
+          <FooterLink href={localized('/ctem')}>{nav('ctem')}</FooterLink>
+          <FooterLink href={localized('/attack-surface-management')}>{nav('attackSurface')}</FooterLink>
+          <FooterLink href={localized('/dark-web-monitoring')}>{nav('darkWeb')}</FooterLink>
+          <FooterLink href={localized('/mssp-platform')}>{nav('mssp')}</FooterLink>
+          <FooterLink href={localized('/ai-security')}>{nav('aiSecurity')}</FooterLink>
+          <FooterLink href={localized('/bitsight-alternative')}>Bitsight alternatives</FooterLink>
           <FooterLink href={localized('/code/security')}>{nav('security')}</FooterLink>
-          <FooterLink href={localized('/code/pricing')}>{nav('pricing')}</FooterLink>
+          <FooterLink href={localized('/cloud')}>{nav('cloud')}</FooterLink>
         </Column>
 
         <Column title={t('community')} className="md:col-span-2">

@@ -1,7 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { readdirSync } from 'node:fs';
 import path from 'node:path';
-import { locales, defaultLocale, type Locale } from '@/lib/locales';
 import { whitepaperSlugs } from '@/lib/whitepapers';
 import { templates } from '@/lib/templates';
 
@@ -35,10 +34,9 @@ function discoverStaticRoutes(dir: string, base = ''): string[] {
   return out;
 }
 
-function localePath(locale: Locale, route: string) {
-  const prefix = locale === defaultLocale ? '' : `/${locale}`;
+function routeUrl(route: string) {
   const path = route ? `/${route}` : '';
-  return `${BASE}${prefix}${path}/`;
+  return `${BASE}${path}/`;
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -58,23 +56,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ].sort();
   const now = new Date();
 
-  // Emit one <url> entry per (locale × route) combo. Each entry carries
-  // the full hreflang cluster (+ x-default) so Google sees the full
-  // alternates regardless of which entry it crawled first.
-  return routes.flatMap((route) =>
-    locales.map((locale) => ({
-      url: localePath(locale, route),
-      lastModified: now,
-      changeFrequency: 'weekly' as const,
-      priority: route === '' ? 1.0 : route.includes('/') ? 0.6 : 0.7,
-      alternates: {
-        languages: {
-          ...Object.fromEntries(
-            locales.map((loc) => [loc, localePath(loc, route)]),
-          ),
-          'x-default': localePath(defaultLocale, route),
-        },
-      },
-    })),
-  );
+  return routes.map((route) => ({
+    url: routeUrl(route),
+    lastModified: now,
+    changeFrequency: 'weekly' as const,
+    priority: route === '' ? 1.0 : route.includes('/') ? 0.6 : 0.7,
+  }));
 }
