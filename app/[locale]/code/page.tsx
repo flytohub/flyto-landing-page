@@ -63,10 +63,10 @@ export default async function CodePage({
       <CTASection
         namespace="code.cta"
         id="waitlist"
-        primaryHref="https://forms.flyto2.com/code-waitlist"
         secondaryHref="https://pypi.org/project/flyto-indexer/"
-        primaryIcon="Mail"
         secondaryIcon="CodeIcon"
+        waitlistMode
+        waitlistProduct="code"
       />
     </>
   );

@@ -68,6 +68,19 @@ service cloud.firestore {
       }
     }
 
+    // ============================================================
+    // Waitlist — public anonymous write, admin read only
+    // ============================================================
+
+    match /waitlist/{entryId} {
+      allow create: if request.resource.data.email is string
+                    && request.resource.data.email.size() > 3
+                    && request.resource.data.email.size() < 320
+                    && request.resource.data.product is string
+                    && request.resource.data.keys().hasOnly(['email', 'product', 'createdAt']);
+      allow read: if isAdmin();
+    }
+
     // Helpers
     function isAdmin() {
       return request.auth != null

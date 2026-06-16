@@ -1430,7 +1430,11 @@
       "title": "Bądź pierwszy w sali wojennej.",
       "body": "Hostowana sala wojenna jest oparta na przeglądarce — bez instalowania aplikacji. Dołącz do listy oczekujących, aby otrzymać zaproszenie, gdy otworzy się Faza III, i pobierz open-source scanner już dziś.",
       "primary": "Dołącz do listy oczekujących",
-      "secondary": "Zainstaluj skaner OSS"
+      "secondary": "Zainstaluj skaner OSS",
+      "emailPlaceholder": "twoj@email.com",
+      "success": "Jesteś na liście! Skontaktujemy się, gdy otworzy się Faza III.",
+      "duplicate": "Jesteś już na liście oczekujących.",
+      "error": "Coś poszło nie tak — spróbuj ponownie."
     },
     "gallery": {
       "label": "I DWANAŚCIE WIĘCEJ",

@@ -1430,7 +1430,11 @@
       "title": "Vào phòng tác chiến trước tiên.",
       "body": "Phòng tác chiến có máy chủ dựa trên trình duyệt — không cần cài ứng dụng. Đăng ký danh sách chờ để nhận lời mời khi Giai đoạn III mở, và lấy bộ quét mã nguồn mở ngay hôm nay.",
       "primary": "Đăng ký danh sách chờ",
-      "secondary": "Cài bộ quét OSS"
+      "secondary": "Cài bộ quét OSS",
+      "emailPlaceholder": "your@email.com",
+      "success": "Bạn đã có trong danh sách! Chúng tôi sẽ liên hệ khi Phase III mở.",
+      "duplicate": "Bạn đã có trong danh sách chờ rồi.",
+      "error": "Đã có lỗi xảy ra — hãy thử lại."
     },
     "gallery": {
       "label": "VÀ MƯỜI HAI CÁI NỮA",

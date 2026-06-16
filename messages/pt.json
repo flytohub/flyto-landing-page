@@ -1430,7 +1430,11 @@
       "title": "Seja o primeiro no war room.",
       "body": "O war room hospedado é baseado em navegador — sem app para instalar. Entre na lista de espera para receber um convite quando a Fase III abrir, e obtenha o scanner open-source hoje.",
       "primary": "Entrar na lista de espera",
-      "secondary": "Instalar o scanner OSS"
+      "secondary": "Instalar o scanner OSS",
+      "emailPlaceholder": "seu@email.com",
+      "success": "Você está na lista! Entraremos em contato quando a Fase III abrir.",
+      "duplicate": "Você já está na lista de espera.",
+      "error": "Algo deu errado — tente novamente."
     },
     "gallery": {
       "label": "E MAIS DOZE",

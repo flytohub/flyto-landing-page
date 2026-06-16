@@ -1430,7 +1430,11 @@
       "title": "Sé el primero en la sala de operaciones.",
       "body": "La sala de operaciones alojada es basada en navegador — sin app que instalar. Únete a la lista de espera para recibir una invitación cuando abra la Fase III, y descarga hoy el escáner de código abierto.",
       "primary": "Unirse a la lista de espera",
-      "secondary": "Instalar el escáner OSS"
+      "secondary": "Instalar el escáner OSS",
+      "emailPlaceholder": "tu@email.com",
+      "success": "¡Estás en la lista! Te contactaremos cuando abra la Fase III.",
+      "duplicate": "Ya estás en la lista de espera.",
+      "error": "Algo salió mal — inténtalo de nuevo."
     },
     "gallery": {
       "label": "Y DOCE MÁS",

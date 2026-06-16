@@ -1430,7 +1430,11 @@
       "title": "Sii il primo nella war room.",
       "body": "La war room hosted è browser-based — nessuna app da installare. Unisciti alla lista d'attesa per ricevere un invito quando si apre la Fase III, e scarica lo scanner open source oggi.",
       "primary": "Unisciti alla lista d'attesa",
-      "secondary": "Installa lo scanner OSS"
+      "secondary": "Installa lo scanner OSS",
+      "emailPlaceholder": "tua@email.com",
+      "success": "Sei in lista! Ti contatteremo quando si aprirà la Fase III.",
+      "duplicate": "Sei già nella lista d'attesa.",
+      "error": "Qualcosa è andato storto — riprova."
     },
     "gallery": {
       "label": "E ALTRI DODICI",

@@ -1430,7 +1430,11 @@
       "title": "Soyez le premier dans la salle d'opérations.",
       "body": "La salle d'opérations hébergée est basée sur le navigateur — aucune application à installer. Rejoignez la liste d'attente pour recevoir une invitation à l'ouverture de la Phase III, et récupérez le scanner open source dès aujourd'hui.",
       "primary": "Rejoindre la liste d'attente",
-      "secondary": "Installer le scanner OSS"
+      "secondary": "Installer le scanner OSS",
+      "emailPlaceholder": "votre@email.com",
+      "success": "Vous êtes sur la liste ! Nous vous contacterons à l'ouverture de la Phase III.",
+      "duplicate": "Vous êtes déjà sur la liste d'attente.",
+      "error": "Une erreur s'est produite — réessayez."
     },
     "gallery": {
       "label": "ET DOUZE DE PLUS",

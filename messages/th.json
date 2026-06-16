@@ -1430,7 +1430,11 @@
       "title": "เป็นคนแรกในห้องรบ",
       "body": "war room แบบ hosted ใช้งานผ่านเบราว์เซอร์ — ไม่ต้องติดตั้งแอป เข้าร่วม waitlist เพื่อรับคำเชิญเมื่อ Phase III เปิด และรับ open-source scanner วันนี้เลย",
       "primary": "เข้าร่วม waitlist",
-      "secondary": "ติดตั้ง OSS scanner"
+      "secondary": "ติดตั้ง OSS scanner",
+      "emailPlaceholder": "your@email.com",
+      "success": "คุณอยู่ในรายการแล้ว! เราจะติดต่อเมื่อ Phase III เปิด",
+      "duplicate": "คุณอยู่ในรายการรอแล้ว",
+      "error": "เกิดข้อผิดพลาด — ลองอีกครั้ง"
     },
     "gallery": {
       "label": "และอีกสิบสองอย่าง",

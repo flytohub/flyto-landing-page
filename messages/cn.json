@@ -1430,7 +1430,11 @@
       "title": "率先进入战情室。",
       "body": "托管战情室基于浏览器 — 无需安装应用。加入候补名单，在第三阶段开放时获得邀请，并立即获取开源扫描器。",
       "primary": "加入候补名单",
-      "secondary": "安装开源扫描器"
+      "secondary": "安装开源扫描器",
+      "emailPlaceholder": "your@email.com",
+      "success": "你已加入名单！Phase III 开放时我们会联系你。",
+      "duplicate": "你已经在候补名单上了。",
+      "error": "发生了一些问题，请再试一次。"
     },
     "gallery": {
       "label": "还有十二项更多",

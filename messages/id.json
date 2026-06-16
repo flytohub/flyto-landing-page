@@ -1430,7 +1430,11 @@
       "title": "Jadilah yang pertama di war room.",
       "body": "War room terhosting berbasis browser — tidak perlu menginstal aplikasi. Daftar tunggu untuk mendapat undangan saat Fase III dibuka, dan ambil pemindai open-source hari ini.",
       "primary": "Daftar tunggu",
-      "secondary": "Instal pemindai OSS"
+      "secondary": "Instal pemindai OSS",
+      "emailPlaceholder": "your@email.com",
+      "success": "Kamu sudah terdaftar! Kami akan menghubungi ketika Phase III dibuka.",
+      "duplicate": "Kamu sudah ada di daftar tunggu.",
+      "error": "Ada yang salah — coba lagi."
     },
     "gallery": {
       "label": "DAN DUA BELAS LAGI",

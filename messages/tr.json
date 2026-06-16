@@ -1430,7 +1430,11 @@
       "title": "Savaş odasında ilk siz olun.",
       "body": "Barındırılan savaş odası tarayıcı tabanlıdır — kurulacak uygulama yok. Aşama III açıldığında davet almak için bekleme listesine katılın ve bugün açık kaynak tarayıcıyı edinin.",
       "primary": "Bekleme listesine katıl",
-      "secondary": "OSS tarayıcısını kur"
+      "secondary": "OSS tarayıcısını kur",
+      "emailPlaceholder": "your@email.com",
+      "success": "Listedesiniz! Phase III açıldığında sizinle iletişime geçeceğiz.",
+      "duplicate": "Zaten bekleme listesinde yer alıyorsunuz.",
+      "error": "Bir şeyler ters gitti — tekrar deneyin."
     },
     "gallery": {
       "label": "VE ON İKİ DAHA",
