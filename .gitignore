@@ -43,6 +43,7 @@ next-env.d.ts
 # Cloudflare / wrangler build output
 .cloudflare/
 .wrangler/
+.open-next/
 
 # Backup files
 *.bak
