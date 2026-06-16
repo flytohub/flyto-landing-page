@@ -121,7 +121,10 @@ export function LanguageSwitcher() {
               <Link
                 key={l}
                 href={buildHref(l)}
-                onClick={() => setOpen(false)}
+                onClick={() => {
+                  document.cookie = `NEXT_LOCALE=${l}; path=/; max-age=31536000; SameSite=Lax`;
+                  setOpen(false);
+                }}
                 role="option"
                 aria-selected={active}
                 className={cn(

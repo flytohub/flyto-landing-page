@@ -5,7 +5,7 @@ export default createMiddleware({
   locales,
   defaultLocale,
   localePrefix: 'as-needed',
-  localeDetection: false,
+  localeCookie: { name: 'NEXT_LOCALE' },
 });
 
 export const config = {
