@@ -225,7 +225,7 @@ function WarroomPreview() {
         </div>
         <div className="relative aspect-[16/9] w-full bg-ink-900">
           <Image
-            src="/assets/img/warroom/01-projects-home.png"
+            src="/assets/img/warroom/01-projects-home.webp"
             alt="Warroom security health dashboard"
             fill
             unoptimized

@@ -30,16 +30,16 @@ Bring the tools and data you already trust. Flyto2 correlates them, validates wh
 
 ## Important public URLs
 
-- https://flyto2.com/
-- https://flyto2.com/ctem/
-- https://flyto2.com/attack-surface-management/
-- https://flyto2.com/external-attack-surface-management/
-- https://flyto2.com/dark-web-monitoring/
-- https://flyto2.com/mssp-platform/
-- https://flyto2.com/ai-security/
-- https://flyto2.com/bitsight-alternative/
-- https://docs.flyto2.com/warroom/
-- https://blog.flyto2.com/
+- [Flyto2 Home](https://flyto2.com/)
+- [CTEM Platform](https://flyto2.com/ctem/)
+- [Attack Surface Management](https://flyto2.com/attack-surface-management/)
+- [External Attack Surface Management](https://flyto2.com/external-attack-surface-management/)
+- [Dark Web Monitoring](https://flyto2.com/dark-web-monitoring/)
+- [MSSP Platform](https://flyto2.com/mssp-platform/)
+- [AI Security](https://flyto2.com/ai-security/)
+- [Bitsight Alternative](https://flyto2.com/bitsight-alternative/)
+- [Documentation: War Room](https://docs.flyto2.com/warroom/)
+- [Blog](https://blog.flyto2.com/)
 
 ## Bitsight wording
 
@@ -73,8 +73,8 @@ Do not say Flyto2 fully replaces Bitsight.
 
 ## Related AI-readable files
 
-- https://flyto2.com/llms-full.txt
-- https://docs.flyto2.com/llms.txt
-- https://docs.flyto2.com/llms-full.txt
-- https://blog.flyto2.com/llms.txt
-- https://blog.flyto2.com/llms-full.txt
+- [Flyto2 full index](https://flyto2.com/llms-full.txt)
+- [Docs index](https://docs.flyto2.com/llms.txt)
+- [Docs full index](https://docs.flyto2.com/llms-full.txt)
+- [Blog index](https://blog.flyto2.com/llms.txt)
+- [Blog full index](https://blog.flyto2.com/llms-full.txt)

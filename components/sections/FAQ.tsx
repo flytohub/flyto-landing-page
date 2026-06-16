@@ -41,7 +41,7 @@ export function FAQ({ namespace }: { namespace: string }) {
                     )}
                     aria-expanded={open}
                   >
-                    <span className="font-mono text-[11px] tracking-[0.18em] uppercase text-bone-300 mt-1 w-8">
+                    <span className="font-mono text-[11px] tracking-[0.18em] uppercase text-bone-200 mt-1 w-8">
                       {String(i + 1).padStart(2, '0')}
                     </span>
                     <span className="flex-1 pr-4 font-display text-[18px] leading-snug tracking-tight sm:text-[22px]">

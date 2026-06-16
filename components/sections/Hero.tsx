@@ -72,9 +72,8 @@ export function Hero() {
       {/* Product window — keeps a single visual anchor without lapsing into stock-art */}
       <div className="relative mx-auto max-w-5xl px-5 pb-24 sm:px-8 sm:pb-32">
         <motion.div
-          initial={{ opacity: 0, y: 32 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-80px' }}
+          initial={{ y: 32 }}
+          animate={{ y: 0 }}
           transition={{ duration: 1.0, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
           className="relative"
         >
@@ -86,11 +85,12 @@ export function Hero() {
             <BrowserChrome />
             <div className="relative aspect-[16/10] w-full bg-ink-900">
               <Image
-                src="/assets/img/warroom/01-projects-home.png"
+                src="/assets/img/warroom/01-projects-home.webp"
                 alt={t('eyebrow')}
                 fill
                 priority
-                sizes="(min-width: 1024px) 960px, 100vw"
+                fetchPriority="high"
+                sizes="(min-width: 1024px) 960px, (min-width: 768px) 720px, 100vw"
                 className="object-cover object-top"
               />
             </div>

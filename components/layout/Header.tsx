@@ -56,7 +56,7 @@ export function Header() {
           <div className="mx-auto flex h-12 max-w-7xl items-center justify-between gap-4 px-5 sm:px-8">
             <Link href={localized('/')} className="flex items-center" aria-label="Flyto2">
               <Image
-                src="/assets/img/white-logo.png"
+                src="/assets/img/white-logo.webp"
                 alt="Flyto2"
                 width={90}
                 height={79}

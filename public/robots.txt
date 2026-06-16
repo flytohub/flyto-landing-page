@@ -13,8 +13,9 @@ User-agent: *
 Allow: /
 
 Sitemap: https://flyto2.com/sitemap.xml
-LLMs-Txt: https://flyto2.com/llms.txt
-LLMs-Full-Txt: https://flyto2.com/llms-full.txt
+# AI-readable content index (not a robots.txt directive — for reference only):
+# https://flyto2.com/llms.txt
+# https://flyto2.com/llms-full.txt
 
 # ============================================================
 # Blocked — AI training crawlers

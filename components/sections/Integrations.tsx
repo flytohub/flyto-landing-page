@@ -90,7 +90,7 @@ export function Integrations() {
         })}
       </motion.div>
 
-      <p className="mt-6 font-mono text-[11px] tracking-[0.16em] uppercase text-bone-300">
+      <p className="mt-6 font-mono text-[11px] tracking-[0.16em] uppercase text-bone-200">
         {t('andMore')}
       </p>
     </section>

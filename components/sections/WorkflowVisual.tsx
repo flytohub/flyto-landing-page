@@ -43,21 +43,21 @@ export function WorkflowVisual() {
               key={i}
               className="flex items-center gap-4 px-5 py-3.5"
             >
-              <span className="num-mono w-6 text-[11px] text-bone-300">
+              <span className="num-mono w-6 text-[11px] text-bone-200">
                 {String(i + 1).padStart(2, '0')}
               </span>
               <span className="grid h-7 w-7 place-items-center rounded-md border border-[var(--color-line)] bg-ink-900/70 text-bone-200">
                 <Icon className="h-3.5 w-3.5" strokeWidth={1.5} />
               </span>
               <span className="flex-1 text-[13.5px] text-bone-100">{step.label}</span>
-              <span className="num-mono text-[11px] text-bone-300">{step.t}</span>
+              <span className="num-mono text-[11px] text-bone-200">{step.t}</span>
             </li>
           );
         })}
       </ul>
 
       {/* Footer bar */}
-      <div className="flex items-center justify-between border-t border-[var(--color-line)] bg-ink-900/40 px-5 py-3 font-mono text-[11px] text-bone-300">
+      <div className="flex items-center justify-between border-t border-[var(--color-line)] bg-ink-900/40 px-5 py-3 font-mono text-[11px] text-bone-200">
         <span>5 steps · 1.2s total</span>
         <span>local · ready to replay</span>
       </div>
