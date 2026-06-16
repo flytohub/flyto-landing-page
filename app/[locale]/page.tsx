@@ -64,6 +64,13 @@ export default async function HomePage({
 
   return (
     <>
+      <link
+        rel="preload"
+        as="image"
+        href="/assets/img/warroom/01-projects-home.webp"
+        type="image/webp"
+        fetchPriority="high"
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homeJsonLd) }}

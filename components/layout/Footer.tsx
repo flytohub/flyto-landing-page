@@ -41,7 +41,7 @@ export function Footer() {
         <div className="md:col-span-5">
           <Link href={localized('/')} className="inline-block" aria-label="Flyto2">
             <Image
-              src="/assets/img/white-logo.png"
+              src="/assets/img/white-logo.webp"
               alt="Flyto2"
               width={90}
               height={79}

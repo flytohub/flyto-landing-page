@@ -4,9 +4,7 @@ import { useState } from 'react';
 import { motion } from 'motion/react';
 import { useTranslations } from 'next-intl';
 import { Download, BookOpen, Mail, Code as CodeIcon, type LucideIcon } from 'lucide-react';
-import { collection, addDoc, query, where, getDocs, serverTimestamp } from 'firebase/firestore';
 import { Button } from '@/components/ui/Button';
-import { firestore, isFirebaseConfigured } from '@/lib/firebase';
 
 const ICONS: Record<string, LucideIcon> = {
   Download,
@@ -29,7 +27,9 @@ interface CTASectionProps {
 }
 
 async function submitWaitlist(email: string, product: string): Promise<WaitlistStatus> {
+  const { isFirebaseConfigured, firestore } = await import('@/lib/firebase');
   if (!isFirebaseConfigured()) return 'error';
+  const { collection, addDoc, query, where, getDocs, serverTimestamp } = await import('firebase/firestore');
   const db = firestore();
   const ref = collection(db, 'waitlist');
   const snap = await getDocs(query(ref, where('email', '==', email), where('product', '==', product)));

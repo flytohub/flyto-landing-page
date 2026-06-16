@@ -41,7 +41,7 @@ export function MobileMenu({ open, onClose }: { open: boolean; onClose: () => vo
       >
         <div className="flex items-center justify-between border-b border-[var(--color-line)] px-6 py-5">
           <Image
-            src="/assets/img/white-logo.png"
+            src="/assets/img/white-logo.webp"
             alt="Flyto2"
             width={90}
             height={79}
