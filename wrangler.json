@@ -1,0 +1,6 @@
+{
+  "name": "flyto-landing-page",
+  "compatibility_date": "2025-06-16",
+  "compatibility_flags": ["nodejs_compat"],
+  "pages_build_output_dir": ".cloudflare/output"
+}
