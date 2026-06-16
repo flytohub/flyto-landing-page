@@ -8,6 +8,7 @@ import { usePathname } from 'next/navigation';
 import { Menu, Cloud, ShieldCheck } from 'lucide-react';
 import { MobileMenu } from './MobileMenu';
 import { MegaMenu } from './MegaMenu';
+import { LanguageSwitcher } from './LanguageSwitcher';
 import { products, productNavGrouped, detectProduct } from '@/lib/nav';
 import { cn } from '@/lib/cn';
 
@@ -99,6 +100,7 @@ export function Header() {
             </div>
 
             <div className="flex items-center gap-2">
+              <LanguageSwitcher />
               <Link
                 href={localized(ctaHref)}
                 className="hidden h-8 items-center rounded-full bg-bone-100 px-3.5 text-[12px] font-medium tracking-wide text-ink-900 transition-all hover:-translate-y-px hover:bg-white sm:inline-flex"
