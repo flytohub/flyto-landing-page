@@ -16,12 +16,12 @@ import { getFirestore, type Firestore } from 'firebase/firestore';
  * false, so unconfigured deployments don't crash mid-page.
  */
 const firebaseConfig = {
-  apiKey:            process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-  authDomain:        process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-  projectId:         process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || 'ticket-helper-dbc0e',
-  storageBucket:     process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
-  appId:             process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  apiKey:            process.env.NEXT_PUBLIC_FIREBASE_API_KEY            ?? 'AIzaSyA07a63HTr6L7UOlAEbp6iJntDgKQstMcI',
+  authDomain:        process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN        ?? 'ticket-helper-dbc0e.firebaseapp.com',
+  projectId:         process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID         ?? 'ticket-helper-dbc0e',
+  storageBucket:     process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET     ?? 'ticket-helper-dbc0e.firebasestorage.app',
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID ?? '673906368352',
+  appId:             process.env.NEXT_PUBLIC_FIREBASE_APP_ID             ?? '1:673906368352:web:33a6d5905969d30cbf4805',
 };
 
 let _app: FirebaseApp | null = null;
