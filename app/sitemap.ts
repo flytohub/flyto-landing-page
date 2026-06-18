@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next';
+import { locales, defaultLocale } from '@/lib/locales';
 import { whitepaperSlugs } from '@/lib/whitepapers';
 import { templates } from '@/lib/templates';
 
@@ -37,8 +38,27 @@ const STATIC_ROUTES = [
   'whitepaper',
 ];
 
-function routeUrl(route: string) {
-  return `${BASE}${route ? `/${route}` : ''}/`;
+function localeUrl(locale: string, route: string): string {
+  const path = route ? `/${route}/` : '/';
+  return locale === defaultLocale
+    ? `${BASE}${path}`
+    : `${BASE}/${locale}${path}`;
+}
+
+function buildEntry(route: string, now: Date): MetadataRoute.Sitemap[number] {
+  const langs: Record<string, string> = {};
+  for (const loc of locales) {
+    langs[loc] = localeUrl(loc, route);
+  }
+  langs['x-default'] = localeUrl(defaultLocale, route);
+
+  return {
+    url: localeUrl(defaultLocale, route),
+    lastModified: now,
+    changeFrequency: 'weekly' as const,
+    priority: route === '' ? 1.0 : route.includes('/') ? 0.6 : 0.7,
+    alternates: { languages: langs },
+  };
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -50,10 +70,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [...STATIC_ROUTES, ...whitepaperRoutes, ...templateRoutes].sort();
   const now = new Date();
 
-  return routes.map((route) => ({
-    url: routeUrl(route),
-    lastModified: now,
-    changeFrequency: 'weekly' as const,
-    priority: route === '' ? 1.0 : route.includes('/') ? 0.6 : 0.7,
-  }));
+  return routes.map((route) => buildEntry(route, now));
 }
