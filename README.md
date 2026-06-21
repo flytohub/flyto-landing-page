@@ -64,11 +64,22 @@ public/
   CNAME, .well-known/, robots.txt, llms.txt, favicon.ico, flags/, assets/
 ```
 
-## SEO infrastructure
+## SEO / AEO / GEO infrastructure
 
-- **Sitemap**: `app/sitemap.ts` walks `app/[locale]/`, appends template + whitepaper slugs, emits one `<url>` per `(locale × route)` with full hreflang cluster (+ `x-default`). Roughly 370 URLs at the time of writing.
-- **Per-page canonical + hreflang**: every static page calls `pageAlternates(path, locale)` from `lib/seo.ts` so each locale is its own self-canonical (avoids the duplicate-of-/en/ trap).
-- **Cloudflare Worker `flyto-redirects`** sits in front of the site and 301s ~230 historical `.html` URLs (pre-redesign Google-indexed pages) to their new directory-style equivalents. Edit the script directly in Cloudflare — it is not in this repo.
+- **Sitemap**: `app/sitemap.ts` emits English-first canonical public routes,
+  plus template and whitepaper slugs.
+- **Per-page canonical**: pages call `pageAlternates(path, locale)` from
+  `lib/seo.ts`. The current release canonicalizes to bare English paths and
+  does not advertise hreflang alternates.
+- **AI-readable files**: `public/llms.txt` and `public/llms-full.txt` provide
+  citation-ready summaries for AI search and answer engines.
+- **Crawler policy**: `public/robots.txt` allows search and user-triggered AI
+  retrieval while blocking AI training crawlers.
+- **GEO observability**: `npm run geo:logs -- <access.log>` produces JSON, CSV,
+  and Markdown reports for AI crawler access-log evidence.
+- **Cloudflare Worker `flyto-redirects`** sits in front of the site and 301s
+  historical `.html` URLs to their current directory-style equivalents. Edit
+  the script directly in Cloudflare; it is not in this repo.
 
 ## Related
 

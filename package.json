@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "build:cf": "opennextjs-cloudflare build",
+    "geo:logs": "node scripts/analyze-ai-crawler-logs.mjs",
     "preview": "opennextjs-cloudflare build && wrangler pages dev .cloudflare/output",
     "start": "next start",
     "lint": "next lint",
