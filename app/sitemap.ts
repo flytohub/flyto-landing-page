@@ -1,5 +1,4 @@
 import type { MetadataRoute } from 'next';
-import { locales, defaultLocale } from '@/lib/locales';
 import { whitepaperSlugs } from '@/lib/whitepapers';
 import { templates } from '@/lib/templates';
 
@@ -14,7 +13,6 @@ const STATIC_ROUTES = [
   'bitsight-alternative',
   'cloud',
   'cloud/changelog',
-  'cloud/discussions',
   'cloud/download',
   'cloud/integrations',
   'cloud/pricing',
@@ -22,7 +20,6 @@ const STATIC_ROUTES = [
   'cloud/templates',
   'cloud/use-cases',
   'code',
-  'code/discussions',
   'code/integrations',
   'code/platform',
   'code/pricing',
@@ -38,26 +35,17 @@ const STATIC_ROUTES = [
   'whitepaper',
 ];
 
-function localeUrl(locale: string, route: string): string {
+function pageUrl(route: string): string {
   const path = route ? `/${route}/` : '/';
-  return locale === defaultLocale
-    ? `${BASE}${path}`
-    : `${BASE}/${locale}${path}`;
+  return `${BASE}${path}`;
 }
 
 function buildEntry(route: string, now: Date): MetadataRoute.Sitemap[number] {
-  const langs: Record<string, string> = {};
-  for (const loc of locales) {
-    langs[loc] = localeUrl(loc, route);
-  }
-  langs['x-default'] = localeUrl(defaultLocale, route);
-
   return {
-    url: localeUrl(defaultLocale, route),
+    url: pageUrl(route),
     lastModified: now,
     changeFrequency: 'weekly' as const,
     priority: route === '' ? 1.0 : route.includes('/') ? 0.6 : 0.7,
-    alternates: { languages: langs },
   };
 }
 

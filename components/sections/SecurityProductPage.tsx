@@ -4,19 +4,87 @@ import { Button } from '@/components/ui/Button';
 import type { SecurityPage } from '@/lib/security-pages';
 
 export function SecurityProductPage({ page }: { page: SecurityPage }) {
+  const pageUrl = `https://flyto2.com/${page.slug}/`;
+  const imageUrl = page.image.startsWith('http')
+    ? page.image
+    : `https://flyto2.com${page.image}`;
+  const orgId = 'https://flyto2.com/#organization';
+  const websiteId = 'https://flyto2.com/#website';
+  const webpageId = `${pageUrl}#webpage`;
+  const breadcrumbId = `${pageUrl}#breadcrumb`;
+  const softwareId = `${pageUrl}#software`;
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'SoftwareApplication',
-    name: `Flyto2 ${page.eyebrow}`,
-    applicationCategory: 'SecurityApplication',
-    operatingSystem: 'Web',
-    url: `https://flyto2.com/${page.slug}/`,
-    description: page.metaDescription,
-    publisher: {
-      '@type': 'Organization',
-      name: 'Flyto2',
-      url: 'https://flyto2.com',
-    },
+    '@graph': [
+      {
+        '@type': 'Organization',
+        '@id': orgId,
+        name: 'Flyto2',
+        url: 'https://flyto2.com',
+      },
+      {
+        '@type': 'WebSite',
+        '@id': websiteId,
+        name: 'Flyto2',
+        url: 'https://flyto2.com',
+        publisher: { '@id': orgId },
+      },
+      {
+        '@type': 'WebPage',
+        '@id': webpageId,
+        url: pageUrl,
+        name: page.metaTitle,
+        description: page.metaDescription,
+        isPartOf: { '@id': websiteId },
+        publisher: { '@id': orgId },
+        breadcrumb: { '@id': breadcrumbId },
+        primaryImageOfPage: {
+          '@type': 'ImageObject',
+          url: imageUrl,
+          caption: page.imageAlt,
+        },
+        about: page.sections.map((section) => ({
+          '@type': 'Thing',
+          name: section.title,
+          description: section.body,
+        })),
+        mentions: page.related.map((link) => ({
+          '@type': 'Thing',
+          name: link.label,
+          url: link.href.startsWith('http') ? link.href : `https://flyto2.com${link.href}`,
+        })),
+      },
+      {
+        '@type': 'SoftwareApplication',
+        '@id': softwareId,
+        name: `Flyto2 ${page.eyebrow}`,
+        applicationCategory: 'SecurityApplication',
+        operatingSystem: 'Web',
+        url: pageUrl,
+        description: page.metaDescription,
+        image: imageUrl,
+        publisher: { '@id': orgId },
+        mainEntityOfPage: { '@id': webpageId },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': breadcrumbId,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Flyto2',
+            item: 'https://flyto2.com/',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: page.metaTitle,
+            item: pageUrl,
+          },
+        ],
+      },
+    ],
   };
 
   return (
