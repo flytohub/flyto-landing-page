@@ -42,6 +42,7 @@
     "wrangler": "^4.100.0"
   },
   "overrides": {
-    "@swc/helpers": "0.5.23"
+    "@swc/helpers": "0.5.23",
+    "postcss": "8.5.10"
   }
 }

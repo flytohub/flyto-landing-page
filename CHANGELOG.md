@@ -17,3 +17,6 @@
 
 - Documented the current English-first canonical SEO strategy as an explicit P1
   multilingual SEO gap.
+- Updated the Wrangler/Miniflare dependency chain and pinned PostCSS via npm
+  overrides so `npm audit` reports zero known vulnerabilities without
+  downgrading Next.js.
