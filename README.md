@@ -15,6 +15,31 @@
 - Cloudflare proxy in front of GitHub Pages (HTTPS, caching, edge redirects)
 - Deployed via `.github/workflows/deploy.yml` on every push to `main`
 
+## Installation
+
+Use Node.js 20 and npm. Install dependencies from the lockfile:
+
+```bash
+npm ci
+```
+
+For local forum development, copy `.env.example` or `.env.local.example` to
+`.env.local` and fill in the Firebase public web config. Do not commit real API
+keys, service-account JSON, access tokens, or moderation credentials.
+
+## Usage
+
+Start the local Next.js dev server:
+
+```bash
+npm run dev
+```
+
+Open `http://localhost:3000/en` for the English landing page, or replace `en`
+with any supported locale. Public pages are static and must render enough
+server-generated text for SEO, AEO, and GEO crawlers without relying on
+client-only hydration.
+
 ## Local dev
 
 ```bash
@@ -23,6 +48,50 @@ npm run dev          # http://localhost:3000
 npm run typecheck
 npm run build        # static output in out/
 ```
+
+## Configuration
+
+- `NEXT_PUBLIC_FIREBASE_API_KEY`: Firebase web API key for the forum client.
+- `NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN`: Firebase auth domain.
+- `NEXT_PUBLIC_FIREBASE_PROJECT_ID`: Firebase project ID.
+- `NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET`: Firebase storage bucket.
+- `NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID`: Firebase sender ID.
+- `NEXT_PUBLIC_FIREBASE_APP_ID`: Firebase app ID.
+- `GOOGLE_APPLICATION_CREDENTIALS`: local-only service account path for
+  moderation scripts.
+- `ANTHROPIC_API_KEY`: local-only moderation script key.
+
+The site must build without Firebase values. Forum components should degrade
+without blocking public SEO/GEO pages.
+
+## Verification
+
+Run the closed loop before release changes:
+
+```bash
+npm run audit:geo
+npm run lint
+npm test
+npm run build
+npm run verify
+```
+
+`npm run audit:geo` checks required public GEO routes, `robots.txt`,
+`llms.txt`, `llms-full.txt`, sitemap registration, and AI crawler policy.
+CI also runs `flyto-index verify . --full-scan --json` to catch source-level
+secret, taint, impact, and instruction hygiene regressions.
+
+## API Surface
+
+This repo does not expose backend API routes. Its public contract is the static
+route and metadata surface:
+
+- localized routes under `app/[locale]`
+- `app/sitemap.ts`
+- `public/robots.txt`
+- `public/llms.txt`
+- `public/llms-full.txt`
+- `public/.well-known/security.txt`
 
 ## Layout
 
@@ -86,3 +155,9 @@ public/
 - [flyto2.com](https://flyto2.com) — what this repo ships
 - [flyto-blog](https://github.com/flytohub/flyto-blog) — articles (blog.flyto2.com)
 - [flyto-docs](https://github.com/flytohub/flyto-docs) — product docs (docs.flyto2.com)
+
+## Contributing
+
+Keep public route copy, metadata, sitemap entries, crawler policy, and
+AI-readable files in sync. Add or update a handoff under `handoffs/` whenever a
+release changes the public GEO/AEO/SEO contract.

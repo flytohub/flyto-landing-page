@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { whitepaperSlugs } from '@/lib/whitepapers';
 import { templates } from '@/lib/templates';
+import { requiredGeoRoutes } from '@/lib/public-route-pages';
 
 export const dynamic = 'force-static';
 
@@ -55,7 +56,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .filter((tpl) => !tpl.canonicalSlug)
     .map((tpl) => `cloud/templates/${tpl.slug}`);
 
-  const routes = [...STATIC_ROUTES, ...whitepaperRoutes, ...templateRoutes].sort();
+  const routes = Array.from(
+    new Set([...STATIC_ROUTES, ...requiredGeoRoutes, ...whitepaperRoutes, ...templateRoutes]),
+  ).sort();
   const now = new Date();
 
   return routes.map((route) => buildEntry(route, now));

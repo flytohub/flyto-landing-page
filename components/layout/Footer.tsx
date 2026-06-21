@@ -57,12 +57,15 @@ export function Footer() {
         </div>
 
         <Column title={t('products')} className="md:col-span-2">
+          <FooterLink href={localized('/pricing')}>{nav('pricing')}</FooterLink>
           <FooterLink href={localized('/ctem')}>{nav('ctem')}</FooterLink>
           <FooterLink href={localized('/attack-surface-management')}>{nav('attackSurface')}</FooterLink>
           <FooterLink href={localized('/dark-web-monitoring')}>{nav('darkWeb')}</FooterLink>
           <FooterLink href={localized('/mssp-platform')}>{nav('mssp')}</FooterLink>
           <FooterLink href={localized('/ai-security')}>{nav('aiSecurity')}</FooterLink>
           <FooterLink href={localized('/bitsight-alternative')}>Bitsight alternatives</FooterLink>
+          <FooterLink href={localized('/security')}>Security</FooterLink>
+          <FooterLink href={localized('/enterprise')}>Enterprise</FooterLink>
           <FooterLink href={localized('/code/security')}>{nav('security')}</FooterLink>
           <FooterLink href={localized('/cloud')}>{nav('cloud')}</FooterLink>
         </Column>
@@ -70,12 +73,18 @@ export function Footer() {
         <Column title={t('community')} className="md:col-span-2">
           <FooterLink href={localized('/cloud/discussions')}>{nav('discussions')}</FooterLink>
           <FooterLink href={localized('/whitepaper')}>Whitepapers</FooterLink>
-          <FooterLink href="https://docs.flyto2.com" external>{nav('docs')}</FooterLink>
-          <FooterLink href="https://blog.flyto2.com"  external>{nav('blog')}</FooterLink>
+          <FooterLink href={localized('/docs')}>{nav('docs')}</FooterLink>
+          <FooterLink href={localized('/api-docs')}>API docs</FooterLink>
+          <FooterLink href={localized('/blog')}>{nav('blog')}</FooterLink>
+          <FooterLink href={localized('/changelog')}>Changelog</FooterLink>
           <FooterLink href={localized('/contact')}>{nav('contact')}</FooterLink>
         </Column>
 
         <Column title={t('openSource')} className="md:col-span-3">
+          <FooterLink href={localized('/open-source')}>Open core</FooterLink>
+          <FooterLink href={localized('/compare')}>Compare</FooterLink>
+          <FooterLink href={localized('/airgap')}>Airgap</FooterLink>
+          <FooterLink href={localized('/trust')}>Trust</FooterLink>
           <FooterLink href="https://github.com/flytohub/flyto-core" external>flyto-core</FooterLink>
           <FooterLink href="https://pypi.org/project/flyto-indexer/" external>flyto-indexer</FooterLink>
           <FooterLink href="https://github.com/flytohub/flyto-core/blob/main/LICENSE" external>MIT licence</FooterLink>

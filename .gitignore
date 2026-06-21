@@ -23,6 +23,7 @@ node_modules/
 *.p12
 
 # Allow the example, block the real one
+!.env.example
 !.env.local.example
 
 # Firebase service-account credentials (only needed for one-shot scripts)
@@ -39,6 +40,10 @@ scripts/forum-bulk.json
 out/
 *.tsbuildinfo
 next-env.d.ts
+
+# Generated Flyto indexes and navigation snapshots
+.flyto/
+.flyto-index/
 
 # Cloudflare / wrangler build output
 .cloudflare/

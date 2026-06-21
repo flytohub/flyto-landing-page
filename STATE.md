@@ -14,7 +14,9 @@ Current state on 2026-06-21:
 Known gaps:
 
 - Full multilingual SEO and hreflang are not currently active.
-- Enterprise, trust, airgap, open-source, API-docs, and compare pages still need
-  a final public route inventory against the release checklist.
+- Enterprise, trust, airgap, open-source, API-docs, compare, pricing, docs,
+  blog, changelog, and security hub routes now have source pages, sitemap
+  coverage, footer discovery, and AI-readable index entries guarded by
+  `npm run audit:geo`.
 - Login, billing, and customer workflows are outside this repo and must be
   validated in the owning apps before production.

@@ -17,6 +17,15 @@ Rules:
 - Preserve the SEO/AEO/GEO contract: `robots.txt`, `llms.txt`, `llms-full.txt`,
   canonical metadata, static content, and sitemap changes must be reviewed
   together.
+- Use flyto-indexer search and impact, or repo search when the indexer is not
+  available, for pre-change exploration before changing route, metadata,
+  sitemap, robots, or AI-readable files so public-surface drift is checked in
+  context.
+- After public-surface changes, run the relevant verification loop:
+  `npm run audit:geo`, `npm run typecheck`, and `npm run build`.
+- Before release, run `npm run verify` when dependencies are available.
+- Treat that as required post-change verification; document any skipped check in
+  the handoff.
 - Do not make unsupported security, benchmark, or competitor-replacement claims.
 - Keep Flyto2 Cloud / Apps / Automation visible as a first-class product line,
   not a side page under security.

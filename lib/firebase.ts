@@ -6,9 +6,9 @@ import { getFirestore, type Firestore } from 'firebase/firestore';
 
 /**
  * Firebase web client. Reads config from NEXT_PUBLIC_* env vars at build time
- * (Next.js inlines these into the static bundle). Default project is
- * `ticket-helper-dbc0e` — the same project the desktop and cloud products
- * already authenticate against, so a forum login carries over.
+ * (Next.js inlines these into the static bundle). Do not add project-specific
+ * fallbacks here; public Firebase web keys still create scanner noise and make
+ * non-production deploys point at the wrong backend.
  *
  * If `NEXT_PUBLIC_FIREBASE_API_KEY` is missing the helpers throw a friendly
  * error rather than the cryptic `auth/invalid-api-key`. UI code should call
@@ -16,12 +16,12 @@ import { getFirestore, type Firestore } from 'firebase/firestore';
  * false, so unconfigured deployments don't crash mid-page.
  */
 const firebaseConfig = {
-  apiKey:            process.env.NEXT_PUBLIC_FIREBASE_API_KEY            ?? 'AIzaSyA07a63HTr6L7UOlAEbp6iJntDgKQstMcI',
-  authDomain:        process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN        ?? 'ticket-helper-dbc0e.firebaseapp.com',
-  projectId:         process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID         ?? 'ticket-helper-dbc0e',
-  storageBucket:     process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET     ?? 'ticket-helper-dbc0e.firebasestorage.app',
-  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID ?? '673906368352',
-  appId:             process.env.NEXT_PUBLIC_FIREBASE_APP_ID             ?? '1:673906368352:web:33a6d5905969d30cbf4805',
+  apiKey:            process.env.NEXT_PUBLIC_FIREBASE_API_KEY            ?? '',
+  authDomain:        process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN        ?? '',
+  projectId:         process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID         ?? '',
+  storageBucket:     process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET     ?? '',
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID ?? '',
+  appId:             process.env.NEXT_PUBLIC_FIREBASE_APP_ID             ?? '',
 };
 
 let _app: FirebaseApp | null = null;
@@ -29,7 +29,12 @@ let _auth: Auth | null = null;
 let _db: Firestore | null = null;
 
 export function isFirebaseConfigured(): boolean {
-  return Boolean(firebaseConfig.apiKey && firebaseConfig.appId);
+  return Boolean(
+    firebaseConfig.apiKey &&
+    firebaseConfig.authDomain &&
+    firebaseConfig.projectId &&
+    firebaseConfig.appId,
+  );
 }
 
 class FirebaseNotConfiguredError extends Error {
