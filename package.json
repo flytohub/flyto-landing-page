@@ -7,12 +7,13 @@
     "build": "next build",
     "build:cf": "opennextjs-cloudflare build",
     "audit:geo": "node scripts/audit-public-geo-routes.mjs",
+    "audit:public-site": "node scripts/audit-public-site-contract.mjs",
     "geo:logs": "node scripts/analyze-ai-crawler-logs.mjs",
-    "verify": "npm run audit:geo && npm run lint && npm run test && npm run build",
+    "verify": "npm run test && npm run lint && npm run build",
     "preview": "opennextjs-cloudflare build && wrangler pages dev .cloudflare/output",
     "start": "next start",
     "lint": "tsc --noEmit",
-    "test": "npm run audit:geo",
+    "test": "npm run audit:geo && npm run audit:public-site",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

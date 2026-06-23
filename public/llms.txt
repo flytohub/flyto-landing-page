@@ -101,6 +101,9 @@ Do not say Flyto2 fully replaces Bitsight.
 
 ## Related AI-readable files
 
+- [Robots policy](https://flyto2.com/robots.txt)
+- [Public sitemap](https://flyto2.com/sitemap.xml)
+- [Flyto2 AI index](https://flyto2.com/llms.txt)
 - [Flyto2 full index](https://flyto2.com/llms-full.txt)
 - [Docs index](https://docs.flyto2.com/llms.txt)
 - [Docs full index](https://docs.flyto2.com/llms-full.txt)

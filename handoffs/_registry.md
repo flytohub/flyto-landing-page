@@ -2,6 +2,7 @@
 
 | Date | Topic | File |
 | --- | --- | --- |
+| 2026-06-23 | Public site contract | `2026-06-23-public-site-contract.md` |
 | 2026-06-21 | Landing dependency audit closure | `2026-06-21-landing-dependency-audit.md` |
 | 2026-06-21 | Public GEO route closure | `2026-06-21-public-geo-route-closure.md` |
 | 2026-06-21 | Public memory and GEO log analyzer | `2026-06-21-public-memory-geo-log-analyzer.md` |

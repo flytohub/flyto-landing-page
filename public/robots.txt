@@ -131,6 +131,9 @@ User-agent: ChatGPT-User
 Allow: /
 
 # Anthropic — Claude citation crawler (separate from ClaudeBot training).
+User-agent: Claude-SearchBot
+Allow: /
+
 User-agent: Claude-Web
 Allow: /
 
@@ -153,4 +156,7 @@ User-agent: Bingbot
 Allow: /
 
 User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Applebot
 Allow: /
