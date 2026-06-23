@@ -35,5 +35,6 @@ python /Users/chester/flytohub/flyto-indexer/scripts/write_public_site_verificat
   --browser-status ok
 ```
 
-Current live result: P0 = 0, P1 = 9. Remaining P1s include `/api-docs/` live
-404, several AI/search crawler UAs receiving 403, and missing OpenGraph signal.
+Current live result: P0 = 0, P1 = 8. Remaining P1s include `/api-docs/` live
+404, several AI search / realtime browse UAs receiving 403, and missing
+OpenGraph signal. Training crawler blocks are not counted as visibility P1s.
