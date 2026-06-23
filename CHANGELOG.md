@@ -14,6 +14,8 @@
   into source, sitemap, robots, and AI-readable indexes.
 - Added `npm run audit:public-site` to guard the public-site route contract,
   AI-readable critical URLs, and explicit AI/search crawler policies.
+- Added `docs/cloudflare-ai-crawler-allowlist.md` for the edge rule needed to
+  let AI search and realtime browse crawlers reach public citation pages.
 
 ### Changed
 
@@ -24,3 +26,7 @@
   downgrading Next.js.
 - Added explicit `Claude-SearchBot` and `Applebot` policies to `robots.txt` and
   linked `robots.txt`, `sitemap.xml`, and `llms.txt` from the AI-readable index.
+- Fixed the `next-intl` middleware matcher so `/api-docs/` is not excluded as
+  though it were an `/api` route.
+- Added OpenGraph and Twitter card metadata to the homepage so the public-site
+  verification probe can prove citation-ready social/AI summary metadata.

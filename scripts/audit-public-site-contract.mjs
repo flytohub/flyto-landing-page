@@ -87,6 +87,8 @@ if (!robots.includes('Sitemap: https://flyto2.com/sitemap.xml')) {
 
 const llms = read('public/llms.txt');
 const llmsFull = read('public/llms-full.txt');
+const middleware = read('middleware.ts');
+const homePage = read('app/[locale]/page.tsx');
 for (const route of productRoutes) {
   const url = `https://flyto2.com/${route}/`;
   if (!llms.includes(url)) {
@@ -106,6 +108,19 @@ for (const url of [
 ]) {
   if (!llms.includes(url) && !llmsFull.includes(url)) {
     failures.push(`AI-readable files missing critical URL ${url}`);
+  }
+}
+
+if (!middleware.includes('api(?:/|$)')) {
+  failures.push('middleware matcher must exclude only /api or /api/*, not public routes like /api-docs/');
+}
+if (middleware.includes('(?!api|')) {
+  failures.push('middleware matcher excludes every api* path and will 404 /api-docs/');
+}
+
+for (const token of ['openGraph', 'twitter', 'summary_large_image']) {
+  if (!homePage.includes(token)) {
+    failures.push(`homepage metadata missing ${token}`);
   }
 }
 

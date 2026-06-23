@@ -17,10 +17,33 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'home' });
+  const title = t('metaTitle');
+  const description = t('metaDescription');
   return {
-    title: t('metaTitle'),
-    description: t('metaDescription'),
+    title,
+    description,
     alternates: pageAlternates('', locale),
+    openGraph: {
+      title,
+      description,
+      url: '/',
+      siteName: 'Flyto2',
+      type: 'website',
+      images: [
+        {
+          url: '/assets/img/warroom/01-projects-home.webp',
+          width: 1200,
+          height: 630,
+          alt: 'Flyto2 evidence-backed product verification warroom',
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: ['/assets/img/warroom/01-projects-home.webp'],
+    },
   };
 }
 

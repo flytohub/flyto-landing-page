@@ -149,6 +149,9 @@ public/
 - **Cloudflare Worker `flyto-redirects`** sits in front of the site and 301s
   historical `.html` URLs to their current directory-style equivalents. Edit
   the script directly in Cloudflare; it is not in this repo.
+- **Cloudflare AI crawler allowlist** is documented in
+  `docs/cloudflare-ai-crawler-allowlist.md`. Robots policy alone is not enough
+  when Cloudflare bot/challenge rules return 403 to realtime browse UAs.
 
 ## Related
 
