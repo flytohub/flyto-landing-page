@@ -10,6 +10,7 @@ const requiredRoutes = [
   'enterprise',
   'airgap',
   'open-source',
+  'aikido-alternative',
   'compare',
   'api-docs',
   'trust',

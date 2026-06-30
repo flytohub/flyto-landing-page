@@ -82,6 +82,7 @@ export function Footer() {
 
         <Column title={t('openSource')} className="md:col-span-3">
           <FooterLink href={localized('/open-source')}>Open core</FooterLink>
+          <FooterLink href={localized('/aikido-alternative')}>Aikido alternative</FooterLink>
           <FooterLink href="https://github.com/flytohub/flyto-warroom" external>Flyto2 Warroom CE</FooterLink>
           <FooterLink href="https://hub.docker.com/r/chesterhsu/flyto-warroom" external>Docker images</FooterLink>
           <FooterLink href="https://docs.flyto2.com/warroom/self-hosted-ce" external>Self-hosted docs</FooterLink>

@@ -9,6 +9,9 @@ Current state on 2026-07-01:
   airgap, compare, API docs, trust, docs, blog, and changelog now describe
   Flyto2 Warroom CE as the installable self-hosted baseline and Enterprise
   bridge as the gated upgrade path.
+- `/aikido-alternative/` is a canonical public route for teams evaluating
+  Aikido-style consolidated security platforms; it deliberately avoids
+  unsupported replacement, benchmark, or guaranteed-AutoFix claims.
 - `robots.txt`, `llms.txt`, and `llms-full.txt` exist.
 - Public crawler policy allows search and user-triggered AI retrieval while
   blocking AI training crawlers.

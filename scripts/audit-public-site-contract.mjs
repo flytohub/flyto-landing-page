@@ -10,6 +10,7 @@ const productRoutes = [
   'enterprise',
   'airgap',
   'open-source',
+  'aikido-alternative',
   'compare',
   'api-docs',
   'trust',
@@ -54,6 +55,8 @@ const launchSurfaceContracts = {
     'Warroom CE',
     'Enterprise bridge',
     'Premium actions fail closed',
+    'Aikido alternative',
+    'Evidence-backed AutoFix loop',
   ],
   'lib/security-pages.ts': [
     'self-hosted Warroom CE',
@@ -66,8 +69,13 @@ const launchSurfaceContracts = {
   ],
   'components/layout/Footer.tsx': [
     'Flyto2 Warroom CE',
+    'Aikido alternative',
     'Docker images',
     'Self-hosted docs',
+  ],
+  'app/[locale]/aikido-alternative/page.tsx': [
+    "publicRoutePages['aikido-alternative']",
+    'pageAlternates(page.path)',
   ],
   'lib/nav.ts': [
     "{ key: 'oss',          href: '/open-source' }",
@@ -83,11 +91,13 @@ const launchSurfaceContracts = {
     'Docker Hub: Flyto2 Warroom images',
     'Enterprise bridge',
     'Do not describe CE as a full Enterprise source release',
+    'Aikido alternative',
   ],
   'public/llms-full.txt': [
     'Self-hosted CE and distribution channels',
     'Warroom CE, Enterprise bridge',
     'CE mirror boundary',
+    '/aikido-alternative/',
   ],
 };
 

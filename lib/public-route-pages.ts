@@ -4,6 +4,7 @@ export type PublicRoutePageId =
   | 'enterprise'
   | 'airgap'
   | 'open-source'
+  | 'aikido-alternative'
   | 'compare'
   | 'api-docs'
   | 'trust'
@@ -326,6 +327,67 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
       { label: 'Docker Hub', href: 'https://hub.docker.com/r/chesterhsu/flyto-warroom' },
       { label: 'Self-hosted docs', href: 'https://docs.flyto2.com/warroom/self-hosted-ce' },
       { label: 'Enterprise', href: '/enterprise' },
+    ],
+  },
+  'aikido-alternative': {
+    id: 'aikido-alternative',
+    path: 'aikido-alternative',
+    eyebrow: 'Aikido alternative',
+    title: 'Flyto2 is the open-core security war room for teams evaluating Aikido-style platforms.',
+    lede:
+      'If you like the idea of one place for code, cloud, container, runtime, external surface, and AutoFix workflows, Flyto2 pushes that model into a self-hosted open-core war room with evidence graphs, deterministic gates, and an Enterprise bridge for premium intelligence and managed remediation.',
+    metaTitle: 'Aikido alternative for open-core security teams',
+    metaDescription:
+      'Compare Flyto2 Warroom CE with Aikido-style security platforms: self-hosted open core, evidence-backed AutoFix, CTEM, code, cloud, container, runtime, and external surface workflows.',
+    primaryCta: { label: 'Install Warroom CE', href: '/open-source' },
+    secondaryCta: { label: 'Read self-hosted docs', href: WARROOM_CE_DOCS },
+    sections: [
+      {
+        title: 'Self-hosted open core',
+        body:
+          'Flyto2 is designed to make the community edition a real product surface, not a thin marketing sample. Teams can install, inspect, patch, and validate the war room locally before deciding whether Enterprise services are needed.',
+        bullets: ['GitHub and Docker Hub distribution', 'Local auth, local database, local evidence timeline, and report surfaces', 'Public contracts for code, CTEM, container, cloud, runtime, and external evidence flows'],
+      },
+      {
+        title: 'Evidence-backed AutoFix loop',
+        body:
+          'The strongest remediation story is not an AI patch button. It is a loop: finding, source, policy, proposed fix, approval, execution, verification, rollback evidence, and audit trail.',
+        bullets: ['Code and IaC fixes can become deterministic patches or gated AI proposals', 'Container and cloud fixes stay source-labeled as repo definition, live connector, or Enterprise bridge actions', 'Every accepted fix should produce verification evidence instead of only closing an alert'],
+      },
+      {
+        title: 'One war room, many surfaces',
+        body:
+          'Flyto2 treats code, cloud, container, VM/runtime, external attack surface, dark web, pentest, red-team, AI governance, and compliance as independently usable modules that can merge into one cockpit.',
+        bullets: ['CE gives a local cockpit for baseline workflows', 'Enterprise bridge adds premium threat intel, managed runners, live remediation, SSO, airgap, and support', 'Capability, RBAC, evidence signature, and tenant isolation gates keep modules composable without hidden fail-open behavior'],
+      },
+    ],
+    answers: [
+      {
+        question: 'Is Flyto2 trying to clone Aikido?',
+        answer:
+          'No. Flyto2 should be positioned as an open-core security war room for teams evaluating Aikido-style consolidated security platforms. The core difference is self-hosted CE, evidence graph, and deterministic closed-loop remediation.',
+      },
+      {
+        question: 'Where does Flyto2 aim to be stronger?',
+        answer:
+          'Flyto2 should compete on open-core adoption, local installability, evidence-backed remediation, cross-surface CTEM correlation, deterministic gates, and the ability to keep CE useful while reserving commercial intelligence and managed action for Enterprise.',
+      },
+      {
+        question: 'What should not be claimed?',
+        answer:
+          'Do not claim full replacement, guaranteed coverage, benchmark leadership, or 100% AutoFix success without independent evidence. The public claim is that Flyto2 complements existing tools and closes the loop with self-hosted evidence-first workflows.',
+      },
+      {
+        question: 'How does Enterprise fit without weakening open source?',
+        answer:
+          'Enterprise bridge services should attach through documented capability and evidence contracts. CE remains useful locally; premium intelligence, managed remediation, fleet execution, enterprise identity, airgap, legal hold, and support stay gated.',
+      },
+    ],
+    related: [
+      { label: 'Warroom CE', href: '/open-source' },
+      { label: 'Docker Hub', href: WARROOM_CE_DOCKER },
+      { label: 'Security overview', href: '/security' },
+      { label: 'Compare product lines', href: '/compare' },
     ],
   },
   compare: {

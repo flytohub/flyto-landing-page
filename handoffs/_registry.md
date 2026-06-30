@@ -3,6 +3,7 @@
 | Date | Topic | File |
 | --- | --- | --- |
 | 2026-07-01 | Warroom CE landing launch | `2026-07-01-warroom-ce-landing-launch.md` |
+| 2026-07-01 | Aikido alternative route | `2026-07-01-aikido-alternative-route.md` |
 | 2026-06-23 | Public site fresh verification | `2026-06-23-public-site-fresh-verification.md` |
 | 2026-06-23 | Public site contract | `2026-06-23-public-site-contract.md` |
 | 2026-06-21 | Landing dependency audit closure | `2026-06-21-landing-dependency-audit.md` |

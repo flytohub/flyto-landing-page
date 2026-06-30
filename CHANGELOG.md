@@ -7,6 +7,9 @@
 - Added CE-first launch surface coverage across homepage, pricing, security,
   enterprise, airgap, compare, docs, API docs, trust, blog, changelog, footer,
   nav, and AI-readable indexes.
+- Added `/aikido-alternative/` as a careful competitor-alternative page for
+  open-core security war room positioning, evidence-backed AutoFix loops, and
+  Enterprise bridge boundaries.
 - Added public-site contract checks for Flyto2 Warroom CE GitHub, Docker Hub,
   self-hosted docs, Enterprise bridge copy, and canonical default-locale
   routing.
