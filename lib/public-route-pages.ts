@@ -247,49 +247,60 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
     id: 'open-source',
     path: 'open-source',
     eyebrow: 'Open core',
-    title: 'Flyto2 is designed as open-core around a shared execution kernel.',
+    title: 'Flyto2 Warroom CE is the self-hosted open-core security war room.',
     lede:
-      'flyto-core is the execution kernel for automation, crawler runtime, connector protocol, browser automation, workflow execution, and verification primitives. Product lines should depend on it without importing each other randomly.',
+      'Flyto2 Warroom CE gives teams a local installable security cockpit for code, CTEM, external posture, containers, evidence, scoring, and compliance. Enterprise features attach through clear capability gates, signed evidence, and documented bridge contracts.',
     metaTitle: 'Flyto2 open source and open-core model',
     metaDescription:
-      'Open-core overview for Flyto2, flyto-core, connector SDKs, community modules, and enterprise-only capabilities.',
-    primaryCta: { label: 'View docs', href: '/docs' },
-    secondaryCta: { label: 'Compare editions', href: '/compare' },
+      'Install Flyto2 Warroom CE from GitHub and Docker Hub, understand the open-core boundary, and see how Enterprise capabilities attach through bridge contracts.',
+    primaryCta: { label: 'GitHub repository', href: 'https://github.com/flytohub/flyto-warroom' },
+    secondaryCta: { label: 'Docker images', href: 'https://hub.docker.com/r/chesterhsu/flyto-warroom' },
     sections: [
       {
-        title: 'Community surface',
+        title: 'Community Edition',
         body:
-          'Community-friendly pieces should make the execution kernel useful without exposing enterprise-only deployment moat.',
-        bullets: ['Basic scanner, CLI, connector SDK, policy examples, SBOM generator', 'Demo compose and simple web UI', 'Basic CTEM discovery and basic reports'],
+          'CE is meant to be useful on its own: local auth, local database, public contracts, installer scripts, and a Warroom UI that can be inspected and patched.',
+        bullets: ['Self-hosted Docker Compose install with local JWT auth', 'Code intelligence, CTEM posture, evidence, reports, score views, and compliance surfaces', 'Public flyto-core, flyto-indexer, flyto-i18n, flyto-code, and flyto-contracts packages'],
       },
       {
-        title: 'Enterprise surface',
+        title: 'Enterprise bridge',
         body:
-          'Enterprise capabilities belong behind clear edition and provider boundaries.',
-        bullets: ['Airgap deploy, Helm, offline license, SAML/OIDC/LDAP', 'Advanced RBAC, mTLS, audit export, backup/restore', 'Advanced correlation, report templates, threat intel connectors, support tooling'],
+          'Higher-value capabilities can be attached through Flyto2 Enterprise Cloud Bridge without publishing private backend implementation code.',
+        bullets: ['Commercial threat intelligence, managed runner fleets, and live remediation orchestration', 'SSO/SAML/SCIM, offline license, airgap packaging, legal hold, and support SLAs', 'Premium actions must fail closed on missing entitlement, denied role, connector error, or invalid evidence signature'],
       },
       {
-        title: 'Kernel boundary',
+        title: 'Contribution loop',
         body:
-          'flyto-core should remain the shared runtime, not a dumping ground for every product line.',
-        bullets: ['Cloud uses core for no-code automation', 'Security uses core for evidence and validation workflows', 'Data, agents, and big-data intelligence reserve core-compatible extension points'],
+          'The public repository is a generated CE mirror, not a dead fork. Accepted community changes should flow back into the private source repos and then be re-exported.',
+        bullets: ['Public PRs are reviewed as upstream patch bundles', 'The CE boundary audit blocks private code, secrets, and enterprise-only internals', 'Shared contracts keep CE, Enterprise, docs, and Docker images aligned'],
       },
     ],
     answers: [
       {
-        question: 'What is flyto-core?',
+        question: 'Is Flyto2 Warroom CE a real product or only a demo?',
         answer:
-          'flyto-core is Flyto2 execution kernel: browser automation, workflow execution, connector protocol, crawler runtime, and verification primitives.',
+          'CE is intended to be installable and useful for local evaluation, labs, and open-source users. It includes public packages, public contracts, installer scripts, Docker image coordinates, and local evidence workflows.',
       },
       {
         question: 'What stays enterprise-only?',
         answer:
-          'Airgap deployment, offline license, advanced RBAC, enterprise SSO, audit export, advanced correlation, and enterprise report templates are enterprise-oriented capabilities.',
+          'Private backend internals, billing and entitlement mutation, commercial datasets, managed remediation orchestration, enterprise identity, offline license, airgap bundles, legal hold, support tooling, and commercial AI proposal workflows stay Enterprise-only.',
+      },
+      {
+        question: 'How do public contributions benefit the main Flyto2 product?',
+        answer:
+          'The CE repository is generated from upstream allowlists. Public changes are reviewed, converted into upstream patch bundles, applied to the private source repos, tested, and then exported again, so accepted CE work improves the main product line.',
+      },
+      {
+        question: 'Can CE call premium services later?',
+        answer:
+          'Yes, through documented bridge contracts. The local Warroom keeps its database, UI, evidence timeline, and audit trail while entitled premium jobs return signed results from Flyto2 Enterprise services.',
       },
     ],
     related: [
-      { label: 'Docs', href: '/docs' },
-      { label: 'API docs', href: '/api-docs' },
+      { label: 'GitHub', href: 'https://github.com/flytohub/flyto-warroom' },
+      { label: 'Docker Hub', href: 'https://hub.docker.com/r/chesterhsu/flyto-warroom' },
+      { label: 'Self-hosted docs', href: 'https://docs.flyto2.com/warroom/self-hosted-ce' },
       { label: 'Enterprise', href: '/enterprise' },
     ],
   },

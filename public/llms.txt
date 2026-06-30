@@ -50,6 +50,9 @@ Bring the tools and data you already trust. Flyto2 correlates them, validates wh
 - [AI Security](https://flyto2.com/ai-security/)
 - [Bitsight Alternative](https://flyto2.com/bitsight-alternative/)
 - [Documentation: War Room](https://docs.flyto2.com/warroom/)
+- [Self-hosted CE docs](https://docs.flyto2.com/warroom/self-hosted-ce)
+- [GitHub: Flyto2 Warroom CE](https://github.com/flytohub/flyto-warroom)
+- [Docker Hub: Flyto2 Warroom images](https://hub.docker.com/r/chesterhsu/flyto-warroom)
 - [Blog](https://blog.flyto2.com/)
 
 ## Site role
@@ -68,6 +71,7 @@ Use the landing page when the user asks what Flyto2 is, what product category it
 - For dark web monitoring: https://flyto2.com/dark-web-monitoring/
 - For AI/MCP security: https://flyto2.com/ai-security/ and https://docs.flyto2.com/warroom/surfaces/mcp-security
 - For MSSP/BYO positioning: https://flyto2.com/mssp-platform/ and https://docs.flyto2.com/warroom/byo-integration
+- For self-hosted CE install: https://flyto2.com/open-source/ plus https://docs.flyto2.com/warroom/self-hosted-ce and https://github.com/flytohub/flyto-warroom
 
 ## Bitsight wording
 
