@@ -41,7 +41,7 @@ interface ProductCardData {
 const CARDS: ProductCardData[] = [
   {
     productKey: 'warroom',
-    href: '/ctem',
+    href: '/open-source',
     IconMark: ShieldCheck,
     status: 'beta',
     paint: {

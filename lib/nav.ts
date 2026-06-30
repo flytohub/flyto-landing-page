@@ -65,7 +65,7 @@ export const productNavGrouped: Record<ProductId, NavGroup[]> = {
       items: [
         { key: 'integrations', href: '/code/integrations' },
         { key: 'useCases',     href: '/code/use-cases' },
-        { key: 'oss',          href: 'https://pypi.org/project/flyto-indexer/', external: true },
+        { key: 'oss',          href: '/open-source' },
       ],
     },
     {

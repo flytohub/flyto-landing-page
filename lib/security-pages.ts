@@ -20,6 +20,9 @@ export interface SecurityPage {
   related: { label: string; href: string }[];
 }
 
+const WARROOM_CE_GITHUB = 'https://github.com/flytohub/flyto-warroom';
+const WARROOM_CE_DOCS = 'https://docs.flyto2.com/warroom/self-hosted-ce';
+
 export const securityPages = {
   'attack-surface-management': {
     slug: 'attack-surface-management',
@@ -29,17 +32,24 @@ export const securityPages = {
     eyebrow: 'ATTACK SURFACE MANAGEMENT',
     title: 'Attack surface management that connects exposure to evidence.',
     lede:
-      'Flyto2 complements the attack surface tools you already trust. Bring existing ASM, EASM, scanner, rating, and asset data; Flyto2 correlates it with code, dark web, pentest, and red-team evidence so teams can act on the combined picture.',
+      'Flyto2 complements the attack surface tools you already trust. Start with self-hosted Warroom CE, bring existing ASM, EASM, scanner, rating, and asset data, then correlate it with code, dark web, pentest, and red-team evidence.',
     image: '/assets/img/warroom/26-asset-map.png',
     imageAlt: 'Flyto2 asset map showing domains, services, and ownership context',
     primaryCta: { label: 'Read the CTEM workflow', href: '/ctem' },
     secondaryCta: { label: 'Open ASM docs', href: 'https://docs.flyto2.com/warroom/surfaces/attack-surface' },
     proofPoints: [
+      'Self-hosted CE baseline for local asset and exposure review',
       'BYO-friendly asset and exposure ingestion',
       'External findings correlated with owned assets and code context',
       'Pentest and red-team validation when a path needs proof',
     ],
     sections: [
+      {
+        title: 'Start in Warroom CE',
+        body:
+          'Community Edition gives teams a local cockpit for asset inventory, exposure review, evidence, and scoring before Enterprise bridge services are attached.',
+        bullets: ['Docker and GitHub distribution', 'Local database and evidence timeline', 'Bridge-ready contracts for premium correlation'],
+      },
       {
         title: 'Bring your existing ASM data',
         body:
@@ -60,9 +70,9 @@ export const securityPages = {
       },
     ],
     related: [
+      { label: 'Warroom CE', href: '/open-source' },
       { label: 'External attack surface management', href: '/external-attack-surface-management' },
-      { label: 'BYO integration model', href: '/mssp-platform' },
-      { label: 'Attack surface guide', href: 'https://blog.flyto2.com/posts/attack-surface-management-guide' },
+      { label: 'Self-hosted CE docs', href: WARROOM_CE_DOCS },
     ],
   },
   'external-attack-surface-management': {
@@ -73,17 +83,24 @@ export const securityPages = {
     eyebrow: 'EASM',
     title: 'External attack surface management for teams that need correlation.',
     lede:
-      'Flyto2 works alongside external attack surface management tools by ingesting discovered domains, services, certificates, exposed paths, and external-rating signals, then connecting them to code, asset ownership, and validation evidence.',
+      'Flyto2 works alongside external attack surface management tools. Warroom CE can hold the local external inventory; Enterprise bridge services can add premium correlation, validation, and managed execution.',
     image: '/assets/img/warroom/23-domain-security.png',
     imageAlt: 'Flyto2 domain security view with external posture findings',
     primaryCta: { label: 'See attack surface docs', href: 'https://docs.flyto2.com/warroom/surfaces/attack-surface' },
     secondaryCta: { label: 'Read the EASM guide', href: 'https://blog.flyto2.com/posts/what-is-easm-external-attack-surface-management' },
     proofPoints: [
+      'CE-ready external inventory and posture views',
       'Outside-in discovery without losing ownership context',
       'External posture tied to asset and repository evidence',
       'CTEM prioritization instead of isolated exports',
     ],
     sections: [
+      {
+        title: 'Separate local inventory from live connectors',
+        body:
+          'Teams should be able to see whether an exposure came from imported data, local discovery, a connected cloud/container source, or an Enterprise bridge job.',
+        bullets: ['Source labels for imported, local, and live connector findings', 'Project and tenant ownership context', 'Evidence lineage for every promoted issue'],
+      },
       {
         title: 'Start from the outside, then reconcile',
         body:
@@ -104,9 +121,9 @@ export const securityPages = {
       },
     ],
     related: [
+      { label: 'Warroom CE', href: '/open-source' },
       { label: 'What is EASM?', href: 'https://blog.flyto2.com/posts/what-is-easm-external-attack-surface-management' },
       { label: 'CTEM', href: '/ctem' },
-      { label: 'Bitsight alternative', href: '/bitsight-alternative' },
     ],
   },
   ctem: {
@@ -117,17 +134,24 @@ export const securityPages = {
     eyebrow: 'CONTINUOUS THREAT EXPOSURE MANAGEMENT',
     title: 'Flyto2 — Evidence-backed CTEM for attack surface, dark web, and code risk',
     lede:
-      'Flyto2 is a security war room that integrates existing ASM, dark web, code security, pentest, and red-team signals into one evidence-backed CTEM workflow.',
+      'Flyto2 is a security war room that integrates existing ASM, dark web, code security, pentest, and red-team signals into one evidence-backed CTEM workflow. Warroom CE is the installable baseline; Enterprise bridge adds premium intelligence and managed action.',
     image: '/assets/img/warroom/21-scoring-breakdown.png',
     imageAlt: 'Flyto2 scoring breakdown for CTEM security surfaces',
     primaryCta: { label: 'Read CTEM guide', href: 'https://blog.flyto2.com/posts/what-is-ctem-continuous-threat-exposure-management' },
     secondaryCta: { label: 'Open Warroom docs', href: 'https://docs.flyto2.com/warroom/' },
     proofPoints: [
+      'Self-hosted CE for local CTEM evaluation',
       'Scope, discover, prioritize, validate, and mobilize in one loop',
       'Evidence trails for findings and validation work',
       'BYO-friendly integrations for existing security tools',
     ],
     sections: [
+      {
+        title: 'Installable CTEM cockpit',
+        body:
+          'CE keeps the core loop visible: scope, discover, prioritize, validate, mobilize, and report. Enterprise bridge expands the same loop with commercial data and managed execution.',
+        bullets: ['Local projects, assets, findings, evidence, reports, and score views', 'Capability-gated premium actions', 'Signed results returned into the same evidence timeline'],
+      },
       {
         title: 'A CTEM workflow, not another isolated dashboard',
         body:
@@ -148,8 +172,8 @@ export const securityPages = {
       },
     ],
     related: [
+      { label: 'Install Warroom CE', href: '/open-source' },
       { label: 'Attack surface management', href: '/attack-surface-management' },
-      { label: 'Dark web monitoring', href: '/dark-web-monitoring' },
       { label: 'Closed-loop docs', href: 'https://docs.flyto2.com/warroom/closed-loop' },
     ],
   },
@@ -161,17 +185,24 @@ export const securityPages = {
     eyebrow: 'DARK WEB MONITORING',
     title: 'Dark web monitoring connected to the rest of your security picture.',
     lede:
-      'Bring the dark web, breach, and threat-intel feeds you already trust. Flyto2 correlates leaked credentials, IOCs, actor context, and brand abuse with owned assets, code risk, and validation workflows.',
+      'Bring the dark web, breach, and threat-intel feeds you already trust. Warroom CE shows the local correlation loop; Enterprise bridge can attach commercial feeds, refresh jobs, and signed enrichment results.',
     image: '/assets/img/warroom/19-malware-detection.png',
     imageAlt: 'Flyto2 threat and malware detection view',
     primaryCta: { label: 'Read dark web guide', href: 'https://blog.flyto2.com/posts/darkweb-monitoring-explained' },
     secondaryCta: { label: 'Open dark web docs', href: 'https://docs.flyto2.com/warroom/surfaces/darkweb-threat-intel' },
     proofPoints: [
+      'CE correlation views for imported leaks and indicators',
       'Leaked credentials tied to domains and assets',
       'IOC and actor context correlated with exposure',
       'BYO threat feeds with supplemental coverage where needed',
     ],
     sections: [
+      {
+        title: 'Make source and entitlement visible',
+        body:
+          'Threat records should show whether they came from imported evidence, a BYO feed, or an entitled Enterprise refresh job.',
+        bullets: ['Source and freshness labels', 'Credential-to-domain and asset joins', 'Premium enrichment fails closed when entitlement is missing'],
+      },
       {
         title: 'Credential monitoring with ownership context',
         body:
@@ -192,8 +223,8 @@ export const securityPages = {
       },
     ],
     related: [
+      { label: 'Warroom CE', href: '/open-source' },
       { label: 'Dark web monitoring explained', href: 'https://blog.flyto2.com/posts/darkweb-monitoring-explained' },
-      { label: 'BYO integration', href: '/mssp-platform' },
       { label: 'CTEM', href: '/ctem' },
     ],
   },
@@ -205,17 +236,24 @@ export const securityPages = {
     eyebrow: 'MSSP / BYO PLATFORM',
     title: 'Bring the tools and data you already trust.',
     lede:
-      'Flyto2 correlates them, validates what matters, and turns findings into evidence-backed action. The goal is not to replace every tool; it is to make existing signals useful together.',
+      'Flyto2 correlates them, validates what matters, and turns findings into evidence-backed action. MSSPs can evaluate with Warroom CE, then attach Enterprise bridge services for customer isolation, fleet execution, reporting, identity, and support.',
     image: '/assets/img/warroom/28-reports-builder.png',
     imageAlt: 'Flyto2 report builder for evidence-backed security workflows',
     primaryCta: { label: 'Read BYO docs', href: 'https://docs.flyto2.com/warroom/byo-integration' },
     secondaryCta: { label: 'Read MSSP overview', href: 'https://docs.flyto2.com/warroom/mssp-overview' },
     proofPoints: [
+      'CE baseline for local labs and customer demos',
       'Built for teams and service providers with existing toolchains',
       'Ingest, supplement, correlate, validate, and report',
       'Evidence-backed outputs for customers, boards, and engineering teams',
     ],
     sections: [
+      {
+        title: 'Demo locally, operate with Enterprise controls',
+        body:
+          'A service provider can start with CE workflows, then keep production customer work behind Enterprise identity, tenant isolation, audit export, and premium bridge jobs.',
+        bullets: ['Local CE evaluation', 'Customer-ready Enterprise reports', 'Capability-gated premium enrichment and remediation'],
+      },
       {
         title: 'Integrate first',
         body:
@@ -236,9 +274,9 @@ export const securityPages = {
       },
     ],
     related: [
+      { label: 'Warroom CE', href: '/open-source' },
       { label: 'BYO Integration Guide', href: 'https://docs.flyto2.com/warroom/byo-integration' },
-      { label: 'MSSP overview', href: 'https://docs.flyto2.com/warroom/mssp-overview' },
-      { label: 'How to choose an MSSP', href: 'https://blog.flyto2.com/posts/how-to-choose-an-mssp' },
+      { label: 'Self-hosted CE docs', href: WARROOM_CE_DOCS },
     ],
   },
   'ai-security': {
@@ -249,17 +287,24 @@ export const securityPages = {
     eyebrow: 'AI SECURITY PLATFORM',
     title: 'AI security posture needs code, tools, and evidence in the same room.',
     lede:
-      'Flyto2 helps security teams reason about agent-native risk by correlating MCP/tool surfaces, code intelligence, cloud and container posture, attack surface, and evidence-backed validation.',
+      'Flyto2 helps security teams reason about agent-native risk by correlating MCP/tool surfaces, code intelligence, cloud and container posture, attack surface, and evidence-backed validation. Deterministic rules remain the authority; AI is an assistant, not a gate.',
     image: '/assets/img/warroom/15-api-routes.png',
     imageAlt: 'Flyto2 API route inventory used for agent and application security review',
     primaryCta: { label: 'Read AI security guide', href: 'https://blog.flyto2.com/posts/ai-security-platform-guide' },
     secondaryCta: { label: 'Open MCP security docs', href: 'https://docs.flyto2.com/warroom/surfaces/mcp-security' },
     proofPoints: [
+      'Deterministic fallback when AI providers are unavailable',
       'MCP and tool-surface posture alongside code risk',
       'Agent-accessible APIs tied to ownership and auth context',
       'Validation workflows for high-impact findings',
     ],
     sections: [
+      {
+        title: 'Do not make AI the authority',
+        body:
+          'AI can help explain, draft, or summarize, but Flyto2 should keep authorization, entitlement, evidence validity, and final promotion decisions deterministic.',
+        bullets: ['Provider quota and entitlement gates', 'No fake provider success', 'Rules-only fallback for airgap and no-AI sites'],
+      },
       {
         title: 'Map what agents and tools can touch',
         body:
@@ -280,8 +325,8 @@ export const securityPages = {
       },
     ],
     related: [
+      { label: 'Warroom CE', href: '/open-source' },
       { label: 'MCP security docs', href: 'https://docs.flyto2.com/warroom/surfaces/mcp-security' },
-      { label: 'Code risk', href: '/code/security' },
       { label: 'AI security platform guide', href: 'https://blog.flyto2.com/posts/ai-security-platform-guide' },
     ],
   },
@@ -293,17 +338,24 @@ export const securityPages = {
     eyebrow: 'BITSIGHT ALTERNATIVE',
     title: 'A CTEM war room that can work alongside Bitsight signals.',
     lede:
-      'For teams that already use Bitsight or similar external-rating tools, Flyto2 can ingest those signals, correlate them with code, assets, dark web, and validation evidence, and help security teams act on the combined picture.',
+      'For teams that already use Bitsight or similar external-rating tools, Flyto2 can ingest those signals, correlate them with code, assets, dark web, and validation evidence, and help security teams act on the combined picture. CE is a local cockpit; Enterprise bridge is where premium managed correlation belongs.',
     image: '/assets/img/warroom/23-domain-security.png',
     imageAlt: 'Flyto2 external posture view for correlating rating and attack-surface signals',
     primaryCta: { label: 'Read comparison guide', href: 'https://blog.flyto2.com/posts/bitsight-alternatives' },
     secondaryCta: { label: 'Open BYO docs', href: 'https://docs.flyto2.com/warroom/byo-integration' },
     proofPoints: [
+      'Local CE view for imported rating and posture signals',
       'Complements external-rating workflows',
       'Uses rating signals as inputs to CTEM correlation',
       'Connects external posture with assets, code, dark web, and validation evidence',
     ],
     sections: [
+      {
+        title: 'Use CE without overclaiming replacement',
+        body:
+          'Warroom CE can show imported rating and posture signals in context. The correct positioning is complement, correlate, and validate, not a claim to fully replace Bitsight.',
+        bullets: ['External-rating imports as inputs', 'Clear source labels and evidence lineage', 'Enterprise bridge for premium enrichment and managed workflows'],
+      },
       {
         title: 'Use external ratings as inputs',
         body:
@@ -324,8 +376,8 @@ export const securityPages = {
       },
     ],
     related: [
+      { label: 'Warroom CE', href: '/open-source' },
       { label: 'Bitsight alternatives guide', href: 'https://blog.flyto2.com/posts/bitsight-alternatives' },
-      { label: 'BYO integration', href: 'https://docs.flyto2.com/warroom/byo-integration' },
       { label: 'External attack surface management', href: '/external-attack-surface-management' },
     ],
   },

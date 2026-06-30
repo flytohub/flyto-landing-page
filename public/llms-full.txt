@@ -73,17 +73,17 @@ Do not describe Flyto2 as "fully replacing Bitsight." Do not imply the product d
 
 ## Landing pages
 
-- `/pricing/`: pricing overview across Cloud automation, Security, and Enterprise.
-- `/security/`: Security product line overview.
-- `/enterprise/`: SaaS, self-hosted online, and enterprise airgap deployment overview.
-- `/airgap/`: no-required-egress enterprise airgap model.
-- `/open-source/`: open-source and open-core boundary.
-- `/compare/`: product-line comparison across Cloud, Security, Data, Agent OS, and Big Data Intelligence.
-- `/api-docs/`: API/module/workflow/MCP docs entry point.
-- `/trust/`: tenant, RBAC, evidence, consent, audit, and privacy trust model.
-- `/docs/`: technical docs entry point.
-- `/blog/`: educational and comparison content entry point.
-- `/changelog/`: product-line changelog hub.
+- `/pricing/`: Warroom CE baseline, Enterprise bridge pricing boundary, and deployment-mode overview.
+- `/security/`: Security product line overview with self-hosted CE and Enterprise-backed CTEM.
+- `/enterprise/`: CE baseline, SaaS, self-hosted online, Enterprise bridge, and enterprise airgap deployment overview.
+- `/airgap/`: no-required-egress enterprise airgap model beyond the self-hosted online CE path.
+- `/open-source/`: open-source and open-core boundary, GitHub repository, Docker Hub images, CE docs, and contribution loop.
+- `/compare/`: product-line comparison across Warroom CE, Enterprise bridge, Cloud, Security, Data, Agent OS, and Big Data Intelligence.
+- `/api-docs/`: API/module/workflow/MCP docs entry point plus Warroom CE and bridge contracts.
+- `/trust/`: CE mirror boundary, tenant, RBAC, evidence, consent, audit, and privacy trust model.
+- `/docs/`: technical docs entry point including self-hosted CE install and Warroom bridge contracts.
+- `/blog/`: educational and comparison content entry point, including open-core and self-hosted security war room topics.
+- `/changelog/`: product-line changelog hub for Cloud automation, Warroom CE, Enterprise bridge, docs, and engine releases.
 - `/ctem/`: primary CTEM page.
 - `/attack-surface-management/`: ASM page for security teams seeking attack surface management tools, software, or solutions.
 - `/external-attack-surface-management/`: EASM page for outside-in external attack surface workflows.

@@ -82,12 +82,14 @@ export function Footer() {
 
         <Column title={t('openSource')} className="md:col-span-3">
           <FooterLink href={localized('/open-source')}>Open core</FooterLink>
+          <FooterLink href="https://github.com/flytohub/flyto-warroom" external>Flyto2 Warroom CE</FooterLink>
+          <FooterLink href="https://hub.docker.com/r/chesterhsu/flyto-warroom" external>Docker images</FooterLink>
+          <FooterLink href="https://docs.flyto2.com/warroom/self-hosted-ce" external>Self-hosted docs</FooterLink>
           <FooterLink href={localized('/compare')}>Compare</FooterLink>
           <FooterLink href={localized('/airgap')}>Airgap</FooterLink>
           <FooterLink href={localized('/trust')}>Trust</FooterLink>
           <FooterLink href="https://github.com/flytohub/flyto-core" external>flyto-core</FooterLink>
           <FooterLink href="https://pypi.org/project/flyto-indexer/" external>flyto-indexer</FooterLink>
-          <FooterLink href="https://github.com/flytohub/flyto-core/blob/main/LICENSE" external>MIT licence</FooterLink>
         </Column>
       </div>
 

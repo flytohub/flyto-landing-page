@@ -4,6 +4,12 @@
 
 ### Added
 
+- Added CE-first launch surface coverage across homepage, pricing, security,
+  enterprise, airgap, compare, docs, API docs, trust, blog, changelog, footer,
+  nav, and AI-readable indexes.
+- Added public-site contract checks for Flyto2 Warroom CE GitHub, Docker Hub,
+  self-hosted docs, Enterprise bridge copy, and canonical default-locale
+  routing.
 - Added project memory files, workflow docs, and handoff registry.
 - Added `npm run geo:logs` to analyze AI crawler access logs and produce JSON,
   CSV, and Markdown evidence.
@@ -19,6 +25,10 @@
 
 ### Changed
 
+- Changed homepage Warroom entry and CTA to lead with installable Warroom CE
+  and Enterprise bridge upgrade paths.
+- Replaced the next-intl default-locale middleware loop with deterministic
+  English canonical rewrite and explicit non-English locale handling.
 - Documented the current English-first canonical SEO strategy as an explicit P1
   multilingual SEO gap.
 - Updated the Wrangler/Miniflare dependency chain and pinned PostCSS via npm

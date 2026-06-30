@@ -42,54 +42,65 @@ export interface PublicRoutePage {
   related: PublicRouteLink[];
 }
 
+const WARROOM_CE_GITHUB = 'https://github.com/flytohub/flyto-warroom';
+const WARROOM_CE_DOCKER = 'https://hub.docker.com/r/chesterhsu/flyto-warroom';
+const WARROOM_CE_DOCS = 'https://docs.flyto2.com/warroom/self-hosted-ce';
+const WARROOM_DOCS = 'https://docs.flyto2.com/warroom/';
+
 export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
   pricing: {
     id: 'pricing',
     path: 'pricing',
     eyebrow: 'Pricing',
-    title: 'Flyto2 pricing spans automation, security, and enterprise deployment.',
+    title: 'Flyto2 pricing starts with Warroom CE and scales into Enterprise.',
     lede:
-      'Flyto2 is one product system with multiple surfaces: Cloud automation, Warroom security, future Data, zero-person company agents, and big-data intelligence. Pricing starts with the surface you need and keeps capability enforcement in Flyto2 Engine.',
+      'Flyto2 Warroom CE is the installable self-hosted baseline. Enterprise pricing unlocks the governed bridge for cloud-backed intelligence, managed remediation, fleet execution, SSO, airgap, support, and compliance controls.',
     metaTitle: 'Flyto2 pricing overview',
     metaDescription:
-      'Pricing overview for Flyto2 Cloud automation, Warroom security, open-core usage, and enterprise deployment.',
-    primaryCta: { label: 'Cloud pricing', href: '/cloud/pricing' },
-    secondaryCta: { label: 'Code security pricing', href: '/code/pricing' },
+      'Pricing overview for Flyto2 Warroom CE, open-core usage, Enterprise bridge capabilities, and deployment modes.',
+    primaryCta: { label: 'Start with Warroom CE', href: '/open-source' },
+    secondaryCta: { label: 'Enterprise deployment', href: '/enterprise' },
     sections: [
       {
-        title: 'Cloud / Apps / Automation',
+        title: 'Community Edition',
         body:
-          'For browser automation, crawler apps, workflow templates, marketplace flows, and per-call execution.',
-        bullets: ['Free local use for individuals', 'Pro and Team for hosted runs and collaboration', 'Templates and recipes can be reused across security and data workflows'],
+          'CE is the public self-hosted path for teams that want to evaluate the security war room locally before buying managed capabilities.',
+        bullets: ['Local JWT auth, local database, Docker Compose, and installer scripts', 'Code intelligence, CTEM posture, evidence, scoring, reports, and compliance surfaces', 'Public contracts keep CE aligned with Flyto2 Engine, Core, Code, and i18n'],
       },
       {
-        title: 'Security',
+        title: 'Enterprise bridge',
         body:
-          'For code security, CTEM, red-team validation, dark web, cloud posture, AI governance, reports, and compliance.',
-        bullets: ['Plans resolve into engine capability snapshots', 'Reports and exports can be separately gated', 'Historical evidence remains visible even when metered actions are exhausted'],
+          'Enterprise adds commercial services without turning the open repository into a private source dump.',
+        bullets: ['Commercial threat intelligence, managed runner fleets, and live remediation orchestration', 'AI proposal review, premium reports, and advanced correlation are gated by capability and entitlement', 'Premium actions fail closed on missing license, denied role, connector error, or invalid evidence signature'],
       },
       {
-        title: 'Enterprise',
+        title: 'Deployment and governance',
         body:
-          'For self-hosted online and enterprise airgap deployments with SSO, offline license, audit export, and local storage.',
-        bullets: ['Deployment mode changes provider boundaries', 'Airgap has no required external egress', 'Commercial licensing does not put Stripe logic in product handlers'],
+          'Enterprise packaging covers teams that need identity, audit, residency, support, and airgap boundaries.',
+        bullets: ['SSO/SAML/SCIM, RBAC, audit export, legal hold, retention, and support SLAs', 'Self-hosted online and enterprise airgap deployment modes', 'Commercial licensing stays in the engine entitlement layer, not scattered across product handlers'],
       },
     ],
     answers: [
       {
-        question: 'Is Flyto2 priced as one product or separate products?',
+        question: 'Can teams start without talking to sales?',
         answer:
-          'Flyto2 is a single product system with multiple surfaces. Customers buy the surfaces and capabilities they need; Flyto2 Engine resolves those inputs into capability snapshots.',
+          'Yes. Flyto2 Warroom CE is the public installable baseline on GitHub and Docker Hub. Teams can evaluate the war room locally, then attach Enterprise services when they need managed intelligence, remediation, identity, or support.',
       },
       {
-        question: 'Does a paid scan hide old data when credits run out?',
+        question: 'Does a paid gate hide old evidence when credits run out?',
         answer:
           'No. Metered actions can be blocked when credits are exhausted, but historical findings, evidence, and reports should remain visible through the correct read capability.',
       },
+      {
+        question: 'What is the commercial boundary?',
+        answer:
+          'CE contains the open-core product and public contracts. Enterprise-only code, commercial datasets, managed remediation, enterprise identity, offline license, support tooling, and premium cloud bridge execution stay gated.',
+      },
     ],
     related: [
-      { label: 'Cloud pricing', href: '/cloud/pricing' },
-      { label: 'Security pricing', href: '/code/pricing' },
+      { label: 'Warroom CE', href: '/open-source' },
+      { label: 'GitHub repository', href: WARROOM_CE_GITHUB },
+      { label: 'Self-hosted docs', href: WARROOM_CE_DOCS },
       { label: 'Enterprise deployment', href: '/enterprise' },
     ],
   },
@@ -99,13 +110,19 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
     eyebrow: 'Flyto2 Security',
     title: 'Security is the evidence-backed CTEM product line inside Flyto2.',
     lede:
-      'Flyto2 Security brings code risk, external attack surface, pentest validation, red-team workflows, dark web intelligence, AI governance, cloud posture, reports, and compliance into one governed war room.',
+      'Flyto2 Security starts as an installable Warroom CE and grows into Enterprise-backed CTEM. Code risk, external attack surface, pentest validation, red-team workflows, dark web intelligence, AI governance, cloud posture, reports, and compliance stay in one governed evidence loop.',
     metaTitle: 'Flyto2 Security',
     metaDescription:
       'Flyto2 Security is the CTEM and evidence-backed security product line for code security, external attack surface, pentest validation, AI governance, reports, and compliance.',
-    primaryCta: { label: 'Explore Warroom', href: '/code' },
+    primaryCta: { label: 'Install Warroom CE', href: '/open-source' },
     secondaryCta: { label: 'Read CTEM page', href: '/ctem' },
     sections: [
+      {
+        title: 'Self-hosted baseline',
+        body:
+          'Warroom CE gives teams a public, local security cockpit before they attach premium data, identity, support, or managed execution.',
+        bullets: ['GitHub and Docker Hub distribution', 'Local orgs, evidence, reports, scoring, and compliance surfaces', 'Enterprise bridge contracts for premium jobs and signed results'],
+      },
       {
         title: 'Security surfaces',
         body:
@@ -138,9 +155,10 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
       },
     ],
     related: [
+      { label: 'Open source and CE', href: '/open-source' },
       { label: 'CTEM', href: '/ctem' },
       { label: 'Attack surface management', href: '/attack-surface-management' },
-      { label: 'Trust', href: '/trust' },
+      { label: 'Self-hosted docs', href: WARROOM_CE_DOCS },
     ],
   },
   enterprise: {
@@ -149,13 +167,19 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
     eyebrow: 'Enterprise',
     title: 'Flyto2 Enterprise keeps SaaS, self-hosted, and airgap boundaries explicit.',
     lede:
-      'Enterprise deployment is not a branding toggle. Flyto2 separates providers, licenses, storage, identity, audit, backup, and egress behavior by deployment mode.',
+      'Enterprise deployment is not a branding toggle. Flyto2 Warroom CE is the self-hosted baseline; Enterprise adds explicit provider, license, storage, identity, audit, backup, support, and egress boundaries.',
     metaTitle: 'Flyto2 Enterprise deployment',
     metaDescription:
       'Enterprise deployment overview for Flyto2 SaaS, self-hosted online, and enterprise airgap modes.',
     primaryCta: { label: 'Airgap details', href: '/airgap' },
-    secondaryCta: { label: 'Trust model', href: '/trust' },
+    secondaryCta: { label: 'Start with CE', href: '/open-source' },
     sections: [
+      {
+        title: 'Community baseline',
+        body:
+          'The public CE line proves the war room can be installed, inspected, tested, and patched without waiting for a private sales path.',
+        bullets: ['Public GitHub repository and Docker images', 'Local database, local auth, evidence timeline, and report surfaces', 'Contribution loop feeds accepted CE changes back upstream'],
+      },
       {
         title: 'SaaS',
         body:
@@ -190,7 +214,7 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
     related: [
       { label: 'Airgap', href: '/airgap' },
       { label: 'Open source and open core', href: '/open-source' },
-      { label: 'Security', href: '/security' },
+      { label: 'Warroom CE docs', href: WARROOM_CE_DOCS },
     ],
   },
   airgap: {
@@ -199,7 +223,7 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
     eyebrow: 'Airgap',
     title: 'Flyto2 airgap mode is built around no required external egress.',
     lede:
-      'Enterprise airgap deployments use local identity, offline license, customer storage, local AI endpoints or rules-only fallback, offline updates, and local observability.',
+      'Flyto2 Warroom CE covers self-hosted online evaluation. Enterprise airgap goes further: local identity, offline license, customer storage, local AI endpoints or rules-only fallback, offline updates, and local observability with no required external egress.',
     metaTitle: 'Flyto2 enterprise airgap',
     metaDescription:
       'Flyto2 airgap deployment model with offline license, local storage, local identity, local AI fallback, and no required external egress.',
@@ -209,7 +233,7 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
       {
         title: 'Provider boundary',
         body:
-          'Airgap runtime must not require Firebase, Stripe, hosted OpenAI, Google APIs, external CDNs, hosted analytics, or Flyto cloud callbacks.',
+          'Airgap runtime must not require Firebase, Stripe, hosted OpenAI, Google APIs, external CDNs, hosted analytics, Flyto cloud callbacks, Docker Hub pulls, or public GitHub access at runtime.',
         bullets: ['OIDC, SAML, LDAP, local JWT, or break-glass admin', 'Offline license instead of Stripe runtime dependency', 'MinIO, local S3, or customer Postgres'],
       },
       {
@@ -239,8 +263,8 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
     ],
     related: [
       { label: 'Enterprise', href: '/enterprise' },
+      { label: 'Self-hosted CE', href: '/open-source' },
       { label: 'Trust', href: '/trust' },
-      { label: 'API docs', href: '/api-docs' },
     ],
   },
   'open-source': {
@@ -308,20 +332,32 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
     id: 'compare',
     path: 'compare',
     eyebrow: 'Compare',
-    title: 'Compare Flyto2 surfaces by job, buyer, and runtime boundary.',
+    title: 'Compare Flyto2 CE, Enterprise, Cloud, and security surfaces.',
     lede:
-      'Flyto2 is not a single narrow tool. It converges Cloud automation, Security, future Data, zero-person company agents, and big-data intelligence on a common core while keeping product boundaries explicit.',
+      'Flyto2 is not a single narrow tool or a dead open-source fork. Warroom CE, Enterprise bridge, Cloud automation, Security, future Data, agent OS, and intelligence surfaces share contracts while keeping product and deployment boundaries explicit.',
     metaTitle: 'Compare Flyto2 product lines',
     metaDescription:
       'Comparison of Flyto2 Cloud automation, Security, Data, Zero-person Company Agent, and Big Data Intelligence product lines.',
-    primaryCta: { label: 'Cloud automation', href: '/cloud' },
+    primaryCta: { label: 'Warroom CE', href: '/open-source' },
     secondaryCta: { label: 'Security', href: '/security' },
     sections: [
       {
+        title: 'Warroom CE',
+        body:
+          'Closest category: self-hosted open-core security war room for labs, evaluation, local teams, and community contribution.',
+        bullets: ['Buyer: security engineers, founders, labs, open-source users, MSSP evaluators', 'Primary public repo: flyto-warroom generated from upstream allowlists', 'Boundary: local auth, local data, public contracts, no private enterprise internals'],
+      },
+      {
+        title: 'Enterprise bridge',
+        body:
+          'Closest category: enterprise security operations platform with cloud-backed intelligence, managed runners, identity, governance, and support.',
+        bullets: ['Buyer: security teams, MSSPs, compliance owners, platform teams', 'Primary private repos: flyto-engine, flyto-code, flyto-cloud, flyto-core, flyto-i18n', 'Boundary: entitlement, RBAC, signed evidence, premium actions, deployment edition'],
+      },
+      {
         title: 'Cloud / Apps / Automation',
         body:
-          'Closest category: n8n-like automation, but focused on AI, browser automation, crawler apps, templates, and marketplace flows.',
-        bullets: ['Buyer: operations, growth, content, data collection, business automation', 'Primary repo: flyto-cloud plus flyto-core', 'Boundary: no-code automation surface'],
+          'Closest category: n8n-like automation, but focused on browser automation, crawler apps, templates, and evidence-producing workflows.',
+        bullets: ['Buyer: operations, growth, content, data collection, business automation', 'Primary repo: flyto-cloud plus flyto-core', 'Boundary: no-code automation and deterministic execution substrate'],
       },
       {
         title: 'Security',
@@ -349,9 +385,9 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
       },
     ],
     related: [
-      { label: 'Cloud', href: '/cloud' },
+      { label: 'Warroom CE', href: '/open-source' },
+      { label: 'Docker Hub', href: WARROOM_CE_DOCKER },
       { label: 'Security', href: '/security' },
-      { label: 'Open core', href: '/open-source' },
     ],
   },
   'api-docs': {
@@ -360,7 +396,7 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
     eyebrow: 'API docs',
     title: 'Flyto2 API docs start with workflows, modules, MCP, and Warroom contracts.',
     lede:
-      'The public product site points AI crawlers and developers to the authoritative docs surface for Flyto2 Core modules, workflow recipes, MCP transport, and Warroom security APIs.',
+      'The public product site points AI crawlers and developers to the authoritative docs surface for Flyto2 Core modules, workflow recipes, MCP transport, Warroom CE installation, bridge contracts, and security APIs.',
     metaTitle: 'Flyto2 API docs',
     metaDescription:
       'Entry point for Flyto2 API, module, workflow, MCP, and Warroom documentation.',
@@ -380,10 +416,10 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
         bullets: ['stdio and streamable HTTP docs', 'Client configuration', 'Tool-surface security posture'],
       },
       {
-        title: 'Warroom APIs',
+        title: 'Warroom CE and bridge APIs',
         body:
-          'Security APIs are governed by engine membership, entitlement, RBAC, capability, and tenant-isolation checks.',
-        bullets: ['Capabilities endpoint', 'Report and evidence APIs', 'CTEM and red-team workflows'],
+          'Security APIs are governed by engine membership, entitlement, RBAC, capability, tenant isolation, and evidence signature checks.',
+        bullets: ['Capabilities endpoint', 'Report and evidence APIs', 'CTEM, red-team, and premium bridge workflows'],
       },
     ],
     answers: [
@@ -400,8 +436,8 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
     ],
     related: [
       { label: 'Docs', href: 'https://docs.flyto2.com/' },
+      { label: 'Self-hosted CE', href: WARROOM_CE_DOCS },
       { label: 'Modules', href: 'https://docs.flyto2.com/modules/' },
-      { label: 'Warroom API', href: 'https://docs.flyto2.com/warroom/api' },
     ],
   },
   trust: {
@@ -410,13 +446,19 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
     eyebrow: 'Trust',
     title: 'Flyto2 trust is built around boundaries, consent, evidence, and audit.',
     lede:
-      'The trust model separates tenant data, dynamic scan consent, RBAC, capability gates, report export, AI evidence handling, and deployment provider boundaries.',
+      'The trust model separates the public CE mirror, private enterprise internals, tenant data, dynamic scan consent, RBAC, capability gates, report export, AI evidence handling, and deployment provider boundaries.',
     metaTitle: 'Flyto2 trust and security',
     metaDescription:
       'Trust overview for Flyto2 tenant isolation, RBAC, audit logs, dynamic scan consent, AI evidence handling, and enterprise deployment boundaries.',
     primaryCta: { label: 'Security product', href: '/security' },
     secondaryCta: { label: 'Enterprise', href: '/enterprise' },
     sections: [
+      {
+        title: 'Open-core boundary',
+        body:
+          'The public CE repository is generated from allowlisted source, contracts, docs, and UI surfaces. It is not a dump of private enterprise backend internals.',
+        bullets: ['CE boundary audit blocks secrets and enterprise-only internals', 'Premium bridge calls require capability, license, and signed evidence checks', 'Public contributions flow back through upstream review before re-export'],
+      },
       {
         title: 'Tenant and RBAC boundary',
         body:
@@ -450,8 +492,8 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
     ],
     related: [
       { label: 'Security', href: '/security' },
+      { label: 'Open core', href: '/open-source' },
       { label: 'Airgap', href: '/airgap' },
-      { label: 'Privacy', href: '/privacy' },
     ],
   },
   docs: {
@@ -460,7 +502,7 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
     eyebrow: 'Docs',
     title: 'Flyto2 docs are the technical citation surface.',
     lede:
-      'Use docs.flyto2.com for implementation details, module contracts, workflow recipes, MCP transport, Warroom APIs, and product-line architecture.',
+      'Use docs.flyto2.com for implementation details, Warroom CE installation, module contracts, workflow recipes, MCP transport, bridge contracts, security APIs, and product-line architecture.',
     metaTitle: 'Flyto2 docs',
     metaDescription:
       'Documentation entry point for Flyto2 Core, Cloud automation, Security Warroom, modules, workflows, MCP, and product architecture.',
@@ -482,8 +524,8 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
       {
         title: 'Warroom',
         body:
-          'Warroom docs cover CTEM, closed-loop validation, BYO integration, red-team, score events, and security APIs.',
-        bullets: ['Closed-loop CTEM', 'BYO integrations', 'Warroom API'],
+          'Warroom docs cover CE installation, CTEM, closed-loop validation, BYO integration, red-team, score events, security APIs, and bridge boundaries.',
+        bullets: ['Self-hosted CE install', 'Closed-loop CTEM', 'BYO integrations and Warroom API'],
       },
     ],
     answers: [
@@ -500,8 +542,8 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
     ],
     related: [
       { label: 'Docs home', href: 'https://docs.flyto2.com/' },
+      { label: 'Self-hosted CE', href: WARROOM_CE_DOCS },
       { label: 'API docs', href: '/api-docs' },
-      { label: 'Blog', href: '/blog' },
     ],
   },
   blog: {
@@ -510,7 +552,7 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
     eyebrow: 'Blog',
     title: 'Flyto2 blog is the educational and comparison surface.',
     lede:
-      'The blog answers search-intent questions: what is CTEM, how to compare tools, how attack surface and dark web signals connect, and how AI visibility/GEO content should be structured.',
+      'The blog answers search-intent questions: what is CTEM, how to compare tools, how self-hosted CE differs from Enterprise, how attack surface and dark web signals connect, and how AI visibility/GEO content should be structured.',
     metaTitle: 'Flyto2 blog',
     metaDescription:
       'Blog entry point for Flyto2 educational content, CTEM explanations, comparisons, security strategy, automation, and AI visibility.',
@@ -521,7 +563,7 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
         title: 'SEO foundation',
         body:
           'Blog posts answer ordinary search questions so Google and Bing can find and index Flyto2 content.',
-        bullets: ['What is CTEM?', 'Attack surface management comparisons', 'Dark web monitoring and threat intel explainers'],
+        bullets: ['What is CTEM?', 'Self-hosted security war room and open-core comparisons', 'Attack surface management and dark web monitoring explainers'],
       },
       {
         title: 'AEO answer blocks',
@@ -550,8 +592,8 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
     ],
     related: [
       { label: 'Blog home', href: 'https://blog.flyto2.com/' },
+      { label: 'Open core', href: '/open-source' },
       { label: 'Docs', href: '/docs' },
-      { label: 'Compare', href: '/compare' },
     ],
   },
   changelog: {
@@ -560,7 +602,7 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
     eyebrow: 'Changelog',
     title: 'Flyto2 changelogs separate product changes from technical release notes.',
     lede:
-      'Cloud automation, Security Warroom, docs, and engine release notes should remain traceable so customers and AI crawlers can understand what changed and where.',
+      'Cloud automation, Warroom CE, Enterprise bridge, docs, and engine release notes should remain traceable so customers, community users, and AI crawlers can understand what changed and where.',
     metaTitle: 'Flyto2 changelog',
     metaDescription:
       'Changelog hub for Flyto2 Cloud automation, Security Warroom, docs, and release notes.',
@@ -576,8 +618,8 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
       {
         title: 'Security',
         body:
-          'Security release notes should cover CTEM, code security, report, evidence, red-team, AI governance, cloud, dark web, and entitlement changes.',
-        bullets: ['Capability and RBAC changes', 'Report/export behavior', 'Evidence and consent updates'],
+          'Security release notes should cover CE distribution, CTEM, code security, report, evidence, red-team, AI governance, cloud, dark web, and entitlement changes.',
+        bullets: ['CE Docker, GitHub, and installer changes', 'Capability and RBAC changes', 'Report/export behavior and evidence consent updates'],
       },
       {
         title: 'Docs and trust',
@@ -600,8 +642,8 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
     ],
     related: [
       { label: 'Cloud changelog', href: '/cloud/changelog' },
+      { label: 'Warroom CE', href: '/open-source' },
       { label: 'Docs', href: '/docs' },
-      { label: 'Trust', href: '/trust' },
     ],
   },
 };

@@ -1,15 +1,25 @@
 # State
 
-Current state on 2026-06-21:
+Current state on 2026-07-01:
 
 - The site has public routes for Cloud, templates, recipes, pricing,
   changelog, CTEM/security pages, dark web monitoring, whitepapers, legal pages,
   and discussions.
+- Homepage, footer, Warroom product entry, pricing, security, enterprise,
+  airgap, compare, API docs, trust, docs, blog, and changelog now describe
+  Flyto2 Warroom CE as the installable self-hosted baseline and Enterprise
+  bridge as the gated upgrade path.
 - `robots.txt`, `llms.txt`, and `llms-full.txt` exist.
 - Public crawler policy allows search and user-triggered AI retrieval while
   blocking AI training crawlers.
+- English canonical public routes rewrite to the internal `/en/...` app route
+  without redirect loops; `/en/...` redirects to the canonical unprefixed URL,
+  while non-English locale prefixes remain reachable.
 - `scripts/analyze-ai-crawler-logs.mjs` can produce JSON, CSV, and Markdown GEO
   crawler evidence from access logs.
+- `npm run audit:public-site` guards CE launch links, Docker/GitHub/docs
+  distribution channels, Enterprise bridge language, and canonical locale
+  middleware behavior.
 
 Known gaps:
 

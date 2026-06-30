@@ -46,6 +46,51 @@ const expectedCrawlerPolicies = [
   'FacebookBot',
 ];
 
+const launchSurfaceContracts = {
+  'lib/public-route-pages.ts': [
+    'https://github.com/flytohub/flyto-warroom',
+    'https://hub.docker.com/r/chesterhsu/flyto-warroom',
+    'https://docs.flyto2.com/warroom/self-hosted-ce',
+    'Warroom CE',
+    'Enterprise bridge',
+    'Premium actions fail closed',
+  ],
+  'lib/security-pages.ts': [
+    'self-hosted Warroom CE',
+    'Enterprise bridge',
+    'Self-hosted CE docs',
+    '/open-source',
+  ],
+  'components/sections/ProductPicker.tsx': [
+    "href: '/open-source'",
+  ],
+  'components/layout/Footer.tsx': [
+    'Flyto2 Warroom CE',
+    'Docker images',
+    'Self-hosted docs',
+  ],
+  'lib/nav.ts': [
+    "{ key: 'oss',          href: '/open-source' }",
+  ],
+  'middleware.ts': [
+    'x-flyto-internal-locale-rewrite',
+    'X-NEXT-INTL-LOCALE',
+    'NextResponse.rewrite',
+    'NextResponse.redirect',
+  ],
+  'public/llms.txt': [
+    'GitHub: Flyto2 Warroom CE',
+    'Docker Hub: Flyto2 Warroom images',
+    'Enterprise bridge',
+    'Do not describe CE as a full Enterprise source release',
+  ],
+  'public/llms-full.txt': [
+    'Self-hosted CE and distribution channels',
+    'Warroom CE, Enterprise bridge',
+    'CE mirror boundary',
+  ],
+};
+
 const failures = [];
 
 function read(relativePath) {
@@ -124,10 +169,19 @@ for (const token of ['openGraph', 'twitter', 'summary_large_image']) {
   }
 }
 
+for (const [file, tokens] of Object.entries(launchSurfaceContracts)) {
+  const content = read(file);
+  for (const token of tokens) {
+    if (!content.includes(token)) {
+      failures.push(`${file} missing launch-surface contract token: ${token}`);
+    }
+  }
+}
+
 if (failures.length) {
   console.error('public-site contract audit failed:');
   for (const failure of failures) console.error(`- ${failure}`);
   process.exit(1);
 }
 
-console.log(`public-site contract audit passed: ${productRoutes.length} canonical routes and ${expectedCrawlerPolicies.length} crawler policies`);
+console.log(`public-site contract audit passed: ${productRoutes.length} canonical routes, ${expectedCrawlerPolicies.length} crawler policies, and ${Object.keys(launchSurfaceContracts).length} launch-surface contracts`);

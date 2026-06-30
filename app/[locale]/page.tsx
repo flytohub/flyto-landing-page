@@ -106,10 +106,10 @@ export default async function HomePage({
       <Integrations />
       <FAQ namespace="home.faq" />
       <CTASection
-        primaryHref="/ctem"
-        secondaryHref="/mssp-platform"
-        primaryIcon="BookOpen"
-        secondaryIcon="CodeIcon"
+        primaryHref="/open-source"
+        secondaryHref="/enterprise"
+        primaryIcon="CodeIcon"
+        secondaryIcon="BookOpen"
       />
     </>
   );

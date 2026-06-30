@@ -70,11 +70,11 @@
       "warroom": {
         "name": "Warroom",
         "statusLabel": "BETA",
-        "tagline": "Evidence-backed CTEM across ASM, EASM, dark web, code risk, pentest, and red-team signals.",
-        "point1": "Bring the tools and data you already trust",
-        "point2": "Correlate external, internal, and threat signals",
-        "point3": "Validate what matters with replayable evidence",
-        "cta": "Explore CTEM"
+        "tagline": "Self-hosted open-core security war room for CTEM, code risk, evidence, scoring, and compliance.",
+        "point1": "Install Warroom CE from GitHub or Docker Hub",
+        "point2": "Correlate external, code, cloud, container, and threat signals",
+        "point3": "Attach Enterprise bridge services through capability gates",
+        "cta": "Install Warroom CE"
       }
     },
     "benefits": {
@@ -246,11 +246,11 @@
       ]
     },
     "cta": {
-      "label": "START WITH THE SECURITY LOOP",
-      "title": "Connect your signals. Validate what matters.",
-      "body": "Explore the CTEM workflow or the MSSP-ready BYO integration model.",
-      "primary": "Explore CTEM",
-      "secondary": "MSSP platform"
+      "label": "START SELF-HOSTED",
+      "title": "Install CE. Upgrade when the bridge matters.",
+      "body": "Start with the open-core Warroom, then attach Enterprise identity, intelligence, remediation, and airgap controls when the workflow needs them.",
+      "primary": "Install Warroom CE",
+      "secondary": "Enterprise bridge"
     }
   },
   "cloud": {
