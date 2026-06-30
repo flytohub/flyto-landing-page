@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@opennextjs/cloudflare": "^1.19.11",
-    "@tailwindcss/postcss": "^4.3.1",
+    "@tailwindcss/postcss": "^4.3.2",
     "@types/node": "26.0.0",
     "@types/react": "19.0.7",
     "@types/react-dom": "19.0.3",
