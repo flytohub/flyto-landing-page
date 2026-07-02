@@ -32,7 +32,7 @@
     "aiSecurity": "AI Security"
   },
   "footer": {
-    "tagline": "Evidence-backed CTEM for attack surface, dark web, code risk, red-team validation, and BYO integrations.",
+    "tagline": "BYO offensive validation for existing security tools: verified attack paths, pentest evidence, and red-team scenarios.",
     "cloudTagline": "Deterministic execution engine for evidence and replay.",
     "warroomTagline": "Security war room. Correlate, validate, and act with evidence.",
     "products": "Products",
@@ -45,14 +45,14 @@
     "copyright": "© 2026 FLYTO2"
   },
   "home": {
-    "metaTitle": "Evidence-backed CTEM for attack surface, dark web, and code risk",
-    "metaDescription": "Flyto2 is a security war room that integrates existing ASM, dark web, code security, pentest, and red-team signals into one evidence-backed CTEM workflow.",
+    "metaTitle": "BYO Offensive Validation Platform for Existing Security Tools",
+    "metaDescription": "Flyto2 turns ASM, SAST, DAST, cloud, dark web, and scanner findings into verified attack paths, pentest evidence, and red-team scenarios.",
     "hero": {
-      "eyebrow": "FLYTO2 · SECURITY WAR ROOM",
-      "title": "Connect your security signals.",
-      "titleAccent": "Act with evidence.",
-      "lede": "Flyto2 is a security war room that integrates existing ASM, dark web, code security, pentest, and red-team signals into one evidence-backed CTEM workflow.",
-      "reassure": "CTEM · ASM / EASM · BYO-FRIENDLY"
+      "eyebrow": "FLYTO2 · BYO OFFENSIVE VALIDATION",
+      "title": "Bring your own tools.",
+      "titleAccent": "Validate attack paths.",
+      "lede": "Flyto2 turns findings from ASM, SAST, DAST, cloud, dark web, and vulnerability scanners into safe, replayable pentest evidence and red-team scenarios.",
+      "reassure": "ASM · SAST · DAST · CSPM · SIEM · RED TEAM"
     },
     "products": {
       "label": "SECURITY-FIRST",
@@ -70,9 +70,9 @@
       "warroom": {
         "name": "Warroom",
         "statusLabel": "BETA",
-        "tagline": "Self-hosted open-core security war room for CTEM, code risk, evidence, scoring, and compliance.",
+        "tagline": "Self-hosted open-core security war room for BYO findings, attack paths, evidence, remediation, scoring, and compliance.",
         "point1": "Install Warroom CE from GitHub or Docker Hub",
-        "point2": "Correlate external, code, cloud, container, and threat signals",
+        "point2": "Turn imported findings into verified attack paths",
         "point3": "Attach Enterprise bridge services through capability gates",
         "cta": "Install Warroom CE"
       }
@@ -120,32 +120,32 @@
     },
     "features": {
       "label": "WHY FLYTO2",
-      "title": "Built for security teams that already have tools.",
+      "title": "Built for security teams that already bought tools.",
       "items": [
         {
           "icon": "Radar",
-          "title": "ASM / EASM correlation",
-          "body": "Connect external attack surface findings with ownership, assets, code, credentials, and validation evidence."
+          "title": "BYO finding intake",
+          "body": "Connect ASM, EASM, SAST, DAST, CSPM, SIEM, threat-feed, repo, and asset data without forcing a rip-and-replace."
         },
         {
           "icon": "KeyRound",
-          "title": "Dark web and credential signals",
-          "body": "Use breach, IOC, actor, and brand-abuse signals as inputs to the same CTEM workflow."
+          "title": "Threat signals as inputs",
+          "body": "Use breach, IOC, actor, credential, and brand-abuse signals as context for attack-path validation."
         },
         {
           "icon": "Code2",
-          "title": "Code risk in the same picture",
-          "body": "SCA, SAST, secrets, license, API, and reachability context help explain whether an exposure matters."
+          "title": "Code risk in the path",
+          "body": "SCA, SAST, secrets, license, API, and reachability context help explain whether an external exposure is exploitable."
         },
         {
           "icon": "Crosshair",
-          "title": "Pentest validation",
-          "body": "Turn selected findings into controlled, consented validation workflows with replayable evidence."
+          "title": "Safe pentest validation",
+          "body": "Turn selected findings into controlled, consented validation workflows with replayable browser, API, and evidence artifacts."
         },
         {
           "icon": "Swords",
-          "title": "Red-team simulation",
-          "body": "Chain verified findings into adversary-style exercises that feed back into prioritization."
+          "title": "Red-team scenarios",
+          "body": "Chain verified findings into adversary-style exercises that feed detection expectations and prioritization."
         },
         {
           "icon": "FileCheck2",
@@ -215,7 +215,7 @@
       "label": "ALSO BUILDING",
       "status": "Pre-launch",
       "title": "Warroom — application security war room.",
-      "body": "A separate product for the security side of shipping software. SCA, SAST, secrets, license, CVE, pentest — under one A–F health score.",
+      "body": "A separate product for the security side of shipping software. Bring scanner findings, build attack paths, validate safely, and close the loop with evidence.",
       "cta": "Visit Warroom"
     },
     "faq": {
@@ -229,7 +229,7 @@
         },
         {
           "q": "How does Flyto2 fit a CTEM program?",
-          "a": "Flyto2 keeps scoping, discovery, prioritization, validation, and mobilization in one evidence-backed workflow. External findings, code risk, leaked credentials, asset ownership, pentest results, and red-team evidence stay connected."
+          "a": "Flyto2 can support CTEM, but the sharper positioning is the offensive validation layer on top of CTEM inputs. External findings, code risk, leaked credentials, asset ownership, pentest results, and red-team evidence stay connected."
         },
         {
           "q": "Can Flyto2 work with Bitsight?",

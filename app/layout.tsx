@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://flyto2.com'),
   title: { default: 'Flyto2', template: '%s — Flyto2' },
   description:
-    'Evidence-backed CTEM for attack surface, dark web, code risk, red-team validation, and BYO security integrations.',
+    'BYO offensive validation platform that turns existing security-tool findings into verified attack paths, pentest evidence, and red-team scenarios.',
   icons: { icon: '/favicon.ico' },
 };
 

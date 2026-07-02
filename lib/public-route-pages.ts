@@ -109,26 +109,26 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
     id: 'security',
     path: 'security',
     eyebrow: 'Flyto2 Security',
-    title: 'Security is the evidence-backed CTEM product line inside Flyto2.',
+    title: 'Flyto2 Security is the BYO offensive validation layer above your existing stack.',
     lede:
-      'Flyto2 Security starts as an installable Warroom CE and grows into Enterprise-backed CTEM. Code risk, external attack surface, pentest validation, red-team workflows, dark web intelligence, AI governance, cloud posture, reports, and compliance stay in one governed evidence loop.',
-    metaTitle: 'Flyto2 Security',
+      'Flyto2 Security starts as installable Warroom CE and grows into an Enterprise bridge. Bring ASM, SAST, DAST, CSPM, SIEM, dark web, cloud, code, and scanner findings; Flyto2 turns them into verified attack paths, pentest evidence, red-team scenarios, remediation records, and compliance-ready proof.',
+    metaTitle: 'Flyto2 Security BYO offensive validation',
     metaDescription:
-      'Flyto2 Security is the CTEM and evidence-backed security product line for code security, external attack surface, pentest validation, AI governance, reports, and compliance.',
+      'Flyto2 Security turns existing security-tool findings into verified attack paths, pentest evidence, red-team scenarios, remediation records, reports, and compliance evidence.',
     primaryCta: { label: 'Install Warroom CE', href: '/open-source' },
     secondaryCta: { label: 'Read CTEM page', href: '/ctem' },
     sections: [
       {
         title: 'Self-hosted baseline',
         body:
-          'Warroom CE gives teams a public, local security cockpit before they attach premium data, identity, support, or managed execution.',
-        bullets: ['GitHub and Docker Hub distribution', 'Local orgs, evidence, reports, scoring, and compliance surfaces', 'Enterprise bridge contracts for premium jobs and signed results'],
+          'Warroom CE gives teams a public, local offensive-validation cockpit before they attach premium data, identity, support, or managed execution.',
+        bullets: ['GitHub and Docker Hub distribution', 'Local orgs, evidence, reports, scoring, and compliance surfaces', 'BYO findings stay source-labeled and bridge-ready'],
       },
       {
-        title: 'Security surfaces',
+        title: 'Existing tools are inputs',
         body:
-          'The security line is organized around concrete surfaces that can be enabled, locked as preview, or hidden by engine capability state.',
-        bullets: ['Code security and dependency evidence', 'External CTEM and attack surface', 'Dark web, brand, cloud, container, AI governance, reports, and workflow automation'],
+          'The security line is organized around concrete inputs and validation outputs that can be enabled, locked as preview, or hidden by engine capability state.',
+        bullets: ['ASM, EASM, SAST, DAST, SCA, CSPM, CNAPP, SIEM, and dark web findings', 'Attack-path hypotheses and safe validation plans', 'Evidence, remediation records, red-team scenarios, and reports'],
       },
       {
         title: 'Action gates',
@@ -139,8 +139,8 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
       {
         title: 'Evidence and audit',
         body:
-          'Security workflows are designed to produce replayable evidence and audit trails rather than static scanner exports.',
-        bullets: ['Consent is required for active dynamic scans', 'Reports separate no data, no permission, and generation states', 'Audit export and compliance templates belong to enterprise capabilities'],
+          'Security workflows are designed to prove what is exploitable rather than adding another static scanner export.',
+        bullets: ['Consent is required for active dynamic scans', 'Reports separate no data, no permission, and generation states', 'Evidence packs include replay, screenshots, DOM snapshots, network/API logs, and remediation context'],
       },
     ],
     answers: [
@@ -152,7 +152,7 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
       {
         question: 'Does Flyto2 replace existing scanners?',
         answer:
-          'Flyto2 is safer to describe as a complement and integration layer. It can ingest existing tools, correlate their signals, and validate what matters.',
+          'No. Flyto2 is the offensive validation layer above existing tools. It ingests their findings, correlates attack paths, validates what is safe to test, and returns evidence and remediation records.',
       },
     ],
     related: [
@@ -272,12 +272,12 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
     id: 'open-source',
     path: 'open-source',
     eyebrow: 'Open core',
-    title: 'Flyto2 Warroom CE is the self-hosted open-core security war room.',
+    title: 'Flyto2 Warroom CE is the self-hosted open-core offensive validation war room.',
     lede:
-      'Flyto2 Warroom CE gives teams a local installable security cockpit for code, CTEM, external posture, containers, evidence, scoring, and compliance. Enterprise features attach through clear capability gates, signed evidence, and documented bridge contracts.',
+      'Flyto2 Warroom CE gives teams a local installable cockpit for BYO findings, attack paths, safe validation, evidence, remediation, scoring, and compliance. Enterprise features attach through clear capability gates, signed evidence, and documented bridge contracts.',
     metaTitle: 'Flyto2 open source and open-core model',
     metaDescription:
-      'Install Flyto2 Warroom CE from GitHub and Docker Hub, understand the open-core boundary, and see how Enterprise capabilities attach through bridge contracts.',
+      'Install Flyto2 Warroom CE from GitHub and Docker Hub, understand the open-core offensive validation boundary, and see how Enterprise capabilities attach through bridge contracts.',
     primaryCta: { label: 'GitHub repository', href: 'https://github.com/flytohub/flyto-warroom' },
     secondaryCta: { label: 'Docker images', href: 'https://hub.docker.com/r/chesterhsu/flyto-warroom' },
     sections: [
@@ -285,7 +285,7 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
         title: 'Community Edition',
         body:
           'CE is meant to be useful on its own: local auth, local database, public contracts, installer scripts, and a Warroom UI that can be inspected and patched.',
-        bullets: ['Self-hosted Docker Compose install with local JWT auth', 'Code intelligence, CTEM posture, evidence, reports, score views, and compliance surfaces', 'Public flyto-core, flyto-indexer, flyto-i18n, flyto-code, and flyto-contracts packages'],
+        bullets: ['Self-hosted Docker Compose install with local JWT auth', 'BYO finding intake, attack-path review, evidence, reports, score views, and compliance surfaces', 'Public flyto-core, flyto-indexer, flyto-i18n, flyto-code, and flyto-contracts packages'],
       },
       {
         title: 'Enterprise bridge',
@@ -333,31 +333,31 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
     id: 'aikido-alternative',
     path: 'aikido-alternative',
     eyebrow: 'Aikido alternative',
-    title: 'Flyto2 is the open-core security war room for teams evaluating Aikido-style platforms.',
+    title: 'Flyto2 is an open-core BYO offensive validation platform for teams evaluating Aikido-style workflows.',
     lede:
-      'If you like the idea of one place for code, cloud, container, runtime, external surface, and AutoFix workflows, Flyto2 pushes that model into a self-hosted open-core war room with evidence graphs, deterministic gates, and an Enterprise bridge for premium intelligence and managed remediation.',
+      'If you like one place for code, cloud, container, runtime, external surface, and AutoFix workflows, Flyto2 takes a different angle: bring your existing tools and turn their findings into verified attack paths, safe pentest evidence, red-team scenarios, and remediation records.',
     metaTitle: 'Aikido alternative for open-core security teams',
     metaDescription:
-      'Compare Flyto2 Warroom CE with Aikido-style security platforms: self-hosted open core, evidence-backed AutoFix, CTEM, code, cloud, container, runtime, and external surface workflows.',
+      'Compare Flyto2 Warroom CE with Aikido-style security platforms: self-hosted open core, BYO offensive validation, evidence-backed AutoFix, attack paths, code, cloud, container, runtime, and external surface workflows.',
     primaryCta: { label: 'Install Warroom CE', href: '/open-source' },
     secondaryCta: { label: 'Read self-hosted docs', href: WARROOM_CE_DOCS },
     sections: [
       {
-        title: 'Self-hosted open core',
+        title: 'BYO before replacement',
         body:
-          'Flyto2 is designed to make the community edition a real product surface, not a thin marketing sample. Teams can install, inspect, patch, and validate the war room locally before deciding whether Enterprise services are needed.',
-        bullets: ['GitHub and Docker Hub distribution', 'Local auth, local database, local evidence timeline, and report surfaces', 'Public contracts for code, CTEM, container, cloud, runtime, and external evidence flows'],
+          'Flyto2 is designed to make the community edition a real product surface, not a thin marketing sample and not a rip-and-replace claim. Teams can install, inspect, patch, and validate the war room locally before deciding whether Enterprise services are needed.',
+        bullets: ['GitHub and Docker Hub distribution', 'Local auth, local database, local evidence timeline, and report surfaces', 'Public contracts for BYO findings, attack paths, code, CTEM, container, cloud, runtime, and external evidence flows'],
       },
       {
         title: 'Evidence-backed AutoFix loop',
         body:
-          'The strongest remediation story is not an AI patch button. It is a loop: finding, source, policy, proposed fix, approval, execution, verification, rollback evidence, and audit trail.',
+          'The strongest remediation story is not an AI patch button. It is a loop: source finding, attack-path context, policy, proposed fix, approval, execution, verification, rollback evidence, and audit trail.',
         bullets: ['Code and IaC fixes can become deterministic patches or gated AI proposals', 'Container and cloud fixes stay source-labeled as repo definition, live connector, or Enterprise bridge actions', 'Every accepted fix should produce verification evidence instead of only closing an alert'],
       },
       {
         title: 'One war room, many surfaces',
         body:
-          'Flyto2 treats code, cloud, container, VM/runtime, external attack surface, dark web, pentest, red-team, AI governance, and compliance as independently usable modules that can merge into one cockpit.',
+          'Flyto2 treats code, cloud, container, VM/runtime, external attack surface, dark web, pentest, red-team, AI governance, and compliance as independently usable inputs and modules that can merge into one validation cockpit.',
         bullets: ['CE gives a local cockpit for baseline workflows', 'Enterprise bridge adds premium threat intel, managed runners, live remediation, SSO, airgap, and support', 'Capability, RBAC, evidence signature, and tenant isolation gates keep modules composable without hidden fail-open behavior'],
       },
     ],
@@ -365,12 +365,12 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
       {
         question: 'Is Flyto2 trying to clone Aikido?',
         answer:
-          'No. Flyto2 should be positioned as an open-core security war room for teams evaluating Aikido-style consolidated security platforms. The core difference is self-hosted CE, evidence graph, and deterministic closed-loop remediation.',
+          'No. Flyto2 should be positioned as an open-core BYO offensive validation platform for teams evaluating Aikido-style workflows. The core difference is self-hosted CE, existing-tool ingestion, attack-path validation, evidence graph, and deterministic closed-loop remediation.',
       },
       {
         question: 'Where does Flyto2 aim to be stronger?',
         answer:
-          'Flyto2 should compete on open-core adoption, local installability, evidence-backed remediation, cross-surface CTEM correlation, deterministic gates, and the ability to keep CE useful while reserving commercial intelligence and managed action for Enterprise.',
+          'Flyto2 should compete on open-core adoption, local installability, finding-to-attack-path correlation, safe validation, evidence-backed remediation, deterministic gates, and the ability to keep CE useful while reserving commercial intelligence and managed action for Enterprise.',
       },
       {
         question: 'What should not be claimed?',

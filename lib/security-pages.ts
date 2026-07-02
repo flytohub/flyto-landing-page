@@ -128,34 +128,34 @@ export const securityPages = {
   },
   ctem: {
     slug: 'ctem',
-    metaTitle: 'Evidence-Backed CTEM for Attack Surface, Dark Web, and Code Risk',
+    metaTitle: 'BYO Offensive Validation Layer for CTEM Programs',
     metaDescription:
-      'Flyto2 is a security war room that integrates ASM, dark web, code security, pentest, and red-team signals into one evidence-backed CTEM workflow.',
+      'Flyto2 turns ASM, dark web, code security, pentest, red-team, cloud, and scanner findings into verified attack paths, evidence, and remediation records for CTEM programs.',
     eyebrow: 'CONTINUOUS THREAT EXPOSURE MANAGEMENT',
-    title: 'Flyto2 — Evidence-backed CTEM for attack surface, dark web, and code risk',
+    title: 'Flyto2 turns CTEM inputs into verified attack paths.',
     lede:
-      'Flyto2 is a security war room that integrates existing ASM, dark web, code security, pentest, and red-team signals into one evidence-backed CTEM workflow. Warroom CE is the installable baseline; Enterprise bridge adds premium intelligence and managed action.',
+      'Flyto2 is the offensive validation layer on top of CTEM inputs. Bring existing ASM, dark web, code security, pentest, red-team, cloud, and scanner signals; Warroom CE correlates them into attack hypotheses, evidence, and remediation context while Enterprise bridge adds premium intelligence and managed action.',
     image: '/assets/img/warroom/21-scoring-breakdown.png',
     imageAlt: 'Flyto2 scoring breakdown for CTEM security surfaces',
     primaryCta: { label: 'Read CTEM guide', href: 'https://blog.flyto2.com/posts/what-is-ctem-continuous-threat-exposure-management' },
     secondaryCta: { label: 'Open Warroom docs', href: 'https://docs.flyto2.com/warroom/' },
     proofPoints: [
-      'Self-hosted CE for local CTEM evaluation',
-      'Scope, discover, prioritize, validate, and mobilize in one loop',
+      'Self-hosted CE for local CTEM and validation evaluation',
+      'Findings become attack hypotheses before validation',
       'Evidence trails for findings and validation work',
       'BYO-friendly integrations for existing security tools',
     ],
     sections: [
       {
-        title: 'Installable CTEM cockpit',
+        title: 'Installable validation cockpit',
         body:
-          'CE keeps the core loop visible: scope, discover, prioritize, validate, mobilize, and report. Enterprise bridge expands the same loop with commercial data and managed execution.',
+          'CE keeps the core loop visible: ingest findings, build attack paths, validate safely, capture evidence, remediate, and report. Enterprise bridge expands the same loop with commercial data and managed execution.',
         bullets: ['Local projects, assets, findings, evidence, reports, and score views', 'Capability-gated premium actions', 'Signed results returned into the same evidence timeline'],
       },
       {
-        title: 'A CTEM workflow, not another isolated dashboard',
+        title: 'A validation workflow, not another isolated dashboard',
         body:
-          'CTEM only works when discovery, prioritization, validation, and action stay connected. Flyto2 turns those stages into one workflow that can consume your existing security data.',
+          'CTEM only works when discovery, prioritization, validation, and action stay connected. Flyto2 consumes existing security data and turns the highest-value paths into evidence-backed validation work.',
         bullets: ['External surface and asset inventory', 'Code and dependency context', 'Validation through pentest and red-team loops'],
       },
       {
