@@ -1431,7 +1431,7 @@
       "body": "ホステッド作戦本部はブラウザベース — インストール不要。Phase III が開放されたときの招待を得るためウェイトリストに参加し、オープンソーススキャナーを今日入手。",
       "primary": "ウェイトリストに参加",
       "secondary": "OSS スキャナーをインストール",
-      "emailPlaceholder": "your@email.com",
+      "emailPlaceholder": "your@flyto2.com",
       "success": "リストに追加しました！Phase III が開放されたらご連絡します。",
       "duplicate": "すでにウェイトリストに登録されています。",
       "error": "問題が発生しました。もう一度お試しください。"

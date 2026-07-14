@@ -1437,7 +1437,7 @@
       "body": "The hosted war room is browser-based — no app to install. Join the waitlist to get an invite when Phase III opens, and grab the open-source scanner today.",
       "primary": "Join the waitlist",
       "secondary": "Install the OSS scanner",
-      "emailPlaceholder": "your@email.com",
+      "emailPlaceholder": "your@flyto2.com",
       "success": "You're on the list! We'll be in touch when Phase III opens.",
       "duplicate": "You're already on the waitlist.",
       "error": "Something went wrong — try again."

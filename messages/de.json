@@ -1431,7 +1431,7 @@
       "body": "Das gehostete Lagezentrum ist browserbasiert — keine App zu installieren. Der Warteliste beitreten, um eine Einladung zu erhalten, wenn Phase III öffnet, und den Open-Source-Scanner noch heute holen.",
       "primary": "Warteliste beitreten",
       "secondary": "OSS-Scanner installieren",
-      "emailPlaceholder": "ihre@email.com",
+      "emailPlaceholder": "ihre@flyto2.com",
       "success": "Du bist auf der Liste! Wir melden uns, wenn Phase III startet.",
       "duplicate": "Du stehst bereits auf der Warteliste.",
       "error": "Etwas ist schiefgelaufen – bitte versuche es erneut."

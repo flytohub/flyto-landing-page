@@ -1431,7 +1431,7 @@
       "body": "호스팅 워룸은 브라우저 기반 — 설치할 앱이 없습니다. Phase III가 열릴 때 초대장을 받으려면 대기자 등록하고, 오늘 오픈소스 스캐너를 가져가세요.",
       "primary": "대기자 등록",
       "secondary": "OSS 스캐너 설치",
-      "emailPlaceholder": "your@email.com",
+      "emailPlaceholder": "your@flyto2.com",
       "success": "등록되었습니다! Phase III가 열리면 연락드리겠습니다.",
       "duplicate": "이미 대기자 명단에 등록되어 있습니다.",
       "error": "문제가 발생했습니다. 다시 시도해 주세요."
