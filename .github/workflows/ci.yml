@@ -44,7 +44,7 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Install Flyto Indexer
+      - name: Install Flyto2 Indexer
         run: python -m pip install "git+https://github.com/flytohub/flyto-indexer.git@main"
 
       - name: Source verify

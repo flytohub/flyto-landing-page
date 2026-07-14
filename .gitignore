@@ -41,7 +41,7 @@ out/
 *.tsbuildinfo
 next-env.d.ts
 
-# Generated Flyto indexes and navigation snapshots
+# Generated Flyto2 indexes and navigation snapshots
 .flyto/
 .flyto-index/
 

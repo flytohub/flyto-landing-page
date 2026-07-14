@@ -234,7 +234,7 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
       {
         title: 'Provider boundary',
         body:
-          'Airgap runtime must not require Firebase, Stripe, hosted OpenAI, Google APIs, external CDNs, hosted analytics, Flyto cloud callbacks, Docker Hub pulls, or public GitHub access at runtime.',
+          'Airgap runtime must not require Firebase, Stripe, hosted OpenAI, Google APIs, external CDNs, hosted analytics, Flyto2 cloud callbacks, Docker Hub pulls, or public GitHub access at runtime.',
         bullets: ['OIDC, SAML, LDAP, local JWT, or break-glass admin', 'Offline license instead of Stripe runtime dependency', 'MinIO, local S3, or customer Postgres'],
       },
       {
