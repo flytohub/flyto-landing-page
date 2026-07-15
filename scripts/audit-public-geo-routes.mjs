@@ -45,6 +45,23 @@ const sitemap = readFileSync(path.join(root, 'app', 'sitemap.ts'), 'utf8');
 if (!sitemap.includes('requiredGeoRoutes')) {
   failures.push('sitemap.ts must include requiredGeoRoutes');
 }
+for (const token of ['locales.map', 'localizedUrl', 'languageAlternates', 'alternates']) {
+  if (!sitemap.includes(token)) {
+    failures.push(`sitemap.ts missing multilingual sitemap token: ${token}`);
+  }
+}
+
+const seo = readFileSync(path.join(root, 'lib', 'seo.ts'), 'utf8');
+for (const token of ['HREFLANG_BY_LOCALE', 'x-default', 'localizedPath', 'languageAlternates', 'languages']) {
+  if (!seo.includes(token)) {
+    failures.push(`lib/seo.ts missing hreflang token: ${token}`);
+  }
+}
+
+const localeLayout = readFileSync(path.join(root, 'app', '[locale]', 'layout.tsx'), 'utf8');
+if (localeLayout.includes("locale === 'en'") && localeLayout.includes('index: false')) {
+  failures.push('locale layout must not noindex supported non-English routes');
+}
 
 const llms = readFileSync(path.join(root, 'public', 'llms.txt'), 'utf8');
 const full = readFileSync(path.join(root, 'public', 'llms-full.txt'), 'utf8');

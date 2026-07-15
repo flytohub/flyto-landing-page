@@ -2,7 +2,7 @@
  * One-shot CURATED forum seed.
  *
  * Wipes `forum_posts` (and its subcollections) then writes a hand-authored
- * corpus of high-quality, English-first questions / bug reports / feature
+ * corpus of high-quality, English-language questions / bug reports / feature
  * requests / discussions. Each post has realistic engagement counters,
  * varied authors, and a subset of admin@flyto2.com replies that read like
  * an actual product team responded.

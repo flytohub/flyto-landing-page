@@ -98,12 +98,13 @@ export default async function HomePage({
         '@id': 'https://flyto2.com/#software',
         name: 'Flyto2',
         applicationCategory: 'SecurityApplication',
-        applicationSubCategory: 'Continuous Threat Exposure Management',
+        applicationSubCategory: 'Continuous Threat Exposure Management and workflow automation',
         operatingSystem: 'Web',
         url: 'https://flyto2.com',
         description:
-          `Flyto2 is a security war room that integrates existing ASM, dark web, code security, pentest, red-team, and AI/MCP signals into one evidence-backed CTEM workflow. The core runtime provides ${FLYTO2_SEO_FACTS.coreRuntimeSummary}.`,
+          `Flyto2 combines a security war room for CTEM with Cloud, Apps, and browser automation. It integrates existing ASM, dark web, code security, pentest, red-team, and AI/MCP signals into evidence-backed workflows. The core runtime provides ${FLYTO2_SEO_FACTS.coreRuntimeSummary}.`,
         featureList: [
+          'Cloud, Apps, and browser automation workflows',
           'Evidence-backed CTEM workflow',
           'Attack surface and EASM correlation',
           'Dark web and threat intelligence correlation',

@@ -6,11 +6,16 @@ import { publicRoutePages } from '@/lib/public-route-pages';
 
 const page = publicRoutePages['aikido-alternative'];
 
-export function generateMetadata(): Metadata {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
   return {
     title: page.metaTitle,
     description: page.metaDescription,
-    alternates: pageAlternates(page.path),
+    alternates: pageAlternates(page.path, locale),
   };
 }
 

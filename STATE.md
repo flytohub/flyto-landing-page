@@ -17,7 +17,9 @@ Current state on 2026-07-01:
   blocking AI training crawlers.
 - English canonical public routes rewrite to the internal `/en/...` app route
   without redirect loops; `/en/...` redirects to the canonical unprefixed URL,
-  while non-English locale prefixes remain reachable.
+  while non-English locale prefixes are indexed as hreflang variants.
+- Sitemap and page metadata now advertise complete locale alternates for the
+  16 supported public locales.
 - `scripts/analyze-ai-crawler-logs.mjs` can produce JSON, CSV, and Markdown GEO
   crawler evidence from access logs.
 - `npm run audit:public-site` guards CE launch links, Docker/GitHub/docs
@@ -26,7 +28,6 @@ Current state on 2026-07-01:
 
 Known gaps:
 
-- Full multilingual SEO and hreflang are not currently active.
 - Enterprise, trust, airgap, open-source, API-docs, compare, pricing, docs,
   blog, changelog, and security hub routes now have source pages, sitemap
   coverage, footer discovery, and AI-readable index entries guarded by

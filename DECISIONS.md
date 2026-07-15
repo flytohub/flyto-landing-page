@@ -1,9 +1,19 @@
 # Decisions
 
-## 2026-06-21 - Public SEO is English-first for this release
+## 2026-07-15 - Public SEO is multilingual with English as x-default
 
-Decision: keep the current canonical helper English-first until the multilingual
-SEO strategy is fully verified.
+Decision: advertise all supported locale routes through canonical metadata,
+hreflang alternates, and sitemap alternates. English remains the unprefixed
+default URL and `x-default` target.
+
+Reason: the landing page has supported locale routes and localized message
+bundles, and international discovery now needs explicit alternates instead of
+leaving non-English pages reachable but undiscoverable.
+
+## 2026-06-21 - Initial SEO avoided partial hreflang
+
+Decision: keep the canonical helper limited until the multilingual SEO strategy
+is fully verified.
 
 Reason: partial hreflang is worse than no hreflang. Non-English routes are
 reachable for users, but release readiness must not claim full international

@@ -135,11 +135,13 @@ public/
 
 ## SEO / AEO / GEO infrastructure
 
-- **Sitemap**: `app/sitemap.ts` emits English-first canonical public routes,
-  plus template and whitepaper slugs.
+- **Sitemap**: `app/sitemap.ts` emits every indexed public route for every
+  supported locale, including template and whitepaper slugs, with full hreflang
+  alternate clusters and `x-default`.
 - **Per-page canonical**: pages call `pageAlternates(path, locale)` from
-  `lib/seo.ts`. The current release canonicalizes to bare English paths and
-  does not advertise hreflang alternates.
+  `lib/seo.ts`. English uses bare canonical paths, localized routes use their
+  locale-prefixed paths, and every page advertises the same 16-locale alternate
+  cluster.
 - **AI-readable files**: `public/llms.txt` and `public/llms-full.txt` provide
   citation-ready summaries for AI search and answer engines.
 - **Crawler policy**: `public/robots.txt` allows search and user-triggered AI

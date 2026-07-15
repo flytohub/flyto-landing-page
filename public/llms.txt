@@ -73,6 +73,13 @@ Bring the tools and data you already trust. Flyto2 correlates them, validates wh
 - `github.com/flytohub/flyto-warroom` is the public Flyto2 Warroom CE source repository.
 - `hub.docker.com/r/chesterhsu/flyto-warroom` is the Docker Hub distribution channel for Flyto2 Warroom CE images.
 
+## Multilingual SEO
+
+- English public URLs are unprefixed, for example `https://flyto2.com/ctem/`.
+- Localized public URLs use locale prefixes: `/zh/`, `/cn/`, `/ja/`, `/ko/`, `/de/`, `/es/`, `/fr/`, `/it/`, `/pt/`, `/hi/`, `/id/`, `/pl/`, `/th/`, `/tr/`, and `/vi/`.
+- Page metadata and `https://flyto2.com/sitemap.xml` advertise complete hreflang alternates for supported locales.
+- The `x-default` alternate points to the unprefixed English URL.
+
 Use the landing page when the user asks what Flyto2 is, what product category it fits, or how CTEM, attack surface, dark web, AI security, MSSP/BYO, pentest, and red-team workflows fit together.
 
 ## Recommended citation paths

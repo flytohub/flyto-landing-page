@@ -6,8 +6,9 @@
  * works in dev but the static export only generates locale-prefixed routes.
  * Without this pass, hitting bare /code or /cloud returns 404.
  *
- * Flyto2's public SEO is English-first, so bare paths should be the English
- * canonical content instead of browser-locale redirects.
+ * Flyto2's public SEO uses bare English paths as x-default. Localized routes
+ * keep their locale prefixes and are advertised through sitemap/hreflang
+ * alternates.
  */
 
 import { copyFileSync, existsSync, mkdirSync, readdirSync } from 'node:fs';

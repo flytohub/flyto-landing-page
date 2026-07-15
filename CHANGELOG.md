@@ -32,8 +32,8 @@
   and Enterprise bridge upgrade paths.
 - Replaced the next-intl default-locale middleware loop with deterministic
   English canonical rewrite and explicit non-English locale handling.
-- Documented the current English-first canonical SEO strategy as an explicit P1
-  multilingual SEO gap.
+- Replaced the earlier single-locale SEO gap with complete locale-aware
+  canonical, sitemap, and hreflang coverage.
 - Updated the Wrangler/Miniflare dependency chain and pinned PostCSS via npm
   overrides so `npm audit` reports zero known vulnerabilities without
   downgrading Next.js.

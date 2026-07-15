@@ -133,7 +133,9 @@ Premium actions should fail closed when license, entitlement, permission, connec
 
 ## Language and SEO policy
 
-The public SEO interface is English-first. Non-English pages may remain reachable, but English canonical URLs are the public SEO target. Sitemap entries should prioritize English canonical URLs.
+The public SEO interface is multilingual with English as the unprefixed default. English canonical URLs remain unprefixed, while localized URLs use `/zh/`, `/cn/`, `/ja/`, `/ko/`, `/de/`, `/es/`, `/fr/`, `/it/`, `/pt/`, `/hi/`, `/id/`, `/pl/`, `/th/`, `/tr/`, and `/vi/`.
+
+Every indexed public route should advertise a complete hreflang set in metadata and in `https://flyto2.com/sitemap.xml`. The `x-default` alternate points to the unprefixed English URL.
 
 ## Site roles for AI answers
 

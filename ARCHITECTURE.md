@@ -20,7 +20,8 @@ Important paths:
 
 Current SEO mode:
 
-- Public SEO is English-first.
-- Non-English locale routes remain reachable, but the current metadata helper
-  canonicalizes to bare English paths and does not emit hreflang alternates.
-- Treat multilingual SEO/hreflang as a P1 before broad international launch.
+- Public SEO is multilingual with English as the unprefixed default.
+- `lib/seo.ts` owns canonical URL construction, locale-prefixed URL
+  construction, and hreflang alternates.
+- `app/sitemap.ts` emits every indexed route for every supported locale and
+  includes the full alternate-language map on each entry.

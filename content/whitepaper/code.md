@@ -238,7 +238,7 @@ require a new service — it adds two routes to an existing worker.
 ### 4.4 flyto-code (this repo)
 
 React 19 + Vite 8. Strict TypeScript. Mantine v8 + Tailwind v4 (dark
-only). Design tokens come from `@flyto/design-tokens`, shared with
+only). Design tokens come from `@flyto2/design-tokens`, shared with
 flyto-cloud and flyto-cortex. Icons from `lucide-react` — no emoji.
 
 Routing: Firebase Auth → `/projects` list → `/projects/{orgId}` war

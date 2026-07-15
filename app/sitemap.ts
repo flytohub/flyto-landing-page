@@ -2,10 +2,10 @@ import type { MetadataRoute } from 'next';
 import { whitepaperSlugs } from '@/lib/whitepapers';
 import { templates } from '@/lib/templates';
 import { requiredGeoRoutes } from '@/lib/public-route-pages';
+import { locales, type Locale } from '@/lib/locales';
+import { languageAlternates, localizedUrl } from '@/lib/seo';
 
 export const dynamic = 'force-static';
-
-const BASE = 'https://flyto2.com';
 
 const STATIC_ROUTES = [
   '',
@@ -79,11 +79,6 @@ const DISCOVERY_ROUTES = new Set([
 
 const LEGAL_ROUTES = new Set(['privacy', 'terms']);
 
-function pageUrl(route: string): string {
-  const path = route ? `/${route}/` : '/';
-  return `${BASE}${path}`;
-}
-
 function routePriority(route: string): number {
   if (route === '') return 1.0;
   if (STOREFRONT_ROUTES.has(route)) return 0.9;
@@ -100,12 +95,15 @@ function routeChangeFrequency(route: string): MetadataRoute.Sitemap[number]['cha
   return 'weekly';
 }
 
-function buildEntry(route: string, now: Date): MetadataRoute.Sitemap[number] {
+function buildEntry(route: string, locale: Locale, now: Date): MetadataRoute.Sitemap[number] {
   return {
-    url: pageUrl(route),
+    url: localizedUrl(route, locale),
     lastModified: now,
     changeFrequency: routeChangeFrequency(route),
     priority: routePriority(route),
+    alternates: {
+      languages: languageAlternates(route, true),
+    },
   };
 }
 
@@ -120,5 +118,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ).sort();
   const now = new Date();
 
-  return routes.map((route) => buildEntry(route, now));
+  return routes.flatMap((route) => locales.map((locale) => buildEntry(route, locale, now)));
 }

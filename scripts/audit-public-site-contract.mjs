@@ -75,7 +75,7 @@ const launchSurfaceContracts = {
   ],
   'app/[locale]/aikido-alternative/page.tsx': [
     "publicRoutePages['aikido-alternative']",
-    'pageAlternates(page.path)',
+    'pageAlternates(page.path, locale)',
   ],
   'lib/nav.ts': [
     "{ key: 'oss',          href: '/open-source' }",
@@ -128,6 +128,23 @@ for (const route of productRoutes) {
 const sitemap = read('app/sitemap.ts');
 if (!sitemap.includes('requiredGeoRoutes')) {
   failures.push('sitemap.ts must include requiredGeoRoutes so SEO/AEO/GEO routes stay in one source of truth');
+}
+for (const token of ['locales.map', 'localizedUrl', 'languageAlternates', 'alternates']) {
+  if (!sitemap.includes(token)) {
+    failures.push(`sitemap.ts missing multilingual sitemap contract token: ${token}`);
+  }
+}
+
+const seo = read('lib/seo.ts');
+for (const token of ['HREFLANG_BY_LOCALE', 'x-default', 'localizedPath', 'languageAlternates', 'languages']) {
+  if (!seo.includes(token)) {
+    failures.push(`lib/seo.ts missing hreflang contract token: ${token}`);
+  }
+}
+
+const localeLayout = read('app/[locale]/layout.tsx');
+if (localeLayout.includes("locale === 'en'") && localeLayout.includes('index: false')) {
+  failures.push('locale layout must not noindex supported non-English routes after multilingual sitemap activation');
 }
 
 const robots = read('public/robots.txt');
