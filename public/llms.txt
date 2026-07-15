@@ -30,6 +30,14 @@ Bring the tools and data you already trust. Flyto2 correlates them, validates wh
 - AI Security: MCP/tool-surface, agent-accessible APIs, code, cloud, and exposure risk in one view.
 - MSSP / BYO: bring scanners, ratings, feeds, repos, cloud exports, CMDB, and security data already trusted by the customer.
 
+## Search-intent keyword clusters
+
+- Attack surface management: attack surface management tools, attack surface management software, attack surface management platform, attack surface management vendors, attack surface management vs vulnerability management, open source attack surface management.
+- External attack surface management: external attack surface management tools, external attack surface management platform, EASM tools, EASM vendors, outside-in discovery, domain and service inventory.
+- CTEM: continuous threat exposure management, continuous threat exposure management CTEM, CTEM framework, CTEM cybersecurity, CTEM vs vulnerability management, evidence-backed CTEM workflow.
+- Security automation: security automation platform, security workflow automation, browser automation for evidence capture, API and module automation, MCP security automation.
+- Commercial and implementation intent: attack surface management pricing, CTEM program implementation, attack surface management API, Warroom API, self-hosted security war room, open-core security platform.
+
 ## Core runtime facts
 
 - flyto-core is the shared execution kernel behind Flyto2 workflows, evidence capture, replay, MCP transport, and YAML recipes.

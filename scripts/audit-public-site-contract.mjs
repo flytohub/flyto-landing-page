@@ -101,6 +101,55 @@ const launchSurfaceContracts = {
   ],
 };
 
+const keywordSurfaceContracts = {
+  'lib/seo.ts': [
+    'attack surface management platform',
+    'attack surface management vendors',
+    'attack surface management vs vulnerability management',
+    'external attack surface management platform',
+    'continuous threat exposure management ctem framework',
+    'open source attack surface management',
+    'security automation platform',
+  ],
+  'lib/public-route-pages.ts': [
+    'attack surface management software',
+    'external attack surface management tools',
+    'attack surface management vs vulnerability management',
+    'attack surface management API',
+    'CTEM framework',
+    'EASM tools',
+  ],
+  'lib/security-pages.ts': [
+    'attack surface management software',
+    'attack surface management vendors',
+    'external attack surface management platform',
+    'continuous threat exposure management programs',
+    'beyond vulnerability management',
+  ],
+  'public/llms.txt': [
+    'Search-intent keyword clusters',
+    'attack surface management tools',
+    'external attack surface management platform',
+    'CTEM vs vulnerability management',
+    'security automation platform',
+    'attack surface management API',
+  ],
+  'public/llms-full.txt': [
+    'Search-intent and long-tail keyword clusters',
+    'attack surface management software',
+    'external attack surface management tools',
+    'continuous threat exposure management CTEM framework',
+    'attack surface management vs vulnerability management',
+    'CTEM workflow API',
+  ],
+  'app/[locale]/page.tsx': [
+    'attack surface management software',
+    'external attack surface management platform',
+    'open source attack surface management',
+    'security automation platform',
+  ],
+};
+
 const failures = [];
 
 function read(relativePath) {
@@ -269,6 +318,15 @@ for (const [file, tokens] of Object.entries(launchSurfaceContracts)) {
   for (const token of tokens) {
     if (!content.includes(token)) {
       failures.push(`${file} missing launch-surface contract token: ${token}`);
+    }
+  }
+}
+
+for (const [file, tokens] of Object.entries(keywordSurfaceContracts)) {
+  const content = read(file);
+  for (const token of tokens) {
+    if (!content.includes(token)) {
+      failures.push(`${file} missing SEO keyword cluster token: ${token}`);
     }
   }
 }

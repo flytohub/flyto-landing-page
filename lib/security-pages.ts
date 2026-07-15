@@ -28,11 +28,11 @@ export const securityPages = {
     slug: 'attack-surface-management',
     metaTitle: 'Attack Surface Management Tools for Evidence-Backed CTEM',
     metaDescription:
-      'Flyto2 integrates ASM, code, dark web, pentest, and red-team signals into an evidence-backed CTEM workflow.',
+      'Flyto2 integrates attack surface management tools, ASM software, code, dark web, pentest, and red-team signals into an evidence-backed CTEM workflow.',
     eyebrow: 'ATTACK SURFACE MANAGEMENT',
     title: 'Attack surface management that connects exposure to evidence.',
     lede:
-      'Flyto2 complements the attack surface tools you already trust. Start with self-hosted Warroom CE, bring existing ASM, EASM, scanner, rating, and asset data, then correlate it with code, dark web, pentest, and red-team evidence.',
+      'Flyto2 complements the attack surface tools you already trust. Start with self-hosted Warroom CE, bring existing ASM, EASM, scanner, rating, and asset data, then correlate it with code, dark web, pentest, and red-team evidence for teams comparing attack surface management software, vendors, and validation workflows.',
     image: '/assets/img/warroom/26-asset-map.png',
     imageAlt: 'Flyto2 asset map showing domains, services, and ownership context',
     primaryCta: { label: 'Read the CTEM workflow', href: '/ctem' },
@@ -53,13 +53,13 @@ export const securityPages = {
       {
         title: 'Bring your existing ASM data',
         body:
-          'Flyto2 is not positioned as a rip-and-replace scanner. It accepts the tools, exports, and feeds your team already uses, then normalizes them into an ownership-gated asset map.',
+          'Flyto2 is not positioned as a rip-and-replace scanner. It accepts the tools, exports, and feeds your team already uses, then normalizes them into an ownership-gated asset map for attack surface management vendors, external-rating tools, and internal asset owners.',
         bullets: ['External ratings and scanner output', 'Domain and service inventory', 'Cloud, repo, and CMDB context'],
       },
       {
         title: 'Correlate exposure with what matters',
         body:
-          'An exposed service is more useful when it is connected to the repository, dependency, credential, or threat signal behind it. Flyto2 keeps that context in one evidence-backed workflow.',
+          'An exposed service is more useful when it is connected to the repository, dependency, credential, or threat signal behind it. Flyto2 keeps that context in one evidence-backed workflow, which is the practical difference in attack surface management vs vulnerability management discussions.',
         bullets: ['Asset-to-repo mapping', 'Code and dependency risk context', 'Dark web and leaked-credential joins'],
       },
       {
@@ -79,11 +79,11 @@ export const securityPages = {
     slug: 'external-attack-surface-management',
     metaTitle: 'External Attack Surface Management Platform for CTEM',
     metaDescription:
-      'Flyto2 helps teams correlate EASM findings with assets, code risk, dark web signals, and validation evidence.',
+      'Flyto2 helps teams use an external attack surface management platform to correlate EASM findings with assets, code risk, dark web signals, and validation evidence.',
     eyebrow: 'EASM',
     title: 'External attack surface management for teams that need correlation.',
     lede:
-      'Flyto2 works alongside external attack surface management tools. Warroom CE can hold the local external inventory; Enterprise bridge services can add premium correlation, validation, and managed execution.',
+      'Flyto2 works alongside external attack surface management tools. Warroom CE can hold the local external inventory; Enterprise bridge services can add premium correlation, validation, and managed execution for teams comparing EASM tools and external attack surface management vendors.',
     image: '/assets/img/warroom/23-domain-security.png',
     imageAlt: 'Flyto2 domain security view with external posture findings',
     primaryCta: { label: 'See attack surface docs', href: 'https://docs.flyto2.com/warroom/surfaces/attack-surface' },
@@ -130,11 +130,11 @@ export const securityPages = {
     slug: 'ctem',
     metaTitle: 'BYO Offensive Validation Layer for CTEM Programs',
     metaDescription:
-      'Flyto2 turns ASM, dark web, code security, pentest, red-team, cloud, and scanner findings into verified attack paths, evidence, and remediation records for CTEM programs.',
+      'Flyto2 turns ASM, dark web, code security, pentest, red-team, cloud, and scanner findings into verified attack paths, evidence, and remediation records for CTEM programs and CTEM framework adoption.',
     eyebrow: 'CONTINUOUS THREAT EXPOSURE MANAGEMENT',
     title: 'Flyto2 turns CTEM inputs into verified attack paths.',
     lede:
-      'Flyto2 is the offensive validation layer on top of CTEM inputs. Bring existing ASM, dark web, code security, pentest, red-team, cloud, and scanner signals; Warroom CE correlates them into attack hypotheses, evidence, and remediation context while Enterprise bridge adds premium intelligence and managed action.',
+      'Flyto2 is the offensive validation layer on top of CTEM inputs. Bring existing ASM, dark web, code security, pentest, red-team, cloud, and scanner signals; Warroom CE correlates them into attack hypotheses, evidence, and remediation context while Enterprise bridge adds premium intelligence and managed action for continuous threat exposure management programs.',
     image: '/assets/img/warroom/21-scoring-breakdown.png',
     imageAlt: 'Flyto2 scoring breakdown for CTEM security surfaces',
     primaryCta: { label: 'Read CTEM guide', href: 'https://blog.flyto2.com/posts/what-is-ctem-continuous-threat-exposure-management' },
@@ -155,7 +155,7 @@ export const securityPages = {
       {
         title: 'A validation workflow, not another isolated dashboard',
         body:
-          'CTEM only works when discovery, prioritization, validation, and action stay connected. Flyto2 consumes existing security data and turns the highest-value paths into evidence-backed validation work.',
+          'CTEM only works when discovery, prioritization, validation, and action stay connected. Flyto2 consumes existing security data and turns the highest-value paths into evidence-backed validation work for teams asking what continuous threat exposure management changes beyond vulnerability management.',
         bullets: ['External surface and asset inventory', 'Code and dependency context', 'Validation through pentest and red-team loops'],
       },
       {

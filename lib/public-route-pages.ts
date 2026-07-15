@@ -55,17 +55,17 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
     eyebrow: 'Pricing',
     title: 'Flyto2 pricing starts with Warroom CE and scales into Enterprise.',
     lede:
-      'Flyto2 Warroom CE is the installable self-hosted baseline. Enterprise pricing unlocks the governed bridge for cloud-backed intelligence, managed remediation, fleet execution, SSO, airgap, support, and compliance controls.',
+      'Flyto2 Warroom CE is the installable self-hosted baseline. Enterprise pricing unlocks the governed bridge for cloud-backed intelligence, managed remediation, fleet execution, SSO, airgap, support, and compliance controls for CTEM, attack surface management, and security automation programs.',
     metaTitle: 'Flyto2 pricing overview',
     metaDescription:
-      'Pricing overview for Flyto2 Warroom CE, open-core usage, Enterprise bridge capabilities, and deployment modes.',
+      'Pricing overview for Flyto2 Warroom CE, open-core attack surface management, CTEM security automation, Enterprise bridge capabilities, and deployment modes.',
     primaryCta: { label: 'Start with Warroom CE', href: '/open-source' },
     secondaryCta: { label: 'Enterprise deployment', href: '/enterprise' },
     sections: [
       {
         title: 'Community Edition',
         body:
-          'CE is the public self-hosted path for teams that want to evaluate the security war room locally before buying managed capabilities.',
+          'CE is the public self-hosted path for teams that want to evaluate an open-core security war room, open source attack surface management workflow, and CTEM validation loop locally before buying managed capabilities.',
         bullets: ['Local JWT auth, local database, Docker Compose, and installer scripts', 'Code intelligence, CTEM posture, evidence, scoring, reports, and compliance surfaces', 'Public contracts keep CE aligned with Flyto2 Engine, Core, Code, and i18n'],
       },
       {
@@ -114,7 +114,7 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
       'Flyto2 Security starts as installable Warroom CE and grows into an Enterprise bridge. Bring ASM, SAST, DAST, CSPM, SIEM, dark web, cloud, code, and scanner findings; Flyto2 turns them into verified attack paths, pentest evidence, red-team scenarios, remediation records, and compliance-ready proof.',
     metaTitle: 'Flyto2 Security BYO offensive validation',
     metaDescription:
-      'Flyto2 Security turns existing security-tool findings into verified attack paths, pentest evidence, red-team scenarios, remediation records, reports, and compliance evidence.',
+      'Flyto2 Security turns attack surface management tools, EASM, CTEM, code security, and scanner findings into verified attack paths, pentest evidence, reports, and remediation records.',
     primaryCta: { label: 'Install Warroom CE', href: '/open-source' },
     secondaryCta: { label: 'Read CTEM page', href: '/ctem' },
     sections: [
@@ -127,7 +127,7 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
       {
         title: 'Existing tools are inputs',
         body:
-          'The security line is organized around concrete inputs and validation outputs that can be enabled, locked as preview, or hidden by engine capability state.',
+          'The security line is organized around concrete inputs and validation outputs that can be enabled, locked as preview, or hidden by engine capability state. Teams evaluating attack surface management software, external attack surface management tools, CTEM security, or a security automation platform can use Flyto2 to correlate and validate findings without treating it as a replacement for every scanner.',
         bullets: ['ASM, EASM, SAST, DAST, SCA, CSPM, CNAPP, SIEM, and dark web findings', 'Attack-path hypotheses and safe validation plans', 'Evidence, remediation records, red-team scenarios, and reports'],
       },
       {
@@ -274,17 +274,17 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
     eyebrow: 'Open core',
     title: 'Flyto2 Warroom CE is the self-hosted open-core offensive validation war room.',
     lede:
-      'Flyto2 Warroom CE gives teams a local installable cockpit for BYO findings, attack paths, safe validation, evidence, remediation, scoring, and compliance. Enterprise features attach through clear capability gates, signed evidence, and documented bridge contracts.',
+      'Flyto2 Warroom CE gives teams a local installable cockpit for BYO findings, open source attack surface management, attack paths, safe validation, evidence, remediation, scoring, and compliance. Enterprise features attach through clear capability gates, signed evidence, and documented bridge contracts.',
     metaTitle: 'Flyto2 open source and open-core model',
     metaDescription:
-      'Install Flyto2 Warroom CE from GitHub and Docker Hub, understand the open-core offensive validation boundary, and see how Enterprise capabilities attach through bridge contracts.',
+      'Install Flyto2 Warroom CE from GitHub and Docker Hub, evaluate open source attack surface management and CTEM workflows, and see how Enterprise bridge capabilities attach.',
     primaryCta: { label: 'GitHub repository', href: 'https://github.com/flytohub/flyto-warroom' },
     secondaryCta: { label: 'Docker images', href: 'https://hub.docker.com/r/chesterhsu/flyto-warroom' },
     sections: [
       {
         title: 'Community Edition',
         body:
-          'CE is meant to be useful on its own: local auth, local database, public contracts, installer scripts, and a Warroom UI that can be inspected and patched.',
+          'CE is meant to be useful on its own: local auth, local database, public contracts, installer scripts, and a Warroom UI that can be inspected and patched for self-hosted CTEM, open source attack surface management, and evidence-backed validation labs.',
         bullets: ['Self-hosted Docker Compose install with local JWT auth', 'BYO finding intake, attack-path review, evidence, reports, score views, and compliance surfaces', 'Public flyto-core, flyto-indexer, flyto-i18n, flyto-code, and flyto-contracts packages'],
       },
       {
@@ -396,10 +396,10 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
     eyebrow: 'Compare',
     title: 'Compare Flyto2 CE, Enterprise, Cloud, and security surfaces.',
     lede:
-      'Flyto2 is not a single narrow tool or a dead open-source fork. Warroom CE, Enterprise bridge, Cloud automation, Security, future Data, agent OS, and intelligence surfaces share contracts while keeping product and deployment boundaries explicit.',
+      'Flyto2 is not a single narrow tool or a dead open-source fork. Warroom CE, Enterprise bridge, Cloud automation, Security, future Data, agent OS, and intelligence surfaces share contracts while keeping product and deployment boundaries explicit for CTEM, EASM, attack surface management, security automation, and workflow automation buyers.',
     metaTitle: 'Compare Flyto2 product lines',
     metaDescription:
-      'Comparison of Flyto2 Cloud automation, Security, Data, Zero-person Company Agent, and Big Data Intelligence product lines.',
+      'Compare Flyto2 Cloud automation, Security, CTEM, EASM, attack surface management, open-core Warroom CE, Enterprise bridge, Data, Agent OS, and Intelligence product lines.',
     primaryCta: { label: 'Warroom CE', href: '/open-source' },
     secondaryCta: { label: 'Security', href: '/security' },
     sections: [
@@ -424,7 +424,7 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
       {
         title: 'Security',
         body:
-          'Closest category: evidence-backed CTEM and security war room for code, cloud, dark web, AI governance, reports, and red-team validation.',
+          'Closest category: evidence-backed CTEM and security war room for code, cloud, dark web, AI governance, reports, red-team validation, attack surface management vs vulnerability management comparisons, and EASM-to-validation workflows.',
         bullets: ['Buyer: security teams, MSSPs, compliance owners', 'Primary repos: flyto-code, flyto-engine, flyto-ai, flyto-core', 'Boundary: RBAC, audit, tenant isolation, evidence, consent'],
       },
       {
@@ -458,10 +458,10 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
     eyebrow: 'API docs',
     title: 'Flyto2 API docs start with workflows, modules, MCP, and Warroom contracts.',
     lede:
-      'The public product site points AI crawlers and developers to the authoritative docs surface for Flyto2 Core modules, workflow recipes, MCP transport, Warroom CE installation, bridge contracts, and security APIs.',
+      'The public product site points AI crawlers and developers to the authoritative docs surface for Flyto2 Core modules, workflow recipes, MCP transport, Warroom CE installation, bridge contracts, attack surface management API context, CTEM workflows, and security APIs.',
     metaTitle: 'Flyto2 API docs',
     metaDescription:
-      'Entry point for Flyto2 API, module, workflow, MCP, and Warroom documentation.',
+      'Entry point for Flyto2 API, module, workflow, MCP, attack surface management API, CTEM workflow, security automation, and Warroom documentation.',
     primaryCta: { label: 'Open docs', href: 'https://docs.flyto2.com/' },
     secondaryCta: { label: 'Module catalog', href: 'https://docs.flyto2.com/modules/' },
     sections: [
@@ -480,8 +480,8 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
       {
         title: 'Warroom CE and bridge APIs',
         body:
-          'Security APIs are governed by engine membership, entitlement, RBAC, capability, tenant isolation, and evidence signature checks.',
-        bullets: ['Capabilities endpoint', 'Report and evidence APIs', 'CTEM, red-team, and premium bridge workflows'],
+          'Security APIs are governed by engine membership, entitlement, RBAC, capability, tenant isolation, and evidence signature checks. They support CTEM workflow automation, attack surface management API references, report exports, and premium bridge execution.',
+        bullets: ['Capabilities endpoint', 'Report and evidence APIs', 'CTEM, red-team, attack surface, and premium bridge workflows'],
       },
     ],
     answers: [
@@ -508,7 +508,7 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
     eyebrow: 'Trust',
     title: 'Flyto2 trust is built around boundaries, consent, evidence, and audit.',
     lede:
-      'The trust model separates the public CE mirror, private enterprise internals, tenant data, dynamic scan consent, RBAC, capability gates, report export, AI evidence handling, and deployment provider boundaries.',
+      'The trust model separates the public CE mirror, private enterprise internals, tenant data, dynamic scan consent, RBAC, capability gates, report export, AI evidence handling, and deployment provider boundaries for CTEM, attack surface management, and security automation workflows.',
     metaTitle: 'Flyto2 trust and security',
     metaDescription:
       'Trust overview for Flyto2 tenant isolation, RBAC, audit logs, dynamic scan consent, AI evidence handling, and enterprise deployment boundaries.',
@@ -564,7 +564,7 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
     eyebrow: 'Docs',
     title: 'Flyto2 docs are the technical citation surface.',
     lede:
-      'Use docs.flyto2.com for implementation details, Warroom CE installation, module contracts, workflow recipes, MCP transport, bridge contracts, security APIs, and product-line architecture.',
+      'Use docs.flyto2.com for implementation details, Warroom CE installation, module contracts, workflow recipes, MCP transport, bridge contracts, security APIs, CTEM framework details, attack surface management API references, and product-line architecture.',
     metaTitle: 'Flyto2 docs',
     metaDescription:
       'Documentation entry point for Flyto2 Core, Cloud automation, Security Warroom, modules, workflows, MCP, and product architecture.',
@@ -586,8 +586,8 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
       {
         title: 'Warroom',
         body:
-          'Warroom docs cover CE installation, CTEM, closed-loop validation, BYO integration, red-team, score events, security APIs, and bridge boundaries.',
-        bullets: ['Self-hosted CE install', 'Closed-loop CTEM', 'BYO integrations and Warroom API'],
+          'Warroom docs cover CE installation, CTEM, closed-loop validation, BYO integration, red-team, score events, security APIs, EASM input contracts, attack surface management API context, and bridge boundaries.',
+        bullets: ['Self-hosted CE install', 'Closed-loop CTEM', 'BYO integrations, EASM inputs, and Warroom API'],
       },
     ],
     answers: [
@@ -614,24 +614,24 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
     eyebrow: 'Blog',
     title: 'Flyto2 blog is the educational and comparison surface.',
     lede:
-      'The blog answers search-intent questions: what is CTEM, how to compare tools, how self-hosted CE differs from Enterprise, how attack surface and dark web signals connect, and how AI visibility/GEO content should be structured.',
+      'The blog answers questions buyers and practitioners search for: what is CTEM, what is attack surface management, how EASM tools differ from ASM, attack surface management vs vulnerability management, how self-hosted CE differs from Enterprise, and how AI visibility/GEO content should be structured.',
     metaTitle: 'Flyto2 blog',
     metaDescription:
-      'Blog entry point for Flyto2 educational content, CTEM explanations, comparisons, security strategy, automation, and AI visibility.',
+      'Blog entry point for CTEM explanations, attack surface management tools, EASM comparisons, security automation strategy, open-core security, and AI visibility.',
     primaryCta: { label: 'Open blog', href: 'https://blog.flyto2.com/' },
     secondaryCta: { label: 'Docs', href: '/docs' },
     sections: [
       {
         title: 'SEO foundation',
         body:
-          'Blog posts answer ordinary search questions so Google and Bing can find and index Flyto2 content.',
-        bullets: ['What is CTEM?', 'Self-hosted security war room and open-core comparisons', 'Attack surface management and dark web monitoring explainers'],
+          'Blog posts answer ordinary search questions so Google and Bing can find and index Flyto2 content across informational, comparison, commercial, and implementation intent.',
+        bullets: ['What is CTEM?', 'What is attack surface management?', 'EASM tools, CTEM vs vulnerability management, open-core security, and dark web monitoring explainers'],
       },
       {
         title: 'AEO answer blocks',
         body:
           'Articles should include clear answer blocks, FAQs, comparisons, and structured headings for AI Overviews and featured answers.',
-        bullets: ['What is / how to / compare / pricing / security / enterprise', 'FAQPage and Article schema where appropriate', 'Citation-ready summary paragraphs'],
+        bullets: ['What is / how to / compare / pricing / security / enterprise / vendors / open source', 'FAQPage and Article schema where appropriate', 'Citation-ready summary paragraphs'],
       },
       {
         title: 'GEO retrieval',
