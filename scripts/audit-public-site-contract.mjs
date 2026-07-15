@@ -173,6 +173,28 @@ for (const token of ['asset/source', 'whitepaperContentDir', './content/whitepap
   }
 }
 
+const packageJson = JSON.parse(read('package.json'));
+const buildCfScript = packageJson.scripts?.['build:cf'] ?? '';
+for (const token of ['opennextjs-cloudflare build', 'opennextjs-cloudflare populateCache local']) {
+  if (!buildCfScript.includes(token)) {
+    failures.push(`package.json build:cf missing Cloudflare cache build token: ${token}`);
+  }
+}
+
+const openNextConfig = read('open-next.config.ts');
+for (const token of [
+  'defineCloudflareConfig',
+  'static-assets-incremental-cache',
+  'staticAssetsIncrementalCache',
+]) {
+  if (!openNextConfig.includes(token)) {
+    failures.push(`open-next.config.ts missing Cloudflare static assets cache token: ${token}`);
+  }
+}
+if (/incrementalCache:\s*['"]dummy['"]/.test(openNextConfig)) {
+  failures.push('open-next.config.ts must not use dummy incrementalCache for the public SEO surface');
+}
+
 const discussionsClient = read('components/forum/DiscussionsClient.tsx');
 for (const token of ['ssr: false', "import('./DiscussionsView')"]) {
   if (!discussionsClient.includes(token)) {

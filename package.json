@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build:cf": "opennextjs-cloudflare build",
+    "build:cf": "opennextjs-cloudflare build && opennextjs-cloudflare populateCache local",
     "audit:geo": "node scripts/audit-public-geo-routes.mjs",
     "audit:public-site": "node scripts/audit-public-site-contract.mjs",
     "geo:logs": "node scripts/analyze-ai-crawler-logs.mjs",
