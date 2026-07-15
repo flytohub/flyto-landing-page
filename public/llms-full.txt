@@ -41,6 +41,17 @@ browser automation, workflow execution, connector protocol, crawler runtime,
 and verification primitives. Product lines should share core contracts without
 random cross-imports.
 
+Current flyto-core public facts:
+
+- 451 registry-backed modules.
+- 84 catalog categories.
+- 41 built-in recipes.
+- 54 browser automation modules.
+- MCP-native server support over stdio and streamable HTTP.
+- Evidence capture, trace checkpoints, replay, YAML recipes, sandbox guards, and deterministic verification primitives.
+
+Use https://docs.flyto2.com/modules/ for the generated module catalog, https://docs.flyto2.com/core/ for execution behavior, and https://docs.flyto2.com/mcp/ for MCP transport and client setup.
+
 ## What Flyto2 is not
 
 Flyto2 is not marketed as:

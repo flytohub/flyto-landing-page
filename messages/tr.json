@@ -58,7 +58,7 @@
         "tagline": "Kodsuz tarayıcı otomasyonu. Bir kez kaydet, sonsuza dek oynat.",
         "point1": "Seçici yazmadan herhangi bir tarayıcı akışını kaydedin",
         "point2": "Çalışma ortasında duraklatın, inceleyin, değerleri düzenleyin, devam edin",
-        "point3": "250'den fazla hazır modül — CSV, Stripe, Notion, Slack, OpenAI",
+        "point3": "451 hazır modül — CSV, Stripe, Notion, Slack, OpenAI",
         "cta": "Cloud'a git"
       },
       "warroom": {
@@ -133,7 +133,7 @@
         },
         {
           "icon": "Boxes",
-          "title": "250'den fazla modül",
+          "title": "451 modül",
           "body": "CSV, Excel, Stripe, Notion, Postgres, Slack, OpenAI — API kablo işi yazmak yerine bunları bir araya getirmeniz için hazır bağlantılı."
         },
         {
@@ -182,14 +182,14 @@
     },
     "integrations": {
       "label": "ENTEGRASYONLAR",
-      "title": "Kutudan çıkar çıkmaz 250'den fazla modül.",
+      "title": "Kutudan çıkar çıkmaz 451 modül.",
       "subtitle": "Kablo işi zaten hazır. Sürükleyin, bırakın, yapılandırın — artık \"bu satırı A Sayfasından B API'sine kopyala\" betiği yazmayın.",
       "andMore": "+ 230 DAHA · KENDİNİZİNKİNİ PYTHON VEYA JS İLE OLUŞTURUN"
     },
     "stats": {
       "items": [
         {
-          "value": "250+",
+          "value": "451",
           "label": "MODÜL",
           "body": "CSV, Excel, Stripe, Notion, Slack, AI, SQL için hazır düğümler — aksi hâlde kendiniz birbirine yapıştıracağınız şeyler."
         },
@@ -249,7 +249,7 @@
   },
   "cloud": {
     "metaTitle": "Cloud — Kodsuz tarayıcı otomasyonu",
-    "metaDescription": "Bir kez kaydet, sonsuza dek oynat. Çevrimdışı çalışan tarayıcı otomasyonu. 250'den fazla modül, 16 dil, MIT lisanslı motor.",
+    "metaDescription": "Bir kez kaydet, sonsuza dek oynat. Çevrimdışı çalışan tarayıcı otomasyonu. 451 modül, 16 dil, MIT lisanslı motor.",
     "hero": {
       "eyebrow": "01 / CLOUD",
       "status": "YAYINDA",
@@ -257,7 +257,7 @@
       "titleAccent": "otomatik pilotta.",
       "lede": "Kaydediciyi açın, görevi bir kez yapın, durdurun. Flyto2 bunu, bir satır kod yazmadan düzenleyebileceğiniz, sürümleyebileceğiniz, zamanlayabileceğiniz ve paylaşabileceğiniz yapılandırılmış bir iş akışına dönüştürür.",
       "ctaPrimary": "Masaüstü uygulamasını indir",
-      "ctaSecondary": "250'den fazla modüle gözat"
+      "ctaSecondary": "451 modüle gözat"
     },
     "how": {
       "label": "NASIL ÇALIŞIR",
@@ -304,7 +304,7 @@
         },
         {
           "icon": "Boxes",
-          "title": "250'den fazla modül",
+          "title": "451 modül",
           "body": "CSV, Excel, Stripe, Notion, Sheets, Postgres, Slack, OpenAI — API kablo işi yazmak yerine bunları bir araya getirmeniz için hazır bağlantılı."
         },
         {
@@ -573,7 +573,7 @@
         "tagline": "Otomasyonu keşfeden bireyler için.",
         "feature1": "Ayda 1.000 işlem puanı",
         "feature2": "En fazla 5 kayıtlı iş akışı",
-        "feature3": "Tüm 250'den fazla modül",
+        "feature3": "Tüm 451 modül",
         "feature4": "Topluluk desteği",
         "cta": "Ücretsiz indir"
       },
@@ -1431,7 +1431,7 @@
       "body": "Barındırılan savaş odası tarayıcı tabanlıdır — kurulacak uygulama yok. Aşama III açıldığında davet almak için bekleme listesine katılın ve bugün açık kaynak tarayıcıyı edinin.",
       "primary": "Bekleme listesine katıl",
       "secondary": "OSS tarayıcısını kur",
-      "emailPlaceholder": "your@flyto2.com",
+      "emailPlaceholder": "team@flyto2.com",
       "success": "Listedesiniz! Phase III açıldığında sizinle iletişime geçeceğiz.",
       "duplicate": "Zaten bekleme listesinde yer alıyorsunuz.",
       "error": "Bir şeyler ters gitti — tekrar deneyin."

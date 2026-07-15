@@ -64,7 +64,7 @@
         "tagline": "Browser automation, YAML recipes, and evidence replay that support security validation workflows.",
         "point1": "Run deterministic browser and API workflows",
         "point2": "Capture replayable evidence for audit and verification",
-        "point3": "250+ modules across browser, data, files, cloud, AI, and notifications",
+        "point3": "451 modules across browser, data, files, cloud, AI, and notifications",
         "cta": "Explore the engine"
       },
       "warroom": {
@@ -200,7 +200,7 @@
           "body": "ASM/EASM, code risk, MCP security, runtime/cloud, dark web, footprint, asset map, pentest, and red-team."
         },
         {
-          "value": "250+",
+          "value": "451",
           "label": "EXECUTION MODULES",
           "body": "Deterministic modules for browser, API, data, file, cloud, and notification workflows."
         },
@@ -255,7 +255,7 @@
   },
   "cloud": {
     "metaTitle": "Cloud — No-code browser automation",
-    "metaDescription": "Record once, replay forever. Browser automation that runs offline. 250+ modules, 16 languages, MIT-licensed engine.",
+    "metaDescription": "Record once, replay forever. Browser automation that runs offline. 451 modules, 16 languages, MIT-licensed engine.",
     "hero": {
       "eyebrow": "01 / CLOUD",
       "status": "SHIPPING",
@@ -263,7 +263,7 @@
       "titleAccent": "on autopilot.",
       "lede": "Open the recorder, do the task once, hit stop. Flyto2 turns it into a structured workflow you can edit, version, schedule and share — without writing a line of code.",
       "ctaPrimary": "Download desktop app",
-      "ctaSecondary": "Browse 250+ modules"
+      "ctaSecondary": "Browse 451 modules"
     },
     "how": {
       "label": "HOW IT WORKS",
@@ -310,7 +310,7 @@
         },
         {
           "icon": "Boxes",
-          "title": "250+ modules",
+          "title": "451 modules",
           "body": "CSV, Excel, Stripe, Notion, Sheets, Postgres, Slack, OpenAI — wired up so you snap them together instead of writing API plumbing."
         },
         {
@@ -579,7 +579,7 @@
         "tagline": "For individuals exploring automation.",
         "feature1": "1,000 compute points / month",
         "feature2": "Up to 5 saved workflows",
-        "feature3": "All 250+ modules",
+        "feature3": "All 451 modules",
         "feature4": "Community support",
         "cta": "Download free"
       },
@@ -1437,7 +1437,7 @@
       "body": "The hosted war room is browser-based — no app to install. Join the waitlist to get an invite when Phase III opens, and grab the open-source scanner today.",
       "primary": "Join the waitlist",
       "secondary": "Install the OSS scanner",
-      "emailPlaceholder": "your@flyto2.com",
+      "emailPlaceholder": "team@flyto2.com",
       "success": "You're on the list! We'll be in touch when Phase III opens.",
       "duplicate": "You're already on the waitlist.",
       "error": "Something went wrong — try again."
@@ -1626,7 +1626,7 @@
       "substrate": {
         "label": "ONE SUBSTRATE, TWO PRODUCT LINES",
         "title": "The same engine that runs your automation runs your war-room.",
-        "body": "Flyto2 is one brand with two product lines on the same execution substrate. The automation engine — flyto-core, 412+ deterministic modules, MCP-native over stdio and streamable-http, with evidence capture, replay, YAML recipes and human-in-the-loop — is the established Zapier/n8n/Make alternative. The war-room rides the same deterministic modules and recipes to execute scans, collect evidence and drive red-team. You never have to choose between them.",
+        "body": "Flyto2 is one brand with two product lines on the same execution substrate. The automation engine — flyto-core, 451 deterministic modules, MCP-native over stdio and streamable-http, with evidence capture, replay, YAML recipes and human-in-the-loop — is the established Zapier/n8n/Make alternative. The war-room rides the same deterministic modules and recipes to execute scans, collect evidence and drive red-team. You never have to choose between them.",
         "automationCta": "Explore the automation engine"
       },
       "cta": {

@@ -58,7 +58,7 @@
         "tagline": "Automação de navegador sem código. Grave uma vez, reproduza para sempre.",
         "point1": "Grave qualquer fluxo no navegador sem escrever seletores",
         "point2": "Pause, inspecione, edite valores durante a execução e retome",
-        "point3": "250+ módulos pré-configurados — CSV, Stripe, Notion, Slack, OpenAI",
+        "point3": "451 módulos pré-configurados — CSV, Stripe, Notion, Slack, OpenAI",
         "cta": "Ir para Cloud"
       },
       "warroom": {
@@ -133,7 +133,7 @@
         },
         {
           "icon": "Boxes",
-          "title": "250+ módulos",
+          "title": "451 módulos",
           "body": "CSV, Excel, Stripe, Notion, Postgres, Slack, OpenAI — pré-configurados para você conectar em vez de escrever integrações de API."
         },
         {
@@ -182,14 +182,14 @@
     },
     "integrations": {
       "label": "INTEGRAÇÕES",
-      "title": "250+ módulos prontos para uso.",
+      "title": "451 módulos prontos para uso.",
       "subtitle": "A integração já está configurada. Arraste, solte, configure — nunca mais escreva outro script de \"copie esta linha da Planilha A para a API B\".",
       "andMore": "+ 230 MAIS · CRIE O SEU EM PYTHON OU JS"
     },
     "stats": {
       "items": [
         {
-          "value": "250+",
+          "value": "451",
           "label": "MÓDULOS",
           "body": "Nós pré-construídos para CSV, Excel, Stripe, Notion, Slack, IA, SQL — o que você colaria junto de outra forma."
         },
@@ -249,7 +249,7 @@
   },
   "cloud": {
     "metaTitle": "Cloud — Automação de navegador sem código",
-    "metaDescription": "Grave uma vez, reproduza para sempre. Automação de navegador que roda offline. 250+ módulos, 16 idiomas, motor com licença MIT.",
+    "metaDescription": "Grave uma vez, reproduza para sempre. Automação de navegador que roda offline. 451 módulos, 16 idiomas, motor com licença MIT.",
     "hero": {
       "eyebrow": "01 / CLOUD",
       "status": "DISPONÍVEL",
@@ -257,7 +257,7 @@
       "titleAccent": "no piloto automático.",
       "lede": "Abra o gravador, faça a tarefa uma vez, clique em parar. O Flyto2 transforma isso em um fluxo estruturado que você pode editar, versionar, agendar e compartilhar — sem escrever uma linha de código.",
       "ctaPrimary": "Baixar app desktop",
-      "ctaSecondary": "Ver 250+ módulos"
+      "ctaSecondary": "Ver 451 módulos"
     },
     "how": {
       "label": "COMO FUNCIONA",
@@ -304,7 +304,7 @@
         },
         {
           "icon": "Boxes",
-          "title": "250+ módulos",
+          "title": "451 módulos",
           "body": "CSV, Excel, Stripe, Notion, Sheets, Postgres, Slack, OpenAI — configurados para você conectar em vez de escrever integrações de API."
         },
         {
@@ -573,7 +573,7 @@
         "tagline": "Para indivíduos explorando automação.",
         "feature1": "1.000 pontos de computação / mês",
         "feature2": "Até 5 fluxos salvos",
-        "feature3": "Todos os 250+ módulos",
+        "feature3": "Todos os 451 módulos",
         "feature4": "Suporte da comunidade",
         "cta": "Baixar grátis"
       },
@@ -1431,7 +1431,7 @@
       "body": "O war room hospedado é baseado em navegador — sem app para instalar. Entre na lista de espera para receber um convite quando a Fase III abrir, e obtenha o scanner open-source hoje.",
       "primary": "Entrar na lista de espera",
       "secondary": "Instalar o scanner OSS",
-      "emailPlaceholder": "seu@flyto2.com",
+      "emailPlaceholder": "team@flyto2.com",
       "success": "Você está na lista! Entraremos em contato quando a Fase III abrir.",
       "duplicate": "Você já está na lista de espera.",
       "error": "Algo deu errado — tente novamente."

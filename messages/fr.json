@@ -58,7 +58,7 @@
         "tagline": "Automatisation de navigateur sans code. Enregistrez une fois, rejouez à l'infini.",
         "point1": "Enregistrez n'importe quel flux de navigateur sans écrire de sélecteurs",
         "point2": "Mettez en pause, inspectez, modifiez les valeurs en cours d'exécution, reprenez",
-        "point3": "Plus de 250 modules prêts à l'emploi — CSV, Stripe, Notion, Slack, OpenAI",
+        "point3": "451 modules prêts à l'emploi — CSV, Stripe, Notion, Slack, OpenAI",
         "cta": "Voir Cloud"
       },
       "warroom": {
@@ -133,7 +133,7 @@
         },
         {
           "icon": "Boxes",
-          "title": "Plus de 250 modules",
+          "title": "451 modules",
           "body": "CSV, Excel, Stripe, Notion, Postgres, Slack, OpenAI — précâblés pour que vous les assembliez sans écrire de plomberie API."
         },
         {
@@ -182,14 +182,14 @@
     },
     "integrations": {
       "label": "INTÉGRATIONS",
-      "title": "Plus de 250 modules d'emblée.",
+      "title": "451 modules d'emblée.",
       "subtitle": "La plomberie est déjà câblée. Glissez, déposez, configurez — n'écrivez plus jamais un script « copier cette ligne de Sheet A vers l'API B ».",
       "andMore": "+ 230 DE PLUS · CRÉEZ LE VÔTRE EN PYTHON OU JS"
     },
     "stats": {
       "items": [
         {
-          "value": "250+",
+          "value": "451",
           "label": "MODULES",
           "body": "Nœuds préconstruits pour CSV, Excel, Stripe, Notion, Slack, IA, SQL — ce que vous assembleriez sinon vous-même."
         },
@@ -249,7 +249,7 @@
   },
   "cloud": {
     "metaTitle": "Cloud — Automatisation de navigateur sans code",
-    "metaDescription": "Enregistrez une fois, rejouez à l'infini. Automatisation de navigateur qui fonctionne hors ligne. Plus de 250 modules, 16 langues, moteur sous licence MIT.",
+    "metaDescription": "Enregistrez une fois, rejouez à l'infini. Automatisation de navigateur qui fonctionne hors ligne. 451 modules, 16 langues, moteur sous licence MIT.",
     "hero": {
       "eyebrow": "01 / CLOUD",
       "status": "DISPONIBLE",
@@ -257,7 +257,7 @@
       "titleAccent": "en pilotage automatique.",
       "lede": "Ouvrez l'enregistreur, effectuez la tâche une fois, appuyez sur Stop. Flyto2 la transforme en workflow structuré que vous pouvez modifier, versionner, planifier et partager — sans écrire une seule ligne de code.",
       "ctaPrimary": "Télécharger l'application de bureau",
-      "ctaSecondary": "Parcourir les 250+ modules"
+      "ctaSecondary": "Parcourir les 451 modules"
     },
     "how": {
       "label": "COMMENT ÇA MARCHE",
@@ -304,7 +304,7 @@
         },
         {
           "icon": "Boxes",
-          "title": "Plus de 250 modules",
+          "title": "451 modules",
           "body": "CSV, Excel, Stripe, Notion, Sheets, Postgres, Slack, OpenAI — précâblés pour que vous les assembliez sans écrire de plomberie API."
         },
         {
@@ -573,7 +573,7 @@
         "tagline": "Pour les personnes qui découvrent l'automatisation.",
         "feature1": "1 000 points de calcul / mois",
         "feature2": "Jusqu'à 5 workflows sauvegardés",
-        "feature3": "Tous les 250+ modules",
+        "feature3": "Tous les 451 modules",
         "feature4": "Support communautaire",
         "cta": "Télécharger gratuitement"
       },
@@ -1431,7 +1431,7 @@
       "body": "La salle d'opérations hébergée est basée sur le navigateur — aucune application à installer. Rejoignez la liste d'attente pour recevoir une invitation à l'ouverture de la Phase III, et récupérez le scanner open source dès aujourd'hui.",
       "primary": "Rejoindre la liste d'attente",
       "secondary": "Installer le scanner OSS",
-      "emailPlaceholder": "votre@flyto2.com",
+      "emailPlaceholder": "team@flyto2.com",
       "success": "Vous êtes sur la liste ! Nous vous contacterons à l'ouverture de la Phase III.",
       "duplicate": "Vous êtes déjà sur la liste d'attente.",
       "error": "Une erreur s'est produite — réessayez."

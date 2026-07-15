@@ -58,7 +58,7 @@
         "tagline": "Automazione no-code del browser. Registra una volta, riproduci per sempre.",
         "point1": "Registra qualsiasi flusso nel browser senza scrivere selettori",
         "point2": "Pausa, ispezione, modifica valori a metà esecuzione, ripresa",
-        "point3": "250+ moduli preconfigurati — CSV, Stripe, Notion, Slack, OpenAI",
+        "point3": "451 moduli preconfigurati — CSV, Stripe, Notion, Slack, OpenAI",
         "cta": "Vai a Cloud"
       },
       "warroom": {
@@ -133,7 +133,7 @@
         },
         {
           "icon": "Boxes",
-          "title": "250+ moduli",
+          "title": "451 moduli",
           "body": "CSV, Excel, Stripe, Notion, Postgres, Slack, OpenAI — già collegati così li assembli invece di scrivere codice di integrazione API."
         },
         {
@@ -182,14 +182,14 @@
     },
     "integrations": {
       "label": "INTEGRAZIONI",
-      "title": "250+ moduli pronti all'uso.",
+      "title": "451 moduli pronti all'uso.",
       "subtitle": "Il collegamento è già predisposto. Trascina, rilascia, configura — non scrivere mai più un altro script \"copia questa riga da Sheet A all'API B\".",
       "andMore": "+ 230 ALTRI · COSTRUISCI IL TUO IN PYTHON O JS"
     },
     "stats": {
       "items": [
         {
-          "value": "250+",
+          "value": "451",
           "label": "MODULI",
           "body": "Nodi preconfigurati per CSV, Excel, Stripe, Notion, Slack, AI, SQL — le cose che altrimenti incollavi insieme a mano."
         },
@@ -249,7 +249,7 @@
   },
   "cloud": {
     "metaTitle": "Cloud — Automazione no-code del browser",
-    "metaDescription": "Registra una volta, riproduci per sempre. Automazione del browser che gira offline. 250+ moduli, 16 lingue, motore con licenza MIT.",
+    "metaDescription": "Registra una volta, riproduci per sempre. Automazione del browser che gira offline. 451 moduli, 16 lingue, motore con licenza MIT.",
     "hero": {
       "eyebrow": "01 / CLOUD",
       "status": "DISPONIBILE",
@@ -257,7 +257,7 @@
       "titleAccent": "in automatico.",
       "lede": "Apri il recorder, esegui l'attività una volta, premi stop. Flyto2 la trasforma in un workflow strutturato che puoi modificare, versionare, pianificare e condividere — senza scrivere una riga di codice.",
       "ctaPrimary": "Scarica l'app desktop",
-      "ctaSecondary": "Esplora 250+ moduli"
+      "ctaSecondary": "Esplora 451 moduli"
     },
     "how": {
       "label": "COME FUNZIONA",
@@ -304,7 +304,7 @@
         },
         {
           "icon": "Boxes",
-          "title": "250+ moduli",
+          "title": "451 moduli",
           "body": "CSV, Excel, Stripe, Notion, Sheets, Postgres, Slack, OpenAI — già collegati così li assembli invece di scrivere codice di integrazione API."
         },
         {
@@ -573,7 +573,7 @@
         "tagline": "Per chi esplora l'automazione da solo.",
         "feature1": "1.000 punti compute / mese",
         "feature2": "Fino a 5 workflow salvati",
-        "feature3": "Tutti i 250+ moduli",
+        "feature3": "Tutti i 451 moduli",
         "feature4": "Supporto community",
         "cta": "Scarica gratis"
       },
@@ -1431,7 +1431,7 @@
       "body": "La war room hosted è browser-based — nessuna app da installare. Unisciti alla lista d'attesa per ricevere un invito quando si apre la Fase III, e scarica lo scanner open source oggi.",
       "primary": "Unisciti alla lista d'attesa",
       "secondary": "Installa lo scanner OSS",
-      "emailPlaceholder": "tua@flyto2.com",
+      "emailPlaceholder": "team@flyto2.com",
       "success": "Sei in lista! Ti contatteremo quando si aprirà la Fase III.",
       "duplicate": "Sei già nella lista d'attesa.",
       "error": "Qualcosa è andato storto — riprova."

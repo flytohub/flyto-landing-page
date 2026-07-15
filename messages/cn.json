@@ -58,7 +58,7 @@
         "tagline": "无代码浏览器自动化。一次录制，永久回放。",
         "point1": "无需编写选择器，录制任意浏览器操作流",
         "point2": "运行中可暂停、检查、修改值后继续",
-        "point3": "250+ 预建模块 — CSV、Stripe、Notion、Slack、OpenAI",
+        "point3": "451 预建模块 — CSV、Stripe、Notion、Slack、OpenAI",
         "cta": "前往 Cloud"
       },
       "warroom": {
@@ -133,7 +133,7 @@
         },
         {
           "icon": "Boxes",
-          "title": "250+ 模块",
+          "title": "451 模块",
           "body": "CSV、Excel、Stripe、Notion、Postgres、Slack、OpenAI — 预先接好线，让你直接拼接而不是手写 API。"
         },
         {
@@ -182,14 +182,14 @@
     },
     "integrations": {
       "label": "集成",
-      "title": "开箱即用 250+ 模块。",
+      "title": "开箱即用 451 模块。",
       "subtitle": "管道已经接好了。拖拽、放置、配置 — 再也不用写「把这行从 Sheet A 复制到 API B」的脚本。",
       "andMore": "+ 230 更多 · 用 PYTHON 或 JS 构建你自己的"
     },
     "stats": {
       "items": [
         {
-          "value": "250+",
+          "value": "451",
           "label": "模块",
           "body": "预建节点，涵盖 CSV、Excel、Stripe、Notion、Slack、AI、SQL — 你原本需要自己拼接的那些。"
         },
@@ -249,7 +249,7 @@
   },
   "cloud": {
     "metaTitle": "Cloud — 无代码浏览器自动化",
-    "metaDescription": "一次录制，永久回放。离线运行的浏览器自动化。250+ 模块，16 种语言，MIT 许可证引擎。",
+    "metaDescription": "一次录制，永久回放。离线运行的浏览器自动化。451 模块，16 种语言，MIT 许可证引擎。",
     "hero": {
       "eyebrow": "01 / CLOUD",
       "status": "已上线",
@@ -257,7 +257,7 @@
       "titleAccent": "全自动驾驶。",
       "lede": "打开录制器，做一次任务，停止。Flyto2 将其转化为可编辑、可版本化、可调度和可共享的结构化工作流 — 无需写一行代码。",
       "ctaPrimary": "下载桌面应用",
-      "ctaSecondary": "浏览 250+ 模块"
+      "ctaSecondary": "浏览 451 模块"
     },
     "how": {
       "label": "工作原理",
@@ -304,7 +304,7 @@
         },
         {
           "icon": "Boxes",
-          "title": "250+ 模块",
+          "title": "451 模块",
           "body": "CSV、Excel、Stripe、Notion、Sheets、Postgres、Slack、OpenAI — 预先接好线，让你直接拼接而不是手写 API。"
         },
         {
@@ -573,7 +573,7 @@
         "tagline": "适合个人探索自动化。",
         "feature1": "每月 1,000 计算积分",
         "feature2": "最多 5 个已保存工作流",
-        "feature3": "所有 250+ 模块",
+        "feature3": "所有 451 模块",
         "feature4": "社区支持",
         "cta": "免费下载"
       },
@@ -1431,7 +1431,7 @@
       "body": "托管战情室基于浏览器 — 无需安装应用。加入候补名单，在第三阶段开放时获得邀请，并立即获取开源扫描器。",
       "primary": "加入候补名单",
       "secondary": "安装开源扫描器",
-      "emailPlaceholder": "your@flyto2.com",
+      "emailPlaceholder": "team@flyto2.com",
       "success": "你已加入名单！Phase III 开放时我们会联系你。",
       "duplicate": "你已经在候补名单上了。",
       "error": "发生了一些问题，请再试一次。"

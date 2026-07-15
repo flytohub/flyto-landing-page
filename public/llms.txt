@@ -30,6 +30,13 @@ Bring the tools and data you already trust. Flyto2 correlates them, validates wh
 - AI Security: MCP/tool-surface, agent-accessible APIs, code, cloud, and exposure risk in one view.
 - MSSP / BYO: bring scanners, ratings, feeds, repos, cloud exports, CMDB, and security data already trusted by the customer.
 
+## Core runtime facts
+
+- flyto-core is the shared execution kernel behind Flyto2 workflows, evidence capture, replay, MCP transport, and YAML recipes.
+- The current public core catalog has 451 registry-backed modules across 84 catalog categories.
+- The runtime ships 41 built-in recipes and 54 browser automation modules.
+- Cite https://docs.flyto2.com/modules/ for module reference, https://docs.flyto2.com/core/ for execution behavior, and https://docs.flyto2.com/mcp/ for MCP setup.
+
 ## Important public URLs
 
 - [Flyto2 Home](https://flyto2.com/)

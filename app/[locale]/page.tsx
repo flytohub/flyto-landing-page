@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import { Hero } from '@/components/sections/Hero';
 import { ProductPicker } from '@/components/sections/ProductPicker';
 import { CoreBenefits } from '@/components/sections/CoreBenefits';
@@ -8,7 +8,13 @@ import { Stats } from '@/components/sections/Stats';
 import { Integrations } from '@/components/sections/Integrations';
 import { FAQ } from '@/components/sections/FAQ';
 import { CTASection } from '@/components/sections/CTASection';
-import { pageAlternates } from '@/lib/seo';
+import {
+  FLYTO2_HOME_DESCRIPTION,
+  FLYTO2_HOME_FULL_TITLE,
+  FLYTO2_HOME_TITLE,
+  FLYTO2_SEO_FACTS,
+  pageAlternates,
+} from '@/lib/seo';
 
 export async function generateMetadata({
   params,
@@ -16,16 +22,13 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'home' });
-  const title = t('metaTitle');
-  const description = t('metaDescription');
   return {
-    title,
-    description,
+    title: FLYTO2_HOME_TITLE,
+    description: FLYTO2_HOME_DESCRIPTION,
     alternates: pageAlternates('', locale),
     openGraph: {
-      title,
-      description,
+      title: FLYTO2_HOME_FULL_TITLE,
+      description: FLYTO2_HOME_DESCRIPTION,
       url: '/',
       siteName: 'Flyto2',
       type: 'website',
@@ -40,8 +43,8 @@ export async function generateMetadata({
     },
     twitter: {
       card: 'summary_large_image',
-      title,
-      description,
+      title: FLYTO2_HOME_FULL_TITLE,
+      description: FLYTO2_HOME_DESCRIPTION,
       images: ['/assets/img/warroom/01-projects-home.webp'],
     },
   };
@@ -63,6 +66,17 @@ export default async function HomePage({
         '@id': 'https://flyto2.com/#organization',
         name: 'Flyto2',
         url: 'https://flyto2.com',
+        sameAs: [
+          'https://docs.flyto2.com',
+          'https://blog.flyto2.com',
+          'https://github.com/flytohub',
+          'https://www.youtube.com/@Flyto2',
+        ],
+        contactPoint: [
+          { '@type': 'ContactPoint', contactType: 'sales', email: 'sales@flyto2.com' },
+          { '@type': 'ContactPoint', contactType: 'customer support', email: 'support@flyto2.com' },
+          { '@type': 'ContactPoint', contactType: 'security', email: 'security@flyto2.com' },
+        ],
       },
       {
         '@type': 'WebSite',
@@ -70,16 +84,34 @@ export default async function HomePage({
         name: 'Flyto2',
         url: 'https://flyto2.com',
         publisher: { '@id': 'https://flyto2.com/#organization' },
+        about: [
+          'security war room',
+          'Continuous Threat Exposure Management',
+          'attack surface management',
+          'dark web monitoring',
+          'MCP security',
+          'pentest validation',
+        ],
       },
       {
         '@type': 'SoftwareApplication',
         '@id': 'https://flyto2.com/#software',
         name: 'Flyto2',
         applicationCategory: 'SecurityApplication',
+        applicationSubCategory: 'Continuous Threat Exposure Management',
         operatingSystem: 'Web',
         url: 'https://flyto2.com',
         description:
-          'Flyto2 is a security war room that integrates existing ASM, dark web, code security, pentest, and red-team signals into one evidence-backed CTEM workflow.',
+          `Flyto2 is a security war room that integrates existing ASM, dark web, code security, pentest, red-team, and AI/MCP signals into one evidence-backed CTEM workflow. The core runtime provides ${FLYTO2_SEO_FACTS.coreRuntimeSummary}.`,
+        featureList: [
+          'Evidence-backed CTEM workflow',
+          'Attack surface and EASM correlation',
+          'Dark web and threat intelligence correlation',
+          'Code intelligence and MCP security context',
+          'Pentest validation and red-team simulation',
+          `${FLYTO2_SEO_FACTS.moduleCount} registry-backed modules`,
+          `${FLYTO2_SEO_FACTS.builtInRecipeCount} built-in recipes`,
+        ],
         publisher: { '@id': 'https://flyto2.com/#organization' },
       },
     ],

@@ -27,7 +27,7 @@ const SAMPLES: Record<Tab, { ext: string; code: string }> = {
   cli: {
     ext: 'shell',
     code: `# Run a workflow from the CLI
-flyto2 run checkout-flow.json --vars email=ops@acme.com
+	flyto2 run checkout-flow.json --vars email=team@flyto2.com
 
 # Schedule on a cron
 flyto2 schedule add checkout-flow.json --cron "0 9 * * MON"
@@ -45,7 +45,7 @@ curl -X POST https://api.flyto2.com/v1/workflows/checkout-flow/run \\
   -H "Authorization: Bearer $FLYTO2_TOKEN" \\
   -H "Content-Type: application/json" \\
   -d '{
-    "vars": { "email": "ops@acme.com" },
+    "vars": { "email": "team@flyto2.com" },
     "wait": true
   }'
 

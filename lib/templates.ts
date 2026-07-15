@@ -67,7 +67,7 @@ export const templates: TemplateContent[] = [
       "IMAP",
     ],
     quickStart:
-      "flyto template install auto-login-template\nflyto secret set sso.creds --username you@example.com --password '...' --totp-seed JBSWY3DPEHPK3PXP\nflyto run auto-login-template --target https://app.example.com --profile sso.creds",
+      "flyto template install auto-login-template\nflyto secret set sso.creds --username dev@flyto2.com --password '...' --totp-seed JBSWY3DPEHPK3PXP\nflyto run auto-login-template --target https://app.example.com --profile sso.creds",
     bestPractices: [
       "Store credentials only in the encrypted vault, never inline in workflow YAML or environment variables checked into git.",
       "Reuse session snapshots aggressively to avoid triggering anomaly detection on sites that score login frequency.",

@@ -16,13 +16,13 @@ const ENTRIES: Omit<WhitepaperMeta, 'readingMinutes'>[] = [
     slug: 'audit',
     title: 'Flyto2 Platform Audit',
     blurb:
-      '8 projects · 579 modules · 946 API endpoints. The full technical inventory of what ships across the Flyto2 stack — architecture, engine internals, browser modules, enterprise features, runtime plugin model.',
+      'Technical inventory of what ships across the Flyto2 stack: architecture, engine internals, browser modules, enterprise features, runtime plugin model, evidence loops, and public product boundaries.',
   },
   {
     slug: 'supplement',
     title: 'Audit Supplement',
     blurb:
-      'Coverage the main audit left out: 8 MCP tools, 37 pre-built recipes, the expression engine, plugin SDK, and the bits the headline doc skipped.',
+      'Coverage the main audit left out: flyto-core with 451 registry-backed modules, 84 catalog categories, 41 built-in recipes, MCP transport, the expression engine, plugin SDK, and the bits the headline doc skipped.',
   },
   {
     slug: 'code',

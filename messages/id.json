@@ -58,7 +58,7 @@
         "tagline": "Otomasi browser tanpa kode. Rekam sekali, putar selamanya.",
         "point1": "Rekam alur browser apa pun tanpa menulis selector",
         "point2": "Jeda, periksa, edit nilai di tengah proses, lanjutkan",
-        "point3": "250+ modul siap pakai — CSV, Stripe, Notion, Slack, OpenAI",
+        "point3": "451 modul siap pakai — CSV, Stripe, Notion, Slack, OpenAI",
         "cta": "Buka Cloud"
       },
       "warroom": {
@@ -133,7 +133,7 @@
         },
         {
           "icon": "Boxes",
-          "title": "250+ modul",
+          "title": "451 modul",
           "body": "CSV, Excel, Stripe, Notion, Postgres, Slack, OpenAI — sudah terhubung sehingga Anda cukup menyatukannya tanpa menulis kode API."
         },
         {
@@ -182,14 +182,14 @@
     },
     "integrations": {
       "label": "INTEGRASI",
-      "title": "250+ modul siap pakai.",
+      "title": "451 modul siap pakai.",
       "subtitle": "Koneksinya sudah terpasang. Seret, lepas, konfigurasikan — tidak perlu menulis skrip \"salin baris dari Sheet A ke API B\" lagi.",
       "andMore": "+ 230 LAINNYA · BUAT SENDIRI DENGAN PYTHON ATAU JS"
     },
     "stats": {
       "items": [
         {
-          "value": "250+",
+          "value": "451",
           "label": "MODUL",
           "body": "Node siap pakai untuk CSV, Excel, Stripe, Notion, Slack, AI, SQL — hal-hal yang biasanya harus Anda sambungkan sendiri."
         },
@@ -249,7 +249,7 @@
   },
   "cloud": {
     "metaTitle": "Cloud — Otomasi browser tanpa kode",
-    "metaDescription": "Rekam sekali, putar selamanya. Otomasi browser yang berjalan offline. 250+ modul, 16 bahasa, mesin berlisensi MIT.",
+    "metaDescription": "Rekam sekali, putar selamanya. Otomasi browser yang berjalan offline. 451 modul, 16 bahasa, mesin berlisensi MIT.",
     "hero": {
       "eyebrow": "01 / CLOUD",
       "status": "TERSEDIA",
@@ -257,7 +257,7 @@
       "titleAccent": "di autopilot.",
       "lede": "Buka perekam, lakukan tugas sekali, tekan stop. Flyto2 mengubahnya menjadi workflow terstruktur yang bisa Anda edit, versi, jadwalkan, dan bagikan — tanpa menulis satu baris kode pun.",
       "ctaPrimary": "Unduh aplikasi desktop",
-      "ctaSecondary": "Jelajahi 250+ modul"
+      "ctaSecondary": "Jelajahi 451 modul"
     },
     "how": {
       "label": "CARA KERJANYA",
@@ -304,7 +304,7 @@
         },
         {
           "icon": "Boxes",
-          "title": "250+ modul",
+          "title": "451 modul",
           "body": "CSV, Excel, Stripe, Notion, Sheets, Postgres, Slack, OpenAI — sudah terhubung sehingga Anda cukup menyatukannya tanpa menulis kode API."
         },
         {
@@ -573,7 +573,7 @@
         "tagline": "Untuk individu yang menjelajahi otomasi.",
         "feature1": "1.000 poin komputasi / bulan",
         "feature2": "Hingga 5 workflow tersimpan",
-        "feature3": "Semua 250+ modul",
+        "feature3": "Semua 451 modul",
         "feature4": "Dukungan komunitas",
         "cta": "Unduh gratis"
       },
@@ -1431,7 +1431,7 @@
       "body": "War room terhosting berbasis browser — tidak perlu menginstal aplikasi. Daftar tunggu untuk mendapat undangan saat Fase III dibuka, dan ambil pemindai open-source hari ini.",
       "primary": "Daftar tunggu",
       "secondary": "Instal pemindai OSS",
-      "emailPlaceholder": "your@flyto2.com",
+      "emailPlaceholder": "team@flyto2.com",
       "success": "Kamu sudah terdaftar! Kami akan menghubungi ketika Phase III dibuka.",
       "duplicate": "Kamu sudah ada di daftar tunggu.",
       "error": "Ada yang salah — coba lagi."

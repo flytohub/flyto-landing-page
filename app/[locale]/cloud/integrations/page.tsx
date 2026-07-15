@@ -15,9 +15,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   return {
-    title: 'Integrations — 250+ modules',
+    title: 'Integrations — 451 modules',
     description:
-      '250+ pre-wired modules across CSV, spreadsheets, Stripe, Notion, Slack, AI, databases, browsers and more. Drag, drop, configure.',
+      '451 pre-wired modules across CSV, spreadsheets, Stripe, Notion, Slack, AI, databases, browsers and more. Drag, drop, configure.',
     alternates: pageAlternates('cloud/integrations', locale),
   };
 }
@@ -127,7 +127,7 @@ const GROUPS: IntegrationGroup[] = [
   },
   {
     icon: FlaskConical, name: 'Flow Control',
-    body: 'The plumbing that makes 250 modules into actual workflows.',
+    body: 'The plumbing that makes 451 modules into actual workflows.',
     modules: ['flow.branch', 'flow.switch', 'flow.loop', 'flow.foreach', 'flow.fork', 'flow.merge', 'flow.breakpoint', 'flow.wait', 'flow.timeout', 'flow.retry'],
   },
   {
