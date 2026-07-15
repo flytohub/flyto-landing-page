@@ -1,5 +1,17 @@
 # Decisions
 
+## 2026-07-15 - Public SEO must cover automation and security together
+
+Decision: the landing page, AI-readable indexes, and structured metadata must
+describe Flyto2 as open-source AI workflow automation, MCP-native agent tools,
+no-code browser automation, and evidence-backed security Warroom on one
+flyto-core runtime.
+
+Reason: keyword evidence and live-page review showed the public surface could
+collapse into security-only positioning. Flyto2 has a security Warroom, but the
+open-source execution kernel is also the discoverable automation and MCP
+foundation for AI agents.
+
 ## 2026-07-15 - Public SEO is multilingual with English as x-default
 
 Decision: advertise all supported locale routes through canonical metadata,

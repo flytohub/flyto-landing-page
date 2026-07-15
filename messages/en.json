@@ -32,8 +32,8 @@
     "aiSecurity": "AI Security"
   },
   "footer": {
-    "tagline": "BYO offensive validation for existing security tools: verified attack paths, pentest evidence, and red-team scenarios.",
-    "cloudTagline": "Deterministic execution engine for evidence and replay.",
+    "tagline": "Open-source AI workflow automation and an evidence-backed security war room on one deterministic runtime.",
+    "cloudTagline": "Open-source execution engine for MCP-native automation, evidence, and replay.",
     "warroomTagline": "Security war room. Correlate, validate, and act with evidence.",
     "products": "Products",
     "community": "Community",
@@ -45,25 +45,25 @@
     "copyright": "© 2026 FLYTO2"
   },
   "home": {
-    "metaTitle": "BYO Offensive Validation Platform for Existing Security Tools",
-    "metaDescription": "Flyto2 turns ASM, SAST, DAST, cloud, dark web, and scanner findings into verified attack paths, pentest evidence, and red-team scenarios.",
+    "metaTitle": "AI Workflow Automation and Security War Room",
+    "metaDescription": "Flyto2 combines open-source AI workflow automation, MCP-native agent tools, no-code browser automation, and evidence-backed CTEM security workflows.",
     "hero": {
-      "eyebrow": "FLYTO2 · BYO OFFENSIVE VALIDATION",
-      "title": "Bring your own tools.",
-      "titleAccent": "Validate attack paths.",
-      "lede": "Flyto2 turns findings from ASM, SAST, DAST, cloud, dark web, and vulnerability scanners into safe, replayable pentest evidence and red-team scenarios.",
-      "reassure": "ASM · SAST · DAST · CSPM · SIEM · RED TEAM"
+      "eyebrow": "FLYTO2 · AI WORKFLOW AUTOMATION · SECURITY WAR ROOM",
+      "title": "Open-source automation.",
+      "titleAccent": "Evidence-backed security.",
+      "lede": "Flyto2 combines an open-source AI workflow automation engine, MCP-native agent tools, no-code browser automation, and a security war room for CTEM, pentest evidence, and red-team scenarios.",
+      "reassure": "AI WORKFLOW · MCP · CTEM · ASM · EVIDENCE · REPLAY"
     },
     "products": {
-      "label": "SECURITY-FIRST",
-      "title": "One war room, one deterministic engine underneath.",
-      "subtitle": "Warroom is the primary security surface. Cloud remains the execution substrate for browser automation, evidence capture, and replay.",
+      "label": "OPEN CORE",
+      "title": "One deterministic runtime for automation and security.",
+      "subtitle": "Flyto2 Core powers AI workflow automation, MCP server tools, no-code browser workflows, evidence capture, replay, and Warroom validation loops.",
       "cloud": {
-        "name": "Execution engine",
+        "name": "AI workflow engine",
         "statusLabel": "SHIPPING",
-        "tagline": "Browser automation, YAML recipes, and evidence replay that support security validation workflows.",
+        "tagline": "Open-source workflow automation with YAML recipes, MCP-native modules, browser execution, evidence, and replay.",
         "point1": "Run deterministic browser and API workflows",
-        "point2": "Capture replayable evidence for audit and verification",
+        "point2": "Expose modules to AI agents through MCP server automation",
         "point3": "451 modules across browser, data, files, cloud, AI, and notifications",
         "cta": "Explore the engine"
       },
@@ -120,22 +120,22 @@
     },
     "features": {
       "label": "WHY FLYTO2",
-      "title": "Built for security teams that already bought tools.",
+      "title": "Built for teams that need automation they can inspect.",
       "items": [
         {
           "icon": "Radar",
-          "title": "BYO finding intake",
-          "body": "Connect ASM, EASM, SAST, DAST, CSPM, SIEM, threat-feed, repo, and asset data without forcing a rip-and-replace."
+          "title": "AI workflow automation",
+          "body": "Describe work in plain language, then run it through deterministic modules instead of unbounded generated code."
         },
         {
           "icon": "KeyRound",
-          "title": "Threat signals as inputs",
-          "body": "Use breach, IOC, actor, credential, and brand-abuse signals as context for attack-path validation."
+          "title": "MCP-native agent tools",
+          "body": "Expose browser, API, file, data, AI, and verification modules to MCP-compatible clients with inspectable parameters."
         },
         {
           "icon": "Code2",
-          "title": "Code risk in the path",
-          "body": "SCA, SAST, secrets, license, API, and reachability context help explain whether an external exposure is exploitable."
+          "title": "Open-source core",
+          "body": "Use the Apache-2.0 flyto-core runtime as the shared execution kernel for recipes, trace, replay, and evidence."
         },
         {
           "icon": "Crosshair",
@@ -144,8 +144,8 @@
         },
         {
           "icon": "Swords",
-          "title": "Red-team scenarios",
-          "body": "Chain verified findings into adversary-style exercises that feed detection expectations and prioritization."
+          "title": "BYO finding intake",
+          "body": "Connect ASM, EASM, SAST, DAST, CSPM, SIEM, threat-feed, repo, and asset data without forcing a rip-and-replace."
         },
         {
           "icon": "FileCheck2",
@@ -241,7 +241,11 @@
         },
         {
           "q": "Where does Cloud automation fit now?",
-          "a": "Cloud remains the deterministic execution substrate: browser automation, modules, YAML recipes, and evidence/replay. The public positioning is security-first, with automation supporting validation and evidence workflows."
+          "a": "Cloud and Core are the deterministic execution substrate: AI workflow automation, browser automation, MCP server tools, YAML recipes, modules, evidence, and replay. Warroom uses that substrate for validation and security evidence workflows."
+        },
+        {
+          "q": "Is Flyto2 an open source AI agent framework?",
+          "a": "flyto-core is the open-source execution kernel underneath Flyto2. It exposes 451 registry-backed modules through CLI, API, YAML recipes, and MCP server automation so AI agents can call bounded tools instead of inventing unreviewed code."
         }
       ]
     },

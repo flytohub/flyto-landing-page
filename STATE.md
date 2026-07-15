@@ -5,6 +5,9 @@ Current state on 2026-07-01:
 - The site has public routes for Cloud, templates, recipes, pricing,
   changelog, CTEM/security pages, dark web monitoring, whitepapers, legal pages,
   and discussions.
+- Homepage SEO and AI-readable indexes now present Flyto2 as open-source AI
+  workflow automation, MCP-native agent tools, no-code browser automation, and
+  evidence-backed security Warroom on one deterministic flyto-core runtime.
 - Homepage, footer, Warroom product entry, pricing, security, enterprise,
   airgap, compare, API docs, trust, docs, blog, and changelog now describe
   Flyto2 Warroom CE as the installable self-hosted baseline and Enterprise

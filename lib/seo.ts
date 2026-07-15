@@ -32,15 +32,27 @@ export const FLYTO2_SEO_FACTS = {
     '451 registry-backed modules across 84 catalog categories, 41 built-in recipes, MCP transports, evidence capture, and replayable YAML execution',
 } as const;
 
-export const FLYTO2_HOME_TITLE = 'Security War Room and Automation Platform for Evidence-Backed CTEM';
+export const FLYTO2_HOME_TITLE = 'AI Workflow Automation and Security War Room for Evidence-Backed CTEM';
 
 export const FLYTO2_HOME_FULL_TITLE = `Flyto2 - ${FLYTO2_HOME_TITLE}`;
 
 export const FLYTO2_HOME_DESCRIPTION =
-  `Flyto2 combines a security war room for evidence-backed CTEM with Cloud, Apps, and browser automation workflows powered by ${FLYTO2_SEO_FACTS.coreRuntimeSummary}.`;
+  `Flyto2 combines an open-source AI workflow automation engine, MCP-native agent tools, no-code browser automation, and a security war room for evidence-backed CTEM powered by ${FLYTO2_SEO_FACTS.coreRuntimeSummary}.`;
 
 export const FLYTO2_SEO_KEYWORDS = [
   'Flyto2',
+  'AI workflow automation',
+  'AI workflow automation tools',
+  'AI workflow automation platform',
+  'AI workflow automation software',
+  'open source AI workflow automation',
+  'open source AI agent framework',
+  'open source AI agent framework Python',
+  'MCP server automation',
+  'MCP automation tools',
+  'agentic AI workflow automation',
+  'no-code AI workflow automation',
+  'self-hosted workflow automation',
   'security war room',
   'CTEM',
   'CTEM cybersecurity',

@@ -61,11 +61,11 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.4 }}
           className="mt-10 inline-flex flex-wrap items-center justify-center gap-x-3 gap-y-2 font-mono text-[10.5px] tracking-[0.18em] uppercase text-bone-300"
         >
-          <span>CTEM</span>
+          <span>AI WORKFLOW</span>
           <Dot />
-          <span>ASM / EASM</span>
+          <span>MCP-NATIVE</span>
           <Dot />
-          <span>BYO-FRIENDLY</span>
+          <span>OPEN CORE</span>
         </motion.div>
       </div>
 
