@@ -1,7 +1,10 @@
-import { readFileSync } from 'node:fs';
-import path from 'node:path';
-
-const CONTENT_DIR = path.join(process.cwd(), 'content', 'whitepaper');
+import auditBody from '../content/whitepaper/audit.md';
+import byoIntegrationBody from '../content/whitepaper/byo-integration.md';
+import codeBody from '../content/whitepaper/code.md';
+import engineBody from '../content/whitepaper/engine.md';
+import msspWarroomBody from '../content/whitepaper/mssp-warroom.md';
+import securitySurfacesBody from '../content/whitepaper/security-surfaces.md';
+import supplementBody from '../content/whitepaper/supplement.md';
 
 export interface WhitepaperMeta {
   slug: string;
@@ -56,6 +59,16 @@ const ENTRIES: Omit<WhitepaperMeta, 'readingMinutes'>[] = [
   },
 ];
 
+const BODY_BY_SLUG: Record<string, string> = {
+  audit: auditBody,
+  supplement: supplementBody,
+  code: codeBody,
+  engine: engineBody,
+  'mssp-warroom': msspWarroomBody,
+  'byo-integration': byoIntegrationBody,
+  'security-surfaces': securitySurfacesBody,
+};
+
 function countMinutes(md: string): number {
   // Chinese-heavy docs: ~400 chars/min reading; English ~250 wpm.
   // Hybrid heuristic: total chars / 350.
@@ -64,7 +77,7 @@ function countMinutes(md: string): number {
 
 export function listWhitepapers(): WhitepaperMeta[] {
   return ENTRIES.map((e) => {
-    const md = readFileSync(path.join(CONTENT_DIR, `${e.slug}.md`), 'utf8');
+    const md = BODY_BY_SLUG[e.slug];
     return { ...e, readingMinutes: countMinutes(md) };
   });
 }
@@ -72,7 +85,8 @@ export function listWhitepapers(): WhitepaperMeta[] {
 export function readWhitepaper(slug: string): { meta: WhitepaperMeta; body: string } | null {
   const meta = ENTRIES.find((e) => e.slug === slug);
   if (!meta) return null;
-  const body = readFileSync(path.join(CONTENT_DIR, `${slug}.md`), 'utf8');
+  const body = BODY_BY_SLUG[slug];
+  if (!body) return null;
   return { meta: { ...meta, readingMinutes: countMinutes(body) }, body };
 }
 

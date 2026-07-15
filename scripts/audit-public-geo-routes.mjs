@@ -63,6 +63,16 @@ if (localeLayout.includes("locale === 'en'") && localeLayout.includes('index: fa
   failures.push('locale layout must not noindex supported non-English routes');
 }
 
+const whitepapers = readFileSync(path.join(root, 'lib', 'whitepapers.ts'), 'utf8');
+if (whitepapers.includes('readFileSync') || whitepapers.includes('node:fs')) {
+  failures.push('lib/whitepapers.ts must bundle markdown content, not read files at Cloudflare Worker runtime');
+}
+for (const token of ['../content/whitepaper/audit.md', 'BODY_BY_SLUG']) {
+  if (!whitepapers.includes(token)) {
+    failures.push(`lib/whitepapers.ts missing bundled whitepaper token: ${token}`);
+  }
+}
+
 const llms = readFileSync(path.join(root, 'public', 'llms.txt'), 'utf8');
 const full = readFileSync(path.join(root, 'public', 'llms-full.txt'), 'utf8');
 for (const route of requiredRoutes) {

@@ -147,6 +147,32 @@ if (localeLayout.includes("locale === 'en'") && localeLayout.includes('index: fa
   failures.push('locale layout must not noindex supported non-English routes after multilingual sitemap activation');
 }
 
+const whitepapers = read('lib/whitepapers.ts');
+if (whitepapers.includes('readFileSync') || whitepapers.includes('node:fs')) {
+  failures.push('lib/whitepapers.ts must bundle markdown content, not read files at Cloudflare Worker runtime');
+}
+for (const token of [
+  '../content/whitepaper/audit.md',
+  '../content/whitepaper/supplement.md',
+  '../content/whitepaper/code.md',
+  '../content/whitepaper/engine.md',
+  '../content/whitepaper/mssp-warroom.md',
+  '../content/whitepaper/byo-integration.md',
+  '../content/whitepaper/security-surfaces.md',
+  'BODY_BY_SLUG',
+]) {
+  if (!whitepapers.includes(token)) {
+    failures.push(`lib/whitepapers.ts missing bundled whitepaper token: ${token}`);
+  }
+}
+
+const nextConfig = read('next.config.mjs');
+for (const token of ['asset/source', 'whitepaperContentDir', './content/whitepaper']) {
+  if (!nextConfig.includes(token)) {
+    failures.push(`next.config.mjs missing markdown bundling token: ${token}`);
+  }
+}
+
 const robots = read('public/robots.txt');
 for (const ua of expectedCrawlerPolicies) {
   if (!robots.includes(`User-agent: ${ua}`)) {
