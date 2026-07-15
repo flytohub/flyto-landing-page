@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
-import { Suspense } from 'react';
-import { DiscussionsView } from '@/components/forum/DiscussionsView';
+import { DiscussionsClient } from '@/components/forum/DiscussionsClient';
 import { pageAlternates } from '@/lib/seo';
 
 export async function generateMetadata({
@@ -26,9 +25,5 @@ export default async function CloudDiscussionsPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  return (
-    <Suspense>
-      <DiscussionsView product="cloud" />
-    </Suspense>
-  );
+  return <DiscussionsClient product="cloud" />;
 }

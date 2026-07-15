@@ -73,6 +73,26 @@ for (const token of ['../content/whitepaper/audit.md', 'BODY_BY_SLUG']) {
   }
 }
 
+const discussionsClient = readFileSync(path.join(root, 'components', 'forum', 'DiscussionsClient.tsx'), 'utf8');
+for (const token of ['ssr: false', "import('./DiscussionsView')"]) {
+  if (!discussionsClient.includes(token)) {
+    failures.push(`DiscussionsClient must keep Firebase forum rendering client-only: ${token}`);
+  }
+}
+for (const route of ['cloud/discussions', 'code/discussions']) {
+  const pagePath = path.join(root, 'app', '[locale]', ...route.split('/'), 'page.tsx');
+  const page = readFileSync(pagePath, 'utf8');
+  if (page.includes('@/components/forum/DiscussionsView') || page.includes('<DiscussionsView')) {
+    failures.push(`/${route}/ must not import DiscussionsView directly into Worker SSR`);
+  }
+  if (!page.includes('@/components/forum/DiscussionsClient') || !page.includes('<DiscussionsClient')) {
+    failures.push(`/${route}/ must render the client-only DiscussionsClient wrapper`);
+  }
+  if (!page.includes('robots: { index: false, follow: true }')) {
+    failures.push(`/${route}/ must keep discussions noindex/follow`);
+  }
+}
+
 const llms = readFileSync(path.join(root, 'public', 'llms.txt'), 'utf8');
 const full = readFileSync(path.join(root, 'public', 'llms-full.txt'), 'utf8');
 for (const route of requiredRoutes) {

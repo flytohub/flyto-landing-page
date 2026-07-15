@@ -173,6 +173,26 @@ for (const token of ['asset/source', 'whitepaperContentDir', './content/whitepap
   }
 }
 
+const discussionsClient = read('components/forum/DiscussionsClient.tsx');
+for (const token of ['ssr: false', "import('./DiscussionsView')"]) {
+  if (!discussionsClient.includes(token)) {
+    failures.push(`DiscussionsClient must keep Firebase forum rendering client-only: ${token}`);
+  }
+}
+for (const route of ['cloud/discussions', 'code/discussions']) {
+  const pagePath = `app/[locale]/${route}/page.tsx`;
+  const page = read(pagePath);
+  if (page.includes('@/components/forum/DiscussionsView') || page.includes('<DiscussionsView')) {
+    failures.push(`${pagePath} must not import DiscussionsView directly into Worker SSR`);
+  }
+  if (!page.includes('@/components/forum/DiscussionsClient') || !page.includes('<DiscussionsClient')) {
+    failures.push(`${pagePath} must render the client-only DiscussionsClient wrapper`);
+  }
+  if (!page.includes('robots: { index: false, follow: true }')) {
+    failures.push(`${pagePath} must keep discussions noindex/follow`);
+  }
+}
+
 const robots = read('public/robots.txt');
 for (const ua of expectedCrawlerPolicies) {
   if (!robots.includes(`User-agent: ${ua}`)) {
