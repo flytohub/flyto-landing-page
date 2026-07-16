@@ -1,10 +1,64 @@
 <h1 align="center">Flyto2 Landing Page</h1>
 
 <p align="center">
-  <b>The marketing site served at <a href="https://flyto2.com">flyto2.com</a>.</b>
+  <b>The public front door for Flyto2 Cloud, Flyto2 Warroom, docs, blog, and AI-search discovery.</b>
+</p>
+
+<p align="center">
+  <a href="https://flyto2.com">Website</a> |
+  <a href="https://docs.flyto2.com">Docs</a> |
+  <a href="https://blog.flyto2.com">Blog</a> |
+  <a href="https://github.com/flytohub/flyto-core">Open-source engine</a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/flytohub/flyto-landing-page/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/flytohub/flyto-landing-page/actions/workflows/ci.yml/badge.svg"></a>
+  <a href="https://github.com/flytohub/flyto-landing-page/actions/workflows/seo.yml"><img alt="SEO Gate" src="https://github.com/flytohub/flyto-landing-page/actions/workflows/seo.yml/badge.svg"></a>
+  <a href="https://github.com/flytohub/flyto-landing-page/actions/workflows/security.yml"><img alt="Security" src="https://github.com/flytohub/flyto-landing-page/actions/workflows/security.yml/badge.svg"></a>
 </p>
 
 ---
+
+Flyto2.com is the public conversion and citation surface for the Flyto2
+ecosystem. It explains the open-source execution engine, cloud automation,
+security war room, templates, pricing, downloads, trust pages, and long-tail
+SEO pages in 16 locales.
+
+This repository is intentionally optimized for three audiences:
+
+- **Developers** who want to understand what Flyto2 does and try the open-source
+  engine quickly.
+- **Security and automation buyers** who need trust, pricing, compliance,
+  product boundaries, and contact paths.
+- **Search, AI answer engines, and crawlers** that need stable metadata,
+  hreflang, sitemap, `robots.txt`, `llms.txt`, and citation-ready summaries.
+
+## Quick start
+
+```bash
+npm ci
+npm run dev
+```
+
+Open `http://localhost:3000/en` for English, or replace `en` with any supported
+locale. Before pushing public copy, run:
+
+```bash
+npm run verify
+```
+
+That command runs the route contract audit, TypeScript check, production build,
+and SEO surface audit.
+
+## What this repo owns
+
+- Public pages for Flyto2 Cloud, Warroom, open source, pricing, security,
+  enterprise, docs, blog, changelog, contact, and comparison routes.
+- Multilingual route generation for 16 locales.
+- Sitemap, canonical URLs, hreflang clusters, `x-default`, and AI-readable
+  `llms.txt` / `llms-full.txt`.
+- GitHub/GitLab-facing Markdown standards for the public Flyto2 repositories:
+  see [docs/github-gitlab-md-playbook.md](docs/github-gitlab-md-playbook.md).
 
 ## Stack
 
@@ -15,7 +69,7 @@
 - Cloudflare proxy in front of GitHub Pages (HTTPS, caching, edge redirects)
 - Deployed via `.github/workflows/deploy.yml` on every push to `main`
 
-## Installation
+## Installation details
 
 Use Node.js 20 and npm. Install dependencies from the lockfile:
 
@@ -40,7 +94,7 @@ with any supported locale. Public pages are static and must render enough
 server-generated text for SEO, AEO, and GEO crawlers without relying on
 client-only hydration.
 
-## Local dev
+## Developer loop
 
 ```bash
 npm install
