@@ -45,10 +45,10 @@ const CARDS: ProductCardData[] = [
     IconMark: ShieldCheck,
     status: 'beta',
     paint: {
-      panel:    'linear-gradient(180deg, rgba(34, 211, 238, 0.18), rgba(34, 211, 238, 0.04) 70%)',
-      border:   'rgba(34, 211, 238, 0.32)',
-      accent:   '#67e8f9',
-      visualBg: '#08141a',
+      panel:    'linear-gradient(180deg, rgba(236, 253, 255, 0.98), rgba(255, 255, 255, 0.94) 72%)',
+      border:   'rgba(14, 116, 144, 0.26)',
+      accent:   '#0e7490',
+      visualBg: '#e9fbff',
     },
   },
   {
@@ -57,10 +57,10 @@ const CARDS: ProductCardData[] = [
     IconMark: Cloud,
     status: 'live',
     paint: {
-      panel:    'linear-gradient(180deg, rgba(139, 92, 246, 0.18), rgba(139, 92, 246, 0.04) 70%)',
-      border:   'rgba(139, 92, 246, 0.35)',
-      accent:   '#c4b5fd',
-      visualBg: '#0f0a1f',
+      panel:    'linear-gradient(180deg, rgba(245, 240, 255, 0.98), rgba(255, 255, 255, 0.94) 72%)',
+      border:   'rgba(109, 40, 217, 0.24)',
+      accent:   '#6d28d9',
+      visualBg: '#f1ecff',
     },
   },
 ];
@@ -69,11 +69,16 @@ export function ProductPicker() {
   const t = useTranslations('home.products');
 
   return (
-    <section className="mx-auto max-w-6xl px-5 pb-24 sm:px-8 sm:pb-32">
+    <section className="relative overflow-hidden border-y border-slate-200 bg-[#f7f4ed] text-slate-950">
+      <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
       <header className="mx-auto max-w-2xl text-center">
-        <span className="label-mono">{t('label')}</span>
-        <h2 className="h-display mt-4 text-[clamp(34px,5.5vw,60px)]">{t('title')}</h2>
-        <p className="mx-auto mt-5 max-w-xl text-[15px] leading-relaxed text-bone-200">
+        <span className="font-mono text-[11px] tracking-[0.16em] text-slate-500 uppercase">
+          {t('label')}
+        </span>
+        <h2 className="h-display mt-4 text-[clamp(34px,5.5vw,60px)] tracking-normal">
+          {t('title')}
+        </h2>
+        <p className="mx-auto mt-5 max-w-xl text-[15px] leading-relaxed text-slate-700">
           {t('subtitle')}
         </p>
       </header>
@@ -82,6 +87,7 @@ export function ProductPicker() {
         {CARDS.map((card, i) => (
           <ProductCard key={card.productKey} card={card} index={i} />
         ))}
+      </div>
       </div>
     </section>
   );
@@ -103,31 +109,38 @@ function ProductCard({ card, index }: { card: ProductCardData; index: number }) 
       <Link
         href={localized}
         prefetch={false}
-        className="group relative flex h-full flex-col overflow-hidden rounded-2xl border transition-all duration-500 hover:-translate-y-1"
+        className="group relative flex h-full flex-col overflow-hidden rounded-lg border shadow-[0_24px_60px_-38px_rgba(15,23,42,0.42)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_30px_72px_-42px_rgba(15,23,42,0.52)]"
         style={{ background: paint.panel, borderColor: paint.border }}
       >
         {/* Top body */}
         <div className="flex flex-col gap-7 p-8 sm:p-10">
           <div className="flex items-start justify-between gap-4">
             <div
-              className="grid h-14 w-14 place-items-center rounded-xl border bg-ink-900"
+              className="grid h-14 w-14 place-items-center rounded-lg border bg-white"
               style={{ color: paint.accent, borderColor: paint.border }}
             >
               <IconMark className="h-6 w-6" strokeWidth={1.5} />
             </div>
-            <Tag variant={card.status}>{t('statusLabel')}</Tag>
+            <Tag
+              variant={card.status}
+              className="border-slate-300 bg-white/80 text-slate-700"
+            >
+              {t('statusLabel')}
+            </Tag>
           </div>
 
           <div>
-            <h3 className="h-display text-[clamp(32px,4vw,48px)]">{t('name')}</h3>
-            <p className="mt-3 text-[15px] leading-relaxed text-bone-100/90">{t('tagline')}</p>
+            <h3 className="h-display text-[clamp(32px,4vw,48px)] tracking-normal text-slate-950">
+              {t('name')}
+            </h3>
+            <p className="mt-3 text-[15px] leading-relaxed text-slate-700">{t('tagline')}</p>
           </div>
 
           <ul className="space-y-2.5">
             {(['point1', 'point2', 'point3'] as const).map((k) => (
               <li
                 key={k}
-                className="flex items-start gap-2.5 text-[13.5px] leading-relaxed text-bone-100/80"
+                className="flex items-start gap-2.5 text-[13.5px] leading-relaxed text-slate-700"
               >
                 <Check className="mt-0.5 h-4 w-4 flex-none" style={{ color: paint.accent }} strokeWidth={2} />
                 <span>{t(k)}</span>

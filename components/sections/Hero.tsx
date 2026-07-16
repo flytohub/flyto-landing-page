@@ -9,48 +9,49 @@ export function Hero() {
   const t = useTranslations('home.hero');
 
   return (
-    <section className="relative isolate overflow-hidden">
-      {/* Layered background */}
-      <div className="hero-glow" aria-hidden />
-      <div className="hero-dots" aria-hidden />
+    <section className="relative isolate overflow-hidden bg-[linear-gradient(180deg,#f8f5ec_0%,#eef7f8_58%,#0d0d12_100%)] text-slate-950">
+      <div
+        aria-hidden
+        className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_1px_1px,rgba(15,23,42,0.08)_1px,transparent_0)] [background-size:30px_30px] [mask-image:linear-gradient(180deg,black,transparent_78%)]"
+      />
 
       {/* Massive faint wordmark — typographic anchor instead of synthetic visual */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-x-0 top-[18%] z-0 select-none text-center"
       >
-        <span className="font-display text-[clamp(160px,28vw,360px)] font-semibold leading-none tracking-[-0.06em] text-bone-100/[0.025]">
+        <span className="font-display text-[clamp(160px,28vw,360px)] font-semibold leading-none tracking-normal text-slate-900/[0.045]">
           FLYTO2
         </span>
       </div>
 
-      <div className="relative mx-auto max-w-4xl px-5 pb-16 pt-28 text-center sm:px-8 sm:pb-20 sm:pt-36">
+      <div className="relative mx-auto max-w-6xl px-5 pb-12 pt-24 text-center sm:px-8 sm:pb-16 sm:pt-28">
         <motion.div
           initial={{ opacity: 0, y: 6 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="mx-auto inline-flex items-center gap-2 rounded-full border border-[var(--color-line-strong)] bg-ink-800/70 px-3 py-1 text-[12px] tracking-wide text-bone-200 backdrop-blur-md"
+          className="mx-auto inline-flex items-center gap-2 rounded-full border border-slate-300/80 bg-white/80 px-3 py-1 text-[12px] tracking-wide text-slate-700 shadow-sm backdrop-blur-md"
         >
           <span className="pulse-dot" />
           <span>{t('eyebrow')}</span>
         </motion.div>
 
         <motion.h1
-          className="h-display mx-auto mt-8 text-[clamp(52px,10vw,128px)] tracking-[-0.03em]"
+          className="h-display mx-auto mt-7 max-w-5xl text-[clamp(38px,7.4vw,92px)] tracking-normal text-slate-950"
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.85, delay: 0.05, ease: [0.16, 1, 0.3, 1] }}
         >
           {t('title')}
           <br />
-          <span className="text-violet-300">{t('titleAccent')}</span>
+          <span className="text-violet-700">{t('titleAccent')}</span>
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.85, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="mx-auto mt-8 max-w-xl text-[16px] leading-relaxed text-bone-200 sm:text-[17px]"
+          className="mx-auto mt-7 max-w-xl text-[16px] leading-relaxed text-slate-700 sm:text-[17px]"
         >
           {t('lede')}
         </motion.p>
@@ -59,7 +60,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.4 }}
-          className="mt-10 inline-flex flex-wrap items-center justify-center gap-x-3 gap-y-2 font-mono text-[10.5px] tracking-[0.18em] uppercase text-bone-300"
+          className="mt-8 inline-flex flex-wrap items-center justify-center gap-x-3 gap-y-2 font-mono text-[10.5px] tracking-[0.18em] uppercase text-slate-600"
         >
           <span>AI WORKFLOW</span>
           <Dot />
@@ -77,13 +78,9 @@ export function Hero() {
           transition={{ duration: 1.0, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
           className="relative"
         >
-          <div
-            aria-hidden
-            className="absolute inset-x-8 -top-10 -bottom-10 -z-10 rounded-[40px] bg-gradient-to-b from-violet-500/20 via-violet-500/5 to-transparent blur-3xl"
-          />
-          <div className="overflow-hidden rounded-2xl border border-[var(--color-line-strong)] bg-ink-900/80 shadow-[0_30px_80px_-30px_rgba(0,0,0,0.7),0_0_0_1px_rgba(255,255,255,0.04)_inset] backdrop-blur">
+          <div className="overflow-hidden rounded-lg border border-slate-200 bg-white/90 shadow-[0_34px_90px_-46px_rgba(15,23,42,0.72)] backdrop-blur">
             <BrowserChrome />
-            <div className="relative aspect-[16/10] w-full bg-ink-900">
+            <div className="relative aspect-[16/10] w-full bg-slate-950">
               <Image
                 src="/assets/img/warroom/01-projects-home.webp"
                 alt={t('eyebrow')}
@@ -101,7 +98,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 0.5, y: 0 }}
           transition={{ duration: 0.8, delay: 0.9 }}
-          className="mt-14 inline-flex flex-col items-center gap-1 text-bone-300"
+          className="mt-14 inline-flex flex-col items-center gap-1 text-slate-500"
         >
           <span className="font-mono text-[10px] tracking-[0.22em] uppercase">scroll</span>
           <ChevronDown className="h-3 w-3 animate-bounce" strokeWidth={1.5} />
@@ -113,14 +110,14 @@ export function Hero() {
 
 function BrowserChrome() {
   return (
-    <div className="flex items-center gap-3 border-b border-[var(--color-line)] bg-ink-800/80 px-4 py-3">
+    <div className="flex items-center gap-3 border-b border-slate-200 bg-slate-50/90 px-4 py-3">
       <div className="flex gap-1.5">
-        <span className="h-2.5 w-2.5 rounded-full bg-rose-400/70" />
-        <span className="h-2.5 w-2.5 rounded-full bg-amber-300/70" />
-        <span className="h-2.5 w-2.5 rounded-full bg-emerald-400/70" />
+        <span className="h-2.5 w-2.5 rounded-full bg-rose-400" />
+        <span className="h-2.5 w-2.5 rounded-full bg-amber-400" />
+        <span className="h-2.5 w-2.5 rounded-full bg-emerald-500" />
       </div>
       <div className="hidden flex-1 sm:block">
-        <div className="mx-auto inline-flex w-full max-w-md items-center justify-center gap-2 rounded-md border border-[var(--color-line)] bg-ink-900/70 px-3 py-1 font-mono text-[11px] tracking-wide text-bone-100/50">
+        <div className="mx-auto inline-flex w-full max-w-md items-center justify-center gap-2 rounded-md border border-slate-200 bg-white px-3 py-1 font-mono text-[11px] tracking-wide text-slate-500">
           <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
           warroom.flyto2.com
         </div>
@@ -131,5 +128,5 @@ function BrowserChrome() {
 }
 
 function Dot() {
-  return <span className="h-1 w-1 rounded-full bg-bone-300/50" aria-hidden />;
+  return <span className="h-1 w-1 rounded-full bg-slate-500/50" aria-hidden />;
 }
