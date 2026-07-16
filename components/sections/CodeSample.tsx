@@ -71,9 +71,9 @@ export function CodeSample() {
   };
 
   return (
-    <section className="mx-auto max-w-6xl px-5 py-24 sm:px-8 sm:py-32">
-      <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
-        <header className="lg:col-span-5">
+    <section className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-32">
+      <div className="grid min-w-0 gap-10 lg:grid-cols-12 lg:gap-16">
+        <header className="min-w-0 lg:col-span-5">
           <span className="label-mono">{t('label')}</span>
           <h2 className="h-display mt-4 text-[clamp(32px,5vw,56px)]">{t('title')}</h2>
           <p className="mt-5 max-w-md text-[15px] leading-relaxed text-bone-200">
@@ -101,17 +101,17 @@ export function CodeSample() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="lg:col-span-7"
+          className="min-w-0 lg:col-span-7"
         >
-          <div className="overflow-hidden rounded-2xl border border-[var(--color-line)] bg-ink-900/80 shadow-[0_30px_80px_-24px_rgba(0,0,0,0.6)]">
-            <div className="flex items-center border-b border-[var(--color-line)] bg-ink-800/40">
+          <div className="w-full max-w-full overflow-hidden rounded-2xl border border-[var(--color-line)] bg-ink-900/80 shadow-[0_30px_80px_-24px_rgba(0,0,0,0.6)]">
+            <div className="flex min-w-0 items-center overflow-x-auto border-b border-[var(--color-line)] bg-ink-800/40">
               <TabBtn label="workflow.json"  icon={FileJson} active={tab === 'json'}    onClick={() => setTab('json')} />
               <TabBtn label="cli"            icon={Terminal} active={tab === 'cli'}     onClick={() => setTab('cli')} />
               <TabBtn label="webhook"        icon={Webhook}  active={tab === 'webhook'} onClick={() => setTab('webhook')} />
 
               <button
                 onClick={onCopy}
-                className="ml-auto inline-flex items-center gap-1.5 px-4 py-3 font-mono text-[10.5px] tracking-wide uppercase text-bone-300 transition-colors hover:text-bone-100"
+                className="ml-auto inline-flex shrink-0 items-center gap-1.5 px-3 py-3 font-mono text-[10.5px] tracking-wide uppercase text-bone-300 transition-colors hover:text-bone-100 sm:px-4"
                 aria-label="Copy"
               >
                 {copied ? (
@@ -128,7 +128,7 @@ export function CodeSample() {
               </button>
             </div>
 
-            <pre className="max-h-[420px] overflow-auto px-5 py-5 font-mono text-[12.5px] leading-relaxed text-bone-100">
+            <pre className="max-h-[360px] max-w-full overflow-auto px-4 py-4 font-mono text-[11px] leading-relaxed text-bone-100 sm:max-h-[420px] sm:px-5 sm:py-5 sm:text-[12.5px]">
               <code>{SAMPLES[tab].code}</code>
             </pre>
           </div>
@@ -153,7 +153,7 @@ function TabBtn({
     <button
       onClick={onClick}
       className={cn(
-        'inline-flex items-center gap-1.5 border-b-2 px-4 py-3 font-mono text-[11.5px] tracking-wide transition-colors',
+        'inline-flex shrink-0 items-center gap-1.5 border-b-2 px-3 py-3 font-mono text-[10.5px] tracking-wide transition-colors sm:px-4 sm:text-[11.5px]',
         active
           ? 'border-violet-400 text-bone-100'
           : 'border-transparent text-bone-300 hover:text-bone-200',

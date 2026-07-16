@@ -24,7 +24,7 @@ export function MobileMenu({ open, onClose }: { open: boolean; onClose: () => vo
   return (
     <div
       className={cn(
-        'fixed inset-0 z-[60] transition-opacity duration-300 lg:hidden',
+        'fixed inset-0 z-[60] overflow-hidden transition-opacity duration-300 lg:hidden',
         open ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0',
       )}
     >
