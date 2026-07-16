@@ -10,7 +10,6 @@
 #     training corpora
 
 User-agent: *
-Content-Signal: search=yes,ai-input=yes,ai-train=no
 Allow: /
 
 Sitemap: https://flyto2.com/sitemap.xml

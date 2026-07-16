@@ -25,6 +25,9 @@
   AI-readable critical URLs, and explicit AI/search crawler policies.
 - Added `docs/cloudflare-ai-crawler-allowlist.md` for the edge rule needed to
   let AI search and realtime browse crawlers reach public citation pages.
+- Added `npm run audit:seo`, Lighthouse CI configuration, and a dedicated SEO
+  Gate workflow for build-output metadata, sitemap, robots, llms, keyword
+  freshness, and public link checks.
 
 ### Changed
 

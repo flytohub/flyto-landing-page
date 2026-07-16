@@ -44,6 +44,7 @@ next-env.d.ts
 # Generated Flyto2 indexes and navigation snapshots
 .flyto/
 .flyto-index/
+.lighthouseci/
 
 # Cloudflare / wrangler build output
 .cloudflare/

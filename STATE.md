@@ -2,6 +2,14 @@
 
 Current state on 2026-07-01:
 
+- 2026-07-16: `npm run audit:seo` now validates built homepage and core
+  commercial routes for title/description length, canonical URLs, OpenGraph,
+  Twitter cards, JSON-LD, hreflang, sitemap coverage, robots, llms files,
+  `@flyto2.com` email usage, Flyto2 naming, and keyword-matrix freshness.
+- 2026-07-16: `.github/workflows/seo.yml` adds a scheduled and PR/push SEO gate
+  with build-output metadata checks, Lighthouse SEO score 1.0, and lychee public
+  link checking. GitHub Actions runner availability still has to be monitored
+  separately from source-level SEO health.
 - The site has public routes for Cloud, templates, recipes, pricing,
   changelog, CTEM/security pages, dark web monitoring, whitepapers, legal pages,
   and discussions.

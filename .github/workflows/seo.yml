@@ -1,0 +1,70 @@
+name: SEO Gate
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: '17 4 * * 1'
+
+concurrency:
+  group: seo-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  metadata:
+    name: Metadata, sitemap, llms, and Lighthouse
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build public site
+        run: npm run build
+
+      - name: Audit SEO surface
+        run: npm run audit:seo
+
+      - name: Lighthouse CI
+        run: npx @lhci/cli@0.15.1 autorun --config=./lighthouserc.cjs
+
+  links:
+    name: Public link check
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check public links
+        uses: lycheeverse/lychee-action@v2.9.0
+        with:
+          fail: true
+          failIfEmpty: true
+          format: markdown
+          output: lychee-report.md
+          args: >-
+            --root-dir .
+            --cache
+            --max-cache-age 1d
+            --max-concurrency 8
+            --accept 200,204,206,301,302,307,308,429
+            './README.md'
+            './PROJECT.md'
+            './ARCHITECTURE.md'
+            './STATE.md'
+            './ROADMAP.md'
+            './docs/**/*.md'
+            './public/**/*.txt'
+            './.seo/**/*.md'

@@ -73,9 +73,14 @@ const launchSurfaceContracts = {
     'Docker images',
     'Self-hosted docs',
   ],
+  'lib/public-route-metadata.ts': [
+    'pageAlternates(page.path, locale)',
+    'openGraph',
+    'twitter',
+  ],
   'app/[locale]/aikido-alternative/page.tsx': [
     "publicRoutePages['aikido-alternative']",
-    'pageAlternates(page.path, locale)',
+    'publicRouteMetadata(page, locale)',
   ],
   'lib/nav.ts': [
     "{ key: 'oss',          href: '/open-source' }",

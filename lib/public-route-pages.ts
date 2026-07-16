@@ -114,7 +114,7 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
       'Flyto2 Security starts as installable Warroom CE and grows into an Enterprise bridge. Bring ASM, SAST, DAST, CSPM, SIEM, dark web, cloud, code, and scanner findings; Flyto2 turns them into verified attack paths, pentest evidence, red-team scenarios, remediation records, and compliance-ready proof.',
     metaTitle: 'Flyto2 Security BYO offensive validation',
     metaDescription:
-      'Flyto2 Security turns attack surface management tools, EASM, CTEM, code security, and scanner findings into verified attack paths, pentest evidence, reports, and remediation records.',
+      'Flyto2 Security turns ASM, EASM, CTEM, code, and scanner findings into verified attack paths, pentest evidence, reports, and remediation records.',
     primaryCta: { label: 'Install Warroom CE', href: '/open-source' },
     secondaryCta: { label: 'Read CTEM page', href: '/ctem' },
     sections: [
@@ -338,7 +338,7 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
       'If you like one place for code, cloud, container, runtime, external surface, and AutoFix workflows, Flyto2 takes a different angle: bring your existing tools and turn their findings into verified attack paths, safe pentest evidence, red-team scenarios, and remediation records.',
     metaTitle: 'Aikido alternative for open-core security teams',
     metaDescription:
-      'Compare Flyto2 Warroom CE with Aikido-style security platforms: self-hosted open core, BYO offensive validation, evidence-backed AutoFix, attack paths, code, cloud, container, runtime, and external surface workflows.',
+      'Compare Flyto2 Warroom CE with Aikido-style security platforms: self-hosted open core, BYO validation, evidence-backed AutoFix, and attack paths.',
     primaryCta: { label: 'Install Warroom CE', href: '/open-source' },
     secondaryCta: { label: 'Read self-hosted docs', href: WARROOM_CE_DOCS },
     sections: [
