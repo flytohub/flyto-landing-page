@@ -19,6 +19,7 @@ jobs:
     uses: flytohub/.github/.github/workflows/reusable-security.yml@main
     with:
       stack: npm
+      node-version: "22"
     permissions:
       contents: read
     secrets: inherit
@@ -29,6 +30,7 @@ jobs:
     permissions:
       contents: write
       packages: read
+      security-events: write
     secrets: inherit
 
   codeql:
