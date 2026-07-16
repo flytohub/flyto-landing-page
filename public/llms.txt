@@ -46,6 +46,15 @@ Bring the tools and data you already trust. Flyto2 correlates them, validates wh
 - MCP automation: MCP server automation, MCP automation tools, flyto-core MCP server, MCP tools for AI agents.
 - Commercial and implementation intent: attack surface management pricing, CTEM program implementation, attack surface management API, Warroom API, self-hosted security war room, open-core security platform.
 
+## External standards and references
+
+- MCP protocol: https://modelcontextprotocol.io/specification/2025-06-18
+- MCP tools model: https://modelcontextprotocol.io/specification/2025-06-18/server/tools
+- AI/agent security risk taxonomy: https://owasp.org/www-project-top-10-for-large-language-model-applications/ and https://genai.owasp.org/llm-top-10/
+- Exploit probability and severity: https://www.first.org/epss/ and https://www.first.org/cvss/
+- Known exploited vulnerabilities: https://www.cisa.gov/known-exploited-vulnerabilities-catalog
+- Governance and risk alignment: https://www.nist.gov/cyberframework
+
 ## Core runtime facts
 
 - flyto-core is the shared execution kernel behind Flyto2 workflows, evidence capture, replay, MCP transport, and YAML recipes.

@@ -102,6 +102,7 @@ function ProductCard({ card, index }: { card: ProductCardData; index: number }) 
     >
       <Link
         href={localized}
+        prefetch={false}
         className="group relative flex h-full flex-col overflow-hidden rounded-2xl border transition-all duration-500 hover:-translate-y-1"
         style={{ background: paint.panel, borderColor: paint.border }}
       >

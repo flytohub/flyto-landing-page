@@ -47,8 +47,10 @@ export function Button(props: AsLink | AsButton) {
   const cls = cn(base, styles[variant], className);
 
   if ('href' in props && props.href) {
+    const prefetch = props.href.startsWith('/') && !props.href.startsWith('//') ? false : undefined;
+
     return (
-      <Link href={props.href} className={cls}>
+      <Link href={props.href} prefetch={prefetch} className={cls}>
         {inner}
       </Link>
     );

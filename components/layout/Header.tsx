@@ -74,6 +74,7 @@ export function Header() {
                   <Link
                     key={p.id}
                     href={localized(p.href)}
+                    prefetch={false}
                     className={cn(
                       'group inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[12.5px] tracking-wide transition-all',
                       active
@@ -103,6 +104,7 @@ export function Header() {
               <LanguageSwitcher />
               <Link
                 href={localized(ctaHref)}
+                prefetch={false}
                 className="hidden h-8 items-center rounded-full bg-bone-100 px-3.5 text-[12px] font-medium tracking-wide text-ink-900 transition-all hover:-translate-y-px hover:bg-white sm:inline-flex"
               >
                 {ctaLabel}

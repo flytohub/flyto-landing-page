@@ -106,8 +106,8 @@ export function Footer() {
               <span className="pulse-dot" />
               ALL SYSTEMS NORMAL
             </span>
-            <Link href={localized('/privacy')} className="hover:text-bone-100">{t('privacy')}</Link>
-            <Link href={localized('/terms')}   className="hover:text-bone-100">{t('terms')}</Link>
+            <Link href={localized('/privacy')} prefetch={false} className="hover:text-bone-100">{t('privacy')}</Link>
+            <Link href={localized('/terms')} prefetch={false} className="hover:text-bone-100">{t('terms')}</Link>
           </div>
         </div>
       </div>
@@ -128,6 +128,7 @@ function ProductRail({
   return (
     <Link
       href={href}
+      prefetch={false}
       className={`group flex items-center gap-4 px-5 py-7 transition-colors hover:bg-ink-700/40 sm:px-8 ${border} border-b border-[var(--color-line)] sm:border-b-0`}
     >
       <span
@@ -166,6 +167,7 @@ function FooterLink({ href, children, external }: {
     <li>
       <Link
         href={href}
+        prefetch={external ? undefined : false}
         target={external ? '_blank' : undefined}
         rel={external ? 'noopener noreferrer' : undefined}
         className="group inline-flex items-center gap-1 text-[13px] text-bone-200 transition-colors hover:text-bone-100"
