@@ -1,0 +1,63 @@
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Allow historical public Ahrefs analytics data-key embedded in old static pages."
+condition = "AND"
+regexTarget = "match"
+commits = [
+  "271c263fb0f193e520d34a4687d39d46d214090a",
+  "3bbe2fe9adf50bb0b116417180ea9f5fccf90a0d",
+  "4b9778bdf7cdfc4f785cfd1eaf21dac873eecb49",
+  "59e0305a9368018a807ee0e47d06c6fc96dc704b",
+  "5a7377a57d4375513e0894802fe64978bb9174fa",
+  "5d2674f5a504c515cc000196fc88f1ac9cf4a24f",
+  "867a04cdc7e40fe06dca559cfcf5acb9daf375a8",
+  "94a3cdcbcfa11c6c1340f928f85cccebe8c6aae0",
+  "b7551ab8141dd8a14f25fdd4d54b4d37cd5d192f",
+  "d4c3444f29c8dab3fb802ad0c52ac0899bcd11ed",
+  "da9ac6956d3309356a65a3b90afd69b5a58d7f8e",
+  "f2a84e500c079858b00bb1974bbfa927669a3fa8",
+]
+regexes = [
+  '''data-key=["'][A-Za-z0-9+/=]{20,}["']''',
+]
+paths = [
+  '''(^|/)([a-z]{2}|pt-BR|zh-TW|cn)/(cloud/|code/|claude/)?[^/]+\.html$''',
+  '''(^|/)(cloud/|code/|claude/|code/features/)?[^/]+\.html$''',
+  '''(^|/)scripts/build-templates\.js$''',
+]
+
+[[allowlists]]
+description = "Allow historical Firebase Web client identifiers removed from runtime source."
+condition = "AND"
+regexTarget = "secret"
+commits = [
+  "76b0ce6f1af754ff2e0b1c71dc97f7288e3787f3",
+  "9ade9d2c463a8c115fe90f427f60a5f65a4e273f",
+  "a1cff7d2aa83f55dc273346ccbe93ad1ab1e79a9",
+  "e9062b751be386f5f9826a68fe9ed3154fd52f61",
+]
+regexes = [
+  '''AIza[0-9A-Za-z_-]{35}''',
+  '''[0-9]+:[0-9]+:web:[0-9A-Fa-f]+''',
+]
+paths = [
+  '''(^|/)lib/firebase\.ts$''',
+  '''(^|/)assets/js/auth\.js$''',
+  '''(^|/)auth/vscode\.html$''',
+]
+
+[[allowlists]]
+description = "Allow a historical documentation-only API key placeholder in CLI examples."
+condition = "AND"
+regexTarget = "match"
+commits = [
+  "0bb261e6d2290c3edfb2ddbb33e62bb79be1eef7",
+]
+regexes = [
+  '''X-API-Key:\s*[^"\\<\s]+''',
+]
+paths = [
+  '''(^|/)code/index\.html$''',
+]
