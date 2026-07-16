@@ -25,7 +25,7 @@ export function Hero() {
         </span>
       </div>
 
-      <div className="relative mx-auto max-w-6xl px-5 pb-12 pt-24 text-center sm:px-8 sm:pb-16 sm:pt-28">
+      <div className="relative mx-auto max-w-6xl px-5 pb-8 pt-20 text-center sm:px-8 sm:pb-10 sm:pt-24">
         <motion.div
           initial={{ opacity: 0, y: 6 }}
           animate={{ opacity: 1, y: 0 }}
@@ -37,7 +37,7 @@ export function Hero() {
         </motion.div>
 
         <motion.h1
-          className="h-display mx-auto mt-7 max-w-5xl text-[clamp(38px,7.4vw,92px)] tracking-normal text-slate-950"
+          className="h-display mx-auto mt-5 max-w-5xl text-[clamp(38px,5.8vw,72px)] tracking-normal text-slate-950"
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.85, delay: 0.05, ease: [0.16, 1, 0.3, 1] }}
@@ -51,7 +51,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.85, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="mx-auto mt-7 max-w-xl text-[16px] leading-relaxed text-slate-700 sm:text-[17px]"
+          className="mx-auto mt-5 max-w-xl text-[16px] leading-relaxed text-slate-700 sm:text-[17px]"
         >
           {t('lede')}
         </motion.p>
@@ -60,7 +60,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.4 }}
-          className="mt-8 inline-flex flex-wrap items-center justify-center gap-x-3 gap-y-2 font-mono text-[10.5px] tracking-[0.18em] uppercase text-slate-600"
+          className="mt-6 inline-flex flex-wrap items-center justify-center gap-x-3 gap-y-2 font-mono text-[10.5px] tracking-[0.18em] uppercase text-slate-600"
         >
           <span>AI WORKFLOW</span>
           <Dot />
