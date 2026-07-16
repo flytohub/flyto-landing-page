@@ -32,12 +32,12 @@ export const FLYTO2_SEO_FACTS = {
     '451 registry-backed modules across 84 catalog categories, 41 built-in recipes, MCP transports, evidence capture, and replayable YAML execution',
 } as const;
 
-export const FLYTO2_HOME_TITLE = 'AI Workflow Automation and Security War Room for Evidence-Backed CTEM';
+export const FLYTO2_HOME_TITLE = 'AI Workflow Automation for Evidence-Backed CTEM';
 
 export const FLYTO2_HOME_FULL_TITLE = `Flyto2 - ${FLYTO2_HOME_TITLE}`;
 
 export const FLYTO2_HOME_DESCRIPTION =
-  `Flyto2 combines an open-source AI workflow automation engine, MCP-native agent tools, no-code browser automation, and a security war room for evidence-backed CTEM powered by ${FLYTO2_SEO_FACTS.coreRuntimeSummary}.`;
+  'Flyto2 combines open-source AI workflow automation, MCP-native tools, no-code browser workflows, and a security war room for evidence-backed CTEM.';
 
 export const FLYTO2_SEO_KEYWORDS = [
   'Flyto2',

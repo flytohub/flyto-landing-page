@@ -130,11 +130,11 @@ export const securityPages = {
     slug: 'ctem',
     metaTitle: 'BYO Offensive Validation Layer for CTEM Programs',
     metaDescription:
-      'Flyto2 turns ASM, dark web, code security, pentest, red-team, cloud, and scanner findings into verified attack paths, evidence, and remediation records for CTEM programs and CTEM framework adoption.',
+      'Flyto2 turns ASM, dark web, code, pentest, red-team, cloud, and scanner findings into verified attack paths, evidence, and remediation records for CTEM programs.',
     eyebrow: 'CONTINUOUS THREAT EXPOSURE MANAGEMENT',
     title: 'Flyto2 turns CTEM inputs into verified attack paths.',
     lede:
-      'Flyto2 is the offensive validation layer on top of CTEM inputs. Bring existing ASM, dark web, code security, pentest, red-team, cloud, and scanner signals; Warroom CE correlates them into attack hypotheses, evidence, and remediation context while Enterprise bridge adds premium intelligence and managed action for continuous threat exposure management programs.',
+      'Flyto2 turns ASM, dark web, code, pentest, red-team, cloud, and scanner signals into CTEM attack hypotheses, evidence, and remediation context for continuous threat exposure management programs.',
     image: '/assets/img/warroom/21-scoring-breakdown.png',
     imageAlt: 'Flyto2 scoring breakdown for CTEM security surfaces',
     primaryCta: { label: 'Read CTEM guide', href: 'https://blog.flyto2.com/posts/what-is-ctem-continuous-threat-exposure-management' },
