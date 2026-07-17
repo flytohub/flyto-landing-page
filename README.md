@@ -54,6 +54,8 @@ and SEO surface audit.
 
 - Public pages for Flyto2 Cloud, Warroom, open source, pricing, security,
   enterprise, docs, blog, changelog, contact, and comparison routes.
+- Long-tail comparison pages for n8n, Zapier, Make, Playwright, LangGraph,
+  Aikido, and Bitsight alternative searches.
 - Multilingual route generation for 16 locales.
 - Sitemap, canonical URLs, hreflang clusters, `x-default`, and AI-readable
   `llms.txt` / `llms-full.txt`.

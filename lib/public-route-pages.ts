@@ -5,6 +5,11 @@ export type PublicRoutePageId =
   | 'airgap'
   | 'open-source'
   | 'aikido-alternative'
+  | 'n8n-alternative'
+  | 'zapier-alternative'
+  | 'make-alternative'
+  | 'playwright-alternative'
+  | 'langgraph-alternative'
   | 'compare'
   | 'api-docs'
   | 'trust'
@@ -388,6 +393,261 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
       { label: 'Docker Hub', href: WARROOM_CE_DOCKER },
       { label: 'Security overview', href: '/security' },
       { label: 'Compare product lines', href: '/compare' },
+    ],
+  },
+  'n8n-alternative': {
+    id: 'n8n-alternative',
+    path: 'n8n-alternative',
+    eyebrow: 'n8n alternative',
+    title: 'Flyto2 is an n8n alternative when workflows need browser actions, AI agents, and replayable evidence.',
+    lede:
+      'n8n is strong for node-based integrations. Flyto2 is built for teams that also need no-code browser automation, MCP-native AI agent tools, YAML recipes, evidence capture, and repeatable replay from the command line or cloud UI.',
+    metaTitle: 'n8n alternative for AI workflow automation',
+    metaDescription:
+      'Compare Flyto2 with n8n for AI workflow automation, no-code browser automation, MCP tools, replayable YAML recipes, and evidence-backed workflows.',
+    primaryCta: { label: 'Try Cloud recipes', href: '/cloud/#recipes' },
+    secondaryCta: { label: 'Open source runtime', href: 'https://github.com/flytohub/flyto-core' },
+    sections: [
+      {
+        title: 'When Flyto2 fits better',
+        body:
+          'Use Flyto2 when the work is not just moving records between APIs. It can open pages, click, type, capture screenshots, preserve run evidence, and expose deterministic tools to AI agents through MCP.',
+        bullets: ['No-code browser automation and replay', '451 registry-backed modules across 84 catalog categories', 'MCP server automation for agent workflows'],
+      },
+      {
+        title: 'Workflow evidence',
+        body:
+          'Flyto2 recipes are designed to produce artifacts people can inspect: screenshots, JSON outputs, audit logs, and replayable steps.',
+        bullets: ['CLI recipes for repeatable jobs', 'Trace and replay from any point', 'Evidence packs for QA, SEO, security, and operations teams'],
+      },
+      {
+        title: 'Use alongside n8n',
+        body:
+          'Flyto2 does not need to replace every integration builder. Teams can keep n8n for app-to-app flows and use Flyto2 where browser state, local execution, AI tools, or evidence matter.',
+        bullets: ['Browser-heavy workflows', 'Agent tool execution', 'Self-hosted or local-first automation'],
+      },
+    ],
+    answers: [
+      {
+        question: 'Is Flyto2 a full n8n replacement?',
+        answer:
+          'No. Flyto2 should be positioned as an n8n alternative for browser-heavy, AI-agent, and evidence-backed workflows. n8n can remain useful for integration-first automation.',
+      },
+      {
+        question: 'What search terms does this page answer?',
+        answer:
+          'n8n alternative, AI workflow automation tools, open source workflow automation, no-code browser automation, and MCP server automation.',
+      },
+    ],
+    related: [
+      { label: 'Cloud automation', href: '/cloud' },
+      { label: 'Recipes', href: '/cloud/#recipes' },
+      { label: 'Open source runtime', href: 'https://github.com/flytohub/flyto-core' },
+      { label: 'Comparison hub', href: '/compare' },
+    ],
+  },
+  'zapier-alternative': {
+    id: 'zapier-alternative',
+    path: 'zapier-alternative',
+    eyebrow: 'Zapier alternative',
+    title: 'Flyto2 is a Zapier alternative for browser automation and AI-agent workflows that need proof.',
+    lede:
+      'Zapier is useful for SaaS triggers and app actions. Flyto2 focuses on workflows that need browser steps, local or self-hosted execution, MCP tools, audit trails, and artifacts that prove what happened.',
+    metaTitle: 'Zapier alternative for browser and AI workflow automation',
+    metaDescription:
+      'Flyto2 is a Zapier alternative for no-code browser automation, AI agent workflows, MCP tools, local execution, evidence capture, and replay.',
+    primaryCta: { label: 'See browser automation', href: '/cloud' },
+    secondaryCta: { label: 'Read docs', href: 'https://docs.flyto2.com/core/' },
+    sections: [
+      {
+        title: 'Beyond SaaS actions',
+        body:
+          'Some jobs happen inside websites that do not expose clean APIs. Flyto2 can automate the browser, capture the result, and keep the run inspectable.',
+        bullets: ['Click, type, scroll, extract, and screenshot', 'Repeat jobs on demand or on a schedule', 'Keep evidence for review and handoff'],
+      },
+      {
+        title: 'Agent-ready runtime',
+        body:
+          'Flyto2 exposes bounded modules to AI agents so they call deterministic tools instead of inventing unchecked scripts.',
+        bullets: ['MCP-native tool surface', 'Registry-backed module schemas', 'Workflow replay and versioning'],
+      },
+      {
+        title: 'Practical migration path',
+        body:
+          'Teams can start with one recipe: a competitor monitor, SEO audit, report generator, or security evidence capture job. The point is not to rebuild every Zapier workflow on day one.',
+        bullets: ['Start with high-friction browser work', 'Keep APIs where APIs work', 'Add evidence where people need trust'],
+      },
+    ],
+    answers: [
+      {
+        question: 'Is Flyto2 cheaper than Zapier?',
+        answer:
+          'This page should not make unsupported pricing claims. The useful comparison is capability: Flyto2 focuses on browser automation, AI tools, replay, and evidence.',
+      },
+      {
+        question: 'Can Flyto2 work without hosted SaaS automation?',
+        answer:
+          'Yes. Flyto2 Core is open source, and workflows can run locally or in self-hosted environments depending on the product surface.',
+      },
+    ],
+    related: [
+      { label: 'Cloud automation', href: '/cloud' },
+      { label: 'Open source', href: '/open-source' },
+      { label: 'Docs', href: '/docs' },
+      { label: 'Comparison hub', href: '/compare' },
+    ],
+  },
+  'make-alternative': {
+    id: 'make-alternative',
+    path: 'make-alternative',
+    eyebrow: 'Make alternative',
+    title: 'Flyto2 is a Make alternative for teams that need browser workflows, AI tools, and replay.',
+    lede:
+      'Make is a visual integration platform. Flyto2 is built for automation that crosses APIs, websites, AI agents, files, reports, and security evidence while keeping the workflow inspectable.',
+    metaTitle: 'Make alternative for AI workflow automation',
+    metaDescription:
+      'Compare Flyto2 with Make for AI workflow automation, no-code browser automation, MCP tools, self-hosted workflows, and replayable evidence.',
+    primaryCta: { label: 'Run a recipe', href: '/cloud/#recipes' },
+    secondaryCta: { label: 'Module docs', href: 'https://docs.flyto2.com/modules/' },
+    sections: [
+      {
+        title: 'Visual flow plus real-world actions',
+        body:
+          'Flyto2 is useful when a workflow needs to operate in a browser, collect artifacts, or hand a bounded tool to an AI agent.',
+        bullets: ['Browser automation modules', 'Workflow recipes and templates', 'Artifacts for audit, SEO, QA, and security'],
+      },
+      {
+        title: 'Open runtime',
+        body:
+          'Flyto2 Core gives technical teams a Python runtime, CLI, YAML recipes, and MCP server surface that can live outside a hosted automation vendor.',
+        bullets: ['Open-source core engine', 'MCP-compatible tools', 'Local and self-hosted execution paths'],
+      },
+      {
+        title: 'Best first use cases',
+        body:
+          'Start where visual integration tools become awkward: screenshot collection, multi-step website flows, evidence capture, or agent-controlled task execution.',
+        bullets: ['Competitor monitoring', 'Full-page SEO audits', 'Security validation evidence'],
+      },
+    ],
+    answers: [
+      {
+        question: 'Does Flyto2 replace Make scenarios?',
+        answer:
+          'Not universally. It is a Make alternative for workflows where browser state, AI tools, local execution, or evidence matter more than a pure integration canvas.',
+      },
+      {
+        question: 'Where should I start?',
+        answer:
+          'Start with one Flyto2 recipe that produces a concrete report or artifact, then connect it back into your existing process.',
+      },
+    ],
+    related: [
+      { label: 'Recipes', href: '/cloud/#recipes' },
+      { label: 'Module catalog', href: 'https://docs.flyto2.com/modules/' },
+      { label: 'Open source runtime', href: 'https://github.com/flytohub/flyto-core' },
+      { label: 'Comparison hub', href: '/compare' },
+    ],
+  },
+  'playwright-alternative': {
+    id: 'playwright-alternative',
+    path: 'playwright-alternative',
+    eyebrow: 'Playwright alternative',
+    title: 'Flyto2 is not a Playwright replacement. It is a workflow layer above browser automation.',
+    lede:
+      'Playwright is excellent when engineers want code-level browser control. Flyto2 uses browser automation as one part of a larger workflow: recipes, modules, MCP tools, evidence capture, replay, scheduling, and reports.',
+    metaTitle: 'Playwright alternative for no-code browser automation',
+    metaDescription:
+      'Flyto2 complements Playwright with no-code browser automation, workflow recipes, MCP tools, screenshots, evidence capture, and replayable runs.',
+    primaryCta: { label: 'See Cloud automation', href: '/cloud' },
+    secondaryCta: { label: 'Browser module docs', href: 'https://docs.flyto2.com/modules/browser' },
+    sections: [
+      {
+        title: 'Use Playwright when you want code',
+        body:
+          'Flyto2 should not pretend Playwright is the wrong tool. Engineers who need fine-grained browser control should keep using it.',
+        bullets: ['Code-level test automation', 'Precise browser APIs', 'Developer-owned scripts'],
+      },
+      {
+        title: 'Use Flyto2 when you want a workflow',
+        body:
+          'Flyto2 wraps browser automation in reusable modules and workflows so non-specialists and agents can run useful jobs without maintaining a custom script for every task.',
+        bullets: ['Recorded or templated actions', 'Artifacts and screenshots', 'Replay, versioning, and audit context'],
+      },
+      {
+        title: 'Agent and operations use cases',
+        body:
+          'Flyto2 is strongest when browser automation needs to be part of a business, SEO, security, or data workflow rather than a standalone test.',
+        bullets: ['Competitor screenshots and Web Vitals', 'Form filling and report generation', 'Security evidence and CTEM validation'],
+      },
+    ],
+    answers: [
+      {
+        question: 'Does Flyto2 use Playwright?',
+        answer:
+          'Flyto2 browser automation can use proven browser automation primitives where appropriate, while exposing them through workflow modules, recipes, and MCP tools.',
+      },
+      {
+        question: 'Who is this page for?',
+        answer:
+          'People searching for no-code browser automation, Playwright alternative, browser automation tool, or AI agent browser automation.',
+      },
+    ],
+    related: [
+      { label: 'Cloud automation', href: '/cloud' },
+      { label: 'Browser docs', href: 'https://docs.flyto2.com/modules/browser' },
+      { label: 'MCP docs', href: 'https://docs.flyto2.com/mcp/' },
+      { label: 'Comparison hub', href: '/compare' },
+    ],
+  },
+  'langgraph-alternative': {
+    id: 'langgraph-alternative',
+    path: 'langgraph-alternative',
+    eyebrow: 'LangGraph alternative',
+    title: 'Flyto2 is a LangGraph alternative when agents need deterministic tools and workflow evidence.',
+    lede:
+      'LangGraph is strong for agent state machines. Flyto2 focuses on the execution side: bounded modules, browser actions, MCP tools, YAML recipes, evidence capture, replay, and operational workflows agents can actually run.',
+    metaTitle: 'LangGraph alternative for AI agent workflow automation',
+    metaDescription:
+      'Compare Flyto2 with LangGraph for AI agent workflow automation, deterministic tools, MCP server automation, browser actions, YAML recipes, evidence, and replay.',
+    primaryCta: { label: 'Open MCP docs', href: 'https://docs.flyto2.com/mcp/' },
+    secondaryCta: { label: 'Try flyto-core', href: 'https://github.com/flytohub/flyto-core' },
+    sections: [
+      {
+        title: 'Agent orchestration vs execution',
+        body:
+          'Flyto2 should be described as an execution engine and workflow layer, not a drop-in replacement for every agent graph library.',
+        bullets: ['Registry-backed module schemas', 'MCP-native tool exposure', 'Replayable YAML execution'],
+      },
+      {
+        title: 'When Flyto2 fits',
+        body:
+          'Use Flyto2 when the agent needs to do concrete work: open a browser, collect evidence, call APIs, transform files, or produce a report that people can verify.',
+        bullets: ['Browser and API automation', 'Evidence capture and audit trails', 'Security, SEO, data, and operations recipes'],
+      },
+      {
+        title: 'Works with agent frameworks',
+        body:
+          'Teams can pair Flyto2 with graph-based agents. The graph can decide what to do; Flyto2 can execute bounded steps and return artifacts.',
+        bullets: ['Agent decides, Flyto2 executes', 'MCP bridge for tool calling', 'Traceable outputs instead of opaque tool calls'],
+      },
+    ],
+    answers: [
+      {
+        question: 'Is Flyto2 an agent framework?',
+        answer:
+          'Flyto2 Core is an open-source AI agent framework and workflow automation engine focused on deterministic execution, MCP tools, recipes, and evidence.',
+      },
+      {
+        question: 'Should teams replace LangGraph?',
+        answer:
+          'Not by default. Use Flyto2 as the execution substrate when a graph-based agent needs bounded tools, browser work, reports, and replayable evidence.',
+      },
+    ],
+    related: [
+      { label: 'MCP docs', href: 'https://docs.flyto2.com/mcp/' },
+      { label: 'flyto-core', href: 'https://github.com/flytohub/flyto-core' },
+      { label: 'AI workflow docs', href: 'https://docs.flyto2.com/ai/' },
+      { label: 'Comparison hub', href: '/compare' },
     ],
   },
   compare: {
