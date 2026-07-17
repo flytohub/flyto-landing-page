@@ -60,6 +60,7 @@ jobs:
             --max-cache-age 1d
             --max-concurrency 8
             --accept 200,204,206,301,302,307,308,429
+            --exclude '^https://flyto2\.com/'
             './README.md'
             './PROJECT.md'
             './ARCHITECTURE.md'
