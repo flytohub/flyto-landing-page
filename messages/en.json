@@ -45,13 +45,13 @@
     "copyright": "© 2026 FLYTO2"
   },
   "home": {
-    "metaTitle": "AI Workflow Automation and Security War Room",
-    "metaDescription": "Flyto2 combines open-source AI workflow automation, MCP-native agent tools, no-code browser automation, and evidence-backed CTEM security workflows.",
+    "metaTitle": "AI Workflow Automation Platform and Security War Room",
+    "metaDescription": "Flyto2 is an open-source AI workflow automation platform with MCP-native tools, no-code browser workflows, trace/replay, and an evidence-backed CTEM security war room.",
     "hero": {
       "eyebrow": "FLYTO2 · AI WORKFLOW AUTOMATION · SECURITY WAR ROOM",
-      "title": "Open-source automation.",
-      "titleAccent": "Evidence-backed security.",
-      "lede": "Flyto2 combines an open-source AI workflow automation engine, MCP-native agent tools, no-code browser automation, and a security war room for CTEM, pentest evidence, and red-team scenarios.",
+      "title": "Automate real work.",
+      "titleAccent": "Prove every run.",
+      "lede": "Flyto2 helps AI agents and operators run browser work, API steps, security checks, and CTEM evidence workflows with modules you can inspect, replay, and trust.",
       "reassure": "AI WORKFLOW · MCP · CTEM · ASM · EVIDENCE · REPLAY"
     },
     "products": {
@@ -258,14 +258,14 @@
     }
   },
   "cloud": {
-    "metaTitle": "Cloud — No-code browser automation",
-    "metaDescription": "Record once, replay forever. Browser automation that runs offline. 451 modules, 16 languages, MIT-licensed engine.",
+    "metaTitle": "Cloud — No-code Browser Automation and AI Workflows",
+    "metaDescription": "Record a browser task once, edit it, schedule it, and replay it locally with Flyto2. No-code browser automation with 451 modules, MCP tools, and evidence.",
     "hero": {
       "eyebrow": "01 / CLOUD",
       "status": "SHIPPING",
-      "title": "Browser work,",
-      "titleAccent": "on autopilot.",
-      "lede": "Open the recorder, do the task once, hit stop. Flyto2 turns it into a structured workflow you can edit, version, schedule and share — without writing a line of code.",
+      "title": "No-code browser automation,",
+      "titleAccent": "ready to replay.",
+      "lede": "Open the recorder, do the task once, hit stop. Flyto2 turns the clicks, waits, downloads, and checks into a workflow you can edit, schedule, and rerun from the failed step.",
       "ctaPrimary": "Download desktop app",
       "ctaSecondary": "Browse 451 modules"
     },
@@ -421,14 +421,14 @@
     },
     "recipes": {
       "label": "PRE-BUILT RECIPES",
-      "title": "One command, real results.",
-      "subtitle": "Recipes are workflows already wired and tested. Install Cloud, run `flyto recipe [name]`, get the report. No setup, no API keys for the basics.",
+      "title": "Run one command. Get a real report.",
+      "subtitle": "Recipes are tested workflows for common jobs: competitor checks, SEO audits, screenshots, and repeatable browser QA. Install Cloud, run `flyto recipe [name]`, and keep the evidence.",
       "items": [
         {
           "iconName": "Search",
           "name": "competitor-intel",
           "command": "flyto recipe competitor-intel --url https://competitor.com/pricing",
-          "body": "Pull pricing tiers, take desktop + mobile screenshots, capture Web Vitals, parse SEO meta, return one structured JSON report.",
+          "body": "Pull pricing, capture desktop and mobile screenshots, check Web Vitals, parse SEO meta, and return one JSON report.",
           "outputs": [
             "pricing.json",
             "intel-desktop.png",
@@ -441,7 +441,7 @@
           "iconName": "Activity",
           "name": "full-audit",
           "command": "flyto recipe full-audit --url https://example.com",
-          "body": "Web Vitals + SEO + accessibility (alt tags, labels) + console errors + mobile/desktop screenshots + a printable PDF.",
+          "body": "Run Web Vitals, SEO, accessibility, console-error, mobile, desktop, and PDF checks in one pass.",
           "outputs": [
             "audit.json",
             "audit-desktop.png",
@@ -453,7 +453,7 @@
           "iconName": "Globe",
           "name": "site-audit",
           "command": "flyto recipe site-audit --url https://github.com",
-          "body": "SEO + performance audit — meta, headings, missing alt, Web Vitals, full-page screenshot. Lighter than full-audit, runs in seconds.",
+          "body": "Check metadata, headings, missing alt text, Web Vitals, and a full-page screenshot without running the heavier audit.",
           "outputs": [
             "report.json",
             "page.png"
@@ -463,7 +463,7 @@
           "iconName": "Camera",
           "name": "screenshot",
           "command": "flyto recipe screenshot --url https://flyto2.com --device mobile",
-          "body": "Pixel-perfect screenshots at any device viewport. Useful for QA, design review, or stitching daily change-detection diffs.",
+          "body": "Capture repeatable screenshots for mobile QA, design review, and daily change-detection diffs.",
           "outputs": [
             "screenshot.png"
           ]
