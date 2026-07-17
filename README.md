@@ -69,7 +69,9 @@ and SEO surface audit.
 - Tailwind v4 + Motion + lucide-react
 - Firebase Web SDK (client-only) for the Q&A forum
 - Cloudflare proxy in front of GitHub Pages (HTTPS, caching, edge redirects)
-- Deployed via `.github/workflows/deploy.yml` on every push to `main`
+- Deployed by the Cloudflare dashboard Git integration on pushes to `main`.
+  GitHub Actions intentionally does not run `wrangler deploy`, so public
+  repository secrets are not required for Cloudflare deployment.
 
 ## Installation details
 
