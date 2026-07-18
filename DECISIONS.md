@@ -1,5 +1,15 @@
 # Decisions
 
+## 2026-07-18 - Community route is a public SEO surface
+
+Decision: `/community/` is a first-class indexed landing route for contribution
+paths, good-first issues, showcases, public examples, and review-first social
+promotion.
+
+Reason: community growth needs a canonical URL that social posts, GitHub
+templates, docs, and blog articles can cite without scattering contributor
+instructions across many repos.
+
 ## 2026-07-18 - Landing consumes the shared i18n SEO contract
 
 Decision: landing keeps a committed `.seo/i18n-seo-manifest.json` cache synced

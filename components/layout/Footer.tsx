@@ -71,6 +71,7 @@ export function Footer() {
         </Column>
 
         <Column title={t('community')} className="md:col-span-2">
+          <FooterLink href={localized('/community')}>{nav('community')}</FooterLink>
           <FooterLink href={localized('/cloud/discussions')}>{nav('discussions')}</FooterLink>
           <FooterLink href={localized('/whitepaper')}>Whitepapers</FooterLink>
           <FooterLink href={localized('/docs')}>{nav('docs')}</FooterLink>

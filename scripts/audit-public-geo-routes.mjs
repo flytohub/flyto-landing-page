@@ -19,6 +19,7 @@ const requiredRoutes = [
   'compare',
   'api-docs',
   'trust',
+  'community',
   'docs',
   'blog',
   'changelog',

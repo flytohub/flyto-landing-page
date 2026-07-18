@@ -8,7 +8,7 @@ Primary jobs:
 - Convert visitors for Flyto2 Cloud / Apps / Automation and Flyto2 Security.
 - Provide citation-ready pages for SEO, AEO, and GEO.
 - Route readers to docs, blog, contact, pricing, templates, changelog, and
-  security/trust content.
+  security/trust content, plus the community contribution hub.
 
 Primary audiences:
 

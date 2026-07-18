@@ -8,3 +8,5 @@
 - [x] Sync landing SEO metadata and keyword evidence from `flyto-i18n`.
 - [x] Add final trust, enterprise, airgap, open-source, compare, and API-docs route inventory.
 - [ ] Apply the Cloudflare AI crawler allowlist in `docs/cloudflare-ai-crawler-allowlist.md`, then rerun live public-site verification.
+- [x] Add `/community/` as an indexed public route.
+- [x] Wire community route into sitemap, llms files, nav, footer, and SEO audits.

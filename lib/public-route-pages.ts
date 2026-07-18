@@ -13,6 +13,7 @@ export type PublicRoutePageId =
   | 'compare'
   | 'api-docs'
   | 'trust'
+  | 'community'
   | 'docs'
   | 'blog'
   | 'changelog';
@@ -816,6 +817,62 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
       { label: 'Security', href: '/security' },
       { label: 'Open core', href: '/open-source' },
       { label: 'Airgap', href: '/airgap' },
+    ],
+  },
+  community: {
+    id: 'community',
+    path: 'community',
+    eyebrow: 'Community',
+    title: 'Build, share, and grow Flyto2 in public.',
+    lede:
+      'The Flyto2 community path connects open-source contributors, workflow builders, MCP users, Warroom CE testers, docs readers, and social launch channels through one reviewable loop.',
+    metaTitle: 'Flyto2 community and open-source contribution hub',
+    metaDescription:
+      'Join the Flyto2 community: ask questions, contribute good-first issues, share reusable workflows, and promote reviewed releases through social channels.',
+    primaryCta: { label: 'Join Discussions', href: 'https://github.com/flytohub/flyto-core/discussions' },
+    secondaryCta: { label: 'Contributor guide', href: 'https://github.com/flytohub/.github/blob/main/CONTRIBUTING.md' },
+    sections: [
+      {
+        title: 'Ask in public',
+        body:
+          'Questions should start in GitHub Discussions so the answer can help the next builder. Use docs for mechanics, the blog for explanations, and product pages for positioning.',
+        bullets: ['Q&A for setup, recipes, MCP clients, and browser modules', 'Ideas before large feature work', 'Show and Tell for demos, recipes, and labs'],
+      },
+      {
+        title: 'Contribute small, useful pieces',
+        body:
+          'The best early contributions make Flyto2 easier to try: focused docs, reproducible bugs, small recipes, missing tests, package metadata, and examples that do not need private context.',
+        bullets: ['Good-first issues have narrow done conditions', 'Security reports stay private through security@flyto2.com', 'Accepted examples point back to a canonical public URL'],
+      },
+      {
+        title: 'Publish once, syndicate carefully',
+        body:
+          'Community posts and releases should be drafted once, reviewed, and then shared to LinkedIn, Facebook, YouTube, package pages, and GitHub only when the maintainer provides platform credentials at runtime.',
+        bullets: ['Default mode is dry-run and reviewable JSON output', 'No social tokens or page secrets belong in source', 'Every social post links to a blog, docs, landing, release, package, or demo page'],
+      },
+    ],
+    answers: [
+      {
+        question: 'What should new contributors do first?',
+        answer:
+          'Pick a good-first issue, reproduce the setup, keep the pull request small, and update docs or examples when the public surface changes.',
+      },
+      {
+        question: 'Can Flyto2 auto-post to LinkedIn or Facebook?',
+        answer:
+          'Yes, but only through reviewed social drafts and runtime credentials. Source code should generate drafts and call platform APIs only when a maintainer explicitly runs live publish with valid OAuth or Page tokens.',
+      },
+      {
+        question: 'What makes a showcase useful?',
+        answer:
+          'A useful showcase includes a reusable workflow, recipe, MCP configuration, screenshot, trace, replay note, or Warroom CE lab with secrets removed.',
+      },
+    ],
+    related: [
+      { label: 'GitHub organization', href: 'https://github.com/flytohub' },
+      { label: 'Good first issues', href: 'https://github.com/flytohub/flyto-core/contribute' },
+      { label: 'Blog launch notes', href: 'https://blog.flyto2.com/posts/community-growth-open-source-ai-workflow-automation' },
+      { label: 'Docs community guide', href: 'https://docs.flyto2.com/community/' },
     ],
   },
   docs: {

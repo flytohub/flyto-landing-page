@@ -19,6 +19,7 @@ const productRoutes = [
   'compare',
   'api-docs',
   'trust',
+  'community',
   'docs',
   'blog',
   'changelog',

@@ -45,6 +45,7 @@ export const productNavGrouped: Record<ProductId, NavGroup[]> = {
     {
       key: 'community',
       items: [
+        { key: 'community',   href: '/community' },
         { key: 'discussions', href: '/cloud/discussions' },
         { key: 'docs',        href: 'https://docs.flyto2.com', external: true },
       ],
@@ -70,7 +71,10 @@ export const productNavGrouped: Record<ProductId, NavGroup[]> = {
     },
     {
       key: 'community',
-      items: [{ key: 'discussions', href: '/code/discussions' }],
+      items: [
+        { key: 'community',   href: '/community' },
+        { key: 'discussions', href: '/code/discussions' },
+      ],
     },
   ],
 };

@@ -18,7 +18,7 @@ Current state on 2026-07-18:
   separately from source-level SEO health.
 - The site has public routes for Cloud, templates, recipes, pricing,
   changelog, CTEM/security pages, dark web monitoring, whitepapers, legal pages,
-  and discussions.
+  discussions, and the community contribution hub.
 - Homepage SEO and AI-readable indexes now present Flyto2 as open-source AI
   workflow automation, MCP-native agent tools, no-code browser automation, and
   evidence-backed security Warroom on one deterministic flyto-core runtime.

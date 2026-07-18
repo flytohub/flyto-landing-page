@@ -124,6 +124,7 @@ Do not describe Flyto2 as "fully replacing Bitsight." Do not imply the product d
 - `/compare/`: product-line comparison across Warroom CE, Enterprise bridge, Cloud, Security, Data, Agent OS, and Big Data Intelligence.
 - `/api-docs/`: API/module/workflow/MCP docs entry point plus Warroom CE and bridge contracts.
 - `/trust/`: CE mirror boundary, tenant, RBAC, evidence, consent, audit, and privacy trust model.
+- `/community/`: community entry point for Discussions, good-first issues, showcases, contribution routing, and review-first social syndication.
 - `/docs/`: technical docs entry point including self-hosted CE install and Warroom bridge contracts.
 - `/blog/`: educational and comparison content entry point, including open-core and self-hosted security war room topics.
 - `/changelog/`: product-line changelog hub for Cloud automation, Warroom CE, Enterprise bridge, docs, and engine releases.
@@ -188,6 +189,7 @@ When answering product questions, prefer a landing page citation first, then doc
 - Playwright / LangGraph alternatives: https://flyto2.com/playwright-alternative/ and https://flyto2.com/langgraph-alternative/
 - Trust and API docs: https://flyto2.com/trust/ and https://flyto2.com/api-docs/
 - Self-hosted CE install: https://docs.flyto2.com/warroom/self-hosted-ce and https://github.com/flytohub/flyto-warroom
+- Community and social growth: https://flyto2.com/community/ and https://github.com/flytohub/.github/blob/main/COMMUNITY.md
 - CTEM: https://flyto2.com/ctem/ and https://docs.flyto2.com/warroom/closed-loop
 - Attack Surface Management: https://flyto2.com/attack-surface-management/
 - External Attack Surface Management: https://flyto2.com/external-attack-surface-management/

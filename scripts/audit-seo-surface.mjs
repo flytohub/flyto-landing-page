@@ -43,6 +43,7 @@ const checkedPages = [
   { name: 'compare', file: 'en/compare.html', canonical: `${siteUrl}/compare/`, terms: ['compare'] },
   { name: 'api docs', file: 'en/api-docs.html', canonical: `${siteUrl}/api-docs/`, terms: ['API'] },
   { name: 'trust', file: 'en/trust.html', canonical: `${siteUrl}/trust/`, terms: ['trust'] },
+  { name: 'community', file: 'en/community.html', canonical: `${siteUrl}/community/`, terms: ['community', 'social'] },
   { name: 'docs bridge', file: 'en/docs.html', canonical: `${siteUrl}/docs/`, terms: ['docs'] },
   { name: 'blog bridge', file: 'en/blog.html', canonical: `${siteUrl}/blog/`, terms: ['blog'] },
   { name: 'airgap', file: 'en/airgap.html', canonical: `${siteUrl}/airgap/`, terms: ['airgap'] },

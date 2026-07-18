@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
-import { X, Cloud, ShieldCheck, BookOpen, PenSquare, Mail } from 'lucide-react';
+import { X, Cloud, ShieldCheck, BookOpen, PenSquare, Mail, UsersRound } from 'lucide-react';
 import { cn } from '@/lib/cn';
 
 export function MobileMenu({ open, onClose }: { open: boolean; onClose: () => void }) {
@@ -77,6 +77,7 @@ export function MobileMenu({ open, onClose }: { open: boolean; onClose: () => vo
             <NavRow href={localized('/dark-web-monitoring')} label={t('darkWeb')} onClose={onClose} />
             <NavRow href="https://docs.flyto2.com" external icon={<BookOpen className="h-4 w-4" strokeWidth={1.5} />} label={t('docs')} onClose={onClose} />
             <NavRow href="https://blog.flyto2.com" external icon={<PenSquare className="h-4 w-4" strokeWidth={1.5} />} label={t('blog')} onClose={onClose} />
+            <NavRow href={localized('/community')} icon={<UsersRound className="h-4 w-4" strokeWidth={1.5} />} label={t('community')} onClose={onClose} />
             <NavRow href={localized('/contact')} icon={<Mail className="h-4 w-4" strokeWidth={1.5} />} label={t('contact')} onClose={onClose} />
           </ul>
         </div>

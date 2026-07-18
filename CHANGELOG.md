@@ -4,6 +4,11 @@
 
 ### Added
 
+- Added `/community/` as a public indexed route for Flyto2 Discussions,
+  good-first issues, showcases, contribution routing, and review-first social
+  promotion.
+- Added community route coverage to sitemap, footer, mobile navigation,
+  `llms.txt`, `llms-full.txt`, and SEO/public-route audits.
 - Added CE-first launch surface coverage across homepage, pricing, security,
   enterprise, airgap, compare, docs, API docs, trust, blog, changelog, footer,
   nav, and AI-readable indexes.
