@@ -13,12 +13,14 @@ User-agent: *
 Allow: /
 
 Sitemap: https://flyto2.com/sitemap.xml
+Sitemap: https://flyto2.com/image-sitemap.xml
 # The sitemap includes canonical English URLs plus localized hreflang entries
 # for /zh/, /cn/, /ja/, /ko/, /de/, /es/, /fr/, /it/, /pt/, /hi/, /id/,
 # /pl/, /th/, /tr/, and /vi/.
 # AI-readable content index (not a robots.txt directive — for reference only):
 # https://flyto2.com/llms.txt
 # https://flyto2.com/llms-full.txt
+# https://flyto2.com/image-sitemap.xml
 
 # ============================================================
 # Blocked — AI training crawlers

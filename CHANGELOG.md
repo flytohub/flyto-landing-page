@@ -4,6 +4,14 @@
 
 ### Added
 
+- Added build-generated landing discovery files: `public/image-sitemap.xml` and
+  `public/discovery-manifest.json`, covering committed product screenshots and
+  visual assets.
+- Added `npm run seo:discovery` and wired it into both `npm run build` and
+  `npm run build:cf` so local and Cloudflare builds publish the same discovery
+  surface.
+- Added SEO audit checks for image sitemap coverage, social image reachability,
+  `security.txt`, and discovery manifest health.
 - Added `/community/` as a public indexed route for Flyto2 Discussions,
   good-first issues, showcases, contribution routing, and review-first social
   promotion.

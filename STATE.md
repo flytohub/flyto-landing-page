@@ -2,6 +2,14 @@
 
 Current state on 2026-07-18:
 
+- 2026-07-18: Landing now publishes generated discovery surfaces for search and
+  AI retrieval: `sitemap.xml`, `image-sitemap.xml`, `llms.txt`,
+  `llms-full.txt`, `discovery-manifest.json`, social preview images, and
+  `.well-known/security.txt`.
+- 2026-07-18: `npm run build` and `npm run build:cf` run
+  `npm run seo:discovery` first. `npm run audit:seo` fails if image sitemap
+  coverage, social image assets, Flyto2 naming, `@flyto2.com` email policy, or
+  security contact policy drifts.
 - 2026-07-18: Landing SEO now consumes the synced
   `.seo/i18n-seo-manifest.json` cache generated from
   `flyto-i18n/dist/seo-manifest.json`. `npm run audit:seo` checks the surface
@@ -58,6 +66,10 @@ Known gaps:
   blog, changelog, and security hub routes now have source pages, sitemap
   coverage, footer discovery, and AI-readable index entries guarded by
   `npm run audit:geo`.
+- Backlink growth still depends on external publication channels such as
+  GitHub releases, PyPI package pages, Docker Hub descriptions, YouTube
+  descriptions, LinkedIn posts, and community discussions. The landing repo now
+  exposes the crawlable assets those channels should reference.
 - Cloudflare builds use the committed `.seo/i18n-seo-manifest.json` cache; run
   `npm run seo:sync` locally after changing `flyto-i18n` SEO source data.
 - Login, billing, and customer workflows are outside this repo and must be

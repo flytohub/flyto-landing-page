@@ -123,7 +123,7 @@ Avoid vague or unsupported words:
 - `next-generation` without proof
 - `AI-powered` by itself
 - inflated module counts that are not generated from source
-- old names such as `Flyto` when the product is `Flyto2`
+- old one-word product names when the product is `Flyto2`
 - old domains such as `flyto.io`; use `flyto2.com`
 
 ## Package and backlink surfaces
@@ -177,7 +177,7 @@ Active development moved to:
 
 Before merging Markdown changes:
 
-- Product name is `Flyto2`, not `Flyto`.
+- Product name uses the full `Flyto2` spelling.
 - Domain is `flyto2.com`, not old domains.
 - Public contacts use `@flyto2.com`.
 - README first screen includes a thesis, links, and a quick path.

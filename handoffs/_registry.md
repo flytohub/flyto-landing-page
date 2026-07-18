@@ -2,6 +2,7 @@
 
 | Date | Topic | File |
 | --- | --- | --- |
+| 2026-07-18 | SEO discovery surfaces | `2026-07-18-seo-discovery-surfaces.md` |
 | 2026-07-18 | Message drift guard | `2026-07-18-message-drift-guard.md` |
 | 2026-07-18 | Community route | `2026-07-18-community-route.md` |
 | 2026-07-18 | i18n SEO manifest wiring | `2026-07-18-i18n-seo-manifest.md` |
