@@ -28,11 +28,11 @@ export const securityPages = {
     slug: 'attack-surface-management',
     metaTitle: 'Attack Surface Management Tools for Evidence-Backed CTEM',
     metaDescription:
-      'Flyto2 integrates attack surface management tools, ASM software, code, dark web, pentest, and red-team signals into an evidence-backed CTEM workflow.',
+      'Flyto2 is an attack surface management solution that integrates ASM tools, code, dark web, pentest, and red-team signals into evidence-backed CTEM.',
     eyebrow: 'ATTACK SURFACE MANAGEMENT',
     title: 'Attack surface management that connects exposure to evidence.',
     lede:
-      'Flyto2 complements the attack surface tools you already trust. Start with self-hosted Warroom CE, bring existing ASM, EASM, scanner, rating, and asset data, then correlate it with code, dark web, pentest, and red-team evidence for teams comparing attack surface management software, vendors, and validation workflows.',
+      'Flyto2 complements the attack surface tools you already trust. Start with self-hosted Warroom CE, bring existing ASM, EASM, scanner, rating, and asset data, then correlate it with code, dark web, pentest, and red-team evidence for teams comparing an attack surface management solution, attack surface management software, vendors, and validation workflows.',
     image: '/assets/img/warroom/26-asset-map.png',
     imageAlt: 'Flyto2 asset map showing domains, services, and ownership context',
     primaryCta: { label: 'Read the CTEM workflow', href: '/ctem' },
@@ -128,13 +128,13 @@ export const securityPages = {
   },
   ctem: {
     slug: 'ctem',
-    metaTitle: 'BYO Offensive Validation Layer for CTEM Programs',
+    metaTitle: 'Continuous Threat Exposure Management CTEM Framework',
     metaDescription:
-      'Flyto2 turns ASM, dark web, code, pentest, red-team, cloud, and scanner findings into verified attack paths, evidence, and remediation records for CTEM programs.',
+      'Flyto2 maps ASM, code, dark web, pentest, and scanner findings into a continuous threat exposure management CTEM framework for continuous threat exposure management programs.',
     eyebrow: 'CONTINUOUS THREAT EXPOSURE MANAGEMENT',
-    title: 'Flyto2 turns CTEM inputs into verified attack paths.',
+    title: 'Continuous threat exposure management CTEM with verified attack paths.',
     lede:
-      'Flyto2 turns ASM, dark web, code, pentest, red-team, cloud, and scanner signals into CTEM attack hypotheses, evidence, and remediation context for continuous threat exposure management programs.',
+      'What is continuous threat exposure management in practice? Flyto2 turns ASM, dark web, code, pentest, red-team, cloud, and scanner signals into a continuous threat exposure management CTEM workflow with attack hypotheses, evidence, and remediation context.',
     image: '/assets/img/warroom/21-scoring-breakdown.png',
     imageAlt: 'Flyto2 scoring breakdown for CTEM security surfaces',
     primaryCta: { label: 'Read CTEM guide', href: 'https://blog.flyto2.com/posts/what-is-ctem-continuous-threat-exposure-management' },
@@ -155,7 +155,7 @@ export const securityPages = {
       {
         title: 'A validation workflow, not another isolated dashboard',
         body:
-          'CTEM only works when discovery, prioritization, validation, and action stay connected. Flyto2 consumes existing security data and turns the highest-value paths into evidence-backed validation work for teams asking what continuous threat exposure management changes beyond vulnerability management.',
+          'CTEM only works when discovery, prioritization, validation, and action stay connected. Flyto2 consumes existing security data and turns the highest-value paths into evidence-backed validation work for teams asking what continuous threat exposure management changes beyond vulnerability management, comparing continuous threat exposure management vs vulnerability management, and evaluating continuous threat exposure management vendors.',
         bullets: ['External surface and asset inventory', 'Code and dependency context', 'Validation through pentest and red-team loops'],
       },
       {
@@ -230,13 +230,13 @@ export const securityPages = {
   },
   'mssp-platform': {
     slug: 'mssp-platform',
-    metaTitle: 'MSSP-Ready Security War Room with BYO Integrations',
+    metaTitle: 'MSSP platform for evidence-backed security teams',
     metaDescription:
-      'Flyto2 is a BYO-friendly, MSSP-ready security war room that correlates existing tools and turns findings into evidence-backed action.',
+      'Flyto2 is an MSSP platform for evidence-backed security teams that correlates existing tools, customer findings, reports, and remediation action.',
     eyebrow: 'MSSP / BYO PLATFORM',
-    title: 'Bring the tools and data you already trust.',
+    title: 'Flyto2 is an MSSP platform for BYO security operations.',
     lede:
-      'Flyto2 correlates them, validates what matters, and turns findings into evidence-backed action. MSSPs can evaluate with Warroom CE, then attach Enterprise bridge services for customer isolation, fleet execution, reporting, identity, and support.',
+      'Flyto2 is an MSSP platform that correlates the tools and data you already trust, validates what matters, and turns findings into evidence-backed action. MSSPs can evaluate with Warroom CE, then attach Enterprise bridge services for customer isolation, fleet execution, reporting, identity, and support.',
     image: '/assets/img/warroom/28-reports-builder.png',
     imageAlt: 'Flyto2 report builder for evidence-backed security workflows',
     primaryCta: { label: 'Read BYO docs', href: 'https://docs.flyto2.com/warroom/byo-integration' },

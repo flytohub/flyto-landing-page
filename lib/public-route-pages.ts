@@ -115,12 +115,12 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
     id: 'security',
     path: 'security',
     eyebrow: 'Flyto2 Security',
-    title: 'Flyto2 Security is the BYO offensive validation layer above your existing stack.',
+    title: 'Flyto2 Security is the security automation platform above your existing stack.',
     lede:
-      'Flyto2 Security starts as installable Warroom CE and grows into an Enterprise bridge. Bring ASM, SAST, DAST, CSPM, SIEM, dark web, cloud, code, and scanner findings; Flyto2 turns them into verified attack paths, pentest evidence, red-team scenarios, remediation records, and compliance-ready proof.',
-    metaTitle: 'Flyto2 Security BYO offensive validation',
+      'Flyto2 Security is a security automation platform that starts as installable Warroom CE and grows into an Enterprise bridge. Bring ASM, SAST, DAST, CSPM, SIEM, dark web, cloud, code, and scanner findings; Flyto2 turns them into verified attack paths, pentest evidence, red-team scenarios, remediation records, and compliance-ready proof.',
+    metaTitle: 'Security automation platform for BYO validation',
     metaDescription:
-      'Flyto2 Security turns ASM, EASM, CTEM, code, and scanner findings into verified attack paths, pentest evidence, reports, and remediation records.',
+      'Flyto2 is a security automation platform that turns ASM, EASM, CTEM, code, and scanner findings into verified attack paths, evidence, reports, and remediation records.',
     primaryCta: { label: 'Install Warroom CE', href: '/open-source' },
     secondaryCta: { label: 'Read CTEM page', href: '/ctem' },
     sections: [
@@ -278,12 +278,12 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
     id: 'open-source',
     path: 'open-source',
     eyebrow: 'Open core',
-    title: 'Flyto2 Warroom CE is the self-hosted open-core offensive validation war room.',
+    title: 'Flyto2 is an open source AI agent framework with Warroom CE.',
     lede:
-      'Flyto2 Warroom CE gives teams a local installable cockpit for BYO findings, open source attack surface management, attack paths, safe validation, evidence, remediation, scoring, and compliance. Enterprise features attach through clear capability gates, signed evidence, and documented bridge contracts.',
-    metaTitle: 'Flyto2 open source and open-core model',
+      'Flyto2 is an open source AI agent framework and execution engine with a local installable Warroom CE cockpit for BYO findings, attack paths, safe validation, evidence, remediation, scoring, and compliance. Enterprise features attach through clear capability gates, signed evidence, and documented bridge contracts.',
+    metaTitle: 'Open source AI agent framework and Warroom CE',
     metaDescription:
-      'Install Flyto2 Warroom CE from GitHub and Docker Hub, evaluate open source attack surface management and CTEM workflows, and see how Enterprise bridge capabilities attach.',
+      'Install Flyto2 as an open source AI agent framework with Warroom CE, Docker images, MCP tools, attack surface management workflows, CTEM, and Enterprise bridge contracts.',
     primaryCta: { label: 'GitHub repository', href: 'https://github.com/flytohub/flyto-warroom' },
     secondaryCta: { label: 'Docker images', href: 'https://hub.docker.com/r/chesterhsu/flyto-warroom' },
     sections: [
@@ -437,7 +437,7 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
       {
         question: 'What search terms does this page answer?',
         answer:
-          'n8n alternative, AI workflow automation tools, open source workflow automation, no-code browser automation, and MCP server automation.',
+          'n8n alternative, open source n8n alternative, free n8n alternative, n8n alternative open source, self hosted n8n alternative, n8n alternative for AI agents, AI workflow automation tools, no-code browser automation, and MCP server automation.',
       },
     ],
     related: [
@@ -655,12 +655,12 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
     id: 'compare',
     path: 'compare',
     eyebrow: 'Compare',
-    title: 'Compare Flyto2 CE, Enterprise, Cloud, and security surfaces.',
+    title: 'Compare attack surface management tools and Flyto2 product lines.',
     lede:
-      'Flyto2 is not a single narrow tool or a dead open-source fork. Warroom CE, Enterprise bridge, Cloud automation, Security, future Data, agent OS, and intelligence surfaces share contracts while keeping product and deployment boundaries explicit for CTEM, EASM, attack surface management, security automation, and workflow automation buyers.',
-    metaTitle: 'Compare Flyto2 product lines',
+      'Compare attack surface management tools against Flyto2 Warroom CE, Enterprise bridge, Cloud automation, Security, future Data, agent OS, and intelligence surfaces. Flyto2 keeps product and deployment boundaries explicit for CTEM, EASM, security automation, and workflow automation buyers.',
+    metaTitle: 'Compare attack surface management tools',
     metaDescription:
-      'Compare Flyto2 Cloud automation, Security, CTEM, EASM, attack surface management, open-core Warroom CE, Enterprise bridge, Data, Agent OS, and Intelligence product lines.',
+      'Compare attack surface management tools with Flyto2 Cloud automation, Security, CTEM, EASM, open-core Warroom CE, Enterprise bridge, Data, Agent OS, and Intelligence product lines.',
     primaryCta: { label: 'Warroom CE', href: '/open-source' },
     secondaryCta: { label: 'Security', href: '/security' },
     sections: [
@@ -717,12 +717,12 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
     id: 'api-docs',
     path: 'api-docs',
     eyebrow: 'API docs',
-    title: 'Flyto2 API docs start with workflows, modules, MCP, and Warroom contracts.',
+    title: 'MCP server automation docs for Flyto2 APIs and modules.',
     lede:
-      'The public product site points AI crawlers and developers to the authoritative docs surface for Flyto2 Core modules, workflow recipes, MCP transport, Warroom CE installation, bridge contracts, attack surface management API context, CTEM workflows, and security APIs.',
-    metaTitle: 'Flyto2 API docs',
+      'MCP server automation docs point AI crawlers and developers to the authoritative surface for Flyto2 Core modules, workflow recipes, MCP transport, Warroom CE installation, bridge contracts, attack surface management API context, CTEM workflows, and security APIs.',
+    metaTitle: 'MCP server automation docs for Flyto2 APIs',
     metaDescription:
-      'Entry point for Flyto2 API, module, workflow, MCP, attack surface management API, CTEM workflow, security automation, and Warroom documentation.',
+      'MCP server automation docs and API entry point for Flyto2 modules, workflows, attack surface management API context, CTEM workflow, security automation, and Warroom documentation.',
     primaryCta: { label: 'Open docs', href: 'https://docs.flyto2.com/' },
     secondaryCta: { label: 'Module catalog', href: 'https://docs.flyto2.com/modules/' },
     sections: [
@@ -823,12 +823,12 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
     id: 'community',
     path: 'community',
     eyebrow: 'Community',
-    title: 'Build, share, and grow Flyto2 in public.',
+    title: 'Open-source AI workflow automation community for Flyto2.',
     lede:
-      'The Flyto2 community path connects open-source contributors, workflow builders, MCP users, Warroom CE testers, docs readers, and social launch channels through one reviewable loop.',
-    metaTitle: 'Flyto2 community and open-source contribution hub',
+      'The Flyto2 open-source AI workflow automation community connects contributors, workflow builders, MCP users, Warroom CE testers, docs readers, and social launch channels through one reviewable loop.',
+    metaTitle: 'Open-source AI workflow automation community',
     metaDescription:
-      'Join the Flyto2 community: ask questions, contribute good-first issues, share reusable workflows, and promote reviewed releases through social channels.',
+      'Join the Flyto2 open-source AI workflow automation community to ask questions, contribute good-first issues, share workflows, and promote reviewed releases.',
     primaryCta: { label: 'Join Discussions', href: 'https://github.com/flytohub/flyto-core/discussions' },
     secondaryCta: { label: 'Contributor guide', href: 'https://github.com/flytohub/.github/blob/main/CONTRIBUTING.md' },
     sections: [

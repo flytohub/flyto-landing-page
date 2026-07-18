@@ -1,12 +1,12 @@
 {
-  "version": "18527f774064",
+  "version": "d7b9cd243f7b",
   "sourceVersion": "2026-07-18",
   "defaultLocale": "en",
   "xDefaultLocale": "en",
   "source": {
     "repository": "flyto-i18n",
     "path": "dist/seo-manifest.json",
-    "sha256": "f732eed5e4c6b12bb77e684b660cc3722c3a4120e54539ba4db180a64933d60d"
+    "sha256": "d4f0f0828b15d05f7af8e07485c5323ad1dada6a4e50445e6ab866ea18f27b21"
   },
   "locales": {
     "en": {
@@ -200,7 +200,7 @@
           "country": "US",
           "language": "en",
           "volume": 1000,
-          "seoDifficulty": 51,
+          "seoDifficulty": 59,
           "paidDifficulty": 40,
           "cpcUsd": 42.24,
           "observedAt": "2026-07-18"
@@ -233,6 +233,72 @@
           "no code browser automation tool",
           "browser automation tool open source",
           "browser automation tool playwright"
+        ]
+      },
+      {
+        "id": "n8n-alternative",
+        "primary": "n8n alternative",
+        "intent": "commercial comparison",
+        "evidence": {
+          "source": "Ubersuggest",
+          "country": "US",
+          "language": "en",
+          "volume": 1300,
+          "seoDifficulty": 34,
+          "paidDifficulty": 54,
+          "cpcUsd": 16.81,
+          "observedAt": "2026-07-18"
+        },
+        "longTail": [
+          "open source n8n alternative",
+          "free n8n alternative",
+          "n8n alternative open source",
+          "self hosted n8n alternative",
+          "n8n alternative for ai agents"
+        ]
+      },
+      {
+        "id": "attack-surface-management",
+        "primary": "attack surface management",
+        "intent": "security buyer research",
+        "evidence": {
+          "source": "Ubersuggest",
+          "country": "US",
+          "language": "en",
+          "volume": 880,
+          "seoDifficulty": 44,
+          "paidDifficulty": 25,
+          "cpcUsd": 32.48,
+          "observedAt": "2026-07-18"
+        },
+        "longTail": [
+          "attack surface management tools",
+          "external attack surface management",
+          "attack surface management solution",
+          "what is attack surface management",
+          "attack surface management vs vulnerability management"
+        ]
+      },
+      {
+        "id": "continuous-threat-exposure-management",
+        "primary": "continuous threat exposure management",
+        "intent": "security education and CTEM evaluation",
+        "evidence": {
+          "source": "Ubersuggest",
+          "country": "US",
+          "language": "en",
+          "volume": 260,
+          "seoDifficulty": 39,
+          "paidDifficulty": 32,
+          "cpcUsd": 171.87,
+          "observedAt": "2026-07-18"
+        },
+        "longTail": [
+          "continuous threat exposure management ctem",
+          "continuous threat exposure management ctem framework",
+          "what is continuous threat exposure management",
+          "continuous threat exposure management vendors",
+          "continuous threat exposure management vs vulnerability management"
         ]
       }
     ]

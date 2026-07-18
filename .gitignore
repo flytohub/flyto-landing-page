@@ -45,6 +45,7 @@ next-env.d.ts
 .flyto/
 .flyto-index/
 .lighthouseci/
+.seo/reports/
 
 # Cloudflare / wrangler build output
 .cloudflare/

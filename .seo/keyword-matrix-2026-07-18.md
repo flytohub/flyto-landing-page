@@ -21,7 +21,8 @@ clear route intent. Do not paste search-volume tables into public page copy.
 | Cluster | Keyword | Volume | SD | PD | CPC | Heat | Landing Route | Supporting Docs | Supporting Blog |
 | --- | --- | ---: | ---: | ---: | ---: | --- | --- | --- | --- |
 | Open-source agent automation | open source AI agent framework | 1600 | 6 | 3 | 7.05 | High | `/open-source/`, `/` | `https://docs.flyto2.com/core/`, `https://docs.flyto2.com/mcp/` | `/posts/mcp-server-guide`, `/posts/modules-not-magic` |
-| AI workflow automation | AI workflow automation | 1000 | 20 | 23 | 21.68 | High | `/` | `https://docs.flyto2.com/core/`, `https://docs.flyto2.com/guide/getting-started` | `/posts/ai-browser-automation-guide`, `/posts/workflow-automation` |
+| Comparison | n8n alternative | 1300 | 34 | 54 | 16.81 | High | `/n8n-alternative/` | `https://docs.flyto2.com/core/`, `https://docs.flyto2.com/modules/browser` | `/posts/n8n-alternative`, `/posts/ai-workflow-automation-alternatives` |
+| AI workflow automation | AI workflow automation | 1000 | 59 | 40 | 42.24 | High | `/` | `https://docs.flyto2.com/core/`, `https://docs.flyto2.com/guide/getting-started` | `/posts/ai-browser-automation-guide`, `/posts/workflow-automation` |
 | Attack surface management | attack surface management | 880 | 44 | 25 | 32.48 | High | `/attack-surface-management/` | `https://docs.flyto2.com/warroom/surfaces/attack-surface` | `/posts/attack-surface-management-guide` |
 | AI workflow automation | AI workflow automation tools | 480 | 32 | 11 | 33.65 | Medium | `/` | `https://docs.flyto2.com/modules/` | `/posts/ai-browser-automation-guide`, `/posts/no-code-automation` |
 | Attack surface management | attack surface management tools | 390 | 46 | 14 | 43.46 | Medium | `/attack-surface-management/`, `/compare/` | `https://docs.flyto2.com/warroom/surfaces/attack-surface` | `/posts/attack-surface-management-guide` |
@@ -43,12 +44,17 @@ These terms are now carried by `.seo/i18n-seo-manifest.json`, synced from
 
 | Cluster | Manifest term | Volume | SD | PD | CPC | Route intent |
 | --- | --- | ---: | ---: | ---: | ---: | --- |
-| AI workflow automation | best AI workflow automation tools | 110 | 37 | 17 | 14.45 | Buyer research and comparison content routed through `/`, `/compare/`, and supporting blog posts. |
-| AI workflow automation | agentic AI workflow automation | 50 | 28 | 17 | 0.00 | Emerging category term routed through `/`, `/open-source/`, and docs implementation pages. |
-| AI workflow automation | AI workflow automation examples | 70 | 35 | 7 | 8.33 | Example-driven intent routed to `/cloud/recipes/`, `/cloud/templates/`, and blog explainers. |
+| AI workflow automation | best AI workflow automation tools | 90 | 54 | 26 | 50.30 | Buyer research and comparison content routed through `/`, `/compare/`, and supporting blog posts. |
+| AI workflow automation | agentic AI workflow automation | 50 | 50 | 6 | 25.64 | Emerging category term routed through `/`, `/open-source/`, and docs implementation pages. |
+| AI workflow automation | AI workflow automation examples | 20 | 16 | 41 | 16.62 | Example-driven intent routed to `/cloud/recipes/`, `/cloud/templates/`, and blog explainers. |
 | Browser automation | browser automation tool | 260 | 56 | 46 | 29.52 | Problem-aware browser automation intent routed through `/`, `/cloud/recipes/`, and docs browser module pages. |
 | Browser automation | web browser automation tool | 260 | 56 | 45 | 29.52 | Variant term for people evaluating web browser automation tools. |
 | Browser automation | best browser automation tool | 40 | 39 | 28 | 0.00 | Comparison intent routed to templates, docs, and educational posts. |
+| Comparison | open source n8n alternative | 70 | 26 | 28 | 9.90 | Route to `/n8n-alternative/`, `/compare/`, and supporting alternative posts. |
+| Comparison | free n8n alternative | 70 | 33 | 65 | 8.03 | Route to `/n8n-alternative/` with clear free/open-source boundary language. |
+| Comparison | self hosted n8n alternative | 10 | 19 | 44 | 12.56 | Route to `/n8n-alternative/`, `/open-source/`, and self-hosted docs. |
+| Attack surface management | what is attack surface management | 140 | 42 | 5 | 72.16 | Educational intent routed to `/attack-surface-management/` and blog explainers. |
+| CTEM | continuous threat exposure management ctem framework | 20 | 6 | 2 | 84.42 | Route to `/ctem/` and docs closed-loop implementation. |
 
 ## Long-Tail Route Intent
 

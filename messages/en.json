@@ -259,20 +259,20 @@
     }
   },
   "cloud": {
-    "metaTitle": "Cloud — No-code Browser Automation and AI Workflows",
-    "metaDescription": "Record a browser task once, edit it, schedule it, and replay it locally with Flyto2. No-code browser automation with 451 modules, MCP tools, and evidence.",
+    "metaTitle": "AI Workflow Automation and No-code Browser Automation",
+    "metaDescription": "Flyto2 Cloud is AI workflow automation for browser tasks: record once, schedule, replay locally, and keep MCP-ready evidence from every run.",
     "hero": {
       "eyebrow": "01 / CLOUD",
       "status": "SHIPPING",
-      "title": "No-code browser automation,",
+      "title": "AI workflow automation,",
       "titleAccent": "ready to replay.",
-      "lede": "Open the recorder, do the task once, hit stop. Flyto2 turns the clicks, waits, downloads, and checks into a workflow you can edit, schedule, and rerun from the failed step.",
+      "lede": "Open the recorder, do the browser task once, hit stop. Flyto2 turns clicks, waits, downloads, and checks into AI workflow automation you can edit, schedule, and rerun from the failed step.",
       "ctaPrimary": "Download desktop app",
       "ctaSecondary": "Browse 451 modules"
     },
     "how": {
       "label": "HOW IT WORKS",
-      "title": "Three steps from manual to automated.",
+      "title": "Three steps from manual work to AI workflow automation.",
       "items": [
         {
           "step": "01",
@@ -519,6 +519,10 @@
           "a": "Yes. Every workflow has a CLI invocation and a webhook URL. Run them from cron, GitHub Actions, your own backend, or Flyto2's hosted scheduler — same workflow file, same result."
         },
         {
+          "q": "Is Flyto2 one of the best AI workflow automation tools for browser work?",
+          "a": "Flyto2 is built for teams comparing the best AI workflow automation tools, agentic AI workflow automation, and a web browser automation tool that can be reviewed. It works as a no code browser automation tool for operators, a browser automation tool open source teams can inspect through flyto-core, and a browser automation tool Playwright users can pair with scripted tests."
+        },
+        {
           "q": "How do you handle 2FA and CAPTCHAs?",
           "a": "Flyto2 can pause and prompt you (or a human in your team) to complete a 2FA challenge, then continue. CAPTCHAs are deliberately not bypassed — using Flyto2 on sites that ban automation is your call, not ours."
         },
@@ -719,17 +723,17 @@
     }
   },
   "templates": {
-    "metaTitle": "Templates — Flyto2 Marketplace",
-    "metaDescription": "Pre-built workflow templates for invoicing, scraping, lead enrichment, and more. Install in one click.",
+    "metaTitle": "AI Workflow Automation Templates — Flyto2 Marketplace",
+    "metaDescription": "Pre-built AI workflow automation templates for invoicing, scraping, lead enrichment, browser QA, and reporting. Install in one click.",
     "gridLabel": "MOST INSTALLED",
     "gridTitle": "Workflows people actually run.",
     "gridSubtitle": "These are the recipes that show up in real customer accounts. Each is a starting point — clone, adapt, run.",
     "contributeOnGithub": "Contribute a template on GitHub",
     "hero": {
       "eyebrow": "MARKETPLACE · GROWING",
-      "title": "Workflows you can",
+      "title": "AI workflow automation templates you can",
       "titleAccent": "install in one click.",
-      "lede": "Recorded, tagged and ready to run. Browse the marketplace from inside the app, or peek at what's most popular below — every entry comes with the source workflow file you can edit."
+      "lede": "Recorded, tagged and ready to run. Browse AI workflow automation templates from inside the app, or peek at what's most popular below — every entry comes with the source workflow file you can edit."
     },
     "items": [
       {

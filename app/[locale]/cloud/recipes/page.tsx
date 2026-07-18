@@ -5,6 +5,7 @@ import {
   type LucideIcon,
 } from 'lucide-react';
 import { pageAlternates } from '@/lib/seo';
+import { defaultLocale } from '@/lib/locales';
 
 export async function generateMetadata({
   params,
@@ -13,9 +14,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   return {
-    title: 'Recipes — pre-built workflows',
+    title: 'AI workflow automation examples — Flyto2 recipes',
     description:
-      '37 ready-to-run YAML workflows for scraping, analytics, monitoring, data processing, image work, devops and form filling.',
+      'AI workflow automation examples for scraping, analytics, monitoring, browser QA, data processing, image work, DevOps, and form filling with Flyto2 recipes.',
     alternates: pageAlternates('cloud/recipes', locale),
   };
 }
@@ -123,16 +124,43 @@ export default async function CloudRecipesPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const total = GROUPS.reduce((s, g) => s + g.items.length, 0);
+  const pagePath = locale === defaultLocale ? '/cloud/recipes/' : `/${locale}/cloud/recipes/`;
+  const pageUrl = `https://flyto2.com${pagePath}`;
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': `${pageUrl}#recipes`,
+    url: pageUrl,
+    name: 'AI workflow automation examples',
+    description:
+      'Ready-to-run Flyto2 recipes for AI workflow automation examples across scraping, SEO audits, monitoring, browser QA, data processing, and DevOps.',
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: total,
+      itemListElement: GROUPS.flatMap((group) =>
+        group.items.map((item) => ({
+          '@type': 'ListItem',
+          name: item.name,
+          description: item.what,
+        })),
+      ),
+    },
+  };
 
   return (
     <article className="mx-auto max-w-6xl px-5 py-24 sm:px-8 sm:py-32">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <header className="mb-16 max-w-3xl">
         <span className="label-mono">RECIPES</span>
         <h1 className="h-display mt-4 text-[clamp(40px,7vw,80px)]">
-          {total} ready-to-run workflows.
+          {total} AI workflow automation examples.
         </h1>
         <p className="mt-6 text-[15px] leading-relaxed text-bone-200 sm:text-[17px]">
-          Every recipe is a YAML file that ships with the Flyto2 runtime. Install the CLI,
+          Every recipe is a YAML file that ships with the Flyto2 runtime, so each example is
+          repeatable AI workflow automation rather than a one-off script. Install the CLI,
           run <code className="rounded bg-white/5 px-1.5 py-0.5 font-mono text-[14px]">flyto run &lt;recipe&gt;</code>,
           point it at your inputs. No setup; modify the YAML to make it yours; commit it to your repo.
         </p>

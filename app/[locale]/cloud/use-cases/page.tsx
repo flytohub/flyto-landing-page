@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { Briefcase, ShoppingBag, Code2, FlaskConical, type LucideIcon } from 'lucide-react';
 import { pageAlternates } from '@/lib/seo';
+import { defaultLocale } from '@/lib/locales';
 
 export async function generateMetadata({
   params,
@@ -10,9 +11,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   return {
-    title: 'Use cases — who actually uses Flyto2 Cloud',
+    title: 'Workflow automation use cases — Flyto2 Cloud',
     description:
-      'Four user archetypes — ops teams, ecommerce sellers, engineering teams, researchers — and the workflows they actually ship.',
+      'Workflow automation use cases for ops teams, ecommerce sellers, engineering teams, and researchers using Flyto2 Cloud to ship repeatable browser work.',
     alternates: pageAlternates('cloud/use-cases', locale),
   };
 }
@@ -124,17 +125,42 @@ export default async function CloudUseCasesPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const pagePath = locale === defaultLocale ? '/cloud/use-cases/' : `/${locale}/cloud/use-cases/`;
+  const pageUrl = `https://flyto2.com${pagePath}`;
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': `${pageUrl}#use-cases`,
+    url: pageUrl,
+    name: 'Workflow automation use cases',
+    description:
+      'Flyto2 workflow automation use cases for operations, ecommerce, engineering, and research teams that need repeatable browser and data workflows.',
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: PERSONAS.map((persona, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: persona.who,
+        description: persona.result,
+      })),
+    },
+  };
 
   return (
     <article className="mx-auto max-w-5xl px-5 py-24 sm:px-8 sm:py-32">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <header className="mb-16 max-w-3xl">
         <span className="label-mono">USE CASES</span>
         <h1 className="h-display mt-4 text-[clamp(40px,7vw,80px)]">
-          Who actually uses Flyto2.
+          Workflow automation use cases from real teams.
         </h1>
         <p className="mt-6 text-[15px] leading-relaxed text-bone-200 sm:text-[17px]">
-          Four archetypes, with the concrete workflows they ship. If your team looks like one of
-          these, the install-to-first-workflow timeline is measured in minutes, not weeks.
+          Four Flyto2 workflow automation use cases, with the concrete workflows teams ship.
+          If your team looks like one of these, the install-to-first-workflow timeline is
+          measured in minutes, not weeks.
         </p>
       </header>
 

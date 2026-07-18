@@ -26,6 +26,7 @@ import { Recipes } from '@/components/sections/Recipes';
 import { FAQ } from '@/components/sections/FAQ';
 import { CTASection } from '@/components/sections/CTASection';
 import { pageAlternates } from '@/lib/seo';
+import { defaultLocale } from '@/lib/locales';
 
 const ICONS: Record<string, LucideIcon> = {
   Video, Pause, ShieldOff, Boxes, GitBranch, Languages, Repeat,
@@ -53,9 +54,40 @@ export default async function CloudPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const pagePath = locale === defaultLocale ? '/cloud/' : `/${locale}/cloud/`;
+  const pageUrl = `https://flyto2.com${pagePath}`;
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebPage',
+        '@id': `${pageUrl}#webpage`,
+        url: pageUrl,
+        name: 'AI Workflow Automation and No-code Browser Automation',
+        description:
+          'Flyto2 Cloud is AI workflow automation for browser tasks: record once, schedule, replay locally, and keep MCP-ready evidence from every run.',
+        about: ['AI workflow automation', 'no-code browser automation', 'MCP tools', 'workflow replay'],
+        isPartOf: { '@id': 'https://flyto2.com/#website' },
+      },
+      {
+        '@type': 'SoftwareApplication',
+        '@id': `${pageUrl}#software`,
+        name: 'Flyto2 Cloud',
+        applicationCategory: 'BusinessApplication',
+        operatingSystem: 'macOS, Windows, Linux, Web',
+        url: pageUrl,
+        description:
+          'AI workflow automation for repeatable browser work, scheduled recipes, and evidence-backed reports.',
+      },
+    ],
+  };
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <CloudHero />
       <VideoDemo />
       <CloudHow />
@@ -110,29 +142,29 @@ function CloudHow() {
   const t = useTranslations('cloud.how');
   const items = t.raw('items') as HowItem[];
   return (
-    <section className="mx-auto max-w-6xl px-5 py-24 sm:px-8 sm:py-32">
+    <section className="mx-auto max-w-6xl px-4 py-12 sm:px-8 sm:py-32">
       <header className="max-w-2xl">
         <span className="label-mono">{t('label')}</span>
-        <h2 className="h-display mt-4 text-[clamp(36px,6vw,64px)]">{t('title')}</h2>
+        <h2 className="h-display mt-4 text-[clamp(30px,6vw,64px)]">{t('title')}</h2>
       </header>
 
-      <ol className="mt-14 grid gap-5 lg:grid-cols-3">
+      <ol className="mt-8 grid gap-3 sm:mt-14 sm:gap-5 lg:grid-cols-3">
         {items.map((it) => {
           const Icon = ICONS[it.icon];
           return (
             <li
               key={it.step}
-              className="lift relative flex flex-col gap-5 rounded-3xl border border-[var(--color-line)] bg-gradient-to-b from-ink-700/40 to-ink-800/20 p-7 sm:p-8"
+              className="lift relative flex flex-col gap-3 rounded-lg border border-[var(--color-line)] bg-gradient-to-b from-ink-700/40 to-ink-800/20 p-4 sm:gap-5 sm:rounded-2xl sm:p-8"
             >
               <div className="flex items-center justify-between">
-                <span className="num-mono font-display text-5xl text-bone-300/40">{it.step}</span>
-                <span className="grid h-11 w-11 place-items-center rounded-xl border border-[var(--color-line-strong)] bg-ink-900 text-violet-300">
-                  {Icon && <Icon className="h-5 w-5" strokeWidth={1.5} />}
+                <span className="num-mono font-display text-3xl text-bone-300/40 sm:text-5xl">{it.step}</span>
+                <span className="grid h-9 w-9 place-items-center rounded-lg border border-[var(--color-line-strong)] bg-ink-900 text-violet-300 sm:h-11 sm:w-11 sm:rounded-xl">
+                  {Icon && <Icon className="h-4 w-4 sm:h-5 sm:w-5" strokeWidth={1.5} />}
                 </span>
               </div>
               <div>
-                <h3 className="font-display text-2xl font-semibold tracking-tight">{it.title}</h3>
-                <p className="mt-2 text-[14.5px] leading-relaxed text-bone-200">{it.body}</p>
+                <h3 className="font-display text-[18px] font-semibold leading-snug sm:text-2xl">{it.title}</h3>
+                <p className="mt-1.5 text-[12.5px] leading-relaxed text-bone-200 sm:mt-2 sm:text-[14.5px]">{it.body}</p>
               </div>
             </li>
           );

@@ -29,10 +29,10 @@ export function Recipes() {
   const items = t.raw('items') as Recipe[];
 
   return (
-    <section id="recipes" className="mx-auto max-w-6xl px-4 py-14 sm:px-8 sm:py-32">
+    <section id="recipes" className="mx-auto max-w-6xl px-4 py-10 sm:px-8 sm:py-32">
       <header className="max-w-2xl">
         <span className="label-mono">{t('label')}</span>
-        <h2 className="h-display mt-4 text-[clamp(30px,8vw,64px)]">{t('title')}</h2>
+        <h2 className="h-display mt-4 text-[clamp(28px,7vw,56px)]">{t('title')}</h2>
         <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-bone-200">
           {t('subtitle')}
         </p>
@@ -48,7 +48,7 @@ export function Recipes() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.6, delay: i * 0.05, ease: [0.16, 1, 0.3, 1] }}
-              className="lift mx-auto flex w-full min-w-0 max-w-[28rem] flex-col gap-2.5 rounded-lg border border-[var(--color-line)] bg-ink-800 p-3 sm:gap-5 sm:p-7 md:max-w-none"
+              className="lift mx-auto flex w-full min-w-0 max-w-[24rem] flex-col gap-2.5 rounded-lg border border-[var(--color-line)] bg-ink-800 p-3 sm:max-w-[28rem] sm:gap-5 sm:p-7 md:max-w-none"
             >
               <div className="flex items-center justify-between">
                 <span className="grid h-7 w-7 place-items-center rounded-md border border-[var(--color-line-strong)] bg-ink-700 text-violet-300 sm:h-10 sm:w-10 sm:rounded-lg">
@@ -60,7 +60,7 @@ export function Recipes() {
               </div>
 
               <div>
-                <h3 className="font-display text-[16.5px] font-semibold tracking-tight sm:text-[22px]">
+                <h3 className="font-display text-[16.5px] font-semibold leading-snug sm:text-[22px]">
                   {it.name}
                 </h3>
                 <p className="mt-1.5 text-[12px] leading-relaxed text-bone-200 sm:mt-2 sm:text-[13.5px]">{it.body}</p>
