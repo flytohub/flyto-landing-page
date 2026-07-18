@@ -1,11 +1,13 @@
 import type { Metadata } from 'next';
 import type { PublicRoutePage } from './public-route-pages';
-import { localizedUrl, pageAlternates } from './seo';
+import { OG_LOCALE_BY_LOCALE, localizedUrl, pageAlternates } from './seo';
+import { defaultLocale, type Locale } from './locales';
 
 const defaultOgImage = '/assets/img/warroom/01-projects-home.webp';
 
 export function publicRouteMetadata(page: PublicRoutePage, locale: string): Metadata {
   const url = localizedUrl(page.path, locale);
+  const supportedLocale = (locale in OG_LOCALE_BY_LOCALE ? locale : defaultLocale) as Locale;
 
   return {
     title: page.metaTitle,
@@ -17,6 +19,7 @@ export function publicRouteMetadata(page: PublicRoutePage, locale: string): Meta
       url,
       siteName: 'Flyto2',
       type: 'website',
+      locale: OG_LOCALE_BY_LOCALE[supportedLocale],
       images: [{ url: defaultOgImage, alt: `${page.title} - Flyto2` }],
     },
     twitter: {

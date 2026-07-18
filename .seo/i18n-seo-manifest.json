@@ -1,0 +1,240 @@
+{
+  "version": "18527f774064",
+  "sourceVersion": "2026-07-18",
+  "defaultLocale": "en",
+  "xDefaultLocale": "en",
+  "source": {
+    "repository": "flyto-i18n",
+    "path": "dist/seo-manifest.json",
+    "sha256": "f732eed5e4c6b12bb77e684b660cc3722c3a4120e54539ba4db180a64933d60d"
+  },
+  "locales": {
+    "en": {
+      "name": "English",
+      "native": "English",
+      "region": "US",
+      "hreflang": "en",
+      "og_locale": "en_US",
+      "flag": "us.svg",
+      "direction": "ltr"
+    },
+    "zh-TW": {
+      "name": "Traditional Chinese",
+      "native": "繁體中文",
+      "region": "TW",
+      "hreflang": "zh-TW",
+      "og_locale": "zh_TW",
+      "flag": "tw.svg",
+      "direction": "ltr"
+    },
+    "zh-CN": {
+      "name": "Simplified Chinese",
+      "native": "简体中文",
+      "region": "CN",
+      "hreflang": "zh-CN",
+      "og_locale": "zh_CN",
+      "flag": "cn.svg",
+      "direction": "ltr"
+    },
+    "ja": {
+      "name": "Japanese",
+      "native": "日本語",
+      "region": "JP",
+      "hreflang": "ja",
+      "og_locale": "ja_JP",
+      "flag": "jp.svg",
+      "direction": "ltr"
+    },
+    "ko": {
+      "name": "Korean",
+      "native": "한국어",
+      "region": "KR",
+      "hreflang": "ko",
+      "og_locale": "ko_KR",
+      "flag": "kr.svg",
+      "direction": "ltr"
+    },
+    "fr": {
+      "name": "French",
+      "native": "Français",
+      "region": "FR",
+      "hreflang": "fr",
+      "og_locale": "fr_FR",
+      "flag": "fr.svg",
+      "direction": "ltr"
+    },
+    "es": {
+      "name": "Spanish",
+      "native": "Español",
+      "region": "ES",
+      "hreflang": "es",
+      "og_locale": "es_ES",
+      "flag": "es.svg",
+      "direction": "ltr"
+    },
+    "de": {
+      "name": "German",
+      "native": "Deutsch",
+      "region": "DE",
+      "hreflang": "de",
+      "og_locale": "de_DE",
+      "flag": "de.svg",
+      "direction": "ltr"
+    },
+    "pt-BR": {
+      "name": "Portuguese (Brazil)",
+      "native": "Português (Brasil)",
+      "region": "BR",
+      "hreflang": "pt-BR",
+      "og_locale": "pt_BR",
+      "flag": "br.svg",
+      "direction": "ltr"
+    },
+    "it": {
+      "name": "Italian",
+      "native": "Italiano",
+      "region": "IT",
+      "hreflang": "it",
+      "og_locale": "it_IT",
+      "flag": "it.svg",
+      "direction": "ltr"
+    },
+    "vi": {
+      "name": "Vietnamese",
+      "native": "Tiếng Việt",
+      "region": "VN",
+      "hreflang": "vi",
+      "og_locale": "vi_VN",
+      "flag": "vn.svg",
+      "direction": "ltr"
+    },
+    "th": {
+      "name": "Thai",
+      "native": "ภาษาไทย",
+      "region": "TH",
+      "hreflang": "th",
+      "og_locale": "th_TH",
+      "flag": "th.svg",
+      "direction": "ltr"
+    },
+    "id": {
+      "name": "Indonesian",
+      "native": "Bahasa Indonesia",
+      "region": "ID",
+      "hreflang": "id",
+      "og_locale": "id_ID",
+      "flag": "id.svg",
+      "direction": "ltr"
+    },
+    "hi": {
+      "name": "Hindi",
+      "native": "हिन्दी",
+      "region": "IN",
+      "hreflang": "hi",
+      "og_locale": "hi_IN",
+      "flag": "in.svg",
+      "direction": "ltr"
+    },
+    "tr": {
+      "name": "Turkish",
+      "native": "Türkçe",
+      "region": "TR",
+      "hreflang": "tr",
+      "og_locale": "tr_TR",
+      "flag": "tr.svg",
+      "direction": "ltr"
+    },
+    "pl": {
+      "name": "Polish",
+      "native": "Polski",
+      "region": "PL",
+      "hreflang": "pl",
+      "og_locale": "pl_PL",
+      "flag": "pl.svg",
+      "direction": "ltr"
+    }
+  },
+  "surfaceKey": "landing",
+  "surface": {
+    "name": "Flyto2 landing page",
+    "origin": "https://flyto2.com",
+    "sitemap": "https://flyto2.com/sitemap.xml",
+    "routePattern": "/{locale}{path}",
+    "primaryIntent": "product discovery, comparison pages, open-source workflow automation entry points",
+    "requiredSignals": [
+      "canonical",
+      "hreflang-alternates",
+      "x-default",
+      "sitemap",
+      "localized-title",
+      "localized-description",
+      "og-locale",
+      "structured-data"
+    ],
+    "alternatesTemplate": {
+      "en": "https://flyto2.com{path}",
+      "zh-TW": "https://flyto2.com/zh-TW{path}",
+      "zh-CN": "https://flyto2.com/zh-CN{path}",
+      "ja": "https://flyto2.com/ja{path}",
+      "ko": "https://flyto2.com/ko{path}",
+      "fr": "https://flyto2.com/fr{path}",
+      "es": "https://flyto2.com/es{path}",
+      "de": "https://flyto2.com/de{path}",
+      "pt-BR": "https://flyto2.com/pt-BR{path}",
+      "it": "https://flyto2.com/it{path}",
+      "vi": "https://flyto2.com/vi{path}",
+      "th": "https://flyto2.com/th{path}",
+      "id": "https://flyto2.com/id{path}",
+      "hi": "https://flyto2.com/hi{path}",
+      "tr": "https://flyto2.com/tr{path}",
+      "pl": "https://flyto2.com/pl{path}",
+      "x-default": "https://flyto2.com{path}"
+    },
+    "keywordClusters": [
+      {
+        "id": "ai-workflow-automation",
+        "primary": "ai workflow automation",
+        "intent": "commercial investigation",
+        "evidence": {
+          "source": "Ubersuggest",
+          "country": "US",
+          "language": "en",
+          "volume": 1000,
+          "seoDifficulty": 51,
+          "paidDifficulty": 40,
+          "cpcUsd": 42.24,
+          "observedAt": "2026-07-18"
+        },
+        "longTail": [
+          "ai workflow automation tools",
+          "best ai workflow automation tools",
+          "agentic ai workflow automation",
+          "open source ai workflow automation",
+          "ai workflow automation examples"
+        ]
+      },
+      {
+        "id": "browser-automation-tool",
+        "primary": "browser automation tool",
+        "intent": "problem aware",
+        "evidence": {
+          "source": "Ubersuggest",
+          "country": "US",
+          "language": "en",
+          "volume": 260,
+          "seoDifficulty": 56,
+          "paidDifficulty": 46,
+          "cpcUsd": 29.52,
+          "observedAt": "2026-07-18"
+        },
+        "longTail": [
+          "web browser automation tool",
+          "best browser automation tool",
+          "no code browser automation tool",
+          "browser automation tool open source",
+          "browser automation tool playwright"
+        ]
+      }
+    ]
+  }
+}

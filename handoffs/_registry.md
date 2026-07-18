@@ -2,6 +2,7 @@
 
 | Date | Topic | File |
 | --- | --- | --- |
+| 2026-07-18 | i18n SEO manifest wiring | `2026-07-18-i18n-seo-manifest.md` |
 | 2026-07-01 | Warroom CE landing launch | `2026-07-01-warroom-ce-landing-launch.md` |
 | 2026-07-01 | Aikido alternative route | `2026-07-01-aikido-alternative-route.md` |
 | 2026-06-23 | Public site fresh verification | `2026-06-23-public-site-fresh-verification.md` |

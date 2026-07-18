@@ -1,9 +1,11 @@
 import type { Metadata, Viewport } from 'next';
 import { Bricolage_Grotesque, Geist, Geist_Mono } from 'next/font/google';
 import {
+  FLYTO2_SITE_URL,
   FLYTO2_HOME_DESCRIPTION,
   FLYTO2_HOME_FULL_TITLE,
   FLYTO2_SEO_KEYWORDS,
+  OG_LOCALE_BY_LOCALE,
 } from '@/lib/seo';
 import './globals.css';
 
@@ -26,7 +28,7 @@ const mono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://flyto2.com'),
+  metadataBase: new URL(FLYTO2_SITE_URL),
   applicationName: 'Flyto2',
   title: {
     default: FLYTO2_HOME_FULL_TITLE,
@@ -34,14 +36,15 @@ export const metadata: Metadata = {
   },
   description: FLYTO2_HOME_DESCRIPTION,
   keywords: [...FLYTO2_SEO_KEYWORDS],
-  authors: [{ name: 'Flyto2 Team', url: 'https://flyto2.com' }],
+  authors: [{ name: 'Flyto2 Team', url: FLYTO2_SITE_URL }],
   creator: 'Flyto2',
   publisher: 'Flyto2',
   category: 'Security Software',
   openGraph: {
     type: 'website',
-    url: 'https://flyto2.com',
+    url: FLYTO2_SITE_URL,
     siteName: 'Flyto2',
+    locale: OG_LOCALE_BY_LOCALE.en,
     title: FLYTO2_HOME_FULL_TITLE,
     description: FLYTO2_HOME_DESCRIPTION,
     images: [

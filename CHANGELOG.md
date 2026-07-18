@@ -28,6 +28,9 @@
 - Added `npm run audit:seo`, Lighthouse CI configuration, and a dedicated SEO
   Gate workflow for build-output metadata, sitemap, robots, llms, keyword
   freshness, and public link checks.
+- Added `.seo/i18n-seo-manifest.json` plus `npm run seo:sync` so landing SEO
+  metadata, hreflang, sitemap checks, and keyword evidence can stay aligned
+  with `flyto-i18n/dist/seo-manifest.json`.
 
 ### Changed
 
@@ -46,3 +49,6 @@
   though it were an `/api` route.
 - Added OpenGraph and Twitter card metadata to the homepage so the public-site
   verification probe can prove citation-ready social/AI summary metadata.
+- Derived landing site origin, OpenGraph locale, hreflang values, and SEO
+  keyword additions from the synced Flyto2 i18n SEO manifest while preserving
+  existing public locale prefixes.

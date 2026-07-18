@@ -1,6 +1,6 @@
 # Flyto2 Landing SEO Keyword Matrix
 
-Date: 2026-07-16
+Date: 2026-07-18
 Locale: US / English
 Source: Ubersuggest keyword ideas and keyword overview
 Scope: `https://flyto2.com`
@@ -35,6 +35,20 @@ clear route intent. Do not paste search-volume tables into public page copy.
 | EASM | external attack surface management tools | 110 | 37 | 11 | 135.21 | Medium | `/external-attack-surface-management/` | `https://docs.flyto2.com/warroom/surfaces/attack-surface` | `/posts/what-is-easm-external-attack-surface-management` |
 | MCP | MCP server automation | 10 | 34 | 68 | 16.50 | Low | `/api-docs/`, `/docs/` | `https://docs.flyto2.com/mcp/` | `/posts/mcp-server-guide` |
 | Browser automation | no code browser automation | 20 | 23 | 56 | 16.13 | Low | `/` | `https://docs.flyto2.com/modules/browser` | `/posts/no-code-browser-automation` |
+
+## flyto-i18n Manifest Addendum
+
+These terms are now carried by `.seo/i18n-seo-manifest.json`, synced from
+`flyto-i18n/dist/seo-manifest.json`, and audited with the public landing build.
+
+| Cluster | Manifest term | Volume | SD | PD | CPC | Route intent |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| AI workflow automation | best AI workflow automation tools | 110 | 37 | 17 | 14.45 | Buyer research and comparison content routed through `/`, `/compare/`, and supporting blog posts. |
+| AI workflow automation | agentic AI workflow automation | 50 | 28 | 17 | 0.00 | Emerging category term routed through `/`, `/open-source/`, and docs implementation pages. |
+| AI workflow automation | AI workflow automation examples | 70 | 35 | 7 | 8.33 | Example-driven intent routed to `/cloud/recipes/`, `/cloud/templates/`, and blog explainers. |
+| Browser automation | browser automation tool | 260 | 56 | 46 | 29.52 | Problem-aware browser automation intent routed through `/`, `/cloud/recipes/`, and docs browser module pages. |
+| Browser automation | web browser automation tool | 260 | 56 | 45 | 29.52 | Variant term for people evaluating web browser automation tools. |
+| Browser automation | best browser automation tool | 40 | 39 | 28 | 0.00 | Comparison intent routed to templates, docs, and educational posts. |
 
 ## Long-Tail Route Intent
 

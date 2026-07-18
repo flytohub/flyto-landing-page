@@ -1,5 +1,17 @@
 # Decisions
 
+## 2026-07-18 - Landing consumes the shared i18n SEO contract
+
+Decision: landing keeps a committed `.seo/i18n-seo-manifest.json` cache synced
+from `flyto-i18n/dist/seo-manifest.json`; build-time metadata reads the cache,
+and `npm run audit:seo` compares the cache to upstream when the sibling repo is
+available.
+
+Reason: Cloudflare deploys this repository by itself, so public builds cannot
+depend on a local sibling checkout. The cache keeps deployment stable while the
+audit prevents the three public surfaces from drifting away from the shared
+Flyto2 multilingual SEO source.
+
 ## 2026-07-15 - Public SEO must cover automation and security together
 
 Decision: the landing page, AI-readable indexes, and structured metadata must

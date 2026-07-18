@@ -1,7 +1,13 @@
 # State
 
-Current state on 2026-07-01:
+Current state on 2026-07-18:
 
+- 2026-07-18: Landing SEO now consumes the synced
+  `.seo/i18n-seo-manifest.json` cache generated from
+  `flyto-i18n/dist/seo-manifest.json`. `npm run audit:seo` checks the surface
+  key, upstream source hash when the sibling repo exists, required SEO signals,
+  16 locale definitions, keyword evidence, page alternates, sitemap alternates,
+  robots, llms, and keyword matrix.
 - 2026-07-16: `npm run audit:seo` now validates built homepage and core
   commercial routes for title/description length, canonical URLs, OpenGraph,
   Twitter cards, JSON-LD, hreflang, sitemap coverage, robots, llms files,
@@ -30,7 +36,8 @@ Current state on 2026-07-01:
   without redirect loops; `/en/...` redirects to the canonical unprefixed URL,
   while non-English locale prefixes are indexed as hreflang variants.
 - Sitemap and page metadata now advertise complete locale alternates for the
-  16 supported public locales.
+  16 supported public locales, with hreflang and OpenGraph locale values
+  derived from the Flyto2 i18n SEO contract.
 - `scripts/analyze-ai-crawler-logs.mjs` can produce JSON, CSV, and Markdown GEO
   crawler evidence from access logs.
 - `npm run audit:public-site` guards CE launch links, Docker/GitHub/docs
@@ -43,5 +50,7 @@ Known gaps:
   blog, changelog, and security hub routes now have source pages, sitemap
   coverage, footer discovery, and AI-readable index entries guarded by
   `npm run audit:geo`.
+- Cloudflare builds use the committed `.seo/i18n-seo-manifest.json` cache; run
+  `npm run seo:sync` locally after changing `flyto-i18n` SEO source data.
 - Login, billing, and customer workflows are outside this repo and must be
   validated in the owning apps before production.

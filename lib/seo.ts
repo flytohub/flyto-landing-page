@@ -1,25 +1,60 @@
 import { defaultLocale, locales, type Locale } from './locales';
+import i18nSeoContract from '../.seo/i18n-seo-manifest.json';
 
-export const FLYTO2_SITE_URL = 'https://flyto2.com';
+type SeoLocale = {
+  hreflang: string;
+  og_locale: string;
+};
 
-export const HREFLANG_BY_LOCALE: Record<Locale, string> = {
-  en: 'en-US',
-  zh: 'zh-Hant-TW',
-  cn: 'zh-Hans-CN',
-  ja: 'ja-JP',
-  ko: 'ko-KR',
-  de: 'de-DE',
-  es: 'es-ES',
-  fr: 'fr-FR',
-  it: 'it-IT',
+type SeoContract = {
+  defaultLocale: string;
+  xDefaultLocale: string;
+  locales: Record<string, SeoLocale>;
+  surface: {
+    origin: string;
+    keywordClusters: Array<{
+      primary: string;
+      longTail: string[];
+    }>;
+  };
+};
+
+const seoContract = i18nSeoContract as SeoContract;
+
+export const FLYTO2_SITE_URL = seoContract.surface.origin;
+
+export const MANIFEST_LOCALE_BY_PUBLIC_LOCALE: Record<Locale, string> = {
+  en: 'en',
+  zh: 'zh-TW',
+  cn: 'zh-CN',
+  ja: 'ja',
+  ko: 'ko',
+  de: 'de',
+  es: 'es',
+  fr: 'fr',
+  it: 'it',
   pt: 'pt-BR',
-  hi: 'hi-IN',
-  id: 'id-ID',
-  pl: 'pl-PL',
-  th: 'th-TH',
-  tr: 'tr-TR',
-  vi: 'vi-VN',
+  hi: 'hi',
+  id: 'id',
+  pl: 'pl',
+  th: 'th',
+  tr: 'tr',
+  vi: 'vi',
 } as const;
+
+export const HREFLANG_BY_LOCALE = Object.fromEntries(
+  locales.map((locale) => {
+    const manifestLocale = MANIFEST_LOCALE_BY_PUBLIC_LOCALE[locale];
+    return [locale, seoContract.locales[manifestLocale]?.hreflang ?? manifestLocale];
+  }),
+) as Record<Locale, string>;
+
+export const OG_LOCALE_BY_LOCALE = Object.fromEntries(
+  locales.map((locale) => {
+    const manifestLocale = MANIFEST_LOCALE_BY_PUBLIC_LOCALE[locale];
+    return [locale, seoContract.locales[manifestLocale]?.og_locale ?? 'en_US'];
+  }),
+) as Record<Locale, string>;
 
 export const X_DEFAULT_HREFLANG = 'x-default';
 
@@ -39,7 +74,12 @@ export const FLYTO2_HOME_FULL_TITLE = `Flyto2 - ${FLYTO2_HOME_TITLE}`;
 export const FLYTO2_HOME_DESCRIPTION =
   'Flyto2 is an open-source AI workflow automation platform with MCP-native tools, no-code browser workflows, trace/replay, and an evidence-backed CTEM security war room.';
 
-export const FLYTO2_SEO_KEYWORDS = [
+const manifestKeywordTerms = seoContract.surface.keywordClusters.flatMap((cluster) => [
+  cluster.primary,
+  ...cluster.longTail,
+]);
+
+export const FLYTO2_SEO_KEYWORDS = Array.from(new Set([
   'Flyto2',
   'AI workflow automation',
   'AI workflow automation tools',
@@ -95,7 +135,8 @@ export const FLYTO2_SEO_KEYWORDS = [
   'open-core security platform',
   'evidence-backed security',
   '451 security automation modules',
-] as const;
+  ...manifestKeywordTerms,
+]));
 
 /**
  * Build canonical + hreflang metadata for a public page.
