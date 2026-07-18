@@ -24,7 +24,13 @@
     "recipes": "สูตรสำเร็จ",
     "useCases": "กรณีใช้งาน",
     "changelog": "การเปลี่ยนแปลง",
-    "security": "ความปลอดภัย"
+    "security": "ความปลอดภัย",
+    "platform": "Platform",
+    "ctem": "CTEM",
+    "attackSurface": "Attack Surface",
+    "darkWeb": "Dark Web",
+    "mssp": "MSSP",
+    "aiSecurity": "AI Security"
   },
   "footer": {
     "tagline": "เครื่องมืออัตโนมัติแบบ offline-first งานของคุณอยู่ในเครื่องของคุณ",
@@ -1490,6 +1496,146 @@
           "title": "ตัวสร้างรายงาน",
           "body": "เชื่อมแผงใดก็ตามเข้าเป็น PDF เดียวสำหรับคณะกรรมการ ลูกค้า หรือผู้ตรวจสอบ — บันทึกเป็นเทมเพลตที่ใช้ซ้ำได้"
         }
+      }
+    },
+    "platform": {
+      "metaTitle": "MSSP-ready security war room — BYO tools, evidence-backed action",
+      "metaDescription": "A BYO-friendly security war room that integrates existing tools, supplements gaps, and runs correlation, validation, evidence, and red-team workflows across nine surfaces.",
+      "hero": {
+        "eyebrow": "MSSP WAR-ROOM",
+        "status": "Beta",
+        "title": "Bring your trusted stack.",
+        "titleAccent": "We correlate it.",
+        "lede": "Flyto2 Warroom is a BYO-friendly security war room that complements and integrates existing tools. Bring the scanners, ratings, feeds, cloud accounts, repos, and asset data you already trust; Flyto2 correlates them, validates what matters, and turns findings into evidence-backed action.",
+        "ctaPrimary": "Read the MSSP war-room whitepaper",
+        "ctaSecondary": "BYO integration model",
+        "ctaDocs": "Warroom docs"
+      },
+      "thesis": {
+        "label": "THE INTEGRATION THESIS",
+        "title": "The value is integration, correlation, and evidence — not forcing another scanner into every slot.",
+        "body": "Nine surfaces are worth more together than apart. Each one is independently usable and individually closed-loop, but the structural value is the correlation across them: one asset map, one operational picture, and evidence for the findings that matter. That is what a security war room should provide."
+      },
+      "surfaces": {
+        "label": "NINE SURFACES",
+        "title": "Nine independently-usable, individually-closed-loop surfaces.",
+        "subtitle": "Each surface stands on its own and closes its own loop — detect, correlate, verify, simulate. Together they roll up into a single A–F unified score and one war-room picture.",
+        "items": [
+          {
+            "icon": "Crosshair",
+            "name": "External attack surface",
+            "value": "Continuously maps your internet-exposed assets, ports and services, then ranks exposure by what is reachable and exploitable today — not just what is open."
+          },
+          {
+            "icon": "Code2",
+            "name": "Code intelligence + code red-team",
+            "value": "SCA, SAST, secrets and license analysis with reachability weighting, plus generated pentest workflows that verify each finding as exploitable, sanitized or unreachable."
+          },
+          {
+            "icon": "KeyRound",
+            "name": "MCP security",
+            "value": "Audits MCP servers and tool surfaces for unauthenticated exec, bind misconfiguration and authorization gaps — the attack surface that ships with agent-native stacks."
+          },
+          {
+            "icon": "Container",
+            "name": "Container / runtime + cloud identity",
+            "value": "Build-time image CVEs, embedded secrets and Dockerfile misconfig, joined with IaC exposure and cloud-identity posture so OS, app and infra risk sit in one view."
+          },
+          {
+            "icon": "Radar",
+            "name": "Darkweb / threat-intel",
+            "value": "Ingests darkweb and threat-intel feeds — yours or ours — and correlates leaked credentials, mentions and chatter back to the assets they actually put at risk."
+          },
+          {
+            "icon": "Fingerprint",
+            "name": "Footprint / attribution",
+            "value": "Attributes infrastructure, domains and identities back to your organization with honest confidence — no source-count laundering, no ownership-gate bypass."
+          },
+          {
+            "icon": "Boxes",
+            "name": "Asset map",
+            "value": "The spine of the war-room: every domain, host, service and dependency in one ownership-gated graph that every other surface scores against."
+          },
+          {
+            "icon": "Bug",
+            "name": "Pentest",
+            "value": "Turns findings into YAML pentest recipes that run in a real browser against your consented staging, and reports back what is actually exploitable with replayable evidence."
+          },
+          {
+            "icon": "Swords",
+            "name": "Red-team simulation",
+            "value": "Chains verified findings into attack-path simulations and red-team exercises, driven by the same deterministic engine that collects the evidence behind every step."
+          }
+        ]
+      },
+      "byo": {
+        "label": "THE BYO ENTRY FLOW",
+        "title": "One big closed loop, starting from what you already own.",
+        "subtitle": "The first thing you do on entry is integrate every asset and tool you already have. Then we ingest external data, supplement gaps, and run correlation across the combined picture — through pentest, evidence, and red-team validation when needed.",
+        "steps": [
+          {
+            "n": "01",
+            "title": "Integrate",
+            "body": "Connect the assets and security tools you already own — scanners, ratings, feeds, cloud accounts, repos. Entry begins with bring-your-own, not rip-and-replace."
+          },
+          {
+            "n": "02",
+            "title": "Ingest",
+            "body": "Pull in external data — your existing darkweb feed, attack-surface rating or scanner output — into a single ownership-gated asset map."
+          },
+          {
+            "n": "03",
+            "title": "Supplement",
+            "body": "Wherever you have a gap, we supplement it with deterministic surfaces while keeping source coverage and assumptions visible."
+          },
+          {
+            "n": "04",
+            "title": "Correlate & score",
+            "body": "Run the correlation and scoring algorithms across the combined picture. Nine surfaces roll up into one unified A–F score and one operational view."
+          },
+          {
+            "n": "05",
+            "title": "Pentest",
+            "body": "Generate YAML pentest workflows per finding and run them in a real browser against consented staging — exploitable, sanitized or unreachable."
+          },
+          {
+            "n": "06",
+            "title": "Evidence",
+            "body": "Every scan and test captures replayable evidence. The same evidence/replay layer that powers Flyto2 automation backs every claim in the war-room."
+          },
+          {
+            "n": "07",
+            "title": "Red-team",
+            "body": "Chain verified findings into attack-path and red-team simulations, closing the loop from exposure all the way to adversary emulation."
+          }
+        ]
+      },
+      "loop": {
+        "label": "ONE CLOSED LOOP",
+        "title": "Exposure → correlate → score → pentest → evidence → red-team → back to exposure.",
+        "body": "The war-room is not a dashboard you read; it is a loop that runs. The same deterministic engine, YAML recipes and evidence/replay that run Flyto2 automation are literally the layer that runs scans, collects evidence and drives red-team. Automation is the how; the war-room is the what and why.",
+        "stages": [
+          "Integrate",
+          "Ingest",
+          "Supplement",
+          "Correlate & score",
+          "Pentest",
+          "Evidence",
+          "Red-team"
+        ]
+      },
+      "substrate": {
+        "label": "ONE SUBSTRATE, TWO PRODUCT LINES",
+        "title": "The same engine that runs your automation runs your war-room.",
+        "body": "Flyto2 is one brand with two product lines on the same execution substrate. The automation engine — flyto-core, 451 deterministic modules, MCP-native over stdio and streamable-http, with evidence capture, replay, YAML recipes and human-in-the-loop — is the established Zapier/n8n/Make alternative. The war-room rides the same deterministic modules and recipes to execute scans, collect evidence and drive red-team. You never have to choose between them.",
+        "automationCta": "Explore the automation engine"
+      },
+      "cta": {
+        "label": "START THE LOOP",
+        "title": "Bring what you have. We'll close the loop.",
+        "body": "Read how the MSSP-ready war room and the bring-your-own integration model work, or dive into the nine security surfaces in detail.",
+        "primary": "MSSP war-room whitepaper",
+        "secondary": "BYO integration model"
       }
     }
   }

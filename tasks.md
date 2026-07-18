@@ -10,3 +10,4 @@
 - [ ] Apply the Cloudflare AI crawler allowlist in `docs/cloudflare-ai-crawler-allowlist.md`, then rerun live public-site verification.
 - [x] Add `/community/` as an indexed public route.
 - [x] Wire community route into sitemap, llms files, nav, footer, and SEO audits.
+- [x] Move landing message drift guard into this repo and wire it into verify.

@@ -9,6 +9,8 @@
   promotion.
 - Added community route coverage to sitemap, footer, mobile navigation,
   `llms.txt`, `llms-full.txt`, and SEO/public-route audits.
+- Added a local `messages/*.json` drift guard and wired it into `npm run test`
+  plus the i18n drift GitHub Action.
 - Added CE-first launch surface coverage across homepage, pricing, security,
   enterprise, airgap, compare, docs, API docs, trust, blog, changelog, footer,
   nav, and AI-readable indexes.

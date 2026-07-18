@@ -8,6 +8,12 @@ Current state on 2026-07-18:
   key, upstream source hash when the sibling repo exists, required SEO signals,
   16 locale definitions, keyword evidence, page alternates, sitemap alternates,
   robots, llms, and keyword matrix.
+- 2026-07-18: `npm run i18n:check` now guards `messages/*.json` key drift
+  locally, and `.github/workflows/i18n-drift.yml` runs the same checker without
+  depending on removed scripts from `flyto-i18n`.
+- 2026-07-18: Missing `code.platform.*` and security navigation keys were
+  filled across non-English locale files with English fallback strings so
+  multilingual routes do not render missing messages.
 - 2026-07-16: `npm run audit:seo` now validates built homepage and core
   commercial routes for title/description length, canonical URLs, OpenGraph,
   Twitter cards, JSON-LD, hreflang, sitemap coverage, robots, llms files,
@@ -38,6 +44,8 @@ Current state on 2026-07-18:
 - Sitemap and page metadata now advertise complete locale alternates for the
   16 supported public locales, with hreflang and OpenGraph locale values
   derived from the Flyto2 i18n SEO contract.
+- `messages/*.json` must stay key-compatible with `messages/en.json`; this is
+  enforced by local verify and the i18n drift GitHub Action.
 - `scripts/analyze-ai-crawler-logs.mjs` can produce JSON, CSV, and Markdown GEO
   crawler evidence from access logs.
 - `npm run audit:public-site` guards CE launch links, Docker/GitHub/docs

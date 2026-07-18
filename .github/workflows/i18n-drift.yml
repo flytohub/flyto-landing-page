@@ -1,12 +1,9 @@
 name: i18n drift guard
 
-# Fails the PR when the next-intl message catalogue (messages/*.json) drifts
-# internally: every locale must carry exactly the key set of the baseline
-# locale (en). Missing keys are untranslated/forgotten strings; orphaned keys
-# are dead entries that next-intl can never resolve (the contract is defined
-# by en). flyto-landing-page maintains its own catalogue rather than consuming
-# flyto-i18n/dist, so this is a self-consistency check. The checker lives in
-# flyto-i18n. (FLYA-5)
+# Fails the PR when the next-intl message catalogue (messages/*.json) drifts:
+# every locale must carry exactly the key set of the baseline locale (en).
+# flyto-landing-page maintains its own catalogue rather than consuming
+# flyto-i18n/dist, so the guard lives in this repository.
 
 permissions:
   contents: read
@@ -17,29 +14,21 @@ on:
     paths:
       - 'messages/**'
       - '.github/workflows/i18n-drift.yml'
+      - 'scripts/check-message-drift.mjs'
   push:
     branches: [main]
     paths:
       - 'messages/**'
+      - 'scripts/check-message-drift.mjs'
 
 jobs:
   drift:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Checkout flyto-i18n (drift checker)
-        uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          repository: flytohub/flyto-i18n
-          path: flyto-i18n
-
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
+          node-version: 22
 
       - name: Check message catalogue is internally consistent vs en baseline
-        run: >
-          python flyto-i18n/scripts/check_i18n_drift.py
-          --project landing
-          --consumer-root .
+        run: node scripts/check-message-drift.mjs
