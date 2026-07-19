@@ -278,20 +278,20 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
     id: 'open-source',
     path: 'open-source',
     eyebrow: 'Open core',
-    title: 'Flyto2 is an open source AI agent framework with Warroom CE.',
+    title: 'Flyto2 Warroom CE is a self-hosted open-core security warroom.',
     lede:
-      'Flyto2 is an open source AI agent framework and execution engine with a local installable Warroom CE cockpit for BYO findings, attack paths, safe validation, evidence, remediation, scoring, and compliance. Enterprise features attach through clear capability gates, signed evidence, and documented bridge contracts.',
-    metaTitle: 'Open source AI agent framework and Warroom CE',
+      'Flyto2 Warroom CE is the installable BYO offensive validation platform for teams that want to run a local security war room. Bring your own ASM, SAST, DAST, CSPM, SIEM, dark web, cloud, code, and scanner findings; Flyto2 turns them into verified attack paths, pentest evidence, red-team scenarios, remediation records, scoring, and compliance-ready proof. Flyto2 Core remains the open-source automation runtime underneath the broader Flyto2 product line.',
+    metaTitle: 'Flyto2 Warroom CE open-core security warroom',
     metaDescription:
-      'Install Flyto2 as an open source AI agent framework with Warroom CE, Docker images, MCP tools, attack surface management workflows, CTEM, and Enterprise bridge contracts.',
+      'Install Flyto2 Warroom CE as a self-hosted open-core security warroom for BYO validation, evidence-backed remediation, CTEM, code, cloud, container, and Enterprise bridge.',
     primaryCta: { label: 'GitHub repository', href: 'https://github.com/flytohub/flyto-warroom' },
     secondaryCta: { label: 'Docker images', href: 'https://hub.docker.com/r/chesterhsu/flyto-warroom' },
     sections: [
       {
-        title: 'Community Edition',
+        title: 'Community Edition product loop',
         body:
-          'CE is meant to be useful on its own: local auth, local database, public contracts, installer scripts, and a Warroom UI that can be inspected and patched for self-hosted CTEM, open source attack surface management, and evidence-backed validation labs.',
-        bullets: ['Self-hosted Docker Compose install with local JWT auth', 'BYO finding intake, attack-path review, evidence, reports, score views, and compliance surfaces', 'Public flyto-core, flyto-indexer, flyto-i18n, flyto-code, and flyto-contracts packages'],
+          'CE is meant to be useful on its own: local auth, local database, public contracts, installer scripts, and a Warroom UI that can be inspected and patched for self-hosted CTEM, attack surface management, and evidence-backed validation labs.',
+        bullets: ['Self-hosted Docker Compose install with local JWT auth and local Postgres', 'BYO finding intake, attack-path review, evidence, reports, score views, and compliance surfaces', 'A deterministic demo seed shows code, container, cloud, external, evidence, and AutoFix without live provider claims'],
       },
       {
         title: 'Enterprise bridge',
@@ -303,7 +303,7 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
         title: 'Contribution loop',
         body:
           'The public repository is a generated CE mirror, not a dead fork. Accepted community changes should flow back into the private source repos and then be re-exported.',
-        bullets: ['Public PRs are reviewed as upstream patch bundles', 'The CE boundary audit blocks private code, secrets, and enterprise-only internals', 'Shared contracts keep CE, Enterprise, docs, and Docker images aligned'],
+        bullets: ['Public PRs are reviewed as upstream patch bundles', 'The CE boundary audit blocks private code, secrets, and enterprise-only internals', 'Shared contracts keep CE, Enterprise, docs, Docker images, and landing copy aligned'],
       },
     ],
     answers: [

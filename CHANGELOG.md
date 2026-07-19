@@ -49,6 +49,10 @@
 
 ### Changed
 
+- Repositioned `/open-source/` around Flyto2 Warroom CE as a self-hosted
+  open-core security warroom and BYO offensive validation platform, with CE
+  product-loop value, local install details, contribution flow, and Enterprise
+  Cloud Bridge boundaries surfaced above the fold.
 - Changed homepage Warroom entry and CTA to lead with installable Warroom CE
   and Enterprise bridge upgrade paths.
 - Replaced the next-intl default-locale middleware loop with deterministic

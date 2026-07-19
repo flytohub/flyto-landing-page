@@ -1,5 +1,18 @@
 # Decisions
 
+## 2026-07-19 - Open-source route leads with Warroom CE
+
+Decision: `/open-source/` should primarily explain Flyto2 Warroom CE as a
+self-hosted open-core security warroom and BYO offensive validation platform.
+The page can still mention Flyto2 Core as the shared automation runtime, but
+the first-screen product value should be the installable CE loop.
+
+Reason: public adoption needs a clear GitLab-style CE story: clone, run, seed a
+workspace, inspect findings, attack paths, evidence, remediation, and reports.
+The Enterprise Cloud Bridge remains the upgrade path for commercial
+intelligence, rating authority, identity, managed runners, and live remediation
+without exposing private implementation.
+
 ## 2026-07-18 - Community route is a public SEO surface
 
 Decision: `/community/` is a first-class indexed landing route for contribution

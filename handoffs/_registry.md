@@ -2,6 +2,7 @@
 
 | Date | Topic | File |
 | --- | --- | --- |
+| 2026-07-19 | Warroom CE open-source positioning | `2026-07-19-warroom-ce-open-source-positioning.md` |
 | 2026-07-18 | SEO discovery surfaces | `2026-07-18-seo-discovery-surfaces.md` |
 | 2026-07-18 | Message drift guard | `2026-07-18-message-drift-guard.md` |
 | 2026-07-18 | Community route | `2026-07-18-community-route.md` |

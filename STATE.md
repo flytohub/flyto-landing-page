@@ -40,6 +40,11 @@ Current state on 2026-07-18:
   airgap, compare, API docs, trust, docs, blog, and changelog now describe
   Flyto2 Warroom CE as the installable self-hosted baseline and Enterprise
   bridge as the gated upgrade path.
+- `/open-source/` now leads with Flyto2 Warroom CE as a self-hosted open-core
+  security warroom and BYO offensive validation platform. The page explains the
+  CE product loop, demo seed, local JWT/Postgres setup, contribution flow, and
+  Enterprise Cloud Bridge without claiming that CE includes private SaaS,
+  rating-authority, commercial intelligence, or live remediation overlays.
 - `/aikido-alternative/` is a canonical public route for teams evaluating
   Aikido-style consolidated security platforms; it deliberately avoids
   unsupported replacement, benchmark, or guaranteed-AutoFix claims.
