@@ -43,13 +43,13 @@
     "@types/node": "26.0.0",
     "@types/react": "19.0.7",
     "@types/react-dom": "19.0.3",
-    "postcss": "8.5.10",
+    "postcss": "8.5.20",
     "tailwindcss": "^4.2.4",
     "typescript": "6.0.3",
     "wrangler": "^4.100.0"
   },
   "overrides": {
     "@swc/helpers": "0.5.23",
-    "postcss": "8.5.10"
+    "postcss": "8.5.20"
   }
 }
