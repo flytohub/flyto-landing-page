@@ -46,7 +46,7 @@
     "postcss": "8.5.10",
     "tailwindcss": "^4.2.4",
     "typescript": "6.0.3",
-    "wrangler": "^4.100.0"
+    "wrangler": "^4.112.0"
   },
   "overrides": {
     "@swc/helpers": "0.5.23",
