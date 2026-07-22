@@ -123,7 +123,7 @@ npm run build:cf     # Cloudflare Worker output in .open-next/
 The site must build without Firebase values. Forum components should degrade
 without blocking public SEO/GEO pages.
 
-## Verification
+## Testing And Verification
 
 Run the closed loop before release changes:
 
@@ -152,7 +152,7 @@ metadata, and discovery surface:
 - `public/llms-full.txt`
 - `public/.well-known/security.txt`
 
-## Layout
+## Architecture
 
 ```
 app/
@@ -229,3 +229,10 @@ docs/reference/
 Keep public route copy, metadata, sitemap entries, crawler policy, and
 AI-readable files in sync. Add or update a handoff under `handoffs/` whenever a
 release changes the public GEO/AEO/SEO contract.
+
+## License And Reuse
+
+This website repository does not currently declare a standalone source or
+content license. Do not assume that site copy, screenshots, trademarks, or
+third-party assets inherit the Apache-2.0 license used by Flyto2 Core. Check the
+license in the owning repository or contact `team@flyto2.com` before reuse.

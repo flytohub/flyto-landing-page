@@ -3,12 +3,17 @@
   "schema_version": 1,
   "repository": "flyto-landing-page",
   "status": "active",
+  "audiences": ["prospective users", "customers", "content editors", "site maintainers"],
   "documentation": {
     "index": "docs/README.md",
     "architecture": "ARCHITECTURE.md",
     "state": "STATE.md",
+    "security": "SECURITY.md",
+    "changelog": "CHANGELOG.md",
+    "feature_reference": "docs/WHITEPAPER.md",
     "whitepaper": "docs/WHITEPAPER.md",
     "source_reference": ["docs/reference/source-*.md"],
+    "module_roots": ["app", "components", "lib", "scripts"],
     "route_reference": "docs/reference/routes.md",
     "seo_reference": "docs/reference/seo-surfaces.md"
   },
