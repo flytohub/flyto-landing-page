@@ -48,7 +48,10 @@ jobs:
         run: python -m pip install "git+https://github.com/flytohub/flyto-indexer.git@main"
 
       - name: Source verify
-        run: flyto-index verify . --full-scan --json
+        run: flyto-index verify . --full-scan --strict --json
+
+      - name: Documentation ownership and source reference
+        run: npm run docs:check
 
       - name: Verify closed loop
         run: npm run verify

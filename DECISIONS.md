@@ -1,5 +1,18 @@
 # Decisions
 
+## 2026-07-22 - Public documentation is generated from tracked source
+
+Decision: use the TypeScript compiler AST to inventory all tracked landing
+declarations and derive route, locale, SEO asset, configuration, automation,
+and whitepaper references. Assign every maintained source area in
+`docs/documentation-manifest.json`, and fail `npm run verify` and CI when the
+generated reference or current architecture claims drift.
+
+Reason: route and SEO audits prove selected public contracts, but they did not
+make every helper, component, type, script, or content source discoverable.
+Source-backed references provide complete traceability without asking
+maintainers to duplicate implementation details by hand.
+
 ## 2026-07-19 - Open-source route leads with Warroom CE
 
 Decision: `/open-source/` should primarily explain Flyto2 Warroom CE as a

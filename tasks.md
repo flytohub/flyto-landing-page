@@ -12,6 +12,11 @@
 - [x] Wire community route into sitemap, llms files, nav, footer, and SEO audits.
 - [x] Move landing message drift guard into this repo and wire it into verify.
 - [x] Add image sitemap and discovery manifest for landing visual assets.
+- [x] Add source-backed route, declaration, SEO, configuration, automation, and
+  whitepaper documentation with a fail-closed drift check.
+- [x] Correct current deployment documentation to Next.js + OpenNext on
+  Cloudflare Workers.
+- [x] Replace stale 411-module and Vue/Astro claims in public whitepapers.
 - [x] Gate landing discovery files in `npm run build`, `npm run build:cf`, and
   `npm run audit:seo`.
 - [ ] Recheck live Cloudflare deployment after the next automatic deploy.

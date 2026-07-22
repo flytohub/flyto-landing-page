@@ -10,3 +10,7 @@ When adding public content:
 - Do not publish internal roadmap promises, customer names, credentials, or
   private tunnel URLs.
 
+`lib/whitepapers.ts` is the public slug registry. Every registered Markdown
+file must have one clear H1, current quantitative claims, and links that reflect
+the supported public product boundary. The generated [content reference](../docs/reference/content.md)
+lists every public whitepaper.

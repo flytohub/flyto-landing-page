@@ -278,12 +278,12 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
     id: 'open-source',
     path: 'open-source',
     eyebrow: 'Open core',
-    title: 'Flyto2 Warroom CE is a self-hosted open-core security warroom.',
+    title: 'Flyto2 Warroom CE is an open source security war room.',
     lede:
-      'Flyto2 Warroom CE is the installable BYO offensive validation platform for teams that want to run a local security war room. Bring your own ASM, SAST, DAST, CSPM, SIEM, dark web, cloud, code, and scanner findings; Flyto2 turns them into verified attack paths, pentest evidence, red-team scenarios, remediation records, scoring, and compliance-ready proof. Flyto2 Core remains the open-source automation runtime underneath the broader Flyto2 product line.',
-    metaTitle: 'Flyto2 Warroom CE open-core security warroom',
+      'Flyto2 Warroom CE is an installable open source security war room for teams that want local BYO offensive validation. Bring your own ASM, SAST, DAST, CSPM, SIEM, dark web, cloud, code, and scanner findings; Flyto2 turns them into verified attack paths, pentest evidence, red-team scenarios, remediation records, scoring, and compliance-ready proof. Flyto2 Core remains the open-source automation runtime underneath the broader Flyto2 product line.',
+    metaTitle: 'Open source security war room | Warroom CE',
     metaDescription:
-      'Install Flyto2 Warroom CE as a self-hosted open-core security warroom for BYO validation, evidence-backed remediation, CTEM, code, cloud, container, and Enterprise bridge.',
+      'Install Flyto2 Warroom CE as an open source security war room for local BYO validation, evidence-backed remediation, CTEM, code, cloud, and container findings.',
     primaryCta: { label: 'GitHub repository', href: 'https://github.com/flytohub/flyto-warroom' },
     secondaryCta: { label: 'Docker images', href: 'https://hub.docker.com/r/chesterhsu/flyto-warroom' },
     sections: [

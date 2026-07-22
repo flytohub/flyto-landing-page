@@ -16,6 +16,8 @@ Use this order:
 6. For post-change verification, run `npm run audit:geo`,
    `npm run typecheck`, `npm run build`, and `npm run verify`; document skipped
    checks in the handoff.
+7. Regenerate `docs/reference/` after changing tracked routes, declarations,
+   scripts, configuration, locales, workflows, or whitepapers.
 
 Never infer or reuse login credentials from repository files or handoffs.
 

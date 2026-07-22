@@ -60,7 +60,7 @@ const focusByRoute = new Map([
   ['dark-web-monitoring', 'dark web monitoring'],
   ['mssp-platform', 'MSSP platform'],
   ['ai-security', 'AI security platform'],
-  ['open-source', 'open source AI agent framework'],
+  ['open-source', 'open source security war room'],
   ['n8n-alternative', 'n8n alternative'],
   ['zapier-alternative', 'Zapier alternative'],
   ['make-alternative', 'Make alternative'],

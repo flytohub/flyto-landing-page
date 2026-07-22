@@ -2,6 +2,15 @@
 
 Current state on 2026-07-22:
 
+- 2026-07-22: Landing documentation is source-backed. A TypeScript AST
+  generator inventories every tracked route module and source declaration,
+  plus locale, SEO/discovery, configuration, npm script, workflow, and
+  whitepaper contracts. `npm run docs:check`, `npm run verify`, and CI reject
+  ownership gaps, generated drift, stale deployment stacks/counts, incorrect
+  Flyto2 branding, and unapproved email aliases.
+- 2026-07-22: Production packaging is documented as Next.js plus the OpenNext
+  Cloudflare Worker adapter. Historical static-hosting claims are no longer
+  part of the current architecture contract.
 - 2026-07-22: The public site now serves a square, self-contained SVG Tiny PS
   Flyto2 brand mark at `/bimi/flyto2.svg` for BIMI DNS publication.
 - 2026-07-18: Landing now publishes generated discovery surfaces for search and

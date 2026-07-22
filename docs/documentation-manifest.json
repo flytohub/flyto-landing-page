@@ -1,0 +1,52 @@
+{
+  "$schema": "https://docs.flyto2.com/schemas/documentation-contract-v1.json",
+  "schema_version": 1,
+  "repository": "flyto-landing-page",
+  "status": "active",
+  "documentation": {
+    "index": "docs/README.md",
+    "architecture": "ARCHITECTURE.md",
+    "state": "STATE.md",
+    "whitepaper": "docs/WHITEPAPER.md",
+    "source_reference": ["docs/reference/source-*.md"],
+    "route_reference": "docs/reference/routes.md",
+    "seo_reference": "docs/reference/seo-surfaces.md"
+  },
+  "source_areas": [
+    {
+      "id": "public-routes",
+      "paths": ["app/**"],
+      "documentation": ["app/README.md", "docs/reference/routes.md", "docs/reference/source-app-*.md"]
+    },
+    {
+      "id": "presentation-components",
+      "paths": ["components/**"],
+      "documentation": ["components/README.md", "docs/reference/source-components-*.md"]
+    },
+    {
+      "id": "public-site-logic",
+      "paths": ["lib/**", "middleware.ts", "types/**"],
+      "documentation": ["lib/README.md", "ARCHITECTURE.md", "docs/reference/source-lib-*.md", "docs/reference/source-runtime-*.md"]
+    },
+    {
+      "id": "content-and-localization",
+      "paths": ["content/**", "messages/**", ".seo/i18n-seo-manifest.json"],
+      "documentation": ["content/README.md", "messages/README.md", "docs/reference/content.md", "docs/reference/seo-surfaces.md"]
+    },
+    {
+      "id": "verification-and-operations",
+      "paths": ["scripts/**", ".github/**", "package.json", "lighthouserc.cjs"],
+      "documentation": ["scripts/README.md", "docs/reference/automation.md", "docs/reference/source-scripts-*.md"]
+    },
+    {
+      "id": "runtime-and-deployment-configuration",
+      "paths": ["next.config.mjs", "open-next.config.ts", "postcss.config.mjs", "wrangler.json", "firestore.indexes.json", "firestore.rules"],
+      "documentation": ["ARCHITECTURE.md", "docs/reference/configuration.md", "docs/reference/source-runtime-*.md"]
+    },
+    {
+      "id": "public-discovery-assets",
+      "paths": ["public/robots.txt", "public/llms.txt", "public/llms-full.txt", "public/image-sitemap.xml", "public/discovery-manifest.json", "public/.well-known/**", "public/bimi/**"],
+      "documentation": ["docs/WHITEPAPER.md", "docs/reference/seo-surfaces.md"]
+    }
+  ]
+}

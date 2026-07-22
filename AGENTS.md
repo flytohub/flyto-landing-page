@@ -33,6 +33,10 @@ Rules:
   language precise.
 - Run `npm run typecheck` and `npm run build` before release changes when
   dependencies are available.
+- Run `npm run docs:reference` after adding or moving a route, component,
+  library declaration, script, locale, configuration variable, workflow, or
+  whitepaper. Commit the generated `docs/reference/` drift.
+- `npm run docs:check` must remain part of `npm run verify` and CI.
 
 ## Flyto2 Project Memory Contract
 

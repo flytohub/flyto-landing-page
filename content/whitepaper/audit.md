@@ -1,23 +1,25 @@
 # Flyto2 Platform -- Whitepaper Audit
 
-> 全平台技術審計。涵蓋 8 個專案、411+ 模組、300+ API endpoints。
+> 全平台技術審計。涵蓋 27 個儲存庫、451 個 registry-backed modules、
+> 84 個 catalog categories、41 個 recipes，以及 665 個 Engine HTTP route registrations。
 
 ---
 
 ## 1. Platform Overview
 
-Flyto2 是一個 **全棧工作流自動化平台**，由 8 個專案組成：
+Flyto2 是一個 **全棧工作流自動化平台**，由 27 個分工儲存庫組成。
+下表列出主要公開執行、產品與開發者介面，不代表完整清單：
 
 | 專案 | 技術 | 定位 |
 |------|------|------|
-| flyto-core | Python (PyPI) | 執行引擎 -- 411+ 模組、4 層架構、AI 自癒 |
+| flyto-core | Python (PyPI) | 執行引擎 -- 451 模組、84 類別、41 食譜、4 層架構 |
 | flyto-cloud | Vue 3 + FastAPI | SaaS 平台 -- 4 服務架構、Provider 模式 |
 | flyto-pro | Python (PyPI) | 智慧 SDK -- 合約引擎、EMS、演化系統 |
-| flyto-indexer | Python (PyPI) | 程式碼智慧 MCP Server -- 5 工具、污點分析 |
+| flyto-indexer | Python (PyPI) | 程式碼智慧 MCP Server -- 20 smart tools、47 compatibility definitions、污點分析 |
 | flyto-vscode | TypeScript | IDE 安全代理 -- Guardian Gate、MCP 整合 |
 | flyto-modules-pro | Python | 進階模組 -- 隱身瀏覽器、驗證碼、企業連接器 |
 | flyto-i18n | JSON | 16 語言、CDN OTA 更新 |
-| flyto-landing-page | Vue 3 / Astro | 行銷官網、SEO 最佳化 |
+| flyto-landing-page | Next.js 15 + OpenNext | 多語公開網站、Cloudflare Worker、SEO/AEO/GEO |
 
 ---
 
@@ -77,7 +79,7 @@ Flyto2 是一個 **全棧工作流自動化平台**，由 8 個專案組成：
 
 ## 3. flyto-core -- 執行引擎
 
-### 3.1 模組系統（411 個模組檔案）
+### 3.1 模組系統（451 個 registry-backed modules）
 
 **4 層架構（ADR-001）：**
 
@@ -418,7 +420,7 @@ Webview chat, Project Navigator, Agent Runs tracker (rollback), Dead Code detect
 
 ---
 
-## 9. Frontend -- Vue 3 SPA
+## 9. Flyto2 Cloud/Desktop Frontend -- Vue 3 SPA
 
 ### 技術棧
 Vue 3 + Vite + Pinia + VueFlow + Monaco Editor + UnoCSS + Chart.js + Lucide Icons
@@ -544,7 +546,7 @@ builderStore (facade: metadata + uiState + workflow + execution), collaborationS
 
 ---
 
-## 14. Pre-built Recipes -- 38 個預建食譜
+## 14. Pre-built Recipes -- 41 個預建食譜
 
 即開即用的工作流模板：
 
@@ -585,7 +587,7 @@ builderStore (facade: metadata + uiState + workflow + execution), collaborationS
 | Layer 2 | `get_category_detail()` | 單一類別詳情 |
 | Layer 3 | `get_module_detail()` | 個別模組完整規格 |
 
-設計給 LLM 漸進式探索，避免一次載入 411 個模組。
+設計給 LLM 漸進式探索，避免一次載入 451 個模組。
 公開 catalog 自動清洗敏感資訊（credentials, secrets）。
 
 ---
@@ -704,10 +706,10 @@ git tag v0.x.x -> build-release.yml -> macOS/Windows/Linux -> GitHub Release (fl
 
 | 指標 | 數字 |
 |------|------|
-| 模組檔案 | 411 |
+| Registry-backed modules | 451 |
 | 原子類別 | 65 |
 | 瀏覽器模組 | 50+ |
-| API Endpoints | 300+ |
+| Engine HTTP route registrations | 665 |
 | Pinia Stores | 13+ |
 | 支援語言 | 16 |
 | Enterprise 子系統 | 7 (RPA, IDP, Mining, StateMachine, AI Native, Orchestrator, Queue) |

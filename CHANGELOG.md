@@ -4,6 +4,10 @@
 
 ### Added
 
+- Added a technical whitepaper, source ownership manifest, and generated route,
+  declaration, configuration, automation, locale, SEO, and content references.
+- Added `npm run docs:reference` and `npm run docs:check`; verification and CI
+  now reject generated documentation drift and incomplete source ownership.
 - Added a BIMI-compatible SVG Tiny PS brand asset at
   `public/bimi/flyto2.svg` for the domain's self-asserted BIMI record.
 - Added build-generated landing discovery files: `public/image-sitemap.xml` and
@@ -51,6 +55,10 @@
 
 ### Changed
 
+- Corrected current deployment documentation from legacy static hosting to the
+  Next.js OpenNext Cloudflare Worker runtime.
+- Refreshed public ecosystem whitepapers to remove stale 411-module and
+  Vue/Astro landing claims.
 - Repositioned `/open-source/` around Flyto2 Warroom CE as a self-hosted
   open-core security warroom and BYO offensive validation platform, with CE
   product-loop value, local install details, contribution flow, and Enterprise

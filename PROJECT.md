@@ -20,3 +20,8 @@ Primary audiences:
 
 The site must not describe Flyto2 as only a security product. Flyto2 Cloud /
 Apps / Automation is a first-class line.
+
+Release completion requires route, metadata, sitemap, locale, discovery, and
+AI-readable surfaces to agree; every maintained route, component, helper,
+type, script, configuration input, workflow, and whitepaper must also remain
+traceable through `docs/documentation-manifest.json` and `docs/reference/`.

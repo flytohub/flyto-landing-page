@@ -47,8 +47,8 @@ locale. Before pushing public copy, run:
 npm run verify
 ```
 
-That command runs the route contract audit, TypeScript check, production build,
-and SEO surface audit.
+That command runs documentation drift, route and locale contracts, TypeScript,
+the production build, built-page SEO scoring, and the SEO management gate.
 
 ## What this repo owns
 
@@ -64,18 +64,18 @@ and SEO surface audit.
 
 ## Stack
 
-- Next.js 15 (App Router) with `output: 'export'` for static generation
+- Next.js 15 App Router packaged for Cloudflare Workers with OpenNext
 - next-intl for locale routing — 16 locales (`en, zh, cn, ja, ko, de, es, fr, it, pt, hi, id, pl, th, tr, vi`)
 - Tailwind v4 + Motion + lucide-react
 - Firebase Web SDK (client-only) for the Q&A forum
-- Cloudflare proxy in front of GitHub Pages (HTTPS, caching, edge redirects)
+- Cloudflare Worker plus static asset binding (HTTPS, caching, edge redirects)
 - Deployed by the Cloudflare dashboard Git integration on pushes to `main`.
   GitHub Actions intentionally does not run `wrangler deploy`, so public
   repository secrets are not required for Cloudflare deployment.
 
 ## Installation details
 
-Use Node.js 20 and npm. Install dependencies from the lockfile:
+Use Node.js 22 and npm. Install dependencies from the lockfile:
 
 ```bash
 npm ci
@@ -104,7 +104,8 @@ client-only hydration.
 npm install
 npm run dev          # http://localhost:3000
 npm run typecheck
-npm run build        # static output in out/
+npm run build        # Next.js production output in .next/
+npm run build:cf     # Cloudflare Worker output in .open-next/
 ```
 
 ## Configuration
@@ -136,13 +137,13 @@ npm run verify
 
 `npm run audit:geo` checks required public GEO routes, `robots.txt`,
 `llms.txt`, `llms-full.txt`, sitemap registration, and AI crawler policy.
-CI also runs `flyto-index verify . --full-scan --json` to catch source-level
+CI also runs `flyto-index verify . --full-scan --strict --json` to catch source-level
 secret, taint, impact, and instruction hygiene regressions.
 
 ## API Surface
 
-This repo does not expose backend API routes. Its public contract is the static
-route and metadata surface:
+This repo does not expose backend API routes. Its public contract is the page,
+metadata, and discovery surface:
 
 - localized routes under `app/[locale]`
 - `app/sitemap.ts`
@@ -189,6 +190,10 @@ messages/
   it, pt, hi, id, pl, th, tr, vi
 public/
   CNAME, .well-known/, robots.txt, llms.txt, favicon.ico, flags/, assets/
+docs/reference/
+  README.md                        # generated source and public-contract index
+  routes.md                        # every App Router page module
+  source-*.md                      # every tracked declaration and source line
 ```
 
 ## SEO / AEO / GEO infrastructure
