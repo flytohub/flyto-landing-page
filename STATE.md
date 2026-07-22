@@ -1,7 +1,9 @@
 # State
 
-Current state on 2026-07-18:
+Current state on 2026-07-22:
 
+- 2026-07-22: The public site now serves a square, self-contained SVG Tiny PS
+  Flyto2 brand mark at `/bimi/flyto2.svg` for BIMI DNS publication.
 - 2026-07-18: Landing now publishes generated discovery surfaces for search and
   AI retrieval: `sitemap.xml`, `image-sitemap.xml`, `llms.txt`,
   `llms-full.txt`, `discovery-manifest.json`, social preview images, and

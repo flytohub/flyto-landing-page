@@ -4,6 +4,8 @@
 
 ### Added
 
+- Added a BIMI-compatible SVG Tiny PS brand asset at
+  `public/bimi/flyto2.svg` for the domain's self-asserted BIMI record.
 - Added build-generated landing discovery files: `public/image-sitemap.xml` and
   `public/discovery-manifest.json`, covering committed product screenshots and
   visual assets.
