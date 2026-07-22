@@ -2,6 +2,9 @@
 
 Current state on 2026-07-22:
 
+- 2026-07-22: The current Next.js/OpenNext/Wrangler/Firebase dependency graph
+  resolves patched `sharp`, `protobufjs`, and `brace-expansion` versions;
+  `npm audit` reports zero known vulnerabilities.
 - 2026-07-22: Landing documentation is source-backed. A TypeScript AST
   generator inventories every tracked route module and source declaration,
   plus locale, SEO/discovery, configuration, npm script, workflow, and

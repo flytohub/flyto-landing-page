@@ -69,9 +69,10 @@
   English canonical rewrite and explicit non-English locale handling.
 - Replaced the earlier single-locale SEO gap with complete locale-aware
   canonical, sitemap, and hreflang coverage.
-- Updated the Wrangler/Miniflare dependency chain and pinned PostCSS via npm
+- Updated Next.js, OpenNext, Wrangler, and Firebase, then pinned the remediated
+  `sharp`, `protobufjs`, and version-specific `brace-expansion` releases via npm
   overrides so `npm audit` reports zero known vulnerabilities without
-  downgrading Next.js.
+  downgrading the application runtime.
 - Added explicit `Claude-SearchBot` and `Applebot` policies to `robots.txt` and
   linked `robots.txt`, `sitemap.xml`, and `llms.txt` from the AI-readable index.
 - Fixed the `next-intl` middleware matcher so `/api-docs/` is not excluded as

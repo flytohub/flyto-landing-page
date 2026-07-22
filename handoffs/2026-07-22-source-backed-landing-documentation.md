@@ -40,6 +40,8 @@ unrelated AI agent framework intent.
 - `npm run docs:reference`
 - `npm run docs:check`
 - `npm run verify`
+- `npm audit` (zero known vulnerabilities)
+- `npm run build:cf`
 - `flyto-index verify . --full-scan --strict --json`
 - Chromium visual checks at 390x844 and 1440x900 for `/cloud/`
 - Chromium metadata and overflow check at 390x844 for `/open-source/`
