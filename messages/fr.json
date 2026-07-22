@@ -65,7 +65,7 @@
         "tagline": "Automatisation de navigateur sans code. Enregistrez une fois, rejouez à l'infini.",
         "point1": "Enregistrez n'importe quel flux de navigateur sans écrire de sélecteurs",
         "point2": "Mettez en pause, inspectez, modifiez les valeurs en cours d'exécution, reprenez",
-        "point3": "451 modules prêts à l'emploi — CSV, Stripe, Notion, Slack, OpenAI",
+        "point3": "452 modules prêts à l'emploi — CSV, Stripe, Notion, Slack, OpenAI",
         "cta": "Voir Cloud"
       },
       "warroom": {
@@ -140,7 +140,7 @@
         },
         {
           "icon": "Boxes",
-          "title": "451 modules",
+          "title": "452 modules",
           "body": "CSV, Excel, Stripe, Notion, Postgres, Slack, OpenAI — précâblés pour que vous les assembliez sans écrire de plomberie API."
         },
         {
@@ -189,14 +189,14 @@
     },
     "integrations": {
       "label": "INTÉGRATIONS",
-      "title": "451 modules d'emblée.",
+      "title": "452 modules d'emblée.",
       "subtitle": "La plomberie est déjà câblée. Glissez, déposez, configurez — n'écrivez plus jamais un script « copier cette ligne de Sheet A vers l'API B ».",
       "andMore": "+ 230 DE PLUS · CRÉEZ LE VÔTRE EN PYTHON OU JS"
     },
     "stats": {
       "items": [
         {
-          "value": "451",
+          "value": "452",
           "label": "MODULES",
           "body": "Nœuds préconstruits pour CSV, Excel, Stripe, Notion, Slack, IA, SQL — ce que vous assembleriez sinon vous-même."
         },
@@ -256,7 +256,7 @@
   },
   "cloud": {
     "metaTitle": "Cloud — Automatisation de navigateur sans code",
-    "metaDescription": "Enregistrez une fois, rejouez à l'infini. Automatisation de navigateur qui fonctionne hors ligne. 451 modules, 16 langues, moteur sous licence MIT.",
+    "metaDescription": "Enregistrez une fois, rejouez à l'infini. Automatisation de navigateur qui fonctionne hors ligne. 452 modules, 16 langues, moteur sous licence MIT.",
     "hero": {
       "eyebrow": "01 / CLOUD",
       "status": "DISPONIBLE",
@@ -264,7 +264,7 @@
       "titleAccent": "en pilotage automatique.",
       "lede": "Ouvrez l'enregistreur, effectuez la tâche une fois, appuyez sur Stop. Flyto2 la transforme en workflow structuré que vous pouvez modifier, versionner, planifier et partager — sans écrire une seule ligne de code.",
       "ctaPrimary": "Télécharger l'application de bureau",
-      "ctaSecondary": "Parcourir les 451 modules"
+      "ctaSecondary": "Parcourir les 452 modules"
     },
     "how": {
       "label": "COMMENT ÇA MARCHE",
@@ -311,7 +311,7 @@
         },
         {
           "icon": "Boxes",
-          "title": "451 modules",
+          "title": "452 modules",
           "body": "CSV, Excel, Stripe, Notion, Sheets, Postgres, Slack, OpenAI — précâblés pour que vous les assembliez sans écrire de plomberie API."
         },
         {
@@ -580,7 +580,7 @@
         "tagline": "Pour les personnes qui découvrent l'automatisation.",
         "feature1": "1 000 points de calcul / mois",
         "feature2": "Jusqu'à 5 workflows sauvegardés",
-        "feature3": "Tous les 451 modules",
+        "feature3": "Tous les 452 modules",
         "feature4": "Support communautaire",
         "cta": "Télécharger gratuitement"
       },
@@ -1627,7 +1627,7 @@
       "substrate": {
         "label": "ONE SUBSTRATE, TWO PRODUCT LINES",
         "title": "The same engine that runs your automation runs your war-room.",
-        "body": "Flyto2 is one brand with two product lines on the same execution substrate. The automation engine — flyto-core, 451 deterministic modules, MCP-native over stdio and streamable-http, with evidence capture, replay, YAML recipes and human-in-the-loop — is the established Zapier/n8n/Make alternative. The war-room rides the same deterministic modules and recipes to execute scans, collect evidence and drive red-team. You never have to choose between them.",
+        "body": "Flyto2 is one brand with two product lines on the same execution substrate. The automation engine — flyto-core, 452 deterministic modules, MCP-native over stdio and streamable-http, with evidence capture, replay, YAML recipes and human-in-the-loop — is the established Zapier/n8n/Make alternative. The war-room rides the same deterministic modules and recipes to execute scans, collect evidence and drive red-team. You never have to choose between them.",
         "automationCta": "Explore the automation engine"
       },
       "cta": {

@@ -4,15 +4,15 @@
 
 This reference is generated from tracked source with the TypeScript compiler AST. It maps route modules, components, functions, methods, types, constants, scripts, configuration, content, and discovery assets back to maintained files.
 
-Inventory: **798 declarations**, **128 source files**, **48 page modules**, **16 locales**, **488 baseline message keys**, **16 environment variables**, **20 npm scripts**, **4 workflows**, and **7 public whitepapers**.
+Inventory: **793 declarations**, **128 source files**, **48 page modules**, **16 locales**, **488 baseline message keys**, **16 environment variables**, **20 npm scripts**, **4 workflows**, and **7 public whitepapers**.
 
-Source fingerprint: `9431abd9ba875140176882699f6cad812a560aaa891c2882e8f4de83edde9c4a`.
+Source fingerprint: `a840172fd8492268ae5039ab0b26fced91289216626886c3d0ab72005c7278b9`.
 
 ## Source Areas
 
 | Area | Declarations | Reference |
 |---|---:|---|
-| App | 219 | [source-app-01.md](source-app-01.md) |
+| App | 214 | [source-app-01.md](source-app-01.md) |
 | Components | 157 | [source-components-01.md](source-components-01.md) |
 | Lib | 114 | [source-lib-01.md](source-lib-01.md) |
 | Scripts | 260 | [source-scripts-01.md](source-scripts-01.md) |

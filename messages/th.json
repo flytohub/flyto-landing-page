@@ -65,7 +65,7 @@
         "tagline": "อัตโนมัติเบราว์เซอร์แบบ no-code บันทึกครั้งเดียว เล่นซ้ำได้ตลอดไป",
         "point1": "บันทึกขั้นตอนเบราว์เซอร์ใดก็ได้โดยไม่ต้องเขียน selector",
         "point2": "หยุดชั่วคราว ตรวจสอบ แก้ไขค่ากลางรัน แล้วดำเนินต่อ",
-        "point3": "โมดูลพร้อมใช้งาน451 รายการ — CSV, Stripe, Notion, Slack, OpenAI",
+        "point3": "โมดูลพร้อมใช้งาน452 รายการ — CSV, Stripe, Notion, Slack, OpenAI",
         "cta": "ไปที่ Cloud"
       },
       "warroom": {
@@ -140,7 +140,7 @@
         },
         {
           "icon": "Boxes",
-          "title": "โมดูล451 รายการ",
+          "title": "โมดูล452 รายการ",
           "body": "CSV, Excel, Stripe, Notion, Postgres, Slack, OpenAI — พร้อมต่อกันได้ทันทีโดยไม่ต้องเขียน API plumbing"
         },
         {
@@ -189,14 +189,14 @@
     },
     "integrations": {
       "label": "การเชื่อมต่อ",
-      "title": "โมดูล451 รายการพร้อมใช้ทันที",
+      "title": "โมดูล452 รายการพร้อมใช้ทันที",
       "subtitle": "การเชื่อมต่อพร้อมแล้ว ลาก วาง ตั้งค่า — ไม่ต้องเขียนสคริปต์ \"คัดลอกแถวนี้จาก Sheet A ไปยัง API B\" อีกต่อไป",
       "andMore": "+ 230 รายการเพิ่มเติม · สร้างเองใน PYTHON หรือ JS"
     },
     "stats": {
       "items": [
         {
-          "value": "451",
+          "value": "452",
           "label": "โมดูล",
           "body": "โหนดสำเร็จรูปสำหรับ CSV, Excel, Stripe, Notion, Slack, AI, SQL — สิ่งที่คุณต้องต่อกันเองหากไม่มีเรา"
         },
@@ -256,7 +256,7 @@
   },
   "cloud": {
     "metaTitle": "Cloud — อัตโนมัติเบราว์เซอร์แบบ no-code",
-    "metaDescription": "บันทึกครั้งเดียว เล่นซ้ำได้ตลอดไป อัตโนมัติเบราว์เซอร์ที่รันแบบออฟไลน์ โมดูล451 รายการ 16 ภาษา เอนจิน MIT",
+    "metaDescription": "บันทึกครั้งเดียว เล่นซ้ำได้ตลอดไป อัตโนมัติเบราว์เซอร์ที่รันแบบออฟไลน์ โมดูล452 รายการ 16 ภาษา เอนจิน MIT",
     "hero": {
       "eyebrow": "01 / CLOUD",
       "status": "พร้อมใช้งาน",
@@ -264,7 +264,7 @@
       "titleAccent": "บนระบบอัตโนมัติ",
       "lede": "เปิดตัวบันทึก ทำงานหนึ่งครั้ง กด stop Flyto2 เปลี่ยนมันเป็นเวิร์กโฟลว์มีโครงสร้างที่คุณแก้ไข ติดเวอร์ชัน ตั้งตาราง และแชร์ได้ — โดยไม่ต้องเขียนโค้ดสักบรรทัด",
       "ctaPrimary": "ดาวน์โหลดแอปเดสก์ท็อป",
-      "ctaSecondary": "เรียกดูโมดูล451 รายการ"
+      "ctaSecondary": "เรียกดูโมดูล452 รายการ"
     },
     "how": {
       "label": "วิธีการทำงาน",
@@ -311,7 +311,7 @@
         },
         {
           "icon": "Boxes",
-          "title": "โมดูล451 รายการ",
+          "title": "โมดูล452 รายการ",
           "body": "CSV, Excel, Stripe, Notion, Sheets, Postgres, Slack, OpenAI — เชื่อมต่อพร้อมแล้วให้คุณประกอบแทนที่จะเขียน API plumbing"
         },
         {
@@ -580,7 +580,7 @@
         "tagline": "สำหรับบุคคลที่กำลังสำรวจระบบอัตโนมัติ",
         "feature1": "1,000 compute point / เดือน",
         "feature2": "บันทึกเวิร์กโฟลว์ได้สูงสุด 5 รายการ",
-        "feature3": "โมดูลครบทั้ง 451 รายการ",
+        "feature3": "โมดูลครบทั้ง 452 รายการ",
         "feature4": "การสนับสนุนจากชุมชน",
         "cta": "ดาวน์โหลดฟรี"
       },
@@ -1627,7 +1627,7 @@
       "substrate": {
         "label": "ONE SUBSTRATE, TWO PRODUCT LINES",
         "title": "The same engine that runs your automation runs your war-room.",
-        "body": "Flyto2 is one brand with two product lines on the same execution substrate. The automation engine — flyto-core, 451 deterministic modules, MCP-native over stdio and streamable-http, with evidence capture, replay, YAML recipes and human-in-the-loop — is the established Zapier/n8n/Make alternative. The war-room rides the same deterministic modules and recipes to execute scans, collect evidence and drive red-team. You never have to choose between them.",
+        "body": "Flyto2 is one brand with two product lines on the same execution substrate. The automation engine — flyto-core, 452 deterministic modules, MCP-native over stdio and streamable-http, with evidence capture, replay, YAML recipes and human-in-the-loop — is the established Zapier/n8n/Make alternative. The war-room rides the same deterministic modules and recipes to execute scans, collect evidence and drive red-team. You never have to choose between them.",
         "automationCta": "Explore the automation engine"
       },
       "cta": {

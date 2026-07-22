@@ -413,7 +413,7 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
         title: 'When Flyto2 fits better',
         body:
           'Use Flyto2 when the work is not just moving records between APIs. It can open pages, click, type, capture screenshots, preserve run evidence, and expose deterministic tools to AI agents through MCP.',
-        bullets: ['No-code browser automation and replay', '451 registry-backed modules across 84 catalog categories', 'MCP server automation for agent workflows'],
+        bullets: ['No-code browser automation and replay', '452 registry-backed modules across 84 catalog categories', 'MCP server automation for agent workflows'],
       },
       {
         title: 'Workflow evidence',

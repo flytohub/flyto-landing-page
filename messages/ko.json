@@ -65,7 +65,7 @@
         "tagline": "노코드 브라우저 자동화. 한 번 녹화하면 영원히 재생.",
         "point1": "셀렉터 작성 없이 어떤 브라우저 플로우든 녹화",
         "point2": "실행 중 일시정지, 검사, 값 편집, 재개",
-        "point3": "451개 연결된 모듈 — CSV, Stripe, Notion, Slack, OpenAI",
+        "point3": "452개 연결된 모듈 — CSV, Stripe, Notion, Slack, OpenAI",
         "cta": "Cloud 보기"
       },
       "warroom": {
@@ -140,7 +140,7 @@
         },
         {
           "icon": "Boxes",
-          "title": "451개 모듈",
+          "title": "452개 모듈",
           "body": "CSV, Excel, Stripe, Notion, Postgres, Slack, OpenAI — API 배선을 직접 작성하는 대신 바로 연결해 사용하세요."
         },
         {
@@ -189,14 +189,14 @@
     },
     "integrations": {
       "label": "통합",
-      "title": "기본 451개 모듈.",
+      "title": "기본 452개 모듈.",
       "subtitle": "배선은 이미 완료되어 있습니다. 드래그, 드롭, 설정 — \"Sheet A의 이 행을 API B로 복사\"라는 스크립트를 다시는 작성하지 마세요.",
       "andMore": "+ 230개 더 · Python 또는 JS로 직접 만들기"
     },
     "stats": {
       "items": [
         {
-          "value": "451",
+          "value": "452",
           "label": "모듈",
           "body": "CSV, Excel, Stripe, Notion, Slack, AI, SQL용 사전 빌드 노드 — 직접 조합해야 했던 것들."
         },
@@ -256,7 +256,7 @@
   },
   "cloud": {
     "metaTitle": "Cloud — 노코드 브라우저 자동화",
-    "metaDescription": "한 번 녹화하면 영원히 재생. 오프라인에서 실행되는 브라우저 자동화. 451개 모듈, 16개 언어, MIT 라이선스 엔진.",
+    "metaDescription": "한 번 녹화하면 영원히 재생. 오프라인에서 실행되는 브라우저 자동화. 452개 모듈, 16개 언어, MIT 라이선스 엔진.",
     "hero": {
       "eyebrow": "01 / CLOUD",
       "status": "출시 중",
@@ -264,7 +264,7 @@
       "titleAccent": "자동 조종.",
       "lede": "레코더를 열고, 작업을 한 번 수행하고, 중지를 누르세요. Flyto2가 이를 편집, 버전 관리, 스케줄, 공유할 수 있는 구조화된 워크플로로 변환합니다 — 코드 한 줄 없이.",
       "ctaPrimary": "데스크톱 앱 다운로드",
-      "ctaSecondary": "451개 모듈 둘러보기"
+      "ctaSecondary": "452개 모듈 둘러보기"
     },
     "how": {
       "label": "작동 방식",
@@ -311,7 +311,7 @@
         },
         {
           "icon": "Boxes",
-          "title": "451개 모듈",
+          "title": "452개 모듈",
           "body": "CSV, Excel, Stripe, Notion, Sheets, Postgres, Slack, OpenAI — API 배선을 작성하는 대신 바로 연결해 사용하세요."
         },
         {
@@ -580,7 +580,7 @@
         "tagline": "자동화를 탐색하는 개인용.",
         "feature1": "월 1,000 컴퓨팅 포인트",
         "feature2": "최대 5개 저장된 워크플로",
-        "feature3": "전체 451개 모듈",
+        "feature3": "전체 452개 모듈",
         "feature4": "커뮤니티 지원",
         "cta": "무료 다운로드"
       },
@@ -1627,7 +1627,7 @@
       "substrate": {
         "label": "ONE SUBSTRATE, TWO PRODUCT LINES",
         "title": "The same engine that runs your automation runs your war-room.",
-        "body": "Flyto2 is one brand with two product lines on the same execution substrate. The automation engine — flyto-core, 451 deterministic modules, MCP-native over stdio and streamable-http, with evidence capture, replay, YAML recipes and human-in-the-loop — is the established Zapier/n8n/Make alternative. The war-room rides the same deterministic modules and recipes to execute scans, collect evidence and drive red-team. You never have to choose between them.",
+        "body": "Flyto2 is one brand with two product lines on the same execution substrate. The automation engine — flyto-core, 452 deterministic modules, MCP-native over stdio and streamable-http, with evidence capture, replay, YAML recipes and human-in-the-loop — is the established Zapier/n8n/Make alternative. The war-room rides the same deterministic modules and recipes to execute scans, collect evidence and drive red-team. You never have to choose between them.",
         "automationCta": "Explore the automation engine"
       },
       "cta": {

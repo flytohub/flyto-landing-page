@@ -25,7 +25,7 @@ The exact inventory and source fingerprint are in `docs/reference/README.md`.
 ## Claim And Search Alignment
 
 The public audit and supplement whitepapers now use source-backed Flyto2 facts:
-451 Core modules in 84 categories, 41 Core recipes, 665 Engine route
+452 Core modules in 84 categories, 41 Core recipes, 665 Engine route
 registrations, and 20 Indexer smart tools plus 47 compatibility tools. The
 landing deployment description now matches the OpenNext Cloudflare Worker
 configuration rather than the retired static-hosting model.

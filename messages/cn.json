@@ -65,7 +65,7 @@
         "tagline": "无代码浏览器自动化。一次录制，永久回放。",
         "point1": "无需编写选择器，录制任意浏览器操作流",
         "point2": "运行中可暂停、检查、修改值后继续",
-        "point3": "451 预建模块 — CSV、Stripe、Notion、Slack、OpenAI",
+        "point3": "452 预建模块 — CSV、Stripe、Notion、Slack、OpenAI",
         "cta": "前往 Cloud"
       },
       "warroom": {
@@ -140,7 +140,7 @@
         },
         {
           "icon": "Boxes",
-          "title": "451 模块",
+          "title": "452 模块",
           "body": "CSV、Excel、Stripe、Notion、Postgres、Slack、OpenAI — 预先接好线，让你直接拼接而不是手写 API。"
         },
         {
@@ -189,14 +189,14 @@
     },
     "integrations": {
       "label": "集成",
-      "title": "开箱即用 451 模块。",
+      "title": "开箱即用 452 模块。",
       "subtitle": "管道已经接好了。拖拽、放置、配置 — 再也不用写「把这行从 Sheet A 复制到 API B」的脚本。",
       "andMore": "+ 230 更多 · 用 PYTHON 或 JS 构建你自己的"
     },
     "stats": {
       "items": [
         {
-          "value": "451",
+          "value": "452",
           "label": "模块",
           "body": "预建节点，涵盖 CSV、Excel、Stripe、Notion、Slack、AI、SQL — 你原本需要自己拼接的那些。"
         },
@@ -256,7 +256,7 @@
   },
   "cloud": {
     "metaTitle": "Cloud — 无代码浏览器自动化",
-    "metaDescription": "一次录制，永久回放。离线运行的浏览器自动化。451 模块，16 种语言，MIT 许可证引擎。",
+    "metaDescription": "一次录制，永久回放。离线运行的浏览器自动化。452 模块，16 种语言，MIT 许可证引擎。",
     "hero": {
       "eyebrow": "01 / CLOUD",
       "status": "已上线",
@@ -264,7 +264,7 @@
       "titleAccent": "全自动驾驶。",
       "lede": "打开录制器，做一次任务，停止。Flyto2 将其转化为可编辑、可版本化、可调度和可共享的结构化工作流 — 无需写一行代码。",
       "ctaPrimary": "下载桌面应用",
-      "ctaSecondary": "浏览 451 模块"
+      "ctaSecondary": "浏览 452 模块"
     },
     "how": {
       "label": "工作原理",
@@ -311,7 +311,7 @@
         },
         {
           "icon": "Boxes",
-          "title": "451 模块",
+          "title": "452 模块",
           "body": "CSV、Excel、Stripe、Notion、Sheets、Postgres、Slack、OpenAI — 预先接好线，让你直接拼接而不是手写 API。"
         },
         {
@@ -580,7 +580,7 @@
         "tagline": "适合个人探索自动化。",
         "feature1": "每月 1,000 计算积分",
         "feature2": "最多 5 个已保存工作流",
-        "feature3": "所有 451 模块",
+        "feature3": "所有 452 模块",
         "feature4": "社区支持",
         "cta": "免费下载"
       },
@@ -1627,7 +1627,7 @@
       "substrate": {
         "label": "ONE SUBSTRATE, TWO PRODUCT LINES",
         "title": "The same engine that runs your automation runs your war-room.",
-        "body": "Flyto2 is one brand with two product lines on the same execution substrate. The automation engine — flyto-core, 451 deterministic modules, MCP-native over stdio and streamable-http, with evidence capture, replay, YAML recipes and human-in-the-loop — is the established Zapier/n8n/Make alternative. The war-room rides the same deterministic modules and recipes to execute scans, collect evidence and drive red-team. You never have to choose between them.",
+        "body": "Flyto2 is one brand with two product lines on the same execution substrate. The automation engine — flyto-core, 452 deterministic modules, MCP-native over stdio and streamable-http, with evidence capture, replay, YAML recipes and human-in-the-loop — is the established Zapier/n8n/Make alternative. The war-room rides the same deterministic modules and recipes to execute scans, collect evidence and drive red-team. You never have to choose between them.",
         "automationCta": "Explore the automation engine"
       },
       "cta": {

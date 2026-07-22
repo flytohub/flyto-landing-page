@@ -65,7 +65,7 @@
         "tagline": "Automatyzacja przeglądarki bez kodu. Nagraj raz, odtwarzaj zawsze.",
         "point1": "Nagraj dowolny przepływ w przeglądarce bez pisania selektorów",
         "point2": "Wstrzymaj, sprawdź, edytuj wartości w trakcie — wznów",
-        "point3": "451 gotowych modułów — CSV, Stripe, Notion, Slack, OpenAI",
+        "point3": "452 gotowych modułów — CSV, Stripe, Notion, Slack, OpenAI",
         "cta": "Przejdź do Cloud"
       },
       "warroom": {
@@ -140,7 +140,7 @@
         },
         {
           "icon": "Boxes",
-          "title": "451 modułów",
+          "title": "452 modułów",
           "body": "CSV, Excel, Stripe, Notion, Postgres, Slack, OpenAI — gotowe do podłączenia, żebyś składał je razem zamiast pisać integracje API."
         },
         {
@@ -189,14 +189,14 @@
     },
     "integrations": {
       "label": "INTEGRACJE",
-      "title": "451 modułów od razu.",
+      "title": "452 modułów od razu.",
       "subtitle": "Instalacja już jest gotowa. Przeciągnij, upuść, skonfiguruj — nigdy więcej nie pisz skryptu „kopiuj ten wiersz z Arkusza A do API B”.",
       "andMore": "+ 230 WIĘCEJ · ZBUDUJ WŁASNY W PYTHONIE LUB JS"
     },
     "stats": {
       "items": [
         {
-          "value": "451",
+          "value": "452",
           "label": "MODUŁÓW",
           "body": "Gotowe węzły do CSV, Excel, Stripe, Notion, Slack, AI, SQL — rzeczy, które inaczej sam byś sklejał."
         },
@@ -256,7 +256,7 @@
   },
   "cloud": {
     "metaTitle": "Cloud — Automatyzacja przeglądarki bez kodu",
-    "metaDescription": "Nagraj raz, odtwarzaj zawsze. Automatyzacja przeglądarki działająca offline. 451 modułów, 16 języków, silnik na licencji MIT.",
+    "metaDescription": "Nagraj raz, odtwarzaj zawsze. Automatyzacja przeglądarki działająca offline. 452 modułów, 16 języków, silnik na licencji MIT.",
     "hero": {
       "eyebrow": "01 / CLOUD",
       "status": "DOSTĘPNY",
@@ -264,7 +264,7 @@
       "titleAccent": "na autopilocie.",
       "lede": "Otwórz rejestrator, wykonaj zadanie raz, naciśnij stop. Flyto2 zamienia to w ustrukturyzowany przepływ, który możesz edytować, wersjonować, harmonogramować i udostępniać — bez pisania ani jednej linii kodu.",
       "ctaPrimary": "Pobierz aplikację desktopową",
-      "ctaSecondary": "Przeglądaj 451 modułów"
+      "ctaSecondary": "Przeglądaj 452 modułów"
     },
     "how": {
       "label": "JAK TO DZIAŁA",
@@ -311,7 +311,7 @@
         },
         {
           "icon": "Boxes",
-          "title": "451 modułów",
+          "title": "452 modułów",
           "body": "CSV, Excel, Stripe, Notion, Sheets, Postgres, Slack, OpenAI — podłączone tak, żebyś składał je razem zamiast pisać integracje API."
         },
         {
@@ -580,7 +580,7 @@
         "tagline": "Dla osób odkrywających automatyzację.",
         "feature1": "1 000 punktów obliczeniowych / miesiąc",
         "feature2": "Do 5 zapisanych przepływów",
-        "feature3": "Wszystkie 451 modułów",
+        "feature3": "Wszystkie 452 modułów",
         "feature4": "Wsparcie społeczności",
         "cta": "Pobierz za darmo"
       },
@@ -1627,7 +1627,7 @@
       "substrate": {
         "label": "ONE SUBSTRATE, TWO PRODUCT LINES",
         "title": "The same engine that runs your automation runs your war-room.",
-        "body": "Flyto2 is one brand with two product lines on the same execution substrate. The automation engine — flyto-core, 451 deterministic modules, MCP-native over stdio and streamable-http, with evidence capture, replay, YAML recipes and human-in-the-loop — is the established Zapier/n8n/Make alternative. The war-room rides the same deterministic modules and recipes to execute scans, collect evidence and drive red-team. You never have to choose between them.",
+        "body": "Flyto2 is one brand with two product lines on the same execution substrate. The automation engine — flyto-core, 452 deterministic modules, MCP-native over stdio and streamable-http, with evidence capture, replay, YAML recipes and human-in-the-loop — is the established Zapier/n8n/Make alternative. The war-room rides the same deterministic modules and recipes to execute scans, collect evidence and drive red-team. You never have to choose between them.",
         "automationCta": "Explore the automation engine"
       },
       "cta": {

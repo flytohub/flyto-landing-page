@@ -25,7 +25,7 @@ const ENTRIES: Omit<WhitepaperMeta, 'readingMinutes'>[] = [
     slug: 'supplement',
     title: 'Audit Supplement',
     blurb:
-      'Coverage the main audit left out: flyto-core with 451 registry-backed modules, 84 catalog categories, 41 built-in recipes, MCP transport, the expression engine, plugin SDK, and the bits the headline doc skipped.',
+      'Coverage the main audit left out: flyto-core with 452 registry-backed modules, 84 catalog categories, 41 built-in recipes, MCP transport, the expression engine, plugin SDK, and the bits the headline doc skipped.',
   },
   {
     slug: 'code',

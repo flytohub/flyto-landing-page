@@ -65,7 +65,7 @@
         "tagline": "Tự động hoá trình duyệt không cần code. Ghi một lần, phát lại mãi mãi.",
         "point1": "Ghi lại bất kỳ luồng trình duyệt nào mà không cần viết selector",
         "point2": "Tạm dừng, kiểm tra, chỉnh sửa giá trị giữa chừng, tiếp tục",
-        "point3": "451 module được kết nối sẵn — CSV, Stripe, Notion, Slack, OpenAI",
+        "point3": "452 module được kết nối sẵn — CSV, Stripe, Notion, Slack, OpenAI",
         "cta": "Vào Cloud"
       },
       "warroom": {
@@ -140,7 +140,7 @@
         },
         {
           "icon": "Boxes",
-          "title": "451 module",
+          "title": "452 module",
           "body": "CSV, Excel, Stripe, Notion, Postgres, Slack, OpenAI — kết nối sẵn để bạn ghép lại thay vì viết API plumbing."
         },
         {
@@ -189,14 +189,14 @@
     },
     "integrations": {
       "label": "TÍCH HỢP",
-      "title": "451 module ngay khi mở hộp.",
+      "title": "452 module ngay khi mở hộp.",
       "subtitle": "Hệ thống kết nối đã được nối sẵn. Kéo, thả, cấu hình — không bao giờ phải viết thêm script \"sao chép hàng này từ Sheet A sang API B\".",
       "andMore": "+ 230 THÊM · TỰ XÂY BẰNG PYTHON HOẶC JS"
     },
     "stats": {
       "items": [
         {
-          "value": "451",
+          "value": "452",
           "label": "MODULE",
           "body": "Nút được xây dựng sẵn cho CSV, Excel, Stripe, Notion, Slack, AI, SQL — những thứ bạn sẽ phải tự ghép lại."
         },
@@ -256,7 +256,7 @@
   },
   "cloud": {
     "metaTitle": "Cloud — Tự động hoá trình duyệt không cần code",
-    "metaDescription": "Ghi một lần, phát lại mãi mãi. Tự động hoá trình duyệt chạy offline. 451 module, 16 ngôn ngữ, bộ thực thi cấp phép MIT.",
+    "metaDescription": "Ghi một lần, phát lại mãi mãi. Tự động hoá trình duyệt chạy offline. 452 module, 16 ngôn ngữ, bộ thực thi cấp phép MIT.",
     "hero": {
       "eyebrow": "01 / CLOUD",
       "status": "ĐANG RA MẮT",
@@ -264,7 +264,7 @@
       "titleAccent": "tự động lái.",
       "lede": "Mở trình ghi, làm công việc một lần, nhấn dừng. Flyto2 biến nó thành quy trình có cấu trúc bạn có thể chỉnh sửa, quản lý phiên bản, lên lịch và chia sẻ — không cần viết một dòng code.",
       "ctaPrimary": "Tải ứng dụng desktop",
-      "ctaSecondary": "Duyệt 451 module"
+      "ctaSecondary": "Duyệt 452 module"
     },
     "how": {
       "label": "CÁCH HOẠT ĐỘNG",
@@ -311,7 +311,7 @@
         },
         {
           "icon": "Boxes",
-          "title": "451 module",
+          "title": "452 module",
           "body": "CSV, Excel, Stripe, Notion, Sheets, Postgres, Slack, OpenAI — kết nối sẵn để bạn ghép lại thay vì viết API plumbing."
         },
         {
@@ -580,7 +580,7 @@
         "tagline": "Cho cá nhân khám phá tự động hoá.",
         "feature1": "1.000 điểm điện toán / tháng",
         "feature2": "Tối đa 5 quy trình đã lưu",
-        "feature3": "Toàn bộ 451 module",
+        "feature3": "Toàn bộ 452 module",
         "feature4": "Hỗ trợ cộng đồng",
         "cta": "Tải miễn phí"
       },
@@ -1627,7 +1627,7 @@
       "substrate": {
         "label": "ONE SUBSTRATE, TWO PRODUCT LINES",
         "title": "The same engine that runs your automation runs your war-room.",
-        "body": "Flyto2 is one brand with two product lines on the same execution substrate. The automation engine — flyto-core, 451 deterministic modules, MCP-native over stdio and streamable-http, with evidence capture, replay, YAML recipes and human-in-the-loop — is the established Zapier/n8n/Make alternative. The war-room rides the same deterministic modules and recipes to execute scans, collect evidence and drive red-team. You never have to choose between them.",
+        "body": "Flyto2 is one brand with two product lines on the same execution substrate. The automation engine — flyto-core, 452 deterministic modules, MCP-native over stdio and streamable-http, with evidence capture, replay, YAML recipes and human-in-the-loop — is the established Zapier/n8n/Make alternative. The war-room rides the same deterministic modules and recipes to execute scans, collect evidence and drive red-team. You never have to choose between them.",
         "automationCta": "Explore the automation engine"
       },
       "cta": {

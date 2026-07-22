@@ -146,7 +146,7 @@ Source-backed contracts for **157 declarations**.
 | component | `SecurityProductPage({ page })` | Renders the security product page interface. | [components/sections/SecurityProductPage.tsx:6](../../components/sections/SecurityProductPage.tsx#L6) |
 | interface | `StatItem` | Defines the stat item data contract. | [components/sections/Stats.tsx:7](../../components/sections/Stats.tsx#L7) |
 | component | `Stats()` | Renders the stats interface. | [components/sections/Stats.tsx:13](../../components/sections/Stats.tsx#L13) |
-| component | `CountedValue({ raw })` | Parses a value like "451+", "16", "100%" — extracts the number and renders an animated count-up that triggers when scrolled into view. Non-numeric values render as static text. | [components/sections/Stats.tsx:46](../../components/sections/Stats.tsx#L46) |
+| component | `CountedValue({ raw })` | Parses a value like "452+", "16", "100%" — extracts the number and renders an animated count-up that triggers when scrolled into view. Non-numeric values render as static text. | [components/sections/Stats.tsx:46](../../components/sections/Stats.tsx#L46) |
 | interface | `VideoFrameProps` | Defines the video frame props data contract. | [components/sections/VideoDemo.tsx:10](../../components/sections/VideoDemo.tsx#L10) |
 | component | `VideoFrame({ videoId, title, ratio, badge, duration, className })` | Renders the video frame interface. | [components/sections/VideoDemo.tsx:19](../../components/sections/VideoDemo.tsx#L19) |
 | component | `VideoDemo()` | Renders the video demo interface. | [components/sections/VideoDemo.tsx:86](../../components/sections/VideoDemo.tsx#L86) |

@@ -69,7 +69,7 @@
 | Layer 2 | `get_category_detail()` | 單一類別詳情 |
 | Layer 3 | `get_module_detail()` | 個別模組完整規格 |
 
-- 設計給 LLM 漸進式探索，避免一次載入 451 個模組
+- 設計給 LLM 漸進式探索，避免一次載入 452 個模組
 - 公開 catalog 自動清洗敏感資訊（credentials, secrets）
 - `get_modules_batch()` 批次取得多個模組
 
@@ -245,7 +245,7 @@ git tag v0.x.x
 
 | 指標 | 數字 |
 |------|------|
-| Registry-backed modules | 451 |
+| Registry-backed modules | 452 |
 | 原子類別 | 67 |
 | 瀏覽器模組 | 50+ |
 | 預建食譜 | 41 |

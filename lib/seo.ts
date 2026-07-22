@@ -59,12 +59,12 @@ export const OG_LOCALE_BY_LOCALE = Object.fromEntries(
 export const X_DEFAULT_HREFLANG = 'x-default';
 
 export const FLYTO2_SEO_FACTS = {
-  moduleCount: 451,
+  moduleCount: 452,
   catalogCategoryCount: 84,
   builtInRecipeCount: 41,
   browserModuleCount: 54,
   coreRuntimeSummary:
-    '451 registry-backed modules across 84 catalog categories, 41 built-in recipes, MCP transports, evidence capture, and replayable YAML execution',
+    '452 registry-backed modules across 84 catalog categories, 41 built-in recipes, MCP transports, evidence capture, and replayable YAML execution',
 } as const;
 
 export const FLYTO2_HOME_TITLE = 'AI Workflow Automation Platform and Security War Room';
@@ -134,7 +134,7 @@ export const FLYTO2_SEO_KEYWORDS = Array.from(new Set([
   'self-hosted security',
   'open-core security platform',
   'evidence-backed security',
-  '451 security automation modules',
+  '452 security automation modules',
   ...manifestKeywordTerms,
 ]));
 

@@ -78,33 +78,33 @@ Source-backed contracts for **260 declarations**.
 | constant | `requiredRobotsTokens` | Defines the required robots tokens source-of-truth value. | [scripts/audit-seo-surface.mjs:59](../../scripts/audit-seo-surface.mjs#L59) |
 | constant | `requiredLlmsTokens` | Defines the required llms tokens source-of-truth value. | [scripts/audit-seo-surface.mjs:69](../../scripts/audit-seo-surface.mjs#L69) |
 | constant | `requiredKeywordMatrixTokens` | Defines the required keyword matrix tokens source-of-truth value. | [scripts/audit-seo-surface.mjs:80](../../scripts/audit-seo-surface.mjs#L80) |
-| constant | `maxKeywordMatrixAgeDays` | Defines the max keyword matrix age days source-of-truth value. | [scripts/audit-seo-surface.mjs:81](../../scripts/audit-seo-surface.mjs#L81) |
-| constant | `failures` | Defines the failures source-of-truth value. | [scripts/audit-seo-surface.mjs:82](../../scripts/audit-seo-surface.mjs#L82) |
-| function | `read(relativePath)` | Retrieves read. | [scripts/audit-seo-surface.mjs:84](../../scripts/audit-seo-surface.mjs#L84) |
-| function | `sha256(value)` | Implements sha256. | [scripts/audit-seo-surface.mjs:93](../../scripts/audit-seo-surface.mjs#L93) |
-| function | `loadSeoContract()` | Retrieves load seo contract. | [scripts/audit-seo-surface.mjs:97](../../scripts/audit-seo-surface.mjs#L97) |
-| function | `fail(message)` | Implements fail. | [scripts/audit-seo-surface.mjs:105](../../scripts/audit-seo-surface.mjs#L105) |
-| function | `decodeHtml(value)` | Transforms decode html. | [scripts/audit-seo-surface.mjs:109](../../scripts/audit-seo-surface.mjs#L109) |
-| function | `getTags(html, tagName)` | Retrieves get tags. | [scripts/audit-seo-surface.mjs:120](../../scripts/audit-seo-surface.mjs#L120) |
-| function | `attrs(rawAttrs)` | Implements attrs. | [scripts/audit-seo-surface.mjs:124](../../scripts/audit-seo-surface.mjs#L124) |
-| function | `findMeta(html, key, value)` | Retrieves find meta. | [scripts/audit-seo-surface.mjs:132](../../scripts/audit-seo-surface.mjs#L132) |
-| function | `findLink(html, rel, hrefLang)` | Retrieves find link. | [scripts/audit-seo-surface.mjs:143](../../scripts/audit-seo-surface.mjs#L143) |
-| function | `publicAssetPath(url)` | Implements public asset path. | [scripts/audit-seo-surface.mjs:155](../../scripts/audit-seo-surface.mjs#L155) |
-| function | `checkPublicAsset(label, metaLabel, url)` | Validates check public asset. | [scripts/audit-seo-surface.mjs:166](../../scripts/audit-seo-surface.mjs#L166) |
-| function | `routeFromCanonical(canonical)` | Implements route from canonical. | [scripts/audit-seo-surface.mjs:171](../../scripts/audit-seo-surface.mjs#L171) |
-| function | `publicUrlForManifestLocale(route, manifestLocale)` | Implements public url for manifest locale. | [scripts/audit-seo-surface.mjs:176](../../scripts/audit-seo-surface.mjs#L176) |
-| function | `contractKeywordTerms()` | Implements contract keyword terms. | [scripts/audit-seo-surface.mjs:184](../../scripts/audit-seo-surface.mjs#L184) |
-| function | `titleFrom(html)` | Implements title from. | [scripts/audit-seo-surface.mjs:191](../../scripts/audit-seo-surface.mjs#L191) |
-| function | `checkLength(label, value, min, max)` | Validates check length. | [scripts/audit-seo-surface.mjs:196](../../scripts/audit-seo-surface.mjs#L196) |
-| function | `checkBrandAndEmails(label, content)` | Validates check brand and emails. | [scripts/audit-seo-surface.mjs:202](../../scripts/audit-seo-surface.mjs#L202) |
-| function | `checkPage(page)` | Validates check page. | [scripts/audit-seo-surface.mjs:212](../../scripts/audit-seo-surface.mjs#L212) |
-| function | `checkSeoContract()` | Validates check seo contract. | [scripts/audit-seo-surface.mjs:271](../../scripts/audit-seo-surface.mjs#L271) |
-| function | `checkBuildOutput()` | Validates check build output. | [scripts/audit-seo-surface.mjs:315](../../scripts/audit-seo-surface.mjs#L315) |
-| function | `checkSitemap()` | Validates check sitemap. | [scripts/audit-seo-surface.mjs:323](../../scripts/audit-seo-surface.mjs#L323) |
-| function | `checkRobotsAndLlms()` | Validates check robots and llms. | [scripts/audit-seo-surface.mjs:335](../../scripts/audit-seo-surface.mjs#L335) |
-| function | `checkDiscoveryFiles()` | Validates check discovery files. | [scripts/audit-seo-surface.mjs:352](../../scripts/audit-seo-surface.mjs#L352) |
-| function | `newestKeywordMatrix()` | Implements newest keyword matrix. | [scripts/audit-seo-surface.mjs:381](../../scripts/audit-seo-surface.mjs#L381) |
-| function | `checkKeywordMatrix()` | Validates check keyword matrix. | [scripts/audit-seo-surface.mjs:393](../../scripts/audit-seo-surface.mjs#L393) |
+| constant | `maxKeywordMatrixAgeDays` | Defines the max keyword matrix age days source-of-truth value. | [scripts/audit-seo-surface.mjs:90](../../scripts/audit-seo-surface.mjs#L90) |
+| constant | `failures` | Defines the failures source-of-truth value. | [scripts/audit-seo-surface.mjs:91](../../scripts/audit-seo-surface.mjs#L91) |
+| function | `read(relativePath)` | Retrieves read. | [scripts/audit-seo-surface.mjs:93](../../scripts/audit-seo-surface.mjs#L93) |
+| function | `sha256(value)` | Implements sha256. | [scripts/audit-seo-surface.mjs:102](../../scripts/audit-seo-surface.mjs#L102) |
+| function | `loadSeoContract()` | Retrieves load seo contract. | [scripts/audit-seo-surface.mjs:106](../../scripts/audit-seo-surface.mjs#L106) |
+| function | `fail(message)` | Implements fail. | [scripts/audit-seo-surface.mjs:114](../../scripts/audit-seo-surface.mjs#L114) |
+| function | `decodeHtml(value)` | Transforms decode html. | [scripts/audit-seo-surface.mjs:118](../../scripts/audit-seo-surface.mjs#L118) |
+| function | `getTags(html, tagName)` | Retrieves get tags. | [scripts/audit-seo-surface.mjs:129](../../scripts/audit-seo-surface.mjs#L129) |
+| function | `attrs(rawAttrs)` | Implements attrs. | [scripts/audit-seo-surface.mjs:133](../../scripts/audit-seo-surface.mjs#L133) |
+| function | `findMeta(html, key, value)` | Retrieves find meta. | [scripts/audit-seo-surface.mjs:141](../../scripts/audit-seo-surface.mjs#L141) |
+| function | `findLink(html, rel, hrefLang)` | Retrieves find link. | [scripts/audit-seo-surface.mjs:152](../../scripts/audit-seo-surface.mjs#L152) |
+| function | `publicAssetPath(url)` | Implements public asset path. | [scripts/audit-seo-surface.mjs:164](../../scripts/audit-seo-surface.mjs#L164) |
+| function | `checkPublicAsset(label, metaLabel, url)` | Validates check public asset. | [scripts/audit-seo-surface.mjs:175](../../scripts/audit-seo-surface.mjs#L175) |
+| function | `routeFromCanonical(canonical)` | Implements route from canonical. | [scripts/audit-seo-surface.mjs:180](../../scripts/audit-seo-surface.mjs#L180) |
+| function | `publicUrlForManifestLocale(route, manifestLocale)` | Implements public url for manifest locale. | [scripts/audit-seo-surface.mjs:185](../../scripts/audit-seo-surface.mjs#L185) |
+| function | `contractKeywordTerms()` | Implements contract keyword terms. | [scripts/audit-seo-surface.mjs:193](../../scripts/audit-seo-surface.mjs#L193) |
+| function | `titleFrom(html)` | Implements title from. | [scripts/audit-seo-surface.mjs:200](../../scripts/audit-seo-surface.mjs#L200) |
+| function | `checkLength(label, value, min, max)` | Validates check length. | [scripts/audit-seo-surface.mjs:205](../../scripts/audit-seo-surface.mjs#L205) |
+| function | `checkBrandAndEmails(label, content)` | Validates check brand and emails. | [scripts/audit-seo-surface.mjs:211](../../scripts/audit-seo-surface.mjs#L211) |
+| function | `checkPage(page)` | Validates check page. | [scripts/audit-seo-surface.mjs:221](../../scripts/audit-seo-surface.mjs#L221) |
+| function | `checkSeoContract()` | Validates check seo contract. | [scripts/audit-seo-surface.mjs:280](../../scripts/audit-seo-surface.mjs#L280) |
+| function | `checkBuildOutput()` | Validates check build output. | [scripts/audit-seo-surface.mjs:324](../../scripts/audit-seo-surface.mjs#L324) |
+| function | `checkSitemap()` | Validates check sitemap. | [scripts/audit-seo-surface.mjs:332](../../scripts/audit-seo-surface.mjs#L332) |
+| function | `checkRobotsAndLlms()` | Validates check robots and llms. | [scripts/audit-seo-surface.mjs:349](../../scripts/audit-seo-surface.mjs#L349) |
+| function | `checkDiscoveryFiles()` | Validates check discovery files. | [scripts/audit-seo-surface.mjs:366](../../scripts/audit-seo-surface.mjs#L366) |
+| function | `newestKeywordMatrix()` | Implements newest keyword matrix. | [scripts/audit-seo-surface.mjs:395](../../scripts/audit-seo-surface.mjs#L395) |
+| function | `checkKeywordMatrix()` | Validates check keyword matrix. | [scripts/audit-seo-surface.mjs:407](../../scripts/audit-seo-surface.mjs#L407) |
 | constant | `root` | Defines the root source-of-truth value. | [scripts/check-documentation.mjs:6](../../scripts/check-documentation.mjs#L6) |
 | constant | `manifestPath` | Defines the manifest path source-of-truth value. | [scripts/check-documentation.mjs:7](../../scripts/check-documentation.mjs#L7) |
 | constant | `approvedEmails` | Defines the approved emails source-of-truth value. | [scripts/check-documentation.mjs:8](../../scripts/check-documentation.mjs#L8) |

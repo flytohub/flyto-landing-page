@@ -39,7 +39,7 @@ export function Stats() {
 }
 
 /**
- * Parses a value like "451+", "16", "100%" — extracts the number and renders
+ * Parses a value like "452+", "16", "100%" — extracts the number and renders
  * an animated count-up that triggers when scrolled into view. Non-numeric
  * values render as static text.
  */
@@ -47,7 +47,7 @@ function CountedValue({ raw }: { raw: string }) {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, margin: '-40px' });
 
-  // Pull the leading numeric portion. "451+" -> 451, "16" -> 16, "100%" -> 100.
+  // Pull the leading numeric portion. "452+" -> 452, "16" -> 16, "100%" -> 100.
   const match = raw.match(/^(\d+(?:\.\d+)?)(.*)$/);
   const target = match ? parseFloat(match[1]) : NaN;
   const suffix = match ? match[2] : '';

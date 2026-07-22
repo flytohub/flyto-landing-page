@@ -77,7 +77,16 @@ const requiredLlmsTokens = [
   'https://docs.flyto2.com',
   'https://blog.flyto2.com',
 ];
-const requiredKeywordMatrixTokens = ['Volume', 'SD', 'PD', 'CPC', 'Long-Tail Route Intent', 'Ubersuggest'];
+const requiredKeywordMatrixTokens = [
+  'Volume',
+  'SD',
+  'PD',
+  'CPC',
+  'Long-Tail Route Intent',
+  'Evidence Caveats',
+  'MCP security',
+  'Ubersuggest',
+];
 const maxKeywordMatrixAgeDays = 100;
 const failures = [];
 
@@ -324,6 +333,11 @@ function checkSitemap() {
   const sitemap = readFileSync(path.join(appDir, 'sitemap.xml.body'), 'utf8');
   const locCount = (sitemap.match(/<loc>/g) ?? []).length;
   if (locCount < 900) fail(`sitemap has too few URLs for multilingual landing surface: ${locCount}`);
+  for (const token of ['<lastmod>', '<changefreq>', '<priority>']) {
+    if (sitemap.includes(token)) {
+      fail(`sitemap includes ${token} without a route-level source of truth`);
+    }
+  }
   for (const url of sitemapRequiredUrls) {
     if (!sitemap.includes(`<loc>${url}</loc>`)) fail(`sitemap missing ${url}`);
   }

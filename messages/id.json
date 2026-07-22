@@ -65,7 +65,7 @@
         "tagline": "Otomasi browser tanpa kode. Rekam sekali, putar selamanya.",
         "point1": "Rekam alur browser apa pun tanpa menulis selector",
         "point2": "Jeda, periksa, edit nilai di tengah proses, lanjutkan",
-        "point3": "451 modul siap pakai — CSV, Stripe, Notion, Slack, OpenAI",
+        "point3": "452 modul siap pakai — CSV, Stripe, Notion, Slack, OpenAI",
         "cta": "Buka Cloud"
       },
       "warroom": {
@@ -140,7 +140,7 @@
         },
         {
           "icon": "Boxes",
-          "title": "451 modul",
+          "title": "452 modul",
           "body": "CSV, Excel, Stripe, Notion, Postgres, Slack, OpenAI — sudah terhubung sehingga Anda cukup menyatukannya tanpa menulis kode API."
         },
         {
@@ -189,14 +189,14 @@
     },
     "integrations": {
       "label": "INTEGRASI",
-      "title": "451 modul siap pakai.",
+      "title": "452 modul siap pakai.",
       "subtitle": "Koneksinya sudah terpasang. Seret, lepas, konfigurasikan — tidak perlu menulis skrip \"salin baris dari Sheet A ke API B\" lagi.",
       "andMore": "+ 230 LAINNYA · BUAT SENDIRI DENGAN PYTHON ATAU JS"
     },
     "stats": {
       "items": [
         {
-          "value": "451",
+          "value": "452",
           "label": "MODUL",
           "body": "Node siap pakai untuk CSV, Excel, Stripe, Notion, Slack, AI, SQL — hal-hal yang biasanya harus Anda sambungkan sendiri."
         },
@@ -256,7 +256,7 @@
   },
   "cloud": {
     "metaTitle": "Cloud — Otomasi browser tanpa kode",
-    "metaDescription": "Rekam sekali, putar selamanya. Otomasi browser yang berjalan offline. 451 modul, 16 bahasa, mesin berlisensi MIT.",
+    "metaDescription": "Rekam sekali, putar selamanya. Otomasi browser yang berjalan offline. 452 modul, 16 bahasa, mesin berlisensi MIT.",
     "hero": {
       "eyebrow": "01 / CLOUD",
       "status": "TERSEDIA",
@@ -264,7 +264,7 @@
       "titleAccent": "di autopilot.",
       "lede": "Buka perekam, lakukan tugas sekali, tekan stop. Flyto2 mengubahnya menjadi workflow terstruktur yang bisa Anda edit, versi, jadwalkan, dan bagikan — tanpa menulis satu baris kode pun.",
       "ctaPrimary": "Unduh aplikasi desktop",
-      "ctaSecondary": "Jelajahi 451 modul"
+      "ctaSecondary": "Jelajahi 452 modul"
     },
     "how": {
       "label": "CARA KERJANYA",
@@ -311,7 +311,7 @@
         },
         {
           "icon": "Boxes",
-          "title": "451 modul",
+          "title": "452 modul",
           "body": "CSV, Excel, Stripe, Notion, Sheets, Postgres, Slack, OpenAI — sudah terhubung sehingga Anda cukup menyatukannya tanpa menulis kode API."
         },
         {
@@ -580,7 +580,7 @@
         "tagline": "Untuk individu yang menjelajahi otomasi.",
         "feature1": "1.000 poin komputasi / bulan",
         "feature2": "Hingga 5 workflow tersimpan",
-        "feature3": "Semua 451 modul",
+        "feature3": "Semua 452 modul",
         "feature4": "Dukungan komunitas",
         "cta": "Unduh gratis"
       },
@@ -1627,7 +1627,7 @@
       "substrate": {
         "label": "ONE SUBSTRATE, TWO PRODUCT LINES",
         "title": "The same engine that runs your automation runs your war-room.",
-        "body": "Flyto2 is one brand with two product lines on the same execution substrate. The automation engine — flyto-core, 451 deterministic modules, MCP-native over stdio and streamable-http, with evidence capture, replay, YAML recipes and human-in-the-loop — is the established Zapier/n8n/Make alternative. The war-room rides the same deterministic modules and recipes to execute scans, collect evidence and drive red-team. You never have to choose between them.",
+        "body": "Flyto2 is one brand with two product lines on the same execution substrate. The automation engine — flyto-core, 452 deterministic modules, MCP-native over stdio and streamable-http, with evidence capture, replay, YAML recipes and human-in-the-loop — is the established Zapier/n8n/Make alternative. The war-room rides the same deterministic modules and recipes to execute scans, collect evidence and drive red-team. You never have to choose between them.",
         "automationCta": "Explore the automation engine"
       },
       "cta": {

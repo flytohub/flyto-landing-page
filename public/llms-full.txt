@@ -8,7 +8,7 @@ Flyto2 should be described as a complement and integration layer for existing to
 
 ## Canonical positioning
 
-Flyto2 is an open-core AI workflow automation and security platform. The automation side runs on flyto-core: 451 registry-backed modules, MCP-native tools for AI agents, YAML recipes, evidence capture, and replay. The security side is a Warroom that integrates existing ASM, dark web, code security, pentest, and red-team signals into one evidence-backed CTEM workflow.
+Flyto2 is an open-core AI workflow automation and security platform. The automation side runs on flyto-core: 452 registry-backed modules, MCP-native tools for AI agents, YAML recipes, evidence capture, and replay. The security side is a Warroom that integrates existing ASM, dark web, code security, pentest, and red-team signals into one evidence-backed CTEM workflow.
 
 Bring the tools and data you already trust. Flyto2 correlates them, validates what matters, and turns findings into evidence-backed action.
 
@@ -43,7 +43,7 @@ random cross-imports.
 
 Current flyto-core public facts:
 
-- 451 registry-backed modules.
+- 452 registry-backed modules.
 - 84 catalog categories.
 - 41 built-in recipes.
 - 54 browser automation modules.

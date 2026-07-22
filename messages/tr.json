@@ -65,7 +65,7 @@
         "tagline": "Kodsuz tarayıcı otomasyonu. Bir kez kaydet, sonsuza dek oynat.",
         "point1": "Seçici yazmadan herhangi bir tarayıcı akışını kaydedin",
         "point2": "Çalışma ortasında duraklatın, inceleyin, değerleri düzenleyin, devam edin",
-        "point3": "451 hazır modül — CSV, Stripe, Notion, Slack, OpenAI",
+        "point3": "452 hazır modül — CSV, Stripe, Notion, Slack, OpenAI",
         "cta": "Cloud'a git"
       },
       "warroom": {
@@ -140,7 +140,7 @@
         },
         {
           "icon": "Boxes",
-          "title": "451 modül",
+          "title": "452 modül",
           "body": "CSV, Excel, Stripe, Notion, Postgres, Slack, OpenAI — API kablo işi yazmak yerine bunları bir araya getirmeniz için hazır bağlantılı."
         },
         {
@@ -189,14 +189,14 @@
     },
     "integrations": {
       "label": "ENTEGRASYONLAR",
-      "title": "Kutudan çıkar çıkmaz 451 modül.",
+      "title": "Kutudan çıkar çıkmaz 452 modül.",
       "subtitle": "Kablo işi zaten hazır. Sürükleyin, bırakın, yapılandırın — artık \"bu satırı A Sayfasından B API'sine kopyala\" betiği yazmayın.",
       "andMore": "+ 230 DAHA · KENDİNİZİNKİNİ PYTHON VEYA JS İLE OLUŞTURUN"
     },
     "stats": {
       "items": [
         {
-          "value": "451",
+          "value": "452",
           "label": "MODÜL",
           "body": "CSV, Excel, Stripe, Notion, Slack, AI, SQL için hazır düğümler — aksi hâlde kendiniz birbirine yapıştıracağınız şeyler."
         },
@@ -256,7 +256,7 @@
   },
   "cloud": {
     "metaTitle": "Cloud — Kodsuz tarayıcı otomasyonu",
-    "metaDescription": "Bir kez kaydet, sonsuza dek oynat. Çevrimdışı çalışan tarayıcı otomasyonu. 451 modül, 16 dil, MIT lisanslı motor.",
+    "metaDescription": "Bir kez kaydet, sonsuza dek oynat. Çevrimdışı çalışan tarayıcı otomasyonu. 452 modül, 16 dil, MIT lisanslı motor.",
     "hero": {
       "eyebrow": "01 / CLOUD",
       "status": "YAYINDA",
@@ -264,7 +264,7 @@
       "titleAccent": "otomatik pilotta.",
       "lede": "Kaydediciyi açın, görevi bir kez yapın, durdurun. Flyto2 bunu, bir satır kod yazmadan düzenleyebileceğiniz, sürümleyebileceğiniz, zamanlayabileceğiniz ve paylaşabileceğiniz yapılandırılmış bir iş akışına dönüştürür.",
       "ctaPrimary": "Masaüstü uygulamasını indir",
-      "ctaSecondary": "451 modüle gözat"
+      "ctaSecondary": "452 modüle gözat"
     },
     "how": {
       "label": "NASIL ÇALIŞIR",
@@ -311,7 +311,7 @@
         },
         {
           "icon": "Boxes",
-          "title": "451 modül",
+          "title": "452 modül",
           "body": "CSV, Excel, Stripe, Notion, Sheets, Postgres, Slack, OpenAI — API kablo işi yazmak yerine bunları bir araya getirmeniz için hazır bağlantılı."
         },
         {
@@ -580,7 +580,7 @@
         "tagline": "Otomasyonu keşfeden bireyler için.",
         "feature1": "Ayda 1.000 işlem puanı",
         "feature2": "En fazla 5 kayıtlı iş akışı",
-        "feature3": "Tüm 451 modül",
+        "feature3": "Tüm 452 modül",
         "feature4": "Topluluk desteği",
         "cta": "Ücretsiz indir"
       },
@@ -1627,7 +1627,7 @@
       "substrate": {
         "label": "ONE SUBSTRATE, TWO PRODUCT LINES",
         "title": "The same engine that runs your automation runs your war-room.",
-        "body": "Flyto2 is one brand with two product lines on the same execution substrate. The automation engine — flyto-core, 451 deterministic modules, MCP-native over stdio and streamable-http, with evidence capture, replay, YAML recipes and human-in-the-loop — is the established Zapier/n8n/Make alternative. The war-room rides the same deterministic modules and recipes to execute scans, collect evidence and drive red-team. You never have to choose between them.",
+        "body": "Flyto2 is one brand with two product lines on the same execution substrate. The automation engine — flyto-core, 452 deterministic modules, MCP-native over stdio and streamable-http, with evidence capture, replay, YAML recipes and human-in-the-loop — is the established Zapier/n8n/Make alternative. The war-room rides the same deterministic modules and recipes to execute scans, collect evidence and drive red-team. You never have to choose between them.",
         "automationCta": "Explore the automation engine"
       },
       "cta": {

@@ -2,7 +2,7 @@
 
 # App Source Reference
 
-Source-backed contracts for **219 declarations**.
+Source-backed contracts for **214 declarations**.
 
 | Kind | Declaration | Responsibility | Source |
 |---|---|---|---|
@@ -218,10 +218,5 @@ Source-backed contracts for **219 declarations**.
 | component | `RootLayout({ children })` | Renders the root layout interface. | [app/layout.tsx:78](../../app/layout.tsx#L78) |
 | constant | `dynamic` | Defines the dynamic source-of-truth value. | [app/sitemap.ts:8](../../app/sitemap.ts#L8) |
 | constant | `STATIC_ROUTES` | Defines the static routes source-of-truth value. | [app/sitemap.ts:10](../../app/sitemap.ts#L10) |
-| constant | `STOREFRONT_ROUTES` | Defines the storefront routes source-of-truth value. | [app/sitemap.ts:53](../../app/sitemap.ts#L53) |
-| constant | `DISCOVERY_ROUTES` | Defines the discovery routes source-of-truth value. | [app/sitemap.ts:75](../../app/sitemap.ts#L75) |
-| constant | `LEGAL_ROUTES` | Defines the legal routes source-of-truth value. | [app/sitemap.ts:86](../../app/sitemap.ts#L86) |
-| function | `routePriority(route)` | Implements route priority. | [app/sitemap.ts:88](../../app/sitemap.ts#L88) |
-| function | `routeChangeFrequency(route)` | Implements route change frequency. | [app/sitemap.ts:97](../../app/sitemap.ts#L97) |
-| function | `buildEntry(route, locale, now)` | Builds build entry. | [app/sitemap.ts:104](../../app/sitemap.ts#L104) |
-| function | `sitemap()` | Implements sitemap. | [app/sitemap.ts:116](../../app/sitemap.ts#L116) |
+| function | `buildEntry(route, locale)` | Builds build entry. | [app/sitemap.ts:53](../../app/sitemap.ts#L53) |
+| function | `sitemap()` | Implements sitemap. | [app/sitemap.ts:62](../../app/sitemap.ts#L62) |
