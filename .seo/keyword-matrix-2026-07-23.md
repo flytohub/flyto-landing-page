@@ -30,7 +30,7 @@ clear route intent. Do not paste search-volume tables into public page copy.
 | CTEM | continuous threat exposure management | 260 | 39 | 32 | 171.87 | Medium | `/warroom/ctem/` | `https://docs.flyto2.com/warroom/closed-loop` | `https://blog.flyto2.com/posts/what-is-ctem-continuous-threat-exposure-management` |
 | CTEM | CTEM | 1600 | 37 | 46 | 45.83 | High | `/warroom/ctem/` | `https://docs.flyto2.com/warroom/closed-loop` | `https://blog.flyto2.com/security/` |
 | CTEM | CTEM platform | 40 | 30 | 33 | 30.54 | Low | `/warroom/ctem/` | `https://docs.flyto2.com/warroom/closed-loop` | `https://blog.flyto2.com/security/` |
-| Security validation | security validation platform | 20 | 24 | 34 | 0.00 | Low | `/warroom/security-validation/` | `https://docs.flyto2.com/warroom/pentest` | `https://blog.flyto2.com/security/` |
+| Security validation | security validation platform | 20 | 24 | 34 | 0.00 | Low | `/warroom/security-validation/` | `https://docs.flyto2.com/warroom/surfaces/pentest` | `https://blog.flyto2.com/security/` |
 | MCP security | MCP security | 880 | 40 | 48 | 20.08 | High | `/ai-security/` | `https://docs.flyto2.com/warroom/surfaces/mcp-security` | `/posts/mcp-security-risks-and-controls` |
 | MCP security | MCP security best practices | 110 | 31 | 53 | 36.26 | Medium | `/ai-security/` | `https://docs.flyto2.com/warroom/surfaces/mcp-security` | `/posts/mcp-security-risks-and-controls` |
 | Attack surface management | attack surface management solution | 260 | 45 | 5 | 51.67 | Medium | `/warroom/attack-surface-management/` | `https://docs.flyto2.com/warroom/` | `https://blog.flyto2.com/posts/attack-surface-management-guide` |
