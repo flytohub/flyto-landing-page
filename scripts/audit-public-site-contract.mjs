@@ -76,6 +76,10 @@ const launchSurfaceContracts = {
     "href: '/flow'",
     "href: '/warroom'",
   ],
+  'components/sections/Hero.tsx': [
+    'grid-rows-[70%_30%]',
+    'sm:grid-cols-2 sm:grid-rows-1',
+  ],
   'components/layout/Footer.tsx': [
     'Flyto2 Flow',
     'Flyto2 Warroom',

@@ -12,7 +12,7 @@ export function Hero() {
     <section className="relative isolate flex min-h-[min(720px,calc(100svh-48px))] items-center overflow-hidden bg-slate-950 text-white">
       <div
         aria-hidden
-        className="absolute inset-0 grid grid-rows-2 sm:grid-cols-2 sm:grid-rows-1"
+        className="absolute inset-0 grid grid-rows-[70%_30%] sm:grid-cols-2 sm:grid-rows-1"
       >
         <div className="relative overflow-hidden">
           <Image
