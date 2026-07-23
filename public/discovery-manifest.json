@@ -1,8 +1,8 @@
 {
   "generatedFrom": "scripts/generate-discovery.mjs",
-  "sourceHash": "957e80b212b231927e33903ee57bcba5256dfe2991edb4343d5e2e5c0cbc92e4",
+  "sourceHash": "16668be4a6daa3c590e272108befe2f2e42d734622146daa1e18f5a7cef6a8eb",
   "outputs": [
     "/image-sitemap.xml"
   ],
-  "imageCount": 44
+  "imageCount": 45
 }

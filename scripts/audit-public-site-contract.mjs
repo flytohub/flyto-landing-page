@@ -31,6 +31,7 @@ const criticalPublicFiles = [
   'public/llms-full.txt',
   'app/sitemap.ts',
   'lib/route-localization.ts',
+  'lib/product-intent-pages.ts',
 ];
 
 const expectedCrawlerPolicies = [
@@ -72,13 +73,16 @@ const launchSurfaceContracts = {
     '/open-source',
   ],
   'components/sections/ProductPicker.tsx': [
-    "href: '/open-source'",
+    "href: '/flow'",
+    "href: '/warroom'",
   ],
   'components/layout/Footer.tsx': [
-    'Flyto2 Warroom CE',
-    'Aikido alternative',
+    'Flyto2 Flow',
+    'Flyto2 Warroom',
+    'Visual MCP builder',
     'Docker images',
-    'Self-hosted docs',
+    'Flow docs',
+    'Warroom docs',
   ],
   'lib/public-route-metadata.ts': [
     'pageAlternates(page.path, locale)',
@@ -90,7 +94,22 @@ const launchSurfaceContracts = {
     'publicRouteMetadata(page, locale)',
   ],
   'lib/nav.ts': [
-    "{ key: 'oss',          href: '/open-source' }",
+    "label: 'Flow overview', href: '/flow'",
+    "label: 'Warroom overview', href: '/warroom'",
+    'https://docs.flyto2.com/flow/',
+    'https://blog.flyto2.com/security/',
+  ],
+  'lib/product-intent-pages.ts': [
+    "path: 'flow'",
+    "path: 'flow/mcp-builder'",
+    "path: 'flow/browser-automation'",
+    "path: 'flow/n8n-alternative'",
+    "path: 'warroom'",
+    "path: 'warroom/ctem'",
+    "path: 'warroom/security-validation'",
+    "path: 'warroom/attack-surface-management'",
+    'PolyForm Shield',
+    'PolyForm Noncommercial',
   ],
   'middleware.ts': [
     'x-flyto-internal-locale-rewrite',
@@ -120,7 +139,7 @@ const keywordSurfaceContracts = {
     'attack surface management vs vulnerability management',
     'external attack surface management platform',
     'continuous threat exposure management ctem framework',
-    'open source attack surface management',
+    'source-available attack surface management',
     'security automation platform',
   ],
   'lib/public-route-pages.ts': [
@@ -157,7 +176,7 @@ const keywordSurfaceContracts = {
   'app/[locale]/page.tsx': [
     'attack surface management software',
     'external attack surface management platform',
-    'open source attack surface management',
+    'source-available attack surface management',
     'security automation platform',
   ],
 };

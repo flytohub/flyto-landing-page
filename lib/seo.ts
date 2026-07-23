@@ -68,12 +68,12 @@ export const FLYTO2_SEO_FACTS = {
     '452 registry-backed modules across 84 catalog categories, 41 built-in recipes, MCP transports, evidence capture, and replayable YAML execution',
 } as const;
 
-export const FLYTO2_HOME_TITLE = 'AI Workflow Automation Platform and Security War Room';
+export const FLYTO2_HOME_TITLE = 'AI Automation and Security Operations Platforms';
 
 export const FLYTO2_HOME_FULL_TITLE = `Flyto2 - ${FLYTO2_HOME_TITLE}`;
 
 export const FLYTO2_HOME_DESCRIPTION =
-  'Flyto2 is an open-source AI workflow automation platform with MCP-native tools, no-code browser workflows, trace/replay, and an evidence-backed CTEM security war room.';
+  'Flyto2 builds source-available execution platforms for AI workflow automation, visual MCP tools, browser workflows, CTEM, security validation, and evidence-backed operations.';
 
 const manifestKeywordTerms = seoContract.surface.keywordClusters.flatMap((cluster) => [
   cluster.primary,
@@ -122,8 +122,8 @@ export const FLYTO2_SEO_KEYWORDS = Array.from(new Set([
   'AI security',
   'MCP security',
   'security automation platform',
-  'open source attack surface management',
-  'open source security war room',
+  'source-available attack surface management',
+  'source-available security war room',
   'code intelligence',
   'pentest validation',
   'red team simulation',
@@ -133,7 +133,7 @@ export const FLYTO2_SEO_KEYWORDS = Array.from(new Set([
   'no-code app automation',
   'browser automation',
   'self-hosted security',
-  'open-core security platform',
+  'source-available security platform',
   'evidence-backed security',
   '452 security automation modules',
   ...manifestKeywordTerms,

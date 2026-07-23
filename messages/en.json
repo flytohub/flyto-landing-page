@@ -33,9 +33,9 @@
     "aiSecurity": "AI Security"
   },
   "footer": {
-    "tagline": "Open-source AI workflow automation and an evidence-backed security war room on one deterministic runtime.",
-    "cloudTagline": "Open-source execution engine for MCP-native automation, evidence, and replay.",
-    "warroomTagline": "Security war room. Correlate, validate, and act with evidence.",
+    "tagline": "Source-available platforms for AI automation and continuous security operations, powered by an open-source runtime.",
+    "cloudTagline": "Visual workflow and MCP builder with local execution, evidence, and replay.",
+    "warroomTagline": "CTEM and security validation operations with findings, evidence, and remediation.",
     "products": "Products",
     "community": "Community",
     "resources": "Resources",
@@ -47,35 +47,35 @@
   },
   "home": {
     "metaTitle": "AI Workflow Automation Platform and Security War Room",
-    "metaDescription": "Flyto2 is an open-source AI workflow automation platform with MCP-native tools, no-code browser workflows, trace/replay, and an evidence-backed CTEM security war room.",
+    "metaDescription": "Flyto2 provides source-available platforms for visual AI workflow automation, MCP tools, browser workflows, CTEM, security validation, evidence, and replay.",
     "hero": {
-      "eyebrow": "FLYTO2 · AI WORKFLOW AUTOMATION · SECURITY WAR ROOM",
-      "title": "Automate real work.",
-      "titleAccent": "Prove every run.",
-      "lede": "Flyto2 helps AI agents and operators run browser work, API steps, security checks, and CTEM evidence workflows with modules you can inspect, replay, and trust.",
+      "eyebrow": "FLYTO2 · FLOW · WARROOM",
+      "title": "Execution platforms for",
+      "titleAccent": "AI automation and security operations.",
+      "lede": "Build visual workflows and MCP tools with Flyto2 Flow. Validate findings and manage evidence-backed CTEM operations with Flyto2 Warroom.",
       "reassure": "AI WORKFLOW · MCP · CTEM · ASM · EVIDENCE · REPLAY"
     },
     "products": {
-      "label": "OPEN CORE",
-      "title": "One deterministic runtime for automation and security.",
-      "subtitle": "Flyto2 Core powers AI workflow automation, MCP server tools, no-code browser workflows, evidence capture, replay, and Warroom validation loops.",
+      "label": "TWO PRODUCT LINES",
+      "title": "One brand, two clear operating systems.",
+      "subtitle": "Flow handles AI workflow and MCP automation. Warroom handles continuous security validation. Both keep execution inspectable and evidence close to the work.",
       "cloud": {
-        "name": "AI workflow engine",
+        "name": "Flyto2 Flow",
         "statusLabel": "SHIPPING",
-        "tagline": "Open-source workflow automation with YAML recipes, MCP-native modules, browser execution, evidence, and replay.",
+        "tagline": "Source-available visual workflow and MCP automation with local browser execution, evidence, and replay.",
         "point1": "Run deterministic browser and API workflows",
         "point2": "Expose modules to AI agents through MCP server automation",
         "point3": "452 modules across browser, data, files, cloud, AI, and notifications",
-        "cta": "Explore the engine"
+        "cta": "Explore Flyto2 Flow"
       },
       "warroom": {
         "name": "Warroom",
         "statusLabel": "BETA",
-        "tagline": "Self-hosted open-core security war room for BYO findings, attack paths, evidence, remediation, scoring, and compliance.",
+        "tagline": "Source-available CTEM and security validation workspace for findings, attack paths, evidence, remediation, scoring, and compliance.",
         "point1": "Install Warroom CE from GitHub or Docker Hub",
         "point2": "Turn imported findings into verified attack paths",
         "point3": "Attach Enterprise bridge services through capability gates",
-        "cta": "Install Warroom CE"
+        "cta": "Explore Flyto2 Warroom"
       }
     },
     "benefits": {

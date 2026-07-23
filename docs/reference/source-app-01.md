@@ -2,7 +2,7 @@
 
 # App Source Reference
 
-Source-backed contracts for **214 declarations**.
+Source-backed contracts for **222 declarations**.
 
 | Kind | Declaration | Responsibility | Source |
 |---|---|---|---|
@@ -163,6 +163,10 @@ Source-backed contracts for **214 declarations**.
 | constant | `page` | Defines the page source-of-truth value. | [app/[locale]/external-attack-surface-management/page.tsx:7](../../app/%5Blocale%5D/external-attack-surface-management/page.tsx#L7) |
 | function | `generateMetadata({ params, })` | Builds canonical, social, and locale-aware metadata for the route. | [app/[locale]/external-attack-surface-management/page.tsx:9](../../app/%5Blocale%5D/external-attack-surface-management/page.tsx#L9) |
 | component | `ExternalAttackSurfaceManagementPage({ params, })` | Renders the external attack surface management page interface. | [app/[locale]/external-attack-surface-management/page.tsx:29](../../app/%5Blocale%5D/external-attack-surface-management/page.tsx#L29) |
+| constant | `dynamicParams` | Defines the dynamic params source-of-truth value. | [app/[locale]/flow/[[...slug]]/page.tsx:11](../../app/%5Blocale%5D/flow/%5B%5B...slug%5D%5D/page.tsx#L11) |
+| function | `generateStaticParams()` | Enumerates statically generated route parameters. | [app/[locale]/flow/[[...slug]]/page.tsx:13](../../app/%5Blocale%5D/flow/%5B%5B...slug%5D%5D/page.tsx#L13) |
+| function | `generateMetadata({ params, })` | Builds canonical, social, and locale-aware metadata for the route. | [app/[locale]/flow/[[...slug]]/page.tsx:17](../../app/%5Blocale%5D/flow/%5B%5B...slug%5D%5D/page.tsx#L17) |
+| component | `FlowProductPage({ params, })` | Renders the flow product page interface. | [app/[locale]/flow/[[...slug]]/page.tsx:28](../../app/%5Blocale%5D/flow/%5B%5B...slug%5D%5D/page.tsx#L28) |
 | constant | `page` | Defines the page source-of-truth value. | [app/[locale]/langgraph-alternative/page.tsx:7](../../app/%5Blocale%5D/langgraph-alternative/page.tsx#L7) |
 | function | `generateMetadata({ params })` | Builds canonical, social, and locale-aware metadata for the route. | [app/[locale]/langgraph-alternative/page.tsx:9](../../app/%5Blocale%5D/langgraph-alternative/page.tsx#L9) |
 | component | `LangGraphAlternativePage({ params })` | Renders the lang graph alternative page interface. | [app/[locale]/langgraph-alternative/page.tsx:14](../../app/%5Blocale%5D/langgraph-alternative/page.tsx#L14) |
@@ -201,6 +205,10 @@ Source-backed contracts for **214 declarations**.
 | constant | `page` | Defines the page source-of-truth value. | [app/[locale]/trust/page.tsx:7](../../app/%5Blocale%5D/trust/page.tsx#L7) |
 | function | `generateMetadata({ params })` | Builds canonical, social, and locale-aware metadata for the route. | [app/[locale]/trust/page.tsx:9](../../app/%5Blocale%5D/trust/page.tsx#L9) |
 | component | `TrustPage({ params })` | Renders the trust page interface. | [app/[locale]/trust/page.tsx:14](../../app/%5Blocale%5D/trust/page.tsx#L14) |
+| constant | `dynamicParams` | Defines the dynamic params source-of-truth value. | [app/[locale]/warroom/[[...slug]]/page.tsx:11](../../app/%5Blocale%5D/warroom/%5B%5B...slug%5D%5D/page.tsx#L11) |
+| function | `generateStaticParams()` | Enumerates statically generated route parameters. | [app/[locale]/warroom/[[...slug]]/page.tsx:13](../../app/%5Blocale%5D/warroom/%5B%5B...slug%5D%5D/page.tsx#L13) |
+| function | `generateMetadata({ params, })` | Builds canonical, social, and locale-aware metadata for the route. | [app/[locale]/warroom/[[...slug]]/page.tsx:17](../../app/%5Blocale%5D/warroom/%5B%5B...slug%5D%5D/page.tsx#L17) |
+| component | `WarroomProductPage({ params, })` | Renders the warroom product page interface. | [app/[locale]/warroom/[[...slug]]/page.tsx:28](../../app/%5Blocale%5D/warroom/%5B%5B...slug%5D%5D/page.tsx#L28) |
 | function | `generateStaticParams()` | Enumerates statically generated route parameters. | [app/[locale]/whitepaper/[slug]/page.tsx:10](../../app/%5Blocale%5D/whitepaper/%5Bslug%5D/page.tsx#L10) |
 | function | `generateMetadata({ params, })` | Builds canonical, social, and locale-aware metadata for the route. | [app/[locale]/whitepaper/[slug]/page.tsx:14](../../app/%5Blocale%5D/whitepaper/%5Bslug%5D/page.tsx#L14) |
 | component | `WhitepaperPage({ params, })` | Renders the whitepaper page interface. | [app/[locale]/whitepaper/[slug]/page.tsx:29](../../app/%5Blocale%5D/whitepaper/%5Bslug%5D/page.tsx#L29) |
@@ -216,7 +224,7 @@ Source-backed contracts for **214 declarations**.
 | constant | `metadata` | Defines the metadata source-of-truth value. | [app/layout.tsx:30](../../app/layout.tsx#L30) |
 | constant | `viewport` | Defines the viewport source-of-truth value. | [app/layout.tsx:72](../../app/layout.tsx#L72) |
 | component | `RootLayout({ children })` | Renders the root layout interface. | [app/layout.tsx:78](../../app/layout.tsx#L78) |
-| constant | `dynamic` | Defines the dynamic source-of-truth value. | [app/sitemap.ts:9](../../app/sitemap.ts#L9) |
-| constant | `STATIC_ROUTES` | Defines the static routes source-of-truth value. | [app/sitemap.ts:11](../../app/sitemap.ts#L11) |
-| function | `buildEntry(route, locale)` | Builds build entry. | [app/sitemap.ts:54](../../app/sitemap.ts#L54) |
-| function | `sitemap()` | Implements sitemap. | [app/sitemap.ts:63](../../app/sitemap.ts#L63) |
+| constant | `dynamic` | Defines the dynamic source-of-truth value. | [app/sitemap.ts:10](../../app/sitemap.ts#L10) |
+| constant | `STATIC_ROUTES` | Defines the static routes source-of-truth value. | [app/sitemap.ts:12](../../app/sitemap.ts#L12) |
+| function | `buildEntry(route, locale)` | Builds build entry. | [app/sitemap.ts:55](../../app/sitemap.ts#L55) |
+| function | `sitemap()` | Implements sitemap. | [app/sitemap.ts:64](../../app/sitemap.ts#L64) |

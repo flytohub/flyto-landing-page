@@ -32,6 +32,7 @@ interface ProductPaint {
 
 interface ProductCardData {
   productKey: 'cloud' | 'warroom';
+  name: string;
   href: string;
   IconMark: LucideIcon;
   status: 'live' | 'beta' | 'soon';
@@ -41,7 +42,8 @@ interface ProductCardData {
 const CARDS: ProductCardData[] = [
   {
     productKey: 'warroom',
-    href: '/open-source',
+    name: 'Flyto2 Warroom',
+    href: '/warroom',
     IconMark: ShieldCheck,
     status: 'beta',
     paint: {
@@ -53,7 +55,8 @@ const CARDS: ProductCardData[] = [
   },
   {
     productKey: 'cloud',
-    href: '/cloud',
+    name: 'Flyto2 Flow',
+    href: '/flow',
     IconMark: Cloud,
     status: 'live',
     paint: {
@@ -113,13 +116,13 @@ function ProductCard({ card, index }: { card: ProductCardData; index: number }) 
         style={{ background: paint.panel, borderColor: paint.border }}
       >
         {/* Top body */}
-        <div className="flex flex-col gap-7 p-8 sm:p-10">
+        <div className="flex flex-col gap-3 p-4 sm:gap-7 sm:p-10">
           <div className="flex items-start justify-between gap-4">
             <div
-              className="grid h-14 w-14 place-items-center rounded-lg border bg-white"
+              className="grid h-11 w-11 place-items-center rounded-lg border bg-white sm:h-14 sm:w-14"
               style={{ color: paint.accent, borderColor: paint.border }}
             >
-              <IconMark className="h-6 w-6" strokeWidth={1.5} />
+              <IconMark className="h-5 w-5 sm:h-6 sm:w-6" strokeWidth={1.5} />
             </div>
             <Tag
               variant={card.status}
@@ -130,17 +133,19 @@ function ProductCard({ card, index }: { card: ProductCardData; index: number }) 
           </div>
 
           <div>
-            <h3 className="h-display text-[clamp(32px,4vw,48px)] tracking-normal text-slate-950">
-              {t('name')}
+            <h3 className="h-display text-[26px] tracking-normal text-slate-950 sm:text-[clamp(28px,4vw,48px)]">
+              {card.name}
             </h3>
-            <p className="mt-3 text-[15px] leading-relaxed text-slate-700">{t('tagline')}</p>
+            <p className="mt-2 text-[14px] leading-relaxed text-slate-700 sm:mt-3 sm:text-[15px]">
+              {t('tagline')}
+            </p>
           </div>
 
-          <ul className="space-y-2.5">
+          <ul className="space-y-1.5 sm:space-y-2.5">
             {(['point1', 'point2', 'point3'] as const).map((k) => (
               <li
                 key={k}
-                className="flex items-start gap-2.5 text-[13.5px] leading-relaxed text-slate-700"
+                className="flex items-start gap-2 text-[12.75px] leading-relaxed text-slate-700 sm:gap-2.5 sm:text-[13.5px]"
               >
                 <Check className="mt-0.5 h-4 w-4 flex-none" style={{ color: paint.accent }} strokeWidth={2} />
                 <span>{t(k)}</span>
@@ -162,7 +167,7 @@ function ProductCard({ card, index }: { card: ProductCardData; index: number }) 
 
         {/* Bottom visual band — distinctive per product */}
         <div
-          className="relative mt-auto h-72 overflow-hidden border-t"
+          className="relative mt-auto h-40 overflow-hidden border-t sm:h-72"
           style={{ background: paint.visualBg, borderColor: paint.border }}
         >
           {card.productKey === 'cloud' ? (
@@ -192,7 +197,7 @@ function CloudPreview({ accent }: { accent: string }) {
     { Icon: Send,          label: 'Push to Slack' },
   ];
   return (
-    <div className="absolute inset-x-6 top-6 sm:inset-x-10 sm:top-8">
+    <div className="absolute inset-x-5 top-4 sm:inset-x-10 sm:top-8">
       <div className="overflow-hidden rounded-lg border border-[var(--color-line-strong)] bg-ink-900/80 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.6)]">
         <div className="flex items-center gap-2 border-b border-[var(--color-line)] bg-ink-800/50 px-3 py-2">
           <span className="h-1.5 w-1.5 rounded-full bg-white/15" />
@@ -208,7 +213,10 @@ function CloudPreview({ accent }: { accent: string }) {
         </div>
         <ul className="divide-y divide-[var(--color-line)]">
           {steps.map(({ Icon, label }, i) => (
-            <li key={i} className="flex items-center gap-2.5 px-3 py-2">
+            <li
+              key={i}
+              className={`${i > 2 ? 'hidden sm:flex' : 'flex'} items-center gap-2.5 px-3 py-2`}
+            >
               <span className="num-mono w-4 text-[10px] text-bone-300">
                 {String(i + 1).padStart(2, '0')}
               </span>
@@ -227,7 +235,7 @@ function CloudPreview({ accent }: { accent: string }) {
 
 function WarroomPreview() {
   return (
-    <div className="absolute inset-x-6 top-6 sm:inset-x-10 sm:top-8">
+    <div className="absolute inset-x-5 top-4 sm:inset-x-10 sm:top-8">
       <div className="overflow-hidden rounded-lg border border-[var(--color-line-strong)] bg-ink-900/85 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.6)]">
         <div className="flex items-center gap-2 border-b border-[var(--color-line)] bg-ink-800/50 px-3 py-2">
           <span className="h-1.5 w-1.5 rounded-full bg-white/15" />

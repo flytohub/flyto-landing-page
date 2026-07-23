@@ -105,7 +105,7 @@ export function MegaMenu({
                     : 'text-bone-200 hover:bg-white/5 hover:text-bone-100',
                 )}
               >
-                <span>{t(item.key)}</span>
+                <span>{item.label ?? t(item.key)}</span>
                 {item.external && (
                   <ArrowUpRight
                     className="h-3 w-3 opacity-50"

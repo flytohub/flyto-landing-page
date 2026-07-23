@@ -2,6 +2,7 @@ export type ProductId = 'platform' | 'cloud' | 'code';
 
 export interface NavItem {
   key: string;
+  label?: string;
   href: string;
   external?: boolean;
 }
@@ -12,8 +13,8 @@ export interface NavGroup {
 }
 
 export const products = [
-  { id: 'code'  as const, name: 'Warroom',  href: '/code',  icon: 'ShieldCheck', status: 'beta' as const },
-  { id: 'cloud' as const, name: 'Cloud', href: '/cloud', icon: 'Cloud',       status: 'live' as const },
+  { id: 'cloud' as const, name: 'Flow', href: '/flow', icon: 'Cloud', status: 'live' as const },
+  { id: 'code' as const, name: 'Warroom', href: '/warroom', icon: 'ShieldCheck', status: 'beta' as const },
 ];
 
 /**
@@ -27,27 +28,26 @@ export const productNavGrouped: Record<ProductId, NavGroup[]> = {
     {
       key: 'product',
       items: [
-        { key: 'overview',  href: '/cloud' },
-        { key: 'pricing',   href: '/cloud/pricing' },
-        { key: 'download',  href: '/cloud/download' },
-        { key: 'changelog', href: '/cloud/changelog' },
+        { key: 'overview', label: 'Flow overview', href: '/flow' },
+        { key: 'mcpBuilder', label: 'Visual MCP builder', href: '/flow/mcp-builder' },
+        { key: 'browserAutomation', label: 'Browser automation', href: '/flow/browser-automation' },
+        { key: 'n8nAlternative', label: 'n8n alternative', href: '/flow/n8n-alternative' },
       ],
     },
     {
       key: 'resources',
       items: [
-        { key: 'integrations', href: '/cloud/integrations' },
-        { key: 'recipes',      href: '/cloud/recipes' },
-        { key: 'templates',    href: '/cloud/templates' },
-        { key: 'useCases',     href: '/cloud/use-cases' },
+        { key: 'docs', label: 'Flow documentation', href: 'https://docs.flyto2.com/flow/', external: true },
+        { key: 'blog', label: 'Flow articles', href: 'https://blog.flyto2.com/flow/', external: true },
+        { key: 'recipes', label: 'Workflow recipes', href: '/cloud/recipes' },
       ],
     },
     {
       key: 'community',
       items: [
-        { key: 'community',   href: '/community' },
+        { key: 'github', label: 'Flow on GitHub', href: 'https://github.com/flytohub/flyto-flow', external: true },
+        { key: 'community', href: '/community' },
         { key: 'discussions', href: '/cloud/discussions' },
-        { key: 'docs',        href: 'https://docs.flyto2.com', external: true },
       ],
     },
   ],
@@ -55,24 +55,25 @@ export const productNavGrouped: Record<ProductId, NavGroup[]> = {
     {
       key: 'product',
       items: [
-        { key: 'overview', href: '/code' },
-        { key: 'platform', href: '/code/platform' },
-        { key: 'security', href: '/code/security' },
-        { key: 'pricing',  href: '/code/pricing' },
+        { key: 'overview', label: 'Warroom overview', href: '/warroom' },
+        { key: 'ctem', label: 'CTEM platform', href: '/warroom/ctem' },
+        { key: 'securityValidation', label: 'Security validation', href: '/warroom/security-validation' },
+        { key: 'attackSurface', label: 'Attack surface management', href: '/warroom/attack-surface-management' },
       ],
     },
     {
       key: 'resources',
       items: [
-        { key: 'integrations', href: '/code/integrations' },
-        { key: 'useCases',     href: '/code/use-cases' },
-        { key: 'oss',          href: '/open-source' },
+        { key: 'docs', label: 'Warroom documentation', href: 'https://docs.flyto2.com/warroom/', external: true },
+        { key: 'blog', label: 'Security articles', href: 'https://blog.flyto2.com/security/', external: true },
+        { key: 'oss', label: 'Self-hosted CE', href: '/open-source' },
       ],
     },
     {
       key: 'community',
       items: [
-        { key: 'community',   href: '/community' },
+        { key: 'github', label: 'Warroom on GitHub', href: 'https://github.com/flytohub/flyto-warroom', external: true },
+        { key: 'community', href: '/community' },
         { key: 'discussions', href: '/code/discussions' },
       ],
     },
@@ -91,7 +92,7 @@ export const productNav: Record<ProductId, NavItem[]> = {
 
 export function detectProduct(pathname: string): ProductId {
   const stripped = pathname.replace(/^\/[a-z]{2}(\/|$)/, '/');
-  if (stripped.startsWith('/cloud')) return 'cloud';
-  if (stripped.startsWith('/code')) return 'code';
+  if (stripped.startsWith('/flow') || stripped.startsWith('/cloud')) return 'cloud';
+  if (stripped.startsWith('/warroom') || stripped.startsWith('/code')) return 'code';
   return 'platform';
 }

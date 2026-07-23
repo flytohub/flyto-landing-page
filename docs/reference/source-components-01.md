@@ -2,7 +2,7 @@
 
 # Components Source Reference
 
-Source-backed contracts for **157 declarations**.
+Source-backed contracts for **160 declarations**.
 
 | Kind | Declaration | Responsibility | Source |
 |---|---|---|---|
@@ -55,10 +55,10 @@ Source-backed contracts for **157 declarations**.
 | method contract | `onChange(v)` | Defines the callable on change contract. | [components/forum/SortToggle.tsx:14](../../components/forum/SortToggle.tsx#L14) |
 | component | `Footer()` | Renders the footer interface. | [components/layout/Footer.tsx:8](../../components/layout/Footer.tsx#L8) |
 | function | `localized(href)` | Implements localized. | [components/layout/Footer.tsx:12](../../components/layout/Footer.tsx#L12) |
-| component | `ProductRail({ href, Icon, label, tagline, accent, border = '', })` | Renders the product rail interface. | [components/layout/Footer.tsx:119](../../components/layout/Footer.tsx#L119) |
-| component | `Column({ title, children, className, })` | Renders the column interface. | [components/layout/Footer.tsx:153](../../components/layout/Footer.tsx#L153) |
-| component | `FooterLink({ href, children, external })` | Renders the footer link interface. | [components/layout/Footer.tsx:164](../../components/layout/Footer.tsx#L164) |
-| component | `SocialIcon({ href, label, children, })` | Renders the social icon interface. | [components/layout/Footer.tsx:188](../../components/layout/Footer.tsx#L188) |
+| component | `ProductRail({ href, Icon, label, tagline, accent, border = '', })` | Renders the product rail interface. | [components/layout/Footer.tsx:115](../../components/layout/Footer.tsx#L115) |
+| component | `Column({ title, children, className, })` | Renders the column interface. | [components/layout/Footer.tsx:149](../../components/layout/Footer.tsx#L149) |
+| component | `FooterLink({ href, children, external })` | Renders the footer link interface. | [components/layout/Footer.tsx:160](../../components/layout/Footer.tsx#L160) |
+| component | `SocialIcon({ href, label, children, })` | Renders the social icon interface. | [components/layout/Footer.tsx:184](../../components/layout/Footer.tsx#L184) |
 | constant | `PRODUCT_ICONS` | Defines the product icons source-of-truth value. | [components/layout/Header.tsx:15](../../components/layout/Header.tsx#L15) |
 | component | `Header()` | Renders the header interface. | [components/layout/Header.tsx:17](../../components/layout/Header.tsx#L17) |
 | function | `onScroll()` | Implements on scroll. | [components/layout/Header.tsx:25](../../components/layout/Header.tsx#L25) |
@@ -77,10 +77,10 @@ Source-backed contracts for **157 declarations**.
 | component | `MobileMenu({ open, onClose })` | Renders the mobile menu interface. | [components/layout/MobileMenu.tsx:10](../../components/layout/MobileMenu.tsx#L10) |
 | method contract | `onClose()` | Defines the callable on close contract. | [components/layout/MobileMenu.tsx:10](../../components/layout/MobileMenu.tsx#L10) |
 | function | `localized(href)` | Implements localized. | [components/layout/MobileMenu.tsx:21](../../components/layout/MobileMenu.tsx#L21) |
-| component | `ProductPill({ href, icon, label, soon, onClose, })` | Renders the product pill interface. | [components/layout/MobileMenu.tsx:99](../../components/layout/MobileMenu.tsx#L99) |
-| method contract | `onClose()` | Defines the callable on close contract. | [components/layout/MobileMenu.tsx:110](../../components/layout/MobileMenu.tsx#L110) |
-| component | `NavRow({ href, label, icon, external, onClose, })` | Renders the nav row interface. | [components/layout/MobileMenu.tsx:133](../../components/layout/MobileMenu.tsx#L133) |
-| method contract | `onClose()` | Defines the callable on close contract. | [components/layout/MobileMenu.tsx:144](../../components/layout/MobileMenu.tsx#L144) |
+| component | `ProductPill({ href, icon, label, soon, onClose, })` | Renders the product pill interface. | [components/layout/MobileMenu.tsx:105](../../components/layout/MobileMenu.tsx#L105) |
+| method contract | `onClose()` | Defines the callable on close contract. | [components/layout/MobileMenu.tsx:116](../../components/layout/MobileMenu.tsx#L116) |
+| component | `NavRow({ href, label, icon, external, onClose, })` | Renders the nav row interface. | [components/layout/MobileMenu.tsx:139](../../components/layout/MobileMenu.tsx#L139) |
+| method contract | `onClose()` | Defines the callable on close contract. | [components/layout/MobileMenu.tsx:150](../../components/layout/MobileMenu.tsx#L150) |
 | constant | `STAGES` | Defines the stages source-of-truth value. | [components/sections/ClosedLoop.tsx:7](../../components/sections/ClosedLoop.tsx#L7) |
 | constant | `ICONS` | Defines the icons source-of-truth value. | [components/sections/ClosedLoop.tsx:14](../../components/sections/ClosedLoop.tsx#L14) |
 | component | `ClosedLoop()` | Renders the closed loop interface. | [components/sections/ClosedLoop.tsx:16](../../components/sections/ClosedLoop.tsx#L16) |
@@ -117,8 +117,7 @@ Source-backed contracts for **157 declarations**.
 | interface | `FAQItem` | Defines the faqitem data contract. | [components/sections/FAQ.tsx:9](../../components/sections/FAQ.tsx#L9) |
 | component | `FAQ({ namespace })` | Renders the faq interface. | [components/sections/FAQ.tsx:14](../../components/sections/FAQ.tsx#L14) |
 | component | `Hero()` | Renders the hero interface. | [components/sections/Hero.tsx:8](../../components/sections/Hero.tsx#L8) |
-| component | `BrowserChrome()` | Renders the browser chrome interface. | [components/sections/Hero.tsx:111](../../components/sections/Hero.tsx#L111) |
-| component | `Dot()` | Renders the dot interface. | [components/sections/Hero.tsx:130](../../components/sections/Hero.tsx#L130) |
+| component | `Dot()` | Renders the dot interface. | [components/sections/Hero.tsx:112](../../components/sections/Hero.tsx#L112) |
 | constant | `ICONS` | Defines the icons source-of-truth value. | [components/sections/HomeFeatures.tsx:21](../../components/sections/HomeFeatures.tsx#L21) |
 | interface | `FeatureItem` | Defines the feature item data contract. | [components/sections/HomeFeatures.tsx:36](../../components/sections/HomeFeatures.tsx#L36) |
 | component | `HomeFeatures()` | Renders the home features interface. | [components/sections/HomeFeatures.tsx:42](../../components/sections/HomeFeatures.tsx#L42) |
@@ -129,13 +128,17 @@ Source-backed contracts for **157 declarations**.
 | interface | `ChainStep` | Defines the chain step data contract. | [components/sections/JuiceShopProof.tsx:7](../../components/sections/JuiceShopProof.tsx#L7) |
 | interface | `ProofData` | Defines the proof data data contract. | [components/sections/JuiceShopProof.tsx:12](../../components/sections/JuiceShopProof.tsx#L12) |
 | component | `JuiceShopProof()` | Renders the juice shop proof interface. | [components/sections/JuiceShopProof.tsx:17](../../components/sections/JuiceShopProof.tsx#L17) |
+| constant | `LICENSES` | Defines the licenses source-of-truth value. | [components/sections/ProductIntentPage.tsx:7](../../components/sections/ProductIntentPage.tsx#L7) |
+| function | `external(href)` | Implements external. | [components/sections/ProductIntentPage.tsx:18](../../components/sections/ProductIntentPage.tsx#L18) |
+| component | `ActionLink({ href, children, secondary = false, })` | Renders the action link interface. | [components/sections/ProductIntentPage.tsx:22](../../components/sections/ProductIntentPage.tsx#L22) |
+| component | `ProductIntentPage({ page })` | Renders the product intent page interface. | [components/sections/ProductIntentPage.tsx:52](../../components/sections/ProductIntentPage.tsx#L52) |
 | interface | `ProductPaint` | Defines the product paint data contract. | [components/sections/ProductPicker.tsx:22](../../components/sections/ProductPicker.tsx#L22) |
 | interface | `ProductCardData` | Defines the product card data data contract. | [components/sections/ProductPicker.tsx:33](../../components/sections/ProductPicker.tsx#L33) |
-| constant | `CARDS` | Defines the cards source-of-truth value. | [components/sections/ProductPicker.tsx:41](../../components/sections/ProductPicker.tsx#L41) |
-| component | `ProductPicker()` | Renders the product picker interface. | [components/sections/ProductPicker.tsx:68](../../components/sections/ProductPicker.tsx#L68) |
-| component | `ProductCard({ card, index })` | Renders the product card interface. | [components/sections/ProductPicker.tsx:96](../../components/sections/ProductPicker.tsx#L96) |
-| component | `CloudPreview({ accent })` | Renders the cloud preview interface. | [components/sections/ProductPicker.tsx:186](../../components/sections/ProductPicker.tsx#L186) |
-| component | `WarroomPreview()` | Renders the warroom preview interface. | [components/sections/ProductPicker.tsx:228](../../components/sections/ProductPicker.tsx#L228) |
+| constant | `CARDS` | Defines the cards source-of-truth value. | [components/sections/ProductPicker.tsx:42](../../components/sections/ProductPicker.tsx#L42) |
+| component | `ProductPicker()` | Renders the product picker interface. | [components/sections/ProductPicker.tsx:71](../../components/sections/ProductPicker.tsx#L71) |
+| component | `ProductCard({ card, index })` | Renders the product card interface. | [components/sections/ProductPicker.tsx:99](../../components/sections/ProductPicker.tsx#L99) |
+| component | `CloudPreview({ accent })` | Renders the cloud preview interface. | [components/sections/ProductPicker.tsx:191](../../components/sections/ProductPicker.tsx#L191) |
+| component | `WarroomPreview()` | Renders the warroom preview interface. | [components/sections/ProductPicker.tsx:236](../../components/sections/ProductPicker.tsx#L236) |
 | component | `PublicRoutePage({ page })` | Renders the public route page interface. | [components/sections/PublicRoutePage.tsx:6](../../components/sections/PublicRoutePage.tsx#L6) |
 | interface | `Example` | Defines the example data contract. | [components/sections/RealExamples.tsx:8](../../components/sections/RealExamples.tsx#L8) |
 | constant | `EXAMPLES` | Defines the examples source-of-truth value. | [components/sections/RealExamples.tsx:16](../../components/sections/RealExamples.tsx#L16) |

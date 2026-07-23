@@ -6,31 +6,31 @@ Source-backed contracts for **37 declarations**.
 
 | Kind | Declaration | Responsibility | Source |
 |---|---|---|---|
-| function | `getTags(html, tagName)` | Retrieves get tags. | [scripts/seo-score.mjs:93](../../scripts/seo-score.mjs#L93) |
-| function | `attrs(rawAttrs)` | Implements attrs. | [scripts/seo-score.mjs:97](../../scripts/seo-score.mjs#L97) |
-| function | `findMeta(html, key, value)` | Retrieves find meta. | [scripts/seo-score.mjs:105](../../scripts/seo-score.mjs#L105) |
-| function | `findLink(html, rel, hrefLang)` | Retrieves find link. | [scripts/seo-score.mjs:114](../../scripts/seo-score.mjs#L114) |
-| function | `titleFrom(html)` | Implements title from. | [scripts/seo-score.mjs:126](../../scripts/seo-score.mjs#L126) |
-| function | `stripHtml(html)` | Implements strip html. | [scripts/seo-score.mjs:131](../../scripts/seo-score.mjs#L131) |
-| function | `visibleText(html)` | Implements visible text. | [scripts/seo-score.mjs:139](../../scripts/seo-score.mjs#L139) |
-| function | `textFromTag(html, tagName)` | Implements text from tag. | [scripts/seo-score.mjs:144](../../scripts/seo-score.mjs#L144) |
-| function | `normalizeTerm(value)` | Transforms normalize term. | [scripts/seo-score.mjs:148](../../scripts/seo-score.mjs#L148) |
-| function | `includesTerm(haystack, term)` | Implements includes term. | [scripts/seo-score.mjs:157](../../scripts/seo-score.mjs#L157) |
-| function | `wordList(text)` | Implements word list. | [scripts/seo-score.mjs:161](../../scripts/seo-score.mjs#L161) |
-| function | `wordCount(text)` | Implements word count. | [scripts/seo-score.mjs:165](../../scripts/seo-score.mjs#L165) |
-| function | `canonicalFor(route)` | Implements canonical for. | [scripts/seo-score.mjs:169](../../scripts/seo-score.mjs#L169) |
-| function | `htmlPathFor(route)` | Implements html path for. | [scripts/seo-score.mjs:173](../../scripts/seo-score.mjs#L173) |
-| function | `sitemapUrls()` | Implements sitemap urls. | [scripts/seo-score.mjs:177](../../scripts/seo-score.mjs#L177) |
-| function | `publicAssetExists(url)` | Implements public asset exists. | [scripts/seo-score.mjs:184](../../scripts/seo-score.mjs#L184) |
-| function | `linkStats(html)` | Implements link stats. | [scripts/seo-score.mjs:195](../../scripts/seo-score.mjs#L195) |
-| function | `imageStats(html)` | Implements image stats. | [scripts/seo-score.mjs:202](../../scripts/seo-score.mjs#L202) |
-| function | `jsonLdTypes(html)` | Implements json ld types. | [scripts/seo-score.mjs:212](../../scripts/seo-score.mjs#L212) |
-| function | `noBadEmails(html)` | Implements no bad emails. | [scripts/seo-score.mjs:231](../../scripts/seo-score.mjs#L231) |
-| function | `scoreItem(items, category, name, points, pass, recommendation, details)` | Implements score item. | [scripts/seo-score.mjs:236](../../scripts/seo-score.mjs#L236) |
-| function | `scoreRange(items, category, name, points, value, min, max, recommendation)` | Implements score range. | [scripts/seo-score.mjs:248](../../scripts/seo-score.mjs#L248) |
-| function | `scorePage(route, html, sitemap)` | Implements score page. | [scripts/seo-score.mjs:252](../../scripts/seo-score.mjs#L252) |
-| function | `writeReports(report)` | Implements write reports. | [scripts/seo-score.mjs:325](../../scripts/seo-score.mjs#L325) |
-| function | `main()` | Implements main. | [scripts/seo-score.mjs:359](../../scripts/seo-score.mjs#L359) |
+| function | `getTags(html, tagName)` | Retrieves get tags. | [scripts/seo-score.mjs:109](../../scripts/seo-score.mjs#L109) |
+| function | `attrs(rawAttrs)` | Implements attrs. | [scripts/seo-score.mjs:113](../../scripts/seo-score.mjs#L113) |
+| function | `findMeta(html, key, value)` | Retrieves find meta. | [scripts/seo-score.mjs:121](../../scripts/seo-score.mjs#L121) |
+| function | `findLink(html, rel, hrefLang)` | Retrieves find link. | [scripts/seo-score.mjs:130](../../scripts/seo-score.mjs#L130) |
+| function | `titleFrom(html)` | Implements title from. | [scripts/seo-score.mjs:142](../../scripts/seo-score.mjs#L142) |
+| function | `stripHtml(html)` | Implements strip html. | [scripts/seo-score.mjs:147](../../scripts/seo-score.mjs#L147) |
+| function | `visibleText(html)` | Implements visible text. | [scripts/seo-score.mjs:155](../../scripts/seo-score.mjs#L155) |
+| function | `textFromTag(html, tagName)` | Implements text from tag. | [scripts/seo-score.mjs:160](../../scripts/seo-score.mjs#L160) |
+| function | `normalizeTerm(value)` | Transforms normalize term. | [scripts/seo-score.mjs:164](../../scripts/seo-score.mjs#L164) |
+| function | `includesTerm(haystack, term)` | Implements includes term. | [scripts/seo-score.mjs:173](../../scripts/seo-score.mjs#L173) |
+| function | `wordList(text)` | Implements word list. | [scripts/seo-score.mjs:177](../../scripts/seo-score.mjs#L177) |
+| function | `wordCount(text)` | Implements word count. | [scripts/seo-score.mjs:181](../../scripts/seo-score.mjs#L181) |
+| function | `canonicalFor(route)` | Implements canonical for. | [scripts/seo-score.mjs:185](../../scripts/seo-score.mjs#L185) |
+| function | `htmlPathFor(route)` | Implements html path for. | [scripts/seo-score.mjs:189](../../scripts/seo-score.mjs#L189) |
+| function | `sitemapUrls()` | Implements sitemap urls. | [scripts/seo-score.mjs:193](../../scripts/seo-score.mjs#L193) |
+| function | `publicAssetExists(url)` | Implements public asset exists. | [scripts/seo-score.mjs:200](../../scripts/seo-score.mjs#L200) |
+| function | `linkStats(html)` | Implements link stats. | [scripts/seo-score.mjs:211](../../scripts/seo-score.mjs#L211) |
+| function | `imageStats(html)` | Implements image stats. | [scripts/seo-score.mjs:218](../../scripts/seo-score.mjs#L218) |
+| function | `jsonLdTypes(html)` | Implements json ld types. | [scripts/seo-score.mjs:228](../../scripts/seo-score.mjs#L228) |
+| function | `noBadEmails(html)` | Implements no bad emails. | [scripts/seo-score.mjs:247](../../scripts/seo-score.mjs#L247) |
+| function | `scoreItem(items, category, name, points, pass, recommendation, details)` | Implements score item. | [scripts/seo-score.mjs:252](../../scripts/seo-score.mjs#L252) |
+| function | `scoreRange(items, category, name, points, value, min, max, recommendation)` | Implements score range. | [scripts/seo-score.mjs:264](../../scripts/seo-score.mjs#L264) |
+| function | `scorePage(route, html, sitemap)` | Implements score page. | [scripts/seo-score.mjs:268](../../scripts/seo-score.mjs#L268) |
+| function | `writeReports(report)` | Implements write reports. | [scripts/seo-score.mjs:341](../../scripts/seo-score.mjs#L341) |
+| function | `main()` | Implements main. | [scripts/seo-score.mjs:375](../../scripts/seo-score.mjs#L375) |
 | constant | `repoRoot` | Defines the repo root source-of-truth value. | [scripts/sync-i18n-seo-manifest.mjs:6](../../scripts/sync-i18n-seo-manifest.mjs#L6) |
 | constant | `packageJson` | Defines the package json source-of-truth value. | [scripts/sync-i18n-seo-manifest.mjs:7](../../scripts/sync-i18n-seo-manifest.mjs#L7) |
 | constant | `surfaceByPackage` | Defines the surface by package source-of-truth value. | [scripts/sync-i18n-seo-manifest.mjs:9](../../scripts/sync-i18n-seo-manifest.mjs#L9) |

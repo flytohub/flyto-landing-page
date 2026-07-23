@@ -85,11 +85,13 @@ export default async function HomePage({
         url: 'https://flyto2.com',
         publisher: { '@id': 'https://flyto2.com/#organization' },
         about: [
+          'Flyto2 Flow',
           'AI workflow automation',
-          'open source AI agent framework',
-          'MCP server automation',
-          'no-code browser automation',
-          'security war room',
+          'visual MCP builder',
+          'self-hosted browser automation',
+          'Flyto2 Warroom',
+          'security validation platform',
+          'CTEM platform',
           'Continuous Threat Exposure Management',
           'continuous threat exposure management ctem framework',
           'attack surface management',
@@ -97,7 +99,7 @@ export default async function HomePage({
           'attack surface management tools',
           'attack surface management vs vulnerability management',
           'external attack surface management platform',
-          'open source attack surface management',
+          'source-available attack surface management',
           'dark web monitoring',
           'security automation platform',
           'MCP security',
@@ -109,22 +111,23 @@ export default async function HomePage({
         '@id': 'https://flyto2.com/#software',
         name: 'Flyto2',
         applicationCategory: 'BusinessApplication',
-        applicationSubCategory: 'AI workflow automation, MCP automation, and evidence-backed CTEM',
+        applicationSubCategory: 'AI automation and continuous security operations',
         operatingSystem: 'Web',
         url: 'https://flyto2.com',
         description:
-          `Flyto2 combines an open-source AI workflow automation engine, MCP-native agent tools, Cloud, Apps, browser automation, and a security war room for CTEM. It integrates existing ASM, dark web, code security, pentest, red-team, and AI/MCP signals into evidence-backed workflows. The core runtime provides ${FLYTO2_SEO_FACTS.coreRuntimeSummary}.`,
+          `Flyto2 provides two source-available product lines: Flow for visual AI workflow and MCP automation, and Warroom for CTEM and security validation operations. The open-source flyto-core runtime provides ${FLYTO2_SEO_FACTS.coreRuntimeSummary}.`,
         featureList: [
-          'AI workflow automation platform for deterministic workflows',
-          'Open source AI agent framework with MCP-native module tools',
-          'MCP server automation for Claude Code, Cursor, and compatible clients',
-          'No-code browser automation with trace and replay',
-          'Cloud, Apps, and browser automation workflows',
-          'Evidence-backed CTEM workflow',
+          'Flyto2 Flow visual workflow and MCP builder',
+          'Source-available self-hosted browser automation',
+          'Open-source flyto-core runtime with deterministic modules',
+          'MCP tools for compatible AI clients',
+          'Evidence and replay for automation runs',
+          'Flyto2 Warroom CTEM platform',
+          'Security validation with evidence and remediation context',
           'Attack surface and EASM correlation',
           'Attack surface management tools and software intake',
           'External attack surface management platform context',
-          'Open source attack surface management through Warroom CE',
+          'Source-available attack surface operations through Warroom CE',
           'Security automation platform workflows',
           'Dark web and threat intelligence correlation',
           'Code intelligence and MCP security context',
@@ -151,8 +154,8 @@ export default async function HomePage({
       <Integrations />
       <FAQ namespace="home.faq" />
       <CTASection
-        primaryHref="/open-source"
-        secondaryHref="/enterprise"
+        primaryHref="/flow"
+        secondaryHref="/warroom"
         primaryIcon="CodeIcon"
         secondaryIcon="BookOpen"
       />
