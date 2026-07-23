@@ -82,7 +82,7 @@ export function Hero() {
             <BrowserChrome />
             <div className="relative aspect-[16/10] w-full bg-slate-950">
               <Image
-                src="/assets/img/warroom/01-projects-home.webp"
+                src="/assets/img/warroom/01-projects-home-960.webp"
                 alt={t('eyebrow')}
                 fill
                 priority

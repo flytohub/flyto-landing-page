@@ -92,6 +92,14 @@
   <url>
     <loc>https://flyto2.com/open-source/</loc>
     <image:image>
+      <image:loc>https://flyto2.com/assets/img/warroom/01-projects-home-960.webp</image:loc>
+      <image:title>Flyto2 Projects Home 960</image:title>
+      <image:caption>Flyto2 product screenshot and visual asset for AI workflow automation, Warroom CE, CTEM, and MCP automation pages.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://flyto2.com/open-source/</loc>
+    <image:image>
       <image:loc>https://flyto2.com/assets/img/warroom/01-projects-home.png</image:loc>
       <image:title>Flyto2 Projects Home</image:title>
       <image:caption>Flyto2 product screenshot and visual asset for AI workflow automation, Warroom CE, CTEM, and MCP automation pages.</image:caption>
