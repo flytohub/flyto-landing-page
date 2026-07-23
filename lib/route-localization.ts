@@ -14,6 +14,7 @@ export const ENGLISH_ONLY_ROUTE_PREFIXES = [
   'docs',
   'enterprise',
   'external-attack-surface-management',
+  'flow',
   'langgraph-alternative',
   'make-alternative',
   'mssp-platform',
@@ -23,6 +24,7 @@ export const ENGLISH_ONLY_ROUTE_PREFIXES = [
   'pricing',
   'security',
   'trust',
+  'warroom',
   'whitepaper',
   'zapier-alternative',
 ] as const;

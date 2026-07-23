@@ -2,7 +2,7 @@
 
 # Lib Source Reference
 
-Source-backed contracts for **117 declarations**.
+Source-backed contracts for **132 declarations**.
 
 | Kind | Declaration | Responsibility | Source |
 |---|---|---|---|
@@ -67,13 +67,28 @@ Source-backed contracts for **117 declarations**.
 | function | `localeFlagUrl(locale)` | Resolve a flag SVG URL for a locale. Flags live at public/flags/{region}.svg. | [lib/locales.ts:44](../../lib/locales.ts#L44) |
 | type | `ProductId` | Defines the product id data contract. | [lib/nav.ts:1](../../lib/nav.ts#L1) |
 | interface | `NavItem` | Defines the nav item data contract. | [lib/nav.ts:3](../../lib/nav.ts#L3) |
-| interface | `NavGroup` | Defines the nav group data contract. | [lib/nav.ts:9](../../lib/nav.ts#L9) |
-| constant | `products` | Defines the products source-of-truth value. | [lib/nav.ts:14](../../lib/nav.ts#L14) |
-| constant | `productNavGrouped` | Grouped product navigation. Header renders these as 3 dropdown columns (Product / Resources / Community) instead of one long row of 10 items. Keys map to messages/<locale>.json -> nav.<key>. | [lib/nav.ts:24](../../lib/nav.ts#L24) |
-| constant | `productNav` | Flat fallback: legacy callers / mobile menu still consume a flat list. Derived from the grouped structure so they stay in sync. | [lib/nav.ts:86](../../lib/nav.ts#L86) |
-| function | `detectProduct(pathname)` | Implements detect product. | [lib/nav.ts:92](../../lib/nav.ts#L92) |
-| constant | `defaultOgImage` | Defines the default og image source-of-truth value. | [lib/public-route-metadata.ts:6](../../lib/public-route-metadata.ts#L6) |
-| function | `publicRouteMetadata(page, locale)` | Implements public route metadata. | [lib/public-route-metadata.ts:8](../../lib/public-route-metadata.ts#L8) |
+| interface | `NavGroup` | Defines the nav group data contract. | [lib/nav.ts:10](../../lib/nav.ts#L10) |
+| constant | `products` | Defines the products source-of-truth value. | [lib/nav.ts:15](../../lib/nav.ts#L15) |
+| constant | `productNavGrouped` | Grouped product navigation. Header renders these as 3 dropdown columns (Product / Resources / Community) instead of one long row of 10 items. Keys map to messages/<locale>.json -> nav.<key>. | [lib/nav.ts:25](../../lib/nav.ts#L25) |
+| constant | `productNav` | Flat fallback: legacy callers / mobile menu still consume a flat list. Derived from the grouped structure so they stay in sync. | [lib/nav.ts:87](../../lib/nav.ts#L87) |
+| function | `detectProduct(pathname)` | Implements detect product. | [lib/nav.ts:93](../../lib/nav.ts#L93) |
+| type | `ProductFamily` | Defines the product family data contract. | [lib/product-intent-pages.ts:1](../../lib/product-intent-pages.ts#L1) |
+| interface | `ProductIntentLink` | Defines the product intent link data contract. | [lib/product-intent-pages.ts:3](../../lib/product-intent-pages.ts#L3) |
+| interface | `ProductIntentSection` | Defines the product intent section data contract. | [lib/product-intent-pages.ts:8](../../lib/product-intent-pages.ts#L8) |
+| interface | `ProductIntentAnswer` | Defines the product intent answer data contract. | [lib/product-intent-pages.ts:14](../../lib/product-intent-pages.ts#L14) |
+| interface | `ProductIntentPage` | Defines the product intent page data contract. | [lib/product-intent-pages.ts:19](../../lib/product-intent-pages.ts#L19) |
+| constant | `FLOW_GITHUB` | Defines the flow github source-of-truth value. | [lib/product-intent-pages.ts:37](../../lib/product-intent-pages.ts#L37) |
+| constant | `FLOW_DOCS` | Defines the flow docs source-of-truth value. | [lib/product-intent-pages.ts:38](../../lib/product-intent-pages.ts#L38) |
+| constant | `WARROOM_GITHUB` | Defines the warroom github source-of-truth value. | [lib/product-intent-pages.ts:39](../../lib/product-intent-pages.ts#L39) |
+| constant | `WARROOM_DOCS` | Defines the warroom docs source-of-truth value. | [lib/product-intent-pages.ts:40](../../lib/product-intent-pages.ts#L40) |
+| constant | `flowScreenshot` | Defines the flow screenshot source-of-truth value. | [lib/product-intent-pages.ts:42](../../lib/product-intent-pages.ts#L42) |
+| constant | `warroomScreenshot` | Defines the warroom screenshot source-of-truth value. | [lib/product-intent-pages.ts:43](../../lib/product-intent-pages.ts#L43) |
+| constant | `productIntentPages` | Defines the product intent pages source-of-truth value. | [lib/product-intent-pages.ts:45](../../lib/product-intent-pages.ts#L45) |
+| function | `productIntentPage(family, slug)` | Implements product intent page. | [lib/product-intent-pages.ts:597](../../lib/product-intent-pages.ts#L597) |
+| function | `productIntentParams(family)` | Implements product intent params. | [lib/product-intent-pages.ts:604](../../lib/product-intent-pages.ts#L604) |
+| constant | `defaultOgImage` | Defines the default og image source-of-truth value. | [lib/public-route-metadata.ts:7](../../lib/public-route-metadata.ts#L7) |
+| function | `publicRouteMetadata(page, locale)` | Implements public route metadata. | [lib/public-route-metadata.ts:9](../../lib/public-route-metadata.ts#L9) |
+| function | `productIntentMetadata(page, locale)` | Implements product intent metadata. | [lib/public-route-metadata.ts:35](../../lib/public-route-metadata.ts#L35) |
 | type | `PublicRoutePageId` | Defines the public route page id data contract. | [lib/public-route-pages.ts:1](../../lib/public-route-pages.ts#L1) |
 | interface | `PublicRouteLink` | Defines the public route link data contract. | [lib/public-route-pages.ts:21](../../lib/public-route-pages.ts#L21) |
 | interface | `PublicRouteSection` | Defines the public route section data contract. | [lib/public-route-pages.ts:26](../../lib/public-route-pages.ts#L26) |
@@ -86,8 +101,8 @@ Source-backed contracts for **117 declarations**.
 | constant | `publicRoutePages` | Defines the public route pages source-of-truth value. | [lib/public-route-pages.ts:57](../../lib/public-route-pages.ts#L57) |
 | constant | `requiredGeoRoutes` | Defines the required geo routes source-of-truth value. | [lib/public-route-pages.ts:1030](../../lib/public-route-pages.ts#L1030) |
 | constant | `ENGLISH_ONLY_ROUTE_PREFIXES` | Defines the english only route prefixes source-of-truth value. | [lib/route-localization.ts:1](../../lib/route-localization.ts#L1) |
-| function | `normalizeLocalizationRoute(path)` | Transforms normalize localization route. | [lib/route-localization.ts:30](../../lib/route-localization.ts#L30) |
-| function | `isEnglishOnlyRoute(path)` | Validates is english only route. | [lib/route-localization.ts:34](../../lib/route-localization.ts#L34) |
+| function | `normalizeLocalizationRoute(path)` | Transforms normalize localization route. | [lib/route-localization.ts:32](../../lib/route-localization.ts#L32) |
+| function | `isEnglishOnlyRoute(path)` | Validates is english only route. | [lib/route-localization.ts:36](../../lib/route-localization.ts#L36) |
 | interface | `SecurityPageSection` | Defines the security page section data contract. | [lib/security-pages.ts:1](../../lib/security-pages.ts#L1) |
 | interface | `SecurityPage` | Defines the security page data contract. | [lib/security-pages.ts:7](../../lib/security-pages.ts#L7) |
 | constant | `WARROOM_CE_GITHUB` | Defines the warroom ce github source-of-truth value. | [lib/security-pages.ts:23](../../lib/security-pages.ts#L23) |

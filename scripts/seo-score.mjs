@@ -15,6 +15,14 @@ const legacyBrandPattern = new RegExp(`\\b${['Fly', 'to'].join('')}\\b`);
 
 const routes = [
   '',
+  'flow',
+  'flow/mcp-builder',
+  'flow/browser-automation',
+  'flow/n8n-alternative',
+  'warroom',
+  'warroom/ctem',
+  'warroom/security-validation',
+  'warroom/attack-surface-management',
   'cloud',
   'cloud/recipes',
   'cloud/templates',
@@ -47,7 +55,15 @@ const routes = [
 ];
 
 const focusByRoute = new Map([
-  ['', 'AI workflow automation'],
+  ['', 'Flyto2'],
+  ['flow', 'AI workflow automation'],
+  ['flow/mcp-builder', 'visual MCP builder'],
+  ['flow/browser-automation', 'self-hosted browser automation'],
+  ['flow/n8n-alternative', 'n8n alternative'],
+  ['warroom', 'security validation'],
+  ['warroom/ctem', 'continuous threat exposure management'],
+  ['warroom/security-validation', 'security validation'],
+  ['warroom/attack-surface-management', 'attack surface management'],
   ['cloud', 'AI workflow automation'],
   ['cloud/recipes', 'AI workflow automation examples'],
   ['cloud/templates', 'AI workflow automation templates'],

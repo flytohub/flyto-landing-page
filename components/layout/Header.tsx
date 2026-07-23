@@ -39,8 +39,13 @@ export function Header() {
   const subNavGroups = productNavGrouped[product];
   const showSubNav = subNavGroups.length > 0;
   const ctaHref =
-    product === 'code' ? '/code#waitlist' : product === 'cloud' ? '/cloud/download' : '/ctem';
-  const ctaLabel = product === 'code' ? t('waitlist') : product === 'cloud' ? t('download') : t('ctem');
+    product === 'code'
+      ? '/warroom'
+      : product === 'cloud'
+        ? 'https://github.com/flytohub/flyto-flow'
+        : '/flow';
+  const ctaLabel =
+    product === 'code' ? 'Explore Warroom' : product === 'cloud' ? 'View source' : 'Explore Flow';
 
   return (
     <>
@@ -126,7 +131,7 @@ export function Header() {
             <div className="mx-auto flex h-10 max-w-7xl items-center justify-between gap-4 px-5 sm:px-8">
               <div className="flex items-center gap-1">
                 <span className="font-mono text-[10.5px] tracking-[0.18em] uppercase text-bone-300">
-                  {product === 'cloud' ? '/ CLOUD' : '/ CODE'}
+                  {product === 'cloud' ? '/ FLOW' : '/ WARROOM'}
                 </span>
               </div>
               <nav className="flex items-center gap-6">

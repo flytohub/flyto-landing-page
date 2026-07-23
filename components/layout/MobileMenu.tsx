@@ -60,21 +60,27 @@ export function MobileMenu({ open, onClose }: { open: boolean; onClose: () => vo
           <div className="label-mono mb-4">PRODUCTS</div>
           <div className="grid grid-cols-2 gap-2.5">
             <ProductPill
-              href={localized('/code')}
+              href={localized('/flow')}
+              icon={<Cloud className="h-4 w-4" strokeWidth={1.5} />}
+              label="Flow"
+              onClose={onClose}
+            />
+            <ProductPill
+              href={localized('/warroom')}
               icon={<ShieldCheck className="h-4 w-4" strokeWidth={1.5} />}
-              label={t('code')}
+              label="Warroom"
               soon={t('beta')}
               onClose={onClose}
             />
-            <ProductPill href={localized('/cloud')} icon={<Cloud className="h-4 w-4" strokeWidth={1.5} />} label={t('cloud')} onClose={onClose} />
           </div>
 
           <div className="label-mono mb-4 mt-10">NAVIGATE</div>
           <ul className="space-y-1">
             <NavRow href={localized('/')} label={t('home')} onClose={onClose} />
-            <NavRow href={localized('/ctem')} label={t('ctem')} onClose={onClose} />
-            <NavRow href={localized('/attack-surface-management')} label={t('attackSurface')} onClose={onClose} />
-            <NavRow href={localized('/dark-web-monitoring')} label={t('darkWeb')} onClose={onClose} />
+            <NavRow href={localized('/flow/mcp-builder')} label="Visual MCP builder" onClose={onClose} />
+            <NavRow href={localized('/flow/browser-automation')} label="Browser automation" onClose={onClose} />
+            <NavRow href={localized('/warroom/ctem')} label={t('ctem')} onClose={onClose} />
+            <NavRow href={localized('/warroom/attack-surface-management')} label={t('attackSurface')} onClose={onClose} />
             <NavRow href="https://docs.flyto2.com" external icon={<BookOpen className="h-4 w-4" strokeWidth={1.5} />} label={t('docs')} onClose={onClose} />
             <NavRow href="https://blog.flyto2.com" external icon={<PenSquare className="h-4 w-4" strokeWidth={1.5} />} label={t('blog')} onClose={onClose} />
             <NavRow href={localized('/community')} icon={<UsersRound className="h-4 w-4" strokeWidth={1.5} />} label={t('community')} onClose={onClose} />
@@ -84,11 +90,11 @@ export function MobileMenu({ open, onClose }: { open: boolean; onClose: () => vo
 
         <div className="border-t border-[var(--color-line)] px-6 py-5">
           <Link
-            href={localized('/ctem')}
+            href={localized('/flow')}
             onClick={onClose}
             className="block rounded-full bg-bone-100 py-3 text-center text-[13px] font-medium tracking-wide text-ink-900"
           >
-            {t('ctem')}
+            Explore Flyto2 Flow
           </Link>
         </div>
       </aside>

@@ -18,15 +18,15 @@ export function Footer() {
       <div className="border-b border-[var(--color-line)]">
         <div className="mx-auto grid max-w-7xl grid-cols-1 sm:grid-cols-2">
           <ProductRail
-            href={localized('/cloud')}
+            href={localized('/flow')}
             Icon={Cloud}
-            label="Cloud"
+            label="Flow"
             tagline={t('cloudTagline')}
             accent="rgba(167, 139, 250, 0.9)"
             border="sm:border-r"
           />
           <ProductRail
-            href={localized('/code')}
+            href={localized('/warroom')}
             Icon={ShieldCheck}
             label="Warroom"
             tagline={t('warroomTagline')}
@@ -57,41 +57,37 @@ export function Footer() {
         </div>
 
         <Column title={t('products')} className="md:col-span-2">
+          <FooterLink href={localized('/flow')}>Flyto2 Flow</FooterLink>
+          <FooterLink href={localized('/flow/mcp-builder')}>Visual MCP builder</FooterLink>
+          <FooterLink href={localized('/flow/browser-automation')}>Browser automation</FooterLink>
+          <FooterLink href={localized('/warroom')}>Flyto2 Warroom</FooterLink>
+          <FooterLink href={localized('/warroom/ctem')}>CTEM platform</FooterLink>
           <FooterLink href={localized('/pricing')}>{nav('pricing')}</FooterLink>
-          <FooterLink href={localized('/ctem')}>{nav('ctem')}</FooterLink>
-          <FooterLink href={localized('/attack-surface-management')}>{nav('attackSurface')}</FooterLink>
-          <FooterLink href={localized('/dark-web-monitoring')}>{nav('darkWeb')}</FooterLink>
-          <FooterLink href={localized('/mssp-platform')}>{nav('mssp')}</FooterLink>
-          <FooterLink href={localized('/ai-security')}>{nav('aiSecurity')}</FooterLink>
-          <FooterLink href={localized('/bitsight-alternative')}>Bitsight alternatives</FooterLink>
-          <FooterLink href={localized('/security')}>Security</FooterLink>
           <FooterLink href={localized('/enterprise')}>Enterprise</FooterLink>
-          <FooterLink href={localized('/code/security')}>{nav('security')}</FooterLink>
-          <FooterLink href={localized('/cloud')}>{nav('cloud')}</FooterLink>
         </Column>
 
         <Column title={t('community')} className="md:col-span-2">
           <FooterLink href={localized('/community')}>{nav('community')}</FooterLink>
-          <FooterLink href={localized('/cloud/discussions')}>{nav('discussions')}</FooterLink>
           <FooterLink href={localized('/whitepaper')}>Whitepapers</FooterLink>
-          <FooterLink href={localized('/docs')}>{nav('docs')}</FooterLink>
+          <FooterLink href="https://docs.flyto2.com/flow/" external>Flow docs</FooterLink>
+          <FooterLink href="https://docs.flyto2.com/warroom/" external>Warroom docs</FooterLink>
           <FooterLink href={localized('/api-docs')}>API docs</FooterLink>
-          <FooterLink href={localized('/blog')}>{nav('blog')}</FooterLink>
+          <FooterLink href="https://blog.flyto2.com/flow/" external>Flow articles</FooterLink>
+          <FooterLink href="https://blog.flyto2.com/security/" external>Security articles</FooterLink>
           <FooterLink href={localized('/changelog')}>Changelog</FooterLink>
           <FooterLink href={localized('/contact')}>{nav('contact')}</FooterLink>
         </Column>
 
         <Column title={t('openSource')} className="md:col-span-3">
-          <FooterLink href={localized('/open-source')}>Open core</FooterLink>
-          <FooterLink href={localized('/aikido-alternative')}>Aikido alternative</FooterLink>
-          <FooterLink href="https://github.com/flytohub/flyto-warroom" external>Flyto2 Warroom CE</FooterLink>
+          <FooterLink href="https://github.com/flytohub/flyto-flow" external>Flyto2 Flow</FooterLink>
+          <FooterLink href="https://github.com/flytohub/flyto-warroom" external>Flyto2 Warroom</FooterLink>
           <FooterLink href="https://hub.docker.com/r/chesterhsu/flyto-warroom" external>Docker images</FooterLink>
-          <FooterLink href="https://docs.flyto2.com/warroom/self-hosted-ce" external>Self-hosted docs</FooterLink>
+          <FooterLink href="https://github.com/flytohub/flyto-core" external>flyto-core</FooterLink>
+          <FooterLink href="https://pypi.org/project/flyto-core/" external>flyto-core on PyPI</FooterLink>
+          <FooterLink href="https://pypi.org/project/flyto-indexer/" external>flyto-indexer on PyPI</FooterLink>
           <FooterLink href={localized('/compare')}>Compare</FooterLink>
           <FooterLink href={localized('/airgap')}>Airgap</FooterLink>
           <FooterLink href={localized('/trust')}>Trust</FooterLink>
-          <FooterLink href="https://github.com/flytohub/flyto-core" external>flyto-core</FooterLink>
-          <FooterLink href="https://pypi.org/project/flyto-indexer/" external>flyto-indexer</FooterLink>
         </Column>
       </div>
 

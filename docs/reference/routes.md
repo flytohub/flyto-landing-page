@@ -2,7 +2,7 @@
 
 # Public Route Reference
 
-The App Router contains **48 page modules**. Each public route is emitted for **16 locales**; dynamic template and whitepaper routes expand from their source registries.
+The App Router contains **50 page modules**. Each public route is emitted for **16 locales**; dynamic template and whitepaper routes expand from their source registries.
 
 | Route | Metadata | Static params | Structured data | Source |
 |---|---|---|---|---|
@@ -40,6 +40,7 @@ The App Router contains **48 page modules**. Each public route is emitted for **
 | `/docs/` | yes | no | no | [app/[locale]/docs/page.tsx:1](../../app/%5Blocale%5D/docs/page.tsx#L1) |
 | `/enterprise/` | yes | no | no | [app/[locale]/enterprise/page.tsx:1](../../app/%5Blocale%5D/enterprise/page.tsx#L1) |
 | `/external-attack-surface-management/` | yes | no | no | [app/[locale]/external-attack-surface-management/page.tsx:1](../../app/%5Blocale%5D/external-attack-surface-management/page.tsx#L1) |
+| `/flow/:[...slug]/` | yes | yes | no | [app/[locale]/flow/[[...slug]]/page.tsx:1](../../app/%5Blocale%5D/flow/%5B%5B...slug%5D%5D/page.tsx#L1) |
 | `/langgraph-alternative/` | yes | no | no | [app/[locale]/langgraph-alternative/page.tsx:1](../../app/%5Blocale%5D/langgraph-alternative/page.tsx#L1) |
 | `/make-alternative/` | yes | no | no | [app/[locale]/make-alternative/page.tsx:1](../../app/%5Blocale%5D/make-alternative/page.tsx#L1) |
 | `/mssp-platform/` | yes | no | no | [app/[locale]/mssp-platform/page.tsx:1](../../app/%5Blocale%5D/mssp-platform/page.tsx#L1) |
@@ -51,6 +52,7 @@ The App Router contains **48 page modules**. Each public route is emitted for **
 | `/security/` | yes | no | no | [app/[locale]/security/page.tsx:1](../../app/%5Blocale%5D/security/page.tsx#L1) |
 | `/terms/` | yes | no | no | [app/[locale]/terms/page.tsx:1](../../app/%5Blocale%5D/terms/page.tsx#L1) |
 | `/trust/` | yes | no | no | [app/[locale]/trust/page.tsx:1](../../app/%5Blocale%5D/trust/page.tsx#L1) |
+| `/warroom/:[...slug]/` | yes | yes | no | [app/[locale]/warroom/[[...slug]]/page.tsx:1](../../app/%5Blocale%5D/warroom/%5B%5B...slug%5D%5D/page.tsx#L1) |
 | `/whitepaper/` | yes | no | no | [app/[locale]/whitepaper/page.tsx:1](../../app/%5Blocale%5D/whitepaper/page.tsx#L1) |
 | `/whitepaper/:slug/` | yes | yes | no | [app/[locale]/whitepaper/[slug]/page.tsx:1](../../app/%5Blocale%5D/whitepaper/%5Bslug%5D/page.tsx#L1) |
 | `/zapier-alternative/` | yes | no | no | [app/[locale]/zapier-alternative/page.tsx:1](../../app/%5Blocale%5D/zapier-alternative/page.tsx#L1) |

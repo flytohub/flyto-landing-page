@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next';
 import { whitepaperSlugs } from '@/lib/whitepapers';
 import { templates } from '@/lib/templates';
 import { requiredGeoRoutes } from '@/lib/public-route-pages';
+import { productIntentPages } from '@/lib/product-intent-pages';
 import { defaultLocale, locales, type Locale } from '@/lib/locales';
 import { isEnglishOnlyRoute } from '@/lib/route-localization';
 import { languageAlternates, localizedUrl } from '@/lib/seo';
@@ -67,7 +68,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .map((tpl) => `cloud/templates/${tpl.slug}`);
 
   const routes = Array.from(
-    new Set([...STATIC_ROUTES, ...requiredGeoRoutes, ...whitepaperRoutes, ...templateRoutes]),
+    new Set([
+      ...STATIC_ROUTES,
+      ...requiredGeoRoutes,
+      ...productIntentPages.map((page) => page.path),
+      ...whitepaperRoutes,
+      ...templateRoutes,
+    ]),
   ).sort();
   return routes.flatMap((route) => {
     const routeLocales = isEnglishOnlyRoute(route) ? [defaultLocale] : locales;

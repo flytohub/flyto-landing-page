@@ -44,6 +44,14 @@
   <url>
     <loc>https://flyto2.com/</loc>
     <image:image>
+      <image:loc>https://flyto2.com/assets/img/flow-mcp-studio.jpg</image:loc>
+      <image:title>Flyto2 Flow Mcp Studio</image:title>
+      <image:caption>Flyto2 product screenshot and visual asset for AI workflow automation, Warroom CE, CTEM, and MCP automation pages.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://flyto2.com/</loc>
+    <image:image>
       <image:loc>https://flyto2.com/assets/img/hero-screenshot.png</image:loc>
       <image:title>Flyto2 Hero Screenshot</image:title>
       <image:caption>Flyto2 product screenshot and visual asset for AI workflow automation, Warroom CE, CTEM, and MCP automation pages.</image:caption>

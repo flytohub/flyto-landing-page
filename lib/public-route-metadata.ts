@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import type { PublicRoutePage } from './public-route-pages';
+import type { ProductIntentPage } from './product-intent-pages';
 import { OG_LOCALE_BY_LOCALE, localizedUrl, pageAlternates } from './seo';
 import { defaultLocale, type Locale } from './locales';
 
@@ -27,6 +28,32 @@ export function publicRouteMetadata(page: PublicRoutePage, locale: string): Meta
       title: page.metaTitle,
       description: page.metaDescription,
       images: [defaultOgImage],
+    },
+  };
+}
+
+export function productIntentMetadata(page: ProductIntentPage, locale: string): Metadata {
+  const url = localizedUrl(page.path, defaultLocale);
+  const supportedLocale = defaultLocale as Locale;
+
+  return {
+    title: page.metaTitle,
+    description: page.metaDescription,
+    alternates: pageAlternates(page.path, locale),
+    openGraph: {
+      title: `${page.metaTitle} | Flyto2`,
+      description: page.metaDescription,
+      url,
+      siteName: 'Flyto2',
+      type: 'website',
+      locale: OG_LOCALE_BY_LOCALE[supportedLocale],
+      images: [{ url: page.screenshot, alt: page.screenshotAlt }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${page.metaTitle} | Flyto2`,
+      description: page.metaDescription,
+      images: [page.screenshot],
     },
   };
 }
