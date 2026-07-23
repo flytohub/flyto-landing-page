@@ -1,5 +1,6 @@
 import { NextResponse, type NextRequest } from 'next/server';
 import { locales, defaultLocale } from './lib/locales';
+import { isEnglishOnlyRoute, normalizeLocalizationRoute } from './lib/route-localization';
 
 const localePattern = new RegExp(`^/(${locales.join('|')})(/|$)`);
 const defaultLocalePattern = new RegExp(`^/${defaultLocale}(/|$)`);
@@ -60,6 +61,15 @@ export default function middleware(request: NextRequest) {
     const url = request.nextUrl.clone();
     url.pathname = applyDefaultLocaleCanonical(cleanPathname);
     return NextResponse.redirect(url, 308);
+  }
+
+  if (localeMatch && locale !== defaultLocale) {
+    const route = normalizeLocalizationRoute(pathname.slice(`/${locale}`.length));
+    if (isEnglishOnlyRoute(route)) {
+      const url = request.nextUrl.clone();
+      url.pathname = route ? `/${route}/` : '/';
+      return NextResponse.redirect(url, 308);
+    }
   }
 
   if (request.headers.get(internalLocaleRewriteHeader) === '1') {

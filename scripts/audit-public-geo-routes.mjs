@@ -51,7 +51,13 @@ const sitemap = readFileSync(path.join(root, 'app', 'sitemap.ts'), 'utf8');
 if (!sitemap.includes('requiredGeoRoutes')) {
   failures.push('sitemap.ts must include requiredGeoRoutes');
 }
-for (const token of ['locales.map', 'localizedUrl', 'languageAlternates', 'alternates']) {
+for (const token of [
+  'routeLocales.map',
+  'localizedUrl',
+  'languageAlternates',
+  'alternates',
+  'isEnglishOnlyRoute',
+]) {
   if (!sitemap.includes(token)) {
     failures.push(`sitemap.ts missing multilingual sitemap token: ${token}`);
   }

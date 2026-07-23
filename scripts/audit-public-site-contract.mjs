@@ -30,6 +30,7 @@ const criticalPublicFiles = [
   'public/llms.txt',
   'public/llms-full.txt',
   'app/sitemap.ts',
+  'lib/route-localization.ts',
 ];
 
 const expectedCrawlerPolicies = [
@@ -189,16 +190,23 @@ const sitemap = read('app/sitemap.ts');
 if (!sitemap.includes('requiredGeoRoutes')) {
   failures.push('sitemap.ts must include requiredGeoRoutes so SEO/AEO/GEO routes stay in one source of truth');
 }
-for (const token of ['locales.map', 'localizedUrl', 'languageAlternates', 'alternates']) {
+for (const token of ['routeLocales.map', 'localizedUrl', 'languageAlternates', 'alternates', 'isEnglishOnlyRoute']) {
   if (!sitemap.includes(token)) {
     failures.push(`sitemap.ts missing multilingual sitemap contract token: ${token}`);
   }
 }
 
 const seo = read('lib/seo.ts');
-for (const token of ['HREFLANG_BY_LOCALE', 'x-default', 'localizedPath', 'languageAlternates', 'languages']) {
+for (const token of ['HREFLANG_BY_LOCALE', 'x-default', 'localizedPath', 'languageAlternates', 'languages', 'isEnglishOnlyRoute']) {
   if (!seo.includes(token)) {
     failures.push(`lib/seo.ts missing hreflang contract token: ${token}`);
+  }
+}
+
+const routeLocalization = read('lib/route-localization.ts');
+for (const route of [...productRoutes, 'ai-security', 'attack-surface-management', 'bitsight-alternative', 'ctem', 'dark-web-monitoring', 'external-attack-surface-management', 'mssp-platform', 'whitepaper']) {
+  if (!routeLocalization.includes(`'${route}'`)) {
+    failures.push(`English-only route missing localization policy: /${route}/`);
   }
 }
 
@@ -313,6 +321,11 @@ for (const url of [
 
 if (!middleware.includes('api(?:/|$)')) {
   failures.push('middleware matcher must exclude only /api or /api/*, not public routes like /api-docs/');
+}
+for (const token of ['isEnglishOnlyRoute', 'locale !== defaultLocale', 'NextResponse.redirect(url, 308)']) {
+  if (!middleware.includes(token)) {
+    failures.push(`middleware missing English-only locale redirect contract: ${token}`);
+  }
 }
 if (middleware.includes('(?!api|')) {
   failures.push('middleware matcher excludes every api* path and will 404 /api-docs/');

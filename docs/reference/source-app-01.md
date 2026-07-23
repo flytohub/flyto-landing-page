@@ -216,7 +216,7 @@ Source-backed contracts for **214 declarations**.
 | constant | `metadata` | Defines the metadata source-of-truth value. | [app/layout.tsx:30](../../app/layout.tsx#L30) |
 | constant | `viewport` | Defines the viewport source-of-truth value. | [app/layout.tsx:72](../../app/layout.tsx#L72) |
 | component | `RootLayout({ children })` | Renders the root layout interface. | [app/layout.tsx:78](../../app/layout.tsx#L78) |
-| constant | `dynamic` | Defines the dynamic source-of-truth value. | [app/sitemap.ts:8](../../app/sitemap.ts#L8) |
-| constant | `STATIC_ROUTES` | Defines the static routes source-of-truth value. | [app/sitemap.ts:10](../../app/sitemap.ts#L10) |
-| function | `buildEntry(route, locale)` | Builds build entry. | [app/sitemap.ts:53](../../app/sitemap.ts#L53) |
-| function | `sitemap()` | Implements sitemap. | [app/sitemap.ts:62](../../app/sitemap.ts#L62) |
+| constant | `dynamic` | Defines the dynamic source-of-truth value. | [app/sitemap.ts:9](../../app/sitemap.ts#L9) |
+| constant | `STATIC_ROUTES` | Defines the static routes source-of-truth value. | [app/sitemap.ts:11](../../app/sitemap.ts#L11) |
+| function | `buildEntry(route, locale)` | Builds build entry. | [app/sitemap.ts:54](../../app/sitemap.ts#L54) |
+| function | `sitemap()` | Implements sitemap. | [app/sitemap.ts:63](../../app/sitemap.ts#L63) |

@@ -32,22 +32,22 @@ const siteUrl = seoContract.surface.origin;
 
 const checkedPages = [
   { name: 'home', file: 'en.html', canonical: `${siteUrl}/`, terms: ['AI workflow automation', 'MCP-native', 'CTEM'] },
-  { name: 'ctem', file: 'en/ctem.html', canonical: `${siteUrl}/ctem/`, terms: ['CTEM', 'evidence', 'remediation'] },
-  { name: 'attack surface management', file: 'en/attack-surface-management.html', canonical: `${siteUrl}/attack-surface-management/`, terms: ['attack surface management'] },
-  { name: 'external attack surface management', file: 'en/external-attack-surface-management.html', canonical: `${siteUrl}/external-attack-surface-management/`, terms: ['external attack surface'] },
-  { name: 'open source', file: 'en/open-source.html', canonical: `${siteUrl}/open-source/`, terms: ['open source', 'Warroom CE'] },
-  { name: 'aikido alternative', file: 'en/aikido-alternative.html', canonical: `${siteUrl}/aikido-alternative/`, terms: ['Aikido alternative'] },
-  { name: 'security hub', file: 'en/security.html', canonical: `${siteUrl}/security/`, terms: ['security'] },
-  { name: 'pricing', file: 'en/pricing.html', canonical: `${siteUrl}/pricing/`, terms: ['pricing'] },
-  { name: 'enterprise', file: 'en/enterprise.html', canonical: `${siteUrl}/enterprise/`, terms: ['Enterprise'] },
-  { name: 'compare', file: 'en/compare.html', canonical: `${siteUrl}/compare/`, terms: ['compare'] },
-  { name: 'api docs', file: 'en/api-docs.html', canonical: `${siteUrl}/api-docs/`, terms: ['API'] },
-  { name: 'trust', file: 'en/trust.html', canonical: `${siteUrl}/trust/`, terms: ['trust'] },
-  { name: 'community', file: 'en/community.html', canonical: `${siteUrl}/community/`, terms: ['community', 'social'] },
-  { name: 'docs bridge', file: 'en/docs.html', canonical: `${siteUrl}/docs/`, terms: ['docs'] },
-  { name: 'blog bridge', file: 'en/blog.html', canonical: `${siteUrl}/blog/`, terms: ['blog'] },
-  { name: 'airgap', file: 'en/airgap.html', canonical: `${siteUrl}/airgap/`, terms: ['airgap'] },
-  { name: 'changelog', file: 'en/changelog.html', canonical: `${siteUrl}/changelog/`, terms: ['changelog'] },
+  { name: 'ctem', file: 'en/ctem.html', canonical: `${siteUrl}/ctem/`, englishOnly: true, terms: ['CTEM', 'evidence', 'remediation'] },
+  { name: 'attack surface management', file: 'en/attack-surface-management.html', canonical: `${siteUrl}/attack-surface-management/`, englishOnly: true, terms: ['attack surface management'] },
+  { name: 'external attack surface management', file: 'en/external-attack-surface-management.html', canonical: `${siteUrl}/external-attack-surface-management/`, englishOnly: true, terms: ['external attack surface'] },
+  { name: 'open source', file: 'en/open-source.html', canonical: `${siteUrl}/open-source/`, englishOnly: true, terms: ['open source', 'Warroom CE'] },
+  { name: 'aikido alternative', file: 'en/aikido-alternative.html', canonical: `${siteUrl}/aikido-alternative/`, englishOnly: true, terms: ['Aikido alternative'] },
+  { name: 'security hub', file: 'en/security.html', canonical: `${siteUrl}/security/`, englishOnly: true, terms: ['security'] },
+  { name: 'pricing', file: 'en/pricing.html', canonical: `${siteUrl}/pricing/`, englishOnly: true, terms: ['pricing'] },
+  { name: 'enterprise', file: 'en/enterprise.html', canonical: `${siteUrl}/enterprise/`, englishOnly: true, terms: ['Enterprise'] },
+  { name: 'compare', file: 'en/compare.html', canonical: `${siteUrl}/compare/`, englishOnly: true, terms: ['compare'] },
+  { name: 'api docs', file: 'en/api-docs.html', canonical: `${siteUrl}/api-docs/`, englishOnly: true, terms: ['API'] },
+  { name: 'trust', file: 'en/trust.html', canonical: `${siteUrl}/trust/`, englishOnly: true, terms: ['trust'] },
+  { name: 'community', file: 'en/community.html', canonical: `${siteUrl}/community/`, englishOnly: true, terms: ['community', 'social'] },
+  { name: 'docs bridge', file: 'en/docs.html', canonical: `${siteUrl}/docs/`, englishOnly: true, terms: ['docs'] },
+  { name: 'blog bridge', file: 'en/blog.html', canonical: `${siteUrl}/blog/`, englishOnly: true, terms: ['blog'] },
+  { name: 'airgap', file: 'en/airgap.html', canonical: `${siteUrl}/airgap/`, englishOnly: true, terms: ['airgap'] },
+  { name: 'changelog', file: 'en/changelog.html', canonical: `${siteUrl}/changelog/`, englishOnly: true, terms: ['changelog'] },
 ];
 
 const sitemapRequiredUrls = checkedPages.map((page) => page.canonical);
@@ -251,7 +251,9 @@ function checkPage(page) {
   if (ogUrl !== page.canonical) fail(`${page.name} og:url mismatch: expected ${page.canonical}, got ${ogUrl || '(missing)'}`);
   if (xDefault !== page.canonical) fail(`${page.name} x-default mismatch: expected ${page.canonical}, got ${xDefault || '(missing)'}`);
   if (enAlternate !== page.canonical) fail(`${page.name} en-US alternate mismatch: expected ${page.canonical}, got ${enAlternate || '(missing)'}`);
-  if (zhTwAlternate !== publicUrlForManifestLocale(route, 'zh-TW')) {
+  if (page.englishOnly && zhTwAlternate) {
+    fail(`${page.name} must not advertise an untranslated zh-TW alternate: ${zhTwAlternate}`);
+  } else if (!page.englishOnly && zhTwAlternate !== publicUrlForManifestLocale(route, 'zh-TW')) {
     fail(`${page.name} zh-TW alternate mismatch: expected ${publicUrlForManifestLocale(route, 'zh-TW')}, got ${zhTwAlternate || '(missing)'}`);
   }
   if (!robots.toLowerCase().includes('index')) fail(`${page.name} robots tag must be indexable; got ${robots || '(missing)'}`);
@@ -332,7 +334,7 @@ function checkBuildOutput() {
 function checkSitemap() {
   const sitemap = readFileSync(path.join(appDir, 'sitemap.xml.body'), 'utf8');
   const locCount = (sitemap.match(/<loc>/g) ?? []).length;
-  if (locCount < 900) fail(`sitemap has too few URLs for multilingual landing surface: ${locCount}`);
+  if (locCount < 600) fail(`sitemap has too few URLs for multilingual landing surface: ${locCount}`);
   for (const token of ['<lastmod>', '<changefreq>', '<priority>']) {
     if (sitemap.includes(token)) {
       fail(`sitemap includes ${token} without a route-level source of truth`);
@@ -340,6 +342,13 @@ function checkSitemap() {
   }
   for (const url of sitemapRequiredUrls) {
     if (!sitemap.includes(`<loc>${url}</loc>`)) fail(`sitemap missing ${url}`);
+  }
+  for (const page of checkedPages.filter((candidate) => candidate.englishOnly)) {
+    const route = routeFromCanonical(page.canonical);
+    const untranslatedUrl = publicUrlForManifestLocale(route, 'zh-TW');
+    if (sitemap.includes(`<loc>${untranslatedUrl}</loc>`)) {
+      fail(`sitemap must not index untranslated locale duplicate: ${untranslatedUrl}`);
+    }
   }
   for (const token of requiredSitemapAlternates) {
     if (!sitemap.includes(token)) fail(`sitemap missing alternate token: ${token}`);

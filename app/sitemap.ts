@@ -2,7 +2,8 @@ import type { MetadataRoute } from 'next';
 import { whitepaperSlugs } from '@/lib/whitepapers';
 import { templates } from '@/lib/templates';
 import { requiredGeoRoutes } from '@/lib/public-route-pages';
-import { locales, type Locale } from '@/lib/locales';
+import { defaultLocale, locales, type Locale } from '@/lib/locales';
+import { isEnglishOnlyRoute } from '@/lib/route-localization';
 import { languageAlternates, localizedUrl } from '@/lib/seo';
 
 export const dynamic = 'force-static';
@@ -68,5 +69,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routes = Array.from(
     new Set([...STATIC_ROUTES, ...requiredGeoRoutes, ...whitepaperRoutes, ...templateRoutes]),
   ).sort();
-  return routes.flatMap((route) => locales.map((locale) => buildEntry(route, locale)));
+  return routes.flatMap((route) => {
+    const routeLocales = isEnglishOnlyRoute(route) ? [defaultLocale] : locales;
+    return routeLocales.map((locale) => buildEntry(route, locale));
+  });
 }

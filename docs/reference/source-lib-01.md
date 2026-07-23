@@ -2,7 +2,7 @@
 
 # Lib Source Reference
 
-Source-backed contracts for **114 declarations**.
+Source-backed contracts for **117 declarations**.
 
 | Kind | Declaration | Responsibility | Source |
 |---|---|---|---|
@@ -85,32 +85,35 @@ Source-backed contracts for **114 declarations**.
 | constant | `WARROOM_DOCS` | Defines the warroom docs source-of-truth value. | [lib/public-route-pages.ts:55](../../lib/public-route-pages.ts#L55) |
 | constant | `publicRoutePages` | Defines the public route pages source-of-truth value. | [lib/public-route-pages.ts:57](../../lib/public-route-pages.ts#L57) |
 | constant | `requiredGeoRoutes` | Defines the required geo routes source-of-truth value. | [lib/public-route-pages.ts:1030](../../lib/public-route-pages.ts#L1030) |
+| constant | `ENGLISH_ONLY_ROUTE_PREFIXES` | Defines the english only route prefixes source-of-truth value. | [lib/route-localization.ts:1](../../lib/route-localization.ts#L1) |
+| function | `normalizeLocalizationRoute(path)` | Transforms normalize localization route. | [lib/route-localization.ts:30](../../lib/route-localization.ts#L30) |
+| function | `isEnglishOnlyRoute(path)` | Validates is english only route. | [lib/route-localization.ts:34](../../lib/route-localization.ts#L34) |
 | interface | `SecurityPageSection` | Defines the security page section data contract. | [lib/security-pages.ts:1](../../lib/security-pages.ts#L1) |
 | interface | `SecurityPage` | Defines the security page data contract. | [lib/security-pages.ts:7](../../lib/security-pages.ts#L7) |
 | constant | `WARROOM_CE_GITHUB` | Defines the warroom ce github source-of-truth value. | [lib/security-pages.ts:23](../../lib/security-pages.ts#L23) |
 | constant | `WARROOM_CE_DOCS` | Defines the warroom ce docs source-of-truth value. | [lib/security-pages.ts:24](../../lib/security-pages.ts#L24) |
 | constant | `securityPages` | Defines the security pages source-of-truth value. | [lib/security-pages.ts:26](../../lib/security-pages.ts#L26) |
 | type | `SecurityPageSlug` | Defines the security page slug data contract. | [lib/security-pages.ts:386](../../lib/security-pages.ts#L386) |
-| type | `SeoLocale` | Defines the seo locale data contract. | [lib/seo.ts:4](../../lib/seo.ts#L4) |
-| type | `SeoContract` | Defines the seo contract data contract. | [lib/seo.ts:9](../../lib/seo.ts#L9) |
-| constant | `seoContract` | Defines the seo contract source-of-truth value. | [lib/seo.ts:22](../../lib/seo.ts#L22) |
-| constant | `FLYTO2_SITE_URL` | Defines the flyto2 site url source-of-truth value. | [lib/seo.ts:24](../../lib/seo.ts#L24) |
-| constant | `MANIFEST_LOCALE_BY_PUBLIC_LOCALE` | Defines the manifest locale by public locale source-of-truth value. | [lib/seo.ts:26](../../lib/seo.ts#L26) |
-| constant | `HREFLANG_BY_LOCALE` | Defines the hreflang by locale source-of-truth value. | [lib/seo.ts:45](../../lib/seo.ts#L45) |
-| constant | `OG_LOCALE_BY_LOCALE` | Defines the og locale by locale source-of-truth value. | [lib/seo.ts:52](../../lib/seo.ts#L52) |
-| constant | `X_DEFAULT_HREFLANG` | Defines the x default hreflang source-of-truth value. | [lib/seo.ts:59](../../lib/seo.ts#L59) |
-| constant | `FLYTO2_SEO_FACTS` | Defines the flyto2 seo facts source-of-truth value. | [lib/seo.ts:61](../../lib/seo.ts#L61) |
-| constant | `FLYTO2_HOME_TITLE` | Defines the flyto2 home title source-of-truth value. | [lib/seo.ts:70](../../lib/seo.ts#L70) |
-| constant | `FLYTO2_HOME_FULL_TITLE` | Defines the flyto2 home full title source-of-truth value. | [lib/seo.ts:72](../../lib/seo.ts#L72) |
-| constant | `FLYTO2_HOME_DESCRIPTION` | Defines the flyto2 home description source-of-truth value. | [lib/seo.ts:74](../../lib/seo.ts#L74) |
-| constant | `manifestKeywordTerms` | Defines the manifest keyword terms source-of-truth value. | [lib/seo.ts:77](../../lib/seo.ts#L77) |
-| constant | `FLYTO2_SEO_KEYWORDS` | Defines the flyto2 seo keywords source-of-truth value. | [lib/seo.ts:82](../../lib/seo.ts#L82) |
-| function | `isSupportedLocale(locale)` | Build canonical + hreflang metadata for a public page. path: trailing-slashless route under the locale, e.g. '' for home, 'cloud', 'cloud/pricing'. Default English routes stay unprefixed. Non-English routes use the public locale prefix, and every variant advertises the same complete hreflang set. | [lib/seo.ts:150](../../lib/seo.ts#L150) |
-| function | `normalizeSeoPath(path)` | Transforms normalize seo path. | [lib/seo.ts:154](../../lib/seo.ts#L154) |
-| function | `localizedPath(path, locale)` | Implements localized path. | [lib/seo.ts:158](../../lib/seo.ts#L158) |
-| function | `localizedUrl(path, locale)` | Implements localized url. | [lib/seo.ts:165](../../lib/seo.ts#L165) |
-| function | `languageAlternates(path, absolute)` | Implements language alternates. | [lib/seo.ts:169](../../lib/seo.ts#L169) |
-| function | `pageAlternates(path, locale)` | Implements page alternates. | [lib/seo.ts:179](../../lib/seo.ts#L179) |
+| type | `SeoLocale` | Defines the seo locale data contract. | [lib/seo.ts:5](../../lib/seo.ts#L5) |
+| type | `SeoContract` | Defines the seo contract data contract. | [lib/seo.ts:10](../../lib/seo.ts#L10) |
+| constant | `seoContract` | Defines the seo contract source-of-truth value. | [lib/seo.ts:23](../../lib/seo.ts#L23) |
+| constant | `FLYTO2_SITE_URL` | Defines the flyto2 site url source-of-truth value. | [lib/seo.ts:25](../../lib/seo.ts#L25) |
+| constant | `MANIFEST_LOCALE_BY_PUBLIC_LOCALE` | Defines the manifest locale by public locale source-of-truth value. | [lib/seo.ts:27](../../lib/seo.ts#L27) |
+| constant | `HREFLANG_BY_LOCALE` | Defines the hreflang by locale source-of-truth value. | [lib/seo.ts:46](../../lib/seo.ts#L46) |
+| constant | `OG_LOCALE_BY_LOCALE` | Defines the og locale by locale source-of-truth value. | [lib/seo.ts:53](../../lib/seo.ts#L53) |
+| constant | `X_DEFAULT_HREFLANG` | Defines the x default hreflang source-of-truth value. | [lib/seo.ts:60](../../lib/seo.ts#L60) |
+| constant | `FLYTO2_SEO_FACTS` | Defines the flyto2 seo facts source-of-truth value. | [lib/seo.ts:62](../../lib/seo.ts#L62) |
+| constant | `FLYTO2_HOME_TITLE` | Defines the flyto2 home title source-of-truth value. | [lib/seo.ts:71](../../lib/seo.ts#L71) |
+| constant | `FLYTO2_HOME_FULL_TITLE` | Defines the flyto2 home full title source-of-truth value. | [lib/seo.ts:73](../../lib/seo.ts#L73) |
+| constant | `FLYTO2_HOME_DESCRIPTION` | Defines the flyto2 home description source-of-truth value. | [lib/seo.ts:75](../../lib/seo.ts#L75) |
+| constant | `manifestKeywordTerms` | Defines the manifest keyword terms source-of-truth value. | [lib/seo.ts:78](../../lib/seo.ts#L78) |
+| constant | `FLYTO2_SEO_KEYWORDS` | Defines the flyto2 seo keywords source-of-truth value. | [lib/seo.ts:83](../../lib/seo.ts#L83) |
+| function | `isSupportedLocale(locale)` | Build canonical + hreflang metadata for a public page. path: trailing-slashless route under the locale, e.g. '' for home, 'cloud', 'cloud/pricing'. Default English routes stay unprefixed. Non-English routes use the public locale prefix, and every variant advertises the same complete hreflang set. | [lib/seo.ts:151](../../lib/seo.ts#L151) |
+| function | `normalizeSeoPath(path)` | Transforms normalize seo path. | [lib/seo.ts:155](../../lib/seo.ts#L155) |
+| function | `localizedPath(path, locale)` | Implements localized path. | [lib/seo.ts:159](../../lib/seo.ts#L159) |
+| function | `localizedUrl(path, locale)` | Implements localized url. | [lib/seo.ts:166](../../lib/seo.ts#L166) |
+| function | `languageAlternates(path, absolute)` | Implements language alternates. | [lib/seo.ts:170](../../lib/seo.ts#L170) |
+| function | `pageAlternates(path, locale)` | Implements page alternates. | [lib/seo.ts:188](../../lib/seo.ts#L188) |
 | type | `TemplateContent` | Defines the template content data contract. | [lib/templates.ts:1](../../lib/templates.ts#L1) |
 | constant | `templates` | Defines the templates source-of-truth value. | [lib/templates.ts:19](../../lib/templates.ts#L19) |
 | interface | `WhitepaperMeta` | Defines the whitepaper meta data contract. | [lib/whitepapers.ts:9](../../lib/whitepapers.ts#L9) |

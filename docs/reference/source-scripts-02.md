@@ -2,10 +2,11 @@
 
 # Scripts Source Reference 2
 
-Source-backed contracts for **36 declarations**.
+Source-backed contracts for **37 declarations**.
 
 | Kind | Declaration | Responsibility | Source |
 |---|---|---|---|
+| function | `getTags(html, tagName)` | Retrieves get tags. | [scripts/seo-score.mjs:93](../../scripts/seo-score.mjs#L93) |
 | function | `attrs(rawAttrs)` | Implements attrs. | [scripts/seo-score.mjs:97](../../scripts/seo-score.mjs#L97) |
 | function | `findMeta(html, key, value)` | Retrieves find meta. | [scripts/seo-score.mjs:105](../../scripts/seo-score.mjs#L105) |
 | function | `findLink(html, rel, hrefLang)` | Retrieves find link. | [scripts/seo-score.mjs:114](../../scripts/seo-score.mjs#L114) |

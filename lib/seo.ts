@@ -1,4 +1,5 @@
 import { defaultLocale, locales, type Locale } from './locales';
+import { isEnglishOnlyRoute } from './route-localization';
 import i18nSeoContract from '../.seo/i18n-seo-manifest.json';
 
 type SeoLocale = {
@@ -168,6 +169,14 @@ export function localizedUrl(path: string, locale: string = defaultLocale) {
 
 export function languageAlternates(path: string, absolute = false) {
   const urlFor = absolute ? localizedUrl : localizedPath;
+  if (isEnglishOnlyRoute(path)) {
+    const englishUrl = urlFor(path, defaultLocale);
+    return {
+      [HREFLANG_BY_LOCALE[defaultLocale]]: englishUrl,
+      [X_DEFAULT_HREFLANG]: englishUrl,
+    };
+  }
+
   const languages = Object.fromEntries(
     locales.map((locale) => [HREFLANG_BY_LOCALE[locale], urlFor(path, locale)]),
   ) as Record<string, string>;
@@ -177,8 +186,9 @@ export function languageAlternates(path: string, absolute = false) {
 }
 
 export function pageAlternates(path: string, locale: string = defaultLocale) {
+  const canonicalLocale = isEnglishOnlyRoute(path) ? defaultLocale : locale;
   return {
-    canonical: localizedPath(path, locale),
+    canonical: localizedPath(path, canonicalLocale),
     languages: languageAlternates(path),
   };
 }

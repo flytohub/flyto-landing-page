@@ -74,6 +74,22 @@ These terms are now carried by `.seo/i18n-seo-manifest.json`, synced from
 
 ## Evidence Caveats
 
+### Taiwan / Traditional Chinese sanity check
+
+Ubersuggest was also queried with country `TW` and language `zh` on 2026-07-23.
+It returned no related-keyword rows for these four seeds, so the overview values
+are directional rather than a complete Taiwan keyword universe.
+
+| Keyword | Volume | SD | PD | CPC | Decision |
+| --- | ---: | ---: | ---: | ---: | --- |
+| AI 工作流程自動化 | 0 | 17 | 1 | 0.00 | Keep natural Chinese explanations, but retain the established English entity term `AI workflow automation`. |
+| MCP 安全 | 10 | 18 | 1 | 0.00 | Use `MCP security` with a Traditional Chinese explanation on genuinely localized content. |
+| 攻擊面管理 | 0 | 30 | 1 | 0.00 | Treat as educational language, not a proven acquisition term yet. |
+| 持續威脅曝險管理 | 0 | 30 | 1 | 0.00 | Pair with `CTEM` and validate future impressions in Search Console. |
+
+- English-only product, comparison, and whitepaper routes must not be advertised as translated hreflang variants. Their prefixed locale URLs permanently redirect to the English canonical until real translations exist.
+- Fully localized routes such as the homepage, Cloud, Code, and templates retain their multilingual sitemap and hreflang coverage.
+
 - Ubersuggest returned different values between its overview card and exact-keyword idea row for several seeds. The table uses the exact idea row when available.
 - `open source AI agent framework` is the largest discrepancy: overview reports 1,600 volume / SD 6 / PD 3 / CPC 7.05, while the exact related row reports 210 volume / SD 73 / CPC 15.58. Treat it as directional until Search Console confirms impressions.
 - `MCP security` overview reports 720 volume / SD 48 / PD 56 / CPC 21.80, while the exact related row reports 880 volume / SD 40 / PD 48 / CPC 20.08.
