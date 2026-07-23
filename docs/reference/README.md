@@ -6,7 +6,7 @@ This reference is generated from tracked source with the TypeScript compiler AST
 
 Inventory: **823 declarations**, **133 source files**, **50 page modules**, **16 locales**, **488 baseline message keys**, **16 environment variables**, **20 npm scripts**, **4 workflows**, and **7 public whitepapers**.
 
-Source fingerprint: `e90293d78e5747e471d969a3c7f07fcc5d650132be10fe7bda35e20b2e78f588`.
+Source fingerprint: `98f16ec65ab82e3fa61046a6d4914431d7b60a631a34044e5e1e7e8f9fa75d91`.
 
 ## Source Areas
 
