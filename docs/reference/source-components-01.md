@@ -2,7 +2,7 @@
 
 # Components Source Reference
 
-Source-backed contracts for **160 declarations**.
+Source-backed contracts for **161 declarations**.
 
 | Kind | Declaration | Responsibility | Source |
 |---|---|---|---|
@@ -150,9 +150,10 @@ Source-backed contracts for **160 declarations**.
 | interface | `StatItem` | Defines the stat item data contract. | [components/sections/Stats.tsx:7](../../components/sections/Stats.tsx#L7) |
 | component | `Stats()` | Renders the stats interface. | [components/sections/Stats.tsx:13](../../components/sections/Stats.tsx#L13) |
 | component | `CountedValue({ raw })` | Parses a value like "452+", "16", "100%" — extracts the number and renders an animated count-up that triggers when scrolled into view. Non-numeric values render as static text. | [components/sections/Stats.tsx:46](../../components/sections/Stats.tsx#L46) |
-| interface | `VideoFrameProps` | Defines the video frame props data contract. | [components/sections/VideoDemo.tsx:10](../../components/sections/VideoDemo.tsx#L10) |
-| component | `VideoFrame({ videoId, title, ratio, badge, duration, className })` | Renders the video frame interface. | [components/sections/VideoDemo.tsx:19](../../components/sections/VideoDemo.tsx#L19) |
-| component | `VideoDemo()` | Renders the video demo interface. | [components/sections/VideoDemo.tsx:86](../../components/sections/VideoDemo.tsx#L86) |
+| constant | `VIDEOS` | Defines the videos source-of-truth value. | [components/sections/VideoDemo.tsx:10](../../components/sections/VideoDemo.tsx#L10) |
+| interface | `VideoFrameProps` | Defines the video frame props data contract. | [components/sections/VideoDemo.tsx:31](../../components/sections/VideoDemo.tsx#L31) |
+| component | `VideoFrame({ videoId, title, ratio, badge, duration, className })` | Renders the video frame interface. | [components/sections/VideoDemo.tsx:40](../../components/sections/VideoDemo.tsx#L40) |
+| component | `VideoDemo()` | Renders the video demo interface. | [components/sections/VideoDemo.tsx:109](../../components/sections/VideoDemo.tsx#L109) |
 | component | `WhitepaperMarkdown({ source })` | Render a whitepaper markdown body with GFM (tables, strikethrough) and code highlighting. Styled to match the rest of the site (dark surfaces, violet accents, mono labels). | [components/sections/WhitepaperMarkdown.tsx:12](../../components/sections/WhitepaperMarkdown.tsx#L12) |
 | interface | `Step` | Defines the step data contract. | [components/sections/WorkflowVisual.tsx:4](../../components/sections/WorkflowVisual.tsx#L4) |
 | constant | `STEPS` | Defines the steps source-of-truth value. | [components/sections/WorkflowVisual.tsx:10](../../components/sections/WorkflowVisual.tsx#L10) |

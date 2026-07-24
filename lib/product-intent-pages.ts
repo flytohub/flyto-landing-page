@@ -16,6 +16,15 @@ export interface ProductIntentAnswer {
   answer: string;
 }
 
+export interface ProductIntentQuickStart {
+  eyebrow: string;
+  title: string;
+  body: string;
+  command: string;
+  note: string;
+  links: ProductIntentLink[];
+}
+
 export interface ProductIntentPage {
   family: ProductFamily;
   slug: string[];
@@ -29,6 +38,7 @@ export interface ProductIntentPage {
   screenshotAlt: string;
   primaryCta: ProductIntentLink;
   secondaryCta: ProductIntentLink;
+  quickStart?: ProductIntentQuickStart;
   sections: ProductIntentSection[];
   answers: ProductIntentAnswer[];
   related: ProductIntentLink[];
@@ -59,6 +69,30 @@ export const productIntentPages: ProductIntentPage[] = [
       'Flyto2 Flow MCP Studio showing generated workflow tools, schema inputs, and an auditable tool response',
     primaryCta: { label: 'View Flyto2 Flow on GitHub', href: FLOW_GITHUB },
     secondaryCta: { label: 'Read Flow documentation', href: FLOW_DOCS },
+    quickStart: {
+      eyebrow: 'Flow Community Edition',
+      title: 'Start the self-hosted CE image with Docker.',
+      body:
+        'The released multi-architecture image bundles the Flow application, flyto-core, Playwright, and Chromium. It starts without a Flyto2 account and publishes only to loopback by default.',
+      command: `docker pull docker.io/flyto2/flow:0.1.1
+docker run --detach \\
+  --name flyto-flow \\
+  --init \\
+  --restart unless-stopped \\
+  --shm-size=1g \\
+  --publish 127.0.0.1:9000:9000 \\
+  --volume flyto-flow-data:/data/flyto \\
+  docker.io/flyto2/flow:0.1.1`,
+      note:
+        'Open http://127.0.0.1:9000. The named volume keeps workflows, runs, evidence, and local state across container replacement.',
+      links: [
+        { label: 'Flow CE on Docker Hub', href: 'https://hub.docker.com/r/flyto2/flow' },
+        {
+          label: 'CE Docker installation guide',
+          href: 'https://docs.flyto2.com/flow/community-edition-docker',
+        },
+      ],
+    },
     sections: [
       {
         title: 'Visual workflow automation',
@@ -106,6 +140,11 @@ export const productIntentPages: ProductIntentPage[] = [
         question: 'Does Flow require a cloud account?',
         answer:
           'No. The self-hosted edition starts with one local accountless workspace on loopback. Hosted collaboration and managed services are separate product boundaries.',
+      },
+      {
+        question: 'Is there a Flyto2 Flow Community Edition Docker image?',
+        answer:
+          'Yes. Flyto2 publishes the multi-architecture Community Edition image at docker.io/flyto2/flow. Pin a reviewed version or release digest, keep the default loopback binding, and retain the flyto-flow-data volume when replacing the container.',
       },
     ],
     related: [

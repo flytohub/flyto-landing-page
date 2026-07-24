@@ -2,7 +2,7 @@
 
 # Lib Source Reference
 
-Source-backed contracts for **132 declarations**.
+Source-backed contracts for **133 declarations**.
 
 | Kind | Declaration | Responsibility | Source |
 |---|---|---|---|
@@ -76,16 +76,17 @@ Source-backed contracts for **132 declarations**.
 | interface | `ProductIntentLink` | Defines the product intent link data contract. | [lib/product-intent-pages.ts:3](../../lib/product-intent-pages.ts#L3) |
 | interface | `ProductIntentSection` | Defines the product intent section data contract. | [lib/product-intent-pages.ts:8](../../lib/product-intent-pages.ts#L8) |
 | interface | `ProductIntentAnswer` | Defines the product intent answer data contract. | [lib/product-intent-pages.ts:14](../../lib/product-intent-pages.ts#L14) |
-| interface | `ProductIntentPage` | Defines the product intent page data contract. | [lib/product-intent-pages.ts:19](../../lib/product-intent-pages.ts#L19) |
-| constant | `FLOW_GITHUB` | Defines the flow github source-of-truth value. | [lib/product-intent-pages.ts:37](../../lib/product-intent-pages.ts#L37) |
-| constant | `FLOW_DOCS` | Defines the flow docs source-of-truth value. | [lib/product-intent-pages.ts:38](../../lib/product-intent-pages.ts#L38) |
-| constant | `WARROOM_GITHUB` | Defines the warroom github source-of-truth value. | [lib/product-intent-pages.ts:39](../../lib/product-intent-pages.ts#L39) |
-| constant | `WARROOM_DOCS` | Defines the warroom docs source-of-truth value. | [lib/product-intent-pages.ts:40](../../lib/product-intent-pages.ts#L40) |
-| constant | `flowScreenshot` | Defines the flow screenshot source-of-truth value. | [lib/product-intent-pages.ts:42](../../lib/product-intent-pages.ts#L42) |
-| constant | `warroomScreenshot` | Defines the warroom screenshot source-of-truth value. | [lib/product-intent-pages.ts:43](../../lib/product-intent-pages.ts#L43) |
-| constant | `productIntentPages` | Defines the product intent pages source-of-truth value. | [lib/product-intent-pages.ts:45](../../lib/product-intent-pages.ts#L45) |
-| function | `productIntentPage(family, slug)` | Implements product intent page. | [lib/product-intent-pages.ts:597](../../lib/product-intent-pages.ts#L597) |
-| function | `productIntentParams(family)` | Implements product intent params. | [lib/product-intent-pages.ts:604](../../lib/product-intent-pages.ts#L604) |
+| interface | `ProductIntentQuickStart` | Defines the product intent quick start data contract. | [lib/product-intent-pages.ts:19](../../lib/product-intent-pages.ts#L19) |
+| interface | `ProductIntentPage` | Defines the product intent page data contract. | [lib/product-intent-pages.ts:28](../../lib/product-intent-pages.ts#L28) |
+| constant | `FLOW_GITHUB` | Defines the flow github source-of-truth value. | [lib/product-intent-pages.ts:47](../../lib/product-intent-pages.ts#L47) |
+| constant | `FLOW_DOCS` | Defines the flow docs source-of-truth value. | [lib/product-intent-pages.ts:48](../../lib/product-intent-pages.ts#L48) |
+| constant | `WARROOM_GITHUB` | Defines the warroom github source-of-truth value. | [lib/product-intent-pages.ts:49](../../lib/product-intent-pages.ts#L49) |
+| constant | `WARROOM_DOCS` | Defines the warroom docs source-of-truth value. | [lib/product-intent-pages.ts:50](../../lib/product-intent-pages.ts#L50) |
+| constant | `flowScreenshot` | Defines the flow screenshot source-of-truth value. | [lib/product-intent-pages.ts:52](../../lib/product-intent-pages.ts#L52) |
+| constant | `warroomScreenshot` | Defines the warroom screenshot source-of-truth value. | [lib/product-intent-pages.ts:53](../../lib/product-intent-pages.ts#L53) |
+| constant | `productIntentPages` | Defines the product intent pages source-of-truth value. | [lib/product-intent-pages.ts:55](../../lib/product-intent-pages.ts#L55) |
+| function | `productIntentPage(family, slug)` | Implements product intent page. | [lib/product-intent-pages.ts:636](../../lib/product-intent-pages.ts#L636) |
+| function | `productIntentParams(family)` | Implements product intent params. | [lib/product-intent-pages.ts:643](../../lib/product-intent-pages.ts#L643) |
 | constant | `defaultOgImage` | Defines the default og image source-of-truth value. | [lib/public-route-metadata.ts:7](../../lib/public-route-metadata.ts#L7) |
 | function | `publicRouteMetadata(page, locale)` | Implements public route metadata. | [lib/public-route-metadata.ts:9](../../lib/public-route-metadata.ts#L9) |
 | function | `productIntentMetadata(page, locale)` | Implements product intent metadata. | [lib/public-route-metadata.ts:35](../../lib/public-route-metadata.ts#L35) |

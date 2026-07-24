@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { Hero } from '@/components/sections/Hero';
 import { ProductPicker } from '@/components/sections/ProductPicker';
+import { VideoDemo } from '@/components/sections/VideoDemo';
 import { CoreBenefits } from '@/components/sections/CoreBenefits';
 import { HomeFeatures } from '@/components/sections/HomeFeatures';
 import { Stats } from '@/components/sections/Stats';
@@ -118,6 +119,7 @@ export default async function HomePage({
           `Flyto2 provides two source-available product lines: Flow for visual AI workflow and MCP automation, and Warroom for CTEM and security validation operations. The open-source flyto-core runtime provides ${FLYTO2_SEO_FACTS.coreRuntimeSummary}.`,
         featureList: [
           'Flyto2 Flow visual workflow and MCP builder',
+          'Flyto2 Flow Community Edition Docker image',
           'Source-available self-hosted browser automation',
           'Open-source flyto-core runtime with deterministic modules',
           'MCP tools for compatible AI clients',
@@ -148,6 +150,7 @@ export default async function HomePage({
       />
       <Hero />
       <ProductPicker />
+      <VideoDemo />
       <CoreBenefits />
       <HomeFeatures />
       <Stats />

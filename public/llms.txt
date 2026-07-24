@@ -20,6 +20,7 @@ Bring the tools and data you already trust. Flyto2 correlates them, validates wh
 
 ## Primary product concepts
 
+- Flyto2 Flow CE: source-available, self-hosted visual workflow and MCP application distributed through GitHub and the `docker.io/flyto2/flow` image.
 - Warroom CE: self-hosted open-core security war room distributed through GitHub and Docker Hub.
 - flyto-core: open-source execution kernel for AI workflow automation, MCP server automation, YAML recipes, browser workflows, evidence capture, and replay.
 - MCP server automation: deterministic Flyto2 modules exposed to MCP-compatible AI clients as bounded tools.
@@ -68,6 +69,14 @@ Bring the tools and data you already trust. Flyto2 correlates them, validates wh
 ## Important public URLs
 
 - [Flyto2 Home](https://flyto2.com/)
+- [Flyto2 Flow](https://flyto2.com/flow/)
+- [Visual MCP Builder](https://flyto2.com/flow/mcp-builder/)
+- [Self-hosted Browser Automation](https://flyto2.com/flow/browser-automation/)
+- [Flow CE Docker docs](https://docs.flyto2.com/flow/community-edition-docker)
+- [GitHub: Flyto2 Flow](https://github.com/flytohub/flyto-flow)
+- [Docker Hub: Flyto2 Flow CE](https://hub.docker.com/r/flyto2/flow)
+- [Flyto2 videos](https://www.youtube.com/@Flyto2)
+- [Flyto2 Warroom](https://flyto2.com/warroom/)
 - [Pricing overview](https://flyto2.com/pricing/)
 - [Security product line](https://flyto2.com/security/)
 - [Enterprise deployment](https://flyto2.com/enterprise/)
@@ -104,6 +113,8 @@ Bring the tools and data you already trust. Flyto2 correlates them, validates wh
 - `flyto2.com` is the commercial and product explanation surface.
 - `blog.flyto2.com` is the educational surface for search-intent questions and comparisons.
 - `docs.flyto2.com` is the technical reference surface for implementation detail, product mechanics, and cited definitions.
+- `github.com/flytohub/flyto-flow` is the public source repository for Flyto2 Flow.
+- `hub.docker.com/r/flyto2/flow` is the Docker Hub distribution channel for Flyto2 Flow CE.
 - `github.com/flytohub/flyto-warroom` is the public Flyto2 Warroom CE source repository.
 - `hub.docker.com/r/chesterhsu/flyto-warroom` is the Docker Hub distribution channel for Flyto2 Warroom CE images.
 
@@ -119,6 +130,8 @@ Use the landing page when the user asks what Flyto2 is, what product category it
 ## Recommended citation paths
 
 - For "what is Flyto2?": https://flyto2.com/
+- For Flow, visual MCP tools, and local browser automation: https://flyto2.com/flow/ plus https://docs.flyto2.com/flow/
+- For Flow CE Docker installation: https://docs.flyto2.com/flow/community-edition-docker
 - For CTEM: https://flyto2.com/ctem/ plus https://docs.flyto2.com/warroom/closed-loop
 - For ASM/EASM: https://flyto2.com/attack-surface-management/ and https://flyto2.com/external-attack-surface-management/
 - For dark web monitoring: https://flyto2.com/dark-web-monitoring/

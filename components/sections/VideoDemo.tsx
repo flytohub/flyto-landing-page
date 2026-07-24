@@ -7,6 +7,27 @@ import { Play } from 'lucide-react';
 import Image from 'next/image';
 import { cn } from '@/lib/cn';
 
+const VIDEOS = {
+  full: {
+    id: 'x3NCA01xKSc',
+    name: 'Why Is Website Automation So Complicated?',
+    description:
+      'A Flyto2 browser automation walkthrough showing a recorded workflow, an edited step, and replay.',
+    duration: 'PT47S',
+    durationLabel: '0:47',
+    uploadDate: '2026-03-15T22:57:59-07:00',
+  },
+  short: {
+    id: 'dFchXNdpHMI',
+    name: 'Copy. Paste. Click. Repeat. Still Doing This by Hand?',
+    description:
+      'A short Flyto2 demonstration of repetitive form work handled through browser automation.',
+    duration: 'PT52S',
+    durationLabel: '0:52',
+    uploadDate: '2026-03-15T23:59:38-07:00',
+  },
+} as const;
+
 interface VideoFrameProps {
   videoId: string;
   title: string;
@@ -39,6 +60,8 @@ function VideoFrame({ videoId, title, ratio, badge, duration, className }: Video
           className="h-full w-full"
           src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`}
           title={title}
+          loading="lazy"
+          referrerPolicy="strict-origin-when-cross-origin"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         />
@@ -85,12 +108,35 @@ function VideoFrame({ videoId, title, ratio, badge, duration, className }: Video
 
 export function VideoDemo() {
   const t = useTranslations('home.video');
+  const videoJsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': Object.values(VIDEOS).map((video) => ({
+      '@type': 'VideoObject',
+      '@id': `https://flyto2.com/#youtube-${video.id}`,
+      name: video.name,
+      description: video.description,
+      thumbnailUrl: [`https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`],
+      uploadDate: video.uploadDate,
+      duration: video.duration,
+      embedUrl: `https://www.youtube-nocookie.com/embed/${video.id}`,
+      contentUrl: `https://www.youtube.com/watch?v=${video.id}`,
+      publisher: { '@id': 'https://flyto2.com/#organization' },
+    })),
+  };
 
   return (
-    <section className="relative mx-auto max-w-6xl px-5 py-24 sm:px-8 sm:py-28">
+    <section
+      id="flow-demo-videos"
+      aria-labelledby="flow-demo-videos-title"
+      className="relative mx-auto max-w-6xl px-5 py-24 sm:px-8 sm:py-28"
+    >
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(videoJsonLd) }}
+      />
       <header className="mx-auto max-w-2xl text-center">
         <span className="label-mono">{t('label')}</span>
-        <h2 className="h-display mt-4 text-[clamp(36px,6vw,64px)]">
+        <h2 id="flow-demo-videos-title" className="h-display mt-4 text-[clamp(36px,6vw,64px)]">
           {t('title')}{' '}
           <span className="bg-gradient-to-br from-violet-300 via-violet-400 to-cyan-300 bg-clip-text text-transparent">
             {t('titleAccent')}
@@ -104,18 +150,15 @@ export function VideoDemo() {
       <div className="mt-12 grid gap-6 lg:grid-cols-12 lg:items-stretch">
         {/* Long-form demo */}
         <div className="lg:col-span-8">
-          <div className="mb-3 flex items-baseline justify-between">
+          <div className="mb-3 flex items-baseline">
             <span className="label-mono">{t('longLabel')}</span>
-            <span className="font-mono text-[10.5px] tracking-[0.16em] uppercase text-bone-300">
-              FULL DEMO
-            </span>
           </div>
           <VideoFrame
-            videoId="x3NCA01xKSc"
+            videoId={VIDEOS.full.id}
             title={t('longTitle')}
             ratio="wide"
             badge="DEMO"
-            duration="2 MIN"
+            duration={VIDEOS.full.durationLabel}
           />
           <p className="mt-4 max-w-md text-[13.5px] leading-relaxed text-bone-200">
             {t('longBody')}
@@ -124,19 +167,16 @@ export function VideoDemo() {
 
         {/* 60-second short */}
         <div className="lg:col-span-4">
-          <div className="mb-3 flex items-baseline justify-between">
+          <div className="mb-3 flex items-baseline">
             <span className="label-mono">{t('shortLabel')}</span>
-            <span className="font-mono text-[10.5px] tracking-[0.16em] uppercase text-amber-300">
-              SHORTS
-            </span>
           </div>
           <div className="mx-auto max-w-[280px] lg:max-w-none">
             <VideoFrame
-              videoId="dFchXNdpHMI"
+              videoId={VIDEOS.short.id}
               title={t('shortTitle')}
               ratio="short"
               badge="QUICK"
-              duration="60 SEC"
+              duration={VIDEOS.short.durationLabel}
             />
           </div>
           <p className="mt-4 max-w-md text-[13.5px] leading-relaxed text-bone-200">

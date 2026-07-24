@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import type { ReactNode } from 'react';
-import { ArrowRight, ArrowUpRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, CheckCircle2, Container } from 'lucide-react';
 import type { ProductIntentPage as ProductIntentPageData } from '@/lib/product-intent-pages';
 
 const LICENSES = {
@@ -84,6 +84,13 @@ export function ProductIntentPage({ page }: { page: ProductIntentPageData }) {
         description: page.metaDescription,
         license: license.url,
         isAccessibleForFree: true,
+        ...(page.quickStart
+          ? {
+              softwareVersion: '0.1.1',
+              downloadUrl: 'https://hub.docker.com/r/flyto2/flow',
+              installUrl: 'https://docs.flyto2.com/flow/community-edition-docker',
+            }
+          : {}),
         publisher: { '@id': 'https://flyto2.com/#organization' },
         featureList: page.sections.flatMap((section) => section.bullets),
       },
@@ -184,6 +191,50 @@ export function ProductIntentPage({ page }: { page: ProductIntentPageData }) {
           </div>
         </div>
       </section>
+
+      {page.quickStart ? (
+        <section
+          id="community-edition-docker"
+          aria-labelledby="community-edition-docker-title"
+          className="scroll-mt-24 border-b border-slate-700 bg-slate-950 text-white"
+        >
+          <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:px-8 sm:py-20 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+            <div>
+              <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.14em] text-cyan-200">
+                <Container className="h-4 w-4" strokeWidth={1.75} aria-hidden />
+                <span>{page.quickStart.eyebrow}</span>
+              </div>
+              <h2
+                id="community-edition-docker-title"
+                className="mt-4 max-w-xl font-display text-3xl font-semibold tracking-normal sm:text-4xl"
+              >
+                {page.quickStart.title}
+              </h2>
+              <p className="mt-5 max-w-xl text-[15px] leading-7 text-slate-300">
+                {page.quickStart.body}
+              </p>
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                {page.quickStart.links.map((link, index) => (
+                  <ActionLink key={link.href} href={link.href} secondary={index > 0}>
+                    {link.label}
+                  </ActionLink>
+                ))}
+              </div>
+            </div>
+            <div className="min-w-0">
+              <div className="overflow-hidden rounded-md border border-slate-700 bg-black">
+                <div className="flex min-h-10 items-center border-b border-slate-800 px-4 font-mono text-[11px] uppercase tracking-[0.12em] text-slate-400">
+                  Docker quick start
+                </div>
+                <pre className="overflow-x-auto p-4 text-[12px] leading-6 text-cyan-100 sm:p-6 sm:text-[13px]">
+                  <code>{page.quickStart.command}</code>
+                </pre>
+              </div>
+              <p className="mt-4 text-sm leading-6 text-slate-400">{page.quickStart.note}</p>
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       <section className="border-b border-slate-300 bg-white">
         <div className="mx-auto grid max-w-6xl lg:grid-cols-3">
