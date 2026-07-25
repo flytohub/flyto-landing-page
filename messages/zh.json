@@ -47,7 +47,7 @@
   },
   "home": {
     "metaTitle": "一次錄製,永遠重播",
-    "metaDescription": "離線運行的無程式碼瀏覽器自動化。錄一次,重播一輩子。452 模組、16 種語言、MIT 授權的引擎。",
+    "metaDescription": "離線運行的無程式碼瀏覽器自動化。錄一次,重播一輩子。466 模組、16 種語言、MIT 授權的引擎。",
     "hero": {
       "eyebrow": "FLYTO2 · 離線優先的自動化",
       "title": "把工作留在",
@@ -89,7 +89,7 @@
         },
         {
           "icon": "Boxes",
-          "title": "452 模組",
+          "title": "466 模組",
           "body": "CSV、Excel、Stripe、Notion、Postgres、Slack、OpenAI — 接好線,你只要把它們拼起來。"
         },
         {
@@ -107,7 +107,7 @@
     "stats": {
       "items": [
         {
-          "value": "452",
+          "value": "466",
           "label": "模組數",
           "body": "預先接好的節點:CSV、Excel、Stripe、Notion、Slack、AI、SQL — 你本來要自己寫一堆膠水的東西。"
         },
@@ -174,7 +174,7 @@
         "tagline": "無程式碼瀏覽器自動化。一次錄製,永遠重播。",
         "point1": "錄製任何瀏覽器流程,不用寫選擇器",
         "point2": "執行中可暫停、檢查、改值、繼續",
-        "point3": "452 預先接好的模組 — CSV、Stripe、Notion、Slack、OpenAI",
+        "point3": "466 預先接好的模組 — CSV、Stripe、Notion、Slack、OpenAI",
         "cta": "前往 Cloud"
       },
       "warroom": {
@@ -249,14 +249,14 @@
     },
     "integrations": {
       "label": "整合",
-      "title": "開箱即用 452 模組。",
+      "title": "開箱即用 466 模組。",
       "subtitle": "配線都接好了。拖拉、設定、跑 — 不用再寫一次「把 Sheet A 的這列複製到 API B」這種腳本。",
       "andMore": "+ 230 個更多 · 也可以自己用 Python / JS 寫"
     }
   },
   "cloud": {
     "metaTitle": "Cloud — 無程式碼瀏覽器自動化",
-    "metaDescription": "一次錄製,永遠重播。離線運行的無程式碼瀏覽器自動化。452 模組,16 種語言,MIT 授權的引擎。",
+    "metaDescription": "一次錄製,永遠重播。離線運行的無程式碼瀏覽器自動化。466 模組,16 種語言,MIT 授權的引擎。",
     "hero": {
       "eyebrow": "01 / CLOUD",
       "status": "出貨中",
@@ -264,7 +264,7 @@
       "titleAccent": "自動駕駛。",
       "lede": "打開錄製器,做一次任務,按停止。Cloud 把它變成可以編輯、版本控管、排程、分享的結構化工作流 — 一行程式碼都不用寫。",
       "ctaPrimary": "下載桌面版",
-      "ctaSecondary": "瀏覽 452 模組"
+      "ctaSecondary": "瀏覽 466 模組"
     },
     "how": {
       "label": "運作方式",
@@ -311,7 +311,7 @@
         },
         {
           "icon": "Boxes",
-          "title": "452 模組",
+          "title": "466 模組",
           "body": "CSV、Excel、Stripe、Notion、Sheets、Postgres、Slack、OpenAI — 接好線,你只要把它們拼起來。"
         },
         {
@@ -1032,7 +1032,7 @@
       "substrate": {
         "label": "ONE SUBSTRATE, TWO PRODUCT LINES",
         "title": "The same engine that runs your automation runs your war-room.",
-        "body": "Flyto2 is one brand with two product lines on the same execution substrate. The automation engine — flyto-core, 452 deterministic modules, MCP-native over stdio and streamable-http, with evidence capture, replay, YAML recipes and human-in-the-loop — is the established Zapier/n8n/Make alternative. The war-room rides the same deterministic modules and recipes to execute scans, collect evidence and drive red-team. You never have to choose between them.",
+        "body": "Flyto2 is one brand with two product lines on the same execution substrate. The automation engine — flyto-core, 466 deterministic modules, MCP-native over stdio and streamable-http, with evidence capture, replay, YAML recipes and human-in-the-loop — is the established Zapier/n8n/Make alternative. The war-room rides the same deterministic modules and recipes to execute scans, collect evidence and drive red-team. You never have to choose between them.",
         "automationCta": "Explore the automation engine"
       },
       "cta": {
@@ -1092,7 +1092,7 @@
         "tagline": "個人探索自動化。",
         "feature1": "每月 1,000 運算點數",
         "feature2": "最多 5 個工作流",
-        "feature3": "全部 452 模組",
+        "feature3": "全部 466 模組",
         "feature4": "社群支援",
         "cta": "免費下載"
       },

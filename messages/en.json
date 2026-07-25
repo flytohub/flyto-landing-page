@@ -65,7 +65,7 @@
         "tagline": "Source-available visual workflow and MCP automation with local browser execution, evidence, and replay.",
         "point1": "Run deterministic browser and API workflows",
         "point2": "Expose modules to AI agents through MCP server automation",
-        "point3": "452 modules across browser, data, files, cloud, AI, and notifications",
+        "point3": "466 modules across browser, data, files, cloud, AI, and notifications",
         "cta": "Explore Flyto2 Flow"
       },
       "warroom": {
@@ -201,7 +201,7 @@
           "body": "ASM/EASM, code risk, MCP security, runtime/cloud, dark web, footprint, asset map, pentest, and red-team."
         },
         {
-          "value": "452",
+          "value": "466",
           "label": "EXECUTION MODULES",
           "body": "Deterministic modules for browser, API, data, file, cloud, and notification workflows."
         },
@@ -246,7 +246,7 @@
         },
         {
           "q": "Is Flyto2 an open source AI agent framework?",
-          "a": "flyto-core is the open-source execution kernel underneath Flyto2. It exposes 452 registry-backed modules through CLI, API, YAML recipes, and MCP server automation so AI agents can call bounded tools instead of inventing unreviewed code."
+          "a": "flyto-core is the open-source execution kernel underneath Flyto2. It exposes 466 registry-backed modules through CLI, API, YAML recipes, and MCP server automation so AI agents can call bounded tools instead of inventing unreviewed code."
         }
       ]
     },
@@ -268,7 +268,7 @@
       "titleAccent": "ready to replay.",
       "lede": "Open the recorder, do the browser task once, hit stop. Flyto2 turns clicks, waits, downloads, and checks into AI workflow automation you can edit, schedule, and rerun from the failed step.",
       "ctaPrimary": "Download desktop app",
-      "ctaSecondary": "Browse 452 modules"
+      "ctaSecondary": "Browse 466 modules"
     },
     "how": {
       "label": "HOW IT WORKS",
@@ -315,7 +315,7 @@
         },
         {
           "icon": "Boxes",
-          "title": "452 modules",
+          "title": "466 modules",
           "body": "CSV, Excel, Stripe, Notion, Sheets, Postgres, Slack, OpenAI — wired up so you snap them together instead of writing API plumbing."
         },
         {
@@ -588,7 +588,7 @@
         "tagline": "For individuals exploring automation.",
         "feature1": "1,000 compute points / month",
         "feature2": "Up to 5 saved workflows",
-        "feature3": "All 452 modules",
+        "feature3": "All 466 modules",
         "feature4": "Community support",
         "cta": "Download free"
       },
@@ -1635,7 +1635,7 @@
       "substrate": {
         "label": "ONE SUBSTRATE, TWO PRODUCT LINES",
         "title": "The same engine that runs your automation runs your war-room.",
-        "body": "Flyto2 is one brand with two product lines on the same execution substrate. The automation engine — flyto-core, 452 deterministic modules, MCP-native over stdio and streamable-http, with evidence capture, replay, YAML recipes and human-in-the-loop — is the established Zapier/n8n/Make alternative. The war-room rides the same deterministic modules and recipes to execute scans, collect evidence and drive red-team. You never have to choose between them.",
+        "body": "Flyto2 is one brand with two product lines on the same execution substrate. The automation engine — flyto-core, 466 deterministic modules, MCP-native over stdio and streamable-http, with evidence capture, replay, YAML recipes and human-in-the-loop — is the established Zapier/n8n/Make alternative. The war-room rides the same deterministic modules and recipes to execute scans, collect evidence and drive red-team. You never have to choose between them.",
         "automationCta": "Explore the automation engine"
       },
       "cta": {

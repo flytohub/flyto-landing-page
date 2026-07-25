@@ -65,7 +65,7 @@
         "tagline": "नो-कोड ब्राउज़र ऑटोमेशन। एक बार रिकॉर्ड करें, हमेशा रीप्ले करें।",
         "point1": "बिना सेलेक्टर लिखे कोई भी ब्राउज़र फ़्लो रिकॉर्ड करें",
         "point2": "रन के बीच में रोकें, इन्स्पेक्ट करें, वैल्यू बदलें, फिर शुरू करें",
-        "point3": "452 प्री-वायर्ड मॉड्यूल — CSV, Stripe, Notion, Slack, OpenAI",
+        "point3": "466 प्री-वायर्ड मॉड्यूल — CSV, Stripe, Notion, Slack, OpenAI",
         "cta": "Cloud देखें"
       },
       "warroom": {
@@ -140,7 +140,7 @@
         },
         {
           "icon": "Boxes",
-          "title": "452 मॉड्यूल",
+          "title": "466 मॉड्यूल",
           "body": "CSV, Excel, Stripe, Notion, Postgres, Slack, OpenAI — प्री-वायर्ड ताकि आप उन्हें जोड़ें, API प्लंबिंग न लिखें।"
         },
         {
@@ -189,14 +189,14 @@
     },
     "integrations": {
       "label": "इंटीग्रेशन",
-      "title": "452 मॉड्यूल बॉक्स से बाहर।",
+      "title": "466 मॉड्यूल बॉक्स से बाहर।",
       "subtitle": "प्लंबिंग पहले से वायर्ड है। ड्रैग करें, ड्रॉप करें, कॉन्फ़िगर करें — कभी और \"Sheet A की यह रो API B पर कॉपी करो\" स्क्रिप्ट न लिखें।",
       "andMore": "+ 230 और · Python या JS में अपना बनाएँ"
     },
     "stats": {
       "items": [
         {
-          "value": "452",
+          "value": "466",
           "label": "मॉड्यूल",
           "body": "CSV, Excel, Stripe, Notion, Slack, AI, SQL के लिए प्री-बिल्ट नोड्स — जो आप खुद जोड़ते।"
         },
@@ -256,7 +256,7 @@
   },
   "cloud": {
     "metaTitle": "Cloud — नो-कोड ब्राउज़र ऑटोमेशन",
-    "metaDescription": "एक बार रिकॉर्ड करें, हमेशा रीप्ले करें। ऑफ़लाइन चलने वाला ब्राउज़र ऑटोमेशन। 452 मॉड्यूल, 16 भाषाएँ, MIT-लाइसेंस इंजन।",
+    "metaDescription": "एक बार रिकॉर्ड करें, हमेशा रीप्ले करें। ऑफ़लाइन चलने वाला ब्राउज़र ऑटोमेशन। 466 मॉड्यूल, 16 भाषाएँ, MIT-लाइसेंस इंजन।",
     "hero": {
       "eyebrow": "01 / CLOUD",
       "status": "उपलब्ध है",
@@ -264,7 +264,7 @@
       "titleAccent": "ऑटोपायलट पर।",
       "lede": "रिकॉर्डर खोलें, काम एक बार करें, स्टॉप दबाएँ। Flyto2 उसे एक स्ट्रक्चर्ड वर्कफ़्लो में बदलता है जिसे आप बिना एक लाइन कोड लिखे एडिट, वर्शन, शेड्यूल और शेयर कर सकते हैं।",
       "ctaPrimary": "डेस्कटॉप ऐप डाउनलोड करें",
-      "ctaSecondary": "452 मॉड्यूल देखें"
+      "ctaSecondary": "466 मॉड्यूल देखें"
     },
     "how": {
       "label": "यह कैसे काम करता है",
@@ -311,7 +311,7 @@
         },
         {
           "icon": "Boxes",
-          "title": "452 मॉड्यूल",
+          "title": "466 मॉड्यूल",
           "body": "CSV, Excel, Stripe, Notion, Sheets, Postgres, Slack, OpenAI — पहले से वायर्ड ताकि आप जोड़ें, API प्लंबिंग न लिखें।"
         },
         {
@@ -580,7 +580,7 @@
         "tagline": "ऑटोमेशन एक्सप्लोर करने वाले व्यक्तियों के लिए।",
         "feature1": "1,000 कंप्यूट पॉइंट / माह",
         "feature2": "अधिकतम 5 सेव्ड वर्कफ़्लो",
-        "feature3": "सभी 452 मॉड्यूल",
+        "feature3": "सभी 466 मॉड्यूल",
         "feature4": "कम्युनिटी सपोर्ट",
         "cta": "मुफ़्त डाउनलोड करें"
       },
@@ -1627,7 +1627,7 @@
       "substrate": {
         "label": "ONE SUBSTRATE, TWO PRODUCT LINES",
         "title": "The same engine that runs your automation runs your war-room.",
-        "body": "Flyto2 is one brand with two product lines on the same execution substrate. The automation engine — flyto-core, 452 deterministic modules, MCP-native over stdio and streamable-http, with evidence capture, replay, YAML recipes and human-in-the-loop — is the established Zapier/n8n/Make alternative. The war-room rides the same deterministic modules and recipes to execute scans, collect evidence and drive red-team. You never have to choose between them.",
+        "body": "Flyto2 is one brand with two product lines on the same execution substrate. The automation engine — flyto-core, 466 deterministic modules, MCP-native over stdio and streamable-http, with evidence capture, replay, YAML recipes and human-in-the-loop — is the established Zapier/n8n/Make alternative. The war-room rides the same deterministic modules and recipes to execute scans, collect evidence and drive red-team. You never have to choose between them.",
         "automationCta": "Explore the automation engine"
       },
       "cta": {

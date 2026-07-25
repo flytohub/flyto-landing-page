@@ -65,7 +65,7 @@
         "tagline": "ノーコードブラウザ自動化。一度記録、永遠再生。",
         "point1": "セレクタを書かずにブラウザ操作を記録",
         "point2": "一時停止、検査、実行中の値編集、再開",
-        "point3": "452の事前設定済みモジュール — CSV、Stripe、Notion、Slack、OpenAI",
+        "point3": "466の事前設定済みモジュール — CSV、Stripe、Notion、Slack、OpenAI",
         "cta": "Cloud を見る"
       },
       "warroom": {
@@ -140,7 +140,7 @@
         },
         {
           "icon": "Boxes",
-          "title": "452のモジュール",
+          "title": "466のモジュール",
           "body": "CSV、Excel、Stripe、Notion、Postgres、Slack、OpenAI — API の配線を書く代わりにスナップで繋ぎます。"
         },
         {
@@ -189,14 +189,14 @@
     },
     "integrations": {
       "label": "INTEGRATIONS",
-      "title": "452のモジュールがすぐ使える。",
+      "title": "466のモジュールがすぐ使える。",
       "subtitle": "配線はすでに済んでいます。ドラッグ、ドロップ、設定するだけ — 「Sheet A から API B へ行をコピー」スクリプトを二度と書かない。",
       "andMore": "+ 230以上 · PYTHON または JS でカスタムビルド"
     },
     "stats": {
       "items": [
         {
-          "value": "452",
+          "value": "466",
           "label": "MODULES",
           "body": "CSV、Excel、Stripe、Notion、Slack、AI、SQL — 自分で糊付けするはずだったものが、すぐ使えるノードとして。"
         },
@@ -256,7 +256,7 @@
   },
   "cloud": {
     "metaTitle": "Cloud — ノーコードブラウザ自動化",
-    "metaDescription": "一度記録、永遠再生。オフラインで動くノーコードのブラウザ自動化。452のモジュール、16言語、MIT ライセンスのエンジン。",
+    "metaDescription": "一度記録、永遠再生。オフラインで動くノーコードのブラウザ自動化。466のモジュール、16言語、MIT ライセンスのエンジン。",
     "hero": {
       "eyebrow": "01 / CLOUD",
       "status": "SHIPPING",
@@ -264,7 +264,7 @@
       "titleAccent": "オートパイロットで。",
       "lede": "レコーダーを開いて、一度操作して、停止。Cloud がそれを編集・バージョン管理・スケジュール・共有可能な構造化ワークフローに変えます — コードは一行も書きません。",
       "ctaPrimary": "デスクトップ版をダウンロード",
-      "ctaSecondary": "452のモジュールを見る"
+      "ctaSecondary": "466のモジュールを見る"
     },
     "how": {
       "label": "HOW IT WORKS",
@@ -311,7 +311,7 @@
         },
         {
           "icon": "Boxes",
-          "title": "452のモジュール",
+          "title": "466のモジュール",
           "body": "CSV、Excel、Stripe、Notion、Sheets、Postgres、Slack、OpenAI — API の配線を書く代わりにスナップで繋ぎます。"
         },
         {
@@ -580,7 +580,7 @@
         "tagline": "自動化を探求する個人向け。",
         "feature1": "1,000 コンピュートポイント / 月",
         "feature2": "最大5件の保存ワークフロー",
-        "feature3": "452のモジュール全て",
+        "feature3": "466のモジュール全て",
         "feature4": "コミュニティサポート",
         "cta": "無料でダウンロード"
       },
@@ -1627,7 +1627,7 @@
       "substrate": {
         "label": "ONE SUBSTRATE, TWO PRODUCT LINES",
         "title": "The same engine that runs your automation runs your war-room.",
-        "body": "Flyto2 is one brand with two product lines on the same execution substrate. The automation engine — flyto-core, 452 deterministic modules, MCP-native over stdio and streamable-http, with evidence capture, replay, YAML recipes and human-in-the-loop — is the established Zapier/n8n/Make alternative. The war-room rides the same deterministic modules and recipes to execute scans, collect evidence and drive red-team. You never have to choose between them.",
+        "body": "Flyto2 is one brand with two product lines on the same execution substrate. The automation engine — flyto-core, 466 deterministic modules, MCP-native over stdio and streamable-http, with evidence capture, replay, YAML recipes and human-in-the-loop — is the established Zapier/n8n/Make alternative. The war-room rides the same deterministic modules and recipes to execute scans, collect evidence and drive red-team. You never have to choose between them.",
         "automationCta": "Explore the automation engine"
       },
       "cta": {

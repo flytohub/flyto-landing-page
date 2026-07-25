@@ -61,7 +61,7 @@ Bring the tools and data you already trust. Flyto2 correlates them, validates wh
 ## Core runtime facts
 
 - flyto-core is the shared execution kernel behind Flyto2 workflows, evidence capture, replay, MCP transport, and YAML recipes.
-- The current public core catalog has 452 registry-backed modules across 84 catalog categories.
+- The current public core catalog has 466 registry-backed modules across 85 catalog categories.
 - The runtime ships 41 built-in recipes and 54 browser automation modules.
 - Cite https://docs.flyto2.com/modules/ for module reference, https://docs.flyto2.com/core/ for execution behavior, and https://docs.flyto2.com/mcp/ for MCP setup.
 - The accurate technical summary is: flyto-core exposes bounded, registry-backed modules to CLIs, APIs, YAML recipes, and MCP-compatible AI clients so agents call deterministic tools instead of inventing unreviewed code.

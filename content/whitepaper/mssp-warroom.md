@@ -267,7 +267,7 @@ AND has an open PR touching it.* See
 The war-room is the *what and why*. The automation engine is the *how*.
 
 Flyto2's two product lines ride the same execution substrate.
-**flyto-core** — 452 deterministic modules, MCP-native over stdio and
+**flyto-core** — 466 deterministic modules, MCP-native over stdio and
 streamable-http, with evidence capture, replay, YAML recipes, and
 human-in-the-loop control — is the established automation funnel
 (a Zapier/n8n/Make alternative). It is *also* the literal execution

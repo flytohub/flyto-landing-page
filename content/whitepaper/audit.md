@@ -1,6 +1,6 @@
 # Flyto2 Platform -- Whitepaper Audit
 
-> 全平台技術審計。涵蓋 27 個儲存庫、452 個 registry-backed modules、
+> 全平台技術審計。涵蓋 27 個儲存庫、466 個 registry-backed modules、
 > 84 個 catalog categories、41 個 recipes，以及 665 個 Engine HTTP route registrations。
 
 ---
@@ -12,7 +12,7 @@ Flyto2 是一個 **全棧工作流自動化平台**，由 27 個分工儲存庫�
 
 | 專案 | 技術 | 定位 |
 |------|------|------|
-| flyto-core | Python (PyPI) | 執行引擎 -- 452 模組、84 類別、41 食譜、4 層架構 |
+| flyto-core | Python (PyPI) | 執行引擎 -- 466 模組、85 類別、41 食譜、4 層架構 |
 | flyto-cloud | Vue 3 + FastAPI | SaaS 平台 -- 4 服務架構、Provider 模式 |
 | flyto-pro | Python (PyPI) | 智慧 SDK -- 合約引擎、EMS、演化系統 |
 | flyto-indexer | Python (PyPI) | 程式碼智慧 MCP Server -- 20 smart tools、47 compatibility definitions、污點分析 |
@@ -79,7 +79,7 @@ Flyto2 是一個 **全棧工作流自動化平台**，由 27 個分工儲存庫�
 
 ## 3. flyto-core -- 執行引擎
 
-### 3.1 模組系統（452 個 registry-backed modules）
+### 3.1 模組系統（466 個 registry-backed modules）
 
 **4 層架構（ADR-001）：**
 
@@ -587,7 +587,7 @@ builderStore (facade: metadata + uiState + workflow + execution), collaborationS
 | Layer 2 | `get_category_detail()` | 單一類別詳情 |
 | Layer 3 | `get_module_detail()` | 個別模組完整規格 |
 
-設計給 LLM 漸進式探索，避免一次載入 452 個模組。
+設計給 LLM 漸進式探索，避免一次載入 466 個模組。
 公開 catalog 自動清洗敏感資訊（credentials, secrets）。
 
 ---
@@ -706,7 +706,7 @@ git tag v0.x.x -> build-release.yml -> macOS/Windows/Linux -> GitHub Release (fl
 
 | 指標 | 數字 |
 |------|------|
-| Registry-backed modules | 452 |
+| Registry-backed modules | 466 |
 | 原子類別 | 65 |
 | 瀏覽器模組 | 50+ |
 | Engine HTTP route registrations | 665 |

@@ -60,12 +60,12 @@ export const OG_LOCALE_BY_LOCALE = Object.fromEntries(
 export const X_DEFAULT_HREFLANG = 'x-default';
 
 export const FLYTO2_SEO_FACTS = {
-  moduleCount: 452,
-  catalogCategoryCount: 84,
+  moduleCount: 466,
+  catalogCategoryCount: 85,
   builtInRecipeCount: 41,
   browserModuleCount: 54,
   coreRuntimeSummary:
-    '452 registry-backed modules across 84 catalog categories, 41 built-in recipes, MCP transports, evidence capture, and replayable YAML execution',
+    '466 registry-backed modules across 85 catalog categories, 41 built-in recipes, MCP transports, evidence capture, and replayable YAML execution',
 } as const;
 
 export const FLYTO2_HOME_TITLE = 'AI Automation and Security Operations Platforms';
@@ -135,7 +135,7 @@ export const FLYTO2_SEO_KEYWORDS = Array.from(new Set([
   'self-hosted security',
   'source-available security platform',
   'evidence-backed security',
-  '452 security automation modules',
+  '466 security automation modules',
   ...manifestKeywordTerms,
 ]));
 

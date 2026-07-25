@@ -18,7 +18,7 @@ simulation. We charge for the integration and the closed loop, not for
 re-running an algorithm you already paid for.
 
 The same deterministic engine that powers Flyto2's automation funnel
-(flyto-core: 452 deterministic modules, MCP-native over stdio and
+(flyto-core: 466 deterministic modules, MCP-native over stdio and
 streamable-http, YAML recipes, evidence and replay, human-in-the-loop) is the
 execution layer underneath every surface below. Automation is the *how*; the
 war room is the *what and why*.

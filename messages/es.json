@@ -65,7 +65,7 @@
         "tagline": "Automatización de navegador sin código. Grábalo una vez, reprodúcelo siempre.",
         "point1": "Graba cualquier flujo en el navegador sin escribir selectores",
         "point2": "Pausa, inspecciona, edita valores a mitad de ejecución, continúa",
-        "point3": "452 módulos preconfigurados — CSV, Stripe, Notion, Slack, OpenAI",
+        "point3": "466 módulos preconfigurados — CSV, Stripe, Notion, Slack, OpenAI",
         "cta": "Ir a Cloud"
       },
       "warroom": {
@@ -140,7 +140,7 @@
         },
         {
           "icon": "Boxes",
-          "title": "452 módulos",
+          "title": "466 módulos",
           "body": "CSV, Excel, Stripe, Notion, Postgres, Slack, OpenAI — preconfigurados para que los encajes entre sí en lugar de escribir código de integración."
         },
         {
@@ -189,14 +189,14 @@
     },
     "integrations": {
       "label": "INTEGRACIONES",
-      "title": "452 módulos listos para usar.",
+      "title": "466 módulos listos para usar.",
       "subtitle": "La fontanería ya está conectada. Arrastra, suelta, configura — nunca más escribas otro script de «copia esta fila de la Hoja A a la API B».",
       "andMore": "+ 230 MÁS · CREA EL TUYO EN PYTHON O JS"
     },
     "stats": {
       "items": [
         {
-          "value": "452",
+          "value": "466",
           "label": "MÓDULOS",
           "body": "Nodos preconfigurados para CSV, Excel, Stripe, Notion, Slack, IA, SQL — lo que de otro modo tendrías que ensamblar tú mismo."
         },
@@ -256,7 +256,7 @@
   },
   "cloud": {
     "metaTitle": "Cloud — Automatización de navegador sin código",
-    "metaDescription": "Grábalo una vez, reprodúcelo siempre. Automatización de navegador que funciona sin conexión. 452 módulos, 16 idiomas, motor con licencia MIT.",
+    "metaDescription": "Grábalo una vez, reprodúcelo siempre. Automatización de navegador que funciona sin conexión. 466 módulos, 16 idiomas, motor con licencia MIT.",
     "hero": {
       "eyebrow": "01 / CLOUD",
       "status": "DISPONIBLE",
@@ -264,7 +264,7 @@
       "titleAccent": "en piloto automático.",
       "lede": "Abre el grabador, realiza la tarea una vez, pulsa detener. Flyto2 lo convierte en un flujo estructurado que puedes editar, versionar, programar y compartir — sin escribir una sola línea de código.",
       "ctaPrimary": "Descargar la app de escritorio",
-      "ctaSecondary": "Explorar 452 módulos"
+      "ctaSecondary": "Explorar 466 módulos"
     },
     "how": {
       "label": "CÓMO FUNCIONA",
@@ -311,7 +311,7 @@
         },
         {
           "icon": "Boxes",
-          "title": "452 módulos",
+          "title": "466 módulos",
           "body": "CSV, Excel, Stripe, Notion, Sheets, Postgres, Slack, OpenAI — preconfigurados para que los encajes entre sí en lugar de escribir código de integración."
         },
         {
@@ -580,7 +580,7 @@
         "tagline": "Para personas que exploran la automatización.",
         "feature1": "1.000 puntos de cómputo / mes",
         "feature2": "Hasta 5 flujos guardados",
-        "feature3": "Los 452 módulos",
+        "feature3": "Los 466 módulos",
         "feature4": "Soporte de la comunidad",
         "cta": "Descargar gratis"
       },
@@ -1627,7 +1627,7 @@
       "substrate": {
         "label": "ONE SUBSTRATE, TWO PRODUCT LINES",
         "title": "The same engine that runs your automation runs your war-room.",
-        "body": "Flyto2 is one brand with two product lines on the same execution substrate. The automation engine — flyto-core, 452 deterministic modules, MCP-native over stdio and streamable-http, with evidence capture, replay, YAML recipes and human-in-the-loop — is the established Zapier/n8n/Make alternative. The war-room rides the same deterministic modules and recipes to execute scans, collect evidence and drive red-team. You never have to choose between them.",
+        "body": "Flyto2 is one brand with two product lines on the same execution substrate. The automation engine — flyto-core, 466 deterministic modules, MCP-native over stdio and streamable-http, with evidence capture, replay, YAML recipes and human-in-the-loop — is the established Zapier/n8n/Make alternative. The war-room rides the same deterministic modules and recipes to execute scans, collect evidence and drive red-team. You never have to choose between them.",
         "automationCta": "Explore the automation engine"
       },
       "cta": {
