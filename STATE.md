@@ -1,7 +1,21 @@
 # State
 
-Current state on 2026-07-22:
+Current state on 2026-07-28:
 
+- 2026-07-28: The public site now has a canonical `/support/` route for
+  Flyto2 Cloud, ChatGPT app, MCP routing, connected runner, Warroom, account,
+  billing, privacy, and security support. Footer, sitemap, English-only route
+  policy, `llms.txt`, `llms-full.txt`, and public-site audits all include it.
+- 2026-07-28: `/privacy/` now describes the connected Cloud/MCP execution
+  boundary accurately and publishes explicit OAuth, MCP, account, execution,
+  audit, support, billing, deletion-buffer, and backup retention periods.
+- 2026-07-28: `/.well-known/openai-apps-challenge` is a dynamic plain-text
+  verification endpoint backed only by `OPENAI_APPS_CHALLENGE_TOKEN`. It
+  returns the exact trimmed token with no-store headers, or HTTP 404 when the
+  deployment secret is absent.
+- 2026-07-28: The support and privacy release passed the complete
+  `npm run verify` suite, the production Next.js build, and browser checks at
+  1440px and 390px with no horizontal overflow or console errors.
 - 2026-07-22: The current Next.js/OpenNext/Wrangler/Firebase dependency graph
   resolves patched `sharp`, `protobufjs`, and `brace-expansion` versions;
   `npm audit` reports zero known vulnerabilities.
@@ -81,6 +95,9 @@ Current state on 2026-07-22:
 
 Known gaps:
 
+- OpenAI must still issue the real domain-verification token; the landing
+  deployment must receive it through the protected
+  `OPENAI_APPS_CHALLENGE_TOKEN` runtime variable before verification.
 - Enterprise, trust, airgap, open-source, API-docs, compare, pricing, docs,
   blog, changelog, and security hub routes now have source pages, sitemap
   coverage, footer discovery, and AI-readable index entries guarded by

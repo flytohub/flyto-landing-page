@@ -92,6 +92,8 @@ Bring the tools and data you already trust. Flyto2 correlates them, validates wh
 - [API docs entry](https://flyto2.com/api-docs/)
 - [Trust and security](https://flyto2.com/trust/)
 - [Community and contribution hub](https://flyto2.com/community/)
+- [Flyto2 Support](https://flyto2.com/support/)
+- [Flyto2 Privacy Policy](https://flyto2.com/privacy/)
 - [Docs entry](https://flyto2.com/docs/)
 - [Blog entry](https://flyto2.com/blog/)
 - [Changelog hub](https://flyto2.com/changelog/)
@@ -107,6 +109,14 @@ Bring the tools and data you already trust. Flyto2 correlates them, validates wh
 - [GitHub: Flyto2 Warroom CE](https://github.com/flytohub/flyto-warroom)
 - [Docker Hub: Flyto2 Warroom images](https://hub.docker.com/r/chesterhsu/flyto-warroom)
 - [Blog](https://blog.flyto2.com/)
+
+## Support and privacy
+
+- General product, Cloud, ChatGPT app, MCP routing, connected runner, Warroom, account, and billing support: support@flyto2.com and https://flyto2.com/support/
+- Privacy, access, correction, export, or deletion requests: privacy@flyto2.com and https://flyto2.com/privacy/
+- Security vulnerability reports: security@flyto2.com.
+- The privacy policy publishes concrete retention periods for OAuth credentials, MCP controls, account and execution records, audit logs, support cases, billing records, and backups.
+- Never include passwords, access tokens, pairing codes, device secrets, or unredacted sensitive customer data in support requests.
 
 ## Site role
 

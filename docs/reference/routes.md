@@ -2,7 +2,7 @@
 
 # Public Route Reference
 
-The App Router contains **50 page modules**. Each public route is emitted for **16 locales**; dynamic template and whitepaper routes expand from their source registries.
+The App Router contains **51 page modules**. Each public route is emitted for **16 locales**; dynamic template and whitepaper routes expand from their source registries.
 
 | Route | Metadata | Static params | Structured data | Source |
 |---|---|---|---|---|
@@ -50,6 +50,7 @@ The App Router contains **50 page modules**. Each public route is emitted for **
 | `/pricing/` | yes | no | no | [app/[locale]/pricing/page.tsx:1](../../app/%5Blocale%5D/pricing/page.tsx#L1) |
 | `/privacy/` | yes | no | no | [app/[locale]/privacy/page.tsx:1](../../app/%5Blocale%5D/privacy/page.tsx#L1) |
 | `/security/` | yes | no | no | [app/[locale]/security/page.tsx:1](../../app/%5Blocale%5D/security/page.tsx#L1) |
+| `/support/` | yes | no | no | [app/[locale]/support/page.tsx:1](../../app/%5Blocale%5D/support/page.tsx#L1) |
 | `/terms/` | yes | no | no | [app/[locale]/terms/page.tsx:1](../../app/%5Blocale%5D/terms/page.tsx#L1) |
 | `/trust/` | yes | no | no | [app/[locale]/trust/page.tsx:1](../../app/%5Blocale%5D/trust/page.tsx#L1) |
 | `/warroom/:[...slug]/` | yes | yes | no | [app/[locale]/warroom/[[...slug]]/page.tsx:1](../../app/%5Blocale%5D/warroom/%5B%5B...slug%5D%5D/page.tsx#L1) |

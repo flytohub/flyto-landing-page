@@ -91,19 +91,19 @@ Source-backed contracts for **133 declarations**.
 | function | `publicRouteMetadata(page, locale)` | Implements public route metadata. | [lib/public-route-metadata.ts:9](../../lib/public-route-metadata.ts#L9) |
 | function | `productIntentMetadata(page, locale)` | Implements product intent metadata. | [lib/public-route-metadata.ts:35](../../lib/public-route-metadata.ts#L35) |
 | type | `PublicRoutePageId` | Defines the public route page id data contract. | [lib/public-route-pages.ts:1](../../lib/public-route-pages.ts#L1) |
-| interface | `PublicRouteLink` | Defines the public route link data contract. | [lib/public-route-pages.ts:21](../../lib/public-route-pages.ts#L21) |
-| interface | `PublicRouteSection` | Defines the public route section data contract. | [lib/public-route-pages.ts:26](../../lib/public-route-pages.ts#L26) |
-| interface | `PublicRouteAnswer` | Defines the public route answer data contract. | [lib/public-route-pages.ts:32](../../lib/public-route-pages.ts#L32) |
-| interface | `PublicRoutePage` | Defines the public route page data contract. | [lib/public-route-pages.ts:37](../../lib/public-route-pages.ts#L37) |
-| constant | `WARROOM_CE_GITHUB` | Defines the warroom ce github source-of-truth value. | [lib/public-route-pages.ts:52](../../lib/public-route-pages.ts#L52) |
-| constant | `WARROOM_CE_DOCKER` | Defines the warroom ce docker source-of-truth value. | [lib/public-route-pages.ts:53](../../lib/public-route-pages.ts#L53) |
-| constant | `WARROOM_CE_DOCS` | Defines the warroom ce docs source-of-truth value. | [lib/public-route-pages.ts:54](../../lib/public-route-pages.ts#L54) |
-| constant | `WARROOM_DOCS` | Defines the warroom docs source-of-truth value. | [lib/public-route-pages.ts:55](../../lib/public-route-pages.ts#L55) |
-| constant | `publicRoutePages` | Defines the public route pages source-of-truth value. | [lib/public-route-pages.ts:57](../../lib/public-route-pages.ts#L57) |
-| constant | `requiredGeoRoutes` | Defines the required geo routes source-of-truth value. | [lib/public-route-pages.ts:1030](../../lib/public-route-pages.ts#L1030) |
+| interface | `PublicRouteLink` | Defines the public route link data contract. | [lib/public-route-pages.ts:22](../../lib/public-route-pages.ts#L22) |
+| interface | `PublicRouteSection` | Defines the public route section data contract. | [lib/public-route-pages.ts:27](../../lib/public-route-pages.ts#L27) |
+| interface | `PublicRouteAnswer` | Defines the public route answer data contract. | [lib/public-route-pages.ts:33](../../lib/public-route-pages.ts#L33) |
+| interface | `PublicRoutePage` | Defines the public route page data contract. | [lib/public-route-pages.ts:38](../../lib/public-route-pages.ts#L38) |
+| constant | `WARROOM_CE_GITHUB` | Defines the warroom ce github source-of-truth value. | [lib/public-route-pages.ts:53](../../lib/public-route-pages.ts#L53) |
+| constant | `WARROOM_CE_DOCKER` | Defines the warroom ce docker source-of-truth value. | [lib/public-route-pages.ts:54](../../lib/public-route-pages.ts#L54) |
+| constant | `WARROOM_CE_DOCS` | Defines the warroom ce docs source-of-truth value. | [lib/public-route-pages.ts:55](../../lib/public-route-pages.ts#L55) |
+| constant | `WARROOM_DOCS` | Defines the warroom docs source-of-truth value. | [lib/public-route-pages.ts:56](../../lib/public-route-pages.ts#L56) |
+| constant | `publicRoutePages` | Defines the public route pages source-of-truth value. | [lib/public-route-pages.ts:58](../../lib/public-route-pages.ts#L58) |
+| constant | `requiredGeoRoutes` | Defines the required geo routes source-of-truth value. | [lib/public-route-pages.ts:1099](../../lib/public-route-pages.ts#L1099) |
 | constant | `ENGLISH_ONLY_ROUTE_PREFIXES` | Defines the english only route prefixes source-of-truth value. | [lib/route-localization.ts:1](../../lib/route-localization.ts#L1) |
-| function | `normalizeLocalizationRoute(path)` | Transforms normalize localization route. | [lib/route-localization.ts:32](../../lib/route-localization.ts#L32) |
-| function | `isEnglishOnlyRoute(path)` | Validates is english only route. | [lib/route-localization.ts:36](../../lib/route-localization.ts#L36) |
+| function | `normalizeLocalizationRoute(path)` | Transforms normalize localization route. | [lib/route-localization.ts:33](../../lib/route-localization.ts#L33) |
+| function | `isEnglishOnlyRoute(path)` | Validates is english only route. | [lib/route-localization.ts:37](../../lib/route-localization.ts#L37) |
 | interface | `SecurityPageSection` | Defines the security page section data contract. | [lib/security-pages.ts:1](../../lib/security-pages.ts#L1) |
 | interface | `SecurityPage` | Defines the security page data contract. | [lib/security-pages.ts:7](../../lib/security-pages.ts#L7) |
 | constant | `WARROOM_CE_GITHUB` | Defines the warroom ce github source-of-truth value. | [lib/security-pages.ts:23](../../lib/security-pages.ts#L23) |

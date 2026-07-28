@@ -4,6 +4,12 @@
 
 ### Added
 
+- Added `/support/` with product-specific diagnostic guidance, dedicated
+  support/privacy/security contacts, account-deletion guidance, footer and
+  sitemap discovery, and AI-readable citation coverage.
+- Added `/.well-known/openai-apps-challenge`, backed by an environment-only
+  token and guarded by public-site audits so domain verification returns only
+  the exact plain-text token.
 - Added a technical whitepaper, source ownership manifest, and generated route,
   declaration, configuration, automation, locale, SEO, and content references.
 - Added `npm run docs:reference` and `npm run docs:check`; verification and CI
@@ -55,6 +61,10 @@
 
 ### Changed
 
+- Replaced the obsolete offline-only privacy claims with the actual
+  Cloud/ChatGPT/MCP/connected-runner data boundary and explicit retention
+  periods for OAuth state and credentials, MCP controls, active-account data,
+  audit logs, support cases, billing records, deletion safety, and backups.
 - Corrected current deployment documentation from legacy static hosting to the
   Next.js OpenNext Cloudflare Worker runtime.
 - Refreshed public ecosystem whitepapers to remove stale 411-module and

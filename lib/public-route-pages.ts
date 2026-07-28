@@ -14,6 +14,7 @@ export type PublicRoutePageId =
   | 'api-docs'
   | 'trust'
   | 'community'
+  | 'support'
   | 'docs'
   | 'blog'
   | 'changelog';
@@ -873,6 +874,74 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
       { label: 'Good first issues', href: 'https://github.com/flytohub/flyto-core/contribute' },
       { label: 'Blog launch notes', href: 'https://blog.flyto2.com/posts/community-growth-open-source-ai-workflow-automation' },
       { label: 'Docs community guide', href: 'https://docs.flyto2.com/community/' },
+    ],
+  },
+  support: {
+    id: 'support',
+    path: 'support',
+    eyebrow: 'Support',
+    title: 'Flyto2 support for Cloud, MCP routing, connected runners, and Warroom.',
+    lede:
+      'Contact support@flyto2.com for account, billing, Flyto2 Cloud, ChatGPT app, MCP routing, connected runner, or Warroom questions. Include enough non-sensitive context to reproduce the problem; never send passwords, access tokens, device secrets, or unredacted customer data.',
+    metaTitle: 'Flyto2 support',
+    metaDescription:
+      'Get support for Flyto2 Cloud, the ChatGPT app, MCP routing, connected runners, Warroom, accounts, billing, privacy, and security.',
+    primaryCta: { label: 'Email support', href: 'mailto:support@flyto2.com' },
+    secondaryCta: { label: 'Open documentation', href: 'https://docs.flyto2.com/' },
+    sections: [
+      {
+        title: 'Send a useful report',
+        body:
+          'A concise, sanitized report lets the team diagnose the correct tenant, route, device, and execution without collecting unnecessary data.',
+        bullets: [
+          'Include your account email, affected product, and approximate UTC time',
+          'Include a sanitized workflow ID, run ID, device name, or screenshot when available',
+          'Never include a password, bearer token, pairing code, device secret, or raw sensitive payload',
+        ],
+      },
+      {
+        title: 'ChatGPT and MCP routing',
+        body:
+          'For ChatGPT app or MCP execution problems, identify whether the failure occurred during OAuth connection, route resolution, Warroom preflight, device dispatch, or run completion.',
+        bullets: [
+          'Confirm the intended workspace and execution route',
+          'Confirm the connected device is online and not revoked',
+          'Share the sanitized run ID and Warroom decision reason when available',
+        ],
+      },
+      {
+        title: 'Privacy and security',
+        body:
+          'Use the dedicated contacts so privacy requests and security reports enter the correct handling process.',
+        bullets: [
+          'Privacy, access, correction, export, or deletion: privacy@flyto2.com',
+          'Security vulnerabilities or suspected abuse: security@flyto2.com',
+          'General product and account support: support@flyto2.com',
+        ],
+      },
+    ],
+    answers: [
+      {
+        question: 'How quickly does Flyto2 respond?',
+        answer:
+          'Flyto2 targets an initial response within one business day for general support. Resolution time depends on severity, reproducibility, and whether third-party systems are involved.',
+      },
+      {
+        question: 'What should I do if a connected device is offline?',
+        answer:
+          'Check the device status and selected MCP route in Flyto2 Cloud. The configured route policy determines whether execution fails closed or uses an approved fallback.',
+      },
+      {
+        question: 'How do I request account deletion?',
+        answer:
+          'Use the deletion control in Flyto2 Cloud or email privacy@flyto2.com. The account enters a 30-day safety period before scheduled deletion, as described in the privacy policy.',
+      },
+    ],
+    related: [
+      { label: 'Privacy policy', href: '/privacy' },
+      { label: 'Terms of service', href: '/terms' },
+      { label: 'Contact Flyto2', href: '/contact' },
+      { label: 'Cloud data deletion', href: 'https://cloud.flyto2.com/data-deletion.html' },
     ],
   },
   docs: {

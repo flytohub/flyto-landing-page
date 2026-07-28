@@ -2,10 +2,12 @@
 
 # App Source Reference
 
-Source-backed contracts for **222 declarations**.
+Source-backed contracts for **227 declarations**.
 
 | Kind | Declaration | Responsibility | Source |
 |---|---|---|---|
+| constant | `dynamic` | Defines the dynamic source-of-truth value. | [app/.well-known/openai-apps-challenge/route.ts:1](../../app/.well-known/openai-apps-challenge/route.ts#L1) |
+| function | `GET()` | Retrieves get. | [app/.well-known/openai-apps-challenge/route.ts:3](../../app/.well-known/openai-apps-challenge/route.ts#L3) |
 | constant | `page` | Defines the page source-of-truth value. | [app/[locale]/ai-security/page.tsx:7](../../app/%5Blocale%5D/ai-security/page.tsx#L7) |
 | function | `generateMetadata({ params, })` | Builds canonical, social, and locale-aware metadata for the route. | [app/[locale]/ai-security/page.tsx:9](../../app/%5Blocale%5D/ai-security/page.tsx#L9) |
 | component | `AiSecurityPage({ params, })` | Renders the ai security page interface. | [app/[locale]/ai-security/page.tsx:29](../../app/%5Blocale%5D/ai-security/page.tsx#L29) |
@@ -196,10 +198,13 @@ Source-backed contracts for **222 declarations**.
 | function | `generateMetadata({ params })` | Builds canonical, social, and locale-aware metadata for the route. | [app/[locale]/pricing/page.tsx:9](../../app/%5Blocale%5D/pricing/page.tsx#L9) |
 | component | `PricingHubPage({ params })` | Renders the pricing hub page interface. | [app/[locale]/pricing/page.tsx:14](../../app/%5Blocale%5D/pricing/page.tsx#L14) |
 | function | `generateMetadata({ params, })` | Builds canonical, social, and locale-aware metadata for the route. | [app/[locale]/privacy/page.tsx:5](../../app/%5Blocale%5D/privacy/page.tsx#L5) |
-| component | `PrivacyPage({ params, })` | Renders the privacy page interface. | [app/[locale]/privacy/page.tsx:18](../../app/%5Blocale%5D/privacy/page.tsx#L18) |
+| component | `PrivacyPage({ params, })` | Renders the privacy page interface. | [app/[locale]/privacy/page.tsx:19](../../app/%5Blocale%5D/privacy/page.tsx#L19) |
 | constant | `page` | Defines the page source-of-truth value. | [app/[locale]/security/page.tsx:7](../../app/%5Blocale%5D/security/page.tsx#L7) |
 | function | `generateMetadata({ params })` | Builds canonical, social, and locale-aware metadata for the route. | [app/[locale]/security/page.tsx:9](../../app/%5Blocale%5D/security/page.tsx#L9) |
 | component | `SecurityHubPage({ params })` | Renders the security hub page interface. | [app/[locale]/security/page.tsx:14](../../app/%5Blocale%5D/security/page.tsx#L14) |
+| constant | `page` | Defines the page source-of-truth value. | [app/[locale]/support/page.tsx:7](../../app/%5Blocale%5D/support/page.tsx#L7) |
+| function | `generateMetadata({ params, })` | Builds canonical, social, and locale-aware metadata for the route. | [app/[locale]/support/page.tsx:9](../../app/%5Blocale%5D/support/page.tsx#L9) |
+| component | `SupportPage({ params, })` | Renders the support page interface. | [app/[locale]/support/page.tsx:18](../../app/%5Blocale%5D/support/page.tsx#L18) |
 | function | `generateMetadata({ params, })` | Builds canonical, social, and locale-aware metadata for the route. | [app/[locale]/terms/page.tsx:5](../../app/%5Blocale%5D/terms/page.tsx#L5) |
 | component | `TermsPage({ params, })` | Renders the terms page interface. | [app/[locale]/terms/page.tsx:18](../../app/%5Blocale%5D/terms/page.tsx#L18) |
 | constant | `page` | Defines the page source-of-truth value. | [app/[locale]/trust/page.tsx:7](../../app/%5Blocale%5D/trust/page.tsx#L7) |

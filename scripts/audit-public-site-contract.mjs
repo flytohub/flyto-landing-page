@@ -20,6 +20,7 @@ const productRoutes = [
   'api-docs',
   'trust',
   'community',
+  'support',
   'docs',
   'blog',
   'changelog',
@@ -32,6 +33,7 @@ const criticalPublicFiles = [
   'app/sitemap.ts',
   'lib/route-localization.ts',
   'lib/product-intent-pages.ts',
+  'app/.well-known/openai-apps-challenge/route.ts',
 ];
 
 const expectedCrawlerPolicies = [
@@ -101,6 +103,19 @@ const launchSurfaceContracts = {
     'Docker images',
     'Flow docs',
     'Warroom docs',
+    "localized('/support')",
+  ],
+  'app/.well-known/openai-apps-challenge/route.ts': [
+    'OPENAI_APPS_CHALLENGE_TOKEN',
+    'text/plain; charset=utf-8',
+    'Cache-Control',
+    'no-store',
+  ],
+  'app/[locale]/privacy/page.tsx': [
+    'OAuth authorization transactions and codes: up to 5 minutes',
+    'ChatGPT access tokens: up to 15 minutes',
+    'Security and audit logs: normally up to 12 months',
+    'Backups containing deleted data are overwritten within 90 days',
   ],
   'lib/public-route-metadata.ts': [
     'pageAlternates(page.path, locale)',
@@ -352,6 +367,7 @@ const llms = read('public/llms.txt');
 const llmsFull = read('public/llms-full.txt');
 const middleware = read('middleware.ts');
 const homePage = read('app/[locale]/page.tsx');
+const openaiChallenge = read('app/.well-known/openai-apps-challenge/route.ts');
 for (const route of productRoutes) {
   const url = `https://flyto2.com/${route}/`;
   if (!llms.includes(url)) {
@@ -360,6 +376,10 @@ for (const route of productRoutes) {
   if (!llmsFull.includes(`/${route}/`) && !llmsFull.includes(url)) {
     failures.push(`llms-full.txt missing public route /${route}/`);
   }
+}
+
+if (openaiChallenge.includes('NextResponse.json') || openaiChallenge.includes('JSON.stringify')) {
+  failures.push('OpenAI Apps challenge endpoint must return only the exact plain-text token');
 }
 
 for (const url of [

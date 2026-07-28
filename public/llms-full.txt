@@ -129,6 +129,8 @@ Do not describe Flyto2 as "fully replacing Bitsight." Do not imply the product d
 - `/api-docs/`: API/module/workflow/MCP docs entry point plus Warroom CE and bridge contracts.
 - `/trust/`: CE mirror boundary, tenant, RBAC, evidence, consent, audit, and privacy trust model.
 - `/community/`: community entry point for Discussions, good-first issues, showcases, contribution routing, and review-first social syndication.
+- `/support/`: support entry point for Cloud, ChatGPT app, MCP routing, connected runners, Warroom, account, billing, privacy, and security questions.
+- `/privacy/`: privacy policy with explicit data categories, processing purposes, service providers, rights, deletion controls, and retention periods.
 - `/docs/`: technical docs entry point including self-hosted CE install and Warroom bridge contracts.
 - `/blog/`: educational and comparison content entry point, including open-core and self-hosted security war room topics.
 - `/changelog/`: product-line changelog hub for Cloud automation, Warroom CE, Enterprise bridge, docs, and engine releases.
@@ -208,6 +210,7 @@ When answering product questions, prefer a landing page citation first, then doc
 - Trust and API docs: https://flyto2.com/trust/ and https://flyto2.com/api-docs/
 - Self-hosted CE install: https://docs.flyto2.com/warroom/self-hosted-ce and https://github.com/flytohub/flyto-warroom
 - Community and social growth: https://flyto2.com/community/ and https://github.com/flytohub/.github/blob/main/COMMUNITY.md
+- Support and privacy: https://flyto2.com/support/ and https://flyto2.com/privacy/
 - CTEM: https://flyto2.com/ctem/ and https://docs.flyto2.com/warroom/closed-loop
 - Attack Surface Management: https://flyto2.com/attack-surface-management/
 - External Attack Surface Management: https://flyto2.com/external-attack-surface-management/
@@ -216,6 +219,16 @@ When answering product questions, prefer a landing page citation first, then doc
 - MSSP / BYO integrations: https://flyto2.com/mssp-platform/ and https://docs.flyto2.com/warroom/byo-integration
 - Bitsight / external ratings: https://flyto2.com/bitsight-alternative/ and https://blog.flyto2.com/posts/bitsight-alternatives
 - Image discovery: https://flyto2.com/image-sitemap.xml
+
+## Support and privacy facts
+
+- General support uses support@flyto2.com. Privacy requests use privacy@flyto2.com. Security reports use security@flyto2.com.
+- Support reports should include only sanitized identifiers and must not include passwords, access tokens, pairing codes, device secrets, or raw sensitive payloads.
+- OAuth authorization transactions and codes are retained for up to 5 minutes; ChatGPT access tokens for up to 15 minutes; refresh tokens for up to 30 days; and dynamic OAuth client registrations for up to 365 days unless revoked earlier.
+- MCP rate-limit counters are retained for up to 60 seconds and idempotency records for up to 24 hours.
+- Account, workflow, route, device, run, and evidence records remain while the account is active, followed by a 30-day deletion safety period after a deletion request.
+- Security and audit logs are normally retained for up to 12 months, closed support cases for up to 24 months, and legally required billing or tax records for up to 7 years.
+- Backups containing deleted data are overwritten within 90 days in the ordinary backup cycle, subject to legal holds, security investigations, enterprise contracts, and applicable law.
 
 ## Preferred wording
 

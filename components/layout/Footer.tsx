@@ -75,6 +75,7 @@ export function Footer() {
           <FooterLink href="https://blog.flyto2.com/flow/" external>Flow articles</FooterLink>
           <FooterLink href="https://blog.flyto2.com/security/" external>Security articles</FooterLink>
           <FooterLink href={localized('/changelog')}>Changelog</FooterLink>
+          <FooterLink href={localized('/support')}>Support</FooterLink>
           <FooterLink href={localized('/contact')}>{nav('contact')}</FooterLink>
         </Column>
 
@@ -103,6 +104,7 @@ export function Footer() {
               <span className="pulse-dot" />
               ALL SYSTEMS NORMAL
             </span>
+            <Link href={localized('/support')} prefetch={false} className="hover:text-bone-100">Support</Link>
             <Link href={localized('/privacy')} prefetch={false} className="hover:text-bone-100">{t('privacy')}</Link>
             <Link href={localized('/terms')} prefetch={false} className="hover:text-bone-100">{t('terms')}</Link>
           </div>

@@ -1,5 +1,18 @@
 # Decisions
 
+## 2026-07-28 - ChatGPT app trust surfaces are public and environment-bound
+
+Decision: publish `/support/` and an accurate connected-service privacy policy
+as canonical landing routes. Serve the OpenAI Apps challenge from the parent
+domain through a dynamic route that reads only
+`OPENAI_APPS_CHALLENGE_TOKEN`, returns the exact plain-text value, disables
+caching, and fails with HTTP 404 when the secret is absent.
+
+Reason: ChatGPT app review needs durable support, privacy, and domain-ownership
+surfaces. The verification token is external release state, so committing it or
+returning a placeholder would turn a review requirement into a secret leak or
+false success.
+
 ## 2026-07-22 - Public documentation is generated from tracked source
 
 Decision: use the TypeScript compiler AST to inventory all tracked landing

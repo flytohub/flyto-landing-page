@@ -23,6 +23,7 @@ export const ENGLISH_ONLY_ROUTE_PREFIXES = [
   'playwright-alternative',
   'pricing',
   'security',
+  'support',
   'trust',
   'warroom',
   'whitepaper',

@@ -2,10 +2,12 @@
 
 # Scripts Source Reference 2
 
-Source-backed contracts for **37 declarations**.
+Source-backed contracts for **39 declarations**.
 
 | Kind | Declaration | Responsibility | Source |
 |---|---|---|---|
+| constant | `focusByRoute` | Defines the focus by route source-of-truth value. | [scripts/seo-score.mjs:57](../../scripts/seo-score.mjs#L57) |
+| function | `decodeHtml(value)` | Transforms decode html. | [scripts/seo-score.mjs:98](../../scripts/seo-score.mjs#L98) |
 | function | `getTags(html, tagName)` | Retrieves get tags. | [scripts/seo-score.mjs:109](../../scripts/seo-score.mjs#L109) |
 | function | `attrs(rawAttrs)` | Implements attrs. | [scripts/seo-score.mjs:113](../../scripts/seo-score.mjs#L113) |
 | function | `findMeta(html, key, value)` | Retrieves find meta. | [scripts/seo-score.mjs:121](../../scripts/seo-score.mjs#L121) |

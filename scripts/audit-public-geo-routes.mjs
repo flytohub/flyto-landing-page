@@ -20,6 +20,7 @@ const requiredRoutes = [
   'api-docs',
   'trust',
   'community',
+  'support',
   'docs',
   'blog',
   'changelog',
@@ -90,6 +91,19 @@ for (const token of ['ssr: false', "import('./DiscussionsView')"]) {
   if (!discussionsClient.includes(token)) {
     failures.push(`DiscussionsClient must keep Firebase forum rendering client-only: ${token}`);
   }
+}
+
+const openaiChallenge = readFileSync(
+  path.join(root, 'app', '.well-known', 'openai-apps-challenge', 'route.ts'),
+  'utf8',
+);
+for (const token of ['OPENAI_APPS_CHALLENGE_TOKEN', 'text/plain', 'no-store']) {
+  if (!openaiChallenge.includes(token)) {
+    failures.push(`OpenAI Apps challenge endpoint missing contract token: ${token}`);
+  }
+}
+if (openaiChallenge.includes('NextResponse.json') || openaiChallenge.includes('JSON.stringify')) {
+  failures.push('OpenAI Apps challenge endpoint must return only the exact plain-text token');
 }
 for (const route of ['cloud/discussions', 'code/discussions']) {
   const pagePath = path.join(root, 'app', '[locale]', ...route.split('/'), 'page.tsx');

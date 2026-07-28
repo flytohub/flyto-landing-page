@@ -2,7 +2,7 @@
 
 # Runtime Configuration
 
-Source and example files reference **16 environment variables**. Public `NEXT_PUBLIC_*` values configure the browser client; unprefixed values are local or CI-only operator inputs and must stay out of committed files.
+Source and example files reference **17 environment variables**. Public `NEXT_PUBLIC_*` values configure the browser client; unprefixed values are local or CI-only operator inputs and must stay out of committed files.
 
 | Variable | Sources |
 |---|---|
@@ -16,6 +16,7 @@ Source and example files reference **16 environment variables**. Public `NEXT_PU
 | `NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID` | `.env.example`, `.env.local.example`, `lib/firebase.ts` |
 | `NEXT_PUBLIC_FIREBASE_PROJECT_ID` | `.env.example`, `.env.local.example`, `lib/firebase.ts` |
 | `NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET` | `.env.example`, `.env.local.example`, `lib/firebase.ts` |
+| `OPENAI_APPS_CHALLENGE_TOKEN` | `app/.well-known/openai-apps-challenge/route.ts` |
 | `SEO_AVERAGE_SCORE_THRESHOLD` | `scripts/seo-score.mjs` |
 | `SEO_HOMEPAGE_SCORE_THRESHOLD` | `scripts/seo-score.mjs` |
 | `SEO_KEYWORD_MATRIX_MAX_AGE_DAYS` | `scripts/seo-manage.mjs` |

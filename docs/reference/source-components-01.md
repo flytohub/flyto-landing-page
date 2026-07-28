@@ -55,10 +55,10 @@ Source-backed contracts for **161 declarations**.
 | method contract | `onChange(v)` | Defines the callable on change contract. | [components/forum/SortToggle.tsx:14](../../components/forum/SortToggle.tsx#L14) |
 | component | `Footer()` | Renders the footer interface. | [components/layout/Footer.tsx:8](../../components/layout/Footer.tsx#L8) |
 | function | `localized(href)` | Implements localized. | [components/layout/Footer.tsx:12](../../components/layout/Footer.tsx#L12) |
-| component | `ProductRail({ href, Icon, label, tagline, accent, border = '', })` | Renders the product rail interface. | [components/layout/Footer.tsx:115](../../components/layout/Footer.tsx#L115) |
-| component | `Column({ title, children, className, })` | Renders the column interface. | [components/layout/Footer.tsx:149](../../components/layout/Footer.tsx#L149) |
-| component | `FooterLink({ href, children, external })` | Renders the footer link interface. | [components/layout/Footer.tsx:160](../../components/layout/Footer.tsx#L160) |
-| component | `SocialIcon({ href, label, children, })` | Renders the social icon interface. | [components/layout/Footer.tsx:184](../../components/layout/Footer.tsx#L184) |
+| component | `ProductRail({ href, Icon, label, tagline, accent, border = '', })` | Renders the product rail interface. | [components/layout/Footer.tsx:117](../../components/layout/Footer.tsx#L117) |
+| component | `Column({ title, children, className, })` | Renders the column interface. | [components/layout/Footer.tsx:151](../../components/layout/Footer.tsx#L151) |
+| component | `FooterLink({ href, children, external })` | Renders the footer link interface. | [components/layout/Footer.tsx:162](../../components/layout/Footer.tsx#L162) |
+| component | `SocialIcon({ href, label, children, })` | Renders the social icon interface. | [components/layout/Footer.tsx:186](../../components/layout/Footer.tsx#L186) |
 | constant | `PRODUCT_ICONS` | Defines the product icons source-of-truth value. | [components/layout/Header.tsx:15](../../components/layout/Header.tsx#L15) |
 | component | `Header()` | Renders the header interface. | [components/layout/Header.tsx:17](../../components/layout/Header.tsx#L17) |
 | function | `onScroll()` | Implements on scroll. | [components/layout/Header.tsx:25](../../components/layout/Header.tsx#L25) |
