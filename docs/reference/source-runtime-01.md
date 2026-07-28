@@ -2,19 +2,20 @@
 
 # Runtime Source Reference
 
-Source-backed contracts for **12 declarations**.
+Source-backed contracts for **13 declarations**.
 
 | Kind | Declaration | Responsibility | Source |
 |---|---|---|---|
 | constant | `localePattern` | Defines the locale pattern source-of-truth value. | [middleware.ts:5](../../middleware.ts#L5) |
 | constant | `defaultLocalePattern` | Defines the default locale pattern source-of-truth value. | [middleware.ts:6](../../middleware.ts#L6) |
 | constant | `internalLocaleRewriteHeader` | Defines the internal locale rewrite header source-of-truth value. | [middleware.ts:7](../../middleware.ts#L7) |
-| constant | `legacyHtmlRedirects` | Defines the legacy html redirects source-of-truth value. | [middleware.ts:8](../../middleware.ts#L8) |
-| function | `cleanLegacyHtmlPath(pathname)` | Implements clean legacy html path. | [middleware.ts:19](../../middleware.ts#L19) |
-| function | `applyDefaultLocaleCanonical(pathname)` | Implements apply default locale canonical. | [middleware.ts:45](../../middleware.ts#L45) |
-| function | `middleware(request)` | Implements middleware. | [middleware.ts:52](../../middleware.ts#L52) |
-| constant | `config` | Defines the config source-of-truth value. | [middleware.ts:95](../../middleware.ts#L95) |
+| constant | `openAiAppsChallengePath` | Defines the open ai apps challenge path source-of-truth value. | [middleware.ts:8](../../middleware.ts#L8) |
+| constant | `legacyHtmlRedirects` | Defines the legacy html redirects source-of-truth value. | [middleware.ts:9](../../middleware.ts#L9) |
+| function | `cleanLegacyHtmlPath(pathname)` | Implements clean legacy html path. | [middleware.ts:20](../../middleware.ts#L20) |
+| function | `applyDefaultLocaleCanonical(pathname)` | Implements apply default locale canonical. | [middleware.ts:46](../../middleware.ts#L46) |
+| function | `middleware(request)` | Implements middleware. | [middleware.ts:53](../../middleware.ts#L53) |
+| constant | `config` | Defines the config source-of-truth value. | [middleware.ts:112](../../middleware.ts#L112) |
 | constant | `withNextIntl` | Defines the with next intl source-of-truth value. | [next.config.mjs:4](../../next.config.mjs#L4) |
 | constant | `whitepaperContentDir` | Defines the whitepaper content dir source-of-truth value. | [next.config.mjs:5](../../next.config.mjs#L5) |
 | constant | `nextConfig` | Defines the next config source-of-truth value. | [next.config.mjs:8](../../next.config.mjs#L8) |
-| method | `webpack(config)` | Implements webpack. | [next.config.mjs:12](../../next.config.mjs#L12) |
+| method | `webpack(config)` | Implements webpack. | [next.config.mjs:13](../../next.config.mjs#L13) |

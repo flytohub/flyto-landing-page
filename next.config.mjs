@@ -7,6 +7,7 @@ const whitepaperContentDir = fileURLToPath(new URL('./content/whitepaper', impor
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   trailingSlash: true,
+  skipTrailingSlashRedirect: true,
   reactStrictMode: true,
   devIndicators: false,
   webpack(config) {

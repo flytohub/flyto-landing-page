@@ -5,6 +5,7 @@ import { isEnglishOnlyRoute, normalizeLocalizationRoute } from './lib/route-loca
 const localePattern = new RegExp(`^/(${locales.join('|')})(/|$)`);
 const defaultLocalePattern = new RegExp(`^/${defaultLocale}(/|$)`);
 const internalLocaleRewriteHeader = 'x-flyto-internal-locale-rewrite';
+const openAiAppsChallengePath = '/.well-known/openai-apps-challenge';
 const legacyHtmlRedirects: Record<string, string> = {
   about: '/',
   app: '/cloud/download/',
@@ -51,6 +52,16 @@ function applyDefaultLocaleCanonical(pathname: string) {
 
 export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
+
+  if (pathname === openAiAppsChallengePath) {
+    return NextResponse.next();
+  }
+  if (pathname === `${openAiAppsChallengePath}/`) {
+    const url = new URL(request.url);
+    url.pathname = openAiAppsChallengePath;
+    return NextResponse.redirect(url, 308);
+  }
+
   const localeMatch = pathname.match(localePattern);
   const locale = localeMatch?.[1] ?? defaultLocale;
   const headers = new Headers(request.headers);
@@ -60,6 +71,12 @@ export default function middleware(request: NextRequest) {
   if (cleanPathname) {
     const url = request.nextUrl.clone();
     url.pathname = applyDefaultLocaleCanonical(cleanPathname);
+    return NextResponse.redirect(url, 308);
+  }
+
+  if (pathname !== '/' && !pathname.endsWith('/')) {
+    const url = new URL(request.url);
+    url.pathname = `${pathname}/`;
     return NextResponse.redirect(url, 308);
   }
 
@@ -94,6 +111,7 @@ export default function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
+    '/.well-known/openai-apps-challenge/:path*',
     '/((?!api(?:/|$)|_next|_vercel|assets).+\\.html)',
     '/((?!api(?:/|$)|_next|_vercel|assets|.*\\..*).*)',
   ],

@@ -156,6 +156,7 @@ const launchSurfaceContracts = {
   ],
   'middleware.ts': [
     'x-flyto-internal-locale-rewrite',
+    'openAiAppsChallengePath',
     'X-NEXT-INTL-LOCALE',
     'NextResponse.rewrite',
     'NextResponse.redirect',
@@ -305,7 +306,12 @@ for (const token of [
 }
 
 const nextConfig = read('next.config.mjs');
-for (const token of ['asset/source', 'whitepaperContentDir', './content/whitepaper']) {
+for (const token of [
+  'asset/source',
+  'whitepaperContentDir',
+  './content/whitepaper',
+  'skipTrailingSlashRedirect: true',
+]) {
   if (!nextConfig.includes(token)) {
     failures.push(`next.config.mjs missing markdown bundling token: ${token}`);
   }
