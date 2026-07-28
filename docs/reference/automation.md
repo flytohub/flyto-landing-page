@@ -25,7 +25,7 @@ The repository exposes **20 npm scripts** and **4 GitHub workflows**.
 | `seo:score` | `node scripts/seo-score.mjs` |
 | `seo:sync` | `node scripts/sync-i18n-seo-manifest.mjs` |
 | `start` | `next start` |
-| `test` | `npm run i18n:check && npm run audit:geo && npm run audit:public-site` |
+| `test` | `node --test scripts/*.test.mjs && npm run i18n:check && npm run audit:geo && npm run audit:public-site` |
 | `typecheck` | `tsc --noEmit` |
 | `verify` | `npm run docs:check && npm run test && npm run lint && npm run build && npm run audit:seo && npm run seo:score && npm run seo:manage` |
 

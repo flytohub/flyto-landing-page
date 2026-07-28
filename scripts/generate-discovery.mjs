@@ -60,7 +60,12 @@ function imageRecords() {
 }
 
 function writeIfChanged(filePath, content) {
-  const previous = existsSync(filePath) ? readFileSync(filePath, 'utf8') : null;
+  let previous = null;
+  try {
+    previous = readFileSync(filePath, 'utf8');
+  } catch (error) {
+    if (error?.code !== 'ENOENT') throw error;
+  }
   if (previous === content) return false;
   mkdirSync(path.dirname(filePath), { recursive: true });
   writeFileSync(filePath, content, 'utf8');

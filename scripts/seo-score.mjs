@@ -1,6 +1,12 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import {
+  decodeHtmlEntities,
+  htmlToText,
+  isExternalHttpLink,
+  isInternalSiteLink,
+} from './content-safety.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const appDir = path.join(root, '.next', 'server', 'app');
@@ -96,14 +102,7 @@ const focusByRoute = new Map([
 ]);
 
 function decodeHtml(value) {
-  return String(value)
-    .replace(/&quot;/g, '"')
-    .replace(/&#x27;/g, "'")
-    .replace(/&#39;/g, "'")
-    .replace(/&amp;/g, '&')
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
-    .trim();
+  return decodeHtmlEntities(value);
 }
 
 function getTags(html, tagName) {
@@ -145,11 +144,7 @@ function titleFrom(html) {
 }
 
 function stripHtml(html) {
-  return decodeHtml(String(html)
-    .replace(/<script\b[\s\S]*?<\/script>/gi, ' ')
-    .replace(/<style\b[\s\S]*?<\/style>/gi, ' ')
-    .replace(/<[^>]+>/g, ' ')
-    .replace(/\s+/g, ' '));
+  return htmlToText(html);
 }
 
 function visibleText(html) {
@@ -210,8 +205,8 @@ function publicAssetExists(url) {
 
 function linkStats(html) {
   const links = getTags(html, 'a').map(attrs).map((attributes) => attributes.href).filter(Boolean);
-  const internal = links.filter((href) => href.startsWith('/') || href.startsWith(siteUrl));
-  const external = links.filter((href) => /^https?:\/\//.test(href) && !href.startsWith(siteUrl));
+  const internal = links.filter((href) => isInternalSiteLink(href, siteUrl));
+  const external = links.filter((href) => isExternalHttpLink(href, siteUrl));
   return { total: links.length, internal: internal.length, external: external.length };
 }
 

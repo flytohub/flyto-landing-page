@@ -53,7 +53,6 @@ export interface PublicRoutePage {
 const WARROOM_CE_GITHUB = 'https://github.com/flytohub/flyto-warroom';
 const WARROOM_CE_DOCKER = 'https://hub.docker.com/r/chesterhsu/flyto-warroom';
 const WARROOM_CE_DOCS = 'https://docs.flyto2.com/warroom/self-hosted-ce';
-const WARROOM_DOCS = 'https://docs.flyto2.com/warroom/';
 
 export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
   pricing: {

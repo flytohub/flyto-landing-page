@@ -66,48 +66,48 @@ Source-backed contracts for **260 declarations**.
 | constant | `middleware` | Defines the middleware source-of-truth value. | [scripts/audit-public-site-contract.mjs:374](../../scripts/audit-public-site-contract.mjs#L374) |
 | constant | `homePage` | Defines the home page source-of-truth value. | [scripts/audit-public-site-contract.mjs:375](../../scripts/audit-public-site-contract.mjs#L375) |
 | constant | `openaiChallenge` | Defines the openai challenge source-of-truth value. | [scripts/audit-public-site-contract.mjs:376](../../scripts/audit-public-site-contract.mjs#L376) |
-| constant | `root` | Defines the root source-of-truth value. | [scripts/audit-seo-surface.mjs:6](../../scripts/audit-seo-surface.mjs#L6) |
-| constant | `appDir` | Defines the app dir source-of-truth value. | [scripts/audit-seo-surface.mjs:7](../../scripts/audit-seo-surface.mjs#L7) |
-| constant | `publicDir` | Defines the public dir source-of-truth value. | [scripts/audit-seo-surface.mjs:8](../../scripts/audit-seo-surface.mjs#L8) |
-| constant | `seoDir` | Defines the seo dir source-of-truth value. | [scripts/audit-seo-surface.mjs:9](../../scripts/audit-seo-surface.mjs#L9) |
-| constant | `seoContractPath` | Defines the seo contract path source-of-truth value. | [scripts/audit-seo-surface.mjs:10](../../scripts/audit-seo-surface.mjs#L10) |
-| constant | `expectedSurfaceKey` | Defines the expected surface key source-of-truth value. | [scripts/audit-seo-surface.mjs:11](../../scripts/audit-seo-surface.mjs#L11) |
-| constant | `publicLocaleByManifestLocale` | Defines the public locale by manifest locale source-of-truth value. | [scripts/audit-seo-surface.mjs:12](../../scripts/audit-seo-surface.mjs#L12) |
-| constant | `seoContract` | Defines the seo contract source-of-truth value. | [scripts/audit-seo-surface.mjs:30](../../scripts/audit-seo-surface.mjs#L30) |
-| constant | `siteUrl` | Defines the site url source-of-truth value. | [scripts/audit-seo-surface.mjs:31](../../scripts/audit-seo-surface.mjs#L31) |
-| constant | `checkedPages` | Defines the checked pages source-of-truth value. | [scripts/audit-seo-surface.mjs:33](../../scripts/audit-seo-surface.mjs#L33) |
-| constant | `sitemapRequiredUrls` | Defines the sitemap required urls source-of-truth value. | [scripts/audit-seo-surface.mjs:53](../../scripts/audit-seo-surface.mjs#L53) |
-| constant | `requiredSitemapAlternates` | Defines the required sitemap alternates source-of-truth value. | [scripts/audit-seo-surface.mjs:54](../../scripts/audit-seo-surface.mjs#L54) |
-| constant | `requiredRobotsTokens` | Defines the required robots tokens source-of-truth value. | [scripts/audit-seo-surface.mjs:59](../../scripts/audit-seo-surface.mjs#L59) |
-| constant | `requiredLlmsTokens` | Defines the required llms tokens source-of-truth value. | [scripts/audit-seo-surface.mjs:69](../../scripts/audit-seo-surface.mjs#L69) |
-| constant | `requiredKeywordMatrixTokens` | Defines the required keyword matrix tokens source-of-truth value. | [scripts/audit-seo-surface.mjs:80](../../scripts/audit-seo-surface.mjs#L80) |
-| constant | `maxKeywordMatrixAgeDays` | Defines the max keyword matrix age days source-of-truth value. | [scripts/audit-seo-surface.mjs:90](../../scripts/audit-seo-surface.mjs#L90) |
-| constant | `failures` | Defines the failures source-of-truth value. | [scripts/audit-seo-surface.mjs:91](../../scripts/audit-seo-surface.mjs#L91) |
-| function | `read(relativePath)` | Retrieves read. | [scripts/audit-seo-surface.mjs:93](../../scripts/audit-seo-surface.mjs#L93) |
-| function | `sha256(value)` | Implements sha256. | [scripts/audit-seo-surface.mjs:102](../../scripts/audit-seo-surface.mjs#L102) |
-| function | `loadSeoContract()` | Retrieves load seo contract. | [scripts/audit-seo-surface.mjs:106](../../scripts/audit-seo-surface.mjs#L106) |
-| function | `fail(message)` | Implements fail. | [scripts/audit-seo-surface.mjs:114](../../scripts/audit-seo-surface.mjs#L114) |
-| function | `decodeHtml(value)` | Transforms decode html. | [scripts/audit-seo-surface.mjs:118](../../scripts/audit-seo-surface.mjs#L118) |
-| function | `getTags(html, tagName)` | Retrieves get tags. | [scripts/audit-seo-surface.mjs:129](../../scripts/audit-seo-surface.mjs#L129) |
-| function | `attrs(rawAttrs)` | Implements attrs. | [scripts/audit-seo-surface.mjs:133](../../scripts/audit-seo-surface.mjs#L133) |
-| function | `findMeta(html, key, value)` | Retrieves find meta. | [scripts/audit-seo-surface.mjs:141](../../scripts/audit-seo-surface.mjs#L141) |
-| function | `findLink(html, rel, hrefLang)` | Retrieves find link. | [scripts/audit-seo-surface.mjs:152](../../scripts/audit-seo-surface.mjs#L152) |
-| function | `publicAssetPath(url)` | Implements public asset path. | [scripts/audit-seo-surface.mjs:164](../../scripts/audit-seo-surface.mjs#L164) |
-| function | `checkPublicAsset(label, metaLabel, url)` | Validates check public asset. | [scripts/audit-seo-surface.mjs:175](../../scripts/audit-seo-surface.mjs#L175) |
-| function | `routeFromCanonical(canonical)` | Implements route from canonical. | [scripts/audit-seo-surface.mjs:180](../../scripts/audit-seo-surface.mjs#L180) |
-| function | `publicUrlForManifestLocale(route, manifestLocale)` | Implements public url for manifest locale. | [scripts/audit-seo-surface.mjs:185](../../scripts/audit-seo-surface.mjs#L185) |
-| function | `contractKeywordTerms()` | Implements contract keyword terms. | [scripts/audit-seo-surface.mjs:193](../../scripts/audit-seo-surface.mjs#L193) |
-| function | `titleFrom(html)` | Implements title from. | [scripts/audit-seo-surface.mjs:200](../../scripts/audit-seo-surface.mjs#L200) |
-| function | `checkLength(label, value, min, max)` | Validates check length. | [scripts/audit-seo-surface.mjs:205](../../scripts/audit-seo-surface.mjs#L205) |
-| function | `checkBrandAndEmails(label, content)` | Validates check brand and emails. | [scripts/audit-seo-surface.mjs:211](../../scripts/audit-seo-surface.mjs#L211) |
-| function | `checkPage(page)` | Validates check page. | [scripts/audit-seo-surface.mjs:221](../../scripts/audit-seo-surface.mjs#L221) |
-| function | `checkSeoContract()` | Validates check seo contract. | [scripts/audit-seo-surface.mjs:282](../../scripts/audit-seo-surface.mjs#L282) |
-| function | `checkBuildOutput()` | Validates check build output. | [scripts/audit-seo-surface.mjs:326](../../scripts/audit-seo-surface.mjs#L326) |
-| function | `checkSitemap()` | Validates check sitemap. | [scripts/audit-seo-surface.mjs:334](../../scripts/audit-seo-surface.mjs#L334) |
-| function | `checkRobotsAndLlms()` | Validates check robots and llms. | [scripts/audit-seo-surface.mjs:358](../../scripts/audit-seo-surface.mjs#L358) |
-| function | `checkDiscoveryFiles()` | Validates check discovery files. | [scripts/audit-seo-surface.mjs:375](../../scripts/audit-seo-surface.mjs#L375) |
-| function | `newestKeywordMatrix()` | Implements newest keyword matrix. | [scripts/audit-seo-surface.mjs:404](../../scripts/audit-seo-surface.mjs#L404) |
-| function | `checkKeywordMatrix()` | Validates check keyword matrix. | [scripts/audit-seo-surface.mjs:416](../../scripts/audit-seo-surface.mjs#L416) |
+| constant | `root` | Defines the root source-of-truth value. | [scripts/audit-seo-surface.mjs:7](../../scripts/audit-seo-surface.mjs#L7) |
+| constant | `appDir` | Defines the app dir source-of-truth value. | [scripts/audit-seo-surface.mjs:8](../../scripts/audit-seo-surface.mjs#L8) |
+| constant | `publicDir` | Defines the public dir source-of-truth value. | [scripts/audit-seo-surface.mjs:9](../../scripts/audit-seo-surface.mjs#L9) |
+| constant | `seoDir` | Defines the seo dir source-of-truth value. | [scripts/audit-seo-surface.mjs:10](../../scripts/audit-seo-surface.mjs#L10) |
+| constant | `seoContractPath` | Defines the seo contract path source-of-truth value. | [scripts/audit-seo-surface.mjs:11](../../scripts/audit-seo-surface.mjs#L11) |
+| constant | `expectedSurfaceKey` | Defines the expected surface key source-of-truth value. | [scripts/audit-seo-surface.mjs:12](../../scripts/audit-seo-surface.mjs#L12) |
+| constant | `publicLocaleByManifestLocale` | Defines the public locale by manifest locale source-of-truth value. | [scripts/audit-seo-surface.mjs:13](../../scripts/audit-seo-surface.mjs#L13) |
+| constant | `seoContract` | Defines the seo contract source-of-truth value. | [scripts/audit-seo-surface.mjs:31](../../scripts/audit-seo-surface.mjs#L31) |
+| constant | `siteUrl` | Defines the site url source-of-truth value. | [scripts/audit-seo-surface.mjs:32](../../scripts/audit-seo-surface.mjs#L32) |
+| constant | `checkedPages` | Defines the checked pages source-of-truth value. | [scripts/audit-seo-surface.mjs:34](../../scripts/audit-seo-surface.mjs#L34) |
+| constant | `sitemapRequiredUrls` | Defines the sitemap required urls source-of-truth value. | [scripts/audit-seo-surface.mjs:54](../../scripts/audit-seo-surface.mjs#L54) |
+| constant | `requiredSitemapAlternates` | Defines the required sitemap alternates source-of-truth value. | [scripts/audit-seo-surface.mjs:55](../../scripts/audit-seo-surface.mjs#L55) |
+| constant | `requiredRobotsTokens` | Defines the required robots tokens source-of-truth value. | [scripts/audit-seo-surface.mjs:60](../../scripts/audit-seo-surface.mjs#L60) |
+| constant | `requiredLlmsTokens` | Defines the required llms tokens source-of-truth value. | [scripts/audit-seo-surface.mjs:70](../../scripts/audit-seo-surface.mjs#L70) |
+| constant | `requiredKeywordMatrixTokens` | Defines the required keyword matrix tokens source-of-truth value. | [scripts/audit-seo-surface.mjs:81](../../scripts/audit-seo-surface.mjs#L81) |
+| constant | `maxKeywordMatrixAgeDays` | Defines the max keyword matrix age days source-of-truth value. | [scripts/audit-seo-surface.mjs:91](../../scripts/audit-seo-surface.mjs#L91) |
+| constant | `failures` | Defines the failures source-of-truth value. | [scripts/audit-seo-surface.mjs:92](../../scripts/audit-seo-surface.mjs#L92) |
+| function | `read(relativePath)` | Retrieves read. | [scripts/audit-seo-surface.mjs:94](../../scripts/audit-seo-surface.mjs#L94) |
+| function | `sha256(value)` | Implements sha256. | [scripts/audit-seo-surface.mjs:103](../../scripts/audit-seo-surface.mjs#L103) |
+| function | `loadSeoContract()` | Retrieves load seo contract. | [scripts/audit-seo-surface.mjs:107](../../scripts/audit-seo-surface.mjs#L107) |
+| function | `fail(message)` | Implements fail. | [scripts/audit-seo-surface.mjs:115](../../scripts/audit-seo-surface.mjs#L115) |
+| function | `decodeHtml(value)` | Transforms decode html. | [scripts/audit-seo-surface.mjs:119](../../scripts/audit-seo-surface.mjs#L119) |
+| function | `getTags(html, tagName)` | Retrieves get tags. | [scripts/audit-seo-surface.mjs:123](../../scripts/audit-seo-surface.mjs#L123) |
+| function | `attrs(rawAttrs)` | Implements attrs. | [scripts/audit-seo-surface.mjs:127](../../scripts/audit-seo-surface.mjs#L127) |
+| function | `findMeta(html, key, value)` | Retrieves find meta. | [scripts/audit-seo-surface.mjs:135](../../scripts/audit-seo-surface.mjs#L135) |
+| function | `findLink(html, rel, hrefLang)` | Retrieves find link. | [scripts/audit-seo-surface.mjs:146](../../scripts/audit-seo-surface.mjs#L146) |
+| function | `publicAssetPath(url)` | Implements public asset path. | [scripts/audit-seo-surface.mjs:158](../../scripts/audit-seo-surface.mjs#L158) |
+| function | `checkPublicAsset(label, metaLabel, url)` | Validates check public asset. | [scripts/audit-seo-surface.mjs:169](../../scripts/audit-seo-surface.mjs#L169) |
+| function | `routeFromCanonical(canonical)` | Implements route from canonical. | [scripts/audit-seo-surface.mjs:174](../../scripts/audit-seo-surface.mjs#L174) |
+| function | `publicUrlForManifestLocale(route, manifestLocale)` | Implements public url for manifest locale. | [scripts/audit-seo-surface.mjs:179](../../scripts/audit-seo-surface.mjs#L179) |
+| function | `contractKeywordTerms()` | Implements contract keyword terms. | [scripts/audit-seo-surface.mjs:187](../../scripts/audit-seo-surface.mjs#L187) |
+| function | `titleFrom(html)` | Implements title from. | [scripts/audit-seo-surface.mjs:194](../../scripts/audit-seo-surface.mjs#L194) |
+| function | `checkLength(label, value, min, max)` | Validates check length. | [scripts/audit-seo-surface.mjs:199](../../scripts/audit-seo-surface.mjs#L199) |
+| function | `checkBrandAndEmails(label, content)` | Validates check brand and emails. | [scripts/audit-seo-surface.mjs:205](../../scripts/audit-seo-surface.mjs#L205) |
+| function | `checkPage(page)` | Validates check page. | [scripts/audit-seo-surface.mjs:215](../../scripts/audit-seo-surface.mjs#L215) |
+| function | `checkSeoContract()` | Validates check seo contract. | [scripts/audit-seo-surface.mjs:276](../../scripts/audit-seo-surface.mjs#L276) |
+| function | `checkBuildOutput()` | Validates check build output. | [scripts/audit-seo-surface.mjs:320](../../scripts/audit-seo-surface.mjs#L320) |
+| function | `checkSitemap()` | Validates check sitemap. | [scripts/audit-seo-surface.mjs:328](../../scripts/audit-seo-surface.mjs#L328) |
+| function | `checkRobotsAndLlms()` | Validates check robots and llms. | [scripts/audit-seo-surface.mjs:352](../../scripts/audit-seo-surface.mjs#L352) |
+| function | `checkDiscoveryFiles()` | Validates check discovery files. | [scripts/audit-seo-surface.mjs:369](../../scripts/audit-seo-surface.mjs#L369) |
+| function | `newestKeywordMatrix()` | Implements newest keyword matrix. | [scripts/audit-seo-surface.mjs:398](../../scripts/audit-seo-surface.mjs#L398) |
+| function | `checkKeywordMatrix()` | Validates check keyword matrix. | [scripts/audit-seo-surface.mjs:410](../../scripts/audit-seo-surface.mjs#L410) |
 | constant | `root` | Defines the root source-of-truth value. | [scripts/check-documentation.mjs:6](../../scripts/check-documentation.mjs#L6) |
 | constant | `manifestPath` | Defines the manifest path source-of-truth value. | [scripts/check-documentation.mjs:7](../../scripts/check-documentation.mjs#L7) |
 | constant | `approvedEmails` | Defines the approved emails source-of-truth value. | [scripts/check-documentation.mjs:8](../../scripts/check-documentation.mjs#L8) |
@@ -134,6 +134,17 @@ Source-backed contracts for **260 declarations**.
 | constant | `baselineFile` | Defines the baseline file source-of-truth value. | [scripts/check-message-drift.mjs:47](../../scripts/check-message-drift.mjs#L47) |
 | constant | `baseline` | Defines the baseline source-of-truth value. | [scripts/check-message-drift.mjs:48](../../scripts/check-message-drift.mjs#L48) |
 | constant | `baselineKeys` | Defines the baseline keys source-of-truth value. | [scripts/check-message-drift.mjs:49](../../scripts/check-message-drift.mjs#L49) |
+| constant | `HTML_ENTITIES` | Defines the html entities source-of-truth value. | [scripts/content-safety.mjs:1](../../scripts/content-safety.mjs#L1) |
+| function | `decodeHtmlEntities(value)` | Transforms decode html entities. | [scripts/content-safety.mjs:10](../../scripts/content-safety.mjs#L10) |
+| function | `isTagNameBoundary(character)` | Validates is tag name boundary. | [scripts/content-safety.mjs:16](../../scripts/content-safety.mjs#L16) |
+| function | `findTagStart(lowerValue, token, fromIndex)` | Retrieves find tag start. | [scripts/content-safety.mjs:20](../../scripts/content-safety.mjs#L20) |
+| function | `removeRawTextElements(value, tagName)` | Implements remove raw text elements. | [scripts/content-safety.mjs:29](../../scripts/content-safety.mjs#L29) |
+| function | `removeMarkupTags(value)` | Implements remove markup tags. | [scripts/content-safety.mjs:52](../../scripts/content-safety.mjs#L52) |
+| function | `htmlToText(value)` | Implements html to text. | [scripts/content-safety.mjs:68](../../scripts/content-safety.mjs#L68) |
+| function | `httpUrl(value)` | Implements http url. | [scripts/content-safety.mjs:74](../../scripts/content-safety.mjs#L74) |
+| function | `isInternalSiteLink(value, siteOrigin)` | Validates is internal site link. | [scripts/content-safety.mjs:83](../../scripts/content-safety.mjs#L83) |
+| function | `isExternalHttpLink(value, siteOrigin)` | Validates is external http link. | [scripts/content-safety.mjs:91](../../scripts/content-safety.mjs#L91) |
+| function | `escapeMarkdownCell(value, whitespacePattern)` | Implements escape markdown cell. | [scripts/content-safety.mjs:97](../../scripts/content-safety.mjs#L97) |
 | constant | `BULK_PERSONAS` | Bulk-authored forum corpus. Hand-written by Claude in conversation with Chester so the forum has 500+ posts of consistent voice without burning an external API key. seed-bulk.mjs imports BULK_POSTS and BULK_PERSONAS and writes them alongside the 24 curated exemplars in seed-curated.mjs. Post schema: { product, lang, category, author, days_ago, views, reactions, pinned, title, body, tags, comments: [{author, body, hours_after}] } Persona schema: { uid, name, email, official? } Sections are split by (lang × product) bucket for readability. | [scripts/forum-bulk.mjs:21](../../scripts/forum-bulk.mjs#L21) |
 | constant | `EN_CLOUD` | Defines the en cloud source-of-truth value. | [scripts/forum-bulk.mjs:67](../../scripts/forum-bulk.mjs#L67) |
 | constant | `EN_CODE` | Defines the en code source-of-truth value. | [scripts/forum-bulk.mjs:1385](../../scripts/forum-bulk.mjs#L1385) |
@@ -153,41 +164,41 @@ Source-backed contracts for **260 declarations**.
 | function | `pageForImage(filePath)` | Implements page for image. | [scripts/generate-discovery.mjs:43](../../scripts/generate-discovery.mjs#L43) |
 | function | `imageRecords()` | Implements image records. | [scripts/generate-discovery.mjs:50](../../scripts/generate-discovery.mjs#L50) |
 | function | `writeIfChanged(filePath, content)` | Implements write if changed. | [scripts/generate-discovery.mjs:62](../../scripts/generate-discovery.mjs#L62) |
-| function | `imageSitemap(images)` | Implements image sitemap. | [scripts/generate-discovery.mjs:70](../../scripts/generate-discovery.mjs#L70) |
-| function | `manifest(images)` | Implements manifest. | [scripts/generate-discovery.mjs:88](../../scripts/generate-discovery.mjs#L88) |
-| function | `main()` | Implements main. | [scripts/generate-discovery.mjs:97](../../scripts/generate-discovery.mjs#L97) |
-| constant | `root` | Defines the root source-of-truth value. | [scripts/generate-documentation-reference.mjs:8](../../scripts/generate-documentation-reference.mjs#L8) |
-| constant | `outputDir` | Defines the output dir source-of-truth value. | [scripts/generate-documentation-reference.mjs:9](../../scripts/generate-documentation-reference.mjs#L9) |
-| constant | `generatedMarker` | Defines the generated marker source-of-truth value. | [scripts/generate-documentation-reference.mjs:10](../../scripts/generate-documentation-reference.mjs#L10) |
-| constant | `checkMode` | Defines the check mode source-of-truth value. | [scripts/generate-documentation-reference.mjs:11](../../scripts/generate-documentation-reference.mjs#L11) |
-| constant | `sourceExtensions` | Defines the source extensions source-of-truth value. | [scripts/generate-documentation-reference.mjs:12](../../scripts/generate-documentation-reference.mjs#L12) |
-| constant | `maxDeclarationsPerPage` | Defines the max declarations per page source-of-truth value. | [scripts/generate-documentation-reference.mjs:13](../../scripts/generate-documentation-reference.mjs#L13) |
-| function | `trackedFiles()` | Implements tracked files. | [scripts/generate-documentation-reference.mjs:15](../../scripts/generate-documentation-reference.mjs#L15) |
-| function | `read(relativePath)` | Retrieves read. | [scripts/generate-documentation-reference.mjs:22](../../scripts/generate-documentation-reference.mjs#L22) |
-| function | `sourceKind(relativePath)` | Implements source kind. | [scripts/generate-documentation-reference.mjs:26](../../scripts/generate-documentation-reference.mjs#L26) |
-| function | `lineOf(sourceFile, node)` | Implements line of. | [scripts/generate-documentation-reference.mjs:32](../../scripts/generate-documentation-reference.mjs#L32) |
-| function | `declarationName(node, sourceFile)` | Implements declaration name. | [scripts/generate-documentation-reference.mjs:36](../../scripts/generate-documentation-reference.mjs#L36) |
-| function | `firstComment(node, sourceFile)` | Implements first comment. | [scripts/generate-documentation-reference.mjs:41](../../scripts/generate-documentation-reference.mjs#L41) |
-| function | `humanize(value)` | Implements humanize. | [scripts/generate-documentation-reference.mjs:50](../../scripts/generate-documentation-reference.mjs#L50) |
-| function | `responsibility(kind, name, comment)` | Implements responsibility. | [scripts/generate-documentation-reference.mjs:60](../../scripts/generate-documentation-reference.mjs#L60) |
-| function | `signature(node, sourceFile, name)` | Implements signature. | [scripts/generate-documentation-reference.mjs:80](../../scripts/generate-documentation-reference.mjs#L80) |
-| function | `isTopLevelVariable(node)` | Validates is top level variable. | [scripts/generate-documentation-reference.mjs:98](../../scripts/generate-documentation-reference.mjs#L98) |
-| function | `declarationsFor(relativePath)` | Implements declarations for. | [scripts/generate-documentation-reference.mjs:105](../../scripts/generate-documentation-reference.mjs#L105) |
-| function | `add(node, kind, forcedName)` | Implements add. | [scripts/generate-documentation-reference.mjs:110](../../scripts/generate-documentation-reference.mjs#L110) |
-| function | `visit(node, parentOwner)` | Implements visit. | [scripts/generate-documentation-reference.mjs:122](../../scripts/generate-documentation-reference.mjs#L122) |
-| function | `areaFor(relativePath)` | Implements area for. | [scripts/generate-documentation-reference.mjs:169](../../scripts/generate-documentation-reference.mjs#L169) |
-| function | `title(value)` | Implements title. | [scripts/generate-documentation-reference.mjs:177](../../scripts/generate-documentation-reference.mjs#L177) |
-| function | `escapeCell(value)` | Implements escape cell. | [scripts/generate-documentation-reference.mjs:181](../../scripts/generate-documentation-reference.mjs#L181) |
-| function | `sourceLink(relativePath, line)` | Implements source link. | [scripts/generate-documentation-reference.mjs:185](../../scripts/generate-documentation-reference.mjs#L185) |
-| function | `routeFromPage(relativePath)` | Implements route from page. | [scripts/generate-documentation-reference.mjs:190](../../scripts/generate-documentation-reference.mjs#L190) |
-| function | `routeInventory(files)` | Implements route inventory. | [scripts/generate-documentation-reference.mjs:199](../../scripts/generate-documentation-reference.mjs#L199) |
-| function | `flattenKeys(value, prefix)` | Implements flatten keys. | [scripts/generate-documentation-reference.mjs:215](../../scripts/generate-documentation-reference.mjs#L215) |
-| function | `envInventory(files)` | Implements env inventory. | [scripts/generate-documentation-reference.mjs:220](../../scripts/generate-documentation-reference.mjs#L220) |
-| function | `workflowInventory(files)` | Implements workflow inventory. | [scripts/generate-documentation-reference.mjs:240](../../scripts/generate-documentation-reference.mjs#L240) |
-| function | `whitepaperInventory(files)` | Implements whitepaper inventory. | [scripts/generate-documentation-reference.mjs:247](../../scripts/generate-documentation-reference.mjs#L247) |
-| function | `renderSourcePage(area, pageNumber, pageCount, rows)` | Builds render source page. | [scripts/generate-documentation-reference.mjs:254](../../scripts/generate-documentation-reference.mjs#L254) |
-| function | `buildOutputs(files)` | Builds build outputs. | [scripts/generate-documentation-reference.mjs:263](../../scripts/generate-documentation-reference.mjs#L263) |
-| function | `verifyOrWrite(outputs)` | Validates verify or write. | [scripts/generate-documentation-reference.mjs:329](../../scripts/generate-documentation-reference.mjs#L329) |
+| function | `imageSitemap(images)` | Implements image sitemap. | [scripts/generate-discovery.mjs:75](../../scripts/generate-discovery.mjs#L75) |
+| function | `manifest(images)` | Implements manifest. | [scripts/generate-discovery.mjs:93](../../scripts/generate-discovery.mjs#L93) |
+| function | `main()` | Implements main. | [scripts/generate-discovery.mjs:102](../../scripts/generate-discovery.mjs#L102) |
+| constant | `root` | Defines the root source-of-truth value. | [scripts/generate-documentation-reference.mjs:9](../../scripts/generate-documentation-reference.mjs#L9) |
+| constant | `outputDir` | Defines the output dir source-of-truth value. | [scripts/generate-documentation-reference.mjs:10](../../scripts/generate-documentation-reference.mjs#L10) |
+| constant | `generatedMarker` | Defines the generated marker source-of-truth value. | [scripts/generate-documentation-reference.mjs:11](../../scripts/generate-documentation-reference.mjs#L11) |
+| constant | `checkMode` | Defines the check mode source-of-truth value. | [scripts/generate-documentation-reference.mjs:12](../../scripts/generate-documentation-reference.mjs#L12) |
+| constant | `sourceExtensions` | Defines the source extensions source-of-truth value. | [scripts/generate-documentation-reference.mjs:13](../../scripts/generate-documentation-reference.mjs#L13) |
+| constant | `maxDeclarationsPerPage` | Defines the max declarations per page source-of-truth value. | [scripts/generate-documentation-reference.mjs:14](../../scripts/generate-documentation-reference.mjs#L14) |
+| function | `trackedFiles()` | Implements tracked files. | [scripts/generate-documentation-reference.mjs:16](../../scripts/generate-documentation-reference.mjs#L16) |
+| function | `read(relativePath)` | Retrieves read. | [scripts/generate-documentation-reference.mjs:23](../../scripts/generate-documentation-reference.mjs#L23) |
+| function | `sourceKind(relativePath)` | Implements source kind. | [scripts/generate-documentation-reference.mjs:27](../../scripts/generate-documentation-reference.mjs#L27) |
+| function | `lineOf(sourceFile, node)` | Implements line of. | [scripts/generate-documentation-reference.mjs:33](../../scripts/generate-documentation-reference.mjs#L33) |
+| function | `declarationName(node, sourceFile)` | Implements declaration name. | [scripts/generate-documentation-reference.mjs:37](../../scripts/generate-documentation-reference.mjs#L37) |
+| function | `firstComment(node, sourceFile)` | Implements first comment. | [scripts/generate-documentation-reference.mjs:42](../../scripts/generate-documentation-reference.mjs#L42) |
+| function | `humanize(value)` | Implements humanize. | [scripts/generate-documentation-reference.mjs:51](../../scripts/generate-documentation-reference.mjs#L51) |
+| function | `responsibility(kind, name, comment)` | Implements responsibility. | [scripts/generate-documentation-reference.mjs:61](../../scripts/generate-documentation-reference.mjs#L61) |
+| function | `signature(node, sourceFile, name)` | Implements signature. | [scripts/generate-documentation-reference.mjs:81](../../scripts/generate-documentation-reference.mjs#L81) |
+| function | `isTopLevelVariable(node)` | Validates is top level variable. | [scripts/generate-documentation-reference.mjs:99](../../scripts/generate-documentation-reference.mjs#L99) |
+| function | `declarationsFor(relativePath)` | Implements declarations for. | [scripts/generate-documentation-reference.mjs:106](../../scripts/generate-documentation-reference.mjs#L106) |
+| function | `add(node, kind, forcedName)` | Implements add. | [scripts/generate-documentation-reference.mjs:111](../../scripts/generate-documentation-reference.mjs#L111) |
+| function | `visit(node, parentOwner)` | Implements visit. | [scripts/generate-documentation-reference.mjs:123](../../scripts/generate-documentation-reference.mjs#L123) |
+| function | `areaFor(relativePath)` | Implements area for. | [scripts/generate-documentation-reference.mjs:170](../../scripts/generate-documentation-reference.mjs#L170) |
+| function | `title(value)` | Implements title. | [scripts/generate-documentation-reference.mjs:178](../../scripts/generate-documentation-reference.mjs#L178) |
+| function | `escapeCell(value)` | Implements escape cell. | [scripts/generate-documentation-reference.mjs:182](../../scripts/generate-documentation-reference.mjs#L182) |
+| function | `sourceLink(relativePath, line)` | Implements source link. | [scripts/generate-documentation-reference.mjs:186](../../scripts/generate-documentation-reference.mjs#L186) |
+| function | `routeFromPage(relativePath)` | Implements route from page. | [scripts/generate-documentation-reference.mjs:191](../../scripts/generate-documentation-reference.mjs#L191) |
+| function | `routeInventory(files)` | Implements route inventory. | [scripts/generate-documentation-reference.mjs:200](../../scripts/generate-documentation-reference.mjs#L200) |
+| function | `flattenKeys(value, prefix)` | Implements flatten keys. | [scripts/generate-documentation-reference.mjs:216](../../scripts/generate-documentation-reference.mjs#L216) |
+| function | `envInventory(files)` | Implements env inventory. | [scripts/generate-documentation-reference.mjs:221](../../scripts/generate-documentation-reference.mjs#L221) |
+| function | `workflowInventory(files)` | Implements workflow inventory. | [scripts/generate-documentation-reference.mjs:241](../../scripts/generate-documentation-reference.mjs#L241) |
+| function | `whitepaperInventory(files)` | Implements whitepaper inventory. | [scripts/generate-documentation-reference.mjs:248](../../scripts/generate-documentation-reference.mjs#L248) |
+| function | `renderSourcePage(area, pageNumber, pageCount, rows)` | Builds render source page. | [scripts/generate-documentation-reference.mjs:255](../../scripts/generate-documentation-reference.mjs#L255) |
+| function | `buildOutputs(files)` | Builds build outputs. | [scripts/generate-documentation-reference.mjs:264](../../scripts/generate-documentation-reference.mjs#L264) |
+| function | `verifyOrWrite(outputs)` | Validates verify or write. | [scripts/generate-documentation-reference.mjs:330](../../scripts/generate-documentation-reference.mjs#L330) |
 | constant | `argv` | Defines the argv source-of-truth value. | [scripts/moderate-once.mjs:36](../../scripts/moderate-once.mjs#L36) |
 | constant | `APPLY` | Defines the apply source-of-truth value. | [scripts/moderate-once.mjs:37](../../scripts/moderate-once.mjs#L37) |
 | constant | `NUKE` | Defines the nuke source-of-truth value. | [scripts/moderate-once.mjs:38](../../scripts/moderate-once.mjs#L38) |
@@ -224,45 +235,34 @@ Source-backed contracts for **260 declarations**.
 | function | `tsFromDaysAgo(daysAgo, hoursOffset, minutesOffset)` | Implements ts from days ago. | [scripts/seed-curated.mjs:514](../../scripts/seed-curated.mjs#L514) |
 | function | `main()` | Implements main. | [scripts/seed-curated.mjs:523](../../scripts/seed-curated.mjs#L523) |
 | constant | `invokedDirectly` | Defines the invoked directly source-of-truth value. | [scripts/seed-curated.mjs:606](../../scripts/seed-curated.mjs#L606) |
-| constant | `root` | Defines the root source-of-truth value. | [scripts/seo-manage.mjs:5](../../scripts/seo-manage.mjs#L5) |
-| constant | `seoDir` | Defines the seo dir source-of-truth value. | [scripts/seo-manage.mjs:6](../../scripts/seo-manage.mjs#L6) |
-| constant | `appDir` | Defines the app dir source-of-truth value. | [scripts/seo-manage.mjs:7](../../scripts/seo-manage.mjs#L7) |
-| constant | `reportDir` | Defines the report dir source-of-truth value. | [scripts/seo-manage.mjs:8](../../scripts/seo-manage.mjs#L8) |
-| constant | `scoreReportPath` | Defines the score report path source-of-truth value. | [scripts/seo-manage.mjs:9](../../scripts/seo-manage.mjs#L9) |
-| constant | `managementJsonPath` | Defines the management json path source-of-truth value. | [scripts/seo-manage.mjs:10](../../scripts/seo-manage.mjs#L10) |
-| constant | `managementMdPath` | Defines the management md path source-of-truth value. | [scripts/seo-manage.mjs:11](../../scripts/seo-manage.mjs#L11) |
-| constant | `searchConsoleDir` | Defines the search console dir source-of-truth value. | [scripts/seo-manage.mjs:12](../../scripts/seo-manage.mjs#L12) |
-| constant | `minManagementScore` | Defines the min management score source-of-truth value. | [scripts/seo-manage.mjs:13](../../scripts/seo-manage.mjs#L13) |
-| constant | `keywordMatrixMaxAgeDays` | Defines the keyword matrix max age days source-of-truth value. | [scripts/seo-manage.mjs:14](../../scripts/seo-manage.mjs#L14) |
-| constant | `requireSearchConsole` | Defines the require search console source-of-truth value. | [scripts/seo-manage.mjs:15](../../scripts/seo-manage.mjs#L15) |
-| function | `readJson(filePath)` | Retrieves read json. | [scripts/seo-manage.mjs:17](../../scripts/seo-manage.mjs#L17) |
-| function | `normalizeTerm(value)` | Transforms normalize term. | [scripts/seo-manage.mjs:21](../../scripts/seo-manage.mjs#L21) |
-| function | `includesTerm(haystack, term)` | Implements includes term. | [scripts/seo-manage.mjs:30](../../scripts/seo-manage.mjs#L30) |
-| function | `decodeHtml(value)` | Transforms decode html. | [scripts/seo-manage.mjs:34](../../scripts/seo-manage.mjs#L34) |
-| function | `stripHtml(html)` | Implements strip html. | [scripts/seo-manage.mjs:45](../../scripts/seo-manage.mjs#L45) |
-| function | `visibleText(html)` | Implements visible text. | [scripts/seo-manage.mjs:53](../../scripts/seo-manage.mjs#L53) |
-| function | `csvRows(filePath)` | Implements csv rows. | [scripts/seo-manage.mjs:58](../../scripts/seo-manage.mjs#L58) |
-| function | `newestKeywordMatrix()` | Implements newest keyword matrix. | [scripts/seo-manage.mjs:69](../../scripts/seo-manage.mjs#L69) |
-| function | `keywordMatrixInfo()` | Implements keyword matrix info. | [scripts/seo-manage.mjs:81](../../scripts/seo-manage.mjs#L81) |
-| function | `contractInfo()` | Implements contract info. | [scripts/seo-manage.mjs:97](../../scripts/seo-manage.mjs#L97) |
-| function | `discoveryInfo()` | Implements discovery info. | [scripts/seo-manage.mjs:110](../../scripts/seo-manage.mjs#L110) |
-| function | `searchConsoleInfo()` | Retrieves search console info. | [scripts/seo-manage.mjs:129](../../scripts/seo-manage.mjs#L129) |
-| function | `coverageGaps(contractTerms, scoreReport)` | Implements coverage gaps. | [scripts/seo-manage.mjs:142](../../scripts/seo-manage.mjs#L142) |
-| function | `pageOpportunities(scoreReport)` | Implements page opportunities. | [scripts/seo-manage.mjs:154](../../scripts/seo-manage.mjs#L154) |
-| function | `addCheck(checks, name, points, pass, recommendation)` | Implements add check. | [scripts/seo-manage.mjs:168](../../scripts/seo-manage.mjs#L168) |
-| function | `managementChecks({ scoreReport, matrix, contract, discovery, gsc, gaps })` | Implements management checks. | [scripts/seo-manage.mjs:172](../../scripts/seo-manage.mjs#L172) |
-| function | `escapeCell(value)` | Implements escape cell. | [scripts/seo-manage.mjs:184](../../scripts/seo-manage.mjs#L184) |
-| function | `tableRows(rows, columns)` | Implements table rows. | [scripts/seo-manage.mjs:188](../../scripts/seo-manage.mjs#L188) |
-| function | `writeReports(report)` | Implements write reports. | [scripts/seo-manage.mjs:197](../../scripts/seo-manage.mjs#L197) |
-| function | `main()` | Implements main. | [scripts/seo-manage.mjs:252](../../scripts/seo-manage.mjs#L252) |
-| constant | `root` | Defines the root source-of-truth value. | [scripts/seo-score.mjs:5](../../scripts/seo-score.mjs#L5) |
-| constant | `appDir` | Defines the app dir source-of-truth value. | [scripts/seo-score.mjs:6](../../scripts/seo-score.mjs#L6) |
-| constant | `publicDir` | Defines the public dir source-of-truth value. | [scripts/seo-score.mjs:7](../../scripts/seo-score.mjs#L7) |
-| constant | `seoDir` | Defines the seo dir source-of-truth value. | [scripts/seo-score.mjs:8](../../scripts/seo-score.mjs#L8) |
-| constant | `reportDir` | Defines the report dir source-of-truth value. | [scripts/seo-score.mjs:9](../../scripts/seo-score.mjs#L9) |
-| constant | `siteUrl` | Defines the site url source-of-truth value. | [scripts/seo-score.mjs:10](../../scripts/seo-score.mjs#L10) |
-| constant | `pageThreshold` | Defines the page threshold source-of-truth value. | [scripts/seo-score.mjs:11](../../scripts/seo-score.mjs#L11) |
-| constant | `averageThreshold` | Defines the average threshold source-of-truth value. | [scripts/seo-score.mjs:12](../../scripts/seo-score.mjs#L12) |
-| constant | `homepageThreshold` | Defines the homepage threshold source-of-truth value. | [scripts/seo-score.mjs:13](../../scripts/seo-score.mjs#L13) |
-| constant | `legacyBrandPattern` | Defines the legacy brand pattern source-of-truth value. | [scripts/seo-score.mjs:14](../../scripts/seo-score.mjs#L14) |
-| constant | `routes` | Defines the routes source-of-truth value. | [scripts/seo-score.mjs:16](../../scripts/seo-score.mjs#L16) |
+| constant | `root` | Defines the root source-of-truth value. | [scripts/seo-manage.mjs:6](../../scripts/seo-manage.mjs#L6) |
+| constant | `seoDir` | Defines the seo dir source-of-truth value. | [scripts/seo-manage.mjs:7](../../scripts/seo-manage.mjs#L7) |
+| constant | `appDir` | Defines the app dir source-of-truth value. | [scripts/seo-manage.mjs:8](../../scripts/seo-manage.mjs#L8) |
+| constant | `reportDir` | Defines the report dir source-of-truth value. | [scripts/seo-manage.mjs:9](../../scripts/seo-manage.mjs#L9) |
+| constant | `scoreReportPath` | Defines the score report path source-of-truth value. | [scripts/seo-manage.mjs:10](../../scripts/seo-manage.mjs#L10) |
+| constant | `managementJsonPath` | Defines the management json path source-of-truth value. | [scripts/seo-manage.mjs:11](../../scripts/seo-manage.mjs#L11) |
+| constant | `managementMdPath` | Defines the management md path source-of-truth value. | [scripts/seo-manage.mjs:12](../../scripts/seo-manage.mjs#L12) |
+| constant | `searchConsoleDir` | Defines the search console dir source-of-truth value. | [scripts/seo-manage.mjs:13](../../scripts/seo-manage.mjs#L13) |
+| constant | `minManagementScore` | Defines the min management score source-of-truth value. | [scripts/seo-manage.mjs:14](../../scripts/seo-manage.mjs#L14) |
+| constant | `keywordMatrixMaxAgeDays` | Defines the keyword matrix max age days source-of-truth value. | [scripts/seo-manage.mjs:15](../../scripts/seo-manage.mjs#L15) |
+| constant | `requireSearchConsole` | Defines the require search console source-of-truth value. | [scripts/seo-manage.mjs:16](../../scripts/seo-manage.mjs#L16) |
+| function | `readJson(filePath)` | Retrieves read json. | [scripts/seo-manage.mjs:18](../../scripts/seo-manage.mjs#L18) |
+| function | `normalizeTerm(value)` | Transforms normalize term. | [scripts/seo-manage.mjs:22](../../scripts/seo-manage.mjs#L22) |
+| function | `includesTerm(haystack, term)` | Implements includes term. | [scripts/seo-manage.mjs:31](../../scripts/seo-manage.mjs#L31) |
+| function | `decodeHtml(value)` | Transforms decode html. | [scripts/seo-manage.mjs:35](../../scripts/seo-manage.mjs#L35) |
+| function | `stripHtml(html)` | Implements strip html. | [scripts/seo-manage.mjs:39](../../scripts/seo-manage.mjs#L39) |
+| function | `visibleText(html)` | Implements visible text. | [scripts/seo-manage.mjs:43](../../scripts/seo-manage.mjs#L43) |
+| function | `csvRows(filePath)` | Implements csv rows. | [scripts/seo-manage.mjs:48](../../scripts/seo-manage.mjs#L48) |
+| function | `newestKeywordMatrix()` | Implements newest keyword matrix. | [scripts/seo-manage.mjs:59](../../scripts/seo-manage.mjs#L59) |
+| function | `keywordMatrixInfo()` | Implements keyword matrix info. | [scripts/seo-manage.mjs:71](../../scripts/seo-manage.mjs#L71) |
+| function | `contractInfo()` | Implements contract info. | [scripts/seo-manage.mjs:87](../../scripts/seo-manage.mjs#L87) |
+| function | `discoveryInfo()` | Implements discovery info. | [scripts/seo-manage.mjs:100](../../scripts/seo-manage.mjs#L100) |
+| function | `searchConsoleInfo()` | Retrieves search console info. | [scripts/seo-manage.mjs:119](../../scripts/seo-manage.mjs#L119) |
+| function | `coverageGaps(contractTerms, scoreReport)` | Implements coverage gaps. | [scripts/seo-manage.mjs:132](../../scripts/seo-manage.mjs#L132) |
+| function | `pageOpportunities(scoreReport)` | Implements page opportunities. | [scripts/seo-manage.mjs:144](../../scripts/seo-manage.mjs#L144) |
+| function | `addCheck(checks, name, points, pass, recommendation)` | Implements add check. | [scripts/seo-manage.mjs:158](../../scripts/seo-manage.mjs#L158) |
+| function | `managementChecks({ scoreReport, matrix, contract, discovery, gsc, gaps })` | Implements management checks. | [scripts/seo-manage.mjs:162](../../scripts/seo-manage.mjs#L162) |
+| function | `escapeCell(value)` | Implements escape cell. | [scripts/seo-manage.mjs:174](../../scripts/seo-manage.mjs#L174) |
+| function | `tableRows(rows, columns)` | Implements table rows. | [scripts/seo-manage.mjs:178](../../scripts/seo-manage.mjs#L178) |
+| function | `writeReports(report)` | Implements write reports. | [scripts/seo-manage.mjs:187](../../scripts/seo-manage.mjs#L187) |
+| function | `main()` | Implements main. | [scripts/seo-manage.mjs:242](../../scripts/seo-manage.mjs#L242) |

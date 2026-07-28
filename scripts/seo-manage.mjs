@@ -1,6 +1,7 @@
 import { existsSync, mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { decodeHtmlEntities, escapeMarkdownCell, htmlToText } from './content-safety.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const seoDir = path.join(root, '.seo');
@@ -32,22 +33,11 @@ function includesTerm(haystack, term) {
 }
 
 function decodeHtml(value) {
-  return String(value)
-    .replace(/&quot;/g, '"')
-    .replace(/&#x27;/g, "'")
-    .replace(/&#39;/g, "'")
-    .replace(/&amp;/g, '&')
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
-    .trim();
+  return decodeHtmlEntities(value);
 }
 
 function stripHtml(html) {
-  return decodeHtml(String(html)
-    .replace(/<script\b[\s\S]*?<\/script>/gi, ' ')
-    .replace(/<style\b[\s\S]*?<\/style>/gi, ' ')
-    .replace(/<[^>]+>/g, ' ')
-    .replace(/\s+/g, ' '));
+  return htmlToText(html);
 }
 
 function visibleText(html) {
@@ -182,7 +172,7 @@ function managementChecks({ scoreReport, matrix, contract, discovery, gsc, gaps 
 }
 
 function escapeCell(value) {
-  return String(value ?? '').replace(/\|/g, '\\|').replace(/\n+/g, ' ').trim();
+  return escapeMarkdownCell(value, /\n+/g);
 }
 
 function tableRows(rows, columns) {

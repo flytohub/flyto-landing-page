@@ -20,7 +20,6 @@ export interface SecurityPage {
   related: { label: string; href: string }[];
 }
 
-const WARROOM_CE_GITHUB = 'https://github.com/flytohub/flyto-warroom';
 const WARROOM_CE_DOCS = 'https://docs.flyto2.com/warroom/self-hosted-ce';
 
 export const securityPages = {
