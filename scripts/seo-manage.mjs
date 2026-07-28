@@ -1,7 +1,7 @@
 import { existsSync, mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { decodeHtmlEntities, escapeMarkdownCell, htmlToText } from './content-safety.mjs';
+import { escapeMarkdownCell, htmlToText } from './content-safety.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const seoDir = path.join(root, '.seo');
@@ -30,10 +30,6 @@ function normalizeTerm(value) {
 
 function includesTerm(haystack, term) {
   return normalizeTerm(haystack).includes(normalizeTerm(term));
-}
-
-function decodeHtml(value) {
-  return decodeHtmlEntities(value);
 }
 
 function stripHtml(html) {

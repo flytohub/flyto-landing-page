@@ -249,20 +249,20 @@ Source-backed contracts for **260 declarations**.
 | function | `readJson(filePath)` | Retrieves read json. | [scripts/seo-manage.mjs:18](../../scripts/seo-manage.mjs#L18) |
 | function | `normalizeTerm(value)` | Transforms normalize term. | [scripts/seo-manage.mjs:22](../../scripts/seo-manage.mjs#L22) |
 | function | `includesTerm(haystack, term)` | Implements includes term. | [scripts/seo-manage.mjs:31](../../scripts/seo-manage.mjs#L31) |
-| function | `decodeHtml(value)` | Transforms decode html. | [scripts/seo-manage.mjs:35](../../scripts/seo-manage.mjs#L35) |
-| function | `stripHtml(html)` | Implements strip html. | [scripts/seo-manage.mjs:39](../../scripts/seo-manage.mjs#L39) |
-| function | `visibleText(html)` | Implements visible text. | [scripts/seo-manage.mjs:43](../../scripts/seo-manage.mjs#L43) |
-| function | `csvRows(filePath)` | Implements csv rows. | [scripts/seo-manage.mjs:48](../../scripts/seo-manage.mjs#L48) |
-| function | `newestKeywordMatrix()` | Implements newest keyword matrix. | [scripts/seo-manage.mjs:59](../../scripts/seo-manage.mjs#L59) |
-| function | `keywordMatrixInfo()` | Implements keyword matrix info. | [scripts/seo-manage.mjs:71](../../scripts/seo-manage.mjs#L71) |
-| function | `contractInfo()` | Implements contract info. | [scripts/seo-manage.mjs:87](../../scripts/seo-manage.mjs#L87) |
-| function | `discoveryInfo()` | Implements discovery info. | [scripts/seo-manage.mjs:100](../../scripts/seo-manage.mjs#L100) |
-| function | `searchConsoleInfo()` | Retrieves search console info. | [scripts/seo-manage.mjs:119](../../scripts/seo-manage.mjs#L119) |
-| function | `coverageGaps(contractTerms, scoreReport)` | Implements coverage gaps. | [scripts/seo-manage.mjs:132](../../scripts/seo-manage.mjs#L132) |
-| function | `pageOpportunities(scoreReport)` | Implements page opportunities. | [scripts/seo-manage.mjs:144](../../scripts/seo-manage.mjs#L144) |
-| function | `addCheck(checks, name, points, pass, recommendation)` | Implements add check. | [scripts/seo-manage.mjs:158](../../scripts/seo-manage.mjs#L158) |
-| function | `managementChecks({ scoreReport, matrix, contract, discovery, gsc, gaps })` | Implements management checks. | [scripts/seo-manage.mjs:162](../../scripts/seo-manage.mjs#L162) |
-| function | `escapeCell(value)` | Implements escape cell. | [scripts/seo-manage.mjs:174](../../scripts/seo-manage.mjs#L174) |
-| function | `tableRows(rows, columns)` | Implements table rows. | [scripts/seo-manage.mjs:178](../../scripts/seo-manage.mjs#L178) |
-| function | `writeReports(report)` | Implements write reports. | [scripts/seo-manage.mjs:187](../../scripts/seo-manage.mjs#L187) |
-| function | `main()` | Implements main. | [scripts/seo-manage.mjs:242](../../scripts/seo-manage.mjs#L242) |
+| function | `stripHtml(html)` | Implements strip html. | [scripts/seo-manage.mjs:35](../../scripts/seo-manage.mjs#L35) |
+| function | `visibleText(html)` | Implements visible text. | [scripts/seo-manage.mjs:39](../../scripts/seo-manage.mjs#L39) |
+| function | `csvRows(filePath)` | Implements csv rows. | [scripts/seo-manage.mjs:44](../../scripts/seo-manage.mjs#L44) |
+| function | `newestKeywordMatrix()` | Implements newest keyword matrix. | [scripts/seo-manage.mjs:55](../../scripts/seo-manage.mjs#L55) |
+| function | `keywordMatrixInfo()` | Implements keyword matrix info. | [scripts/seo-manage.mjs:67](../../scripts/seo-manage.mjs#L67) |
+| function | `contractInfo()` | Implements contract info. | [scripts/seo-manage.mjs:83](../../scripts/seo-manage.mjs#L83) |
+| function | `discoveryInfo()` | Implements discovery info. | [scripts/seo-manage.mjs:96](../../scripts/seo-manage.mjs#L96) |
+| function | `searchConsoleInfo()` | Retrieves search console info. | [scripts/seo-manage.mjs:115](../../scripts/seo-manage.mjs#L115) |
+| function | `coverageGaps(contractTerms, scoreReport)` | Implements coverage gaps. | [scripts/seo-manage.mjs:128](../../scripts/seo-manage.mjs#L128) |
+| function | `pageOpportunities(scoreReport)` | Implements page opportunities. | [scripts/seo-manage.mjs:140](../../scripts/seo-manage.mjs#L140) |
+| function | `addCheck(checks, name, points, pass, recommendation)` | Implements add check. | [scripts/seo-manage.mjs:154](../../scripts/seo-manage.mjs#L154) |
+| function | `managementChecks({ scoreReport, matrix, contract, discovery, gsc, gaps })` | Implements management checks. | [scripts/seo-manage.mjs:158](../../scripts/seo-manage.mjs#L158) |
+| function | `escapeCell(value)` | Implements escape cell. | [scripts/seo-manage.mjs:170](../../scripts/seo-manage.mjs#L170) |
+| function | `tableRows(rows, columns)` | Implements table rows. | [scripts/seo-manage.mjs:174](../../scripts/seo-manage.mjs#L174) |
+| function | `writeReports(report)` | Implements write reports. | [scripts/seo-manage.mjs:183](../../scripts/seo-manage.mjs#L183) |
+| function | `main()` | Implements main. | [scripts/seo-manage.mjs:238](../../scripts/seo-manage.mjs#L238) |
+| constant | `root` | Defines the root source-of-truth value. | [scripts/seo-score.mjs:11](../../scripts/seo-score.mjs#L11) |

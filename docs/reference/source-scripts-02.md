@@ -2,11 +2,10 @@
 
 # Scripts Source Reference 2
 
-Source-backed contracts for **50 declarations**.
+Source-backed contracts for **49 declarations**.
 
 | Kind | Declaration | Responsibility | Source |
 |---|---|---|---|
-| constant | `root` | Defines the root source-of-truth value. | [scripts/seo-score.mjs:11](../../scripts/seo-score.mjs#L11) |
 | constant | `appDir` | Defines the app dir source-of-truth value. | [scripts/seo-score.mjs:12](../../scripts/seo-score.mjs#L12) |
 | constant | `publicDir` | Defines the public dir source-of-truth value. | [scripts/seo-score.mjs:13](../../scripts/seo-score.mjs#L13) |
 | constant | `seoDir` | Defines the seo dir source-of-truth value. | [scripts/seo-score.mjs:14](../../scripts/seo-score.mjs#L14) |
