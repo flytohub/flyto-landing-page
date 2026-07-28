@@ -28,7 +28,7 @@
     "@uiw/react-md-editor": "^4.1.0",
     "clsx": "2.1.1",
     "firebase": "^12.16.0",
-    "lucide-react": "0.469.0",
+    "lucide-react": "1.27.0",
     "motion": "12.40.0",
     "next": "^15.5.21",
     "next-intl": "4.9.2",
