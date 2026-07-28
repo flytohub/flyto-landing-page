@@ -4,7 +4,6 @@ import { setRequestLocale } from 'next-intl/server';
 import { ArrowUpRight, FileText, Clock } from 'lucide-react';
 import { listWhitepapers } from '@/lib/whitepapers';
 import { pageAlternates } from '@/lib/seo';
-import { useLocale } from 'next-intl';
 
 export async function generateMetadata({
   params,

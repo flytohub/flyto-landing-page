@@ -2,7 +2,7 @@
 
 # Lib Source Reference
 
-Source-backed contracts for **133 declarations**.
+Source-backed contracts for **131 declarations**.
 
 | Kind | Declaration | Responsibility | Source |
 |---|---|---|---|
@@ -98,18 +98,16 @@ Source-backed contracts for **133 declarations**.
 | constant | `WARROOM_CE_GITHUB` | Defines the warroom ce github source-of-truth value. | [lib/public-route-pages.ts:53](../../lib/public-route-pages.ts#L53) |
 | constant | `WARROOM_CE_DOCKER` | Defines the warroom ce docker source-of-truth value. | [lib/public-route-pages.ts:54](../../lib/public-route-pages.ts#L54) |
 | constant | `WARROOM_CE_DOCS` | Defines the warroom ce docs source-of-truth value. | [lib/public-route-pages.ts:55](../../lib/public-route-pages.ts#L55) |
-| constant | `WARROOM_DOCS` | Defines the warroom docs source-of-truth value. | [lib/public-route-pages.ts:56](../../lib/public-route-pages.ts#L56) |
-| constant | `publicRoutePages` | Defines the public route pages source-of-truth value. | [lib/public-route-pages.ts:58](../../lib/public-route-pages.ts#L58) |
-| constant | `requiredGeoRoutes` | Defines the required geo routes source-of-truth value. | [lib/public-route-pages.ts:1099](../../lib/public-route-pages.ts#L1099) |
+| constant | `publicRoutePages` | Defines the public route pages source-of-truth value. | [lib/public-route-pages.ts:57](../../lib/public-route-pages.ts#L57) |
+| constant | `requiredGeoRoutes` | Defines the required geo routes source-of-truth value. | [lib/public-route-pages.ts:1098](../../lib/public-route-pages.ts#L1098) |
 | constant | `ENGLISH_ONLY_ROUTE_PREFIXES` | Defines the english only route prefixes source-of-truth value. | [lib/route-localization.ts:1](../../lib/route-localization.ts#L1) |
 | function | `normalizeLocalizationRoute(path)` | Transforms normalize localization route. | [lib/route-localization.ts:33](../../lib/route-localization.ts#L33) |
 | function | `isEnglishOnlyRoute(path)` | Validates is english only route. | [lib/route-localization.ts:37](../../lib/route-localization.ts#L37) |
 | interface | `SecurityPageSection` | Defines the security page section data contract. | [lib/security-pages.ts:1](../../lib/security-pages.ts#L1) |
 | interface | `SecurityPage` | Defines the security page data contract. | [lib/security-pages.ts:7](../../lib/security-pages.ts#L7) |
-| constant | `WARROOM_CE_GITHUB` | Defines the warroom ce github source-of-truth value. | [lib/security-pages.ts:23](../../lib/security-pages.ts#L23) |
-| constant | `WARROOM_CE_DOCS` | Defines the warroom ce docs source-of-truth value. | [lib/security-pages.ts:24](../../lib/security-pages.ts#L24) |
-| constant | `securityPages` | Defines the security pages source-of-truth value. | [lib/security-pages.ts:26](../../lib/security-pages.ts#L26) |
-| type | `SecurityPageSlug` | Defines the security page slug data contract. | [lib/security-pages.ts:386](../../lib/security-pages.ts#L386) |
+| constant | `WARROOM_CE_DOCS` | Defines the warroom ce docs source-of-truth value. | [lib/security-pages.ts:23](../../lib/security-pages.ts#L23) |
+| constant | `securityPages` | Defines the security pages source-of-truth value. | [lib/security-pages.ts:25](../../lib/security-pages.ts#L25) |
+| type | `SecurityPageSlug` | Defines the security page slug data contract. | [lib/security-pages.ts:385](../../lib/security-pages.ts#L385) |
 | type | `SeoLocale` | Defines the seo locale data contract. | [lib/seo.ts:5](../../lib/seo.ts#L5) |
 | type | `SeoContract` | Defines the seo contract data contract. | [lib/seo.ts:10](../../lib/seo.ts#L10) |
 | constant | `seoContract` | Defines the seo contract source-of-truth value. | [lib/seo.ts:23](../../lib/seo.ts#L23) |

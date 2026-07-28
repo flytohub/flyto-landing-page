@@ -217,9 +217,9 @@ Source-backed contracts for **227 declarations**.
 | function | `generateStaticParams()` | Enumerates statically generated route parameters. | [app/[locale]/whitepaper/[slug]/page.tsx:10](../../app/%5Blocale%5D/whitepaper/%5Bslug%5D/page.tsx#L10) |
 | function | `generateMetadata({ params, })` | Builds canonical, social, and locale-aware metadata for the route. | [app/[locale]/whitepaper/[slug]/page.tsx:14](../../app/%5Blocale%5D/whitepaper/%5Bslug%5D/page.tsx#L14) |
 | component | `WhitepaperPage({ params, })` | Renders the whitepaper page interface. | [app/[locale]/whitepaper/[slug]/page.tsx:29](../../app/%5Blocale%5D/whitepaper/%5Bslug%5D/page.tsx#L29) |
-| function | `generateMetadata({ params, })` | Builds canonical, social, and locale-aware metadata for the route. | [app/[locale]/whitepaper/page.tsx:9](../../app/%5Blocale%5D/whitepaper/page.tsx#L9) |
-| component | `WhitepaperIndex({ params, })` | Renders the whitepaper index interface. | [app/[locale]/whitepaper/page.tsx:23](../../app/%5Blocale%5D/whitepaper/page.tsx#L23) |
-| component | `Card({ paper, locale, })` | Renders the card interface. | [app/[locale]/whitepaper/page.tsx:55](../../app/%5Blocale%5D/whitepaper/page.tsx#L55) |
+| function | `generateMetadata({ params, })` | Builds canonical, social, and locale-aware metadata for the route. | [app/[locale]/whitepaper/page.tsx:8](../../app/%5Blocale%5D/whitepaper/page.tsx#L8) |
+| component | `WhitepaperIndex({ params, })` | Renders the whitepaper index interface. | [app/[locale]/whitepaper/page.tsx:22](../../app/%5Blocale%5D/whitepaper/page.tsx#L22) |
+| component | `Card({ paper, locale, })` | Renders the card interface. | [app/[locale]/whitepaper/page.tsx:54](../../app/%5Blocale%5D/whitepaper/page.tsx#L54) |
 | constant | `page` | Defines the page source-of-truth value. | [app/[locale]/zapier-alternative/page.tsx:7](../../app/%5Blocale%5D/zapier-alternative/page.tsx#L7) |
 | function | `generateMetadata({ params })` | Builds canonical, social, and locale-aware metadata for the route. | [app/[locale]/zapier-alternative/page.tsx:9](../../app/%5Blocale%5D/zapier-alternative/page.tsx#L9) |
 | component | `ZapierAlternativePage({ params })` | Renders the zapier alternative page interface. | [app/[locale]/zapier-alternative/page.tsx:14](../../app/%5Blocale%5D/zapier-alternative/page.tsx#L14) |

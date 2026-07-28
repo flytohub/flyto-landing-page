@@ -21,7 +21,7 @@
     "preview": "opennextjs-cloudflare build && wrangler pages dev .cloudflare/output",
     "start": "next start",
     "lint": "node --check scripts/check-message-drift.mjs && node --check scripts/generate-discovery.mjs && node --check scripts/generate-documentation-reference.mjs && node --check scripts/check-documentation.mjs && node --check scripts/seo-score.mjs && node --check scripts/seo-manage.mjs && tsc --noEmit",
-    "test": "npm run i18n:check && npm run audit:geo && npm run audit:public-site",
+    "test": "node --test scripts/*.test.mjs && npm run i18n:check && npm run audit:geo && npm run audit:public-site",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
