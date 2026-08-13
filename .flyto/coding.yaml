@@ -1,0 +1,27 @@
+# Repository-owned verification contract for Flyto's audited coding route.
+#
+# Commands are bounded, argv-only, and use the dependencies pinned by this
+# checkout.  The full `verify` script remains the final authority; the focused
+# checks make failures actionable without weakening that gate.
+version: flyto.coding-config.v1
+
+checks:
+  - name: typecheck
+    argv: ["npm", "run", "typecheck"]
+    timeout_seconds: 300
+    required: true
+
+  - name: i18n
+    argv: ["npm", "run", "i18n:check"]
+    timeout_seconds: 300
+    required: true
+
+  - name: public_site_contract
+    argv: ["npm", "run", "audit:public-site"]
+    timeout_seconds: 300
+    required: true
+
+  - name: verify
+    argv: ["npm", "run", "verify"]
+    timeout_seconds: 1200
+    required: true
