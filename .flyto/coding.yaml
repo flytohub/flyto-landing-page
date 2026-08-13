@@ -2,10 +2,16 @@
 #
 # Commands are bounded, argv-only, and use the dependencies pinned by this
 # checkout.  The full `verify` script remains the final authority; the focused
-# checks make failures actionable without weakening that gate.
+# checks make failures actionable without weakening that gate. `npm_ci` is the
+# first required check, and `build_cf` is the last required check.
 version: flyto.coding-config.v1
 
 checks:
+  - name: npm_ci
+    argv: ["npm", "ci", "--no-audit", "--no-fund"]
+    timeout_seconds: 600
+    required: true
+
   - name: typecheck
     argv: ["npm", "run", "typecheck"]
     timeout_seconds: 300
@@ -23,5 +29,10 @@ checks:
 
   - name: verify
     argv: ["npm", "run", "verify"]
+    timeout_seconds: 900
+    required: true
+
+  - name: build_cf
+    argv: ["npm", "run", "build:cf"]
     timeout_seconds: 900
     required: true

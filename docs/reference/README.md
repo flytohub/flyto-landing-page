@@ -4,9 +4,11 @@
 
 This reference is generated from tracked source with the TypeScript compiler AST. It maps route modules, components, functions, methods, types, constants, scripts, configuration, content, and discovery assets back to maintained files.
 
+The repository-owned coding route runs `npm_ci` as its first required check and `build_cf` as its last required check. Its governed required-check receipt must enumerate `npm_ci`, `typecheck`, `i18n`, `public_site_contract`, `verify`, and `build_cf` in that exact order, with all six checks passing.
+
 Inventory: **859 declarations**, **139 source files**, **51 page modules**, **16 locales**, **488 baseline message keys**, **17 environment variables**, **20 npm scripts**, **4 workflows**, and **7 public whitepapers**.
 
-Source fingerprint: `312d8f798807d993579f75a8147fec9e161260b9a0ee6fc50f730bb0f23aa52b`.
+Source fingerprint: `eaeee453ef3dea58ababe2dc88cb10a8d4e748ba078b53c00be7684541c24423`.
 
 ## Source Areas
 
