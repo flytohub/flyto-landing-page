@@ -1,5 +1,15 @@
 # Flyto2
 
+## Physical AI exhibit preview
+
+- Homepage: https://flyto2.com/
+- Captured 2026-08-12: a configuration and exhibit preview, not live commissioning.
+- The bounded exhibit represents TurtleBot motion and LiDAR plus a separate Mac UVC loopback-only resource.
+- Mac observation was verified locally. Customer pairing and live Raspberry Pi commissioning remain incomplete.
+- Workflows shown: Corridor clearance (robot) and Zone overview (camera).
+- Execution-layer source: https://github.com/flytohub/flyto-robotics
+- Existing workflow videos: https://flyto2.com/#flow-demo-videos
+
 > Flyto2 combines open-source AI workflow automation, MCP-native agent tools, no-code browser automation, and a security war room for evidence-backed CTEM. It integrates existing ASM, EASM, dark web, code security, pentest, and red-team signals into one workflow so teams can correlate, validate, and act with evidence.
 
 ## Positioning

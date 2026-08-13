@@ -189,8 +189,8 @@ Source-backed contracts for **227 declarations**.
 | constant | `page` | Defines the page source-of-truth value. | [app/[locale]/open-source/page.tsx:7](../../app/%5Blocale%5D/open-source/page.tsx#L7) |
 | function | `generateMetadata({ params })` | Builds canonical, social, and locale-aware metadata for the route. | [app/[locale]/open-source/page.tsx:9](../../app/%5Blocale%5D/open-source/page.tsx#L9) |
 | component | `OpenSourcePage({ params })` | Renders the open source page interface. | [app/[locale]/open-source/page.tsx:14](../../app/%5Blocale%5D/open-source/page.tsx#L14) |
-| function | `generateMetadata({ params, })` | Builds canonical, social, and locale-aware metadata for the route. | [app/[locale]/page.tsx:20](../../app/%5Blocale%5D/page.tsx#L20) |
-| component | `HomePage({ params, })` | Renders the home page interface. | [app/[locale]/page.tsx:54](../../app/%5Blocale%5D/page.tsx#L54) |
+| function | `generateMetadata({ params, })` | Builds canonical, social, and locale-aware metadata for the route. | [app/[locale]/page.tsx:21](../../app/%5Blocale%5D/page.tsx#L21) |
+| component | `HomePage({ params, })` | Renders the home page interface. | [app/[locale]/page.tsx:55](../../app/%5Blocale%5D/page.tsx#L55) |
 | constant | `page` | Defines the page source-of-truth value. | [app/[locale]/playwright-alternative/page.tsx:7](../../app/%5Blocale%5D/playwright-alternative/page.tsx#L7) |
 | function | `generateMetadata({ params })` | Builds canonical, social, and locale-aware metadata for the route. | [app/[locale]/playwright-alternative/page.tsx:9](../../app/%5Blocale%5D/playwright-alternative/page.tsx#L9) |
 | component | `PlaywrightAlternativePage({ params })` | Renders the playwright alternative page interface. | [app/[locale]/playwright-alternative/page.tsx:14](../../app/%5Blocale%5D/playwright-alternative/page.tsx#L14) |

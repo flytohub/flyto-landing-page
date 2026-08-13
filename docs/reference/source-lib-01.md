@@ -2,7 +2,7 @@
 
 # Lib Source Reference
 
-Source-backed contracts for **131 declarations**.
+Source-backed contracts for **138 declarations**.
 
 | Kind | Declaration | Responsibility | Source |
 |---|---|---|---|
@@ -72,6 +72,13 @@ Source-backed contracts for **131 declarations**.
 | constant | `productNavGrouped` | Grouped product navigation. Header renders these as 3 dropdown columns (Product / Resources / Community) instead of one long row of 10 items. Keys map to messages/<locale>.json -> nav.<key>. | [lib/nav.ts:25](../../lib/nav.ts#L25) |
 | constant | `productNav` | Flat fallback: legacy callers / mobile menu still consume a flat list. Derived from the grouped structure so they stay in sync. | [lib/nav.ts:87](../../lib/nav.ts#L87) |
 | function | `detectProduct(pathname)` | Implements detect product. | [lib/nav.ts:93](../../lib/nav.ts#L93) |
+| constant | `PHYSICAL_AI_DEMO_ASSET` | Defines the physical ai demo asset source-of-truth value. | [lib/physical-ai-demo.ts:1](../../lib/physical-ai-demo.ts#L1) |
+| constant | `PHYSICAL_AI_DEMO_SOURCE_SHA256` | Defines the physical ai demo source sha256 source-of-truth value. | [lib/physical-ai-demo.ts:2](../../lib/physical-ai-demo.ts#L2) |
+| type | `PhysicalAIDemoLocale` | Defines the physical aidemo locale data contract. | [lib/physical-ai-demo.ts:4](../../lib/physical-ai-demo.ts#L4) |
+| type | `PhysicalAIDemoCopy` | Defines the physical aidemo copy data contract. | [lib/physical-ai-demo.ts:6](../../lib/physical-ai-demo.ts#L6) |
+| constant | `ENGLISH_COPY` | Defines the english copy source-of-truth value. | [lib/physical-ai-demo.ts:18](../../lib/physical-ai-demo.ts#L18) |
+| constant | `COPY` | Defines the copy source-of-truth value. | [lib/physical-ai-demo.ts:34](../../lib/physical-ai-demo.ts#L34) |
+| function | `physicalAIDemoCopy(locale)` | Implements physical aidemo copy. | [lib/physical-ai-demo.ts:54](../../lib/physical-ai-demo.ts#L54) |
 | type | `ProductFamily` | Defines the product family data contract. | [lib/product-intent-pages.ts:1](../../lib/product-intent-pages.ts#L1) |
 | interface | `ProductIntentLink` | Defines the product intent link data contract. | [lib/product-intent-pages.ts:3](../../lib/product-intent-pages.ts#L3) |
 | interface | `ProductIntentSection` | Defines the product intent section data contract. | [lib/product-intent-pages.ts:8](../../lib/product-intent-pages.ts#L8) |
@@ -122,12 +129,12 @@ Source-backed contracts for **131 declarations**.
 | constant | `FLYTO2_HOME_DESCRIPTION` | Defines the flyto2 home description source-of-truth value. | [lib/seo.ts:75](../../lib/seo.ts#L75) |
 | constant | `manifestKeywordTerms` | Defines the manifest keyword terms source-of-truth value. | [lib/seo.ts:78](../../lib/seo.ts#L78) |
 | constant | `FLYTO2_SEO_KEYWORDS` | Defines the flyto2 seo keywords source-of-truth value. | [lib/seo.ts:83](../../lib/seo.ts#L83) |
-| function | `isSupportedLocale(locale)` | Build canonical + hreflang metadata for a public page. path: trailing-slashless route under the locale, e.g. '' for home, 'cloud', 'cloud/pricing'. Default English routes stay unprefixed. Non-English routes use the public locale prefix, and every variant advertises the same complete hreflang set. | [lib/seo.ts:151](../../lib/seo.ts#L151) |
-| function | `normalizeSeoPath(path)` | Transforms normalize seo path. | [lib/seo.ts:155](../../lib/seo.ts#L155) |
-| function | `localizedPath(path, locale)` | Implements localized path. | [lib/seo.ts:159](../../lib/seo.ts#L159) |
-| function | `localizedUrl(path, locale)` | Implements localized url. | [lib/seo.ts:166](../../lib/seo.ts#L166) |
-| function | `languageAlternates(path, absolute)` | Implements language alternates. | [lib/seo.ts:170](../../lib/seo.ts#L170) |
-| function | `pageAlternates(path, locale)` | Implements page alternates. | [lib/seo.ts:188](../../lib/seo.ts#L188) |
+| function | `isSupportedLocale(locale)` | Build canonical + hreflang metadata for a public page. path: trailing-slashless route under the locale, e.g. '' for home, 'cloud', 'cloud/pricing'. Default English routes stay unprefixed. Non-English routes use the public locale prefix, and every variant advertises the same complete hreflang set. | [lib/seo.ts:153](../../lib/seo.ts#L153) |
+| function | `normalizeSeoPath(path)` | Transforms normalize seo path. | [lib/seo.ts:157](../../lib/seo.ts#L157) |
+| function | `localizedPath(path, locale)` | Implements localized path. | [lib/seo.ts:161](../../lib/seo.ts#L161) |
+| function | `localizedUrl(path, locale)` | Implements localized url. | [lib/seo.ts:168](../../lib/seo.ts#L168) |
+| function | `languageAlternates(path, absolute)` | Implements language alternates. | [lib/seo.ts:172](../../lib/seo.ts#L172) |
+| function | `pageAlternates(path, locale)` | Implements page alternates. | [lib/seo.ts:190](../../lib/seo.ts#L190) |
 | type | `TemplateContent` | Defines the template content data contract. | [lib/templates.ts:1](../../lib/templates.ts#L1) |
 | constant | `templates` | Defines the templates source-of-truth value. | [lib/templates.ts:19](../../lib/templates.ts#L19) |
 | interface | `WhitepaperMeta` | Defines the whitepaper meta data contract. | [lib/whitepapers.ts:9](../../lib/whitepapers.ts#L9) |

@@ -4,19 +4,19 @@
 
 This reference is generated from tracked source with the TypeScript compiler AST. It maps route modules, components, functions, methods, types, constants, scripts, configuration, content, and discovery assets back to maintained files.
 
-Inventory: **841 declarations**, **137 source files**, **51 page modules**, **16 locales**, **488 baseline message keys**, **17 environment variables**, **20 npm scripts**, **4 workflows**, and **7 public whitepapers**.
+Inventory: **859 declarations**, **139 source files**, **51 page modules**, **16 locales**, **488 baseline message keys**, **17 environment variables**, **20 npm scripts**, **4 workflows**, and **7 public whitepapers**.
 
-Source fingerprint: `c7838bcd8aed1cbccbab68e9374bdede0137fd6c7d67e9d5adb94941db6d2c6b`.
+Source fingerprint: `312d8f798807d993579f75a8147fec9e161260b9a0ee6fc50f730bb0f23aa52b`.
 
 ## Source Areas
 
 | Area | Declarations | Reference |
 |---|---:|---|
 | App | 227 | [source-app-01.md](source-app-01.md) |
-| Components | 161 | [source-components-01.md](source-components-01.md) |
-| Lib | 131 | [source-lib-01.md](source-lib-01.md) |
+| Components | 162 | [source-components-01.md](source-components-01.md) |
+| Lib | 138 | [source-lib-01.md](source-lib-01.md) |
 | Scripts | 260 | [source-scripts-01.md](source-scripts-01.md) |
-| Scripts | 49 | [source-scripts-02.md](source-scripts-02.md) |
+| Scripts | 59 | [source-scripts-02.md](source-scripts-02.md) |
 | Runtime | 13 | [source-runtime-01.md](source-runtime-01.md) |
 
 ## Public Contracts

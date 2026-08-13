@@ -2,6 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
+    <loc>https://flyto2.com/</loc>
+    <image:image>
+      <image:loc>https://flyto2.com/assets/img/demo/flyto2-ai-space-workflows.webp</image:loc>
+      <image:title>Physical AI configuration preview</image:title>
+      <image:caption>Captured 2026-08-12: Corridor clearance (robot) and Zone overview (camera), shown as a configuration preview; customer pairing and live Raspberry Pi commissioning remain incomplete.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://flyto2.com/cloud/templates/</loc>
     <image:image>
       <image:loc>https://flyto2.com/assets/img/examples/github_trending.png</image:loc>

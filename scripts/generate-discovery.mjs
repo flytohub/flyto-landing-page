@@ -7,6 +7,12 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const publicDir = path.join(root, 'public');
 const imageRoot = path.join(publicDir, 'assets', 'img');
 const siteUrl = 'https://flyto2.com';
+const defaultImageCaption = 'Flyto2 product screenshot and visual asset for AI workflow automation, Warroom CE, CTEM, and MCP automation pages.';
+const physicalAiPreviewPath = '/assets/img/demo/flyto2-ai-space-workflows.webp';
+const physicalAiPreviewMetadata = {
+  title: 'Physical AI configuration preview',
+  caption: 'Captured 2026-08-12: Corridor clearance (robot) and Zone overview (camera), shown as a configuration preview; customer pairing and live Raspberry Pi commissioning remain incomplete.',
+};
 
 function xmlEscape(value) {
   return String(value ?? '')
@@ -51,12 +57,17 @@ function imageRecords() {
   return walk(imageRoot)
     .filter((file) => /\.(png|jpg|jpeg|webp|svg)$/i.test(file))
     .sort()
-    .map((file) => ({
-      file: publicPath(file),
-      page: pageForImage(file),
-      image: `${siteUrl}${publicPath(file)}`,
-      title: `Flyto2 ${titleFromFile(file)}`,
-    }));
+    .map((file) => {
+      const assetPath = publicPath(file);
+      const metadata = assetPath === physicalAiPreviewPath ? physicalAiPreviewMetadata : null;
+      return {
+        file: assetPath,
+        page: pageForImage(file),
+        image: `${siteUrl}${assetPath}`,
+        title: metadata?.title ?? `Flyto2 ${titleFromFile(file)}`,
+        caption: metadata?.caption ?? defaultImageCaption,
+      };
+    });
 }
 
 function writeIfChanged(filePath, content) {
@@ -78,7 +89,7 @@ function imageSitemap(images) {
     <image:image>
       <image:loc>${xmlEscape(image.image)}</image:loc>
       <image:title>${xmlEscape(image.title)}</image:title>
-      <image:caption>${xmlEscape('Flyto2 product screenshot and visual asset for AI workflow automation, Warroom CE, CTEM, and MCP automation pages.')}</image:caption>
+      <image:caption>${xmlEscape(image.caption)}</image:caption>
     </image:image>
   </url>`).join('\n');
 
@@ -93,7 +104,7 @@ ${urls}
 function manifest(images) {
   return `${JSON.stringify({
     generatedFrom: 'scripts/generate-discovery.mjs',
-    sourceHash: createHash('sha256').update(images.map((image) => `${image.file}:${image.title}`).join('\n')).digest('hex'),
+    sourceHash: createHash('sha256').update(images.map((image) => `${image.file}:${image.title}:${image.caption}`).join('\n')).digest('hex'),
     outputs: ['/image-sitemap.xml'],
     imageCount: images.length,
   }, null, 2)}\n`;

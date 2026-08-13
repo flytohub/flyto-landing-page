@@ -3,6 +3,7 @@ import { setRequestLocale } from 'next-intl/server';
 import { Hero } from '@/components/sections/Hero';
 import { ProductPicker } from '@/components/sections/ProductPicker';
 import { VideoDemo } from '@/components/sections/VideoDemo';
+import { PhysicalAIDemo } from '@/components/sections/PhysicalAIDemo';
 import { CoreBenefits } from '@/components/sections/CoreBenefits';
 import { HomeFeatures } from '@/components/sections/HomeFeatures';
 import { Stats } from '@/components/sections/Stats';
@@ -90,6 +91,7 @@ export default async function HomePage({
           'AI workflow automation',
           'visual MCP builder',
           'self-hosted browser automation',
+          'Physical AI exhibit preview',
           'Flyto2 Warroom',
           'security validation platform',
           'CTEM platform',
@@ -124,6 +126,7 @@ export default async function HomePage({
           'Open-source flyto-core runtime with deterministic modules',
           'MCP tools for compatible AI clients',
           'Evidence and replay for automation runs',
+          'Bounded Physical AI configuration preview for TurtleBot motion, LiDAR, and a separate Mac UVC loopback resource',
           'Flyto2 Warroom CTEM platform',
           'Security validation with evidence and remediation context',
           'Attack surface and EASM correlation',
@@ -151,6 +154,7 @@ export default async function HomePage({
       <Hero />
       <ProductPicker />
       <VideoDemo />
+      <PhysicalAIDemo locale={locale} />
       <CoreBenefits />
       <HomeFeatures />
       <Stats />
