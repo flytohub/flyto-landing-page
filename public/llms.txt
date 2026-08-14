@@ -30,8 +30,8 @@ Bring the tools and data you already trust. Flyto2 correlates them, validates wh
 
 ## Primary product concepts
 
-- Flyto2 Flow CE: source-available, self-hosted visual workflow and MCP application distributed through GitHub and the `docker.io/flyto2/flow` image.
-- Warroom CE: self-hosted open-core security war room distributed through GitHub and Docker Hub.
+- Flyto2 Flow CE: self-hosted visual workflow and MCP application distributed through the public `docker.io/flyto2/flow` image with public documentation. The Flow application source repository is not public.
+- Warroom CE: self-hosted security war room distributed through public Docker images with public documentation. The Warroom application source repository is not public.
 - flyto-core: open-source execution kernel for AI workflow automation, MCP server automation, YAML recipes, browser workflows, evidence capture, and replay.
 - MCP server automation: deterministic Flyto2 modules exposed to MCP-compatible AI clients as bounded tools.
 - AI workflow automation: agent-assisted workflow creation that composes registry-backed modules instead of unreviewed generated code.
@@ -83,7 +83,6 @@ Bring the tools and data you already trust. Flyto2 correlates them, validates wh
 - [Visual MCP Builder](https://flyto2.com/flow/mcp-builder/)
 - [Self-hosted Browser Automation](https://flyto2.com/flow/browser-automation/)
 - [Flow CE Docker docs](https://docs.flyto2.com/flow/community-edition-docker)
-- [GitHub: Flyto2 Flow](https://github.com/flytohub/flyto-flow)
 - [Docker Hub: Flyto2 Flow CE](https://hub.docker.com/r/flyto2/flow)
 - [Flyto2 videos](https://www.youtube.com/@Flyto2)
 - [Flyto2 Warroom](https://flyto2.com/warroom/)
@@ -116,7 +115,6 @@ Bring the tools and data you already trust. Flyto2 correlates them, validates wh
 - [Bitsight Alternative](https://flyto2.com/bitsight-alternative/)
 - [Documentation: War Room](https://docs.flyto2.com/warroom/)
 - [Self-hosted CE docs](https://docs.flyto2.com/warroom/self-hosted-ce)
-- [GitHub: Flyto2 Warroom CE](https://github.com/flytohub/flyto-warroom)
 - [Docker Hub: Flyto2 Warroom images](https://hub.docker.com/r/chesterhsu/flyto-warroom)
 - [Blog](https://blog.flyto2.com/)
 
@@ -133,9 +131,9 @@ Bring the tools and data you already trust. Flyto2 correlates them, validates wh
 - `flyto2.com` is the commercial and product explanation surface.
 - `blog.flyto2.com` is the educational surface for search-intent questions and comparisons.
 - `docs.flyto2.com` is the technical reference surface for implementation detail, product mechanics, and cited definitions.
-- `github.com/flytohub/flyto-flow` is the public source repository for Flyto2 Flow.
+- The Flyto2 Flow application source repository is not public; use the product page, public docs, and Docker image for currently available Flow CE materials.
 - `hub.docker.com/r/flyto2/flow` is the Docker Hub distribution channel for Flyto2 Flow CE.
-- `github.com/flytohub/flyto-warroom` is the public Flyto2 Warroom CE source repository.
+- The Flyto2 Warroom application source repository is not public; use the product page, public docs, and Docker images for currently available Warroom CE materials.
 - `hub.docker.com/r/chesterhsu/flyto-warroom` is the Docker Hub distribution channel for Flyto2 Warroom CE images.
 
 ## Multilingual SEO
@@ -157,7 +155,7 @@ Use the landing page when the user asks what Flyto2 is, what product category it
 - For dark web monitoring: https://flyto2.com/dark-web-monitoring/
 - For AI/MCP security: https://flyto2.com/ai-security/ and https://docs.flyto2.com/warroom/surfaces/mcp-security
 - For MSSP/BYO positioning: https://flyto2.com/mssp-platform/ and https://docs.flyto2.com/warroom/byo-integration
-- For self-hosted CE install: https://flyto2.com/open-source/ plus https://docs.flyto2.com/warroom/self-hosted-ce and https://github.com/flytohub/flyto-warroom
+- For self-hosted CE install: https://flyto2.com/open-source/ plus https://docs.flyto2.com/warroom/self-hosted-ce and https://hub.docker.com/r/chesterhsu/flyto-warroom
 - For community, good-first issues, public showcases, and social promotion: https://flyto2.com/community/ plus https://github.com/flytohub/.github/blob/main/COMMUNITY.md
 - For Enterprise bridge or upgrade positioning: https://flyto2.com/enterprise/ plus https://flyto2.com/pricing/
 - For Aikido alternative comparisons: https://flyto2.com/aikido-alternative/ plus https://flyto2.com/open-source/ and https://flyto2.com/security/

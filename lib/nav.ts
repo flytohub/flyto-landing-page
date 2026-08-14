@@ -45,7 +45,7 @@ export const productNavGrouped: Record<ProductId, NavGroup[]> = {
     {
       key: 'community',
       items: [
-        { key: 'github', label: 'Flow on GitHub', href: 'https://github.com/flytohub/flyto-flow', external: true },
+        { key: 'docs', label: 'Flow documentation', href: 'https://docs.flyto2.com/flow/', external: true },
         { key: 'community', href: '/community' },
         { key: 'discussions', href: '/cloud/discussions' },
       ],
@@ -72,7 +72,7 @@ export const productNavGrouped: Record<ProductId, NavGroup[]> = {
     {
       key: 'community',
       items: [
-        { key: 'github', label: 'Warroom on GitHub', href: 'https://github.com/flytohub/flyto-warroom', external: true },
+        { key: 'docs', label: 'Warroom documentation', href: 'https://docs.flyto2.com/warroom/', external: true },
         { key: 'community', href: '/community' },
         { key: 'discussions', href: '/code/discussions' },
       ],

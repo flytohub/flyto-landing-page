@@ -129,10 +129,10 @@ Source-backed contracts for **162 declarations**.
 | interface | `ProofData` | Defines the proof data data contract. | [components/sections/JuiceShopProof.tsx:12](../../components/sections/JuiceShopProof.tsx#L12) |
 | component | `JuiceShopProof()` | Renders the juice shop proof interface. | [components/sections/JuiceShopProof.tsx:17](../../components/sections/JuiceShopProof.tsx#L17) |
 | component | `PhysicalAIDemo({ locale })` | Renders the physical aidemo interface. | [components/sections/PhysicalAIDemo.tsx:6](../../components/sections/PhysicalAIDemo.tsx#L6) |
-| constant | `LICENSES` | Defines the licenses source-of-truth value. | [components/sections/ProductIntentPage.tsx:7](../../components/sections/ProductIntentPage.tsx#L7) |
-| function | `external(href)` | Implements external. | [components/sections/ProductIntentPage.tsx:18](../../components/sections/ProductIntentPage.tsx#L18) |
-| component | `ActionLink({ href, children, secondary = false, })` | Renders the action link interface. | [components/sections/ProductIntentPage.tsx:22](../../components/sections/ProductIntentPage.tsx#L22) |
-| component | `ProductIntentPage({ page })` | Renders the product intent page interface. | [components/sections/ProductIntentPage.tsx:52](../../components/sections/ProductIntentPage.tsx#L52) |
+| constant | `AVAILABILITY` | Defines the availability source-of-truth value. | [components/sections/ProductIntentPage.tsx:7](../../components/sections/ProductIntentPage.tsx#L7) |
+| function | `external(href)` | Implements external. | [components/sections/ProductIntentPage.tsx:12](../../components/sections/ProductIntentPage.tsx#L12) |
+| component | `ActionLink({ href, children, secondary = false, })` | Renders the action link interface. | [components/sections/ProductIntentPage.tsx:16](../../components/sections/ProductIntentPage.tsx#L16) |
+| component | `ProductIntentPage({ page })` | Renders the product intent page interface. | [components/sections/ProductIntentPage.tsx:46](../../components/sections/ProductIntentPage.tsx#L46) |
 | interface | `ProductPaint` | Defines the product paint data contract. | [components/sections/ProductPicker.tsx:22](../../components/sections/ProductPicker.tsx#L22) |
 | interface | `ProductCardData` | Defines the product card data data contract. | [components/sections/ProductPicker.tsx:33](../../components/sections/ProductPicker.tsx#L33) |
 | constant | `CARDS` | Defines the cards source-of-truth value. | [components/sections/ProductPicker.tsx:42](../../components/sections/ProductPicker.tsx#L42) |

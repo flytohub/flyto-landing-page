@@ -60,9 +60,9 @@ const expectedCrawlerPolicies = [
 
 const launchSurfaceContracts = {
   'lib/public-route-pages.ts': [
-    'https://github.com/flytohub/flyto-warroom',
     'https://hub.docker.com/r/chesterhsu/flyto-warroom',
     'https://docs.flyto2.com/warroom/self-hosted-ce',
+    'The Warroom application source repository is not public',
     'Warroom CE',
     'Enterprise bridge',
     'Premium actions fail closed',
@@ -205,8 +205,8 @@ const launchSurfaceContracts = {
     "path: 'warroom/ctem'",
     "path: 'warroom/security-validation'",
     "path: 'warroom/attack-surface-management'",
-    'PolyForm Shield',
-    'PolyForm Noncommercial',
+    'The Flow application source repository is not public',
+    'The Warroom application source repository is not public',
     'Flow Community Edition',
     'docker.io/flyto2/flow:0.1.1',
     'https://hub.docker.com/r/flyto2/flow',
@@ -228,10 +228,10 @@ const launchSurfaceContracts = {
   'public/llms.txt': [
     'Flyto2 Flow CE',
     'https://docs.flyto2.com/flow/community-edition-docker',
-    'https://github.com/flytohub/flyto-flow',
     'https://hub.docker.com/r/flyto2/flow',
-    'GitHub: Flyto2 Warroom CE',
     'Docker Hub: Flyto2 Warroom images',
+    'The Flyto2 Flow application source repository is not public',
+    'The Flyto2 Warroom application source repository is not public',
     'Enterprise bridge',
     'Do not describe CE as a full Enterprise source release',
     'Aikido alternative',
@@ -240,10 +240,10 @@ const launchSurfaceContracts = {
     'Canonical Flow CE links',
     'https://docs.flyto2.com/flow/community-edition-docker',
     'https://hub.docker.com/r/flyto2/flow',
-    'PolyForm Shield 1.0.0',
+    'The Flow application source repository is not public',
+    'The Warroom application source repository is not public',
     'Self-hosted CE and distribution channels',
     'Warroom CE, Enterprise bridge',
-    'CE mirror boundary',
     '/aikido-alternative/',
   ],
 };
@@ -603,6 +603,42 @@ for (const [file, tokens] of Object.entries(keywordSurfaceContracts)) {
   for (const token of tokens) {
     if (!content.includes(token)) {
       failures.push(`${file} missing SEO keyword cluster token: ${token}`);
+    }
+  }
+}
+
+for (const file of [
+  'CONTRIBUTING.md',
+  'components/layout/Footer.tsx',
+  'components/layout/Header.tsx',
+  'components/sections/ProductIntentPage.tsx',
+  'lib/nav.ts',
+  'lib/product-intent-pages.ts',
+  'lib/public-route-pages.ts',
+  'public/llms.txt',
+  'public/llms-full.txt',
+]) {
+  const content = read(file);
+  for (const url of [
+    'https://github.com/flytohub/flyto-flow',
+    'https://github.com/flytohub/flyto-warroom',
+  ]) {
+    if (content.includes(url)) {
+      failures.push(`${file} contains prohibited non-public customer URL: ${url}`);
+    }
+  }
+}
+
+for (const [file, wording] of [
+  ['lib/product-intent-pages.ts', ['The Flow application source repository is not public', 'The Warroom application source repository is not public']],
+  ['lib/public-route-pages.ts', ['The Warroom application source repository is not public']],
+  ['public/llms.txt', ['The Flyto2 Flow application source repository is not public', 'The Flyto2 Warroom application source repository is not public']],
+  ['public/llms-full.txt', ['The Flow application source repository is not public', 'The Warroom application source repository is not public']],
+]) {
+  const content = read(file);
+  for (const statement of wording) {
+    if (!content.includes(statement)) {
+      failures.push(`${file} missing honest availability wording: ${statement}`);
     }
   }
 }

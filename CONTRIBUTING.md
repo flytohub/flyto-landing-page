@@ -24,8 +24,13 @@ metadata, SEO, or public copy changes.
 - Keep Warroom CE wording aligned with:
   - `https://flyto2.com/open-source/`
   - `https://docs.flyto2.com/warroom/self-hosted-ce`
-  - `https://github.com/flytohub/flyto-warroom`
   - `https://hub.docker.com/r/chesterhsu/flyto-warroom`
+
+Warroom CE is publicly distributed through its documentation and Docker images;
+the Warroom application source repository is not public. Flow CE follows the
+same public docs-and-Docker availability boundary. Do not publish source or
+license claims for either application unless a working public repository and
+license are independently verified.
 
 ## Verification
 
@@ -42,4 +47,3 @@ npm run audit:geo
 npm run audit:public-site
 flyto-index verify . --full-scan
 ```
-

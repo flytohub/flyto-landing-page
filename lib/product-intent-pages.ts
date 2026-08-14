@@ -44,9 +44,9 @@ export interface ProductIntentPage {
   related: ProductIntentLink[];
 }
 
-const FLOW_GITHUB = 'https://github.com/flytohub/flyto-flow';
+const FLOW_DOCKER = 'https://hub.docker.com/r/flyto2/flow';
 const FLOW_DOCS = 'https://docs.flyto2.com/flow/';
-const WARROOM_GITHUB = 'https://github.com/flytohub/flyto-warroom';
+const WARROOM_DOCKER = 'https://hub.docker.com/r/chesterhsu/flyto-warroom';
 const WARROOM_DOCS = 'https://docs.flyto2.com/warroom/';
 
 const flowScreenshot = '/assets/img/flow-mcp-studio.jpg';
@@ -60,14 +60,14 @@ export const productIntentPages: ProductIntentPage[] = [
     eyebrow: 'Flyto2 Flow',
     title: 'Build AI workflow automation and publish visual workflows as MCP tools.',
     lede:
-      'Flyto2 Flow is a source-available, self-hosted visual workflow and MCP builder powered by the Apache-2.0 flyto-core runtime. Combine browser automation, APIs, files, data, and control flow, test locally, then expose the workflow to an MCP-compatible agent.',
+      'Flyto2 Flow is a self-hosted visual workflow and MCP builder powered by the open-source Apache-2.0 flyto-core runtime. Flow CE is publicly available as a Docker image with installation documentation; the Flow application source repository is not public.',
     metaTitle: 'AI Workflow Automation and Visual MCP Builder',
     metaDescription:
-      'Build, test, replay, and publish AI workflows as MCP tools with Flyto2 Flow, a source-available self-hosted visual workflow and browser automation builder.',
+      'Build, test, replay, and publish AI workflows as MCP tools with Flyto2 Flow, a self-hosted visual workflow and browser automation builder distributed as a documented Docker image.',
     screenshot: flowScreenshot,
     screenshotAlt:
       'Flyto2 Flow MCP Studio showing generated workflow tools, schema inputs, and an auditable tool response',
-    primaryCta: { label: 'View Flyto2 Flow on GitHub', href: FLOW_GITHUB },
+    primaryCta: { label: 'Get Flow CE on Docker Hub', href: FLOW_DOCKER },
     secondaryCta: { label: 'Read Flow documentation', href: FLOW_DOCS },
     quickStart: {
       eyebrow: 'Flow Community Edition',
@@ -134,7 +134,7 @@ docker run --detach \\
       {
         question: 'Is Flyto2 Flow open source?',
         answer:
-          'Flyto2 Flow is source-available under the PolyForm Shield license. Its execution runtime, flyto-core, is open source under Apache-2.0. Review both licenses before commercial or competitive use.',
+          'The Flow application source repository is not public. Flow CE is currently available through its public Docker image and documentation. Its flyto-core execution runtime is open source under Apache-2.0.',
       },
       {
         question: 'Does Flow require a cloud account?',
@@ -168,7 +168,7 @@ docker run --detach \\
     screenshot: flowScreenshot,
     screenshotAlt:
       'Visual MCP builder in Flyto2 Flow with workflow tool discovery, generated arguments, and response testing',
-    primaryCta: { label: 'Open the source', href: FLOW_GITHUB },
+    primaryCta: { label: 'Read the Flow docs', href: FLOW_DOCS },
     secondaryCta: { label: 'MCP builder docs', href: 'https://docs.flyto2.com/flow/mcp-builder' },
     sections: [
       {
@@ -234,7 +234,7 @@ docker run --detach \\
     screenshot: flowScreenshot,
     screenshotAlt:
       'Flyto2 Flow interface for self-hosted browser and MCP workflow automation',
-    primaryCta: { label: 'Run Flow locally', href: FLOW_GITHUB },
+    primaryCta: { label: 'Run Flow locally', href: FLOW_DOCKER },
     secondaryCta: {
       label: 'Browser automation docs',
       href: 'https://docs.flyto2.com/flow/browser-automation',
@@ -280,7 +280,7 @@ docker run --detach \\
       {
         question: 'Can browser workflows run without the Flyto2 cloud?',
         answer:
-          'Yes. The source-available self-hosted edition runs locally with Chromium and Playwright included in its supported release image.',
+          'Yes. The self-hosted edition runs locally with Chromium and Playwright included in its supported public Docker image.',
       },
     ],
     related: [
@@ -299,11 +299,11 @@ docker run --detach \\
       'Choose Flyto2 Flow when the important requirement is a self-hosted visual workflow that can become an MCP tool, run browser automation, and retain evidence and replay context. Choose n8n when its integration ecosystem and operating model fit better.',
     metaTitle: 'Local-First n8n Alternative for MCP Workflows',
     metaDescription:
-      'Compare Flyto2 Flow as a source-available, self-hosted n8n alternative for visual MCP tools, browser automation, deterministic modules, evidence, and replay.',
+      'Compare Flyto2 Flow as a self-hosted n8n alternative for visual MCP tools, browser automation, deterministic modules, evidence, and replay.',
     screenshot: flowScreenshot,
     screenshotAlt:
       'Flyto2 Flow visual MCP workflow interface for teams evaluating an n8n alternative',
-    primaryCta: { label: 'Inspect Flyto2 Flow', href: FLOW_GITHUB },
+    primaryCta: { label: 'Explore Flyto2 Flow', href: '/flow' },
     secondaryCta: {
       label: 'Read the full comparison',
       href: 'https://blog.flyto2.com/posts/n8n-alternative',
@@ -325,7 +325,7 @@ docker run --detach \\
           'n8n has a large connector ecosystem and a mature automation community. A useful comparison should evaluate the actual integrations, licensing, hosting, and operations a team needs.',
         bullets: [
           'Compare required integrations, not logo counts',
-          'Review both products licenses before deployment',
+          'Review each product\'s current distribution and terms before deployment',
           'Test the same workflow and failure cases in both tools',
         ],
       },
@@ -342,14 +342,14 @@ docker run --detach \\
     ],
     answers: [
       {
-        question: 'Is Flyto2 Flow fully open source?',
+        question: 'Is the Flyto2 Flow application source public?',
         answer:
-          'No. Flyto2 Flow is source-available under PolyForm Shield. The flyto-core runtime is Apache-2.0. Do not treat those licenses as interchangeable.',
+          'No. The Flow application source repository is not public. The flyto-core runtime remains open source under Apache-2.0; that does not make the complete Flow application open source.',
       },
       {
         question: 'Is Flyto2 Flow free?',
         answer:
-          'The repository is publicly available for permitted uses under its license. Review the license and current product terms for your intended use rather than assuming source availability means unrestricted commercial use.',
+          'Flow CE is currently available through its public Docker image and documentation. Review current product terms for your intended use; do not infer application-source availability from the public image.',
       },
     ],
     related: [
@@ -365,14 +365,14 @@ docker run --detach \\
     eyebrow: 'Flyto2 Warroom',
     title: 'Validate findings and remediation in one security validation workspace.',
     lede:
-      'Flyto2 Warroom is a source-available security validation and CTEM operations platform. Bring findings from the tools you already use, connect them to owned assets and repositories, validate what matters, and keep evidence with remediation decisions.',
+      'Flyto2 Warroom is a security validation and CTEM operations platform. Warroom CE is currently available through public Docker images and documentation; the Warroom application source repository is not public.',
     metaTitle: 'CTEM and Security Validation Platform',
     metaDescription:
-      'Flyto2 Warroom is a source-available CTEM and security validation platform for attack surface context, findings, evidence, remediation, scoring, and reports.',
+      'Flyto2 Warroom is a CTEM and security validation platform for attack surface context, findings, evidence, remediation, scoring, and reports.',
     screenshot: warroomScreenshot,
     screenshotAlt:
       'Flyto2 Warroom security validation workspace showing projects, posture, evidence, and operational status',
-    primaryCta: { label: 'View Warroom on GitHub', href: WARROOM_GITHUB },
+    primaryCta: { label: 'Get Warroom CE on Docker Hub', href: WARROOM_DOCKER },
     secondaryCta: { label: 'Read Warroom documentation', href: WARROOM_DOCS },
     sections: [
       {
@@ -415,7 +415,7 @@ docker run --detach \\
       {
         question: 'Is Flyto2 Warroom open source?',
         answer:
-          'Warroom CE is source-available under the PolyForm Noncommercial license. It is not OSI-approved open source. Review the license before commercial use.',
+          'The Warroom application source repository is not public. Warroom CE is currently available through public Docker images and documentation; review current product terms before use.',
       },
       {
         question: 'Does Warroom replace vulnerability scanners?',
@@ -444,7 +444,7 @@ docker run --detach \\
     screenshot: warroomScreenshot,
     screenshotAlt:
       'Flyto2 Warroom CTEM platform for security posture, findings, evidence, and remediation operations',
-    primaryCta: { label: 'Inspect Warroom CE', href: WARROOM_GITHUB },
+    primaryCta: { label: 'Read Warroom CE docs', href: WARROOM_DOCS },
     secondaryCta: { label: 'CTEM implementation docs', href: 'https://docs.flyto2.com/warroom/closed-loop' },
     sections: [
       {
@@ -510,7 +510,7 @@ docker run --detach \\
     screenshot: '/assets/img/warroom/16-security-queue.png',
     screenshotAlt:
       'Flyto2 Warroom security validation queue with scoped findings and evidence-backed operational status',
-    primaryCta: { label: 'Review the source', href: WARROOM_GITHUB },
+    primaryCta: { label: 'Read validation docs', href: WARROOM_DOCS },
     secondaryCta: { label: 'Validation workflow docs', href: 'https://docs.flyto2.com/warroom/surfaces/pentest' },
     sections: [
       {
@@ -576,7 +576,7 @@ docker run --detach \\
     screenshot: '/assets/img/warroom/26-asset-map.png',
     screenshotAlt:
       'Flyto2 Warroom attack surface asset map connecting domains, repositories, findings, and security context',
-    primaryCta: { label: 'Inspect Warroom CE', href: WARROOM_GITHUB },
+    primaryCta: { label: 'Get Warroom CE images', href: WARROOM_DOCKER },
     secondaryCta: {
       label: 'Attack surface docs',
       href: 'https://docs.flyto2.com/warroom/surfaces/attack-surface',

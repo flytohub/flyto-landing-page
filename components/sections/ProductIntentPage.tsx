@@ -4,15 +4,9 @@ import type { ReactNode } from 'react';
 import { ArrowRight, ArrowUpRight, CheckCircle2, Container } from 'lucide-react';
 import type { ProductIntentPage as ProductIntentPageData } from '@/lib/product-intent-pages';
 
-const LICENSES = {
-  flow: {
-    name: 'PolyForm Shield 1.0.0',
-    url: 'https://github.com/flytohub/flyto-flow/blob/main/LICENSE',
-  },
-  warroom: {
-    name: 'PolyForm Noncommercial 1.0.0',
-    url: 'https://github.com/flytohub/flyto-warroom/blob/main/LICENSE',
-  },
+const AVAILABILITY = {
+  flow: 'Flow CE is currently available through the public Docker image and documentation. The Flow application source repository is not public.',
+  warroom: 'Warroom CE is currently available through public Docker images and documentation. The Warroom application source repository is not public.',
 } as const;
 
 function external(href: string) {
@@ -53,7 +47,7 @@ export function ProductIntentPage({ page }: { page: ProductIntentPageData }) {
   const pageUrl = `https://flyto2.com/${page.path}/`;
   const familyUrl = `https://flyto2.com/${page.family}/`;
   const applicationName = page.family === 'flow' ? 'Flyto2 Flow' : 'Flyto2 Warroom';
-  const license = LICENSES[page.family];
+  const availability = AVAILABILITY[page.family];
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -82,8 +76,6 @@ export function ProductIntentPage({ page }: { page: ProductIntentPageData }) {
         operatingSystem: 'Linux, macOS, Windows, Docker',
         url: familyUrl,
         description: page.metaDescription,
-        license: license.url,
-        isAccessibleForFree: true,
         ...(page.quickStart
           ? {
               softwareVersion: '0.1.1',
@@ -277,7 +269,7 @@ export function ProductIntentPage({ page }: { page: ProductIntentPageData }) {
                 Questions teams ask before they deploy.
               </h2>
               <p className="mt-5 max-w-md text-[15px] leading-7 text-slate-700">
-                License, hosting, and product boundaries are stated directly so teams can
+                Availability, hosting, and product boundaries are stated directly so teams can
                 evaluate Flyto2 without relying on ambiguous category claims.
               </p>
             </header>
@@ -306,14 +298,7 @@ export function ProductIntentPage({ page }: { page: ProductIntentPageData }) {
                 Product, implementation, and evidence.
               </h2>
             </div>
-            <a
-              href={license.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-medium text-slate-700 underline decoration-slate-400 underline-offset-4"
-            >
-              License: {license.name}
-            </a>
+            <p className="max-w-xl text-sm leading-6 text-slate-700">{availability}</p>
           </div>
           <div className="mt-8 grid gap-3 md:grid-cols-2 lg:grid-cols-4">
             {page.related.map((link) => {

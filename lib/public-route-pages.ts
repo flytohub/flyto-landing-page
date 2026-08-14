@@ -50,7 +50,6 @@ export interface PublicRoutePage {
   related: PublicRouteLink[];
 }
 
-const WARROOM_CE_GITHUB = 'https://github.com/flytohub/flyto-warroom';
 const WARROOM_CE_DOCKER = 'https://hub.docker.com/r/chesterhsu/flyto-warroom';
 const WARROOM_CE_DOCS = 'https://docs.flyto2.com/warroom/self-hosted-ce';
 
@@ -71,13 +70,13 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
       {
         title: 'Community Edition',
         body:
-          'CE is the public self-hosted path for teams that want to evaluate an open-core security war room, open source attack surface management workflow, and CTEM validation loop locally before buying managed capabilities.',
+          'CE is the public self-hosted path for teams that want to evaluate a security war room and CTEM validation loop locally before buying managed capabilities. It is distributed through public Docker images and documentation; the application source repository is not public.',
         bullets: ['Local JWT auth, local database, Docker Compose, and installer scripts', 'Code intelligence, CTEM posture, evidence, scoring, reports, and compliance surfaces', 'Public contracts keep CE aligned with Flyto2 Engine, Core, Code, and i18n'],
       },
       {
         title: 'Enterprise bridge',
         body:
-          'Enterprise adds commercial services without turning the open repository into a private source dump.',
+          'Enterprise adds commercial services while keeping private implementation and customer data outside public distribution.',
         bullets: ['Commercial threat intelligence, managed runner fleets, and live remediation orchestration', 'AI proposal review, premium reports, and advanced correlation are gated by capability and entitlement', 'Premium actions fail closed on missing license, denied role, connector error, or invalid evidence signature'],
       },
       {
@@ -91,7 +90,7 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
       {
         question: 'Can teams start without talking to sales?',
         answer:
-          'Yes. Flyto2 Warroom CE is the public installable baseline on GitHub and Docker Hub. Teams can evaluate the war room locally, then attach Enterprise services when they need managed intelligence, remediation, identity, or support.',
+          'Yes. Flyto2 Warroom CE is the public installable baseline distributed through Docker Hub with public documentation. The application source repository is not public. Teams can evaluate the war room locally, then attach Enterprise services when they need managed intelligence, remediation, identity, or support.',
       },
       {
         question: 'Does a paid gate hide old evidence when credits run out?',
@@ -106,8 +105,8 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
     ],
     related: [
       { label: 'Warroom CE', href: '/open-source' },
-      { label: 'GitHub repository', href: WARROOM_CE_GITHUB },
-      { label: 'Self-hosted docs', href: WARROOM_CE_DOCS },
+      { label: 'Self-hosted CE docs', href: 'https://docs.flyto2.com/warroom/self-hosted-ce' },
+      { label: 'Warroom CE on Docker Hub', href: WARROOM_CE_DOCKER },
       { label: 'Enterprise deployment', href: '/enterprise' },
     ],
   },
@@ -128,7 +127,7 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
         title: 'Self-hosted baseline',
         body:
           'Warroom CE gives teams a public, local offensive-validation cockpit before they attach premium data, identity, support, or managed execution.',
-        bullets: ['GitHub and Docker Hub distribution', 'Local orgs, evidence, reports, scoring, and compliance surfaces', 'BYO findings stay source-labeled and bridge-ready'],
+        bullets: ['Public documentation and Docker Hub distribution', 'Local orgs, evidence, reports, scoring, and compliance surfaces', 'BYO findings stay source-labeled and bridge-ready'],
       },
       {
         title: 'Existing tools are inputs',
@@ -184,8 +183,8 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
       {
         title: 'Community baseline',
         body:
-          'The public CE line proves the war room can be installed, inspected, tested, and patched without waiting for a private sales path.',
-        bullets: ['Public GitHub repository and Docker images', 'Local database, local auth, evidence timeline, and report surfaces', 'Contribution loop feeds accepted CE changes back upstream'],
+          'The public CE line lets teams install and test the war room from documented Docker images without waiting for a private sales path.',
+        bullets: ['Public documentation and Docker images', 'Local database, local auth, evidence timeline, and report surfaces', 'Documented support and feedback loop'],
       },
       {
         title: 'SaaS',
@@ -278,13 +277,13 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
     id: 'open-source',
     path: 'open-source',
     eyebrow: 'Open core',
-    title: 'Flyto2 Warroom CE is an open source security war room.',
+    title: 'An open source security war room foundation powers self-hosted Warroom CE.',
     lede:
-      'Flyto2 Warroom CE is an installable open source security war room for teams that want local BYO offensive validation. Bring your own ASM, SAST, DAST, CSPM, SIEM, dark web, cloud, code, and scanner findings; Flyto2 turns them into verified attack paths, pentest evidence, red-team scenarios, remediation records, scoring, and compliance-ready proof. Flyto2 Core remains the open-source automation runtime underneath the broader Flyto2 product line.',
-    metaTitle: 'Open source security war room | Warroom CE',
+      'Flyto2 Warroom CE is an installable self-hosted security war room for teams that want local BYO offensive validation. It is distributed through public Docker images and documentation. The Warroom application source repository is not public. Bring your own ASM, SAST, DAST, CSPM, SIEM, dark web, cloud, code, and scanner findings; Flyto2 turns them into verified attack paths, pentest evidence, red-team scenarios, remediation records, scoring, and compliance-ready proof. Flyto2 Core remains the open-source automation runtime underneath the broader Flyto2 product line.',
+    metaTitle: 'Open source security war room foundation | Warroom CE',
     metaDescription:
-      'Install Flyto2 Warroom CE as an open source security war room for local BYO validation, evidence-backed remediation, CTEM, code, cloud, and container findings.',
-    primaryCta: { label: 'GitHub repository', href: 'https://github.com/flytohub/flyto-warroom' },
+      'Use the open source security war room foundation in flyto-core with documented, Docker-distributed Warroom CE for local BYO validation and evidence-backed CTEM.',
+    primaryCta: { label: 'Self-hosted CE docs', href: 'https://docs.flyto2.com/warroom/self-hosted-ce' },
     secondaryCta: { label: 'Docker images', href: 'https://hub.docker.com/r/chesterhsu/flyto-warroom' },
     sections: [
       {
@@ -302,15 +301,15 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
       {
         title: 'Contribution loop',
         body:
-          'The public repository is a generated CE mirror, not a dead fork. Accepted community changes should flow back into the private source repos and then be re-exported.',
-        bullets: ['Public PRs are reviewed as upstream patch bundles', 'The CE boundary audit blocks private code, secrets, and enterprise-only internals', 'Shared contracts keep CE, Enterprise, docs, Docker images, and landing copy aligned'],
+          'The public support and feedback path is documented without claiming that the Warroom application source is public.',
+        bullets: ['Product feedback follows the documented support path', 'Public artifacts must not expose private code, secrets, or enterprise-only internals', 'Shared contracts keep CE, Enterprise, docs, Docker images, and landing copy aligned'],
       },
     ],
     answers: [
       {
         question: 'Is Flyto2 Warroom CE a real product or only a demo?',
         answer:
-          'CE is intended to be installable and useful for local evaluation, labs, and open-source users. It includes public packages, public contracts, installer scripts, Docker image coordinates, and local evidence workflows.',
+          'CE is intended to be installable and useful for local evaluation and labs. It is available through public Docker images and documentation, with local evidence workflows; the application source repository is not public.',
       },
       {
         question: 'What stays enterprise-only?',
@@ -320,7 +319,7 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
       {
         question: 'How do public contributions benefit the main Flyto2 product?',
         answer:
-          'The CE repository is generated from upstream allowlists. Public changes are reviewed, converted into upstream patch bundles, applied to the private source repos, tested, and then exported again, so accepted CE work improves the main product line.',
+          'Use the documented support and community channels for feedback. Public availability currently means Docker images and documentation, not a public Warroom application source repository.',
       },
       {
         question: 'Can CE call premium services later?',
@@ -329,7 +328,7 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
       },
     ],
     related: [
-      { label: 'GitHub', href: 'https://github.com/flytohub/flyto-warroom' },
+      { label: 'Product page', href: '/warroom' },
       { label: 'Docker Hub', href: 'https://hub.docker.com/r/chesterhsu/flyto-warroom' },
       { label: 'Self-hosted docs', href: 'https://docs.flyto2.com/warroom/self-hosted-ce' },
       { label: 'Enterprise', href: '/enterprise' },
@@ -352,7 +351,7 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
         title: 'BYO before replacement',
         body:
           'Flyto2 is designed to make the community edition a real product surface, not a thin marketing sample and not a rip-and-replace claim. Teams can install, inspect, patch, and validate the war room locally before deciding whether Enterprise services are needed.',
-        bullets: ['GitHub and Docker Hub distribution', 'Local auth, local database, local evidence timeline, and report surfaces', 'Public contracts for BYO findings, attack paths, code, CTEM, container, cloud, runtime, and external evidence flows'],
+        bullets: ['Public docs and Docker Hub distribution', 'Local auth, local database, local evidence timeline, and report surfaces', 'Public contracts for BYO findings, attack paths, code, CTEM, container, cloud, runtime, and external evidence flows'],
       },
       {
         title: 'Evidence-backed AutoFix loop',
@@ -668,7 +667,7 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
         title: 'Warroom CE',
         body:
           'Closest category: self-hosted open-core security war room for labs, evaluation, local teams, and community contribution.',
-        bullets: ['Buyer: security engineers, founders, labs, open-source users, MSSP evaluators', 'Primary public repo: flyto-warroom generated from upstream allowlists', 'Boundary: local auth, local data, public contracts, no private enterprise internals'],
+        bullets: ['Buyer: security engineers, founders, labs, and MSSP evaluators', 'Public availability: Warroom CE Docker images and documentation', 'Boundary: local auth, local data, public contracts, no private enterprise internals'],
       },
       {
         title: 'Enterprise bridge',
@@ -769,7 +768,7 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
     eyebrow: 'Trust',
     title: 'Flyto2 trust is built around boundaries, consent, evidence, and audit.',
     lede:
-      'The trust model separates the public CE mirror, private enterprise internals, tenant data, dynamic scan consent, RBAC, capability gates, report export, AI evidence handling, and deployment provider boundaries for CTEM, attack surface management, and security automation workflows.',
+      'The trust model separates public CE distribution, private enterprise internals, tenant data, dynamic scan consent, RBAC, capability gates, report export, AI evidence handling, and deployment provider boundaries for CTEM, attack surface management, and security automation workflows.',
     metaTitle: 'Flyto2 trust and security',
     metaDescription:
       'Trust overview for Flyto2 tenant isolation, RBAC, audit logs, dynamic scan consent, AI evidence handling, and enterprise deployment boundaries.',
@@ -779,7 +778,7 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
       {
         title: 'Open-core boundary',
         body:
-          'The public CE repository is generated from allowlisted source, contracts, docs, and UI surfaces. It is not a dump of private enterprise backend internals.',
+          'Warroom CE is publicly available through Docker images, contracts, and documentation. The Warroom application source repository and private enterprise backend internals are not public.',
         bullets: ['CE boundary audit blocks secrets and enterprise-only internals', 'Premium bridge calls require capability, license, and signed evidence checks', 'Public contributions flow back through upstream review before re-export'],
       },
       {
@@ -1054,7 +1053,7 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
     metaDescription:
       'Changelog hub for Flyto2 Cloud automation, Security Warroom, docs, and release notes.',
     primaryCta: { label: 'Cloud changelog', href: '/cloud/changelog' },
-    secondaryCta: { label: 'Docs changelog', href: 'https://docs.flyto2.com/changelog' },
+    secondaryCta: { label: 'Documentation', href: 'https://docs.flyto2.com/' },
     sections: [
       {
         title: 'Cloud automation',
@@ -1066,7 +1065,7 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
         title: 'Security',
         body:
           'Security release notes should cover CE distribution, CTEM, code security, report, evidence, red-team, AI governance, cloud, dark web, and entitlement changes.',
-        bullets: ['CE Docker, GitHub, and installer changes', 'Capability and RBAC changes', 'Report/export behavior and evidence consent updates'],
+        bullets: ['CE Docker, documentation, and installer changes', 'Capability and RBAC changes', 'Report/export behavior and evidence consent updates'],
       },
       {
         title: 'Docs and trust',

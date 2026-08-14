@@ -2,7 +2,7 @@
 
 # Lib Source Reference
 
-Source-backed contracts for **138 declarations**.
+Source-backed contracts for **137 declarations**.
 
 | Kind | Declaration | Responsibility | Source |
 |---|---|---|---|
@@ -85,9 +85,9 @@ Source-backed contracts for **138 declarations**.
 | interface | `ProductIntentAnswer` | Defines the product intent answer data contract. | [lib/product-intent-pages.ts:14](../../lib/product-intent-pages.ts#L14) |
 | interface | `ProductIntentQuickStart` | Defines the product intent quick start data contract. | [lib/product-intent-pages.ts:19](../../lib/product-intent-pages.ts#L19) |
 | interface | `ProductIntentPage` | Defines the product intent page data contract. | [lib/product-intent-pages.ts:28](../../lib/product-intent-pages.ts#L28) |
-| constant | `FLOW_GITHUB` | Defines the flow github source-of-truth value. | [lib/product-intent-pages.ts:47](../../lib/product-intent-pages.ts#L47) |
+| constant | `FLOW_DOCKER` | Defines the flow docker source-of-truth value. | [lib/product-intent-pages.ts:47](../../lib/product-intent-pages.ts#L47) |
 | constant | `FLOW_DOCS` | Defines the flow docs source-of-truth value. | [lib/product-intent-pages.ts:48](../../lib/product-intent-pages.ts#L48) |
-| constant | `WARROOM_GITHUB` | Defines the warroom github source-of-truth value. | [lib/product-intent-pages.ts:49](../../lib/product-intent-pages.ts#L49) |
+| constant | `WARROOM_DOCKER` | Defines the warroom docker source-of-truth value. | [lib/product-intent-pages.ts:49](../../lib/product-intent-pages.ts#L49) |
 | constant | `WARROOM_DOCS` | Defines the warroom docs source-of-truth value. | [lib/product-intent-pages.ts:50](../../lib/product-intent-pages.ts#L50) |
 | constant | `flowScreenshot` | Defines the flow screenshot source-of-truth value. | [lib/product-intent-pages.ts:52](../../lib/product-intent-pages.ts#L52) |
 | constant | `warroomScreenshot` | Defines the warroom screenshot source-of-truth value. | [lib/product-intent-pages.ts:53](../../lib/product-intent-pages.ts#L53) |
@@ -102,11 +102,10 @@ Source-backed contracts for **138 declarations**.
 | interface | `PublicRouteSection` | Defines the public route section data contract. | [lib/public-route-pages.ts:27](../../lib/public-route-pages.ts#L27) |
 | interface | `PublicRouteAnswer` | Defines the public route answer data contract. | [lib/public-route-pages.ts:33](../../lib/public-route-pages.ts#L33) |
 | interface | `PublicRoutePage` | Defines the public route page data contract. | [lib/public-route-pages.ts:38](../../lib/public-route-pages.ts#L38) |
-| constant | `WARROOM_CE_GITHUB` | Defines the warroom ce github source-of-truth value. | [lib/public-route-pages.ts:53](../../lib/public-route-pages.ts#L53) |
-| constant | `WARROOM_CE_DOCKER` | Defines the warroom ce docker source-of-truth value. | [lib/public-route-pages.ts:54](../../lib/public-route-pages.ts#L54) |
-| constant | `WARROOM_CE_DOCS` | Defines the warroom ce docs source-of-truth value. | [lib/public-route-pages.ts:55](../../lib/public-route-pages.ts#L55) |
-| constant | `publicRoutePages` | Defines the public route pages source-of-truth value. | [lib/public-route-pages.ts:57](../../lib/public-route-pages.ts#L57) |
-| constant | `requiredGeoRoutes` | Defines the required geo routes source-of-truth value. | [lib/public-route-pages.ts:1098](../../lib/public-route-pages.ts#L1098) |
+| constant | `WARROOM_CE_DOCKER` | Defines the warroom ce docker source-of-truth value. | [lib/public-route-pages.ts:53](../../lib/public-route-pages.ts#L53) |
+| constant | `WARROOM_CE_DOCS` | Defines the warroom ce docs source-of-truth value. | [lib/public-route-pages.ts:54](../../lib/public-route-pages.ts#L54) |
+| constant | `publicRoutePages` | Defines the public route pages source-of-truth value. | [lib/public-route-pages.ts:56](../../lib/public-route-pages.ts#L56) |
+| constant | `requiredGeoRoutes` | Defines the required geo routes source-of-truth value. | [lib/public-route-pages.ts:1097](../../lib/public-route-pages.ts#L1097) |
 | constant | `ENGLISH_ONLY_ROUTE_PREFIXES` | Defines the english only route prefixes source-of-truth value. | [lib/route-localization.ts:1](../../lib/route-localization.ts#L1) |
 | function | `normalizeLocalizationRoute(path)` | Transforms normalize localization route. | [lib/route-localization.ts:33](../../lib/route-localization.ts#L33) |
 | function | `isEnglishOnlyRoute(path)` | Validates is english only route. | [lib/route-localization.ts:37](../../lib/route-localization.ts#L37) |

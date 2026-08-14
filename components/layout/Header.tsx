@@ -42,10 +42,10 @@ export function Header() {
     product === 'code'
       ? '/warroom'
       : product === 'cloud'
-        ? 'https://github.com/flytohub/flyto-flow'
+        ? 'https://docs.flyto2.com/flow/'
         : '/flow';
   const ctaLabel =
-    product === 'code' ? 'Explore Warroom' : product === 'cloud' ? 'View source' : 'Explore Flow';
+    product === 'code' ? 'Explore Warroom' : product === 'cloud' ? 'Read Flow docs' : 'Explore Flow';
 
   return (
     <>
