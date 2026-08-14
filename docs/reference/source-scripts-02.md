@@ -2,19 +2,10 @@
 
 # Scripts Source Reference 2
 
-Source-backed contracts for **59 declarations**.
+Source-backed contracts for **50 declarations**.
 
 | Kind | Declaration | Responsibility | Source |
 |---|---|---|---|
-| function | `searchConsoleInfo()` | Retrieves search console info. | [scripts/seo-manage.mjs:115](../../scripts/seo-manage.mjs#L115) |
-| function | `coverageGaps(contractTerms, scoreReport)` | Implements coverage gaps. | [scripts/seo-manage.mjs:128](../../scripts/seo-manage.mjs#L128) |
-| function | `pageOpportunities(scoreReport)` | Implements page opportunities. | [scripts/seo-manage.mjs:140](../../scripts/seo-manage.mjs#L140) |
-| function | `addCheck(checks, name, points, pass, recommendation)` | Implements add check. | [scripts/seo-manage.mjs:154](../../scripts/seo-manage.mjs#L154) |
-| function | `managementChecks({ scoreReport, matrix, contract, discovery, gsc, gaps })` | Implements management checks. | [scripts/seo-manage.mjs:158](../../scripts/seo-manage.mjs#L158) |
-| function | `escapeCell(value)` | Implements escape cell. | [scripts/seo-manage.mjs:170](../../scripts/seo-manage.mjs#L170) |
-| function | `tableRows(rows, columns)` | Implements table rows. | [scripts/seo-manage.mjs:174](../../scripts/seo-manage.mjs#L174) |
-| function | `writeReports(report)` | Implements write reports. | [scripts/seo-manage.mjs:183](../../scripts/seo-manage.mjs#L183) |
-| function | `main()` | Implements main. | [scripts/seo-manage.mjs:238](../../scripts/seo-manage.mjs#L238) |
 | constant | `root` | Defines the root source-of-truth value. | [scripts/seo-score.mjs:11](../../scripts/seo-score.mjs#L11) |
 | constant | `appDir` | Defines the app dir source-of-truth value. | [scripts/seo-score.mjs:12](../../scripts/seo-score.mjs#L12) |
 | constant | `publicDir` | Defines the public dir source-of-truth value. | [scripts/seo-score.mjs:13](../../scripts/seo-score.mjs#L13) |

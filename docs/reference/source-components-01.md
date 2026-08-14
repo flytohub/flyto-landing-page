@@ -2,7 +2,7 @@
 
 # Components Source Reference
 
-Source-backed contracts for **162 declarations**.
+Source-backed contracts for **161 declarations**.
 
 | Kind | Declaration | Responsibility | Source |
 |---|---|---|---|
@@ -128,7 +128,6 @@ Source-backed contracts for **162 declarations**.
 | interface | `ChainStep` | Defines the chain step data contract. | [components/sections/JuiceShopProof.tsx:7](../../components/sections/JuiceShopProof.tsx#L7) |
 | interface | `ProofData` | Defines the proof data data contract. | [components/sections/JuiceShopProof.tsx:12](../../components/sections/JuiceShopProof.tsx#L12) |
 | component | `JuiceShopProof()` | Renders the juice shop proof interface. | [components/sections/JuiceShopProof.tsx:17](../../components/sections/JuiceShopProof.tsx#L17) |
-| component | `PhysicalAIDemo({ locale })` | Renders the physical aidemo interface. | [components/sections/PhysicalAIDemo.tsx:6](../../components/sections/PhysicalAIDemo.tsx#L6) |
 | constant | `AVAILABILITY` | Defines the availability source-of-truth value. | [components/sections/ProductIntentPage.tsx:7](../../components/sections/ProductIntentPage.tsx#L7) |
 | function | `external(href)` | Implements external. | [components/sections/ProductIntentPage.tsx:12](../../components/sections/ProductIntentPage.tsx#L12) |
 | component | `ActionLink({ href, children, secondary = false, })` | Renders the action link interface. | [components/sections/ProductIntentPage.tsx:16](../../components/sections/ProductIntentPage.tsx#L16) |

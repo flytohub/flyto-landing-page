@@ -73,7 +73,7 @@ export const FLYTO2_HOME_TITLE = 'AI Automation and Security Operations Platform
 export const FLYTO2_HOME_FULL_TITLE = `Flyto2 - ${FLYTO2_HOME_TITLE}`;
 
 export const FLYTO2_HOME_DESCRIPTION =
-  'Flyto2 builds source-available platforms for AI workflows, Physical AI exhibit previews, browser automation, CTEM, security validation, and evidence-backed operations.';
+  'Flyto2 builds source-available execution platforms for AI workflow automation, visual MCP tools, browser workflows, CTEM, security validation, and evidence-backed operations.';
 
 const manifestKeywordTerms = seoContract.surface.keywordClusters.flatMap((cluster) => [
   cluster.primary,
@@ -101,8 +101,6 @@ export const FLYTO2_SEO_KEYWORDS = Array.from(new Set([
   'LangGraph alternative',
   'no-code browser automation',
   'AI agent workflow automation',
-  'Physical AI workflow exhibit',
-  'TurtleBot LiDAR workflow',
   'security war room',
   'CTEM',
   'CTEM cybersecurity',

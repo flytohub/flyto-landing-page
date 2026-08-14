@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+### Removed
+
+- Removed the Physical AI homepage exhibit, its localized copy and screenshot,
+  and the corresponding SEO, image-discovery, and AI-readable index entries.
+
 ### Added
 
 - Added `/support/` with product-specific diagnostic guidance, dedicated

@@ -1,7 +1,10 @@
 # State
 
-Current state on 2026-07-28:
+Current state on 2026-08-14:
 
+- 2026-08-14: The temporary Physical AI exhibit preview and its screenshot
+  were removed from the homepage, metadata, image discovery, and AI-readable
+  indexes.
 - 2026-07-28: The public site now has a canonical `/support/` route for
   Flyto2 Cloud, ChatGPT app, MCP routing, connected runner, Warroom, account,
   billing, privacy, and security support. Footer, sitemap, English-only route

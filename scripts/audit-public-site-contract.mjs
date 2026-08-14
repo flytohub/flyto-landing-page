@@ -1,5 +1,4 @@
-import { createHash } from 'node:crypto';
-import { closeSync, existsSync, fstatSync, openSync, readFileSync, readSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -92,73 +91,10 @@ const launchSurfaceContracts = {
     'www.youtube-nocookie.com/embed',
     'https://www.youtube.com/@Flyto2',
   ],
-  'components/sections/PhysicalAIDemo.tsx': [
-    'physical-ai-exhibit',
-    'PHYSICAL_AI_DEMO_ASSET',
-    'alt={copy.alt}',
-    '<figcaption',
-    'https://github.com/flytohub/flyto-robotics',
-    'href="#flow-demo-videos"',
-  ],
-  'lib/physical-ai-demo.ts': [
-    'flyto2-ai-space-workflows.webp',
-    "'en' | 'zh-TW' | 'zh-CN'",
-    'Captured 2026-08-12',
-    'Corridor clearance (robot)',
-    'Zone overview (camera)',
-    'Live commissioning remains incomplete',
-    'configuration and exhibit preview, not live commissioning',
-    'TurtleBot motion and LiDAR',
-    'Mac observation path was verified locally',
-    'Customer pairing and live Raspberry Pi commissioning are incomplete',
-    '90d0e3a61d7db2646a7d4579acd676352760c4e2d4037298d333e2b80f7c88bb',
-    '?? ENGLISH_COPY',
-  ],
-  'lib/seo.ts': [
-    'Physical AI exhibit previews',
-    'Physical AI workflow exhibit',
-    'TurtleBot LiDAR workflow',
-  ],
-  'public/llms.txt': [
-    'Captured 2026-08-12',
-    'configuration and exhibit preview, not live commissioning',
-    'TurtleBot motion and LiDAR',
-    'separate Mac UVC loopback-only resource',
-    'Mac observation was verified locally',
-    'Customer pairing and live Raspberry Pi commissioning remain incomplete',
-    'Corridor clearance (robot)',
-    'Zone overview (camera)',
-    'https://github.com/flytohub/flyto-robotics',
-    'https://flyto2.com/#flow-demo-videos',
-  ],
-  'public/llms-full.txt': [
-    'captured 2026-08-12',
-    'configuration and exhibit preview',
-    'live commissioning remains incomplete',
-    'TurtleBot motion and LiDAR',
-    'separate Mac UVC loopback-only resource',
-    'Mac observation was verified locally',
-    'customer pairing and live Raspberry Pi commissioning remain incomplete',
-    'Corridor clearance (robot)',
-    'Zone overview (camera)',
-    'https://github.com/flytohub/flyto-robotics',
-    'https://flyto2.com/#flow-demo-videos',
-  ],
-  'scripts/generate-discovery.mjs': [
-    "const physicalAiPreviewPath = '/assets/img/demo/flyto2-ai-space-workflows.webp'",
-    "title: 'Physical AI configuration preview'",
-    'Captured 2026-08-12',
-    'Corridor clearance (robot)',
-    'Zone overview (camera)',
-    'configuration preview',
-    'customer pairing and live Raspberry Pi commissioning remain incomplete',
-  ],
   'app/[locale]/page.tsx': [
     "import { VideoDemo }",
     '<VideoDemo />',
     'Flyto2 Flow Community Edition Docker image',
-    '<PhysicalAIDemo locale={locale} />',
-    'Physical AI exhibit preview',
   ],
   'components/layout/Footer.tsx': [
     'Flyto2 Flow',
@@ -297,32 +233,6 @@ const keywordSurfaceContracts = {
   ],
 };
 
-const physicalAiPublicFiles = [
-  'components/sections/PhysicalAIDemo.tsx',
-  'lib/physical-ai-demo.ts',
-  'lib/seo.ts',
-  'public/llms.txt',
-  'public/llms-full.txt',
-];
-
-const prohibitedPhysicalAiClaims = [
-  'Pi camera',
-  'customer commissioning complete',
-  'Cloud-to-Pi motion complete',
-  'production-ready',
-  'one-click install',
-  'completed live closed loop',
-];
-
-const physicalAiAssetContract = {
-  path: 'public/assets/img/demo/flyto2-ai-space-workflows.webp',
-  maxBytes: 2 * 1024 * 1024,
-  sha256: '74ecc11031517d83dff779a4031fa771fcc2bcaba36cd5ff5636e928393e8dc9',
-  sourceSha256: '90d0e3a61d7db2646a7d4579acd676352760c4e2d4037298d333e2b80f7c88bb',
-  width: 952,
-  height: 908,
-};
-
 const failures = [];
 
 function read(relativePath) {
@@ -332,87 +242,6 @@ function read(relativePath) {
     return '';
   }
   return readFileSync(absolutePath, 'utf8');
-}
-
-function readBoundedAsset(relativePath, maxBytes) {
-  const absolutePath = path.join(root, relativePath);
-  if (!existsSync(absolutePath)) return null;
-  const descriptor = openSync(absolutePath, 'r');
-  try {
-    const size = fstatSync(descriptor).size;
-    if (size > maxBytes) {
-      failures.push(`${relativePath} exceeds bounded audit limit of ${maxBytes} bytes`);
-      return null;
-    }
-    const bytes = Buffer.alloc(size);
-    let offset = 0;
-    while (offset < size) {
-      const count = readSync(descriptor, bytes, offset, size - offset, offset);
-      if (count === 0) break;
-      offset += count;
-    }
-    if (offset !== size) failures.push(`${relativePath} could not be read completely within its declared size`);
-    return bytes.subarray(0, offset);
-  } finally {
-    closeSync(descriptor);
-  }
-}
-
-function webpDimensions(bytes) {
-  if (bytes.length < 30 || bytes.toString('ascii', 0, 4) !== 'RIFF' || bytes.toString('ascii', 8, 12) !== 'WEBP') return null;
-  const riffSize = bytes.readUInt32LE(4) + 8;
-  if (riffSize !== bytes.length) return null;
-  let offset = 12;
-  while (offset + 8 <= bytes.length) {
-    const kind = bytes.toString('ascii', offset, offset + 4);
-    const chunkSize = bytes.readUInt32LE(offset + 4);
-    const payload = offset + 8;
-    if (payload + chunkSize > bytes.length) return null;
-    if (kind === 'VP8 ' && chunkSize >= 10 && bytes.subarray(payload + 3, payload + 6).equals(Buffer.from([0x9d, 0x01, 0x2a]))) {
-      return { codec: 'VP8', width: bytes.readUInt16LE(payload + 6) & 0x3fff, height: bytes.readUInt16LE(payload + 8) & 0x3fff };
-    }
-    if (kind === 'VP8L' && chunkSize >= 5 && bytes[payload] === 0x2f) {
-      const bits = bytes.readUInt32LE(payload + 1);
-      return { codec: 'VP8L', width: (bits & 0x3fff) + 1, height: ((bits >>> 14) & 0x3fff) + 1 };
-    }
-    if (kind === 'VP8X' && chunkSize >= 10) {
-      return {
-        codec: 'VP8X',
-        width: bytes.readUIntLE(payload + 4, 3) + 1,
-        height: bytes.readUIntLE(payload + 7, 3) + 1,
-      };
-    }
-    offset = payload + chunkSize + (chunkSize % 2);
-  }
-  return null;
-}
-
-const physicalAiAsset = readBoundedAsset(physicalAiAssetContract.path, physicalAiAssetContract.maxBytes);
-if (!physicalAiAsset) {
-  failures.push('missing or unreadable Physical AI exhibit preview asset');
-} else {
-  const digest = createHash('sha256').update(physicalAiAsset).digest('hex');
-  if (digest !== physicalAiAssetContract.sha256) failures.push(`Physical AI asset SHA256 mismatch: ${digest}`);
-  const dimensions = webpDimensions(physicalAiAsset);
-  if (!dimensions || dimensions.codec !== 'VP8') {
-    failures.push('Physical AI asset must be RIFF/WEBP with a VP8 image chunk');
-  } else if (dimensions.width !== physicalAiAssetContract.width || dimensions.height !== physicalAiAssetContract.height) {
-    failures.push(`Physical AI asset dimensions must be ${physicalAiAssetContract.width}x${physicalAiAssetContract.height}`);
-  }
-}
-
-const physicalAiSource = read('lib/physical-ai-demo.ts');
-if (!physicalAiSource.includes(physicalAiAssetContract.sourceSha256)) {
-  failures.push('Physical AI asset source provenance SHA256 is not recorded in repository source');
-}
-
-for (const file of physicalAiPublicFiles) {
-  const content = read(file);
-  for (const claim of prohibitedPhysicalAiClaims) {
-    if (content.toLowerCase().includes(claim.toLowerCase())) {
-      failures.push(`${file} contains prohibited Physical AI claim: ${claim}`);
-    }
-  }
 }
 
 for (const file of criticalPublicFiles) {
