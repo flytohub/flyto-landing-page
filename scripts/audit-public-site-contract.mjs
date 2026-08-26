@@ -235,6 +235,18 @@ const keywordSurfaceContracts = {
 
 const failures = [];
 
+const releaseContract = {
+  next: '16.3.2',
+  typescript: '7.0.2',
+  legacyTypescriptAlias: 'npm:typescript@6.0.3',
+  handoff: 'handoffs/2026-08-27-grouped-dependency-source-migration.md',
+  workflowCommands: [
+    'npm run verify',
+    'npm run build:cf',
+    'flyto-index verify . --full-scan --strict --json',
+  ],
+};
+
 function read(relativePath) {
   const absolutePath = path.join(root, relativePath);
   if (!existsSync(absolutePath)) {
@@ -308,6 +320,63 @@ for (const token of ['skipTrailingSlashRedirect: true']) {
 }
 
 const packageJson = JSON.parse(read('package.json'));
+const packageLock = JSON.parse(read('package-lock.json'));
+const rootLockPackage = packageLock.packages?.[''] ?? {};
+const lockedNext = packageLock.packages?.['node_modules/next'];
+const lockedTypescript = packageLock.packages?.['node_modules/typescript'];
+const lockedLegacyTypescript = packageLock.packages?.['node_modules/typescript-legacy-docs'];
+
+for (const [label, actual, expected] of [
+  ['package.json next dependency', packageJson.dependencies?.next, releaseContract.next],
+  ['package.json primary TypeScript dependency', packageJson.devDependencies?.typescript, releaseContract.typescript],
+  ['package.json legacy TypeScript docs alias', packageJson.devDependencies?.['typescript-legacy-docs'], releaseContract.legacyTypescriptAlias],
+  ['package-lock root next dependency', rootLockPackage.dependencies?.next, releaseContract.next],
+  ['package-lock root primary TypeScript dependency', rootLockPackage.devDependencies?.typescript, releaseContract.typescript],
+  ['package-lock root legacy TypeScript docs alias', rootLockPackage.devDependencies?.['typescript-legacy-docs'], releaseContract.legacyTypescriptAlias],
+  ['package-lock Next.js resolution', lockedNext?.version, releaseContract.next],
+  ['package-lock primary TypeScript resolution', lockedTypescript?.version, releaseContract.typescript],
+  ['package-lock legacy TypeScript docs resolution', lockedLegacyTypescript?.version, '6.0.3'],
+]) {
+  if (actual !== expected) failures.push(`${label} must be exactly ${expected}; received ${actual ?? 'missing'}`);
+}
+
+const workflow = read('.github/workflows/ci.yml');
+const workflowRunCommands = [...workflow.matchAll(/^\s*run:\s*(.+?)\s*$/gm)].map((match) => match[1]);
+for (const command of releaseContract.workflowCommands) {
+  const count = workflowRunCommands.filter((candidate) => candidate === command).length;
+  if (count !== 1) failures.push(`ci.yml must run exactly once: ${command}; received ${count}`);
+}
+for (const redundantCommand of ['npm run audit:geo', 'npm run lint', 'npm test', 'npm run build', 'npm run docs:check']) {
+  if (workflowRunCommands.includes(redundantCommand)) {
+    failures.push(`ci.yml must not repeat check already included in npm run verify: ${redundantCommand}`);
+  }
+}
+
+const releaseDocumentation = {
+  'README.md': read('README.md'),
+  'CHANGELOG.md': read('CHANGELOG.md'),
+  'STATE.md': read('STATE.md'),
+  [releaseContract.handoff]: read(releaseContract.handoff),
+  'handoffs/_registry.md': read('handoffs/_registry.md'),
+};
+for (const file of ['README.md', 'CHANGELOG.md', 'STATE.md', releaseContract.handoff]) {
+  const content = releaseDocumentation[file];
+  for (const token of ['Next.js 16.3.2', 'TypeScript 7.0.2']) {
+    if (!content.includes(token)) failures.push(`${file} missing release-contract token: ${token}`);
+  }
+}
+for (const file of ['README.md', 'CHANGELOG.md', 'STATE.md', releaseContract.handoff]) {
+  const content = releaseDocumentation[file];
+  if (!content.includes('TypeScript 6.0.3') || !content.includes('typescript-legacy-docs')) {
+    failures.push(`${file} must name TypeScript 6.0.3 only with the typescript-legacy-docs alias`);
+  }
+  if (/primary TypeScript 6\.0\.3|TypeScript 6\.0\.3 (?:is|as) the primary/i.test(content)) {
+    failures.push(`${file} must not claim TypeScript 6.0.3 is primary`);
+  }
+}
+if (!releaseDocumentation['handoffs/_registry.md'].includes(path.basename(releaseContract.handoff))) {
+  failures.push(`handoffs/_registry.md must register ${path.basename(releaseContract.handoff)}`);
+}
 const buildCfScript = packageJson.scripts?.['build:cf'] ?? '';
 for (const token of ['opennextjs-cloudflare build', 'opennextjs-cloudflare populateCache local']) {
   if (!buildCfScript.includes(token)) {

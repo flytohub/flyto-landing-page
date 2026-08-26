@@ -66,6 +66,13 @@
 
 ### Changed
 
+- Corrected the landing release contract after the dependency/source
+  migration: Next.js 16.3.2 and TypeScript 7.0.2 are the current runtime and
+  primary compiler, while TypeScript 6.0.3 remains only as the explicitly
+  named `typescript-legacy-docs` alias. CI now runs `npm run verify` once,
+  `npm run build:cf` once, and strict `flyto-index verify` once, with the
+  public-site audit enforcing the package, lockfile, documentation, handoff,
+  and workflow contract from source.
 - Replaced the obsolete offline-only privacy claims with the actual
   Cloud/ChatGPT/MCP/connected-runner data boundary and explicit retention
   periods for OAuth state and credentials, MCP controls, active-account data,

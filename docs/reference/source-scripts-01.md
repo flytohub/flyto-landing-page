@@ -49,24 +49,33 @@ Source-backed contracts for **260 declarations**.
 | constant | `launchSurfaceContracts` | Defines the launch surface contracts source-of-truth value. | [scripts/audit-public-site-contract.mjs:60](../../scripts/audit-public-site-contract.mjs#L60) |
 | constant | `keywordSurfaceContracts` | Defines the keyword surface contracts source-of-truth value. | [scripts/audit-public-site-contract.mjs:187](../../scripts/audit-public-site-contract.mjs#L187) |
 | constant | `failures` | Defines the failures source-of-truth value. | [scripts/audit-public-site-contract.mjs:236](../../scripts/audit-public-site-contract.mjs#L236) |
-| function | `read(relativePath)` | Retrieves read. | [scripts/audit-public-site-contract.mjs:238](../../scripts/audit-public-site-contract.mjs#L238) |
-| constant | `sitemap` | Defines the sitemap source-of-truth value. | [scripts/audit-public-site-contract.mjs:260](../../scripts/audit-public-site-contract.mjs#L260) |
-| constant | `seo` | Defines the seo source-of-truth value. | [scripts/audit-public-site-contract.mjs:270](../../scripts/audit-public-site-contract.mjs#L270) |
-| constant | `routeLocalization` | Defines the route localization source-of-truth value. | [scripts/audit-public-site-contract.mjs:277](../../scripts/audit-public-site-contract.mjs#L277) |
-| constant | `localeLayout` | Defines the locale layout source-of-truth value. | [scripts/audit-public-site-contract.mjs:284](../../scripts/audit-public-site-contract.mjs#L284) |
-| constant | `whitepapers` | Defines the whitepapers source-of-truth value. | [scripts/audit-public-site-contract.mjs:289](../../scripts/audit-public-site-contract.mjs#L289) |
-| constant | `whitepaperGenerator` | Defines the whitepaper generator source-of-truth value. | [scripts/audit-public-site-contract.mjs:296](../../scripts/audit-public-site-contract.mjs#L296) |
-| constant | `nextConfig` | Defines the next config source-of-truth value. | [scripts/audit-public-site-contract.mjs:303](../../scripts/audit-public-site-contract.mjs#L303) |
-| constant | `packageJson` | Defines the package json source-of-truth value. | [scripts/audit-public-site-contract.mjs:310](../../scripts/audit-public-site-contract.mjs#L310) |
-| constant | `buildCfScript` | Defines the build cf script source-of-truth value. | [scripts/audit-public-site-contract.mjs:311](../../scripts/audit-public-site-contract.mjs#L311) |
-| constant | `openNextConfig` | Defines the open next config source-of-truth value. | [scripts/audit-public-site-contract.mjs:318](../../scripts/audit-public-site-contract.mjs#L318) |
-| constant | `discussionsClient` | Defines the discussions client source-of-truth value. | [scripts/audit-public-site-contract.mjs:332](../../scripts/audit-public-site-contract.mjs#L332) |
-| constant | `robots` | Defines the robots source-of-truth value. | [scripts/audit-public-site-contract.mjs:352](../../scripts/audit-public-site-contract.mjs#L352) |
-| constant | `llms` | Defines the llms source-of-truth value. | [scripts/audit-public-site-contract.mjs:362](../../scripts/audit-public-site-contract.mjs#L362) |
-| constant | `llmsFull` | Defines the llms full source-of-truth value. | [scripts/audit-public-site-contract.mjs:363](../../scripts/audit-public-site-contract.mjs#L363) |
-| constant | `middleware` | Defines the middleware source-of-truth value. | [scripts/audit-public-site-contract.mjs:364](../../scripts/audit-public-site-contract.mjs#L364) |
-| constant | `homePage` | Defines the home page source-of-truth value. | [scripts/audit-public-site-contract.mjs:365](../../scripts/audit-public-site-contract.mjs#L365) |
-| constant | `openaiChallenge` | Defines the openai challenge source-of-truth value. | [scripts/audit-public-site-contract.mjs:366](../../scripts/audit-public-site-contract.mjs#L366) |
+| constant | `releaseContract` | Defines the release contract source-of-truth value. | [scripts/audit-public-site-contract.mjs:238](../../scripts/audit-public-site-contract.mjs#L238) |
+| function | `read(relativePath)` | Retrieves read. | [scripts/audit-public-site-contract.mjs:250](../../scripts/audit-public-site-contract.mjs#L250) |
+| constant | `sitemap` | Defines the sitemap source-of-truth value. | [scripts/audit-public-site-contract.mjs:272](../../scripts/audit-public-site-contract.mjs#L272) |
+| constant | `seo` | Defines the seo source-of-truth value. | [scripts/audit-public-site-contract.mjs:282](../../scripts/audit-public-site-contract.mjs#L282) |
+| constant | `routeLocalization` | Defines the route localization source-of-truth value. | [scripts/audit-public-site-contract.mjs:289](../../scripts/audit-public-site-contract.mjs#L289) |
+| constant | `localeLayout` | Defines the locale layout source-of-truth value. | [scripts/audit-public-site-contract.mjs:296](../../scripts/audit-public-site-contract.mjs#L296) |
+| constant | `whitepapers` | Defines the whitepapers source-of-truth value. | [scripts/audit-public-site-contract.mjs:301](../../scripts/audit-public-site-contract.mjs#L301) |
+| constant | `whitepaperGenerator` | Defines the whitepaper generator source-of-truth value. | [scripts/audit-public-site-contract.mjs:308](../../scripts/audit-public-site-contract.mjs#L308) |
+| constant | `nextConfig` | Defines the next config source-of-truth value. | [scripts/audit-public-site-contract.mjs:315](../../scripts/audit-public-site-contract.mjs#L315) |
+| constant | `packageJson` | Defines the package json source-of-truth value. | [scripts/audit-public-site-contract.mjs:322](../../scripts/audit-public-site-contract.mjs#L322) |
+| constant | `packageLock` | Defines the package lock source-of-truth value. | [scripts/audit-public-site-contract.mjs:323](../../scripts/audit-public-site-contract.mjs#L323) |
+| constant | `rootLockPackage` | Defines the root lock package source-of-truth value. | [scripts/audit-public-site-contract.mjs:324](../../scripts/audit-public-site-contract.mjs#L324) |
+| constant | `lockedNext` | Defines the locked next source-of-truth value. | [scripts/audit-public-site-contract.mjs:325](../../scripts/audit-public-site-contract.mjs#L325) |
+| constant | `lockedTypescript` | Defines the locked typescript source-of-truth value. | [scripts/audit-public-site-contract.mjs:326](../../scripts/audit-public-site-contract.mjs#L326) |
+| constant | `lockedLegacyTypescript` | Defines the locked legacy typescript source-of-truth value. | [scripts/audit-public-site-contract.mjs:327](../../scripts/audit-public-site-contract.mjs#L327) |
+| constant | `workflow` | Defines the workflow source-of-truth value. | [scripts/audit-public-site-contract.mjs:343](../../scripts/audit-public-site-contract.mjs#L343) |
+| constant | `workflowRunCommands` | Defines the workflow run commands source-of-truth value. | [scripts/audit-public-site-contract.mjs:344](../../scripts/audit-public-site-contract.mjs#L344) |
+| constant | `releaseDocumentation` | Defines the release documentation source-of-truth value. | [scripts/audit-public-site-contract.mjs:355](../../scripts/audit-public-site-contract.mjs#L355) |
+| constant | `buildCfScript` | Defines the build cf script source-of-truth value. | [scripts/audit-public-site-contract.mjs:380](../../scripts/audit-public-site-contract.mjs#L380) |
+| constant | `openNextConfig` | Defines the open next config source-of-truth value. | [scripts/audit-public-site-contract.mjs:387](../../scripts/audit-public-site-contract.mjs#L387) |
+| constant | `discussionsClient` | Defines the discussions client source-of-truth value. | [scripts/audit-public-site-contract.mjs:401](../../scripts/audit-public-site-contract.mjs#L401) |
+| constant | `robots` | Defines the robots source-of-truth value. | [scripts/audit-public-site-contract.mjs:421](../../scripts/audit-public-site-contract.mjs#L421) |
+| constant | `llms` | Defines the llms source-of-truth value. | [scripts/audit-public-site-contract.mjs:431](../../scripts/audit-public-site-contract.mjs#L431) |
+| constant | `llmsFull` | Defines the llms full source-of-truth value. | [scripts/audit-public-site-contract.mjs:432](../../scripts/audit-public-site-contract.mjs#L432) |
+| constant | `middleware` | Defines the middleware source-of-truth value. | [scripts/audit-public-site-contract.mjs:433](../../scripts/audit-public-site-contract.mjs#L433) |
+| constant | `homePage` | Defines the home page source-of-truth value. | [scripts/audit-public-site-contract.mjs:434](../../scripts/audit-public-site-contract.mjs#L434) |
+| constant | `openaiChallenge` | Defines the openai challenge source-of-truth value. | [scripts/audit-public-site-contract.mjs:435](../../scripts/audit-public-site-contract.mjs#L435) |
 | constant | `root` | Defines the root source-of-truth value. | [scripts/audit-seo-surface.mjs:7](../../scripts/audit-seo-surface.mjs#L7) |
 | constant | `appDir` | Defines the app dir source-of-truth value. | [scripts/audit-seo-surface.mjs:8](../../scripts/audit-seo-surface.mjs#L8) |
 | constant | `publicDir` | Defines the public dir source-of-truth value. | [scripts/audit-seo-surface.mjs:9](../../scripts/audit-seo-surface.mjs#L9) |
@@ -257,12 +266,3 @@ Source-backed contracts for **260 declarations**.
 | constant | `requireSearchConsole` | Defines the require search console source-of-truth value. | [scripts/seo-manage.mjs:16](../../scripts/seo-manage.mjs#L16) |
 | function | `readJson(filePath)` | Retrieves read json. | [scripts/seo-manage.mjs:18](../../scripts/seo-manage.mjs#L18) |
 | function | `normalizeTerm(value)` | Transforms normalize term. | [scripts/seo-manage.mjs:22](../../scripts/seo-manage.mjs#L22) |
-| function | `includesTerm(haystack, term)` | Implements includes term. | [scripts/seo-manage.mjs:31](../../scripts/seo-manage.mjs#L31) |
-| function | `stripHtml(html)` | Implements strip html. | [scripts/seo-manage.mjs:35](../../scripts/seo-manage.mjs#L35) |
-| function | `visibleText(html)` | Implements visible text. | [scripts/seo-manage.mjs:39](../../scripts/seo-manage.mjs#L39) |
-| function | `csvRows(filePath)` | Implements csv rows. | [scripts/seo-manage.mjs:44](../../scripts/seo-manage.mjs#L44) |
-| function | `newestKeywordMatrix()` | Implements newest keyword matrix. | [scripts/seo-manage.mjs:55](../../scripts/seo-manage.mjs#L55) |
-| function | `keywordMatrixInfo()` | Implements keyword matrix info. | [scripts/seo-manage.mjs:67](../../scripts/seo-manage.mjs#L67) |
-| function | `contractInfo()` | Implements contract info. | [scripts/seo-manage.mjs:83](../../scripts/seo-manage.mjs#L83) |
-| function | `discoveryInfo()` | Implements discovery info. | [scripts/seo-manage.mjs:96](../../scripts/seo-manage.mjs#L96) |
-| function | `searchConsoleInfo()` | Retrieves search console info. | [scripts/seo-manage.mjs:115](../../scripts/seo-manage.mjs#L115) |

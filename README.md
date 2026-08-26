@@ -64,7 +64,10 @@ the production build, built-page SEO scoring, and the SEO management gate.
 
 ## Stack
 
-- Next.js 15 App Router packaged for Cloudflare Workers with OpenNext
+- Next.js 16.3.2 App Router packaged for Cloudflare Workers with OpenNext
+- TypeScript 7.0.2 is the primary compiler; TypeScript 6.0.3 is retained only
+  through the explicitly named `typescript-legacy-docs` alias for legacy
+  documentation generation compatibility.
 - next-intl for locale routing — 16 locales (`en, zh, cn, ja, ko, de, es, fr, it, pt, hi, id, pl, th, tr, vi`)
 - Tailwind v4 + Motion + lucide-react
 - Firebase Web SDK (client-only) for the Q&A forum
@@ -125,20 +128,21 @@ without blocking public SEO/GEO pages.
 
 ## Testing And Verification
 
-Run the closed loop before release changes:
+Run the closed loop before release changes. `npm run verify` already includes
+documentation drift, tests, lint/typechecking, the production Next.js build,
+and SEO gates; the Cloudflare package and strict source scan remain explicit
+release checks:
 
 ```bash
-npm run audit:geo
-npm run lint
-npm test
-npm run build
 npm run verify
+npm run build:cf
+flyto-index verify . --full-scan --strict --json
 ```
 
 `npm run audit:geo` checks required public GEO routes, `robots.txt`,
 `llms.txt`, `llms-full.txt`, sitemap registration, and AI crawler policy.
-CI also runs `flyto-index verify . --full-scan --strict --json` to catch source-level
-secret, taint, impact, and instruction hygiene regressions.
+CI runs those three commands exactly once after dependency installation, so it
+does not repeat checks already owned by `npm run verify`.
 
 ## API Surface
 
