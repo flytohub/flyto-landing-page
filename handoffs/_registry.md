@@ -2,6 +2,7 @@
 
 | Date | Topic | File |
 | --- | --- | --- |
+| 2026-08-27 | Grouped dependency/source migration release contract | `2026-08-27-grouped-dependency-source-migration.md` |
 | 2026-07-28 | ChatGPT app public trust surfaces | `2026-07-28-chatgpt-app-trust-surfaces.md` |
 | 2026-07-22 | Source-backed landing documentation | `2026-07-22-source-backed-landing-documentation.md` |
 | 2026-07-19 | Warroom CE open-source positioning | `2026-07-19-warroom-ce-open-source-positioning.md` |

@@ -2,10 +2,19 @@
 
 # Scripts Source Reference 2
 
-Source-backed contracts for **58 declarations**.
+Source-backed contracts for **67 declarations**.
 
 | Kind | Declaration | Responsibility | Source |
 |---|---|---|---|
+| function | `includesTerm(haystack, term)` | Implements includes term. | [scripts/seo-manage.mjs:31](../../scripts/seo-manage.mjs#L31) |
+| function | `stripHtml(html)` | Implements strip html. | [scripts/seo-manage.mjs:35](../../scripts/seo-manage.mjs#L35) |
+| function | `visibleText(html)` | Implements visible text. | [scripts/seo-manage.mjs:39](../../scripts/seo-manage.mjs#L39) |
+| function | `csvRows(filePath)` | Implements csv rows. | [scripts/seo-manage.mjs:44](../../scripts/seo-manage.mjs#L44) |
+| function | `newestKeywordMatrix()` | Implements newest keyword matrix. | [scripts/seo-manage.mjs:55](../../scripts/seo-manage.mjs#L55) |
+| function | `keywordMatrixInfo()` | Implements keyword matrix info. | [scripts/seo-manage.mjs:67](../../scripts/seo-manage.mjs#L67) |
+| function | `contractInfo()` | Implements contract info. | [scripts/seo-manage.mjs:83](../../scripts/seo-manage.mjs#L83) |
+| function | `discoveryInfo()` | Implements discovery info. | [scripts/seo-manage.mjs:96](../../scripts/seo-manage.mjs#L96) |
+| function | `searchConsoleInfo()` | Retrieves search console info. | [scripts/seo-manage.mjs:115](../../scripts/seo-manage.mjs#L115) |
 | function | `coverageGaps(contractTerms, scoreReport)` | Implements coverage gaps. | [scripts/seo-manage.mjs:128](../../scripts/seo-manage.mjs#L128) |
 | function | `pageOpportunities(scoreReport)` | Implements page opportunities. | [scripts/seo-manage.mjs:140](../../scripts/seo-manage.mjs#L140) |
 | function | `addCheck(checks, name, points, pass, recommendation)` | Implements add check. | [scripts/seo-manage.mjs:154](../../scripts/seo-manage.mjs#L154) |

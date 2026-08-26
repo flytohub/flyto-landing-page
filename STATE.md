@@ -1,7 +1,14 @@
 # State
 
-Current state on 2026-08-14:
+Current state on 2026-08-27:
 
+- 2026-08-27: The post-migration landing release contract names Next.js 16.3.2
+  and primary TypeScript 7.0.2. TypeScript 6.0.3 is retained only as the
+  explicitly named `typescript-legacy-docs` legacy documentation alias. CI
+  runs `npm run verify`, explicit `npm run build:cf`, and strict
+  `flyto-index verify . --full-scan --strict --json` exactly once each; the
+  executable public-site audit checks those commands and the package,
+  lockfile, README, state, changelog, and handoff version contract.
 - 2026-08-14: The temporary Physical AI exhibit preview and its screenshot
   were removed from the homepage, metadata, image discovery, and AI-readable
   indexes.

@@ -32,26 +32,14 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Verify public GEO routes
-        run: npm run audit:geo
+      - name: Verify closed loop
+        run: npm run verify
 
-      - name: Lint
-        run: npm run lint
-
-      - name: Tests
-        run: npm test
-
-      - name: Build
-        run: npm run build
+      - name: Build Cloudflare worker
+        run: npm run build:cf
 
       - name: Install Flyto2 Indexer
         run: python -m pip install "flyto-indexer @ git+https://github.com/flytohub/flyto-indexer@1b624987b15ef7cd2361370478d07ea36e5aa5ee"
 
       - name: Source verify
         run: flyto-index verify . --full-scan --strict --json
-
-      - name: Documentation ownership and source reference
-        run: npm run docs:check
-
-      - name: Verify closed loop
-        run: npm run verify
