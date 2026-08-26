@@ -80,7 +80,7 @@ const whitepapers = readFileSync(path.join(root, 'lib', 'whitepapers.ts'), 'utf8
 if (whitepapers.includes('readFileSync') || whitepapers.includes('node:fs')) {
   failures.push('lib/whitepapers.ts must bundle markdown content, not read files at Cloudflare Worker runtime');
 }
-for (const token of ['../content/whitepaper/audit.md', 'BODY_BY_SLUG']) {
+for (const token of ['WHITEPAPER_BODY_BY_SLUG', 'BODY_BY_SLUG']) {
   if (!whitepapers.includes(token)) {
     failures.push(`lib/whitepapers.ts missing bundled whitepaper token: ${token}`);
   }

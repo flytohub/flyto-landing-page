@@ -2,7 +2,7 @@
 
 # Runtime Source Reference
 
-Source-backed contracts for **13 declarations**.
+Source-backed contracts for **11 declarations**.
 
 | Kind | Declaration | Responsibility | Source |
 |---|---|---|---|
@@ -15,7 +15,5 @@ Source-backed contracts for **13 declarations**.
 | function | `applyDefaultLocaleCanonical(pathname)` | Implements apply default locale canonical. | [middleware.ts:46](../../middleware.ts#L46) |
 | function | `middleware(request)` | Implements middleware. | [middleware.ts:53](../../middleware.ts#L53) |
 | constant | `config` | Defines the config source-of-truth value. | [middleware.ts:112](../../middleware.ts#L112) |
-| constant | `withNextIntl` | Defines the with next intl source-of-truth value. | [next.config.mjs:4](../../next.config.mjs#L4) |
-| constant | `whitepaperContentDir` | Defines the whitepaper content dir source-of-truth value. | [next.config.mjs:5](../../next.config.mjs#L5) |
-| constant | `nextConfig` | Defines the next config source-of-truth value. | [next.config.mjs:8](../../next.config.mjs#L8) |
-| method | `webpack(config)` | Implements webpack. | [next.config.mjs:13](../../next.config.mjs#L13) |
+| constant | `withNextIntl` | Defines the with next intl source-of-truth value. | [next.config.mjs:3](../../next.config.mjs#L3) |
+| constant | `nextConfig` | Defines the next config source-of-truth value. | [next.config.mjs:6](../../next.config.mjs#L6) |

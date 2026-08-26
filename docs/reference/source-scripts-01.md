@@ -55,17 +55,18 @@ Source-backed contracts for **260 declarations**.
 | constant | `routeLocalization` | Defines the route localization source-of-truth value. | [scripts/audit-public-site-contract.mjs:277](../../scripts/audit-public-site-contract.mjs#L277) |
 | constant | `localeLayout` | Defines the locale layout source-of-truth value. | [scripts/audit-public-site-contract.mjs:284](../../scripts/audit-public-site-contract.mjs#L284) |
 | constant | `whitepapers` | Defines the whitepapers source-of-truth value. | [scripts/audit-public-site-contract.mjs:289](../../scripts/audit-public-site-contract.mjs#L289) |
-| constant | `nextConfig` | Defines the next config source-of-truth value. | [scripts/audit-public-site-contract.mjs:308](../../scripts/audit-public-site-contract.mjs#L308) |
-| constant | `packageJson` | Defines the package json source-of-truth value. | [scripts/audit-public-site-contract.mjs:320](../../scripts/audit-public-site-contract.mjs#L320) |
-| constant | `buildCfScript` | Defines the build cf script source-of-truth value. | [scripts/audit-public-site-contract.mjs:321](../../scripts/audit-public-site-contract.mjs#L321) |
-| constant | `openNextConfig` | Defines the open next config source-of-truth value. | [scripts/audit-public-site-contract.mjs:328](../../scripts/audit-public-site-contract.mjs#L328) |
-| constant | `discussionsClient` | Defines the discussions client source-of-truth value. | [scripts/audit-public-site-contract.mjs:342](../../scripts/audit-public-site-contract.mjs#L342) |
-| constant | `robots` | Defines the robots source-of-truth value. | [scripts/audit-public-site-contract.mjs:362](../../scripts/audit-public-site-contract.mjs#L362) |
-| constant | `llms` | Defines the llms source-of-truth value. | [scripts/audit-public-site-contract.mjs:372](../../scripts/audit-public-site-contract.mjs#L372) |
-| constant | `llmsFull` | Defines the llms full source-of-truth value. | [scripts/audit-public-site-contract.mjs:373](../../scripts/audit-public-site-contract.mjs#L373) |
-| constant | `middleware` | Defines the middleware source-of-truth value. | [scripts/audit-public-site-contract.mjs:374](../../scripts/audit-public-site-contract.mjs#L374) |
-| constant | `homePage` | Defines the home page source-of-truth value. | [scripts/audit-public-site-contract.mjs:375](../../scripts/audit-public-site-contract.mjs#L375) |
-| constant | `openaiChallenge` | Defines the openai challenge source-of-truth value. | [scripts/audit-public-site-contract.mjs:376](../../scripts/audit-public-site-contract.mjs#L376) |
+| constant | `whitepaperGenerator` | Defines the whitepaper generator source-of-truth value. | [scripts/audit-public-site-contract.mjs:296](../../scripts/audit-public-site-contract.mjs#L296) |
+| constant | `nextConfig` | Defines the next config source-of-truth value. | [scripts/audit-public-site-contract.mjs:303](../../scripts/audit-public-site-contract.mjs#L303) |
+| constant | `packageJson` | Defines the package json source-of-truth value. | [scripts/audit-public-site-contract.mjs:310](../../scripts/audit-public-site-contract.mjs#L310) |
+| constant | `buildCfScript` | Defines the build cf script source-of-truth value. | [scripts/audit-public-site-contract.mjs:311](../../scripts/audit-public-site-contract.mjs#L311) |
+| constant | `openNextConfig` | Defines the open next config source-of-truth value. | [scripts/audit-public-site-contract.mjs:318](../../scripts/audit-public-site-contract.mjs#L318) |
+| constant | `discussionsClient` | Defines the discussions client source-of-truth value. | [scripts/audit-public-site-contract.mjs:332](../../scripts/audit-public-site-contract.mjs#L332) |
+| constant | `robots` | Defines the robots source-of-truth value. | [scripts/audit-public-site-contract.mjs:352](../../scripts/audit-public-site-contract.mjs#L352) |
+| constant | `llms` | Defines the llms source-of-truth value. | [scripts/audit-public-site-contract.mjs:362](../../scripts/audit-public-site-contract.mjs#L362) |
+| constant | `llmsFull` | Defines the llms full source-of-truth value. | [scripts/audit-public-site-contract.mjs:363](../../scripts/audit-public-site-contract.mjs#L363) |
+| constant | `middleware` | Defines the middleware source-of-truth value. | [scripts/audit-public-site-contract.mjs:364](../../scripts/audit-public-site-contract.mjs#L364) |
+| constant | `homePage` | Defines the home page source-of-truth value. | [scripts/audit-public-site-contract.mjs:365](../../scripts/audit-public-site-contract.mjs#L365) |
+| constant | `openaiChallenge` | Defines the openai challenge source-of-truth value. | [scripts/audit-public-site-contract.mjs:366](../../scripts/audit-public-site-contract.mjs#L366) |
 | constant | `root` | Defines the root source-of-truth value. | [scripts/audit-seo-surface.mjs:7](../../scripts/audit-seo-surface.mjs#L7) |
 | constant | `appDir` | Defines the app dir source-of-truth value. | [scripts/audit-seo-surface.mjs:8](../../scripts/audit-seo-surface.mjs#L8) |
 | constant | `publicDir` | Defines the public dir source-of-truth value. | [scripts/audit-seo-surface.mjs:9](../../scripts/audit-seo-surface.mjs#L9) |
@@ -200,6 +201,13 @@ Source-backed contracts for **260 declarations**.
 | function | `renderSourcePage(area, pageNumber, pageCount, rows)` | Builds render source page. | [scripts/generate-documentation-reference.mjs:255](../../scripts/generate-documentation-reference.mjs#L255) |
 | function | `buildOutputs(files)` | Builds build outputs. | [scripts/generate-documentation-reference.mjs:264](../../scripts/generate-documentation-reference.mjs#L264) |
 | function | `verifyOrWrite(outputs)` | Validates verify or write. | [scripts/generate-documentation-reference.mjs:330](../../scripts/generate-documentation-reference.mjs#L330) |
+| constant | `root` | Defines the root source-of-truth value. | [scripts/generate-whitepaper-content.mjs:5](../../scripts/generate-whitepaper-content.mjs#L5) |
+| constant | `contentDir` | Defines the content dir source-of-truth value. | [scripts/generate-whitepaper-content.mjs:6](../../scripts/generate-whitepaper-content.mjs#L6) |
+| constant | `outputPath` | Defines the output path source-of-truth value. | [scripts/generate-whitepaper-content.mjs:7](../../scripts/generate-whitepaper-content.mjs#L7) |
+| constant | `checkMode` | Defines the check mode source-of-truth value. | [scripts/generate-whitepaper-content.mjs:8](../../scripts/generate-whitepaper-content.mjs#L8) |
+| constant | `canonicalFiles` | Defines the canonical files source-of-truth value. | [scripts/generate-whitepaper-content.mjs:9](../../scripts/generate-whitepaper-content.mjs#L9) |
+| constant | `bodies` | Defines the bodies source-of-truth value. | [scripts/generate-whitepaper-content.mjs:19](../../scripts/generate-whitepaper-content.mjs#L19) |
+| constant | `output` | Defines the output source-of-truth value. | [scripts/generate-whitepaper-content.mjs:26](../../scripts/generate-whitepaper-content.mjs#L26) |
 | constant | `argv` | Defines the argv source-of-truth value. | [scripts/moderate-once.mjs:36](../../scripts/moderate-once.mjs#L36) |
 | constant | `APPLY` | Defines the apply source-of-truth value. | [scripts/moderate-once.mjs:37](../../scripts/moderate-once.mjs#L37) |
 | constant | `NUKE` | Defines the nuke source-of-truth value. | [scripts/moderate-once.mjs:38](../../scripts/moderate-once.mjs#L38) |
@@ -258,11 +266,3 @@ Source-backed contracts for **260 declarations**.
 | function | `contractInfo()` | Implements contract info. | [scripts/seo-manage.mjs:83](../../scripts/seo-manage.mjs#L83) |
 | function | `discoveryInfo()` | Implements discovery info. | [scripts/seo-manage.mjs:96](../../scripts/seo-manage.mjs#L96) |
 | function | `searchConsoleInfo()` | Retrieves search console info. | [scripts/seo-manage.mjs:115](../../scripts/seo-manage.mjs#L115) |
-| function | `coverageGaps(contractTerms, scoreReport)` | Implements coverage gaps. | [scripts/seo-manage.mjs:128](../../scripts/seo-manage.mjs#L128) |
-| function | `pageOpportunities(scoreReport)` | Implements page opportunities. | [scripts/seo-manage.mjs:140](../../scripts/seo-manage.mjs#L140) |
-| function | `addCheck(checks, name, points, pass, recommendation)` | Implements add check. | [scripts/seo-manage.mjs:154](../../scripts/seo-manage.mjs#L154) |
-| function | `managementChecks({ scoreReport, matrix, contract, discovery, gsc, gaps })` | Implements management checks. | [scripts/seo-manage.mjs:158](../../scripts/seo-manage.mjs#L158) |
-| function | `escapeCell(value)` | Implements escape cell. | [scripts/seo-manage.mjs:170](../../scripts/seo-manage.mjs#L170) |
-| function | `tableRows(rows, columns)` | Implements table rows. | [scripts/seo-manage.mjs:174](../../scripts/seo-manage.mjs#L174) |
-| function | `writeReports(report)` | Implements write reports. | [scripts/seo-manage.mjs:183](../../scripts/seo-manage.mjs#L183) |
-| function | `main()` | Implements main. | [scripts/seo-manage.mjs:238](../../scripts/seo-manage.mjs#L238) |

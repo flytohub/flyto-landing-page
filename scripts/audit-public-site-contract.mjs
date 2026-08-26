@@ -287,33 +287,23 @@ if (localeLayout.includes("locale === 'en'") && localeLayout.includes('index: fa
 }
 
 const whitepapers = read('lib/whitepapers.ts');
-if (whitepapers.includes('readFileSync') || whitepapers.includes('node:fs')) {
-  failures.push('lib/whitepapers.ts must bundle markdown content, not read files at Cloudflare Worker runtime');
-}
-for (const token of [
-  '../content/whitepaper/audit.md',
-  '../content/whitepaper/supplement.md',
-  '../content/whitepaper/code.md',
-  '../content/whitepaper/engine.md',
-  '../content/whitepaper/mssp-warroom.md',
-  '../content/whitepaper/byo-integration.md',
-  '../content/whitepaper/security-surfaces.md',
-  'BODY_BY_SLUG',
-]) {
+for (const token of ['WHITEPAPER_BODY_BY_SLUG', 'BODY_BY_SLUG']) {
   if (!whitepapers.includes(token)) {
     failures.push(`lib/whitepapers.ts missing bundled whitepaper token: ${token}`);
   }
 }
 
+const whitepaperGenerator = read('scripts/generate-whitepaper-content.mjs');
+for (const token of ["'content', 'whitepaper'", 'whitepaper-content.generated.ts', 'canonicalFiles', '--check']) {
+  if (!whitepaperGenerator.includes(token)) {
+    failures.push(`whitepaper content generator missing token: ${token}`);
+  }
+}
+
 const nextConfig = read('next.config.mjs');
-for (const token of [
-  'asset/source',
-  'whitepaperContentDir',
-  './content/whitepaper',
-  'skipTrailingSlashRedirect: true',
-]) {
+for (const token of ['skipTrailingSlashRedirect: true']) {
   if (!nextConfig.includes(token)) {
-    failures.push(`next.config.mjs missing markdown bundling token: ${token}`);
+    failures.push(`next.config.mjs missing routing token: ${token}`);
   }
 }
 

@@ -2,7 +2,7 @@
 
 # Lib Source Reference
 
-Source-backed contracts for **130 declarations**.
+Source-backed contracts for **131 declarations**.
 
 | Kind | Declaration | Responsibility | Source |
 |---|---|---|---|
@@ -129,10 +129,11 @@ Source-backed contracts for **130 declarations**.
 | function | `pageAlternates(path, locale)` | Implements page alternates. | [lib/seo.ts:188](../../lib/seo.ts#L188) |
 | type | `TemplateContent` | Defines the template content data contract. | [lib/templates.ts:1](../../lib/templates.ts#L1) |
 | constant | `templates` | Defines the templates source-of-truth value. | [lib/templates.ts:19](../../lib/templates.ts#L19) |
-| interface | `WhitepaperMeta` | Defines the whitepaper meta data contract. | [lib/whitepapers.ts:9](../../lib/whitepapers.ts#L9) |
-| constant | `ENTRIES` | Defines the entries source-of-truth value. | [lib/whitepapers.ts:17](../../lib/whitepapers.ts#L17) |
-| constant | `BODY_BY_SLUG` | Defines the body by slug source-of-truth value. | [lib/whitepapers.ts:62](../../lib/whitepapers.ts#L62) |
-| function | `countMinutes(md)` | Implements count minutes. | [lib/whitepapers.ts:72](../../lib/whitepapers.ts#L72) |
-| function | `listWhitepapers()` | Retrieves list whitepapers. | [lib/whitepapers.ts:78](../../lib/whitepapers.ts#L78) |
-| function | `readWhitepaper(slug)` | Retrieves read whitepaper. | [lib/whitepapers.ts:85](../../lib/whitepapers.ts#L85) |
-| function | `whitepaperSlugs()` | Implements whitepaper slugs. | [lib/whitepapers.ts:93](../../lib/whitepapers.ts#L93) |
+| constant | `WHITEPAPER_BODY_BY_SLUG` | Defines the whitepaper body by slug source-of-truth value. | [lib/whitepaper-content.generated.ts:2](../../lib/whitepaper-content.generated.ts#L2) |
+| interface | `WhitepaperMeta` | Defines the whitepaper meta data contract. | [lib/whitepapers.ts:3](../../lib/whitepapers.ts#L3) |
+| constant | `ENTRIES` | Defines the entries source-of-truth value. | [lib/whitepapers.ts:11](../../lib/whitepapers.ts#L11) |
+| constant | `BODY_BY_SLUG` | Defines the body by slug source-of-truth value. | [lib/whitepapers.ts:56](../../lib/whitepapers.ts#L56) |
+| function | `countMinutes(md)` | Implements count minutes. | [lib/whitepapers.ts:60](../../lib/whitepapers.ts#L60) |
+| function | `listWhitepapers()` | Retrieves list whitepapers. | [lib/whitepapers.ts:66](../../lib/whitepapers.ts#L66) |
+| function | `readWhitepaper(slug)` | Retrieves read whitepaper. | [lib/whitepapers.ts:73](../../lib/whitepapers.ts#L73) |
+| function | `whitepaperSlugs()` | Implements whitepaper slugs. | [lib/whitepapers.ts:81](../../lib/whitepapers.ts#L81) |

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import {
   FileText, FileSpreadsheet, CreditCard, Database, MessageSquare, Bot, Code2,
-  Mail, Calendar, Globe, Cloud, Webhook, Chrome, GitBranch, FolderTree,
+  Mail, Calendar, Globe, Cloud, Webhook, AppWindow, GitBranch, FolderTree,
   ShoppingCart, KeyRound, Server, Image as ImageIcon, FileJson, FlaskConical,
   type LucideIcon,
 } from 'lucide-react';
@@ -91,7 +91,7 @@ const GROUPS: IntegrationGroup[] = [
     modules: ['http.get', 'http.post', 'http.put', 'http.patch', 'http.delete', 'http.graphql', 'webhook.receive', 'webhook.verify', 'oauth.exchange', 'oauth.refresh'],
   },
   {
-    icon: Chrome, name: 'Browser Automation',
+    icon: AppWindow, name: 'Browser Automation',
     body: '74 atomic modules — record once, replay forever. Captcha-aware, stealth-capable.',
     modules: ['browser.launch', 'browser.goto', 'browser.click', 'browser.type', 'browser.scroll', 'browser.extract', 'browser.screenshot', 'browser.pdf', 'browser.record', 'browser.replay', 'browser.evaluate', 'browser.network', 'browser.performance', 'browser.cookies', 'browser.download', 'browser.frame', 'browser.intercept', 'browser.select', 'browser.wait', 'browser.close'],
   },
