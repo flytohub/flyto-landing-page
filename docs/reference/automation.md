@@ -2,7 +2,7 @@
 
 # Automation Reference
 
-The repository exposes **20 npm scripts** and **4 GitHub workflows**.
+The repository exposes **21 npm scripts** and **4 GitHub workflows**.
 
 ## NPM Scripts
 
@@ -11,14 +11,15 @@ The repository exposes **20 npm scripts** and **4 GitHub workflows**.
 | `audit:geo` | `node scripts/audit-public-geo-routes.mjs` |
 | `audit:public-site` | `node scripts/audit-public-site-contract.mjs` |
 | `audit:seo` | `node scripts/audit-seo-surface.mjs` |
-| `build` | `npm run seo:discovery && next build` |
-| `build:cf` | `npm run seo:discovery && opennextjs-cloudflare build && opennextjs-cloudflare populateCache local` |
+| `build` | `npm run content:generate && npm run seo:discovery && next build` |
+| `build:cf` | `npm run content:generate && npm run seo:discovery && opennextjs-cloudflare build && opennextjs-cloudflare populateCache local` |
+| `content:generate` | `node scripts/generate-whitepaper-content.mjs` |
 | `dev` | `next dev` |
-| `docs:check` | `node scripts/check-documentation.mjs` |
+| `docs:check` | `node scripts/generate-whitepaper-content.mjs --check && node scripts/check-documentation.mjs` |
 | `docs:reference` | `node scripts/generate-documentation-reference.mjs` |
 | `geo:logs` | `node scripts/analyze-ai-crawler-logs.mjs` |
 | `i18n:check` | `node scripts/check-message-drift.mjs` |
-| `lint` | `node --check scripts/check-message-drift.mjs && node --check scripts/generate-discovery.mjs && node --check scripts/generate-documentation-reference.mjs && node --check scripts/check-documentation.mjs && node --check scripts/seo-score.mjs && node --check scripts/seo-manage.mjs && tsc --noEmit` |
+| `lint` | `node --check scripts/check-message-drift.mjs && node --check scripts/generate-discovery.mjs && node --check scripts/generate-whitepaper-content.mjs && node --check scripts/generate-documentation-reference.mjs && node --check scripts/check-documentation.mjs && node --check scripts/seo-score.mjs && node --check scripts/seo-manage.mjs && tsc --noEmit` |
 | `preview` | `opennextjs-cloudflare build && wrangler pages dev .cloudflare/output` |
 | `seo:discovery` | `node scripts/generate-discovery.mjs` |
 | `seo:manage` | `node scripts/seo-manage.mjs` |

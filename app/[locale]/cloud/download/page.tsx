@@ -7,7 +7,7 @@ import {
   Laptop,
   Container,
   Terminal,
-  Github,
+  GitFork,
   ArrowUpRight,
   type LucideIcon,
 } from 'lucide-react';
@@ -189,7 +189,7 @@ function SelfHostStrip() {
             <code>pip install flyto-core</code>
           </pre>
           <Button href="https://github.com/flytohub" variant="secondary">
-            <Github className="h-4 w-4" strokeWidth={1.75} />
+            <GitFork className="h-4 w-4" strokeWidth={1.75} />
             <span>{t('oss.cta')}</span>
           </Button>
         </div>

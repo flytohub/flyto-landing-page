@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
-import { Github, GitBranch, Box, Bot, Bell, Terminal, type LucideIcon } from 'lucide-react';
+import { GitFork, GitBranch, Box, Bot, Bell, Terminal, type LucideIcon } from 'lucide-react';
 import { pageAlternates } from '@/lib/seo';
 
 export async function generateMetadata({
@@ -35,7 +35,7 @@ const STATUS_LABEL: Record<'live' | 'beta' | 'planned', string> = {
 
 const SECTIONS: Section[] = [
   {
-    icon: Github, title: 'Git providers',
+    icon: GitFork, title: 'Git providers',
     body: 'Connect any repo; the scanner reads source from the provider\'s API or a local checkout.',
     items: [
       { name: 'GitHub',     what: 'OAuth (web) + PAT (CLI). PR check, status check, comment-on-PR, code-scanning SARIF.', status: 'live' },

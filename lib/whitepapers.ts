@@ -1,10 +1,4 @@
-import auditBody from '../content/whitepaper/audit.md';
-import byoIntegrationBody from '../content/whitepaper/byo-integration.md';
-import codeBody from '../content/whitepaper/code.md';
-import engineBody from '../content/whitepaper/engine.md';
-import msspWarroomBody from '../content/whitepaper/mssp-warroom.md';
-import securitySurfacesBody from '../content/whitepaper/security-surfaces.md';
-import supplementBody from '../content/whitepaper/supplement.md';
+import { WHITEPAPER_BODY_BY_SLUG } from './whitepaper-content.generated';
 
 export interface WhitepaperMeta {
   slug: string;
@@ -60,13 +54,7 @@ const ENTRIES: Omit<WhitepaperMeta, 'readingMinutes'>[] = [
 ];
 
 const BODY_BY_SLUG: Record<string, string> = {
-  audit: auditBody,
-  supplement: supplementBody,
-  code: codeBody,
-  engine: engineBody,
-  'mssp-warroom': msspWarroomBody,
-  'byo-integration': byoIntegrationBody,
-  'security-surfaces': securitySurfacesBody,
+  ...WHITEPAPER_BODY_BY_SLUG,
 };
 
 function countMinutes(md: string): number {

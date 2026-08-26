@@ -12,7 +12,7 @@ import {
   Bell,
   Receipt,
   ArrowUpRight,
-  Github,
+  GitFork,
   type LucideIcon,
 } from 'lucide-react';
 import { Tag } from '@/components/ui/Tag';
@@ -205,7 +205,7 @@ function CommunityTemplatesGrid({ locale }: { locale: string }) {
           rel="noopener noreferrer"
           className="group inline-flex items-center gap-2 rounded-full border border-[var(--color-line-strong)] bg-ink-700/30 px-5 py-3 text-[13px] tracking-wide text-bone-100 transition-all hover:border-violet-400 hover:bg-violet-500/10"
         >
-          <Github className="h-4 w-4" strokeWidth={1.75} />
+          <GitFork className="h-4 w-4" strokeWidth={1.75} />
           <span>Contribute on GitHub</span>
           <ArrowUpRight
             className="h-4 w-4 opacity-60 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { pageAlternates } from '@/lib/seo';
-import { Mail, MessageSquare, Github, BookOpen, ArrowUpRight } from 'lucide-react';
+import { Mail, MessageSquare, GitFork, BookOpen, ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
 
 export async function generateMetadata({
@@ -113,7 +113,7 @@ export default async function ContactPage({
               hint="Community Q&A and announcements"
             />
             <LinkCard
-              icon={Github}
+              icon={GitFork}
               label="GitHub"
               href="https://github.com/flytohub"
               external

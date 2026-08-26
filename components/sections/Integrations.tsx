@@ -9,7 +9,7 @@ import {
   Mail,
   MessageSquare,
   Cloud as CloudIcon,
-  Github,
+  GitFork,
   Globe,
   Bot,
   Webhook,
@@ -27,13 +27,13 @@ interface Integration {
 
 const ICONS: Record<string, LucideIcon> = {
   FileSpreadsheet, FileText, Database, Mail, MessageSquare,
-  CloudIcon, Github, Globe, Bot, Webhook, Code2, Folder,
+  CloudIcon, GitFork, Globe, Bot, Webhook, Code2, Folder,
   ShoppingBag, Send,
 };
 
 const INTEGRATIONS: Integration[] = [
-  { iconName: 'Github',          name: 'GitHub' },
-  { iconName: 'Github',          name: 'GitLab' },
+  { iconName: 'GitFork',         name: 'GitHub' },
+  { iconName: 'GitFork',         name: 'GitLab' },
   { iconName: 'Code2',           name: 'SARIF' },
   { iconName: 'Code2',           name: 'SCA/SAST' },
   { iconName: 'Globe',           name: 'ASM' },

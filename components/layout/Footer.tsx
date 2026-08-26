@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
-import { Github, Youtube, Mail, ArrowUpRight, Cloud, ShieldCheck } from 'lucide-react';
+import { GitFork, Video, Mail, ArrowUpRight, Cloud, ShieldCheck } from 'lucide-react';
 
 export function Footer() {
   const t = useTranslations('footer');
@@ -50,8 +50,8 @@ export function Footer() {
           </Link>
           <p className="mt-5 max-w-md text-[14px] leading-relaxed text-bone-200">{t('tagline')}</p>
           <div className="mt-6 flex items-center gap-2">
-            <SocialIcon href="https://github.com/flytohub"  label="GitHub"><Github  className="h-4 w-4" strokeWidth={1.5} /></SocialIcon>
-            <SocialIcon href="https://www.youtube.com/@Flyto2" label="YouTube"><Youtube className="h-4 w-4" strokeWidth={1.5} /></SocialIcon>
+            <SocialIcon href="https://github.com/flytohub"  label="GitHub"><GitFork className="h-4 w-4" strokeWidth={1.5} /></SocialIcon>
+            <SocialIcon href="https://www.youtube.com/@Flyto2" label="YouTube"><Video className="h-4 w-4" strokeWidth={1.5} /></SocialIcon>
             <SocialIcon href="mailto:info@flyto2.com" label="Email"><Mail className="h-4 w-4" strokeWidth={1.5} /></SocialIcon>
           </div>
         </div>
