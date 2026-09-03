@@ -8,7 +8,7 @@ The repository-owned coding route runs `npm_ci` as its first required check and 
 
 Inventory: **857 declarations**, **139 source files**, **51 page modules**, **16 locales**, **488 baseline message keys**, **17 environment variables**, **21 npm scripts**, **4 workflows**, and **7 public whitepapers**.
 
-Source fingerprint: `a3748bbd9cf122fb20452f4927f4b598a017f53af7ac0bc9f973503e59a90618`.
+Source fingerprint: `38da262d4f8da62e4621075de455e306c8733ddd29afe85001c8f768e5993d23`.
 
 ## Source Areas
 
