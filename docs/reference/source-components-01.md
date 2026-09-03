@@ -109,12 +109,12 @@ Source-backed contracts for **162 declarations**.
 | constant | `ICONS` | Defines the icons source-of-truth value. | [components/sections/CoreBenefits.tsx:7](../../components/sections/CoreBenefits.tsx#L7) |
 | interface | `BenefitItem` | Defines the benefit item data contract. | [components/sections/CoreBenefits.tsx:11](../../components/sections/CoreBenefits.tsx#L11) |
 | component | `CoreBenefits()` | Renders the core benefits interface. | [components/sections/CoreBenefits.tsx:18](../../components/sections/CoreBenefits.tsx#L18) |
-| constant | `ICONS` | Defines the icons source-of-truth value. | [components/sections/CTASection.tsx:9](../../components/sections/CTASection.tsx#L9) |
-| type | `WaitlistStatus` | Defines the waitlist status data contract. | [components/sections/CTASection.tsx:16](../../components/sections/CTASection.tsx#L16) |
-| interface | `CTASectionProps` | Defines the ctasection props data contract. | [components/sections/CTASection.tsx:18](../../components/sections/CTASection.tsx#L18) |
-| function | `submitWaitlist(email, product)` | Implements submit waitlist. | [components/sections/CTASection.tsx:29](../../components/sections/CTASection.tsx#L29) |
-| component | `CTASection({ namespace = 'home.cta', id, primaryHref = '/cloud/download', secondaryHref = 'https://docs.flyto2.com', primaryIcon = 'Download', secondaryIcon = 'BookOpen', waitlistMode = false, waitlistProduct = 'code', })` | Renders the ctasection interface. | [components/sections/CTASection.tsx:41](../../components/sections/CTASection.tsx#L41) |
-| function | `handleSubmit(e)` | Implements handle submit. | [components/sections/CTASection.tsx:58](../../components/sections/CTASection.tsx#L58) |
+| constant | `ICONS` | Defines the icons source-of-truth value. | [components/sections/CTASection.tsx:10](../../components/sections/CTASection.tsx#L10) |
+| type | `WaitlistStatus` | Defines the waitlist status data contract. | [components/sections/CTASection.tsx:17](../../components/sections/CTASection.tsx#L17) |
+| interface | `CTASectionProps` | Defines the ctasection props data contract. | [components/sections/CTASection.tsx:19](../../components/sections/CTASection.tsx#L19) |
+| function | `submitWaitlist(email, product)` | Implements submit waitlist. | [components/sections/CTASection.tsx:30](../../components/sections/CTASection.tsx#L30) |
+| component | `CTASection({ namespace = 'home.cta', id, primaryHref = '/cloud/download', secondaryHref = 'https://docs.flyto2.com', primaryIcon = 'Download', secondaryIcon = 'BookOpen', waitlistMode = false, waitlistProduct = 'code', })` | Renders the ctasection interface. | [components/sections/CTASection.tsx:42](../../components/sections/CTASection.tsx#L42) |
+| function | `handleSubmit(e)` | Implements handle submit. | [components/sections/CTASection.tsx:59](../../components/sections/CTASection.tsx#L59) |
 | interface | `FAQItem` | Defines the faqitem data contract. | [components/sections/FAQ.tsx:9](../../components/sections/FAQ.tsx#L9) |
 | component | `FAQ({ namespace })` | Renders the faq interface. | [components/sections/FAQ.tsx:14](../../components/sections/FAQ.tsx#L14) |
 | component | `Hero()` | Renders the hero interface. | [components/sections/Hero.tsx:8](../../components/sections/Hero.tsx#L8) |

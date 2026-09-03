@@ -2,11 +2,15 @@
 
 # Lib Source Reference
 
-Source-backed contracts for **132 declarations**.
+Source-backed contracts for **136 declarations**.
 
 | Kind | Declaration | Responsibility | Source |
 |---|---|---|---|
 | constant | `GA_MEASUREMENT_ID` | Google Analytics 4 for the public flyto2.com surface. `G-7V4D315CBD` is the measurement ID of the Flyto2 web stream (property 527224736, stream 13723511819). A measurement ID is a public client identifier and is meant to ship in the page, so it lives here rather than in a build-time secret; that also means a build can never silently drop it. An empty value disables the tag, which keeps local and preview builds quiet. | [lib/analytics.ts:10](../../lib/analytics.ts#L10) |
+| type | `GtagParams` | Defines the gtag params data contract. | [lib/analytics.ts:12](../../lib/analytics.ts#L12) |
+| interface | `Window` | Defines the window data contract. | [lib/analytics.ts:15](../../lib/analytics.ts#L15) |
+| method contract | `Window.gtag(command, name, params)` | Defines the callable gtag contract. | [lib/analytics.ts:16](../../lib/analytics.ts#L16) |
+| function | `trackEvent(name, params)` | Sends a GA4 event when the tag is present. A no-op on the server, before the tag loads, or when analytics is disabled — callers never have to guard. Use it for the conversions Enhanced Measurement cannot infer, such as a completed waitlist signup, and mark those as key events in the GA property. | [lib/analytics.ts:26](../../lib/analytics.ts#L26) |
 | function | `useAuth()` | Implements auth. | [lib/auth.ts:16](../../lib/auth.ts#L16) |
 | function | `toAuthor(user)` | Implements to author. | [lib/auth.ts:36](../../lib/auth.ts#L36) |
 | function | `signInWithGoogle()` | Implements sign in with google. | [lib/auth.ts:45](../../lib/auth.ts#L45) |

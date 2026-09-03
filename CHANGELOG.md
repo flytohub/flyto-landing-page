@@ -13,6 +13,9 @@
   (`G-7V4D315CBD`) loads from the root layout via `next/script`
   (`afterInteractive`), so every flyto2.com route reports a page view. flyto2.com
   serves no CSP, so no policy change was needed.
+- Added a `generate_lead` GA4 conversion event, fired via `trackEvent` in
+  `lib/analytics.ts` when a waitlist signup completes — the one lead conversion
+  Enhanced Measurement cannot infer. Mark it as a key event in the GA property.
 - Added `/support/` with product-specific diagnostic guidance, dedicated
   support/privacy/security contacts, account-deletion guidance, footer and
   sitemap discovery, and AI-readable citation coverage.

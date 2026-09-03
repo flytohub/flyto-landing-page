@@ -5,6 +5,7 @@ import { motion } from 'motion/react';
 import { useTranslations } from 'next-intl';
 import { Download, BookOpen, Mail, Code as CodeIcon, type LucideIcon } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
+import { trackEvent } from '@/lib/analytics';
 
 const ICONS: Record<string, LucideIcon> = {
   Download,
@@ -61,6 +62,10 @@ export function CTASection({
     setStatus('loading');
     try {
       const result = await submitWaitlist(email.trim().toLowerCase(), waitlistProduct);
+      if (result === 'success') {
+        // The one conversion Enhanced Measurement cannot see: a captured lead.
+        trackEvent('generate_lead', { product: waitlistProduct });
+      }
       setStatus(result);
     } catch {
       setStatus('error');
