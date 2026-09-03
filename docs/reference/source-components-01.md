@@ -2,10 +2,11 @@
 
 # Components Source Reference
 
-Source-backed contracts for **161 declarations**.
+Source-backed contracts for **162 declarations**.
 
 | Kind | Declaration | Responsibility | Source |
 |---|---|---|---|
+| component | `Analytics()` | Loads Google Analytics 4 once from the root layout, after the page is interactive so it never blocks first paint. `afterInteractive` keeps the tag off the critical path while still firing on every route. Renders nothing when the measurement ID is absent, so preview builds stay clean. | [components/Analytics.tsx:11](../../components/Analytics.tsx#L11) |
 | interface | `AuthGateProps` | Defines the auth gate props data contract. | [components/forum/AuthGate.tsx:14](../../components/forum/AuthGate.tsx#L14) |
 | component | `AuthGate({ passive = false, children, intent = 'post' })` | Conditionally requires Firebase Auth before rendering its children. In passive mode it always renders but still exposes the user's status to children via context-free hooks (children call `useAuth` themselves). | [components/forum/AuthGate.tsx:27](../../components/forum/AuthGate.tsx#L27) |
 | component | `SignInPanel({ intent })` | Renders the sign in panel interface. | [components/forum/AuthGate.tsx:49](../../components/forum/AuthGate.tsx#L49) |

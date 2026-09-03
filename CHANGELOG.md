@@ -9,6 +9,10 @@
 
 ### Added
 
+- Added Google Analytics 4 to the public site: the Flyto2 web stream
+  (`G-7V4D315CBD`) loads from the root layout via `next/script`
+  (`afterInteractive`), so every flyto2.com route reports a page view. flyto2.com
+  serves no CSP, so no policy change was needed.
 - Added `/support/` with product-specific diagnostic guidance, dedicated
   support/privacy/security contacts, account-deletion guidance, footer and
   sitemap discovery, and AI-readable citation coverage.

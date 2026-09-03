@@ -1,7 +1,15 @@
 # State
 
-Current state on 2026-08-27:
+Current state on 2026-09-03:
 
+- 2026-09-03: Google Analytics 4 now ships on the public site. `components/Analytics.tsx`
+  loads the Flyto2 web stream (`G-7V4D315CBD`, property 527224736) from the root
+  layout via `next/script`; the measurement ID is a public client identifier held
+  in `lib/analytics.ts` so a build can never silently drop it. flyto2.com serves
+  no CSP, so nothing had to be allow-listed. Verified: `npm run typecheck`,
+  `npm run docs:reference`, `npm run build` (measurement ID baked into every
+  prerendered route), `npm run audit:geo`, and `npm run lint` all pass locally;
+  the full `npm run verify` (test + seo:manage) was not run.
 - 2026-08-27: The post-migration landing release contract names Next.js 16.3.2
   and primary TypeScript 7.0.2. TypeScript 6.0.3 is retained only as the
   explicitly named `typescript-legacy-docs` legacy documentation alias. CI

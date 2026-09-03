@@ -6,17 +6,17 @@ This reference is generated from tracked source with the TypeScript compiler AST
 
 The repository-owned coding route runs `npm_ci` as its first required check and `build_cf` as its last required check. Its governed required-check receipt must enumerate `npm_ci`, `typecheck`, `i18n`, `public_site_contract`, `verify`, and `build_cf` in that exact order, with all six checks passing.
 
-Inventory: **857 declarations**, **139 source files**, **51 page modules**, **16 locales**, **488 baseline message keys**, **17 environment variables**, **21 npm scripts**, **4 workflows**, and **7 public whitepapers**.
+Inventory: **859 declarations**, **141 source files**, **51 page modules**, **16 locales**, **488 baseline message keys**, **17 environment variables**, **21 npm scripts**, **4 workflows**, and **7 public whitepapers**.
 
-Source fingerprint: `38da262d4f8da62e4621075de455e306c8733ddd29afe85001c8f768e5993d23`.
+Source fingerprint: `9f3c713eb5c73571f23ab85dc45b004690381f97e8168c63b5526a4ff26fc8d4`.
 
 ## Source Areas
 
 | Area | Declarations | Reference |
 |---|---:|---|
 | App | 227 | [source-app-01.md](source-app-01.md) |
-| Components | 161 | [source-components-01.md](source-components-01.md) |
-| Lib | 131 | [source-lib-01.md](source-lib-01.md) |
+| Components | 162 | [source-components-01.md](source-components-01.md) |
+| Lib | 132 | [source-lib-01.md](source-lib-01.md) |
 | Scripts | 260 | [source-scripts-01.md](source-scripts-01.md) |
 | Scripts | 67 | [source-scripts-02.md](source-scripts-02.md) |
 | Runtime | 11 | [source-runtime-01.md](source-runtime-01.md) |

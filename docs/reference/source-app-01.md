@@ -223,12 +223,12 @@ Source-backed contracts for **227 declarations**.
 | constant | `page` | Defines the page source-of-truth value. | [app/[locale]/zapier-alternative/page.tsx:7](../../app/%5Blocale%5D/zapier-alternative/page.tsx#L7) |
 | function | `generateMetadata({ params })` | Builds canonical, social, and locale-aware metadata for the route. | [app/[locale]/zapier-alternative/page.tsx:9](../../app/%5Blocale%5D/zapier-alternative/page.tsx#L9) |
 | component | `ZapierAlternativePage({ params })` | Renders the zapier alternative page interface. | [app/[locale]/zapier-alternative/page.tsx:14](../../app/%5Blocale%5D/zapier-alternative/page.tsx#L14) |
-| constant | `display` | Defines the display source-of-truth value. | [app/layout.tsx:12](../../app/layout.tsx#L12) |
-| constant | `sans` | Defines the sans source-of-truth value. | [app/layout.tsx:18](../../app/layout.tsx#L18) |
-| constant | `mono` | Defines the mono source-of-truth value. | [app/layout.tsx:24](../../app/layout.tsx#L24) |
-| constant | `metadata` | Defines the metadata source-of-truth value. | [app/layout.tsx:30](../../app/layout.tsx#L30) |
-| constant | `viewport` | Defines the viewport source-of-truth value. | [app/layout.tsx:72](../../app/layout.tsx#L72) |
-| component | `RootLayout({ children })` | Renders the root layout interface. | [app/layout.tsx:78](../../app/layout.tsx#L78) |
+| constant | `display` | Defines the display source-of-truth value. | [app/layout.tsx:13](../../app/layout.tsx#L13) |
+| constant | `sans` | Defines the sans source-of-truth value. | [app/layout.tsx:19](../../app/layout.tsx#L19) |
+| constant | `mono` | Defines the mono source-of-truth value. | [app/layout.tsx:25](../../app/layout.tsx#L25) |
+| constant | `metadata` | Defines the metadata source-of-truth value. | [app/layout.tsx:31](../../app/layout.tsx#L31) |
+| constant | `viewport` | Defines the viewport source-of-truth value. | [app/layout.tsx:73](../../app/layout.tsx#L73) |
+| component | `RootLayout({ children })` | Renders the root layout interface. | [app/layout.tsx:79](../../app/layout.tsx#L79) |
 | constant | `dynamic` | Defines the dynamic source-of-truth value. | [app/sitemap.ts:10](../../app/sitemap.ts#L10) |
 | constant | `STATIC_ROUTES` | Defines the static routes source-of-truth value. | [app/sitemap.ts:12](../../app/sitemap.ts#L12) |
 | function | `buildEntry(route, locale)` | Builds build entry. | [app/sitemap.ts:55](../../app/sitemap.ts#L55) |

@@ -2,10 +2,11 @@
 
 # Lib Source Reference
 
-Source-backed contracts for **131 declarations**.
+Source-backed contracts for **132 declarations**.
 
 | Kind | Declaration | Responsibility | Source |
 |---|---|---|---|
+| constant | `GA_MEASUREMENT_ID` | Google Analytics 4 for the public flyto2.com surface. `G-7V4D315CBD` is the measurement ID of the Flyto2 web stream (property 527224736, stream 13723511819). A measurement ID is a public client identifier and is meant to ship in the page, so it lives here rather than in a build-time secret; that also means a build can never silently drop it. An empty value disables the tag, which keeps local and preview builds quiet. | [lib/analytics.ts:10](../../lib/analytics.ts#L10) |
 | function | `useAuth()` | Implements auth. | [lib/auth.ts:16](../../lib/auth.ts#L16) |
 | function | `toAuthor(user)` | Implements to author. | [lib/auth.ts:36](../../lib/auth.ts#L36) |
 | function | `signInWithGoogle()` | Implements sign in with google. | [lib/auth.ts:45](../../lib/auth.ts#L45) |

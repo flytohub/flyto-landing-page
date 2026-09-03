@@ -7,6 +7,7 @@ import {
   FLYTO2_SEO_KEYWORDS,
   OG_LOCALE_BY_LOCALE,
 } from '@/lib/seo';
+import { Analytics } from '@/components/Analytics';
 import './globals.css';
 
 const display = Bricolage_Grotesque({
@@ -82,7 +83,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${display.variable} ${sans.variable} ${mono.variable}`}
       suppressHydrationWarning
     >
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
