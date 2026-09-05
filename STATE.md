@@ -2,6 +2,41 @@
 
 Current state on 2026-09-06:
 
+- 2026-09-06: Every SEO check on every public page passes. The score gate was
+  already green (average 96, lowest 84), so this closed the last checks rather
+  than repairing anything: 18 pages missing the focus keyword in the meta
+  description, 7 in an H1, 6 without answer-shaped sections, plus JSON-LD on
+  `/code`, a title length on `/dark-web-monitoring`, and hero image alt text on
+  `/`. Now 38 pages at 100. The work was done per page against that page's own
+  subject, not by template, and each page's brief made keyword-stuffing a worse
+  outcome than a missed check. Several pages therefore declined points on
+  purpose, the ones worth recording being: `/trust` added no SOC 2, ISO 27001,
+  pen-test date, uptime, customer count or "no breaches" line, none of which are
+  supportable; `/playwright-alternative` added a section telling readers when to
+  stay on Playwright; `/n8n-alternative` refused "drop-in n8n alternative"
+  because the page's own FAQ says Flyto2 is not a full replacement;
+  `/make-alternative` asserted nothing about Make's limits rather than risk
+  describing a competitor inaccurately; `/airgap` kept "built around no required
+  external egress" instead of "no data ever leaves your network", because this
+  repo frames airgap as a release target rather than a shipped guarantee. The
+  homepage hero images now carry real alt text, but they sit inside an
+  `aria-hidden` wrapper, so that helps crawlers and image search and does NOT
+  make them available to screen readers — the wrapper was left alone. Verified:
+  `npm run i18n:check` (16 locales, 490 keys, no drift), `npx tsc --noEmit`,
+  `npm run build`, `npm run seo:score` (38 pages, average 100, lowest 100),
+  `npm run audit:geo` (19 routes), `npm run audit:public-site`,
+  `npm run docs:reference`, `npm run docs:check`. Full `npm run verify` was not
+  run.
+- 2026-09-06: OPEN, not fixed. Three topics are published at two URLs each and
+  every one of the six canonicalises to itself, so the site competes with
+  itself: `/ctem` vs `/warroom/ctem`, `/attack-surface-management` vs
+  `/warroom/attack-surface-management`, `/n8n-alternative` vs
+  `/flow/n8n-alternative`. Internal links favour the nested pages (174 vs 80,
+  95 vs 32, 16 vs 0) while the top-level pages score higher, and
+  `/n8n-alternative` has zero internal links at all. The per-page scorer cannot
+  see this because it scores pages in isolation. Resolving it means choosing a
+  canonical home and 301-ing the other, which is an information-architecture
+  decision with existing-backlink risk, so it is left for the owner.
 - 2026-09-06: The Warroom half of the public positioning states the funnel
   instead of listing capabilities. `home.hero.lede`,
   `home.products.warroom.tagline` and `footer.warroomTagline` across all 17

@@ -23,6 +23,7 @@ import { FAQ } from '@/components/sections/FAQ';
 import { CTASection } from '@/components/sections/CTASection';
 import { cn } from '@/lib/cn';
 import { pageAlternates } from '@/lib/seo';
+import { defaultLocale } from '@/lib/locales';
 
 const ICONS: Record<string, LucideIcon> = {
   Boxes, Code2, KeyRound, ScrollText, Bug, Crosshair, Activity, FileCheck2,
@@ -50,8 +51,64 @@ export default async function CodePage({
   const { locale } = await params;
   setRequestLocale(locale);
 
+  const t = await getTranslations({ locale, namespace: 'code' });
+  const pagePath = locale === defaultLocale ? '/code/' : `/${locale}/code/`;
+  const pageUrl = `https://flyto2.com${pagePath}`;
+  const faqItems = t.raw('faq.items') as Array<{ q: string; a: string }>;
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebPage',
+        '@id': `${pageUrl}#webpage`,
+        url: pageUrl,
+        name: t('metaTitle'),
+        description: t('metaDescription'),
+        about: [
+          'security war room',
+          'code risk',
+          'attack surface management',
+          'pentest validation',
+          'dark web monitoring',
+        ],
+        isPartOf: { '@id': 'https://flyto2.com/#website' },
+        publisher: { '@id': 'https://flyto2.com/#organization' },
+        primaryImageOfPage: {
+          '@type': 'ImageObject',
+          url: 'https://flyto2.com/assets/img/warroom/01-projects-home.png',
+          caption: 'Warroom — multi-project security health dashboard',
+        },
+      },
+      {
+        '@type': 'SoftwareApplication',
+        '@id': `${pageUrl}#software`,
+        name: 'Flyto2 Warroom',
+        applicationCategory: 'SecurityApplication',
+        operatingSystem: 'Web',
+        url: pageUrl,
+        description: t('metaDescription'),
+        publisher: { '@id': 'https://flyto2.com/#organization' },
+        mainEntityOfPage: { '@id': `${pageUrl}#webpage` },
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': `${pageUrl}#faq`,
+        isPartOf: { '@id': `${pageUrl}#webpage` },
+        mainEntity: faqItems.map((item) => ({
+          '@type': 'Question',
+          name: item.q,
+          acceptedAnswer: { '@type': 'Answer', text: item.a },
+        })),
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <CodeHero />
       <ClosedLoop />
       <JuiceShopProof />

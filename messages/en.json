@@ -53,7 +53,9 @@
       "title": "Execution platforms for",
       "titleAccent": "AI automation and security operations.",
       "lede": "Build visual workflows and MCP tools with Flyto2 Flow. Narrow security signals down to validated attack paths with Flyto2 Warroom.",
-      "reassure": "AI WORKFLOW · MCP · CTEM · ASM · EVIDENCE · REPLAY"
+      "reassure": "AI WORKFLOW · MCP · CTEM · ASM · EVIDENCE · REPLAY",
+      "flowImageAlt": "Flyto2 Flow MCP Studio showing a workflow published as an MCP tool with generated JSON Schema inputs and a response panel",
+      "warroomImageAlt": "Flyto2 Warroom projects home showing code audit, penetration test, and attack surface capabilities"
     },
     "products": {
       "label": "TWO PRODUCT LINES",
@@ -1141,7 +1143,7 @@
     "hero": {
       "eyebrow": "02 / WARROOM",
       "status": "BETA",
-      "title": "One war room.",
+      "title": "One security war room.",
       "titleAccent": "Signals with evidence.",
       "lede": "Correlate code risk, external exposure, dark web, pentest, and red-team signals in one evidence-backed security workflow. Flyto2 works alongside the scanners and feeds your team already trusts.",
       "ctaPrimary": "Join the waitlist",

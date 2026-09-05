@@ -25,7 +25,7 @@ The App Router contains **51 page modules**. Each public route is emitted for **
 | `/cloud/templates/` | yes | no | yes | [app/[locale]/cloud/templates/page.tsx:1](../../app/%5Blocale%5D/cloud/templates/page.tsx#L1) |
 | `/cloud/templates/:slug/` | yes | yes | yes | [app/[locale]/cloud/templates/[slug]/page.tsx:1](../../app/%5Blocale%5D/cloud/templates/%5Bslug%5D/page.tsx#L1) |
 | `/cloud/use-cases/` | yes | no | yes | [app/[locale]/cloud/use-cases/page.tsx:1](../../app/%5Blocale%5D/cloud/use-cases/page.tsx#L1) |
-| `/code/` | yes | no | no | [app/[locale]/code/page.tsx:1](../../app/%5Blocale%5D/code/page.tsx#L1) |
+| `/code/` | yes | no | yes | [app/[locale]/code/page.tsx:1](../../app/%5Blocale%5D/code/page.tsx#L1) |
 | `/code/discussions/` | yes | no | no | [app/[locale]/code/discussions/page.tsx:1](../../app/%5Blocale%5D/code/discussions/page.tsx#L1) |
 | `/code/integrations/` | yes | no | no | [app/[locale]/code/integrations/page.tsx:1](../../app/%5Blocale%5D/code/integrations/page.tsx#L1) |
 | `/code/platform/` | yes | no | no | [app/[locale]/code/platform/page.tsx:1](../../app/%5Blocale%5D/code/platform/page.tsx#L1) |

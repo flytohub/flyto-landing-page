@@ -53,7 +53,9 @@
       "title": "Otomasi yang",
       "titleAccent": "tetap di mesin Anda.",
       "lede": "Bangun alur kerja visual dan alat MCP dengan Flyto2 Flow. Persempit sinyal keamanan menjadi jalur serangan tervalidasi dengan Flyto2 Warroom.",
-      "reassure": "OPEN SOURCE · TANPA TELEMETRI · MILIK ANDA"
+      "reassure": "OPEN SOURCE · TANPA TELEMETRI · MILIK ANDA",
+      "flowImageAlt": "Flyto2 Flow MCP Studio menampilkan alur kerja yang dipublikasikan sebagai alat MCP dengan input JSON Schema yang dihasilkan dan panel respons",
+      "warroomImageAlt": "Halaman proyek Flyto2 Warroom yang menampilkan kemampuan audit kode, uji penetrasi, dan permukaan serangan"
     },
     "products": {
       "label": "DUA PRODUK",
@@ -1133,7 +1135,7 @@
     "hero": {
       "eyebrow": "02 / CODE",
       "status": "BETA",
-      "title": "Satu war room.",
+      "title": "Satu war room keamanan.",
       "titleAccent": "Setiap sudut serangan.",
       "lede": "SCA, SAST, deteksi secret, audit lisensi, triase CVE, workflow pentest, telemetri runtime. Warroom adalah gambaran operasional keamanan setiap baris kode yang Anda kirim.",
       "ctaPrimary": "Daftar tunggu",

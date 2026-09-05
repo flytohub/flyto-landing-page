@@ -53,7 +53,9 @@
       "title": "당신의 기기 위에서",
       "titleAccent": "머무는 자동화.",
       "lede": "Flyto2 Flow로 시각적 워크플로와 MCP 도구를 만드세요. Flyto2 Warroom으로 보안 신호를 검증된 공격 경로까지 좁히세요.",
-      "reassure": "오픈소스 · 텔레메트리 없음 · 당신의 것"
+      "reassure": "오픈소스 · 텔레메트리 없음 · 당신의 것",
+      "flowImageAlt": "MCP 도구로 게시된 워크플로와 생성된 JSON Schema 입력, 응답 패널을 보여주는 Flyto2 Flow MCP Studio",
+      "warroomImageAlt": "코드 감사, 모의 침투 테스트, 공격 표면 기능을 보여주는 Flyto2 Warroom 프로젝트 홈"
     },
     "products": {
       "label": "두 가지 제품",
@@ -1133,7 +1135,7 @@
     "hero": {
       "eyebrow": "02 / CODE",
       "status": "베타",
-      "title": "하나의 워룸.",
+      "title": "하나의 보안 워룸.",
       "titleAccent": "모든 공격 각도.",
       "lede": "SCA, SAST, 시크릿 탐지, 라이선스 감사, CVE 트리아지, 펜테스트 워크플로, 런타임 텔레메트리. Warroom은 출시하는 모든 코드의 보안을 위한 작전 그림입니다.",
       "ctaPrimary": "대기자 등록",

@@ -53,7 +53,9 @@
       "title": "把工作留在",
       "titleAccent": "你自己的機器上。",
       "lede": "用 Flyto2 Flow 建立視覺化工作流與 MCP 工具。用 Flyto2 Warroom 把資安訊號收斂成已驗證的攻擊路徑。",
-      "reassure": "開源 · 無遙測 · 屬於你"
+      "reassure": "開源 · 無遙測 · 屬於你",
+      "flowImageAlt": "Flyto2 Flow MCP Studio 中一個已發布為 MCP 工具的工作流程，顯示自動產生的 JSON Schema 輸入與回應面板",
+      "warroomImageAlt": "Flyto2 Warroom 專案首頁，顯示程式碼稽核、滲透測試與攻擊面能力"
     },
     "video": {
       "label": "示範影片",
@@ -538,7 +540,7 @@
     "hero": {
       "eyebrow": "02 / CODE",
       "status": "公測中",
-      "title": "一個戰情室。",
+      "title": "一個資安戰情室。",
       "titleAccent": "所有攻擊面。",
       "lede": "SCA、SAST、密鑰偵測、授權稽核、CVE 處置、滲透工作流、執行期遙測。Warroom 為你出貨的每一行程式碼提供一張安全作戰圖。",
       "ctaPrimary": "加入等候名單",

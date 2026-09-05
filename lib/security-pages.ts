@@ -95,16 +95,16 @@ export const securityPages = {
     ],
     sections: [
       {
+        title: 'What is external attack surface management?',
+        body:
+          'External attack surface management is the practice of finding the internet-facing assets an attacker can see from outside the network, and keeping that view current as assets change. Flyto2 reconciles that outside-in picture with ownership and business context, so a team can tell what is genuinely in scope and what should move first.',
+        bullets: ['Domains, subdomains, certificates, ports', 'Attribution and ownership gates', 'Asset-map reconciliation'],
+      },
+      {
         title: 'Separate local inventory from live connectors',
         body:
           'Teams should be able to see whether an exposure came from imported data, local discovery, a connected cloud/container source, or an Enterprise bridge job.',
         bullets: ['Source labels for imported, local, and live connector findings', 'Project and tenant ownership context', 'Evidence lineage for every promoted issue'],
-      },
-      {
-        title: 'Start from the outside, then reconcile',
-        body:
-          'EASM discovers what attackers can see. Flyto2 adds the ownership and business context needed to decide what belongs in scope and what should move first.',
-        bullets: ['Domains, subdomains, certificates, ports', 'Attribution and ownership gates', 'Asset-map reconciliation'],
       },
       {
         title: 'Use existing external-rating signals',
@@ -178,7 +178,7 @@ export const securityPages = {
   },
   'dark-web-monitoring': {
     slug: 'dark-web-monitoring',
-    metaTitle: 'Dark Web Monitoring Service for Credential and Threat Signal Correlation',
+    metaTitle: 'Dark Web Monitoring for Credential and Threat Correlation',
     metaDescription:
       'Flyto2 correlates dark web monitoring signals with assets, code, credentials, attack surface, and validation evidence.',
     eyebrow: 'DARK WEB MONITORING',
@@ -282,9 +282,9 @@ export const securityPages = {
     slug: 'ai-security',
     metaTitle: 'AI Security Platform for Agent, MCP, Code, and Exposure Risk',
     metaDescription:
-      'Flyto2 helps teams correlate AI security, MCP security, code risk, attack surface, and validation evidence in one security war room.',
+      'Flyto2 is an AI security platform that correlates MCP and tool surfaces, code risk, attack surface, and validation evidence in one security war room.',
     eyebrow: 'AI SECURITY PLATFORM',
-    title: 'AI security posture needs code, tools, and evidence in the same room.',
+    title: 'An AI security platform that puts code, tools, and evidence in the same room.',
     lede:
       'Flyto2 helps security teams reason about agent-native risk by correlating MCP/tool surfaces, code intelligence, cloud and container posture, attack surface, and evidence-backed validation. Deterministic rules remain the authority; AI is an assistant, not a gate.',
     image: '/assets/img/warroom/15-api-routes.png',

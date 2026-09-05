@@ -6,9 +6,9 @@ This reference is generated from tracked source with the TypeScript compiler AST
 
 The repository-owned coding route runs `npm_ci` as its first required check and `build_cf` as its last required check. Its governed required-check receipt must enumerate `npm_ci`, `typecheck`, `i18n`, `public_site_contract`, `verify`, and `build_cf` in that exact order, with all six checks passing.
 
-Inventory: **863 declarations**, **141 source files**, **51 page modules**, **16 locales**, **488 baseline message keys**, **17 environment variables**, **21 npm scripts**, **4 workflows**, and **7 public whitepapers**.
+Inventory: **863 declarations**, **141 source files**, **51 page modules**, **16 locales**, **490 baseline message keys**, **17 environment variables**, **21 npm scripts**, **4 workflows**, and **7 public whitepapers**.
 
-Source fingerprint: `4fde1f9fe20e8dd7a9f615d103fe506a2b091f3beea942b8487200fdc15081e5`.
+Source fingerprint: `0709de2a3b4b5484c5d038cb84688a6df6f90f30e556905a4a2bc4f0434d13ae`.
 
 ## Source Areas
 

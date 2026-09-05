@@ -17,7 +17,7 @@ export function Hero() {
         <div className="relative overflow-hidden">
           <Image
             src="/assets/img/flow-mcp-studio.jpg"
-            alt=""
+            alt={t('flowImageAlt')}
             fill
             priority
             fetchPriority="high"
@@ -28,7 +28,7 @@ export function Hero() {
         <div className="relative overflow-hidden">
           <Image
             src="/assets/img/warroom/01-projects-home.webp"
-            alt=""
+            alt={t('warroomImageAlt')}
             fill
             priority
             fetchPriority="high"

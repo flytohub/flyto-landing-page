@@ -2,7 +2,7 @@
 
 # SEO, AEO, GEO, And Locale Surfaces
 
-The landing site ships **16 locale catalogues** with **488 leaf message keys** in the English baseline. Route metadata, sitemap entries, discovery files, and AI-readable summaries are one release contract.
+The landing site ships **16 locale catalogues** with **490 leaf message keys** in the English baseline. Route metadata, sitemap entries, discovery files, and AI-readable summaries are one release contract.
 
 ## Discovery Assets
 

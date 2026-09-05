@@ -53,7 +53,9 @@
       "title": "あなたのマシンに",
       "titleAccent": "残る自動化。",
       "lede": "Flyto2 Flow でビジュアルワークフローと MCP ツールを構築。Flyto2 Warroom でセキュリティシグナルを検証済みの攻撃経路まで絞り込みます。",
-      "reassure": "オープンソース · テレメトリーなし · あなたのもの"
+      "reassure": "オープンソース · テレメトリーなし · あなたのもの",
+      "flowImageAlt": "MCP ツールとして公開したワークフロー、生成された JSON Schema 入力、レスポンスパネルを表示する Flyto2 Flow MCP Studio",
+      "warroomImageAlt": "コード監査、ペネトレーションテスト、アタックサーフェスの機能を表示する Flyto2 Warroom のプロジェクト画面"
     },
     "products": {
       "label": "2つの製品",
@@ -1133,7 +1135,7 @@
     "hero": {
       "eyebrow": "02 / CODE",
       "status": "ベータ版",
-      "title": "一つの作戦本部。",
+      "title": "一つのセキュリティ作戦本部。",
       "titleAccent": "全ての攻撃面。",
       "lede": "SCA、SAST、シークレット検出、ライセンス監査、CVE トリアージ、ペンテストワークフロー、ランタイムテレメトリ。Warroom は、あなたが出荷するすべての行のセキュリティ作戦地図です。",
       "ctaPrimary": "ウェイトリストに参加",

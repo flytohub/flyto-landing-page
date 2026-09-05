@@ -53,7 +53,9 @@
       "title": "Otomasyon ki",
       "titleAccent": "makinenizde kalır.",
       "lede": "Flyto2 Flow ile görsel iş akışları ve MCP araçları oluşturun. Flyto2 Warroom ile güvenlik sinyallerini doğrulanmış saldırı yollarına indirgeyin.",
-      "reassure": "AÇIK KAYNAK · TELEMETRİ YOK · SİZİN"
+      "reassure": "AÇIK KAYNAK · TELEMETRİ YOK · SİZİN",
+      "flowImageAlt": "MCP aracı olarak yayımlanan bir iş akışını, üretilen JSON Schema girdilerini ve yanıt panelini gösteren Flyto2 Flow MCP Studio",
+      "warroomImageAlt": "Kod denetimi, sızma testi ve saldırı yüzeyi yeteneklerini gösteren Flyto2 Warroom projeler sayfası"
     },
     "products": {
       "label": "İKİ ÜRÜN",
@@ -1133,7 +1135,7 @@
     "hero": {
       "eyebrow": "02 / CODE",
       "status": "BETA",
-      "title": "Tek savaş odası.",
+      "title": "Tek güvenlik savaş odası.",
       "titleAccent": "Her saldırı açısı.",
       "lede": "SCA, SAST, gizli veri tespiti, lisans denetimi, CVE önceliklendirme, sızma testi iş akışları, çalışma zamanı telemetrisi. Warroom, yayınladığınız her kod satırının güvenliğine ilişkin operasyon tablosudur.",
       "ctaPrimary": "Bekleme listesine katıl",

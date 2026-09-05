@@ -103,7 +103,7 @@ Source-backed contracts for **136 declarations**.
 | constant | `WARROOM_CE_DOCKER` | Defines the warroom ce docker source-of-truth value. | [lib/public-route-pages.ts:53](../../lib/public-route-pages.ts#L53) |
 | constant | `WARROOM_CE_DOCS` | Defines the warroom ce docs source-of-truth value. | [lib/public-route-pages.ts:54](../../lib/public-route-pages.ts#L54) |
 | constant | `publicRoutePages` | Defines the public route pages source-of-truth value. | [lib/public-route-pages.ts:56](../../lib/public-route-pages.ts#L56) |
-| constant | `requiredGeoRoutes` | Defines the required geo routes source-of-truth value. | [lib/public-route-pages.ts:1097](../../lib/public-route-pages.ts#L1097) |
+| constant | `requiredGeoRoutes` | Defines the required geo routes source-of-truth value. | [lib/public-route-pages.ts:1127](../../lib/public-route-pages.ts#L1127) |
 | constant | `ENGLISH_ONLY_ROUTE_PREFIXES` | Defines the english only route prefixes source-of-truth value. | [lib/route-localization.ts:1](../../lib/route-localization.ts#L1) |
 | function | `normalizeLocalizationRoute(path)` | Transforms normalize localization route. | [lib/route-localization.ts:33](../../lib/route-localization.ts#L33) |
 | function | `isEnglishOnlyRoute(path)` | Validates is english only route. | [lib/route-localization.ts:37](../../lib/route-localization.ts#L37) |

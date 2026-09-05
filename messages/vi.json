@@ -53,7 +53,9 @@
       "title": "Tự động hoá",
       "titleAccent": "ở lại trên máy của bạn.",
       "lede": "Xây dựng quy trình trực quan và công cụ MCP với Flyto2 Flow. Thu hẹp tín hiệu bảo mật thành các đường tấn công đã xác thực với Flyto2 Warroom.",
-      "reassure": "MÃ NGUỒN MỞ · KHÔNG TELEMETRY · CỦA BẠN"
+      "reassure": "MÃ NGUỒN MỞ · KHÔNG TELEMETRY · CỦA BẠN",
+      "flowImageAlt": "Flyto2 Flow MCP Studio hiển thị quy trình được xuất bản thành công cụ MCP với đầu vào JSON Schema được tạo và bảng phản hồi",
+      "warroomImageAlt": "Trang dự án Flyto2 Warroom hiển thị các năng lực kiểm toán mã nguồn, kiểm thử xâm nhập và bề mặt tấn công"
     },
     "products": {
       "label": "HAI SẢN PHẨM",
@@ -1133,7 +1135,7 @@
     "hero": {
       "eyebrow": "02 / CODE",
       "status": "BETA",
-      "title": "Một phòng tác chiến.",
+      "title": "Một phòng tác chiến bảo mật.",
       "titleAccent": "Mọi góc độ tấn công.",
       "lede": "SCA, SAST, phát hiện bí mật, kiểm toán giấy phép, phân loại CVE, quy trình pentest, telemetry runtime. Warroom là bức tranh toàn cảnh bảo mật cho mọi dòng code bạn xuất xưởng.",
       "ctaPrimary": "Đăng ký danh sách chờ",

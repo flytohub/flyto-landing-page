@@ -99,16 +99,16 @@ Source-backed contracts for **227 declarations**.
 | constant | `STATUS_LABEL` | Defines the status label source-of-truth value. | [app/[locale]/code/integrations/page.tsx:32](../../app/%5Blocale%5D/code/integrations/page.tsx#L32) |
 | constant | `SECTIONS` | Defines the sections source-of-truth value. | [app/[locale]/code/integrations/page.tsx:36](../../app/%5Blocale%5D/code/integrations/page.tsx#L36) |
 | component | `CodeIntegrationsPage({ params, })` | Renders the code integrations page interface. | [app/[locale]/code/integrations/page.tsx:115](../../app/%5Blocale%5D/code/integrations/page.tsx#L115) |
-| constant | `ICONS` | Defines the icons source-of-truth value. | [app/[locale]/code/page.tsx:27](../../app/%5Blocale%5D/code/page.tsx#L27) |
-| function | `generateMetadata({ params, })` | Builds canonical, social, and locale-aware metadata for the route. | [app/[locale]/code/page.tsx:31](../../app/%5Blocale%5D/code/page.tsx#L31) |
-| component | `CodePage({ params, })` | Renders the code page interface. | [app/[locale]/code/page.tsx:45](../../app/%5Blocale%5D/code/page.tsx#L45) |
-| component | `CodeHero()` | Renders the code hero interface. | [app/[locale]/code/page.tsx:75](../../app/%5Blocale%5D/code/page.tsx#L75) |
-| component | `CodeBrowserChrome({ label })` | Renders the code browser chrome interface. | [app/[locale]/code/page.tsx:144](../../app/%5Blocale%5D/code/page.tsx#L144) |
-| interface | `ScanItem` | Defines the scan item data contract. | [app/[locale]/code/page.tsx:163](../../app/%5Blocale%5D/code/page.tsx#L163) |
-| component | `CodeScans()` | Renders the code scans interface. | [app/[locale]/code/page.tsx:165](../../app/%5Blocale%5D/code/page.tsx#L165) |
-| interface | `PhaseItem` | Defines the phase item data contract. | [app/[locale]/code/page.tsx:194](../../app/%5Blocale%5D/code/page.tsx#L194) |
-| component | `CodeRoadmap()` | Renders the code roadmap interface. | [app/[locale]/code/page.tsx:201](../../app/%5Blocale%5D/code/page.tsx#L201) |
-| function | `live(s)` | Implements live. | [app/[locale]/code/page.tsx:204](../../app/%5Blocale%5D/code/page.tsx#L204) |
+| constant | `ICONS` | Defines the icons source-of-truth value. | [app/[locale]/code/page.tsx:28](../../app/%5Blocale%5D/code/page.tsx#L28) |
+| function | `generateMetadata({ params, })` | Builds canonical, social, and locale-aware metadata for the route. | [app/[locale]/code/page.tsx:32](../../app/%5Blocale%5D/code/page.tsx#L32) |
+| component | `CodePage({ params, })` | Renders the code page interface. | [app/[locale]/code/page.tsx:46](../../app/%5Blocale%5D/code/page.tsx#L46) |
+| component | `CodeHero()` | Renders the code hero interface. | [app/[locale]/code/page.tsx:132](../../app/%5Blocale%5D/code/page.tsx#L132) |
+| component | `CodeBrowserChrome({ label })` | Renders the code browser chrome interface. | [app/[locale]/code/page.tsx:201](../../app/%5Blocale%5D/code/page.tsx#L201) |
+| interface | `ScanItem` | Defines the scan item data contract. | [app/[locale]/code/page.tsx:220](../../app/%5Blocale%5D/code/page.tsx#L220) |
+| component | `CodeScans()` | Renders the code scans interface. | [app/[locale]/code/page.tsx:222](../../app/%5Blocale%5D/code/page.tsx#L222) |
+| interface | `PhaseItem` | Defines the phase item data contract. | [app/[locale]/code/page.tsx:251](../../app/%5Blocale%5D/code/page.tsx#L251) |
+| component | `CodeRoadmap()` | Renders the code roadmap interface. | [app/[locale]/code/page.tsx:258](../../app/%5Blocale%5D/code/page.tsx#L258) |
+| function | `live(s)` | Implements live. | [app/[locale]/code/page.tsx:261](../../app/%5Blocale%5D/code/page.tsx#L261) |
 | constant | `ICONS` | Defines the icons source-of-truth value. | [app/[locale]/code/platform/page.tsx:22](../../app/%5Blocale%5D/code/platform/page.tsx#L22) |
 | constant | `WHITEPAPER_MSSP` | Defines the whitepaper mssp source-of-truth value. | [app/[locale]/code/platform/page.tsx:26](../../app/%5Blocale%5D/code/platform/page.tsx#L26) |
 | constant | `WHITEPAPER_BYO` | Defines the whitepaper byo source-of-truth value. | [app/[locale]/code/platform/page.tsx:27](../../app/%5Blocale%5D/code/platform/page.tsx#L27) |

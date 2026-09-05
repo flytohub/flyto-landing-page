@@ -63,7 +63,7 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
       'Flyto2 Warroom CE is the installable self-hosted baseline. Enterprise pricing unlocks the governed bridge for cloud-backed intelligence, managed remediation, fleet execution, SSO, airgap, support, and compliance controls for CTEM, attack surface management, and security automation programs.',
     metaTitle: 'Flyto2 pricing overview',
     metaDescription:
-      'Pricing overview for Flyto2 Warroom CE, open-core attack surface management, CTEM security automation, Enterprise bridge capabilities, and deployment modes.',
+      'Flyto2 pricing starts with self-hosted Warroom CE and scales into an Enterprise bridge for commercial threat intelligence, managed remediation, identity, airgap, and support.',
     primaryCta: { label: 'Start with Warroom CE', href: '/open-source' },
     secondaryCta: { label: 'Enterprise deployment', href: '/enterprise' },
     sections: [
@@ -176,7 +176,7 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
       'Enterprise deployment is not a branding toggle. Flyto2 Warroom CE is the self-hosted baseline; Enterprise adds explicit provider, license, storage, identity, audit, backup, support, and egress boundaries.',
     metaTitle: 'Flyto2 Enterprise deployment',
     metaDescription:
-      'Enterprise deployment overview for Flyto2 SaaS, self-hosted online, and enterprise airgap modes.',
+      'Flyto2 Enterprise deployment: how managed SaaS, self-hosted online, and airgap modes differ on identity, storage, licensing, audit, and external egress.',
     primaryCta: { label: 'Airgap details', href: '/airgap' },
     secondaryCta: { label: 'Start with CE', href: '/open-source' },
     sections: [
@@ -227,12 +227,12 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
     id: 'airgap',
     path: 'airgap',
     eyebrow: 'Airgap',
-    title: 'Flyto2 airgap mode is built around no required external egress.',
+    title: 'Flyto2 enterprise airgap mode is built around no required external egress.',
     lede:
       'Flyto2 Warroom CE covers self-hosted online evaluation. Enterprise airgap goes further: local identity, offline license, customer storage, local AI endpoints or rules-only fallback, offline updates, and local observability with no required external egress.',
     metaTitle: 'Flyto2 enterprise airgap',
     metaDescription:
-      'Flyto2 airgap deployment model with offline license, local storage, local identity, local AI fallback, and no required external egress.',
+      'Flyto2 enterprise airgap is a deployment mode with offline license, local storage, local identity, local AI fallback, and no required external egress.',
     primaryCta: { label: 'Enterprise overview', href: '/enterprise' },
     secondaryCta: { label: 'Trust model', href: '/trust' },
     sections: [
@@ -256,6 +256,11 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
       },
     ],
     answers: [
+      {
+        question: 'What is Flyto2 enterprise airgap mode?',
+        answer:
+          'Enterprise airgap is the Flyto2 deployment mode for sites with no outbound internet access. It is designed so identity, license, storage, AI, updates, and observability all resolve locally, with no required external egress.',
+      },
       {
         question: 'Does airgap mode call external CDNs?',
         answer:
@@ -338,12 +343,12 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
     id: 'aikido-alternative',
     path: 'aikido-alternative',
     eyebrow: 'Aikido alternative',
-    title: 'Flyto2 is an open-core BYO offensive validation platform for teams evaluating Aikido-style workflows.',
+    title: 'Flyto2 is an Aikido alternative built as an open-core, BYO offensive validation platform.',
     lede:
       'If you like one place for code, cloud, container, runtime, external surface, and AutoFix workflows, Flyto2 takes a different angle: bring your existing tools and turn their findings into verified attack paths, safe pentest evidence, red-team scenarios, and remediation records.',
     metaTitle: 'Aikido alternative for open-core security teams',
     metaDescription:
-      'Compare Flyto2 Warroom CE with Aikido-style security platforms: self-hosted open core, BYO validation, evidence-backed AutoFix, and attack paths.',
+      'Flyto2 Warroom CE is an Aikido alternative built on self-hosted open core: BYO findings, attack-path correlation, and evidence-backed AutoFix.',
     primaryCta: { label: 'Install Warroom CE', href: '/open-source' },
     secondaryCta: { label: 'Read self-hosted docs', href: WARROOM_CE_DOCS },
     sections: [
@@ -404,7 +409,7 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
       'n8n is strong for node-based integrations. Flyto2 is built for teams that also need no-code browser automation, MCP-native AI agent tools, YAML recipes, evidence capture, and repeatable replay from the command line or cloud UI.',
     metaTitle: 'n8n alternative for AI workflow automation',
     metaDescription:
-      'Compare Flyto2 with n8n for AI workflow automation, no-code browser automation, MCP tools, replayable YAML recipes, and evidence-backed workflows.',
+      'Flyto2 is an n8n alternative for browser-heavy and AI-agent workflows: no-code browser automation, MCP tools, YAML recipes, and runs that keep replayable evidence.',
     primaryCta: { label: 'Try Cloud recipes', href: '/cloud/#recipes' },
     secondaryCta: { label: 'Open source runtime', href: 'https://github.com/flytohub/flyto-core' },
     sections: [
@@ -506,7 +511,7 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
       'Make is a visual integration platform. Flyto2 is built for automation that crosses APIs, websites, AI agents, files, reports, and security evidence while keeping the workflow inspectable.',
     metaTitle: 'Make alternative for AI workflow automation',
     metaDescription:
-      'Compare Flyto2 with Make for AI workflow automation, no-code browser automation, MCP tools, self-hosted workflows, and replayable evidence.',
+      'Flyto2 is a Make alternative for workflows that need browser steps, MCP-native tools, self-hosted execution, and evidence you can replay.',
     primaryCta: { label: 'Run a recipe', href: '/cloud/#recipes' },
     secondaryCta: { label: 'Module docs', href: 'https://docs.flyto2.com/modules/' },
     sections: [
@@ -531,14 +536,19 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
     ],
     answers: [
       {
+        question: 'What is Flyto2 Flow?',
+        answer:
+          'Flyto2 Flow is visual AI workflow automation. Operators assemble deterministic modules on a canvas, drive a real browser when a site has no clean API, hand bounded MCP tools to AI agents, and keep each run inspectable through evidence capture and replay.',
+      },
+      {
         question: 'Does Flyto2 replace Make scenarios?',
         answer:
           'Not universally. It is a Make alternative for workflows where browser state, AI tools, local execution, or evidence matter more than a pure integration canvas.',
       },
       {
-        question: 'Where should I start?',
+        question: 'How does a team start a migration from Make?',
         answer:
-          'Start with one Flyto2 recipe that produces a concrete report or artifact, then connect it back into your existing process.',
+          'Start with one Flyto2 recipe that produces a concrete report or artifact, such as a competitor monitor, an SEO audit, or an evidence capture job, then connect it back into your existing process. Keep the API integrations that already work where they are.',
       },
     ],
     related: [
@@ -552,12 +562,12 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
     id: 'playwright-alternative',
     path: 'playwright-alternative',
     eyebrow: 'Playwright alternative',
-    title: 'Flyto2 is not a Playwright replacement. It is a workflow layer above browser automation.',
+    title: 'Flyto2 is a Playwright alternative only when you want a workflow, not a test framework.',
     lede:
       'Playwright is excellent when engineers want code-level browser control. Flyto2 uses browser automation as one part of a larger workflow: recipes, modules, MCP tools, evidence capture, replay, scheduling, and reports.',
     metaTitle: 'Playwright alternative for no-code browser automation',
     metaDescription:
-      'Flyto2 complements Playwright with no-code browser automation, workflow recipes, MCP tools, screenshots, evidence capture, and replayable runs.',
+      'Flyto2 is a Playwright alternative for teams who want a workflow rather than test code: browser automation with recipes, MCP tools, evidence capture, and replay.',
     primaryCta: { label: 'See Cloud automation', href: '/cloud' },
     secondaryCta: { label: 'Browser module docs', href: 'https://docs.flyto2.com/modules/browser' },
     sections: [
@@ -587,9 +597,14 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
           'Flyto2 browser automation can use proven browser automation primitives where appropriate, while exposing them through workflow modules, recipes, and MCP tools.',
       },
       {
-        question: 'Who is this page for?',
+        question: 'How is a Flyto2 workflow different from a Playwright script?',
         answer:
-          'People searching for no-code browser automation, Playwright alternative, browser automation tool, or AI agent browser automation.',
+          'A Playwright script is code an engineer writes, runs, and maintains for each task. In Flyto2 the same browser actions are declared as workflow steps, so a run can be scheduled, keeps its screenshots and artifacts as evidence, and can be replayed from the recorded definition without editing code.',
+      },
+      {
+        question: 'When should a team stay on Playwright?',
+        answer:
+          'When the work is code-level browser control: end-to-end test suites, precise browser APIs, and fixtures that engineers own. Flyto2 does not try to take that over, and the two can run side by side on the same site.',
       },
     ],
     related: [
@@ -608,7 +623,7 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
       'LangGraph is strong for agent state machines. Flyto2 focuses on the execution side: bounded modules, browser actions, MCP tools, YAML recipes, evidence capture, replay, and operational workflows agents can actually run.',
     metaTitle: 'LangGraph alternative for AI agent workflow automation',
     metaDescription:
-      'Compare Flyto2 with LangGraph for AI agent workflow automation, deterministic tools, MCP server automation, browser actions, YAML recipes, evidence, and replay.',
+      'Flyto2 is a LangGraph alternative for execution, not graph orchestration: deterministic modules, MCP tools, browser actions, YAML recipes, evidence, and replay.',
     primaryCta: { label: 'Open MCP docs', href: 'https://docs.flyto2.com/mcp/' },
     secondaryCta: { label: 'Try flyto-core', href: 'https://github.com/flytohub/flyto-core' },
     sections: [
@@ -632,6 +647,11 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
       },
     ],
     answers: [
+      {
+        question: 'How does Flyto2 differ from LangGraph?',
+        answer:
+          'LangGraph describes agent control flow as a stateful graph of nodes and edges. Flyto2 works one layer down, on execution: registry-backed modules with declared schemas, browser actions, MCP tools, and YAML recipes whose runs can be replayed from captured evidence.',
+      },
       {
         question: 'Is Flyto2 an agent framework?',
         answer:
@@ -771,7 +791,7 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
       'The trust model separates public CE distribution, private enterprise internals, tenant data, dynamic scan consent, RBAC, capability gates, report export, AI evidence handling, and deployment provider boundaries for CTEM, attack surface management, and security automation workflows.',
     metaTitle: 'Flyto2 trust and security',
     metaDescription:
-      'Trust overview for Flyto2 tenant isolation, RBAC, audit logs, dynamic scan consent, AI evidence handling, and enterprise deployment boundaries.',
+      'Flyto2 trust model overview: tenant isolation, RBAC, audit logs, dynamic scan consent, AI evidence handling, and enterprise deployment boundaries.',
     primaryCta: { label: 'Security product', href: '/security' },
     secondaryCta: { label: 'Enterprise', href: '/enterprise' },
     sections: [
@@ -802,6 +822,11 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
     ],
     answers: [
       {
+        question: 'What does Flyto2 make public, and what stays private?',
+        answer:
+          'Warroom CE is distributed publicly as Docker images with its contracts and documentation. The Warroom application source repository and the private enterprise backend internals stay closed, and a CE boundary audit keeps secrets and enterprise-only internals out of the public export.',
+      },
+      {
         question: 'Is entitlement only a UI control?',
         answer:
           'No. The frontend renders capability snapshots, but Flyto2 Engine is the server-side authority for action execution.',
@@ -810,6 +835,11 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
         question: 'Can active scans target anything?',
         answer:
           'No. Active scan and red-team paths must validate ownership, consent, and scope before running.',
+      },
+      {
+        question: 'How is an active scan authorized?',
+        answer:
+          'Two records must exist before the run starts: proof that the tenant owns the target, and an approved consent record covering the scope. Both checks belong on the server, and the action stays under audit coverage so it can be reviewed later.',
       },
     ],
     related: [
@@ -951,7 +981,7 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
       'Use docs.flyto2.com for implementation details, Warroom CE installation, module contracts, workflow recipes, MCP transport, bridge contracts, security APIs, CTEM framework details, attack surface management API references, and product-line architecture.',
     metaTitle: 'Flyto2 docs',
     metaDescription:
-      'Documentation entry point for Flyto2 Core, Cloud automation, Security Warroom, modules, workflows, MCP, and product architecture.',
+      'Flyto2 docs cover the Core runtime and modules, workflow recipes, MCP transport, Warroom CE installation, security APIs, and product-line architecture.',
     primaryCta: { label: 'Open docs', href: 'https://docs.flyto2.com/' },
     secondaryCta: { label: 'Product lines', href: 'https://docs.flyto2.com/strategy/flyto2-product-lines' },
     sections: [
@@ -1001,7 +1031,7 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
       'The blog answers questions buyers and practitioners search for: what is CTEM, what is attack surface management, how EASM tools differ from ASM, attack surface management vs vulnerability management, how self-hosted CE differs from Enterprise, and how AI visibility/GEO content should be structured.',
     metaTitle: 'Flyto2 blog',
     metaDescription:
-      'Blog entry point for CTEM explanations, attack surface management tools, EASM comparisons, security automation strategy, open-core security, and AI visibility.',
+      'The Flyto2 blog answers what CTEM and attack surface management are, how EASM differs from ASM, and how self-hosted Warroom CE differs from Enterprise.',
     primaryCta: { label: 'Open blog', href: 'https://blog.flyto2.com/' },
     secondaryCta: { label: 'Docs', href: '/docs' },
     sections: [
@@ -1051,7 +1081,7 @@ export const publicRoutePages: Record<PublicRoutePageId, PublicRoutePage> = {
       'Cloud automation, Warroom CE, Enterprise bridge, docs, and engine release notes should remain traceable so customers, community users, and AI crawlers can understand what changed and where.',
     metaTitle: 'Flyto2 changelog',
     metaDescription:
-      'Changelog hub for Flyto2 Cloud automation, Security Warroom, docs, and release notes.',
+      'The Flyto2 changelog hub links to release notes for Cloud automation, Warroom security, and documentation, so you can see what changed and where.',
     primaryCta: { label: 'Cloud changelog', href: '/cloud/changelog' },
     secondaryCta: { label: 'Documentation', href: 'https://docs.flyto2.com/' },
     sections: [

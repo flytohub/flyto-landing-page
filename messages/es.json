@@ -53,7 +53,9 @@
       "title": "Automatización que",
       "titleAccent": "permanece en tu máquina.",
       "lede": "Crea flujos visuales y herramientas MCP con Flyto2 Flow. Reduce las señales de seguridad a rutas de ataque validadas con Flyto2 Warroom.",
-      "reassure": "OPEN SOURCE · SIN TELEMETRÍA · TUYO"
+      "reassure": "OPEN SOURCE · SIN TELEMETRÍA · TUYO",
+      "flowImageAlt": "Flyto2 Flow MCP Studio con un flujo de trabajo publicado como herramienta MCP, entradas de JSON Schema generadas y un panel de respuesta",
+      "warroomImageAlt": "Página de proyectos de Flyto2 Warroom con capacidades de auditoría de código, pruebas de penetración y superficie de ataque"
     },
     "products": {
       "label": "DOS PRODUCTOS",
@@ -1133,7 +1135,7 @@
     "hero": {
       "eyebrow": "02 / CODE",
       "status": "BETA",
-      "title": "Una sala de operaciones.",
+      "title": "Una sala de operaciones de seguridad.",
       "titleAccent": "Cada ángulo de ataque.",
       "lede": "SCA, SAST, detección de secretos, auditoría de licencias, triage de CVE, flujos de pentest, telemetría de runtime. Warroom es el panel de control de la seguridad de cada línea de código que envías.",
       "ctaPrimary": "Unirse a la lista de espera",

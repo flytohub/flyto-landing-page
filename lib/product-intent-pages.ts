@@ -63,7 +63,7 @@ export const productIntentPages: ProductIntentPage[] = [
       'Flyto2 Flow is a self-hosted visual workflow and MCP builder powered by the open-source Apache-2.0 flyto-core runtime. Flow CE is publicly available as a Docker image with installation documentation; the Flow application source repository is not public.',
     metaTitle: 'AI Workflow Automation and Visual MCP Builder',
     metaDescription:
-      'Build, test, replay, and publish AI workflows as MCP tools with Flyto2 Flow, a self-hosted visual workflow and browser automation builder distributed as a documented Docker image.',
+      'Flyto2 Flow is self-hosted AI workflow automation: build, test, and replay visual workflows, then publish them as MCP tools. The Community Edition is a documented Docker image.',
     screenshot: flowScreenshot,
     screenshotAlt:
       'Flyto2 Flow MCP Studio showing generated workflow tools, schema inputs, and an auditable tool response',
@@ -164,7 +164,7 @@ docker run --detach \\
       'Design the workflow, add an MCP trigger, inspect its generated contract, test it in the browser, and connect Codex, Claude Code, desktop clients, or another Streamable HTTP client.',
     metaTitle: 'Visual MCP Builder for Workflow Automation',
     metaDescription:
-      'Create MCP tools visually from tested workflows with generated JSON Schema, stdio and Streamable HTTP transport, audit metadata, evidence, and replay.',
+      'Flyto2 Flow is a self-hosted visual MCP builder. Publish a tested workflow as an agent tool with generated JSON Schema, stdio and Streamable HTTP transports, and audit metadata.',
     screenshot: flowScreenshot,
     screenshotAlt:
       'Visual MCP builder in Flyto2 Flow with workflow tool discovery, generated arguments, and response testing',
@@ -225,12 +225,12 @@ docker run --detach \\
     slug: ['browser-automation'],
     path: 'flow/browser-automation',
     eyebrow: 'Self-Hosted Browser Automation',
-    title: 'Run browser automation locally with evidence and replay.',
+    title: 'Run self-hosted browser automation with evidence and replay.',
     lede:
-      'Use visual browser steps with APIs, files, data transforms, and verification in one self-hosted workflow. Keep screenshots, run history, and replay context beside the automation that produced them.',
+      'Use visual browser steps with APIs, files, data transforms, and verification in one workflow you host yourself. Keep screenshots, run history, and replay context beside the automation that produced them.',
     metaTitle: 'Self-Hosted Browser Automation with Replay',
     metaDescription:
-      'Build local-first browser automation with visual steps, Playwright and Chromium, evidence capture, deterministic replay, APIs, files, and data workflows.',
+      'Build self-hosted browser automation with visual steps, Playwright and Chromium, evidence capture, deterministic replay, APIs, files, and data workflows.',
     screenshot: flowScreenshot,
     screenshotAlt:
       'Flyto2 Flow interface for self-hosted browser and MCP workflow automation',
@@ -438,7 +438,7 @@ docker run --detach \\
     title: 'Run continuous threat exposure management as an evidence-backed loop.',
     lede:
       'Connect discovery, prioritization, validation, remediation, and verification without flattening every scanner signal into one undifferentiated queue.',
-    metaTitle: 'CTEM Platform for Evidence-Backed Validation',
+    metaTitle: 'Evidence-Backed Continuous Threat Exposure Management',
     metaDescription:
       'Operate a continuous threat exposure management program with asset context, prioritization, controlled validation, remediation ownership, evidence, and verification.',
     screenshot: warroomScreenshot,
@@ -506,7 +506,7 @@ docker run --detach \\
       'Plan what is safe to test, enforce ownership and consent, capture the result, and keep proof beside remediation instead of treating a scanner export as the final answer.',
     metaTitle: 'Security Validation Platform with Evidence',
     metaDescription:
-      'Validate prioritized security findings with scope and consent controls, attack-path context, pentest evidence, remediation records, replay, and reports.',
+      'Flyto2 Warroom runs security validation on prioritized findings. Active testing is gated by ownership and consent, and the evidence stays beside remediation.',
     screenshot: '/assets/img/warroom/16-security-queue.png',
     screenshotAlt:
       'Flyto2 Warroom security validation queue with scoped findings and evidence-backed operational status',
@@ -567,12 +567,12 @@ docker run --detach \\
     slug: ['attack-surface-management'],
     path: 'warroom/attack-surface-management',
     eyebrow: 'Attack Surface Management',
-    title: 'Connect external exposure to owned assets, code, validation, and remediation.',
+    title: 'Run attack surface management as the discovery stage of the CTEM loop.',
     lede:
       'Use attack surface data as an input to an operating loop. Reconcile domains, repositories, scanner findings, ownership, validation evidence, and remediation instead of stopping at discovery.',
     metaTitle: 'Attack Surface Management for CTEM Operations',
     metaDescription:
-      'Connect EASM and attack surface findings to owned assets, repositories, CTEM prioritization, security validation, remediation, evidence, and reporting.',
+      'Flyto2 Warroom treats attack surface management as a CTEM input, connecting EASM findings to owned assets, repositories, consent-gated validation, and remediation.',
     screenshot: '/assets/img/warroom/26-asset-map.png',
     screenshotAlt:
       'Flyto2 Warroom attack surface asset map connecting domains, repositories, findings, and security context',
