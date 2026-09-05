@@ -6,9 +6,9 @@ This reference is generated from tracked source with the TypeScript compiler AST
 
 The repository-owned coding route runs `npm_ci` as its first required check and `build_cf` as its last required check. Its governed required-check receipt must enumerate `npm_ci`, `typecheck`, `i18n`, `public_site_contract`, `verify`, and `build_cf` in that exact order, with all six checks passing.
 
-Inventory: **863 declarations**, **141 source files**, **51 page modules**, **16 locales**, **490 baseline message keys**, **17 environment variables**, **21 npm scripts**, **4 workflows**, and **7 public whitepapers**.
+Inventory: **865 declarations**, **141 source files**, **51 page modules**, **16 locales**, **490 baseline message keys**, **17 environment variables**, **21 npm scripts**, **4 workflows**, and **7 public whitepapers**.
 
-Source fingerprint: `0709de2a3b4b5484c5d038cb84688a6df6f90f30e556905a4a2bc4f0434d13ae`.
+Source fingerprint: `b22dd01f433e0be6fce0be5f2e4d2bea9d0b363a96864f4bd6f4247eea5aac3f`.
 
 ## Source Areas
 
@@ -19,7 +19,7 @@ Source fingerprint: `0709de2a3b4b5484c5d038cb84688a6df6f90f30e556905a4a2bc4f0434
 | Lib | 136 | [source-lib-01.md](source-lib-01.md) |
 | Scripts | 260 | [source-scripts-01.md](source-scripts-01.md) |
 | Scripts | 67 | [source-scripts-02.md](source-scripts-02.md) |
-| Runtime | 11 | [source-runtime-01.md](source-runtime-01.md) |
+| Runtime | 13 | [source-runtime-01.md](source-runtime-01.md) |
 
 ## Public Contracts
 

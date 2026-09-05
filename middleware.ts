@@ -17,6 +17,41 @@ const legacyHtmlRedirects: Record<string, string> = {
   security: '/code/security/',
 };
 
+// Three topics shipped at two URLs each, and every one of the six canonicalised
+// to itself, so the site competed with itself for its own keywords. Search
+// Console over 90 days (2026-06-04 to 2026-09-03) settled which URL survives —
+// impressions and average position, not tidiness:
+//
+//   /ctem/                              0 clicks   100 impressions  pos 62.2
+//   /warroom/ctem/                      0 clicks   400 impressions  pos 52.2  <-
+//   /attack-surface-management/         0 clicks   460 impressions  pos 46.4
+//   /warroom/attack-surface-management/ 0 clicks   620 impressions  pos 41.4  <-
+//   /n8n-alternative/                   0 clicks   290 impressions  pos 47.4  <-
+//   /flow/n8n-alternative/              0 clicks    10 impressions  pos 43.0
+//
+// The first two go to the nested page, which the internal links already
+// favoured (174 vs 80 and 95 vs 32). The third goes the OTHER way: the
+// top-level page has 29x the impressions despite zero internal links, so the
+// structurally tidy answer would have thrown away the only version Google is
+// actually showing. Every one of the six has zero clicks, so no ranking traffic
+// is at risk in either direction.
+const canonicalTopicRedirects: Record<string, string> = {
+  '/ctem/': '/warroom/ctem/',
+  '/attack-surface-management/': '/warroom/attack-surface-management/',
+  '/flow/n8n-alternative/': '/n8n-alternative/',
+};
+
+/** Resolve a duplicate topic URL to its canonical home, preserving the locale
+ *  prefix so /de/ctem/ lands on /de/warroom/ctem/ rather than the English page. */
+function canonicalTopicPath(pathname: string) {
+  const localeMatch = pathname.match(localePattern);
+  const locale = localeMatch?.[1] ?? null;
+  const bare = locale ? pathname.slice(`/${locale}`.length) || '/' : pathname;
+  const target = canonicalTopicRedirects[bare];
+  if (!target) return null;
+  return locale && locale !== defaultLocale ? `/${locale}${target}` : target;
+}
+
 function cleanLegacyHtmlPath(pathname: string) {
   const segments = pathname.split('/').filter(Boolean);
   if (!segments.length) return null;
@@ -66,6 +101,13 @@ export default function middleware(request: NextRequest) {
   const locale = localeMatch?.[1] ?? defaultLocale;
   const headers = new Headers(request.headers);
   headers.set('X-NEXT-INTL-LOCALE', locale);
+
+  const canonicalTopic = canonicalTopicPath(pathname.endsWith('/') ? pathname : `${pathname}/`);
+  if (canonicalTopic) {
+    const url = request.nextUrl.clone();
+    url.pathname = canonicalTopic;
+    return NextResponse.redirect(url, 308);
+  }
 
   const cleanPathname = cleanLegacyHtmlPath(pathname);
   if (cleanPathname) {

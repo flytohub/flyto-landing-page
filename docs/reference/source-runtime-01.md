@@ -2,7 +2,7 @@
 
 # Runtime Source Reference
 
-Source-backed contracts for **11 declarations**.
+Source-backed contracts for **13 declarations**.
 
 | Kind | Declaration | Responsibility | Source |
 |---|---|---|---|
@@ -11,9 +11,11 @@ Source-backed contracts for **11 declarations**.
 | constant | `internalLocaleRewriteHeader` | Defines the internal locale rewrite header source-of-truth value. | [middleware.ts:7](../../middleware.ts#L7) |
 | constant | `openAiAppsChallengePath` | Defines the open ai apps challenge path source-of-truth value. | [middleware.ts:8](../../middleware.ts#L8) |
 | constant | `legacyHtmlRedirects` | Defines the legacy html redirects source-of-truth value. | [middleware.ts:9](../../middleware.ts#L9) |
-| function | `cleanLegacyHtmlPath(pathname)` | Implements clean legacy html path. | [middleware.ts:20](../../middleware.ts#L20) |
-| function | `applyDefaultLocaleCanonical(pathname)` | Implements apply default locale canonical. | [middleware.ts:46](../../middleware.ts#L46) |
-| function | `middleware(request)` | Implements middleware. | [middleware.ts:53](../../middleware.ts#L53) |
-| constant | `config` | Defines the config source-of-truth value. | [middleware.ts:112](../../middleware.ts#L112) |
+| constant | `canonicalTopicRedirects` | Defines the canonical topic redirects source-of-truth value. | [middleware.ts:38](../../middleware.ts#L38) |
+| function | `canonicalTopicPath(pathname)` | Resolve a duplicate topic URL to its canonical home, preserving the locale prefix so /de/ctem/ lands on /de/warroom/ctem/ rather than the English page. | [middleware.ts:46](../../middleware.ts#L46) |
+| function | `cleanLegacyHtmlPath(pathname)` | Implements clean legacy html path. | [middleware.ts:55](../../middleware.ts#L55) |
+| function | `applyDefaultLocaleCanonical(pathname)` | Implements apply default locale canonical. | [middleware.ts:81](../../middleware.ts#L81) |
+| function | `middleware(request)` | Implements middleware. | [middleware.ts:88](../../middleware.ts#L88) |
+| constant | `config` | Defines the config source-of-truth value. | [middleware.ts:154](../../middleware.ts#L154) |
 | constant | `withNextIntl` | Defines the with next intl source-of-truth value. | [next.config.mjs:3](../../next.config.mjs#L3) |
 | constant | `nextConfig` | Defines the next config source-of-truth value. | [next.config.mjs:6](../../next.config.mjs#L6) |

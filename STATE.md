@@ -27,7 +27,32 @@ Current state on 2026-09-06:
   `npm run audit:geo` (19 routes), `npm run audit:public-site`,
   `npm run docs:reference`, `npm run docs:check`. Full `npm run verify` was not
   run.
-- 2026-09-06: OPEN, not fixed. Three topics are published at two URLs each and
+- 2026-09-06: RESOLVED (the open item below). Three topics were published at
+  two URLs each, all six self-canonical, so the site competed with itself.
+  Search Console for 90 days (2026-06-04 to 2026-09-03) decided the direction,
+  and it did not match the structural answer: /ctem/ 100 impressions vs
+  /warroom/ctem/ 400; /attack-surface-management/ 460 vs
+  /warroom/attack-surface-management/ 620; but /n8n-alternative/ 290 vs
+  /flow/n8n-alternative/ 10. The first two now 308 to the nested page, which the
+  internal links already favoured. The third goes the OTHER way: the top-level
+  page has 29x the impressions with zero internal links, so folding it under the
+  product line — the tidy answer, and the one recommended before the data was
+  pulled — would have retired the only version Google shows. All six had zero
+  clicks, so no ranking traffic was at risk either way. The redirects live in
+  `middleware.ts` (`canonicalTopicRedirects`) and preserve the locale prefix, so
+  /de/ctem/ lands on /de/warroom/ctem/. The three redirecting URLs left
+  `app/sitemap.ts` and `public/llms.txt`; llms.txt also gained the six live
+  routes it had never listed (/warroom/ctem, /warroom/attack-surface-management,
+  /warroom/security-validation, /code, /cloud and its three children), which had
+  made them invisible to any model reading the site index. NOTE: seo:score now
+  reports lowest 96, because those three pages fail "Sitemap inclusion" — that
+  is the intended state for a redirecting URL and the per-page scorer cannot see
+  the redirect. Verified: `npx tsc --noEmit`, `npm run build`,
+  `npm run seo:score` (38 pages, average 100), `npm run audit:geo` (19 routes),
+  `npm run audit:public-site`, and the built sitemap.xml checked directly — the
+  three redirect sources appear 0 times, the two canonical targets once each.
+
+- 2026-09-06: SUPERSEDED by the entry above. Three topics are published at two URLs each and
   every one of the six canonicalises to itself, so the site competes with
   itself: `/ctem` vs `/warroom/ctem`, `/attack-surface-management` vs
   `/warroom/attack-surface-management`, `/n8n-alternative` vs

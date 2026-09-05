@@ -231,5 +231,5 @@ Source-backed contracts for **227 declarations**.
 | component | `RootLayout({ children })` | Renders the root layout interface. | [app/layout.tsx:79](../../app/layout.tsx#L79) |
 | constant | `dynamic` | Defines the dynamic source-of-truth value. | [app/sitemap.ts:10](../../app/sitemap.ts#L10) |
 | constant | `STATIC_ROUTES` | Defines the static routes source-of-truth value. | [app/sitemap.ts:12](../../app/sitemap.ts#L12) |
-| function | `buildEntry(route, locale)` | Builds build entry. | [app/sitemap.ts:55](../../app/sitemap.ts#L55) |
-| function | `sitemap()` | Implements sitemap. | [app/sitemap.ts:64](../../app/sitemap.ts#L64) |
+| function | `buildEntry(route, locale)` | Builds build entry. | [app/sitemap.ts:53](../../app/sitemap.ts#L53) |
+| function | `sitemap()` | Implements sitemap. | [app/sitemap.ts:62](../../app/sitemap.ts#L62) |

@@ -14,7 +14,6 @@ const STATIC_ROUTES = [
   'ai-security',
   'airgap',
   'api-docs',
-  'attack-surface-management',
   'bitsight-alternative',
   'blog',
   'changelog',
@@ -37,7 +36,6 @@ const STATIC_ROUTES = [
   'compare',
   'community',
   'contact',
-  'ctem',
   'dark-web-monitoring',
   'docs',
   'enterprise',
@@ -71,7 +69,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     new Set([
       ...STATIC_ROUTES,
       ...requiredGeoRoutes,
-      ...productIntentPages.map((page) => page.path),
+      // /flow/n8n-alternative/ 308s to /n8n-alternative/. Search Console gave the
+      // top-level page 290 impressions to this one's 10 over 90 days, despite it
+      // having no internal links at all — so the tidy answer (fold it under the
+      // product line, like the other intent pages) would have retired the only
+      // version Google is showing. A redirecting URL must not be in the sitemap.
+      ...productIntentPages
+        .filter((page) => page.path !== 'flow/n8n-alternative')
+        .map((page) => page.path),
       ...whitepaperRoutes,
       ...templateRoutes,
     ]),
