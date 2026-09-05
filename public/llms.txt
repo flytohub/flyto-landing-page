@@ -1,6 +1,6 @@
 # Flyto2
 
-> Flyto2 combines open-source AI workflow automation, MCP-native agent tools, no-code browser automation, and a security war room for evidence-backed CTEM. It integrates existing ASM, EASM, dark web, code security, pentest, and red-team signals into one workflow so teams can correlate, validate, and act with evidence.
+> Flyto2 combines open-source AI workflow automation, MCP-native agent tools, no-code browser automation, and a security war room built as a funnel. Signals from ASM, EASM, dark web, code security, pentest, and red-team sources are correlated into exposures, the exposures are tested for exploitability, and only the attack paths that survive reach the action queue.
 
 ## Positioning
 
@@ -12,7 +12,7 @@ Flyto2 complements and integrates existing security tools.
 
 More precise positioning:
 
-Flyto2 is a security war room that integrates existing ASM, dark web, code security, pentest, and red-team signals into one evidence-backed CTEM workflow.
+Flyto2 is a security war room that narrows existing ASM, dark web, code security, pentest, and red-team signals down to the attack paths it can validate, with the evidence for each step retained.
 
 BYO / MSSP language:
 

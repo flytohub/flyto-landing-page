@@ -1,7 +1,24 @@
 # State
 
-Current state on 2026-09-03:
+Current state on 2026-09-06:
 
+- 2026-09-06: The Warroom half of the public positioning states the funnel
+  instead of listing capabilities. `home.hero.lede`,
+  `home.products.warroom.tagline` and `footer.warroomTagline` across all 17
+  locales, plus the two mirroring passages in `public/llms.txt` and
+  `public/llms-full.txt`, now describe signals correlated into exposures,
+  exposures tested for exploitability, and only the surviving attack paths
+  reaching the action queue. The previous copy ("integrates existing ASM, dark
+  web, code security, pentest and red-team signals into one evidence-backed
+  CTEM workflow") described the inputs, which does not answer what the product
+  is for. No figures were added: no tenant has produced a validated attack path
+  yet, so a funnel with counts on it would describe something that has not
+  happened. The Flow half is unchanged. Verified: `npm run audit:geo` (19
+  routes), `npm run typecheck`, `npm run audit:public-site` (19 canonical
+  routes, 18 crawler policies, 17 launch-surface contracts), `npm run build`,
+  `npm run docs:reference`, `npm run docs:check` (72 Markdown, 7 whitepapers),
+  and the new English and Chinese sentences read back out of
+  `.next/server/app/{en,zh}.html`. The full `npm run verify` was not run.
 - 2026-09-03: Google Analytics 4 now ships on the public site. `components/Analytics.tsx`
   loads the Flyto2 web stream (`G-7V4D315CBD`, property 527224736) from the root
   layout via `next/script`; the measurement ID is a public client identifier held

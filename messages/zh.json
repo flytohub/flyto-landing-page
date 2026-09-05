@@ -35,7 +35,7 @@
   "footer": {
     "tagline": "離線優先的自動化工具,讓你的工作留在自己機器上。",
     "cloudTagline": "瀏覽器自動化。一次錄製,永遠重播。",
-    "warroomTagline": "應用程式安全戰情室。閉環驗證。",
+    "warroomTagline": "資安驗證：訊號關聯成曝險，曝險證明為攻擊路徑。",
     "products": "產品",
     "community": "社群",
     "resources": "資源",
@@ -52,7 +52,7 @@
       "eyebrow": "FLYTO2 · 離線優先的自動化",
       "title": "把工作留在",
       "titleAccent": "你自己的機器上。",
-      "lede": "Flyto2 用同一套離線優先引擎,做兩款產品。一個自動化你在瀏覽器裡的重複工作,一個審你出貨的每一行程式碼的安全姿態。",
+      "lede": "用 Flyto2 Flow 建立視覺化工作流與 MCP 工具。用 Flyto2 Warroom 把資安訊號收斂成已驗證的攻擊路徑。",
       "reassure": "開源 · 無遙測 · 屬於你"
     },
     "video": {
@@ -180,7 +180,7 @@
       "warroom": {
         "name": "Warroom",
         "statusLabel": "公測中",
-        "tagline": "應用程式安全戰情室。SCA、SAST、密鑰、授權、CVE — 一張作戰圖。",
+        "tagline": "原始碼可取得的資安驗證。把訊號關聯成曝險，證明哪些真的可被利用，然後對存活下來的攻擊路徑採取行動。",
         "point1": "A–F 健康分數,把所有訊號收斂成一個成績",
         "point2": "可達性分析 — 修真的會跑到的 CVE",
         "point3": "今天可裝的開源 CLI,代管戰情室緊接著上",

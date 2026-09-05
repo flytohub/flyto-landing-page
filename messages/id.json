@@ -35,7 +35,7 @@
   "footer": {
     "tagline": "Alat otomasi offline-first. Pekerjaan Anda tetap di mesin Anda.",
     "cloudTagline": "Otomasi browser. Rekam sekali, putar selamanya.",
-    "warroomTagline": "Ruang operasi keamanan aplikasi. Verifikasi siklus tertutup.",
+    "warroomTagline": "Validasi keamanan: sinyal menjadi paparan, paparan menjadi jalur serangan terbukti.",
     "products": "Produk",
     "community": "Komunitas",
     "resources": "Sumber daya",
@@ -52,7 +52,7 @@
       "eyebrow": "FLYTO2 · OTOMASI OFFLINE-FIRST",
       "title": "Otomasi yang",
       "titleAccent": "tetap di mesin Anda.",
-      "lede": "Flyto2 membangun dua produk di atas mesin offline-first yang sama. Satu mengotomasi pekerjaan Anda di browser. Yang lain mengaudit keamanan setiap baris kode yang Anda kirim.",
+      "lede": "Bangun alur kerja visual dan alat MCP dengan Flyto2 Flow. Persempit sinyal keamanan menjadi jalur serangan tervalidasi dengan Flyto2 Warroom.",
       "reassure": "OPEN SOURCE · TANPA TELEMETRI · MILIK ANDA"
     },
     "products": {
@@ -71,7 +71,7 @@
       "warroom": {
         "name": "Warroom",
         "statusLabel": "BETA",
-        "tagline": "Ruang operasi keamanan aplikasi. SCA, SAST, secrets, lisensi, CVE — satu gambaran operasional.",
+        "tagline": "Validasi keamanan dengan sumber tersedia. Korelasikan sinyal menjadi paparan, buktikan mana yang benar-benar dapat dieksploitasi, dan tindak lanjuti jalur serangan yang bertahan.",
         "point1": "Skor kesehatan A–F yang merangkum semua sinyal",
         "point2": "Analisis keterjangkauan — perbaiki CVE yang benar-benar berjalan",
         "point3": "CLI open-source yang bisa diinstal hari ini, war room terhosting berikutnya",

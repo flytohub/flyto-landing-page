@@ -35,7 +35,7 @@
   "footer": {
     "tagline": "离线优先的自动化工具，让工作留在你的电脑上。",
     "cloudTagline": "浏览器自动化。一次录制，永久回放。",
-    "warroomTagline": "应用安全战情室。闭环验证。",
+    "warroomTagline": "安全验证：信号关联成暴露面，暴露面证明为攻击路径。",
     "products": "产品",
     "community": "社区",
     "resources": "资源",
@@ -52,7 +52,7 @@
       "eyebrow": "FLYTO2 · 离线优先的自动化",
       "title": "让自动化",
       "titleAccent": "留在你的电脑上。",
-      "lede": "Flyto2 用同一套离线优先引擎打造两款产品。一款自动化你在浏览器里的重复工作，一款审你出货的每一行代码的安全姿态。",
+      "lede": "用 Flyto2 Flow 构建可视化工作流与 MCP 工具。用 Flyto2 Warroom 把安全信号收敛成已验证的攻击路径。",
       "reassure": "开源 · 无遥测 · 属于你"
     },
     "products": {
@@ -71,7 +71,7 @@
       "warroom": {
         "name": "Warroom",
         "statusLabel": "公测中",
-        "tagline": "应用安全战情室。SCA、SAST、密钥、许可证、CVE — 一张作战全图。",
+        "tagline": "源码可获取的安全验证。把信号关联成暴露面，证明哪些真的可被利用，然后对存活下来的攻击路径采取行动。",
         "point1": "A–F 健康评分，汇总所有信号",
         "point2": "可达性分析 — 只修复实际运行的 CVE",
         "point3": "开源 CLI 今日可安装，托管战情室即将上线",

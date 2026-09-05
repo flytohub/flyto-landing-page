@@ -35,7 +35,7 @@
   "footer": {
     "tagline": "Çevrimdışı öncelikli otomasyon araçları. Çalışmanız makinenizde kalır.",
     "cloudTagline": "Tarayıcı otomasyonu. Bir kez kaydet, sonsuza dek oynat.",
-    "warroomTagline": "Uygulama güvenliği savaş odası. Kapalı döngü doğrulama.",
+    "warroomTagline": "Güvenlik doğrulaması: sinyaller maruziyete, maruziyet kanıtlanmış saldırı yoluna.",
     "products": "Ürünler",
     "community": "Topluluk",
     "resources": "Kaynaklar",
@@ -52,7 +52,7 @@
       "eyebrow": "FLYTO2 · ÇEVRİMDIŞI ÖNCELİKLİ OTOMASYON",
       "title": "Otomasyon ki",
       "titleAccent": "makinenizde kalır.",
-      "lede": "Flyto2 aynı çevrimdışı öncelikli motor üzerinde iki ürün geliştirir. Biri tarayıcıdaki tekrarlayan işinizi otomatikleştirir. Diğeri yayınladığınız her kod satırının güvenlik durumunu denetler.",
+      "lede": "Flyto2 Flow ile görsel iş akışları ve MCP araçları oluşturun. Flyto2 Warroom ile güvenlik sinyallerini doğrulanmış saldırı yollarına indirgeyin.",
       "reassure": "AÇIK KAYNAK · TELEMETRİ YOK · SİZİN"
     },
     "products": {
@@ -71,7 +71,7 @@
       "warroom": {
         "name": "Warroom",
         "statusLabel": "BETA",
-        "tagline": "Uygulama güvenliği savaş odası. SCA, SAST, gizli veriler, lisans, CVE — tek bir operasyon tablosu.",
+        "tagline": "Kaynağı erişilebilir güvenlik doğrulaması. Sinyalleri maruziyetlere ilişkilendirin, hangilerinin istismar edilebilir olduğunu kanıtlayın ve ayakta kalan saldırı yollarına göre hareket edin.",
         "point1": "Tüm sinyalleri toplayan A–F sağlık skoru",
         "point2": "Erişilebilirlik analizi — gerçekten çalışan CVE'leri düzeltin",
         "point3": "Bugün kurulabilen açık kaynak CLI, yakında barındırılan savaş odası",

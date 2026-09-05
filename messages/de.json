@@ -35,7 +35,7 @@
   "footer": {
     "tagline": "Offline-first Automatisierung. Ihre Arbeit bleibt auf Ihrer Maschine.",
     "cloudTagline": "Browser-Automatisierung. Einmal aufnehmen, immer abspielen.",
-    "warroomTagline": "Sicherheits-Lagezentrum für Anwendungen. Closed-Loop-Verifikation.",
+    "warroomTagline": "Sicherheitsvalidierung: Signale werden zu Expositionen, Expositionen zu belegten Angriffspfaden.",
     "products": "Produkte",
     "community": "Community",
     "resources": "Ressourcen",
@@ -52,7 +52,7 @@
       "eyebrow": "FLYTO2 · OFFLINE-FIRST AUTOMATISIERUNG",
       "title": "Automatisierung, die",
       "titleAccent": "auf Ihrer Maschine bleibt.",
-      "lede": "Flyto2 baut zwei Produkte auf derselben Offline-first-Engine. Eines automatisiert Ihre Browser-Arbeit. Das andere prüft die Sicherheit jeder Zeile Code, die Sie ausliefern.",
+      "lede": "Erstellen Sie visuelle Workflows und MCP-Tools mit Flyto2 Flow. Verdichten Sie Sicherheitssignale mit Flyto2 Warroom zu validierten Angriffspfaden.",
       "reassure": "OPEN SOURCE · KEINE TELEMETRIE · IHR EIGEN"
     },
     "products": {
@@ -71,7 +71,7 @@
       "warroom": {
         "name": "Warroom",
         "statusLabel": "BETA",
-        "tagline": "Anwendungssicherheits-Lagezentrum. SCA, SAST, Secrets, Lizenz, CVE — ein vollständiges Lagebild.",
+        "tagline": "Source-available Sicherheitsvalidierung. Signale zu Expositionen korrelieren, belegen welche ausnutzbar sind, und auf die verbleibenden Angriffspfade reagieren.",
         "point1": "A–F Gesundheitsbewertung, die alle Signale zusammenführt",
         "point2": "Erreichbarkeitsanalyse — nur CVEs beheben, die tatsächlich ausgeführt werden",
         "point3": "Open-Source-CLI heute installierbar, gehostetes Lagezentrum folgt",

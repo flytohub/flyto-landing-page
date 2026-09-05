@@ -35,7 +35,7 @@
   "footer": {
     "tagline": "Công cụ tự động hoá ưu tiên offline. Công việc của bạn ở lại trên máy của bạn.",
     "cloudTagline": "Tự động hoá trình duyệt. Ghi một lần, phát lại mãi mãi.",
-    "warroomTagline": "Phòng tác chiến an ninh ứng dụng. Xác minh vòng kín.",
+    "warroomTagline": "Xác thực bảo mật: tín hiệu thành phơi nhiễm, phơi nhiễm thành đường tấn công đã chứng minh.",
     "products": "Sản phẩm",
     "community": "Cộng đồng",
     "resources": "Tài nguyên",
@@ -52,7 +52,7 @@
       "eyebrow": "FLYTO2 · TỰ ĐỘNG HOÁ ƯU TIÊN OFFLINE",
       "title": "Tự động hoá",
       "titleAccent": "ở lại trên máy của bạn.",
-      "lede": "Flyto2 xây dựng hai sản phẩm trên cùng một động cơ ưu tiên offline. Một tự động hoá công việc lặp đi lặp lại trong trình duyệt. Một kiểm toán bảo mật của từng dòng mã bạn xuất xưởng.",
+      "lede": "Xây dựng quy trình trực quan và công cụ MCP với Flyto2 Flow. Thu hẹp tín hiệu bảo mật thành các đường tấn công đã xác thực với Flyto2 Warroom.",
       "reassure": "MÃ NGUỒN MỞ · KHÔNG TELEMETRY · CỦA BẠN"
     },
     "products": {
@@ -71,7 +71,7 @@
       "warroom": {
         "name": "Warroom",
         "statusLabel": "BETA",
-        "tagline": "Phòng tác chiến bảo mật ứng dụng. SCA, SAST, bí mật, giấy phép, CVE — một bức tranh toàn cảnh.",
+        "tagline": "Xác thực bảo mật với mã nguồn có sẵn. Tương quan tín hiệu thành phơi nhiễm, chứng minh cái nào thực sự khai thác được, và hành động trên những đường tấn công còn lại.",
         "point1": "Điểm sức khoẻ A–F tổng hợp mọi tín hiệu",
         "point2": "Phân tích khả năng tiếp cận — sửa CVE thực sự chạy được",
         "point3": "CLI mã nguồn mở có thể cài ngay hôm nay, phòng tác chiến có máy chủ sắp ra",

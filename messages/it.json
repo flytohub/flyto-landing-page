@@ -35,7 +35,7 @@
   "footer": {
     "tagline": "Strumenti di automazione offline-first. Il tuo lavoro resta sulla tua macchina.",
     "cloudTagline": "Automazione del browser. Registra una volta, riproduci per sempre.",
-    "warroomTagline": "Sala operativa per la sicurezza applicativa. Verifica a ciclo chiuso.",
+    "warroomTagline": "Validazione di sicurezza: segnali correlati in esposizioni, esposizioni provate come percorsi di attacco.",
     "products": "Prodotti",
     "community": "Community",
     "resources": "Risorse",
@@ -52,7 +52,7 @@
       "eyebrow": "FLYTO2 · AUTOMAZIONE OFFLINE-FIRST",
       "title": "Un'automazione che",
       "titleAccent": "resta sulla tua macchina.",
-      "lede": "Flyto2 costruisce due prodotti sullo stesso motore offline-first. Uno automatizza il lavoro nel browser. L'altro verifica la sicurezza di ogni riga di codice che pubblichi.",
+      "lede": "Crea workflow visivi e strumenti MCP con Flyto2 Flow. Restringi i segnali di sicurezza a percorsi di attacco validati con Flyto2 Warroom.",
       "reassure": "OPEN SOURCE · ZERO TELEMETRIA · TUO"
     },
     "products": {
@@ -71,7 +71,7 @@
       "warroom": {
         "name": "Warroom",
         "statusLabel": "BETA",
-        "tagline": "Sala operativa per la sicurezza applicativa. SCA, SAST, segreti, licenze, CVE — un quadro operativo unico.",
+        "tagline": "Validazione di sicurezza a sorgente disponibile. Correla i segnali in esposizioni, dimostra quali sono sfruttabili e agisci sui percorsi di attacco che restano.",
         "point1": "Punteggio salute da A a F che aggrega ogni segnale",
         "point2": "Analisi di raggiungibilità — correggi le CVE che vengono davvero eseguite",
         "point3": "CLI open source installabile oggi, war room hosted prossimamente",

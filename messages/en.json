@@ -35,7 +35,7 @@
   "footer": {
     "tagline": "Source-available platforms for AI automation and continuous security operations, powered by an open-source runtime.",
     "cloudTagline": "Visual workflow and MCP builder with local execution, evidence, and replay.",
-    "warroomTagline": "CTEM and security validation operations with findings, evidence, and remediation.",
+    "warroomTagline": "Security validation: signals correlated into exposures, exposures proven into attack paths.",
     "products": "Products",
     "community": "Community",
     "resources": "Resources",
@@ -52,7 +52,7 @@
       "eyebrow": "FLYTO2 · FLOW · WARROOM",
       "title": "Execution platforms for",
       "titleAccent": "AI automation and security operations.",
-      "lede": "Build visual workflows and MCP tools with Flyto2 Flow. Validate findings and manage evidence-backed CTEM operations with Flyto2 Warroom.",
+      "lede": "Build visual workflows and MCP tools with Flyto2 Flow. Narrow security signals down to validated attack paths with Flyto2 Warroom.",
       "reassure": "AI WORKFLOW · MCP · CTEM · ASM · EVIDENCE · REPLAY"
     },
     "products": {
@@ -71,7 +71,7 @@
       "warroom": {
         "name": "Warroom",
         "statusLabel": "BETA",
-        "tagline": "Source-available CTEM and security validation workspace for findings, attack paths, evidence, remediation, scoring, and compliance.",
+        "tagline": "Source-available security validation. Correlate signals into exposures, prove which are exploitable, and act on the attack paths that survive.",
         "point1": "Install Warroom CE from GitHub or Docker Hub",
         "point2": "Turn imported findings into verified attack paths",
         "point3": "Attach Enterprise bridge services through capability gates",
